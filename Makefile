@@ -1,15 +1,8 @@
-# Makefile for Sphinx documentation
+# Parent Makefile for Sphinx documentation, for convenience.
 #
 
-# You can set these variables from the command line.
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-PAPER         =
-
-# Internal variables.
-PAPEROPT_a4     = -D latex_paper_size=a4
-PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
+# Directories where Sphinx documentation has to be generated.
+DIRS	= demos fenics-doc tutorial user-manual
 
 .PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
@@ -27,62 +20,21 @@ help:
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	-rm -rf build/* *~ source/*~ source/appendices/*~ source/appendices/ffc/*~ source/demos/*~ source/demos/cpp/*~ source/demos/python/*~ source/tutorial/*~ source/tutorial/cpp/*~ source/tutorial/python/*~ source/user-manual/*~ source/user-manual/cpp/*~ source/user-manual/python/*~
+	rm -f *~
+	-for d in $(DIRS); do (cd $$d; make clean; ); done
 
 html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
-	@echo
-	@echo "Build finished. The HTML pages are in build/html."
-
-dirhtml:
-	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) build/dirhtml
-	@echo
-	@echo "Build finished. The HTML pages are in build/dirhtml."
-
-pickle:
-	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) build/pickle
-	@echo
-	@echo "Build finished; now you can process the pickle files."
-
-json:
-	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) build/json
-	@echo
-	@echo "Build finished; now you can process the JSON files."
-
-htmlhelp:
-	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) build/htmlhelp
-	@echo
-	@echo "Build finished; now you can run HTML Help Workshop with the" \
-	      ".hhp project file in build/htmlhelp."
-
-qthelp:
-	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) build/qthelp
-	@echo
-	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
-	      ".qhcp project file in build/qthelp, like this:"
-	@echo "# qcollectiongenerator build/qthelp/FEniCS.qhcp"
-	@echo "To view the help file:"
-	@echo "# assistant -collectionFile build/qthelp/FEniCS.qhc"
+	-for d in $(DIRS); do (cd $$d; make html; ); done
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
-	@echo
-	@echo "Build finished; the LaTeX files are in build/latex."
-	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
-	      "run these through (pdf)latex."
+	-for d in $(DIRS); do (cd $$d; make latex; ); done
 
 changes:
-	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) build/changes
-	@echo
-	@echo "The overview file is in build/changes."
+	-for d in $(DIRS); do (cd $$d; make changes; ); done
 
 linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) build/linkcheck
-	@echo
-	@echo "Link check complete; look for any errors in the above output " \
-	      "or in build/linkcheck/output.txt."
+	-for d in $(DIRS); do (cd $$d; make linkcheck; ); done
 
 doctest:
-	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) build/doctest
-	@echo "Testing of doctests in the sources finished, look at the " \
-	      "results in build/doctest/output.txt."
+	-for d in $(DIRS); do (cd $$d; make doctest; ); done
+
