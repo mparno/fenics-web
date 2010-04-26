@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo
+echo "Cleaning old build."
+make clean
+echo
+
+echo "Building LaTex files."
+make latex
+echo
+
+echo "Building PDF files."
+cd build/latex
+make all-pdf
+cd ../..
+
+echo "Building HTML files."
+make html
+echo "Finished building documentation."
+echo
