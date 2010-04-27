@@ -10,7 +10,7 @@ First some common introduction
 
 This text is C++ specific
 
-Some UFL code in ``Poisson.h``
+Some UFL code in :download:`Poisson.ufl`.
 
 .. code-block:: python
 
@@ -70,4 +70,7 @@ Yet more C++
       return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS;
     }
   };
+
+All this should be in the same :download:`main.cpp<poisson_main.cpp>` file.
+
 
