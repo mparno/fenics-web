@@ -10,11 +10,15 @@ Link to download code.
 Strong:
 
 .. math::
-   - \nabla^{2} u = f
+   - \nabla^{2} u &= f \quad {\rm in} \ \Omega \\
+                u &= 0 \quad {\rm on} \ \Gamma_{D} \\
+                \nabla u \cdot \boldsymbol{n} &= h \quad {\rm on} \ \Gamma_{N} \\
+
 
 Variational:
 
 .. math::
-   a(u, v) = \int_{\Omega} \nabla u \cdot \nabla v \, d\Omega
+   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, d\Omega \\
+   L(v)    &= \int_{\Omega} f v \, d\Omega + \int_{\Gamma_{N}} h v \, d\Omega
 
 

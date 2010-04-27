@@ -9,6 +9,12 @@ Installation
 Some general remarks on installing FEniCS software. Where to find it, how to
 get it and links to Launchpad.
 
+************************************
+Installation for Debian/Ubuntu users
+************************************
+
+Explain how to install the packages.
+
 *************************
 Installation using Dorsal
 *************************
