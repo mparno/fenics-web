@@ -1,7 +1,9 @@
 
 Explain what the Poisson demo does and how. Link to download code.
 
-Strong:
+The Poisson equation is the cannonical elliptic partial differential equation.
+For a domain :math:`\Omega \in \mathbb{R}^{n}`, the Poisson equation with
+particular boundary conditions reads:
 
 .. math::
    - \nabla^{2} u &= f \quad {\rm in} \ \Omega \\
@@ -9,10 +11,21 @@ Strong:
                 \nabla u \cdot \boldsymbol{n} &= h \quad {\rm on} \ \Gamma_{N} \\
 
 
-Variational:
+Find :math:`u \in V` such that
+
+.. math::
+   a(u, v) = L(v) \quad \forall v \in V,
+
+where
 
 .. math::
    a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, d\Omega \\
    L(v)    &= \int_{\Omega} f v \, d\Omega + \int_{\Gamma_{N}} h v \, d\Omega
+
+The expression :math:`a(u, v)` is the bilinear form and :math:`L(v)`
+is the linear form.
+
+In the demo :math:`f = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)`
+and :math:`h = -\sin(5x)`.
 
 
