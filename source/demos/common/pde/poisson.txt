@@ -2,7 +2,7 @@
 Explain what the Poisson demo does and how. Link to download code.
 
 The Poisson equation is the cannonical elliptic partial differential equation.
-For a domain :math:`\Omega \in \mathbb{R}^{n}`, the Poisson equation with
+For a domain :math:`\Omega \subset \mathbb{R}^n`, the Poisson equation with
 particular boundary conditions reads:
 
 .. math::
