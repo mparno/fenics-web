@@ -13,7 +13,7 @@ Welcome to FEniCS's documentation!
     introduction
     installation
     tutorial/tutorial
-    user-manual/user-manual
+    programmers-reference/programmers-reference
     demos/demos
     contributing
     guidelines
@@ -28,15 +28,14 @@ Welcome to FEniCS's documentation!
          <span class="linkdescr">how to install FEniCS software</span></p>
       <p class="biglink"><a class="biglink" href="contributing.html">Contributing to FEniCS</a><br/>
          <span class="linkdescr">how to contribute to the FEniCS project</span></p>
-      <p class="biglink"><a class="biglink" href="documenting/index.html">Documenting FEniCS</a><br/>
-         <span class="linkdescr">guidelines for documentation authors</span></p>
     </td><td width="50%">
       <p class="biglink"><a class="biglink" href="tutorial/tutorial.html">Tutorial</a><br/>
          <span class="linkdescr">FEniCS tutorial, available in <a href="tutorial/cpp/cpp_tutorial.html"> C++ </a>
          or <a href="tutorial/python/python_tutorial.html"> Python </a> </span></p>
-      <p class="biglink"><a class="biglink" href="user-manual/user-manual.html">User manual</a><br/>
-         <span class="linkdescr">a programmer's reference for the FEniCS interface, available in <a href="user-manual/cpp/cpp_user_manual.html"> C++ </a>
-         or <a href="user-manual/python/python_user_manual.html"> Python </a> </span></p>
+      <p class="biglink"><a class="biglink" href="programmers-reference/programmers-reference.html">Programmer's reference</a><br/>
+         <span class="linkdescr">a programmer's reference for the FEniCS interface, available in
+            <a href="programmers-reference/cpp/cpp_programmers_reference.html"> C++ </a>
+         or <a href="programmers-reference/python/python_programmers_reference.html"> Python </a> </span></p>
       <p class="biglink"><a class="biglink" href="demos/demos.html">Demos</a><br/>
          <span class="linkdescr">FEniCS demos, available in <a href="demos/cpp/cpp_demos.html"> C++ </a>
          or <a href="demos/python/python_demos.html"> Python </a> </span></p>

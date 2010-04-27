@@ -2,9 +2,9 @@
 
 .. _guidelines:
 
-##########
+**********
 Guidelines
-##########
+**********
 
 Put the style guide and some notes on how to document classes, functions,
 write tutorials/examples etc.
