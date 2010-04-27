@@ -4,6 +4,8 @@
 Poisson's equation
 ******************
 
-Explain what the Poisson demo does and how. Link to C++ version?
-Link to download code.
+First some common introduction
 
+.. include:: ../../common/pde/poisson.txt
+
+This text is Python specific

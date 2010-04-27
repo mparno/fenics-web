@@ -4,21 +4,8 @@
 Poisson's equation
 ******************
 
-Explain what the Poisson demo does and how. Link to Python version?
-Link to download code.
+First some common introduction
 
-Strong:
+.. include:: ../../common/pde/poisson.txt
 
-.. math::
-   - \nabla^{2} u &= f \quad {\rm in} \ \Omega \\
-                u &= 0 \quad {\rm on} \ \Gamma_{D} \\
-                \nabla u \cdot \boldsymbol{n} &= h \quad {\rm on} \ \Gamma_{N} \\
-
-
-Variational:
-
-.. math::
-   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, d\Omega \\
-   L(v)    &= \int_{\Omega} f v \, d\Omega + \int_{\Gamma_{N}} h v \, d\Omega
-
-
+This text is C++ specific
