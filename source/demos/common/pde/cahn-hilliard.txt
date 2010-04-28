@@ -1,0 +1,34 @@
+
+Link to download code.
+
+This example demonstrates the solution of a particular nonlinear time-dependent
+fourth-order equation, known as the Cahn-Hilliard equation. In particular it
+demonstrates the use of
+
+* A mixed finite element method
+* Automatic linearisation
+* The Newton solver
+* The :math:`\theta`-method for time-dependent equations
+
+
+The Cahn-Hilliard equation is a parabolic equation
+and is typically used to model phase separation in binary mixtures.
+The equation reads:
+
+.. math::
+   \frac{\partial c}{\partial t} - \nabla \cdot M(\nabla(\mu + \lambda \nabla^{2}c)) &= f \quad {\rm in} \ \Omega \\
+                M \lambda \nabla c \cdot \boldsymbol{n} &= 0 \quad {\rm on} \ \partial\Omega \\
+                M(\nabla(\mu + \lambda \nabla^{2}c)) &= 0 \quad {\rm on} \ \partial\Omega
+
+Since this is a fourth-order equation, casting it in a weak form would result in the
+presence of second-order spatial derivatives, and this coould not be solved using
+standard Lagrange finite element basis functions. A solution is to rephrase the equation
+as two coupled second-order equations:
+
+.. math::
+   \frac{\partial c}{\partial t} - \nabla \cdot M \nabla\mu  &= 0 \quad {\rm in} \ \Omega \\
+   \mu -  \mu_{c} - \lambda \nabla^{2}c &= 0 \quad {\rm in} \ \Omega \\
+
+
+
+

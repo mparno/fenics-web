@@ -22,4 +22,5 @@ Contents:
     :maxdepth: 2
 
     pde/cpp_poisson
+    pde/cpp_cahn-hilliard
 
