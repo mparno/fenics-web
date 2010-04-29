@@ -3,6 +3,8 @@
     NOTE: KBO: We need to figure out how to share common text between the 
     C++/Python versions.
 
+.. demos_index:
+
 ############
 FEniCS Demos
 ############
@@ -12,13 +14,25 @@ in the `DOLFIN <https://launchpad.net/dolfin>`_ source directory.
 The documentation is provided in two different flavours, C++ and Python, that
 solve the same problem, but uses slightly different syntax.
 
+From the Launchpad `blueprint
+<https://blueprints.launchpad.net/fenics-doc/+spec/demos>`_.
+
+* The demos should be identical to the demos available as part of DOLFIN.
+
+* But they should be made easily accessible in HTML (and easily downloadable).
+
+* The purpose of each demo should be stated clearly
+  (which feature of DOLFIN it demonstrates).
+
+* Perhaps the demos need to be recategorized.
+
 Contents:
 
 .. toctree::
     :maxdepth: 1
 
-    cpp/cpp_demos
-    python/python_demos
+    cpp/index
+    python/index
 
 The demos are also available in PDF format, see
 :download:`C++ version<../../build/latex/cpp_demos.pdf>` or

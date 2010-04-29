@@ -12,9 +12,9 @@ Welcome to FEniCS's documentation!
 
     introduction
     installation
-    tutorial/tutorial
-    programmers-reference/programmers-reference
-    demos/demos
+    tutorial/index
+    programmers-reference/index
+    demos/index
     contributing
     guidelines
 
@@ -22,23 +22,40 @@ Welcome to FEniCS's documentation!
 
   <table class="contentstable" align="center"><tr>
     <td width="50%">
-      <p class="biglink"><a class="biglink" href="introduction.html">Introduction</a><br/>
-         <span class="linkdescr"> a short introduction to this documentation</span></p>
-      <p class="biglink"><a class="biglink" href="installation.html">Installation</a><br/>
-         <span class="linkdescr">how to install FEniCS software</span></p>
-      <p class="biglink"><a class="biglink" href="contributing.html">Contributing to FEniCS</a><br/>
-         <span class="linkdescr">how to contribute to the FEniCS project</span></p>
+      <p class="biglink">
+        <a class="biglink" href="introduction.html">Introduction</a>
+        <br/><span class="linkdescr"> a short introduction to this documentation</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="installation.html">Installation</a>
+        <br/><span class="linkdescr">how to install FEniCS software</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
+        <br/><span class="linkdescr">how to contribute to the FEniCS project</span>
+      </p>
     </td><td width="50%">
-      <p class="biglink"><a class="biglink" href="tutorial/tutorial.html">Tutorial</a><br/>
-         <span class="linkdescr">FEniCS tutorial, available in <a href="tutorial/cpp/cpp_tutorial.html"> C++ </a>
-         or <a href="tutorial/python/python_tutorial.html"> Python </a> </span></p>
-      <p class="biglink"><a class="biglink" href="programmers-reference/programmers-reference.html">Programmer's reference</a><br/>
-         <span class="linkdescr">a programmer's reference for the FEniCS interface, available in
-            <a href="programmers-reference/cpp/cpp_programmers_reference.html"> C++ </a>
-         or <a href="programmers-reference/python/python_programmers_reference.html"> Python </a> </span></p>
-      <p class="biglink"><a class="biglink" href="demos/demos.html">Demos</a><br/>
-         <span class="linkdescr">FEniCS demos, available in <a href="demos/cpp/cpp_demos.html"> C++ </a>
-         or <a href="demos/python/python_demos.html"> Python </a> </span></p>
+      <p class="biglink">
+        <a class="biglink" href="tutorial/index.html">Tutorial</a>
+        <br/><span class="linkdescr">FEniCS tutorial, available in
+          <a href="tutorial/cpp/index.html"> C++ </a> or
+          <a href="tutorial/python/index.html"> Python </a>
+        </span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
+        <br/><span class="linkdescr">a programmer's reference for the FEniCS interface, available in
+          <a href="programmers-reference/cpp/index.html"> C++ </a> or
+          <a href="programmers-reference/python/index.html"> Python </a>
+        </span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="demos/index.html">Demos</a>
+        <br/><span class="linkdescr">FEniCS demos, available in
+          <a href="demos/cpp/index.html"> C++ </a> or
+          <a href="demos/python/index.html"> Python </a>
+        </span>
+      </p>
     </td></tr>
   </table>
 

@@ -27,7 +27,7 @@ help:
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	-rm -rf build/* *~ source/*~ source/_static/*~ source/_templates/*~ source/demos/*~ source/demos/cpp/*~ source/demos/cpp/pde/*~ source/demos/python/*~ source/demos/python/pde/*~ source/tutorial/*~ source/tutorial/cpp/*~ source/tutorial/python/*~ source/programmers-reference/*~ source/programmers-reference/cpp/*~ source/programmers-reference/python/*~ source/programmers-reference/appendices/*~ source/programmers-reference/appendices/ffc/*~ source/programmers-reference/appendices/ufc/*~ source/programmers-reference/appendices/ufl/*~
+	-rm -rf build
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html

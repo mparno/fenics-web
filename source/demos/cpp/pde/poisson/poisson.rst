@@ -1,12 +1,14 @@
 ..  Documentation for the Poisson demo from DOLFIN.
 
-******************
+.. demos_cpp_pde_poisson:
+
+
 Poisson's equation
-******************
+==================
 
 First some common introduction
 
-.. include:: ../../common/pde/poisson.txt
+.. include:: ../../../common/pde/poisson/poisson.txt
 
 This text is C++ specific
 
@@ -71,6 +73,6 @@ Yet more C++
     }
   };
 
-All this should be in the same :download:`main.cpp<poisson_main.cpp>` file.
+All this should be in the same :download:`main.cpp` file.
 
 

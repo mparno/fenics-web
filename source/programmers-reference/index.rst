@@ -1,8 +1,10 @@
-..  This is where we put the Python version of the FEniCS User Manual.
+.. The programmer's reference for FEniCS goes here.
 
-**************
-Python version
-**************
+.. _programmers_reference_index:
+
+#############################
+FEniCS Programmer's reference
+#############################
 
 From the Launchpad `blueprint
 <https://blueprints.launchpad.net/fenics-doc/+spec/user-manual>`_:
@@ -29,6 +31,19 @@ From the Launchpad `blueprint
   Neumann boundary conditions, how do I compute norms, how do I compute errors
   etc.
 
-Link to C++ version?
+Contents:
+
+.. toctree::
+    :maxdepth: 1
+
+    cpp/index
+    python/index
+    appendices/index
+
+The user manuals are also available in PDF format, see
+:download:`C++ version<../../build/latex/cpp_programmers_reference.pdf>` or
+:download:`Python version<../../build/latex/python_programmers_reference.pdf>`.
+
+Build PDFs for FFC, UFC and UFL manuals and link to those too.
 
 

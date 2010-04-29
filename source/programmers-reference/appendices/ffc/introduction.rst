@@ -1,8 +1,10 @@
 ..  Introduction to the FFC documentation. This documentation should mainly
     consist of what was in the old FFC Manual.
 
+.. programmers_reference_appendices_ffc_introduction:
+
 Introduction
-------------
+============
 
 Do some copy paste stuff from the FFC Manual, maybe there's a clever tool to
 convert the LaTeX source to rst?

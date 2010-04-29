@@ -5,6 +5,22 @@ echo "Cleaning old build."
 make clean
 echo
 
+# Function to remove backup files.
+function remove_files {
+  rm -f *~
+  for f in $( ls $1 ); do
+    if [ -d $f ]; then
+      cd $f
+      remove_files .
+      cd ..
+    fi 
+  done 
+}
+
+echo "Removing backup files (*~) from source directory"
+remove_files .
+echo
+
 echo "Building LaTex files."
 make latex
 echo

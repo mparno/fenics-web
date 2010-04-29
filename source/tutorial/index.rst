@@ -1,11 +1,11 @@
-..  This is where we put the Python version of the FEniCS tutorial from
-    Hans Petter Langtangen.
+.. This is where we put the FEniCS tutorial from Hans Petter Langtangen in
+   both a Python and C++ version.
 
-.. python_tutorial:
+.. _tutorial_index:
 
-**************
-Python version
-**************
+###############
+FEniCS Tutorial
+###############
 
 From the Launchpad `blueprint
 <https://blueprints.launchpad.net/fenics-doc/+spec/tutorial>`_:
@@ -21,6 +21,15 @@ From the Launchpad `blueprint
   Discussion needed on which format to use (reST?) and how it should be
   coordinated with any future versions of the book chapter.
 
-Link to C++ version?
+Contents:
 
+.. toctree::
+    :maxdepth: 1
+
+    cpp/index
+    python/index
+
+The tutorials are also available in PDF format, see
+:download:`C++ version<../../build/latex/cpp_tutorial.pdf>` or
+:download:`Python version<../../build/latex/python_tutorial.pdf>`.
 

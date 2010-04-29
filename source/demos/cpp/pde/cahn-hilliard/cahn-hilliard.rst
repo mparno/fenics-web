@@ -1,18 +1,20 @@
 ..  Documentation for the Cahn-Hilliard demo from DOLFIN.
 
-**********************
-Cahn-Hilliard equation
-**********************
+.. demos_cpp_pde_cahn_hilliard:
 
-.. include:: ../../common/pde/cahn-hilliard.txt
+Cahn-Hilliard equation
+======================
+
+.. include:: ../../../common/pde/cahn-hilliard/cahn-hilliard.txt
 
 This text is C++ specific
 
 
 UFL input
-=========
+---------
 
-Some UFL code in :download:`Poisson.ufl`.
+Some UFL code in :download:`CahnHilliard2D.ufl` and
+:download:`CahnHilliard3D.ufl`.
 
 .. code-block:: python
 
@@ -50,7 +52,7 @@ Some UFL code in :download:`Poisson.ufl`.
 
 
 C++ code
-=========
+--------
 
 .. code-block:: c++
 
@@ -96,6 +98,6 @@ Yet more C++
     }
   };
 
-All this should be in the same :download:`main.cpp<poisson_main.cpp>` file.
+All this should be in the same :download:`main.cpp` file.
 
 

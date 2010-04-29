@@ -167,19 +167,19 @@ htmlhelp_basename = 'FEniCSdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('tutorial/cpp/cpp_tutorial', 'cpp_tutorial.tex', u'C++ Tutorial',
+  ('tutorial/cpp/index', 'cpp_tutorial.tex', u'FEniCS Tutorial (C++ version)',
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-  ('tutorial/python/python_tutorial', 'python_tutorial.tex', u'Python Tutorial',
+  ('tutorial/python/index', 'python_tutorial.tex', u'FEniCS Tutorial (Python version)',
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-  ('programmers-reference/cpp/cpp_programmers_reference', 'cpp_programmers_reference.tex',
+  ('programmers-reference/cpp/index', 'cpp_programmers_reference.tex',
    u"Programmer's reference (C++ version)",
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-  ('programmers-reference/python/python_programmers_reference', 'python_programmers_reference.tex',
+  ('programmers-reference/python/index', 'python_programmers_reference.tex',
    u"Programmer's reference (Python version)",
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-  ('demos/cpp/cpp_demos', 'cpp_demos.tex', u'C++ Demos',
+  ('demos/cpp/index', 'cpp_demos.tex', u'FEniCS Demos (C++ version)',
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-  ('demos/python/python_demos', 'python_demos.tex', u'Python Demos',
+  ('demos/python/index', 'python_demos.tex', u'FEniCS Demos (Python version)',
    u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
 ]
 
