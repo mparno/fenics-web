@@ -24,7 +24,7 @@ Some UFL code in :download:`Poisson.ufl`.
    g = Coefficient(element)
 
    a = inner(grad(v), grad(u))*dx
-   L = v*f*dx + v*h*ds
+   L = v*f*dx + v*g*ds
 
 
 Some C++

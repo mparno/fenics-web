@@ -56,47 +56,51 @@ C++ code
 
 .. code-block:: c++
 
-   #include <dolfin.h>
-   #include "Poisson.h"
+    #include <dolfin.h>
+    #include "CahnHilliard2D.h"
+    #include "CahnHilliard3D.h"
 
-   using namespace dolfin;
+    using namespace dolfin;
 
 Some more C++
 
 .. code-block:: c++
 
-  // Source term (right-hand side)
-  class Source : public Expression
-  {
-    void eval(Array<double>& values, const Array<double>& x) const
+    // Initial conditions
+    class InitialConditions : public Expression
     {
-      double dx = x[0] - 0.5;
-      double dy = x[1] - 0.5;
-      values[0] = 10*exp(-(dx*dx + dy*dy) / 0.02);
-    }
-  };
+    public:
 
-  // Boundary flux (Neumann boundary condition)
-  class Flux : public Expression
-  {
-    void eval(Array<double>& values, const Array<double>& x) const
-    {
-      values[0] = -sin(5*x[0]);
-    }
-  };
+      InitialConditions(const Mesh& mesh) : Expression(mesh.topology().dim())
+      {
+        dolfin::seed(2);
+      }
+
+      void eval(Array<double>& values, const Data& data) const
+      {
+        values[0]= 0.0;
+        values[1]= 0.63 + 0.02*(0.5 - dolfin::rand());
+      }
+
+    };
 
 Yet more C++
 
 .. code-block:: c++
 
-  // Sub domain for Dirichlet boundary condition
-  class DirichletBoundary : public SubDomain
+  // Solve
+  while (t < T)
   {
-    bool inside(const Array<double>& x, bool on_boundary) const
-    {
-      return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS;
-    }
-  };
+    // Update for next time step
+    t += dt;
+    u0.vector() = u.vector();
+
+    // Solve
+    newton_solver.solve(cahn_hilliard, u.vector());
+
+    // Save function to file
+    file << u[1];
+  }
 
 All this should be in the same :download:`main.cpp` file.
 
