@@ -95,9 +95,10 @@ def block_in_source(block, source_files):
         if present:
             return
 
-    # Just crash the test, no need to proceed. We MUST fix the 
+    # Just crash the test, no need to proceed.
     if not present:
         if not source_files:
+            print "\ncode block:\n", block
             raise RuntimeError("No source file!")
 
         print "\nError:"

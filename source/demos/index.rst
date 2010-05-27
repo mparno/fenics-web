@@ -3,7 +3,7 @@
     NOTE: KBO: We need to figure out how to share common text between the 
     C++/Python versions.
 
-.. demos_index:
+.. _demos_index:
 
 ############
 FEniCS Demos
