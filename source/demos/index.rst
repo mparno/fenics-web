@@ -33,6 +33,7 @@ Contents:
 
     cpp/index
     python/index
+    missing_demos
 
 The demos are also available in PDF format, see
 :download:`C++ version<../../build/latex/cpp_demos.pdf>` or

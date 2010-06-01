@@ -6,6 +6,18 @@
 Guidelines
 **********
 
+C++ coding style
+================
+
+Python coding style
+===================
+
+Sphinx coding style
+===================
+
+Use note for doc-authors in case of missing documentation, things to be
+considered etc.
+
 Put the style guide and some notes on how to document classes, functions,
 write tutorials/examples etc.
 
