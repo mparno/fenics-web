@@ -1,12 +1,12 @@
 ..  Style guides for FEniCS documentation (Sphinx) and DOLFIN (C++).
 
-.. _guidelines:
+.. _styleguides:
 
-**********
-Guidelines
-**********
+************
+Style guides
+************
 
-.. _guidelines_cpp_coding_style:
+.. _styleguides_cpp_coding_style:
 
 C++ coding style for DOLFIN
 ===========================
@@ -311,8 +311,10 @@ There are exceptions to this rule where we need to use old C-style
 function calls. One such exception is handling of command-line
 arguments (``char* argv[]``).
 
-Sphinx coding style
-===================
+.. _styleguides_sphinx_coding_style:
+
+Sphinx coding style for FEniCS documentation
+============================================
 
 Use note for doc-authors in case of missing documentation, things to be
 considered etc.

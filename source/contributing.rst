@@ -100,7 +100,7 @@ read and edit large amounts of code, a style guide for developers is useful.
 The FEniCS coding style of ``Python`` adheres to the
 `PEP-8 <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
 strictly enforced.
-:ref:`guidelines_cpp_coding_style` explains in more detail how ``C++`` code
+:ref:`styleguides_cpp_coding_style` explains in more detail how ``C++`` code
 for DOLFIN is supposed to look like.
 
 Note that the above style guides are *guides* only, and they can be abandoned
@@ -249,7 +249,8 @@ Projects under active development might result in out of sync documentation,
 please report or fix.
 Update demos for syntax changes etc.
 
-The :ref:`guidelines` page explains what the documentation should look like.
+The :ref:`styleguides_sphinx_coding_style` explains what the documentation
+should look like.
 
 Documenting demos
 =================

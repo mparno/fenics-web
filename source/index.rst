@@ -16,7 +16,7 @@ Welcome to FEniCS's documentation!
     programmers-reference/index
     demos/index
     contributing
-    guidelines
+    styleguides
 
 .. raw:: html
 
