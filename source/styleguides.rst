@@ -1,4 +1,4 @@
-..  Style guides for FEniCS documentation (Sphinx) and DOLFIN (C++).
+.. Style guides for FEniCS documentation (Sphinx) and DOLFIN (C++).
 
 .. _styleguides:
 

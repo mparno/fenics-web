@@ -1,4 +1,4 @@
-..  Documentation for the Poisson demo from DOLFIN.
+.. Documentation for the Poisson demo from DOLFIN.
 
 .. demos_python_pde_poisson:
 

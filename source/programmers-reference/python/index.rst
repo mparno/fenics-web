@@ -1,4 +1,4 @@
-..  This is where we put the Python version of the FEniCS Programmer's
+.. This is where we put the Python version of the FEniCS Programmer's
     reference.
 
 .. programmers_reference_python_index:

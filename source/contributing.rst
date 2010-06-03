@@ -1,4 +1,4 @@
-..  Notes on how to contribute to the FEniCS project.
+.. Notes on how to contribute to the FEniCS project.
 
 .. _contributing:
 
@@ -156,14 +156,14 @@ method to get code uploaded to the main branch.
 For instance, to create and submit a patch for DOLFIN the following procedure
 should be applied:
 
-#.  Get the current development branch::
+#. Get the current development branch::
 
-        $ bzr branch lp:dolfin
+    $ bzr branch lp:dolfin
 
-#.  Modify the files.
+#. Modify the files.
 
-#.  If your contribution consists of new files, add them to the correct location
-    in the directory tree::
+#.  If your contribution consists of new files, add them to the correct
+    location in the directory tree::
 
         $ bzr add <files>
 
@@ -213,9 +213,9 @@ Instead of submitting a patch once coding is complete, it is a good idea to
 create a new branch on Launchpad to let others follow the progress.
 Using DOLFIN as an example, simply do the following:
 
-#.  Get the current development branch::
+#. Get the current development branch::
 
-        $ bzr branch lp:dolfin
+    $ bzr branch lp:dolfin
 
 #.  Go to `Bazaar branches of DOLFIN <https://code.launchpad.net/dolfin>`_,
     click on ``Register a branch`` and follow the instructions.

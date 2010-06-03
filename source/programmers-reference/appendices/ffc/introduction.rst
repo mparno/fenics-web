@@ -1,4 +1,4 @@
-..  Introduction to the FFC documentation. This documentation should mainly
+.. Introduction to the FFC documentation. This documentation should mainly
     consist of what was in the old FFC Manual.
 
 .. programmers_reference_appendices_ffc_introduction:

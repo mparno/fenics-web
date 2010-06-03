@@ -1,4 +1,4 @@
-..  Documentation for the Cahn-Hilliard demo from DOLFIN.
+.. Documentation for the Cahn-Hilliard demo from DOLFIN.
 
 .. demos_cpp_pde_cahn_hilliard:
 
@@ -18,37 +18,37 @@ Some UFL code in :download:`CahnHilliard2D.ufl` and
 
 .. code-block:: python
 
-  P1 = FiniteElement("Lagrange", "triangle", 1)
-  ME = P1 + P1
+    P1 = FiniteElement("Lagrange", "triangle", 1)
+    ME = P1 + P1
 
-  q, v  = TestFunctions(ME)
-  du    = TrialFunction(ME)
+    q, v  = TestFunctions(ME)
+    du    = TrialFunction(ME)
 
-  u   = Coefficient(ME)  # current solution
-  u0  = Coefficient(ME)  # solution from previous converged step
+    u   = Coefficient(ME)  # current solution
+    u0  = Coefficient(ME)  # solution from previous converged step
 
-  # Split mixed functions
-  dk, dc = split(du)
-  k,  c  = split(u)
-  k0, c0 = split(u0)
+    # Split mixed functions
+    dk, dc = split(du)
+    k,  c  = split(u)
+    k0, c0 = split(u0)
 
-  lmbda    = Constant(triangle) # surface parameter
-  muFactor = Constant(triangle) # chemical free energy multiplier
+    lmbda    = Constant(triangle) # surface parameter
+    muFactor = Constant(triangle) # chemical free energy multiplier
 
-  dt       = Constant(triangle) # time step
-  theta    = Constant(triangle) # time stepping parameter
+    dt       = Constant(triangle) # time step
+    theta    = Constant(triangle) # time stepping parameter
 
-  # Potential mu = \phi,c (chemical free-energy \phi = c^2*(1-c)^2)
-  mu = muFactor*(2*c*(1-c)*(1-c) - 2*c*c*(1-c))
+    # Potential mu = \phi,c (chemical free-energy \phi = c^2*(1-c)^2)
+    mu = muFactor*(2*c*(1-c)*(1-c) - 2*c*c*(1-c))
 
-  # k^(n+theta)
-  k_mid = (1-theta)*k0 + theta*k
+    # k^(n+theta)
+    k_mid = (1-theta)*k0 + theta*k
 
-  L1 = q*c*dx - q*c0*dx + dt*dot(grad(q), grad(k_mid))*dx
-  L2 = v*k*dx - v*mu*dx - lmbda*dot(grad(v), grad(c))*dx
-  L = L1 + L2
+    L1 = q*c*dx - q*c0*dx + dt*dot(grad(q), grad(k_mid))*dx
+    L2 = v*k*dx - v*mu*dx - lmbda*dot(grad(v), grad(c))*dx
+    L = L1 + L2
 
-  a = derivative(L, u, du)
+    a = derivative(L, u, du)
 
 
 C++ code
@@ -88,20 +88,19 @@ Yet more C++
 
 .. code-block:: c++
 
-  // Solve
-  while (t < T)
-  {
-    // Update for next time step
-    t += dt;
-    u0.vector() = u.vector();
-
     // Solve
-    newton_solver.solve(cahn_hilliard, u.vector());
+    while (t < T)
+    {
+      // Update for next time step
+      t += dt;
+      u0.vector() = u.vector();
 
-    // Save function to file
-    file << u[1];
-  }
+      // Solve
+      newton_solver.solve(cahn_hilliard, u.vector());
+
+      // Save function to file
+      file << u[1];
+    }
 
 All this should be in the same :download:`main.cpp` file.
-
 

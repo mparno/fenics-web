@@ -1,4 +1,4 @@
-..  How to download and install FEniCS projects.
+.. How to download and install FEniCS projects.
 
 .. _installation:
 

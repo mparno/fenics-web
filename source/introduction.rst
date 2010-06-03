@@ -1,4 +1,4 @@
-..  General introduction to the FEniCS documentation effort.
+.. General introduction to the FEniCS documentation effort.
     This is where we explain the main idea and structure of the docs.
 
 .. _introduction:

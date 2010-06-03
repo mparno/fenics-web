@@ -1,4 +1,4 @@
-..  This is the index page for the C++ demos.
+.. This is the index page for the C++ demos.
 
 .. demos_cpp_index:
 

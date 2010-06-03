@@ -1,4 +1,4 @@
-..  FEniCS documentation master file, created by
+.. FEniCS documentation master file, created by
     sphinx-quickstart on Thu Apr  8 13:34:04 2010.
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.

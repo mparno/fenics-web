@@ -1,4 +1,4 @@
-..  This is where we put the documentation for all demos from DOLFIN.
+.. This is where we put the documentation for all demos from DOLFIN.
 
     NOTE: KBO: We need to figure out how to share common text between the 
     C++/Python versions.

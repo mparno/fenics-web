@@ -1,4 +1,4 @@
-..  This is where we put the Python version of the FEniCS tutorial from
+.. This is where we put the Python version of the FEniCS tutorial from
     Hans Petter Langtangen.
 
 .. tutorial_python_index:

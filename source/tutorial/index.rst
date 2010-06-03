@@ -1,5 +1,5 @@
 .. This is where we put the FEniCS tutorial from Hans Petter Langtangen in
-   both a Python and C++ version.
+    both a Python and C++ version.
 
 .. _tutorial_index:
 

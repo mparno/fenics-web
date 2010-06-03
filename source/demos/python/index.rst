@@ -1,4 +1,4 @@
-..  This is the index page for the Python demos.
+.. This is the index page for the Python demos.
 
 .. demos_python_index:
 
