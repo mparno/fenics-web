@@ -277,6 +277,8 @@ Documenting demos
 When adding a new demo to the documentation, or updating an existing one,
 the following structure should be followed:
 
+run script ``verify_code_snippets.py`` in the top level directory.
+
 * For a new demo, figure out where to put it
 * Add code files for download.
 * Code snippets in text
