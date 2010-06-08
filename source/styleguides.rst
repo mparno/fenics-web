@@ -316,17 +316,95 @@ arguments (``char* argv[]``).
 Sphinx coding style for FEniCS documentation
 ============================================
 
-Use note for doc-authors in case of missing documentation, things to be
-considered etc.
+Code layout
+-----------
 
-Put the style guide and some notes on how to document classes, functions,
-write tutorials/examples etc.
+Use spaces instead of tabs for indentation.
 
-..  Section markers from http://docs.python.org/documenting/rest.html
-    # with overline, for parts
-    * with overline, for chapters
-    =, for sections
-    -, for subsections
-    ^, for subsubsections
-    ", for paragraphs
+Use 4 spaces per indentation level. This does not apply to ``C++`` code
+examples (DOLFIN) where the 2 space indentation rule apply.
+
+The text width of normal text should not exceed 79 characters, but code example
+tables and other cases where readability demands it this rule can be
+disregarded.
+
+
+Sections
+--------
+
+Section markers follow the convention from
+`Python <http://docs.python.org/documenting/rest.html>`_:
+
+* ``#`` with overline, for parts
+* ``*`` with overline, for chapters
+* ``=``, for sections
+* ``-``, for subsections
+* ``^``, for subsubsections
+* ``"``, for paragraphs
+
+Cross referencing
+-----------------
+
+Cross-references are created by placing labels at the location which you want
+to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
+
+.. code-block:: rest
+
+    .. _my-reference-label:
+
+    Section to cross-reference
+    --------------------------
+
+    This is the text of the section.
+
+    It refers to the section itself, see :ref:`my-reference-label`.
+
+For this to work properly, the label names **must** be unique in the entire
+documentation source.
+To ensure this, the label names should begin with the path to the file where
+the label is located relative to the source directory. As an example the label
+for the ``C++`` version of the Poisson demo which is located in the
+``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
+``demos_cpp_pde_poisson``.
+
+Directives
+----------
+
+Code
+^^^^
+
+Math
+^^^^
+.. note::
+
+    You will need the package ``dvipng`` to display the math properly in HTML.
+
+Download files
+^^^^^^^^^^^^^^
+
+Miscellaneous
+-------------
+
+Author comments
+^^^^^^^^^^^^^^^
+
+Please refrain from using the keywords *note*, *todo* and *fixme* in comments
+like:
+
+.. code-block:: rest
+
+    .. note: Figure out how to present this in a better way
+    .. todo: Add more text and equations
+    .. fixme: The results look wrong, probably the boundary conditions
+
+If you feel a comment is in its place use the ``note`` directive:
+
+.. code-block:: rest
+
+    .. note::
+
+        Figure out how to present this in a better way
+
+and ask on the fenics@lists.launchpad.net mailing list, so we can resolve the
+issue as quickly as possible to keep the documentation in good shape.
 
