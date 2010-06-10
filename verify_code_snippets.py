@@ -1,4 +1,4 @@
-#!usr/bin/env python
+#!/usr/bin/env python
 
 """This utility script will find all *.rst files in the source/demo
 directory and check that any code snippets highlighted by the .. code-block::
