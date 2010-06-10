@@ -1,6 +1,6 @@
 .. This is where we put the C++ version of the FEniCS Programmer's reference.
 
-.. programmers_reference_cpp_index:
+.. _programmers_reference_cpp_index:
 
 ###########
 C++ version

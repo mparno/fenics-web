@@ -1,6 +1,6 @@
 .. This is the index page for the C++ PDE demos.
 
-.. demos_cpp_pde_index:
+.. _demos_cpp_pde_index:
 
 ***********
 PDE

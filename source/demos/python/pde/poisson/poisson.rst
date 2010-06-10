@@ -1,6 +1,6 @@
 .. Documentation for the Poisson demo from DOLFIN.
 
-.. demos_python_pde_poisson:
+.. _demos_python_pde_poisson:
 
 Poisson's equation
 ==================

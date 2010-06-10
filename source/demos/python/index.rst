@@ -1,6 +1,6 @@
 .. This is the index page for the Python demos.
 
-.. demos_python_index:
+.. _demos_python_index:
 
 ##############
 Python version

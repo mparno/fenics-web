@@ -1,6 +1,6 @@
 .. This is where we put the original docs for FFC, UFC and UFL.
 
-.. programmers_reference_appendices_index:
+.. _programmers_reference_appendices_index:
 
 ##########
 Appendices

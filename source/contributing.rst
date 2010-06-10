@@ -275,18 +275,31 @@ Documenting demos
 =================
 
 When adding a new demo to the documentation, or updating an existing one,
-the following structure should be followed:
+the below model should be followed:
 
-run script ``verify_code_snippets.py`` in the top level directory.
+* Summarise what features are demonstrated
+* Problem and method description
+* Explain how each step of the solution process is implemented (include code
+  snippets if appropriate)
+* Add complete source code files for download
+* Link to relevant sections of the :ref:`programmers_reference_index` and to
+  demos that shows alternative implementations (if any)
+* Add keywords to the index
+* All demos MUST be available in both ``C++`` and ``Python`` versions
+* Have someone review the documentation
 
-* For a new demo, figure out where to put it
-* Add code files for download.
-* Code snippets in text
-* Review
+See the guide on how to
+:ref:`document demos <styleguides_sphinx_documenting_demos>` for details on how
+to implement each step and which files are needed.
+Also refer to the :ref:`Poisson (C++ demo) <demos_cpp_pde_poisson>` and 
+:ref:`Poisson (Python demo) <demos_python_pde_poisson>` as examples on how the
+documentation should look like.
 
-Currently, as we're migrating demos from DOLFIN, there are a lot of demos that
-needs documentation. Please see :ref:`demos_missing_demos` and consider lending
-a hand filling in the blanks.
+.. note::
+
+    Currently, as we're migrating demos from DOLFIN, there are a lot of demos
+    that needs documentation. Please see :ref:`demos_missing_demos` and
+    consider lending a hand filling in the blanks.
 
 Programmer's reference
 ======================
@@ -300,4 +313,27 @@ Programmer's reference
     * Example code
     * Link to relevant demos for actual usage (use directive seealso?)
     * Integrate doc strings with PyDOLFIN
+    * Code snippets (does not necessarily have to run)
+    * Class index (*General Index* or *Global Module* index), use ``index``?
+    * Put a link to a nicely documented class in the programmer's reference
+
+Before committing your work
+===========================
+
+There are a few simple tests that should be run before committing your work on
+the documentaion:
+
+* Run the script ``build_docs`` in the top level directory to make sure that
+  the documentation is successfully build without warnings
+* Run the script ``verify_code_snippets.py`` in the top level directory to test
+  that all code snippets in the demos are exact copies of the code available in
+  the source code files.
+
+.. note::
+
+    KBO: There will probably be more things to put here later
+
+Please fix any errors you might encounter running these scripts even if your
+work did not introduce them or at least notify the mailing list
+fenics@lists.launchpad.net in case you are unable to do so.
 

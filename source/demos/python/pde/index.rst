@@ -1,6 +1,6 @@
 .. This is the index page for the Python PDE demos.
 
-.. demos_python_pde_index:
+.. _demos_python_pde_index:
 
 ***
 PDE

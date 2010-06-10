@@ -1,6 +1,6 @@
 .. Index page for FFC.
 
-.. programmers_reference_appendices_ffc_index:
+.. _programmers_reference_appendices_ffc_index:
 
 *****************
 FFC documentation

@@ -316,6 +316,12 @@ arguments (``char* argv[]``).
 Sphinx coding style for FEniCS documentation
 ============================================
 
+This style guide contains information on how to create documentation for FEniCS
+using the Sphinx documentation tool. The first sections are related to how the
+reST code should look like, then follows a section on frequently used reST and
+Sphinx markup as a quick reference. The last two sections are guides explaining
+in steps how to document demos and the programmer's reference respectively.
+
 Code layout
 -----------
 
@@ -342,6 +348,8 @@ Section markers follow the convention from
 * ``^``, for subsubsections
 * ``"``, for paragraphs
 
+.. _styleguides_sphinx_cross_referencing:
+
 Cross referencing
 -----------------
 
@@ -363,27 +371,108 @@ For this to work properly, the label names **must** be unique in the entire
 documentation source.
 To ensure this, the label names should begin with the path to the file where
 the label is located relative to the source directory. As an example the label
-for the ``C++`` version of the Poisson demo which is located in the
+for the ``C++`` version of the Poisson demo which is located at the top of the
 ``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
-``demos_cpp_pde_poisson``.
+``demos_cpp_pde_poisson`` while the label to this sub section is:
 
-Directives
-----------
+.. code-block:: rest
 
-Code
-^^^^
+    .. _styleguides_sphinx_cross_referencing:
+
+    Cross referencing
+    -----------------
+
+Frequently used markup (roles and directives)
+--------------------------------------------
+
+.. _styleguides_sphinx_code_snippets:
+
+Code snippets
+^^^^^^^^^^^^^
+
+The FEniCS documentation makes heavy use of code snippets to illustrate how the
+interfaces work. Code snippets are created using the ``code-block`` directive
+(see `showing code examples <http://sphinx.pocoo.org/markup/code.html>`_
+for more details) which make it possible to show ``C++`` and ``Python`` code
+snippets in the the following way:
+
+.. code-block:: rest
+
+    .. code-block:: c++
+
+        for (int i = 0; i < 10; i++)
+          std::cout << i << std::endl;
+
+and
+
+.. code-block:: rest
+
+    .. code-block:: python
+
+        for i in range(10):
+            print i
+
+which results in the output:
+
+.. code-block:: c++
+
+    for (int i = 0; i < 10; i++)
+      std::cout << i << std::endl;
+
+and
+
+.. code-block:: python
+
+    for i in range(10):
+        print i
+
+respectively.
 
 Math
 ^^^^
+
+Writing FEniCS documentation often involves presenting mathematics especially
+when documenting demos. We use the ``math`` role and directive to display
+inline math and equations respectively (see
+`math support in Sphinx <http://sphinx.pocoo.org/ext/math.html>`_ for more
+details).
+The input markup for math is LaTeX so the inline equation,
+:math:`f(x) = x^2`, is typeset by
+
+.. code-block:: rest
+
+    :math:`f(x) = x^2`
+
+and the equation
+
+.. math::
+
+    a(v,u) = \int \nabla v \cdot \nabla u \; \text{d}\Omega
+
+is implemented as:
+
+.. code-block:: rest
+
+    .. math::
+
+        a(v,u) = \int \nabla v \cdot \nabla u \; \text{d}\Omega
+
 .. note::
 
     You will need the package ``dvipng`` to display the math properly in HTML.
 
+.. _styleguides_sphinx_download_files:
+
 Download files
 ^^^^^^^^^^^^^^
 
-Miscellaneous
--------------
+To make a file available for download use the ``download`` role (see
+`inline markup <http://sphinx.pocoo.org/markup/inline.html>`_ for more
+details) in the following way:
+
+.. code-block:: rest
+
+    See the :download:`main.cpp <../../source/main.cpp>` file.
 
 Author comments
 ^^^^^^^^^^^^^^^
@@ -407,4 +496,149 @@ If you feel a comment is in its place use the ``note`` directive:
 
 and ask on the fenics@lists.launchpad.net mailing list, so we can resolve the
 issue as quickly as possible to keep the documentation in good shape.
+
+.. _styleguides_sphinx_documenting_demos:
+
+Documenting demos
+-----------------
+
+This short guide explains the procedure for documenting a FEniCS demo.
+As an example we will demonstrate the steps involved to create documentation
+for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and 
+:ref:`Poisson (Python) <demos_python_pde_poisson>` demos.
+
+Files
+^^^^^
+
+The documentation is located in the ``source/demos`` directory which contains
+the directories ``common``, ``cpp`` and ``python``.
+First you must figure out which category your demo belongs to:
+
+1. adaptivity
+2. fem
+3. function
+4. la
+5. mesh
+6. ode
+7. parameters
+8. pde
+9. plot
+10. quadrature
+
+.. warning::
+
+    This might change in case we decide to reorganise the demos!
+
+In our case the Poisson demo is a partial differential equation (PDE), so
+we should add the following files:
+
+``demos/common/pde/poisson/poisson.txt``
+    put common information is this file and include in the ``C++`` and
+    ``Python`` versions (see :ref:`styleguides_sphinx_common_information`).
+
+``demos/cpp/pde/poisson/poisson.rst``
+    this file contains the reST source file with the documentation which is
+    specific to the ``C++`` version of the Poisson demo.
+
+``demos/cpp/pde/poisson/main.cpp``
+    this file contains the entire source code for the solver and must be made
+    available for :ref:`download <styleguides_sphinx_download_files>`.
+
+``demos/cpp/pde/poisson/Poisson.ufl``
+    this file contains the form file and must be made available for
+    :ref:`download <styleguides_sphinx_download_files>`.
+    If your demo contains multiple form files they too must be added.
+
+``demos/cpp/pde/poisson/SConstruct``
+    this file is necessary to compile the demo against DOLFIN, and must be
+    made available for :ref:`download <styleguides_sphinx_download_files>`.
+
+``demos/python/pde/poisson/poisson.rst``
+    this file contains the reST source file with the documentation which is
+    specific to the ``Python`` version of the Poisson demo.
+
+``demos/python/pde/poisson/demo.py``
+    this file contains the entire solver writte in PyDOLFIN, and must be made
+    available for :ref:`download <styleguides_sphinx_download_files>`.
+
+Finally, add the demo to the index files ``demos/python/pde/index`` and
+``demos/cpp/pde/index`` by adding ``poisson/poisson`` to the ``toctree`` to
+complete the setup of files.
+
+The source code files should of course be able to run with the versions of
+FEniCS software e.g., DOLFIN, FFC and UFL, which is covered by the current
+documentation.
+
+.. _styleguides_sphinx_common_information:
+
+Common information
+^^^^^^^^^^^^^^^^^^
+
+The demo has to be available in a ``C++`` and a ``Python`` version.
+However, the summary (describing what features are demonstrated) along with the
+problem and method description are typically identical for both versions.
+It is therefore desirable to put this information in a common source file to
+avoid code duplication.
+In this case this code is put in the file
+``demos/common/pde/poisson/poisson.txt`` which is then included in the two files
+``demos/cpp/pde/poisson/poisson.rst`` and
+``demos/python/pde/poisson/poisson.rst`` using the ``include`` directive with
+the relative path to the file:
+
+.. code-block:: rest
+
+  .. include:: ../../../common/pde/poisson/poisson.txt
+
+``C++`` and ``Python`` specific contents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Each step of the solution procedure of a demo should be explained. Often this
+is achieved by including :ref:`styleguides_sphinx_code_snippets` which of
+course must be given in the correct syntax depending on the demo version.
+
+.. note::
+
+    It is important that the code snippets are exact copies of what can be
+    found in the source files. The reason being that the source files will be
+    compiled and tested against DOLFIN and if anything is broken the demos
+    needs to be updated.
+
+    Running the script ``verify_code_snippets.py`` in the top level directory
+    will then locate all code snippets that needs to be updated to the new
+    syntax.
+
+As an example, the definition of the Dirichlet boundary is:
+
+.. code-block:: c++
+
+    class DirichletBoundary : public SubDomain
+    {
+      bool inside(const Array<double>& x, bool on_boundary) const
+      {
+        return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS;
+      }
+    };
+
+for the ``C++`` Poisson demo and
+
+.. code-block:: python
+
+    def boundary(x):
+        return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS
+
+for the ``Python`` demo.
+
+Additional information
+^^^^^^^^^^^^^^^^^^^^^^
+
+Use the ``note`` and ``warning`` directives to highligt important information.
+The ``see also`` directive should be used when pointing to alternative
+solutions or functions in the :ref:`programmers_reference_index`.
+
+Keywords should be added to the index, using the ``index`` directive to make
+the documentation easier to navigate through.
+
+See `the Sphinx documentation
+<http://sphinx.pocoo.org/markup/para.html#index-generating-markup>`_ on how to
+use the above directives.
 
