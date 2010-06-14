@@ -383,7 +383,7 @@ for the ``C++`` version of the Poisson demo which is located at the top of the
     -----------------
 
 Frequently used markup (roles and directives)
---------------------------------------------
+---------------------------------------------
 
 .. _styleguides_sphinx_code_snippets:
 
@@ -447,7 +447,7 @@ and the equation
 
 .. math::
 
-    a(v,u) = \int \nabla v \cdot \nabla u \; \text{d}\Omega
+    a(v,u) = \int \nabla v \cdot \nabla u \; \rm{d}\Omega
 
 is implemented as:
 
@@ -455,7 +455,7 @@ is implemented as:
 
     .. math::
 
-        a(v,u) = \int \nabla v \cdot \nabla u \; \text{d}\Omega
+        a(v,u) = \int \nabla v \cdot \nabla u \; \rm{d}\Omega
 
 .. note::
 
@@ -596,7 +596,7 @@ Each step of the solution procedure of a demo should be explained. Often this
 is achieved by including :ref:`styleguides_sphinx_code_snippets` which of
 course must be given in the correct syntax depending on the demo version.
 
-.. note::
+.. warning::
 
     It is important that the code snippets are exact copies of what can be
     found in the source files. The reason being that the source files will be

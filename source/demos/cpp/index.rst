@@ -11,5 +11,6 @@ This is the index page for the C++ demos.
 .. toctree::
     :maxdepth: 2
 
+    running-demos
     pde/index
 

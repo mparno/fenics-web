@@ -14,6 +14,10 @@ in the `DOLFIN <https://launchpad.net/dolfin>`_ source directory.
 The documentation is provided in two different flavours, C++ and Python, that
 solve the same problem, but uses slightly different syntax.
 
+Each demo contains source files ready for download. Please see the instructions
+on :ref:`how to run the C++ demos <demos_cpp_running_demos>` and
+:ref:`how to run the Python demos <demos_python_running_demos>`.
+
 From the Launchpad `blueprint
 <https://blueprints.launchpad.net/fenics-doc/+spec/demos>`_.
 

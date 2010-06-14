@@ -6,28 +6,49 @@
 Poisson's equation
 ==================
 
-First some common introduction
-
 .. include:: ../../../common/pde/poisson/poisson.txt
 
-This text is C++ specific
 
-Some UFL code in :download:`Poisson.ufl`.
+Implementation
+--------------
+
+Creating the form file
+^^^^^^^^^^^^^^^^^^^^^^
+
+First we define the variational problem in UFL which we save in the file called
+:download:`Poisson.ufl`.
+We first define the finite element, in this case a linear Lagrange triangle:
 
 .. code-block:: python
 
     element = FiniteElement("Lagrange", triangle, 1)
 
+Then we use this element to initialise the test and trial functions (:math:`v`
+and :math:`u`) and coefficient functions (:math:`f` and :math:`h`):
+
+.. code-block:: python
+
     v = TestFunction(element)
     u = TrialFunction(element)
     f = Coefficient(element)
-    g = Coefficient(element)
+    h = Coefficient(element)
+
+Finally, we define the bilinear and linear forms according to the equations:
+
+.. code-block:: python
 
     a = inner(grad(v), grad(u))*dx
-    L = v*f*dx + v*g*ds
+    L = v*f*dx + v*h*ds
 
 
-Some C++
+Writing the solver
+^^^^^^^^^^^^^^^^^^
+
+The solver is implemented in the :download:`main.cpp` file.
+
+At the top we include the DOLFIN header file and the header file containing the
+variational forms for the Poisson equation.
+For convenience we also include the DOLFIN namespace.
 
 .. code-block:: c++
 
@@ -36,7 +57,8 @@ Some C++
 
     using namespace dolfin;
 
-Some more C++
+Then follows the definition of the coefficient functions (for :math:`f` and
+:math:`h`), which are derived from the ``Expression`` class in DOLFIN.
 
 .. code-block:: c++
 
@@ -60,7 +82,9 @@ Some more C++
       }
     };
 
-Yet more C++
+The ``DirichletBoundary`` is derived from the ``Subdomain`` class and defines
+the part of the boundary to which the Dirichlet boundary condition should be
+applied.
 
 .. code-block:: c++
 
@@ -73,5 +97,6 @@ Yet more C++
       }
     };
 
-All this should be in the same :download:`main.cpp` file.
+Inside the ``main()`` function
+
 

@@ -68,7 +68,7 @@ int main()
   Source f;
   Flux g;
   L.f = f;
-  L.g = g;
+  L.h = h;
 
   // Compute solution
   VariationalProblem problem(a, L, bc);
