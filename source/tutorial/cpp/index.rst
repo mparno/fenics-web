@@ -3,9 +3,9 @@
 
 .. _tutorial_cpp_index:
 
-***********
-C++ version
-***********
+###############
+``C++`` version
+###############
 
-This is the index page for the C++ tutorial.
+This is the index page for the ``C++`` tutorial.
 

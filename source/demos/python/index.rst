@@ -2,11 +2,11 @@
 
 .. _demos_python_index:
 
-##############
-Python version
-##############
+##################
+``Python`` version
+##################
 
-This is the index page for the Python demos.
+This is the index page for the ``Python`` demos.
 
 .. toctree::
     :maxdepth: 2

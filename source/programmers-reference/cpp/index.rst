@@ -2,9 +2,9 @@
 
 .. _programmers_reference_cpp_index:
 
-###########
-C++ version
-###########
+###############
+``C++`` version
+###############
 
-This is the index page for the C++ programmer's reference.
+This is the index page for the ``C++`` programmer's reference.
 

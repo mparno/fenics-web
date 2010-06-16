@@ -12,6 +12,10 @@ Poisson's equation
 Implementation
 --------------
 
+The implementation is split in two files, a form file containing the definition
+of the variational forms expressed in UFL and the solver which is implemented
+in a C++ file.
+
 Creating the form file
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -97,6 +101,65 @@ applied.
       }
     };
 
-Inside the ``main()`` function
+Inside the ``main()`` function we first create the ``mesh`` and then we define
+the ``FunctionSpace`` :math:`V` for our finite element functions.
 
+.. code-block:: c++
+
+    // Create mesh and function space
+    UnitSquare mesh(32, 32);
+    Poisson::FunctionSpace V(mesh);
+
+After creating the ``FunctionSpace`` and defining our ``DirichletBoundary``
+class, we can create the Dirichlet boundary condition (``DirichletBC``) for our
+variational problem where we use a ``Constant`` (equal to zero) for the value
+of :math:`u` on the Dirichlet boundary.
+
+.. code-block:: c++
+
+    // Define boundary condition
+    Constant u0(0.0);
+    DirichletBoundary boundary;
+    DirichletBC bc(V, u0, boundary);
+
+Next, we define the variational problem by initialising the bilinear and linear
+forms (:math:`a`, :math:`L`) using the previously defined ``FunctionSpace``
+:math:`V`.
+Then we can create the source and boundary flux term (:math:`f`, :math:`g`) and
+attach these to the linear form.
+
+.. code-block:: c++
+
+    // Define variational problem
+    Poisson::BilinearForm a(V, V);
+    Poisson::LinearForm L(V);
+    Source f;
+    Flux g;
+    L.f = f;
+    L.h = h;
+
+To compute the solution we use the ``VariationalProblem`` class and choose an
+iterative linear solver.
+The solution is stored in the ``Function`` ``u`` which we also initialise using
+the ``FunctionSpace`` :math:`V` since our objective is to find :math:`u \in V`.
+
+.. code-block:: c++
+
+    // Compute solution
+    VariationalProblem problem(a, L, bc);
+    problem.parameters["linear_solver"] = "iterative";
+    Function u(V);
+    problem.solve(u);
+
+Finally, we can write the solution to a ``VTK`` file and visualise the solution
+using the ``plot()`` command.
+
+.. code-block:: c++
+
+    // Save solution in VTK format
+    File file("poisson.pvd");
+    file << u;
+
+    // Plot solution
+    plot(u);
 

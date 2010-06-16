@@ -3,9 +3,9 @@
 
 .. _programmers_reference_python_index:
 
-##############
-Python version
-##############
+##################
+``Python`` version
+##################
 
-This is the index page for the Python programmer's reference.
+This is the index page for the ``Python`` programmer's reference.
 

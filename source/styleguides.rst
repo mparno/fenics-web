@@ -8,8 +8,8 @@ Style guides
 
 .. _styleguides_cpp_coding_style:
 
-C++ coding style for DOLFIN
-===========================
+``C++`` coding style for DOLFIN
+===============================
 
 Naming conventions
 ------------------
@@ -113,6 +113,8 @@ classes).
 Miscellaneous
 -------------
 
+.. _styleguides_cpp_coding_style_indentation:
+
 Indentation
 ^^^^^^^^^^^
 
@@ -159,7 +161,7 @@ instead of ``double``:
     uint i = 0;
     double x = 0.0;
 
-These are typedefs for the standard C++ types ``unsigned int``
+These are typedefs for the standard ``C++`` types ``unsigned int``
 and ``double`` (defined in ``dolfin/common/types.h``).
 
 Placement of brackets
@@ -300,14 +302,14 @@ This makes it easier to spot which functions are virtual.
 Use of libraries
 ----------------
 
-Prefer C++ strings and streams to old C-style ``char*``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prefer ``C++`` strings and streams to old ``C``-style ``char*``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``std::string`` instead of ``const char*`` and use ``std::istream`` and
 ``std::ostream`` instead of ``FILE``. Avoid ``printf``,
 ``sprintf`` and the like.
 
-There are exceptions to this rule where we need to use old C-style
+There are exceptions to this rule where we need to use old ``C``-style
 function calls. One such exception is handling of command-line
 arguments (``char* argv[]``).
 
@@ -329,6 +331,7 @@ Use spaces instead of tabs for indentation.
 
 Use 4 spaces per indentation level. This does not apply to ``C++`` code
 examples (DOLFIN) where the 2 space indentation rule apply.
+See :ref:`C++ indentation <styleguides_cpp_coding_style_indentation>`.
 
 The text width of normal text should not exceed 79 characters, but code example
 tables and other cases where readability demands it this rule can be

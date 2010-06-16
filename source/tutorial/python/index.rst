@@ -3,9 +3,9 @@
 
 .. _tutorial_python_index:
 
-**************
-Python version
-**************
+##################
+``Python`` version
+##################
 
-This is the index page for the Python tutorial.
+This is the index page for the ``Python`` tutorial.
 
