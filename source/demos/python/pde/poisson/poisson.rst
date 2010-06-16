@@ -11,8 +11,8 @@ Poisson's equation
 Implementation
 --------------
 
-The implemented in a single Python file which contains both the variational
-forms and the solver.
+The implemented in a single Python file, :download:`demo.py`, which contains
+both the variational forms and the solver.
 
 First we import everyting from the ``dolfin`` module.
 
