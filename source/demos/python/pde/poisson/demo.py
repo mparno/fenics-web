@@ -35,9 +35,9 @@ bc = DirichletBC(V, u0, boundary)
 v = TestFunction(V)
 u = TrialFunction(V)
 f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
-h = Expression("-sin(5*x[0])")
+g = Expression("sin(5*x[0])")
 a = inner(grad(v), grad(u))*dx
-L = v*f*dx + v*h*ds
+L = v*f*dx - v*g*ds
 
 # Compute solution
 problem = VariationalProblem(a, L, bc)

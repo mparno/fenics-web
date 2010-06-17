@@ -28,21 +28,21 @@ We first define the finite element, in this case a linear Lagrange triangle:
     element = FiniteElement("Lagrange", triangle, 1)
 
 Then we use this element to initialise the test and trial functions (:math:`v`
-and :math:`u`) and coefficient functions (:math:`f` and :math:`h`):
+and :math:`u`) and coefficient functions (:math:`f` and :math:`g`):
 
 .. code-block:: python
 
     v = TestFunction(element)
     u = TrialFunction(element)
     f = Coefficient(element)
-    h = Coefficient(element)
+    g = Coefficient(element)
 
 Finally, we define the bilinear and linear forms according to the equations:
 
 .. code-block:: python
 
     a = inner(grad(v), grad(u))*dx
-    L = v*f*dx + v*h*ds
+    L = v*f*dx - v*g*ds
 
 
 Writing the solver
@@ -62,7 +62,7 @@ For convenience we also include the DOLFIN namespace.
     using namespace dolfin;
 
 Then follows the definition of the coefficient functions (for :math:`f` and
-:math:`h`), which are derived from the ``Expression`` class in DOLFIN.
+:math:`g`), which are derived from the ``Expression`` class in DOLFIN.
 
 .. code-block:: c++
 
@@ -82,7 +82,7 @@ Then follows the definition of the coefficient functions (for :math:`f` and
     {
       void eval(Array<double>& values, const Array<double>& x) const
       {
-        values[0] = -sin(5*x[0]);
+        values[0] = sin(5*x[0]);
       }
     };
 
@@ -136,7 +136,7 @@ attach these to the linear form.
     Source f;
     Flux g;
     L.f = f;
-    L.h = h;
+    L.g = g;
 
 To compute the solution we use the ``VariationalProblem`` class and choose an
 iterative linear solver.

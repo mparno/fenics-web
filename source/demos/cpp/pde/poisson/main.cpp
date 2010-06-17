@@ -38,7 +38,7 @@ class Flux : public Expression
 {
   void eval(Array<double>& values, const Array<double>& x) const
   {
-    values[0] = -sin(5*x[0]);
+    values[0] = sin(5*x[0]);
   }
 };
 
@@ -68,7 +68,7 @@ int main()
   Source f;
   Flux g;
   L.f = f;
-  L.h = h;
+  L.g = g;
 
   // Compute solution
   VariationalProblem problem(a, L, bc);

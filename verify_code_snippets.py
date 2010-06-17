@@ -103,9 +103,9 @@ def block_in_source(block, source_files):
 
         print "\nError:"
         print "\ncode block:\n", block
-        print "\ncode:\n", code
-        print "source_files:", source_files
-        print "in directory: ", getcwd()
+        print "\nsource_files:\n", source_files
+        print "\nin directory: ", getcwd()
+        print
         raise RuntimeError("Illegal code block.")
 
 if __name__ == "__main__":

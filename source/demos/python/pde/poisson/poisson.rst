@@ -11,8 +11,8 @@ Poisson's equation
 Implementation
 --------------
 
-The implemented in a single Python file, :download:`demo.py`, which contains
-both the variational forms and the solver.
+The demo is implemented in a single Python file, :download:`demo.py`, which
+contains both the variational forms and the solver.
 
 First we import everyting from the ``dolfin`` module.
 
@@ -62,9 +62,9 @@ in UFL.
     v = TestFunction(V)
     u = TrialFunction(V)
     f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
-    h = Expression("-sin(5*x[0])")
+    g = Expression("sin(5*x[0])")
     a = inner(grad(v), grad(u))*dx
-    L = v*f*dx + v*h*ds
+    L = v*f*dx - v*g*ds
 
 To compute the solution we use the ``VariationalProblem`` class which we
 initialise with the bilinear and linear forms and the Dirichlet boundary
