@@ -151,8 +151,8 @@ For ``Python``:
 Patches
 -------
 
-Usually, for simple bug fixes and minor changes, submitting a patch is simplest
-method to get code uploaded to the main branch.
+Usually, for simple bug fixes and minor changes, submitting a patch is the
+simplest method to get code uploaded to the main branch.
 For instance, to create and submit a patch for DOLFIN the following procedure
 should be applied:
 
