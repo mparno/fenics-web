@@ -32,7 +32,7 @@ particular boundary conditions reads:
 .. math::
    - \nabla^{2} u &= f \quad {\rm in} \ \Omega \\
                 u &= 0 \quad {\rm on} \ \Gamma_{D} \\
-                - \nabla u \cdot \boldsymbol{n} &= g \quad {\rm on} \ \Gamma_{N} \\
+                \nabla u \cdot \boldsymbol{n} &= g \quad {\rm on} \ \Gamma_{N} \\
 
 
 Find :math:`u \in V` such that
@@ -45,7 +45,7 @@ where
 .. math::
    a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, \rm{d}\Omega \\
    L(v)    &= \int_{\Omega} f v \, \rm{d}\Omega
-            - \int_{\Gamma_{N}} g v \, \rm{d}\Gamma
+            + \int_{\Gamma_{N}} g v \, \rm{d}\Gamma
 
 The expression :math:`a(u, v)` is the bilinear form and :math:`L(v)`
 is the linear form.
@@ -58,6 +58,6 @@ The following definitions of functions and boundaries are used in this demo:
 * :math:`\Omega = [0,1] \times [0,1]`
 * :math:`\Gamma_{D} = \{(\pm 1, y) \in \partial \Omega\}` (Dirichlet boundary)
 * :math:`\Gamma_{N} = \{(x, \pm 1) \in \partial \Omega\}` (Neumann boundary)
-* :math:`h = \sin(5x)` (normal flux)
+* :math:`h = \sin(5x)` (normal derivative)
 * :math:`f = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)` (source term)
 

@@ -42,7 +42,7 @@ Finally, we define the bilinear and linear forms according to the equations:
 .. code-block:: python
 
     a = inner(grad(v), grad(u))*dx
-    L = v*f*dx - v*g*ds
+    L = v*f*dx + v*g*ds
 
 
 Writing the solver
@@ -77,8 +77,8 @@ Then follows the definition of the coefficient functions (for :math:`f` and
       }
     };
 
-    // Boundary flux (Neumann boundary condition)
-    class Flux : public Expression
+    // Normal derivative (Neumann boundary condition)
+    class dUdN : public Expression
     {
       void eval(Array<double>& values, const Array<double>& x) const
       {
@@ -134,7 +134,7 @@ attach these to the linear form.
     Poisson::BilinearForm a(V, V);
     Poisson::LinearForm L(V);
     Source f;
-    Flux g;
+    dUdN g;
     L.f = f;
     L.g = g;
 

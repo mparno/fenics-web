@@ -51,8 +51,9 @@ of :math:`u` on the Dirichlet boundary.
 Next, we define the variational problem in UFL. First we initialise the
 ``TestFunction`` and ``TrialFunction`` using the previously defined
 ``FunctionSpace`` :math:`V`. Then we use the ``Expression`` class to define
-the source and boundary flux term (:math:`f`, :math:`g`). Note that the string
-defining these expressions uses ``C++`` syntax.
+the source term and normal derivative term on the boundary
+(:math:`f`, :math:`g`).
+Note that the string defining these expressions uses ``C++`` syntax.
 The bilinear and linear forms (``a`` and ``L``) can then be expressed directly
 in UFL.
 
@@ -64,7 +65,7 @@ in UFL.
     f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
     g = Expression("sin(5*x[0])")
     a = inner(grad(v), grad(u))*dx
-    L = v*f*dx - v*g*ds
+    L = v*f*dx + v*g*ds
 
 To compute the solution we use the ``VariationalProblem`` class which we
 initialise with the bilinear and linear forms and the Dirichlet boundary

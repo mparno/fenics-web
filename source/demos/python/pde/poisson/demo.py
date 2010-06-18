@@ -9,7 +9,7 @@ on the unit square with source f given by
 and boundary conditions given by
 
     u(x, y) = 0        for x = 0 or x = 1
-du/dn(x, y) = -sin(5*x) for y = 0 or y = 1
+du/dn(x, y) = sin(5*x) for y = 0 or y = 1
 """
 
 __author__ = "Anders Logg (logg@simula.no)"
@@ -37,7 +37,7 @@ u = TrialFunction(V)
 f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
 g = Expression("sin(5*x[0])")
 a = inner(grad(v), grad(u))*dx
-L = v*f*dx - v*g*ds
+L = v*f*dx + v*g*ds
 
 # Compute solution
 problem = VariationalProblem(a, L, bc)
