@@ -40,14 +40,18 @@ adding this functionality.
 In order to install the FEniCS project on one of the supported
 platforms listed above, follow the following steps:
 
-#. Fetch the most recent version of Dorsal from its `download page <https://launchpad.net/dorsal/+download>`_.
+#. Fetch the most recent version of Dorsal from its
+   `download page <https://launchpad.net/dorsal/+download>`_.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and tweak dorsal.cfg to your liking.
 #. Invoke the build script by running::
 
       $ ./dorsal.sh
 
-#. At this point, Dorsal attempts to guess your operating environment (platform) and provides a list of instructions to ensure your system is ready for installing FEniCS. Go through these carefully, and copy and paste appropriate commands into another terminal window to prepare your system.
+#. At this point, Dorsal attempts to guess your operating environment
+   (platform) and provides a list of instructions to ensure your system is
+   ready for installing FEniCS. Go through these carefully, and copy and paste
+   appropriate commands into another terminal window to prepare your system.
 #. Once you've completed these steps, hit enter to begin the installation!
 
 
@@ -56,7 +60,8 @@ compilation-related text scroll past your screen and eventually end up
 with a complete, up-to-date installation of various FEniCS projects
 and their corresponding dependencies.
 
-Don't forget to follow any post-build instructions before rushing off to try the demos!
+Don't forget to follow any post-build instructions before rushing off to try
+the demos!
 
 
 ***
