@@ -43,9 +43,9 @@ Find :math:`u \in V` such that
 where
 
 .. math::
-   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, \rm{d}\Omega \\
-   L(v)    &= \int_{\Omega} f v \, \rm{d}\Omega
-            + \int_{\Gamma_{N}} g v \, \rm{d}\Gamma
+   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, {\rm d}\Omega \\
+   L(v)    &= \int_{\Omega} f v \, {\rm d}\Omega
+            + \int_{\Gamma_{N}} g v \, {\rm d}\Gamma
 
 The expression :math:`a(u, v)` is the bilinear form and :math:`L(v)`
 is the linear form.
