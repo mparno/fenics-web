@@ -317,6 +317,42 @@ Programmer's reference
     * Class index (*General Index* or *Global Module* index), use ``index``?
     * Put a link to a nicely documented class in the programmer's reference
 
+    For the Python documentation we agree on trying to follow this format:
+
+    http://projects.scipy.org/numpy/browser/trunk/doc/EXAMPLE_DOCSTRING.txt
+
+    We just keep the raw reST source in the docstring, see output from:
+    
+    >>> import numpy
+    >>> help(numpy.random.multivariate_normal)
+    
+    Use autodoc features in Sphinx to generate the HTML docs from the
+    docstring:
+    
+    http://docs.scipy.org/doc/numpy-1.3.x/reference/generated/numpy.random.multivariate_normal.html#numpy.random.multivariate_normal
+
+    We need the numpydoc module for this to work:
+
+    http://pypi.python.org/pypi/numpydoc/0.3.1
+
+    It would be nicer to have everything in native Sphinx, but then we can't
+    have sections in the docstrings which make things look a bit better.
+    numpydoc will also create links to class members which is another nice
+    feature.
+
+    On the downside we will get a lot of warnings when building the docs, but
+    it looks like this is something we have to live with, maybe we can filter
+    the output through a script to catch these numpydoc related warnings?
+    Also note that sections are not really supported in numpydoc, only the
+    section names: Parameters, Returns, See Also, Notes, References and
+    Examples are recognised. A section title like *Foo Title* will result in
+    an error on build.
+
+    Anyway, numpydoc make the documentation generated from
+    docstrings look much nicer so this is small price to pay and if we have
+    info that does absolutely NOT fit into the above categories we can always
+    add a section manually of modify the numpydoc module.
+
 Before committing your work
 ===========================
 
