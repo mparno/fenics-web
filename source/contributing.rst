@@ -361,9 +361,9 @@ the documentaion:
 
 * Run the script ``build_docs`` in the top level directory to make sure that
   the documentation is successfully build without warnings
-* Run the script ``verify_code_snippets.py`` in the top level directory to test
-  that all code snippets in the demos are exact copies of the code available in
-  the source code files.
+* Run the script ``test/verify_demo_code_snippets.py`` to test that all code
+  snippets in the demos are exact copies of the code available in the source
+  code files.
 
 .. note::
 
