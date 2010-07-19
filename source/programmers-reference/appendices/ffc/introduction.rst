@@ -11,3 +11,6 @@ convert the LaTeX source to rst?
 Have a look at all the chapters in the manual, many seems to be outdated
 e.g., the formlanguage chapter which is now handled by UFL.
 
+Since this is a programmer's reference we should rely on the autodoc features
+of Sphinx like we do for the dolfin modules and just add supplementary text. 
+

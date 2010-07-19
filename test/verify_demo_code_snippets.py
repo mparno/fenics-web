@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 
 """This utility script will find all *.rst files in the source/demo
-directory and check that any code snippets highlighted by the .. code-block::
+directory and checks that any code snippets highlighted by the .. code-block::
 directive is legal in the sense that it is present in at least one of the
 source files (.ufl, .py, .cpp) that is associated with the demo."""
 
 from os import chdir, path, getcwd, curdir, pardir, listdir
-from sys import stderr
+from sys import stderr, path as sys_path
 
-# We currently only verifies demo code.
-chdir(path.join("source","demos"))
+# Make sure we start where this test script is located.
+chdir(sys_path[0])
 
-# Save current location (needed?).
-demo_dir = getcwd()
+# We currently only verify demo code.
+chdir(path.join(pardir, "source", "demos"))
 
 # We have C++ and Python versions of the demos.
 directories = ["cpp", "python"]
