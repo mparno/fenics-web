@@ -353,6 +353,15 @@ Programmer's reference
     info that does absolutely NOT fit into the above categories we can always
     add a section manually of modify the numpydoc module.
 
+    The keyword ``inline`` doesn't seem to be picked up by Sphinx, but I guess
+    we can do without for now (and it doesn't additional info to the user). 
+
+    It also looks like the destructor ``~`` is not recognised, but we can skip
+    documenting that until it is included in Sphinx.
+
+    The empty constructor like Mesh() is implicit when defining the class, so
+    there is no need to add an explicit function for this.
+
 Before committing your work
 ===========================
 

@@ -8,3 +8,8 @@
 
 This is the index page for the ``C++`` programmer's reference.
 
+.. toctree::
+    :maxdepth: 1
+
+    mesh/index
+
