@@ -20,6 +20,8 @@ First we import everyting from the ``dolfin`` module.
 
     from dolfin import * 
 
+.. index:: FunctionSpace
+
 Then we create the ``mesh`` and define the ``FunctionSpace`` :math:`V` for our
 finite element functions.
 
@@ -28,6 +30,8 @@ finite element functions.
     # Create mesh and define function space
     mesh = UnitSquare(32, 32)
     V = FunctionSpace(mesh, "CG", 1)
+
+.. index:: Subdomain
 
 We use a simple ``Python`` function, which returns a ``bool``, to define the
 subdomain for the Dirichlet boundary condition.
@@ -38,6 +42,8 @@ subdomain for the Dirichlet boundary condition.
     def boundary(x):
         return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS
 
+.. index:: DirichletBC
+
 We can then create the Dirichlet boundary condition (``DirichletBC``) for our
 variational problem where we use a ``Constant`` (equal to zero) for the value
 of :math:`u` on the Dirichlet boundary.
@@ -47,6 +53,8 @@ of :math:`u` on the Dirichlet boundary.
     # Define boundary condition
     u0 = Constant(0.0)
     bc = DirichletBC(V, u0, boundary)
+
+.. index:: Expression
 
 Next, we define the variational problem in UFL. First we initialise the
 ``TestFunction`` and ``TrialFunction`` using the previously defined
@@ -66,6 +74,8 @@ in UFL.
     g = Expression("sin(5*x[0])")
     a = inner(grad(v), grad(u))*dx
     L = v*f*dx + v*g*ds
+
+.. index:: VariationalProblem
 
 To compute the solution we use the ``VariationalProblem`` class which we
 initialise with the bilinear and linear forms and the Dirichlet boundary

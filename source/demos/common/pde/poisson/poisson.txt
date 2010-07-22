@@ -14,14 +14,6 @@ This demo illustrates how to:
 * define FunctionSpace
 * create a Subdomain
 
-.. index::
-    single: VariationalProblem
-    triple: forms; attach; expression
-    single: Expression
-    single: Subdomain
-    single: DirichletBC
-    single: FunctionSpace
-
 Governing equations
 -------------------
 

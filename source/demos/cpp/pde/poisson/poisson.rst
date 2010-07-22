@@ -61,6 +61,8 @@ For convenience we also include the DOLFIN namespace.
 
     using namespace dolfin;
 
+.. index:: Expression
+
 Then follows the definition of the coefficient functions (for :math:`f` and
 :math:`g`), which are derived from the ``Expression`` class in DOLFIN.
 
@@ -86,6 +88,8 @@ Then follows the definition of the coefficient functions (for :math:`f` and
       }
     };
 
+.. index:: Subdomain
+
 The ``DirichletBoundary`` is derived from the ``Subdomain`` class and defines
 the part of the boundary to which the Dirichlet boundary condition should be
 applied.
@@ -110,6 +114,8 @@ the ``FunctionSpace`` :math:`V` for our finite element functions.
     UnitSquare mesh(32, 32);
     Poisson::FunctionSpace V(mesh);
 
+.. index:: DirichletBC
+
 After creating the ``FunctionSpace`` and defining our ``DirichletBoundary``
 class, we can create the Dirichlet boundary condition (``DirichletBC``) for our
 variational problem where we use a ``Constant`` (equal to zero) for the value
@@ -121,6 +127,9 @@ of :math:`u` on the Dirichlet boundary.
     Constant u0(0.0);
     DirichletBoundary boundary;
     DirichletBC bc(V, u0, boundary);
+
+.. index::
+    triple: forms; attach; expression
 
 Next, we define the variational problem by initialising the bilinear and linear
 forms (:math:`a`, :math:`L`) using the previously defined ``FunctionSpace``
@@ -137,6 +146,8 @@ attach these to the linear form.
     dUdN g;
     L.f = f;
     L.g = g;
+
+.. index:: VariationalProblem
 
 To compute the solution we use the ``VariationalProblem`` class and choose an
 iterative linear solver.
