@@ -7,6 +7,7 @@
 ###############
 
 This is the index page for the ``C++`` programmer's reference.
+The contents follows the directory structure of DOLFIN.
 
 .. toctree::
     :maxdepth: 1

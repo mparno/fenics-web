@@ -2,12 +2,10 @@
 
 .. _programmers_reference_cpp_mesh_index:
 
-Mesh
+mesh
 ====
 
-This is the index page for files in the directory dolfin/mesh
-
-Contents:
+This is the index page for files in the directory dolfin/mesh:
 
 .. toctree::
     :maxdepth: 2

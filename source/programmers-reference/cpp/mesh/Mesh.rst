@@ -7,246 +7,258 @@
 
 .. cpp:class:: Mesh
 
-  A Mesh consists of a set of connected and numbered mesh entities.
+    A Mesh consists of a set of connected and numbered mesh entities.
 
-  Both the representation and the interface are dimension-independent,
-  but a concrete interface is also provided for standard named mesh
-  entities:
+    Both the representation and the interface are dimension-independent,
+    but a concrete interface is also provided for standard named mesh
+    entities:
 
-  .. tabularcolumns:: |c|c|c|
+    .. tabularcolumns:: |c|c|c|
 
-  +--------+-----------+-------------+
-  | Entity | Dimension | Codimension |
-  +========+===========+=============+
-  | Vertex |  0        |             |
-  +--------+-----------+-------------+
-  | Edge   |  1        |             | 
-  +--------+-----------+-------------+
-  | Face   |  2        |             | 
-  +--------+-----------+-------------+
-  | Facet  |           |      1      |
-  +--------+-----------+-------------+
-  | Cell   |           |        0    |
-  +--------+-----------+-------------+
+    +--------+-----------+-------------+
+    | Entity | Dimension | Codimension |
+    +========+===========+=============+
+    | Vertex |  0        |             |
+    +--------+-----------+-------------+
+    | Edge   |  1        |             | 
+    +--------+-----------+-------------+
+    | Face   |  2        |             | 
+    +--------+-----------+-------------+
+    | Facet  |           |      1      |
+    +--------+-----------+-------------+
+    | Cell   |           |        0    |
+    +--------+-----------+-------------+
 
-  When working with mesh iterators, all entities and connectivity
-  are precomputed automatically the first time an iterator is
-  created over any given topological dimension or connectivity.
+    When working with mesh iterators, all entities and connectivity
+    are precomputed automatically the first time an iterator is
+    created over any given topological dimension or connectivity.
 
-  Note that for efficiency, only entities of dimension zero
-  (vertices) and entities of the maximal dimension (cells) exist
-  when creating a Mesh. Other entities must be explicitly created
-  by calling init(). For example, all edges in a mesh may be created
-  by a call to mesh.init(1). Similarly, connectivities such as
-  all edges connected to a given vertex must also be explicitly
-  created (in this case by a call to mesh.init(0, 1)).
+    Note that for efficiency, only entities of dimension zero
+    (vertices) and entities of the maximal dimension (cells) exist
+    when creating a Mesh. Other entities must be explicitly created
+    by calling init(). For example, all edges in a mesh may be created
+    by a call to mesh.init(1). Similarly, connectivities such as
+    all edges connected to a given vertex must also be explicitly
+    created (in this case by a call to mesh.init(0, 1)).
 
-  .. cpp:function::  Mesh(const Mesh& mesh)
+    .. cpp:function::  Mesh(const Mesh& mesh)
 
-    Copy constructor
+        Copy constructor
 
-  .. cpp:function::  explicit Mesh(std::string filename)
+    .. cpp:function::  explicit Mesh(std::string filename)
+        
+        :param etype: exception type
+        :param value: exception value
+        :param tb: traceback object
+        :param limit: maximum number of stack frames to show
+        :type limit: integer or None
+        :rtype: list of strings
+       
+        Create mesh from data file
 
-    Create mesh from data file
+    .. cpp:function::  const Mesh& operator=(const Mesh& mesh)
 
-  .. cpp:function::  ~Mesh()
+        Assignment
 
-    Destructor
+    .. cpp:function::  uint num_vertices() const
 
-  .. cpp:function::  const Mesh& operator=(const Mesh& mesh)
+        Return number of vertices
 
-    Assignment
+    .. cpp:function::  uint num_edges() const
 
-  .. cpp:function::  uint num_vertices() const
+        Return number of edges
 
-    Return number of vertices
+    .. cpp:function::  uint num_faces() const
 
-  .. cpp:function::  uint num_edges() const
+        Return number of faces
 
-    Return number of edges
+    .. cpp:function::  uint num_facets() const
 
-  .. cpp:function::  uint num_faces() const
+        Return number of facets
 
-    Return number of faces
+    .. cpp:function::  uint num_cells() const
 
-  .. cpp:function::  uint num_facets() const
+        Return number of cells
 
-    Return number of facets
+    .. cpp:function::  uint num_entities(uint d) const
 
-  .. cpp:function::  uint num_cells() const
+        :arguments:
+            * d :type: unsigned int
+            * i :type unsigned int:
 
-    Return number of cells
+        :argument d:  unsigned integer (dolfin::uint)
+        :param d:  :type: unsigned integer (dolfin::uint)
+        :rtype:       unsigned integer
+        :returns:     Return number of entities of dimension d
 
-  .. cpp:function::  uint num_entities(uint d) const
+    .. cpp:function::  double* coordinates()
 
-    Return number of entities of dimension d
+        Return coordinates of all vertices
 
-  .. cpp:function::  double* coordinates()
+    .. cpp:function::  const double* coordinates() const
 
-    Return coordinates of all vertices
+        Return coordinates of all vertices
 
-  .. cpp:function::  const double* coordinates() const
+    .. cpp:function::  const uint* cells() const
 
-    Return coordinates of all vertices
+        Return connectivity for all cells
 
-  .. cpp:function::  const uint* cells() const
+    .. cpp:function::  uint size(uint dim) const
 
-    Return connectivity for all cells
+        Return number of entities of given topological dimension
 
-  .. cpp:function::  uint size(uint dim) const
+    .. cpp:function::  MeshTopology& topology()
 
-    Return number of entities of given topological dimension
+        Return mesh topology (non-const version)
 
-  .. cpp:function::  MeshTopology& topology()
+    .. cpp:function::  const MeshTopology& topology() const
 
-    Return mesh topology (non-const version)
+        Return mesh topology (const version)
 
-  .. cpp:function::  const MeshTopology& topology() const
+    .. cpp:function::  MeshGeometry& geometry()
 
-    Return mesh topology (const version)
+        Return mesh geometry (non-const version)
 
-  .. cpp:function::  MeshGeometry& geometry()
+    .. cpp:function::  const MeshGeometry& geometry() const
 
-    Return mesh geometry (non-const version)
+        Return mesh geometry (const version)
 
-  .. cpp:function::  const MeshGeometry& geometry() const
+    .. cpp:function::  const IntersectionOperator& intersection_operator() const
 
-    Return mesh geometry (const version)
+        Return intersectionoperator (const version)
 
-  .. cpp:function::  const IntersectionOperator& intersection_operator() const
+    .. cpp:function::  IntersectionOperator& intersection_operator()
 
-    Return intersectionoperator (const version)
+        Return intersectionoperator (non-const version)
 
-  .. cpp:function::  IntersectionOperator& intersection_operator()
+    .. cpp:function::  MeshData& data()
 
-    Return intersectionoperator (non-const version)
+        Return mesh data (non-const version)
 
-  .. cpp:function::  MeshData& data()
+    .. cpp:function::  const MeshData& data() const
 
-    Return mesh data (non-const version)
+        Return mesh data (const version)
 
-  .. cpp:function::  const MeshData& data() const
+    .. cpp:function::  CellType& type()
 
-    Return mesh data (const version)
+        Return mesh cell type
 
-  .. cpp:function::  CellType& type()
+    .. cpp:function::  const CellType& type() const
 
-    Return mesh cell type
+        Return mesh cell type
 
-  .. cpp:function::  const CellType& type() const
+    .. cpp:function::  uint init(uint dim) const
 
-    Return mesh cell type
+        Compute entities of given topological dimension and return number of entities
 
-  .. cpp:function::  uint init(uint dim) const
+    .. cpp:function::  void init(uint d0, uint d1) const
 
-    Compute entities of given topological dimension and return number of entities
+        Compute connectivity between given pair of dimensions
 
-  .. cpp:function::  void init(uint d0, uint d1) const
+    .. cpp:function::  void init() const
 
-    Compute connectivity between given pair of dimensions
+        Compute all entities and connectivity
 
-  .. cpp:function::  void init() const
+    .. cpp:function::  void clear()
 
-    Compute all entities and connectivity
+        Clear all mesh data
 
-  .. cpp:function::  void clear()
+    .. cpp:function::  void order()
 
-    Clear all mesh data
+        Order all mesh entities (not needed if "mesh order entities" is set)
 
-  .. cpp:function::  void order()
+    .. cpp:function::  bool ordered() const
 
-    Order all mesh entities (not needed if "mesh order entities" is set)
+        Return true iff topology is ordered according to the UFC numbering
 
-  .. cpp:function::  bool ordered() const
+    .. cpp:function::  void move(BoundaryMesh& boundary, dolfin::ALEType method=hermite)
 
-    Return true iff topology is ordered according to the UFC numbering
+        Move coordinates of mesh according to new boundary coordinates
 
-  .. cpp:function::  void move(BoundaryMesh& boundary, dolfin::ALEType method=hermite)
+    .. cpp:function::  void move(Mesh& mesh, dolfin::ALEType method=hermite)
 
-    Move coordinates of mesh according to new boundary coordinates
+        Move coordinates of mesh according to adjacent mesh with common global vertices
 
-  .. cpp:function::  void move(Mesh& mesh, dolfin::ALEType method=hermite)
+    .. cpp:function::  void move(const Function& displacement)
 
-    Move coordinates of mesh according to adjacent mesh with common global vertices
+        Move coordinates of mesh according to displacement function
 
-  .. cpp:function::  void move(const Function& displacement)
+    .. cpp:function::  void smooth(uint num_iterations=1)
 
-    Move coordinates of mesh according to displacement function
+        Smooth internal vertices of mesh by local averaging
 
-  .. cpp:function::  void smooth(uint num_iterations=1)
+    .. cpp:function::  void smooth_boundary(uint num_iterations=1, bool harmonic_smoothing=true)
 
-    Smooth internal vertices of mesh by local averaging
+        Smooth boundary vertices of mesh by local averaging
 
-  .. cpp:function::  void smooth_boundary(uint num_iterations=1, bool harmonic_smoothing=true)
+    .. cpp:function::  void snap_boundary(const SubDomain& sub_domain, bool harmonic_smoothing=true)
 
-    Smooth boundary vertices of mesh by local averaging
+        Snap boundary vertices of mesh to match given sub domain
 
-  .. cpp:function::  void snap_boundary(const SubDomain& sub_domain, bool harmonic_smoothing=true)
+    .. cpp:function::  void all_intersected_entities(const Point & point, uint_set & ids_result) const
 
-    Snap boundary vertices of mesh to match given sub domain
+        Compute all id of all cells which are intersects by a \em point.
+        \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
+        reasons, to avoid to sort out duplicates later on.
 
-  .. cpp:function::  void all_intersected_entities(const Point & point, uint_set & ids_result) const
+    .. cpp:function::  void all_intersected_entities(const std::vector<Point> & points, uint_set & ids_result) const
 
-    Compute all id of all cells which are intersects by a \em point.
-    \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
-    reasons, to avoid to sort out duplicates later on.
+        Compute all id of all cells which are intersects any point in \em points.
+        \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
+        reasons, to avoid to sort out duplicates later on.
 
-  .. cpp:function::  void all_intersected_entities(const std::vector<Point> & points, uint_set & ids_result) const
+    .. cpp:function::  void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
 
-    Compute all id of all cells which are intersects any point in \em points.
-    \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
-    reasons, to avoid to sort out duplicates later on.
+        Compute all id of all cells which are intersects by a \em entity.
+        \param[out] ids_result The ids of the intersected entities are saved in a vector.
+        This allows is more efficent than using a set and allows a map between
+        the (external) cell and the intersected cell of the mesh. If you
+        are only interested in intersection with a list of cells without caring about which
+        cell what intersected by which one, use
 
-  .. cpp:function::  void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
+    .. cpp:function::  void all_intersected_entities(const std::vector<MeshEntity> & entities, uint_set & ids_result) const
 
-    Compute all id of all cells which are intersects by a \em entity.
-    \param[out] ids_result The ids of the intersected entities are saved in a vector.
-    This allows is more efficent than using a set and allows a map between
-    the (external) cell and the intersected cell of the mesh. If you
-    are only interested in intersection with a list of cells without caring about which
-    cell what intersected by which one, use
+        Compute all id of all cells which are intersects by any of the entities in \em entities. This
+        \param[out] ids_result The ids of the intersected set are saved in a set for efficienty
+        reasons, to avoid to sort out duplicates later on.
 
-  .. cpp:function::  void all_intersected_entities(const std::vector<MeshEntity> & entities, uint_set & ids_result) const
+    .. cpp:function::  void all_intersected_entities(const Mesh & another_mesh, uint_set & ids_result) const
 
-    Compute all id of all cells which are intersects by any of the entities in \em entities. This
-    \param[out] ids_result The ids of the intersected set are saved in a set for efficienty
-    reasons, to avoid to sort out duplicates later on.
+        Compute all id of all cells which are intersects by the given mesh \em another_mesh
+        \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
+        reasons, to avoid to sort out duplicates later on.
 
-  .. cpp:function::  void all_intersected_entities(const Mesh & another_mesh, uint_set & ids_result) const
+    .. cpp:function::  int any_intersected_entity(const Point & point) const
 
-    Compute all id of all cells which are intersects by the given mesh \em another_mesh
-    \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
-    reasons, to avoid to sort out duplicates later on.
+        Computes only the first id  of the entity, which contains the point. Returns -1 if no cell is intersected.
+        @internal @remark This makes the function evaluation significantly faster.
 
-  .. cpp:function::  int any_intersected_entity(const Point & point) const
+    .. cpp:function::  Point closest_point(const Point & point) const
 
-    Computes only the first id  of the entity, which contains the point. Returns -1 if no cell is intersected.
-    @internal @remark This makes the function evaluation significantly faster.
+        Computes the point inside the mesh which are closest to the point query.
 
-  .. cpp:function::  Point closest_point(const Point & point) const
+    .. cpp:function::  dolfin::uint closest_cell(const Point & point) const
 
-    Computes the point inside the mesh which are closest to the point query.
+        Computes the index of the cell in the mesh
+        which are closest to the point query.
 
-  .. cpp:function::  dolfin::uint closest_cell(const Point & point) const
+    .. cpp:function::  std::pair<Point,dolfin::uint> closest_point_and_cell(const Point & point) const
 
-    Computes the index of the cell in the mesh
-    which are closest to the point query.
+        Computes the point inside the mesh and the corresponding cell index
+        which are closest to the point query.
 
-  .. cpp:function::  std::pair<Point,dolfin::uint> closest_point_and_cell(const Point & point) const
+    .. cpp:function::  double hmin() const
 
-    Computes the point inside the mesh and the corresponding cell index
-    which are closest to the point query.
+        Compute minimum cell diameter
 
-  .. cpp:function::  double hmin() const
+    .. cpp:function::  double hmax() const
 
-    Compute minimum cell diameter
+        Compute maximum cell diameter
 
-  .. cpp:function::  double hmax() const
+    .. cpp:function::  std::string str(bool verbose) const
 
-    Compute maximum cell diameter
+        Return informal string representation (pretty-print)
 
-  .. cpp:function::  std::string str(bool verbose) const
+.. .. cpp:function::  ~Mesh() Spinx does not recognize '~' yet!
 
-    Return informal string representation (pretty-print)
-
-
+        Destructor
