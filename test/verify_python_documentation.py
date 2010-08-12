@@ -145,7 +145,14 @@ def parse_module(mod):
 
         # Get all functions defined in module.
         defines.update(get_functions(val, key))
-    return defines
+
+    new_defines = {}
+    for n in defines:
+        nn = ".".join(n.split(".")[1:])
+        new_defines[nn] = defines[n]
+
+    return new_defines
+#    return defines
 
 # -----------------------------------------------------------------------------
 
@@ -159,8 +166,14 @@ def equal_docs(mod, doc):
     non_equal = []
     for key, val in doc.items():
         if key in mod:
-            if val.__doc__.split() != mod[key].__doc__.split():
-                non_equal.append(key)
+            try:
+                vs = val.__doc__.split()
+                ms = mod[key].__doc__.split()
+                if vs != ms:
+                    non_equal.append((key, "'%s' != '%s'" % (" ".join(vs), " ".join(ms))))
+            except:
+                non_equal.append((key, ""))
+
     return sorted(non_equal)
 # -----------------------------------------------------------------------------
 
@@ -215,7 +228,7 @@ if __name__ == "__main__":
         print s + "\n    See python_log for details."
         s += "\n    Docstrings differ for the following modules, classes and functions:"
         s += "\n"
-        s += "\n".join(["      " + c for c in non_equal])
+        s += "\n".join(["\n".join([" "*6 + c, " "*6 + v]) for c, v in non_equal])
         s += "\n"
         log_string += s
     if missing:
