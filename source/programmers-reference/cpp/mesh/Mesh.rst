@@ -2,8 +2,8 @@
 
 .. _programmers_reference_cpp_mesh_Mesh:
 
-:mod:`Mesh.h`
-=============
+Mesh.h
+======
 
 .. cpp:class:: Mesh
 

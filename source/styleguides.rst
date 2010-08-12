@@ -606,7 +606,7 @@ course must be given in the correct syntax depending on the demo version.
     compiled and tested against DOLFIN and if anything is broken the demos
     needs to be updated.
 
-    Running the script ``verify_code_snippets.py`` in the top level directory
+    Running the script ``test/verify_code_snippets.py`` in the top level directory
     will then locate all code snippets that needs to be updated to the new
     syntax.
 
