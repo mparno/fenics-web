@@ -509,7 +509,7 @@ class Mesh(Variable):
               point : a :py:class:`Point` instance.
 
               ids_result : set of integers.\
-                           The cell ids which are intersectedare stored in a\
+                           The cell ids which are intersected are stored in a\
                            set for efficiency reasons, to avoid to sort out\
                            duplicates later on.
 
@@ -519,7 +519,7 @@ class Mesh(Variable):
           points.
 
           *Arguments*
-              point : a :py:class:`Point` instance.
+              points : list of :py:class:`Point` instances.
 
               ids_result : set of integers.\
                            The cell ids which are intersected are stored in a\
@@ -537,7 +537,7 @@ class Mesh(Variable):
               ids_result : list of integers.\
                            The ids of the intersected cells are saved in a\
                            list. This is more efficent than using a set and\
-                           allows a map between the (external) cell and the
+                           allows a map between the (external) cell and the\
                            intersected cell of the mesh.
 
         * all_intersected_entities\ **(entities, ids_result)**
@@ -546,7 +546,7 @@ class Mesh(Variable):
           list entities.
 
           *Arguments*
-              entities : list of :py:class:`MeshEntity`.
+              entities : list of :py:class:`MeshEntity` instances.
 
               ids_result : set of integers.\
                            The cell ids which are intersected are stored in a\
