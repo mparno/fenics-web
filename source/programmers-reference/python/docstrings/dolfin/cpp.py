@@ -301,7 +301,7 @@ class Mesh(Variable):
         Get number of entities of given topological dimension.
 
         *Arguments*
-            integer : d, topological dimension.
+            d : integer, topological dimension.
 
         *Returns*
             integer : number of entities of topological dimension d.
@@ -322,7 +322,7 @@ class Mesh(Variable):
         Get number of entities of given topological dimension.
 
         *Arguments*
-            integer : d, topological dimension.
+            d : integer, topological dimension.
 
         *Returns*
             integer : number of entities of topological dimension d.
@@ -391,7 +391,7 @@ class Mesh(Variable):
               d : integer, topological dimension.
 
           *Returns*
-              integer : number of created entities
+              integer : number of created entities.
 
         * init\ **(d0, d1)**
 
@@ -411,7 +411,11 @@ class Mesh(Variable):
     def order(self):
         """
         Order all mesh entities (not needed if "mesh order entities" is
-        set). 
+        set).
+
+        .. seealso::
+
+            UFC documentation (put link here!)
         """
 
     def ordered(self):
@@ -542,7 +546,7 @@ class Mesh(Variable):
 
         * all_intersected_entities\ **(entities, ids_result)**
 
-          Compute all id of all cells which are intersects by any entity in the
+          Compute all id of all cells which are intersected by any entity in the
           list entities.
 
           *Arguments*
