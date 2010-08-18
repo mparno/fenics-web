@@ -5,7 +5,7 @@
 Point
 =====
 
-.. currentmodule:: dolfin
+.. currentmodule:: dolfin.cpp
 
 .. autoclass:: Point
     :members:

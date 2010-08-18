@@ -214,150 +214,163 @@ class Mesh(Variable):
           Copy constructor.
 
           *Arguments*
-
-          * mesh : :py:class:`Mesh`
-                Some other mesh.
+              mesh : a :py:class:`Mesh` instance.
 
         * Mesh\ **(filename)**
 
           Create mesh from data file.
 
           *Arguments*
-
-          * filename : string
-                Name of file to load.
+              filename : string, name of file to load.
         """
     def num_vertices(self):
         """
-        :returns: Number of vertices.
-        :rtype: integer.
+        Get number of vertices in mesh.
 
-        **Example**
+        *Returns*
+            integer : number of vertices.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.num_vertices()
-        9
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.num_vertices()
+            9
         """
 
     def num_edges(self):
         """
-        :returns: Number of edges.
-        :rtype: integer.
+        Get number of edges in mesh.
 
-        **Example**
+        *Returns*
+            integer : number of edges.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.num_edges()
-        0
-        >>> mesh.init(1)
-        16
-        >>> mesh.num_edges()
-        16
+
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.num_edges()
+            0
+            >>> mesh.init(1)
+            16
+            >>> mesh.num_edges()
+            16
         """
 
     def num_faces(self):
         """
-        :returns: Number of faces.
-        :rtype: integer.
+        Get number of faces in mesh.
 
-        **Example**
+        *Returns*
+            integer : number of faces.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.num_faces()
-        8
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.num_faces()
+            8
         """
 
     def num_facets(self):
         """
-        :returns: Number of faces.
-        :rtype: integer.
+        Get number of facets in mesh.
 
-        **Example**
+        *Returns*
+            integer : number of facets.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.num_facets()
-        0
-        >>> mesh.init(0,1)
-        >>> mesh.num_facets()
-        16
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.num_facets()
+            0
+            >>> mesh.init(0,1)
+            >>> mesh.num_facets()
+            16
         """
 
     def num_cells(self):
         """
-        :returns: Number of cells.
-        :rtype: integer.
+        Get number of cells in mesh.
 
-        **Example**
+        *Returns*
+            integer : number of cells.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.num_cells()
-        8
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.num_cells()
+            8
         """
 
     def num_entities(self, d):
         """
-        :arg integer d: topological dimension
-        :returns: Number of entities of topological dimension d.
-        :rtype: integer.
+        Get number of entities of given topological dimension.
 
-        **Example**
+        *Arguments*
+            integer : d, topological dimension.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.init(0,1)
-        >>> mesh.num_entities(0)
-        9
-        >>> mesh.num_entities(1)
-        16
-        >>> mesh.num_entities(2)
-        8
+        *Returns*
+            integer : number of entities of topological dimension d.
+
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.init(0,1)
+            >>> mesh.num_entities(0)
+            9
+            >>> mesh.num_entities(1)
+            16
+            >>> mesh.num_entities(2)
+            8
         """
 
     def size(self, d):
         """
-        :arg integer d: topological dimension
-        :returns: Number of entities of topological dimension d.
-        :rtype: integer.
+        Get number of entities of given topological dimension.
 
-        **Example**
+        *Arguments*
+            integer : d, topological dimension.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.init(0,1)
-        >>> mesh.num_entities(0)
-        9
-        >>> mesh.num_entities(1)
-        16
-        >>> mesh.num_entities(2)
-        8
+        *Returns*
+            integer : number of entities of topological dimension d.
+
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.init(0,1)
+            >>> mesh.num_entities(0)
+            9
+            >>> mesh.num_entities(1)
+            16
+            >>> mesh.num_entities(2)
+            8
         """
 
     def topology(self):
         """
-        :returns: The topology object associated with the mesh.
-        :rtype: :py:class:`MeshTopology`.
+        *Returns*
+            :py:class:`MeshTopology` : the topology object associated with the\
+                                       mesh.
         """
 
     def geometry(self):
         """
-        :returns: The geometry object associated with the mesh.
-        :rtype: :py:class:`MeshGeometry`.
+        *Returns*
+            :py:class:`MeshGeometry` : the geometry object associated with the\
+                                       mesh.
         """
 
     def intersection_operator(self):
         """
-        :returns: The intersection operator object associated with the mesh.
-        :rtype: :py:class:`IntersectionOperator`.
+        *Returns*
+            :py:class:`IntersectionOperator` : the intersection operator\
+                object associated with the mesh.
         """
 
     def data(self):
         """
-        :returns: The mesh data object associated with the mesh.
-        :rtype: :py:class:`MeshData`.
+        *Returns*
+            :py:class:`MeshData` : the mesh data object associated with the\
+                                   mesh.
         """
 
     def type(self):
         """
-        :returns: The cell type object associated with the mesh.
-        :rtype: :py:class:`CellType`.
+        *Returns*
+            :py:class:`CellType` : the cell type object associated with the\
+                                   mesh.
         """
 
     def init(self, *args):
@@ -375,24 +388,19 @@ class Mesh(Variable):
           Compute entities of given topological dimension.
 
           *Arguments*
-
-          * d : integer
-                topological dimension.
+              d : integer, topological dimension.
 
           *Returns*
-
-              number of entities : *integer*
+              integer : number of created entities
 
         * init\ **(d0, d1)**
 
           Compute connectivity between given pair of dimensions.
 
           *Arguments*
+              d0 : integer, topological dimension.
 
-          * d0 : integer
-                topological dimension.
-          * d1 : integer
-                topological dimension.
+              d1 : integer, topological dimension.
         """
 
     def clear(self):
@@ -408,9 +416,10 @@ class Mesh(Variable):
 
     def ordered(self):
         """
-        :returns: Return true iff topology is ordered according to the UFC
-                  numbering.
-        :rtype: bool.
+
+        *Returns*
+            bool : Return true iff topology is ordered according to the UFC\
+                   numbering.
         """
 
     def move(self, *args):
@@ -424,13 +433,11 @@ class Mesh(Variable):
           Move coordinates of mesh according to new boundary coordinates.
 
           *Arguments*
+              boundary : a :py:class:`BoundaryMesh` instance.
 
-          * boundary : :py:class:`BoundaryMesh`
-                New boundary coordinates.
-
-          * method : :py:class:`ALEType`
-                Method which defines how the coordinates should be moved, default
-                is *hermite*.
+              method : a :py:class:`ALEType` (enum).\
+                       Method which defines how the coordinates should be\
+                       moved, default is *hermite*.
 
         * move\ **(mesh, method=hermite)**
 
@@ -438,49 +445,50 @@ class Mesh(Variable):
           global vertices.
 
           *Arguments*
+              mesh : a :py:class:`Mesh` instance.
 
-          * mesh : :py:class:`Mesh`
-                New boundary coordinates.
-
-          * method : :py:class:`ALEType`
-                Method which defines how the coordinates should be moved,
-                default is *hermite*.
+              method : a :py:class:`ALEType` (enum).\
+                       Method which defines how the coordinates should be\
+                       moved, default is *hermite*.
 
         * move\ **(function)**
 
           Move coordinates of mesh according to displacement function. 
 
           *Arguments*
-
-          * function : :py:class:`Function`
-                Displacement function.
+              function : a :py:class:`Function` instance.
         """
 
     def smooth(self, num_iterations = 1):
         """
         Smooth internal vertices of mesh by local averaging.
 
-        :arg integer num_iterations: Number of iterations to perform smoothing,
-                                     default value is 1.
+        *Arguments*
+            num_iterations : integer, number of iterations to perform\
+                             smoothing, default value is 1.
         """
 
     def smooth_boundary(self, num_iterations = 1, harmonic_smoothing = True):
         """
         Smooth boundary vertices of mesh by local averaging.
 
-        :arg integer num_iterations: Number of iterations to perform smoothing,
-                                     default value is 1.
-        :arg bool harmonic_smoothing: Flag to turn on harmonics smoothing,
-                                      default value is True.
+        *Arguments*
+            num_iterations : integer, number of iterations to perform\
+                             smoothing, default value is 1.
+
+            harmonic_smoothing : bool, flag to turn on harmonics smoothing,\
+                                 default value is True.
         """
 
     def snap_boundary(self, sub_domain, harmonic_smoothing = True):
         """
         Snap boundary vertices of mesh to match given sub domain.
 
-        :arg sub_domain: :py:class:`SubDomain`
-        :arg bool harmonic_smoothing: Flag to turn on harmonics smoothing,
-                                      default value is True.
+        *Arguments*
+            sub_domain : a :py:class:`SubDomain` instance.
+
+            harmonic_smoothing : bool, a flag to turn on harmonics smoothing,\
+                                default value is True.
         """
 
     def all_intersected_entities(self, *args):
@@ -498,12 +506,12 @@ class Mesh(Variable):
           point.
 
           *Arguments*
+              point : a :py:class:`Point` instance.
 
-          * point : :py:class:`Point`
-                Point to be checked for intersection with mesh.
-          * ids_result : set of integers
-              The cell ids which are intersected are stored in a set for
-              efficiency reasons, to avoid to sort out duplicates later on.
+              ids_result : set of integers.\
+                           The cell ids which are intersectedare stored in a\
+                           set for efficiency reasons, to avoid to sort out\
+                           duplicates later on.
 
         * all_intersected_entities\ **(points, ids_result)**
 
@@ -511,12 +519,12 @@ class Mesh(Variable):
           points.
 
           *Arguments*
+              point : a :py:class:`Point` instance.
 
-          * points : list of :py:class:`Point`
-                Points to be checked for intersection with mesh.
-          * ids_result : set of integers
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+              ids_result : set of integers.\
+                           The cell ids which are intersected are stored in a\
+                           set for efficiency reasons, to avoid to sort out\
+                           duplicates later on.
 
         * all_intersected_entities\ **(entity, ids_result)**
 
@@ -524,13 +532,13 @@ class Mesh(Variable):
           entity.
 
           *Arguments*
+              entity : a :py:class:`MeshEntity` instance.
 
-          * entity : :py:class:`MeshEntity`
-                Entity to be checked for intersection with mesh.
-          * ids_result : list of integers
-                The ids of the intersected cells are saved in a list. This is
-                more efficent than using a set and allows a map between the
-                (external) cell and the intersected cell of the mesh.
+              ids_result : list of integers.\
+                           The ids of the intersected cells are saved in a\
+                           list. This is more efficent than using a set and\
+                           allows a map between the (external) cell and the
+                           intersected cell of the mesh.
 
         * all_intersected_entities\ **(entities, ids_result)**
 
@@ -538,56 +546,80 @@ class Mesh(Variable):
           list entities.
 
           *Arguments*
+              entities : list of :py:class:`MeshEntity`.
 
-          * entities : list of :py:class:`MeshEntity`
-                Entities to be checked for intersection with mesh.
-          * ids_result : set of integers
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+              ids_result : set of integers.\
+                           The cell ids which are intersected are stored in a\
+                           set for efficiency reasons, to avoid to sort out\
+                           duplicates later on.
 
         * all_intersected_entities\ **(another_mesh, ids_result)**
 
           Compute all ids of all cells which are intersected by another_mesh.
 
           *Arguments*
+              another_mesh : a :py:class:`Mesh` instance.
 
-          * another_mesh : :py:class:`Mesh`
-                Some other mesh to be checked for intersection with current mesh.
-          * ids_result : set of integers
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+              ids_result : set of integers.\
+                           The cell ids which are intersected are stored in a\
+                           set for efficiency reasons, to avoid to sort out\
+                           duplicates later on.
         """
 
     def any_intersected_entity(self, point):
         """
-        :arg point: :py:class:`Point`
-        :returns: The first id of the cell, which contains the point, returns
-                  -1 if no cell is intersected.
-        :rtype: integer.
+        Computes only the first id  of the entity, which contains the point.
+
+        *Arguments*
+            point : a :py:class:`Point` instance.
+
+        *Returns*
+            integer : the first id of the cell, which contains the point,\
+                      returns -1 if no cell is intersected.
         """
 
     def closest_point(self, point):
         """
-        :arg point: :py:class:`Point`.
-        :returns: The point inside the mesh which is closest to the point
-                  query.
-        :rtype: :py:class:`Point`.
+        Computes the point inside the mesh which is closest to the point query.
+
+        *Arguments*
+            point : a :py:class:`Point` instance.
+
+        *Returns*
+            :py:class:`Point` : the point inside the mesh which is closest to\
+                                the point.
         """
 
     def closest_cell(self, point):
         """
-        :arg point: :py:class:`Point`.
-        :returns: The index of the cell in the mesh which are closest to the
-                  point query.
-        :rtype: integer.
+        Computes the index of the cell in the mesh which is closest to the
+        point query.
+
+        *Arguments*
+            point : a :py:class:`Point` instance.
+
+        *Returns*
+            integer : the index of the cell in the mesh which is closest to\
+                      point.
+
+        *Example*
+            >>> mesh = dolfin.UnitSquare(1,1)
+            >>> point = dolfin.Point(0.0, 2.0)
+            >>> mesh.closest_cell(point)
+            1
         """
 
     def closest_point_and_cell(self, point):
         """
-        :arg point: :py:class:`Point`.
-        :returns: The point inside the mesh and the corresponding cell index
+        Computes the point inside the mesh and the corresponding cell index
+        which are closest to the point query.
+
+        *Arguments*
+            point : a :py:class:`Point` instance.
+
+        *Returns*
+            ??? : the point inside the mesh and the corresponding cell index\
                   which is closest to the point query.
-        :rtype: ???.
 
         std::pair<(dolfin::Point,dolfin::uint)>
 
@@ -598,66 +630,71 @@ class Mesh(Variable):
 
     def hmin(self):
         """
-        :returns: The minimum cell diameter.
-        :rtype: float.
+        Compute minimum cell diameter.
 
-        **Example**
+        *Returns*
+            float : the minimum cell diameter, the diameter is computed as\
+                    two times the circumradius (http://mathworld.wolfram.com).
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.hmin()
-        0.70710678118654757
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.hmin()
+            0.70710678118654757
         """
 
     def hmax(self):
         """
-        :returns: The maximum cell diameter.
-        :rtype: float.
+        Compute maximum cell diameter.
 
-        **Example**
+        *Returns*
+            float : the maximum cell diameter, the diameter is computed as\
+                    two times the circumradius (http://mathworld.wolfram.com).
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.hmax()
-        0.70710678118654757
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.hmax()
+            0.70710678118654757
         """
 
     def str(self, verbose):
         """
-        :arg bool verbose: Flag to turn on additional output.
-        :returns: An informal string representation.
-        :rtype: string.
+        Informal string representation.
 
-        **Example**
+        *Arguments*
+            verbose : bool, a flag to turn on additional output.
 
-        >>> mesh = dolfin.UnitSquare(2,2)
-        >>> mesh.str(False)
-        '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
+        *Returns*
+            string : an informal representation of the mesh.
+
+        *Example*
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.str(False)
+            '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
         """
 
     def coordinates(self):
         """
-        :returns: Coordinates of all vertices.
-        :rtype: numpy.ndarray.
+        *Returns*
+            numpy.ndarray : Coordinates of all vertices.
 
-        **Example**
-
-        >>> mesh = dolfin.UnitSquare(1,1)
-        >>> mesh.coordinates()
-        array([[ 0.,  0.],
-               [ 1.,  0.],
-               [ 0.,  1.],
-               [ 1.,  1.]])
+        *Example*
+            >>> mesh = dolfin.UnitSquare(1,1)
+            >>> mesh.coordinates()
+            array([[ 0.,  0.],
+                   [ 1.,  0.],
+                   [ 0.,  1.],
+                   [ 1.,  1.]])
         """
 
     def cells(self):
         """
-        :returns: Connectivity for all cells.
-        :rtype: numpy.ndarray.
+        *Returns*
+            numpy.ndarray : Connectivity for all cells.
 
-        **Example**
-
-        >>> mesh = dolfin.UnitSquare(1,1)
-        >>> mesh.coordinates()
-        array([[0, 1, 3],
-               [0, 2, 3]])
+        *Example*
+            >>> mesh = dolfin.UnitSquare(1,1)
+            >>> mesh.coordinates()
+            array([[0, 1, 3],
+                   [0, 2, 3]])
         """
 

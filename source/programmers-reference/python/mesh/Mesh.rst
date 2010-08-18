@@ -5,11 +5,10 @@
 Mesh
 ====
 
-.. currentmodule:: dolfin
+.. currentmodule:: dolfin.cpp
 
 .. autoclass:: Mesh
     :members:
     :show-inheritance:
     :undoc-members:
 
-    .. :inherited-members:

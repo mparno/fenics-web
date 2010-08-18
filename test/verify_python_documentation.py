@@ -56,9 +56,10 @@ log_file = path.join(test_dir, "python_log")
 # Import the dolfin and dolfindocstrings modules.
 try:
     import dolfin
-except:
-    raise ImportError("Could not import the dolfin module, update your PYTHONPATH variable.")
-import dolfindocstrings
+except Exception as what:
+    raise ImportError("Could not import the dolfin module \n  (error: %s),\n\
+  update your PYTHONPATH variable?" % what)
+import docstrings as dolfindocstrings
 
 # -----------------------------------------------------------------------------
 # Functions to extract module information
@@ -119,13 +120,12 @@ def get_functions(mod, module_name):
 
     return functions
 
-def parse_module(mod):
+def parse_module(mod, remove_name=False):
     "Extract functions and classes from module (recursively to get all classes)"
 
     # First get all modules.
     module_name = mod.__name__
     defines = get_modules(mod, {}, module_name)
-
     # Loop all modules
     for key, val in defines.items():
         # Handle all classes.
@@ -146,13 +146,13 @@ def parse_module(mod):
         # Get all functions defined in module.
         defines.update(get_functions(val, key))
 
-    new_defines = {}
-    for n in defines:
-        nn = ".".join(n.split(".")[1:])
-        new_defines[nn] = defines[n]
-
-    return new_defines
-#    return defines
+    if remove_name:
+        new_defines = {}
+        for n in defines:
+            nn = ".".join(n.split(".")[1:])
+            new_defines[nn] = defines[n]
+        return new_defines
+    return defines
 
 # -----------------------------------------------------------------------------
 
@@ -170,7 +170,7 @@ def equal_docs(mod, doc):
                 vs = val.__doc__.split()
                 ms = mod[key].__doc__.split()
                 if vs != ms:
-                    non_equal.append((key, "'%s' != '%s'" % (" ".join(vs), " ".join(ms))))
+                    non_equal.append((key, "\n%s\n!=\n%s\n" % (" ".join(vs), " ".join(ms))))
             except:
                 non_equal.append((key, ""))
 
@@ -211,8 +211,7 @@ if __name__ == "__main__":
 
     # Get function and class definitions in modules.
     dolfin_defines = parse_module(dolfin)
-    docstrings_defines = parse_module(dolfindocstrings)
-
+    docstrings_defines = parse_module(dolfindocstrings, True)
     # Run tests.
     non_equal = equal_docs(dolfin_defines, docstrings_defines)
     missing   = missing_docs(dolfin_defines, docstrings_defines, excludes)

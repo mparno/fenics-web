@@ -2,8 +2,9 @@
 
 .. _programmers_reference_python_mesh_index:
 
+****
 mesh
-====
+****
 
 This is the index page for classes in the directory dolfin/mesh:
 
