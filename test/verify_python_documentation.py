@@ -32,14 +32,13 @@ __date__ = "2010-06-23"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Modified on 2010-07-24
+# Modified on 2010-08-20
 
 # Import modules necessary to perform the test
 import types
 from sys import path as sys_path
 from os import chdir, pardir, getcwd, path
 import inspect
-import types
 
 # Get location of this script and start there.
 test_dir = sys_path[0]
@@ -167,10 +166,13 @@ def equal_docs(mod, doc):
     for key, val in doc.items():
         if key in mod:
             try:
-                vs = val.__doc__.split()
+                # Don't compare white space.
+                ds = val.__doc__.split()
                 ms = mod[key].__doc__.split()
-                if vs != ms:
-                    non_equal.append((key, "\n%s\n!=\n%s\n" % (" ".join(vs), " ".join(ms))))
+                # This is necessary because stupid Swig adds additional crap
+                # like 'Mesh_hmax(Mesh self) -> double' to the docstring.
+                if "".join(ds) not in "".join(ms):
+                    non_equal.append((key, "\n%s\n!=\n%s\n" % (" ".join(ds), " ".join(ms))))
             except:
                 non_equal.append((key, ""))
 
@@ -182,6 +184,9 @@ def equal_docs(mod, doc):
 # -----------------------------------------------------------------------------
 def missing_docs(mod, doc, excludes):
     "Test if documentation of modules, classes or functions in module is missing in documentation."
+    # TODO: Looks like Swig is adding inherited member functions to the class
+    # itself, which means that some functions will appear twice and thus be
+    # reported as undocumented.
     missing = []
     for key, val in mod.items():
         if not key in doc and not key in excludes:
