@@ -515,7 +515,8 @@ In addition, we want the documentation for the ``Python`` version to be
 available when using FEniCS with the ``Python`` interpreter.
 To achieve this we write all documentation for the ``Python`` version in a
 pseudo module which is an exact replication of the 'real' DOLFIN module and
-then let the autodoc functionality of Sphinx handle the rest.
+then let the :ref:`Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_
+extension handle the rest.
 
 To make matters more concrete let's consider the case of writing documentation
 for the DOLFIN ``Mesh`` class and the ``closest_cell`` member function of this
@@ -606,7 +607,7 @@ The ``C++`` documentation for the ``Mesh`` class is added to the
 ``programmers-reference/cpp/mesh/Mesh.rst`` file.
 
 Defining the class
-^^^^^^^^^^^^^^^^^^
+""""""""""""""""""
 
 The begining of the ``programmers-reference/cpp/mesh/Mesh.rst`` file looks
 like this:
@@ -743,6 +744,32 @@ form and context by clicking on ``Show Source`` link on the page containing
 the ``Python`` documentation for the :py:class:`dolfin.cpp.Mesh` class and in the
 :download:`programmers-reference/python/docstrings/dolfin/cpp.py` file which
 contains the actual documentation for the ``Python`` ``Mesh`` class.
+
+Using Sphinx autodoc
+""""""""""""""""""""
+
+To complete the ``Python`` documentation for the ``Mesh`` class, we simply add
+the following to the ``programmers-reference/python/mesh/Mesh.rst`` file:
+
+.. code-block:: rest
+
+    Mesh
+    ====
+
+    .. currentmodule:: dolfin.cpp
+
+    .. autoclass:: Mesh
+        :members:
+        :show-inheritance:
+        :undoc-members:
+
+We use the file ``programmers-reference/python/mesh/Mesh.rst`` to mirror the
+structure of the DOLFIN source tree (see
+:ref:`styleguides_sphinx_documenting_interface`).
+The ``currentmodule`` directive tells Sphinx in which module to find the class
+that should be documented.
+The line ``.. autoclass:: Mesh`` automatically generates documentation for the
+``Mesh`` class and the arguments specifies what information to include.
 
 Appendices
 ^^^^^^^^^^
