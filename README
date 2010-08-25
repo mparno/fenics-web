@@ -1,1 +1,6 @@
 FEniCS documentation
+--------------------
+
+To build all documentation, simply type
+
+  make all
