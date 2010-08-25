@@ -3,9 +3,9 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-##################################
-Welcome to FEniCS's documentation!
-##################################
+####################
+FEniCS Documentation
+####################
 
 .. toctree::
     :hidden:
@@ -13,9 +13,9 @@ Welcome to FEniCS's documentation!
     introduction
     installation
     tutorial/index
-    programmers-reference/index
     demos/index
-    contributing
+    programmers-reference/index
+    help
     styleguides
     developer
 
@@ -33,33 +33,27 @@ Welcome to FEniCS's documentation!
       </p>
       <p class="biglink">
         <a class="biglink" href="tutorial/index.html">Tutorial</a>
-        <br/><span class="linkdescr">How to use FEniCS, available for
-          <a href="tutorial/cpp/index.html"> C++ </a> and
-          <a href="tutorial/python/index.html"> Python </a>
+        <br/><span class="linkdescr">How to use FEniCS
         </span>
       </p>
       <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">Documented examples, available for
-          <a href="demos/cpp/index.html"> C++ </a> and
-          <a href="demos/python/index.html"> Python </a>
+        <br/><span class="linkdescr">Documented examples
         </span>
       </p>
     </td><td width="50%">
       <p class="biglink">
-        <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
-        <br/><span class="linkdescr">Interface documentation, available for
-          <a href="programmers-reference/cpp/index.html"> C++ </a> or
-          <a href="programmers-reference/python/index.html"> Python </a>
+        <a class="biglink" href="programmers-reference/index.html">Programmer's Reference</a>
+        <br/><span class="linkdescr">Interface documentation
         </span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
-        <br/><span class="linkdescr">How to contribute to the FEniCS project</span>
+        <a class="biglink" href="help.html">Getting help</a>
+        <br/><span class="linkdescr">How to get help</span>
       </p>
       <p class="biglink">
         <a class="biglink" href="developer.html">Developers</a>
-        <br/><span class="linkdescr">Information for developers</span>
+        <br/><span class="linkdescr">Information for contributors and developers</span>
       </p>
       <p class="biglink">
         &nbsp
