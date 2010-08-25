@@ -13,8 +13,8 @@ FEniCS Documentation
     introduction
     installation
     tutorial/index
-    programmers-reference/index
     demos/index
+    programmers-reference/index
     contributing
     styleguides
     developer
