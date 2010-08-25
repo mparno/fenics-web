@@ -127,18 +127,19 @@ You can also build and install FEniCS components manually from the source code.
 You will need to install the Python packages
 `FFC <http://www.fenics.org/ffc>`_,
 `FIAT <http://www.fenics.org/fiat>`_,
-`Viper <http://www.fenics.org/viper>`_, and
+`Instant <http://www.fenics.org/instant>`_,
+`Viper <http://www.fenics.org/fenics-viper>`_, and
 `UFL <http://www.fenics.org/ufl>`_.
 You will also need to install the C++/Python packages
 `UFC <http://www.fenics.org/ufc>`_ and
 `DOLFIN <http://www.fenics.org/dolfin>`_.
 Instructions for how to install these packages are given below.
 
-Python packages (FFC, FIAT, Viper and UFL)
-==========================================
+Python packages (FFC, FIAT, Instant, Viper and UFL)
+===================================================
 
 #. First, `download the source code <http://www.fenics.org/wiki/Download#Download_the_source_code>`_
-   for FFC, FIAT, Viper, and UFL. Then for each of these packages,
+   for FFC, FIAT, Instant, Viper and UFL. Then for each of these packages,
    follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following command::
@@ -195,10 +196,10 @@ causes the problem:
 
 * `DOLFIN <https://answers.launchpad.net/dolfin>`_
 * `Dorsal <https://answers.launchpad.net/dorsal>`_
-
 * `FFC <https://answers.launchpad.net/ffc>`_
 * `FIAT <https://answers.launchpad.net/fiat>`_
-* `Viper <https://answers.launchpad.net/viper>`_
+* `Instant <https://answers.launchpad.net/instant>`_
+* `Viper <https://answers.launchpad.net/fenics-viper>`_
 * `UFC <https://answers.launchpad.net/ufc>`_
 * `UFL <https://answers.launchpad.net/ufl>`_
 
