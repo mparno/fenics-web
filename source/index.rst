@@ -28,33 +28,33 @@ Welcome to FEniCS's documentation!
       </p>
       <p class="biglink">
         <a class="biglink" href="installation.html">Installation</a>
-        <br/><span class="linkdescr">how to install FEniCS software</span>
+        <br/><span class="linkdescr">how to install FEniCS</span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
-        <br/><span class="linkdescr">how to contribute to the FEniCS project</span>
+        <a class="biglink" href="tutorial/index.html">Tutorial</a>
+        <br/><span class="linkdescr">how to use FEniCS, available for
+          <a href="tutorial/cpp/index.html"> C++ </a> and
+          <a href="tutorial/python/index.html"> Python </a>
+        </span>
       </p>
     </td><td width="50%">
       <p class="biglink">
-        <a class="biglink" href="tutorial/index.html">Tutorial</a>
-        <br/><span class="linkdescr">FEniCS tutorial, available in
-          <a href="tutorial/cpp/index.html"> C++ </a> or
-          <a href="tutorial/python/index.html"> Python </a>
+        <a class="biglink" href="demos/index.html">Demos</a>
+        <br/><span class="linkdescr">documented examples, available for
+          <a href="demos/cpp/index.html"> C++ </a> and
+          <a href="demos/python/index.html"> Python </a>
         </span>
       </p>
       <p class="biglink">
         <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
-        <br/><span class="linkdescr">a programmer's reference for the FEniCS interface, available in
+        <br/><span class="linkdescr">interface documentation, available for
           <a href="programmers-reference/cpp/index.html"> C++ </a> or
           <a href="programmers-reference/python/index.html"> Python </a>
         </span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">FEniCS demos, available in
-          <a href="demos/cpp/index.html"> C++ </a> or
-          <a href="demos/python/index.html"> Python </a>
-        </span>
+        <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
+        <br/><span class="linkdescr">how to contribute to the FEniCS project</span>
       </p>
     </td></tr>
   </table>
@@ -66,4 +66,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
