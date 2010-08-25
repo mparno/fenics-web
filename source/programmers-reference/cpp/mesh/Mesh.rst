@@ -188,14 +188,15 @@ Mesh.h
                 The index of the cell in the mesh which is closest to point.
 
         *Example*
-            .. warning::
+            .. code-block:: c++
 
-                Not C++ syntax.
+                UnitSquare mesh(1, 1);
+                Point point(0.0, 2.0);
+                info("%d", mesh.closest_cell(point));
 
-            >>> mesh = dolfin.UnitSquare(1,1)
-            >>> point = dolfin.Point(0.0, 2.0)
-            >>> mesh.closest_cell(point)
-            1
+            output::
+
+                1
 
     .. cpp:function:: Point closest_point(const Point & point) const
 

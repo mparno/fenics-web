@@ -538,8 +538,8 @@ appropriately.
 We then proceed to add contents for the two different interfaces as described
 in the following sections.
 
-General comments
-^^^^^^^^^^^^^^^^
+General remarks
+^^^^^^^^^^^^^^^
 
 To handle the documentation of two different languages in Sphinx we use
 `Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to distinguish between
@@ -672,11 +672,13 @@ constructor:
                 filename
                     A string, name of file to load.
 
+The funtions are defined in the class body such that they automatically have the
+``Mesh`` namespace.
 The signature of the functions (in this case the constructors
 ``Mesh(const Mesh& mesh)`` and ``Mesh(std::string filename)``) **must** be
 identical to that found in the ``dolfin/mesh/Mesh.h`` file, otherwise
-subsequent testing will report that the function is not documented and/or
-obsolete.
+subsequent testing will report that the function is not documented
+(or obsolete).
 
 .. note::
 
@@ -691,14 +693,53 @@ obsolete.
 closest_cell function
 """""""""""""""""""""
 
+The documentation for the ``closest_cell`` function is added like documentation
+for the constructors with additional information about the return value and an
+example.
 
+.. code-block:: rest
+
+    .. cpp:function:: dolfin::uint closest_cell(const Point & point) const
+
+        Computes the index of the cell in the mesh which is closest to the
+        point query.
+
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+
+        *Returns*
+            integer
+                The index of the cell in the mesh which is closest to point.
+
+        *Example*
+            .. code-block:: c++
+
+                UnitSquare mesh(1, 1);
+                Point point(0.0, 2.0);
+                info("%d", mesh.closest_cell(point));
+
+            output::
+
+                1
+
+Again, the funtion is defined in the class body, and the signature of the is
+identical to that found in the ``dolfin/mesh/Mesh.h`` file.
+
+.. note::
+
+    Since Sphinx does not yet handle overloaded functions that well, links to
+    :cpp:func:`Mesh::closest_cell` (``:cpp:func:`Mesh::closest_cell```) from the
+    index page will point to the class where it is defined instead of the
+    actual function.
+    This behaviour will hopefully change in the future.
 
 ``Python`` interface
 ^^^^^^^^^^^^^^^^^^^^
 
 The code snippets presented in the following can be seen in their complete
 form and context by clicking on ``Show Source`` link on the page containing
-the ``Python`` documentation for the :py:class:`Mesh` class and in the
+the ``Python`` documentation for the :py:class:`dolfin.cpp.Mesh` class and in the
 :download:`programmers-reference/python/docstrings/dolfin/cpp.py` file which
 contains the actual documentation for the ``Python`` ``Mesh`` class.
 
