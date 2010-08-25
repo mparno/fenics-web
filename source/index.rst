@@ -15,7 +15,7 @@ FEniCS Documentation
     tutorial/index
     demos/index
     programmers-reference/index
-    contributing
+    help
     styleguides
     developer
 
@@ -48,12 +48,12 @@ FEniCS Documentation
         </span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
-        <br/><span class="linkdescr">How to contribute to the FEniCS project</span>
+        <a class="biglink" href="help.html">Getting help</a>
+        <br/><span class="linkdescr">How to get help</span>
       </p>
       <p class="biglink">
         <a class="biglink" href="developer.html">Developers</a>
-        <br/><span class="linkdescr">Information for developers</span>
+        <br/><span class="linkdescr">Information for contributors and developers</span>
       </p>
       <p class="biglink">
         &nbsp

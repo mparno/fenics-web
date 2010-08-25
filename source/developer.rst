@@ -287,4 +287,3 @@ progress.  Using DOLFIN as an example, simply do the following:
 
 The procedure for using branches for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
-
