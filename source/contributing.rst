@@ -271,6 +271,32 @@ good places to start.
 The :ref:`styleguides_sphinx_coding_style` explains how the reST source files
 should look like.
 
+Programmer's reference
+======================
+
+The programmer's reference covers the ``C++`` and ``Python`` interfaces to
+FEniCS with emphasis on the DOLFIN component.
+The documentation of a class/function should in general follow the below
+structure:
+
+* One line which summarise the funtionality of the class/function
+* Arguments, description of arguments
+* Returns, description of return values
+* Example, short code snippets that illustrate basic usage. The code does not
+  have to be a stand alone program.
+* See also, links to demos which use the particular feature which is
+  documented.
+
+The above structure does of course not apply to all classes and functions.
+
+See the guide on how to
+:ref:`document the FEniCS interface <styleguides_sphinx_documenting_interface>`
+for details on how to implement each step and which files are needed.
+Also refer to the :ref:`Mesh (C++) <programmers_reference_cpp_mesh_Mesh>` and
+:ref:`Mesh (Python) <programmers_reference_python_mesh_Mesh>` as examples on
+how the documentation should look like.
+
+
 Documenting demos
 =================
 
@@ -301,78 +327,17 @@ documentation should look like.
     that needs documentation. Please see :ref:`demos_missing_demos` and
     consider lending a hand filling in the blanks.
 
-Programmer's reference
-======================
-
-.. note::
-
-    KBO: Figure out how this should be organised and what requirements we have.
-
-    * Covers DOLFIN
-    * Documenting classes/functions
-    * Example code
-    * Link to relevant demos for actual usage (use directive seealso?)
-    * Integrate doc strings with PyDOLFIN
-    * Code snippets (does not necessarily have to run)
-    * Class index (*General Index* or *Global Module* index), use ``index``?
-    * Put a link to a nicely documented class in the programmer's reference
-
-    For the Python documentation we agree on trying to follow this format:
-
-    http://projects.scipy.org/numpy/browser/trunk/doc/EXAMPLE_DOCSTRING.txt
-
-    We just keep the raw reST source in the docstring, see output from:
-    
-    >>> import numpy
-    >>> help(numpy.random.multivariate_normal)
-    
-    Use autodoc features in Sphinx to generate the HTML docs from the
-    docstring:
-    
-    http://docs.scipy.org/doc/numpy-1.3.x/reference/generated/numpy.random.multivariate_normal.html#numpy.random.multivariate_normal
-
-    We need the numpydoc module for this to work:
-
-    http://pypi.python.org/pypi/numpydoc/0.3.1
-
-    It would be nicer to have everything in native Sphinx, but then we can't
-    have sections in the docstrings which make things look a bit better.
-    numpydoc will also create links to class members which is another nice
-    feature.
-
-    On the downside we will get a lot of warnings when building the docs, but
-    it looks like this is something we have to live with, maybe we can filter
-    the output through a script to catch these numpydoc related warnings?
-    Also note that sections are not really supported in numpydoc, only the
-    section names: Parameters, Returns, See Also, Notes, References and
-    Examples are recognised. A section title like *Foo Title* will result in
-    an error on build.
-
-    Anyway, numpydoc make the documentation generated from
-    docstrings look much nicer so this is small price to pay and if we have
-    info that does absolutely NOT fit into the above categories we can always
-    add a section manually of modify the numpydoc module.
-
-    The keyword ``inline`` doesn't seem to be picked up by Sphinx, but I guess
-    we can do without for now (and it doesn't additional info to the user). 
-
-    It also looks like the destructor ``~`` is not recognised, but we can skip
-    documenting that until it is included in Sphinx.
-
-    The empty constructor like Mesh() is implicit when defining the class, so
-    there is no need to add an explicit function for this.
-
 Before committing your work
 ===========================
 
 There are a few simple tests that should be run before committing your work on
 the documentaion:
 
-* Run the script ``build_docs`` in the top level directory to make sure that
-  the documentation is successfully build without warnings
 * Run the script ``test/verify_demo_code_snippets.py`` to test that all code
   snippets in the demos are exact copies of the code available in the source
   code files.
+* Run the script ``build_docs`` in the top level directory to make sure that
+  the documentation is successfully build without warnings
 
 .. note::
 

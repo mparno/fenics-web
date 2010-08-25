@@ -47,36 +47,40 @@ Mesh.h
 
     .. cpp:function:: Mesh(const Mesh& mesh)
 
-        Copy constructor
+        Copy constructor.
 
         *Arguments*
-            mesh : a :cpp:class:`Mesh` object.
+            mesh
+                A :cpp:class:`Mesh` object.
 
     .. cpp:function:: Mesh(std::string filename)
 
         Create mesh from data file.
 
         *Arguments*
-            filename : string, name of file to load. 
+            filename
+                A string, name of file to load.
 
     .. cpp:function:: const Mesh& operator=(const Mesh& mesh)
 
         Assignment
 
         *Arguments*
-            mesh : a :cpp:class:`Mesh` object.
+            mesh
+                A :cpp:class:`Mesh` object.
 
     .. cpp:function:: void all_intersected_entities(const Point & point, uint_set & ids_result) const
 
         Compute all ids of all cells which are intersected by the given point.
 
         *Arguments*
-            point : a :cpp:class:`Point` object.
+            point
+                A :cpp:class:`Point` object.
 
-            ids_result : set of integers.
-                         The cell ids which are intersected are stored in a
-                         set for efficiency reasons, to avoid to sort out
-                         duplicates later on.
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
 
     .. cpp:function:: void all_intersected_entities(const std::vector<Point> & points, uint_set & ids_result) const
 
@@ -84,12 +88,13 @@ Mesh.h
         points.
 
         *Arguments*
-            points : vector of :cpp:class:`Point` objects.
+            points
+                A vector of :cpp:class:`Point` objects.
 
-            ids_result : set of integers.
-                         The cell ids which are intersected are stored in a
-                         set for efficiency reasons, to avoid to sort out
-                         duplicates later on.
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
 
     .. cpp:function:: void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
 
@@ -97,13 +102,15 @@ Mesh.h
         entity.
 
         *Arguments*
-            entity : a :cpp:class:`MeshEntity` object.
+            entity
+                A :cpp:class:`MeshEntity` object.
 
-            ids_result : list of integers.
-                         The ids of the intersected cells are saved in a list.
-                         This is more efficent than using a set and allows a
-                         map between the (external) cell and the intersected
-                         cell of the mesh.
+            ids_result
+                A list of integers.
+                The ids of the intersected cells are saved in a list.
+                This is more efficent than using a set and allows a map
+                between the (external) cell and the intersected cell of the
+                mesh.
 
     .. cpp:function:: void all_intersected_entities(const std::vector<MeshEntity> & entities, uint_set & ids_result) const
 
@@ -111,42 +118,47 @@ Mesh.h
         vector entities.
 
         *Arguments*
-            entities : vector of :cpp:class:`MeshEntity` objects.
+            entities
+                A vector of :cpp:class:`MeshEntity` objects.
 
-            ids_result : set of integers.
-                         The cell ids which are intersected are stored in a
-                         set for efficiency reasons, to avoid to sort out
-                         duplicates later on.
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
 
     .. cpp:function:: void all_intersected_entities(const Mesh & another_mesh, uint_set & ids_result) const
 
         Compute all ids of all cells which are intersected by another_mesh.
 
         *Arguments*
-            another_mesh : a :cpp:class:`Mesh` object.
+            another_mesh
+                A :cpp:class:`Mesh` object.
 
-            ids_result : set of integers.
-                         The cell ids which are intersected are stored in a
-                         set for efficiency reasons, to avoid to sort out
-                         duplicates later on.
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
 
     .. cpp:function:: int any_intersected_entity(const Point & point) const
 
         Computes only the first id  of the entity, which contains the point.
 
         *Arguments*
-            point : a :cpp:class:`Point` object.
+            point
+                A :cpp:class:`Point` object.
 
         *Returns*
-            integer : the first id of the cell, which contains the point,
-            returns -1 if no cell is intersected.
+            integer
+                The first id of the cell, which contains the point, returns -1
+                if no cell is intersected.
 
     .. cpp:function:: const uint* cells() const
 
         Get cell connectivity.
 
         *Returns*
-            array of integers : Connectivity for all cells.
+            An array of integers
+                Connectivity for all cells.
 
         *Example*
             .. warning::
@@ -168,11 +180,12 @@ Mesh.h
         point query.
 
         *Arguments*
-            point : a :cpp:class:`Point` object.
+            point
+                A :cpp:class:`Point` object.
 
         *Returns*
-            integer : the index of the cell in the mesh which is closest to
-            point.
+            integer
+                The index of the cell in the mesh which is closest to point.
 
         *Example*
             .. warning::
@@ -190,11 +203,12 @@ Mesh.h
         query.
 
         *Arguments*
-            point : a :cpp:class:`Point` object.
+            point
+                A :cpp:class:`Point` object.
 
         *Returns*
-            :cpp:class:`Point` : the point inside the mesh which is closest to
-            the point.
+            :cpp:class:`Point`
+                The point inside the mesh which is closest to the point.
 
     .. cpp:function:: std::pair<Point,dolfin::uint> closest_point_and_cell(const Point & point) const
 
@@ -202,18 +216,21 @@ Mesh.h
         which are closest to the point query.
 
         *Arguments*
-            point : a :cpp:class:`Point` object.
+            point
+                A :cpp:class:`Point` object.
 
         *Returns*
-            pair <:cpp:class:`Point`, integer> : the point inside the mesh and
-            the corresponding cell index which is closest to the point query.
+            pair <:cpp:class:`Point`, integer>
+                The point inside the mesh and the corresponding cell index
+                which is closest to the point query.
 
     .. cpp:function:: double* coordinates()
 
         Get vertex coordinates.
 
         *Returns*
-            array of doubles : Coordinates of all vertices.
+            An array of doubles
+                Coordinates of all vertices.
 
         *Example*
             .. warning::
@@ -236,8 +253,8 @@ Mesh.h
         Get mesh data.
 
         *Returns*
-            :cpp:class:`MeshData` : the mesh data object associated with the
-            mesh.
+            :cpp:class:`MeshData`
+                The mesh data object associated with the mesh.
 
     .. cpp:function:: const MeshData& data() const
 
@@ -248,8 +265,8 @@ Mesh.h
         Get mesh geometry.
 
         *Returns*
-            :cpp:class:`MeshGeometry` : the geometry object associated with the
-            mesh.
+            :cpp:class:`MeshGeometry`
+                The geometry object associated with the mesh.
 
     .. cpp:function:: const MeshGeometry& geometry() const
 
@@ -260,8 +277,9 @@ Mesh.h
         Compute maximum cell diameter.
 
         *Returns*
-            double : the maximum cell diameter, the diameter is computed as
-            two times the circumradius (http://mathworld.wolfram.com).
+            double
+                The maximum cell diameter, the diameter is computed as two
+                times the circumradius (http://mathworld.wolfram.com).
 
         *Example*
             .. warning::
@@ -273,11 +291,13 @@ Mesh.h
             0.70710678118654757
 
     .. cpp:function:: double hmin() const
+
         Compute minimum cell diameter.
 
         *Returns*
-            double : the minimum cell diameter, the diameter is computed as
-            two times the circumradius (http://mathworld.wolfram.com).
+            double
+                The minimum cell diameter, the diameter is computed as two
+                times the circumradius (http://mathworld.wolfram.com).
 
         *Example*
             .. warning::
@@ -297,27 +317,31 @@ Mesh.h
           Compute entities of given topological dimension.
 
           *Arguments*
-              dim : integer, topological dimension.
+              dim
+                  An integer, topological dimension.
 
           *Returns*
-              integer : number of created entities.
+              integer
+                  Number of created entities.
 
     .. cpp:function:: void init(uint d0, uint d1) const
 
           Compute connectivity between given pair of dimensions.
 
           *Arguments*
-              d0 : integer, topological dimension.
+              d0
+                  An integer, topological dimension.
 
-              d1 : integer, topological dimension.
+              d1
+                  An integer, topological dimension.
 
     .. cpp:function:: IntersectionOperator& intersection_operator()
 
         Get intersectionoperator.
 
         *Returns*
-            :cpp:class:`IntersectionOperator` : the intersection operator
-            object associated with the mesh.
+            :cpp:class:`IntersectionOperator`
+                The intersection operator object associated with the mesh.
 
     .. cpp:function:: const IntersectionOperator& intersection_operator() const
 
@@ -328,11 +352,13 @@ Mesh.h
         Move coordinates of mesh according to new boundary coordinates.
 
         *Arguments*
-            boundary : a :cpp:class:`BoundaryMesh` object.
+            boundary
+                A :cpp:class:`BoundaryMesh` object.
 
-            method : a :cpp:class:`ALEType` (enum).
-                     Method which defines how the coordinates should be moved,
-                     default is *hermite*.
+            method
+                A :cpp:class:`ALEType` (enum).
+                Method which defines how the coordinates should be moved,
+                default is *hermite*.
 
     .. cpp:function:: void move(Mesh& mesh, dolfin::ALEType method=hermite)
 
@@ -340,25 +366,29 @@ Mesh.h
         vertices.
 
         *Arguments*
-            mesh : a :cpp:class:`Mesh` object.
+            mesh
+                A :cpp:class:`Mesh` object.
 
-            method : a :cpp:class:`ALEType` (enum).
-                     Method which defines how the coordinates should be moved,
-                     default is *hermite*.
+            method
+                A :cpp:class:`ALEType` (enum).
+                Method which defines how the coordinates should be moved,
+                default is *hermite*.
 
     .. cpp:function:: void move(const Function& displacement)
 
         Move coordinates of mesh according to displacement function. 
 
         *Arguments*
-            function : a :cpp:class:`Function` object.
+            function
+                A :cpp:class:`Function` object.
 
     .. cpp:function:: uint num_cells() const
 
         Get number of cells in mesh.
 
         *Returns*
-            integer : number of cells.
+            integer
+                Number of cells.
 
         *Example*
             .. warning::
@@ -374,7 +404,8 @@ Mesh.h
         Get number of edges in mesh.
 
         *Returns*
-            integer : number of edges.
+            integer
+                Number of edges.
 
 
         *Example*
@@ -395,10 +426,12 @@ Mesh.h
         Get number of entities of given topological dimension.
 
         *Arguments*
-            d : integer, topological dimension.
+            d
+                An integer, topological dimension.
 
         *Returns*
-            integer : number of entities of topological dimension d.
+            integer
+                Number of entities of topological dimension d.
 
         *Example*
             .. warning::
@@ -419,7 +452,8 @@ Mesh.h
         Get number of faces in mesh.
 
         *Returns*
-            integer : number of faces.
+            integer
+                Number of faces.
 
         *Example*
             .. warning::
@@ -435,7 +469,8 @@ Mesh.h
         Get number of facets in mesh.
 
         *Returns*
-            integer : number of facets.
+            integer
+                Number of facets.
 
         *Example*
             .. warning::
@@ -454,7 +489,8 @@ Mesh.h
         Get number of vertices in mesh.
 
         *Returns*
-            integer : number of vertices.
+            integer
+                Number of vertices.
 
         *Example*
             .. warning::
@@ -478,18 +514,21 @@ Mesh.h
         Check if mesh is ordered.
 
         *Returns*
-            bool : Return true iff topology is ordered according to the UFC
-            numbering.
+            bool
+                Return true iff topology is ordered according to the UFC
+                numbering.
 
     .. cpp:function:: uint size(uint dim) const
 
         Get number of entities of given topological dimension.
 
         *Arguments*
-            dim : integer, topological dimension.
+            dim
+                An integer, topological dimension.
 
         *Returns*
-            integer : number of entities of topological dimension d.
+            integer
+                Number of entities of topological dimension d.
 
         *Example*
             .. warning::
@@ -510,44 +549,46 @@ Mesh.h
         Smooth internal vertices of mesh by local averaging.
 
         *Arguments*
-            num_iterations : integer,
-                             number of iterations to perform smoothing,
-                             default value is 1.
+            num_iterations
+                An integer, number of iterations to perform smoothing, default
+                value is 1.
 
     .. cpp:function:: void smooth_boundary(uint num_iterations=1, bool harmonic_smoothing=true)
 
         Smooth boundary vertices of mesh by local averaging.
 
         *Arguments*
-            num_iterations : integer,
-                             number of iterations to perform smoothing,
-                             default value is 1.
+            num_iterations
+                An integer, number of iterations to perform smoothing, default
+                value is 1.
 
-            harmonic_smoothing : bool,
-                                 flag to turn on harmonics smoothing, default
-                                 value is true.
+            harmonic_smoothing
+                A bool, flag to turn on harmonics smoothing, default value is
+                true.
 
     .. cpp:function:: void snap_boundary(const SubDomain& sub_domain, bool harmonic_smoothing=true)
 
         Snap boundary vertices of mesh to match given sub domain.
 
         *Arguments*
-            sub_domain : a :cpp:class:`SubDomain` object.
+            sub_domain
+                A :cpp:class:`SubDomain` object.
 
-            harmonic_smoothing : bool,
-                                 a flag to turn on harmonics smoothing,
-                                 default value is true.
+            harmonic_smoothing
+                A bool, flag to turn on harmonics smoothing, default value is
+                true.
 
     .. cpp:function:: std::string str(bool verbose) const
 
         Informal string representation.
 
         *Arguments*
-            verbose : bool,
-                      a flag to turn on additional output.
+            verbose
+                A bool, flag to turn on additional output.
 
         *Returns*
-            string : an informal representation of the mesh.
+            string
+                An informal representation of the mesh.
 
         *Example*
             .. warning::
@@ -563,8 +604,8 @@ Mesh.h
         Get topology associated with mesh.
 
         *Returns*
-            :cpp:class:`MeshTopology` : the topology object associated with the
-            mesh.
+            :cpp:class:`MeshTopology`
+                The topology object associated with the mesh.
 
     .. cpp:function:: const MeshTopology& topology() const
 
@@ -575,8 +616,8 @@ Mesh.h
         Get mesh cell type.
 
         *Returns*
-            :cpp:class:`CellType` : the cell type object associated with the
-            mesh.
+            :cpp:class:`CellType`
+                The cell type object associated with the mesh.
 
     .. cpp:function:: const CellType& type() const
 
