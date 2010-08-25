@@ -19,7 +19,7 @@ Debian
 ======
 
 FEniCS is included as part of Debian GNU/Linux
-(unstable/sid). To install, simply click `here <apt://fenics>`_
+(testing/squeeze and unstable/sid). To install, simply click `here <apt://fenics>`_
 (requires ``aptlinex``). FEniCS can also be installed by running the
 following command::
 
@@ -63,12 +63,12 @@ for those preferring the command-line:
 
     The ``add-apt-repository`` command is not available on older (pre
     9.10) Ubuntu systems. Please see the `FEniCS PPA page
-    <https://launchpad.net/~fenics/+archive/ppa>`_ which has
-    instructions for older Ubuntu versions.
+    <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
+    these systems.
 
-*************
-Build scripts
-*************
+***********************************
+Automated installation using Dorsal
+***********************************
 
 If you are not running a Debian or Ubuntu operating system, you need
 to download and compile FEniCS and all its dependencies. Luckily, this
@@ -79,10 +79,13 @@ and their requisite dependencies on Unix-like operating systems.
 
 The following platforms are officially supported by Dorsal:
 
+* Debian GNU/Linux testing, unstable
 * Fedora 13
 * Gentoo (and Sabayon) Linux
 * Mac OS X (Snow Leopard)
 * openSUSE 11.3
+* Red Hat Enterprise Linux 6
+* Ubuntu 9.10, 10.04 LTS, 10.10
 * Ubuntu (10.04/Lucid and 10.10/Maverick)
 
 A number of other platforms are supported through user contributions.
@@ -116,12 +119,12 @@ the libraries, so be patient.
 Don't forget to follow any post-build instructions before rushing off
 to try the demos!
 
-*******************
-Manual installation
-*******************
+*******************************
+Manual installation from source
+*******************************
 
-If you wish to  install FEniCS manually you can easily do
-so. You will need to install the Python packages
+You can also build and install FEniCS components manually from the source code.
+You will need to install the Python packages
 `FFC <http://www.fenics.org/ffc>`_,
 `FIAT <http://www.fenics.org/fiat>`_,
 `Viper <http://www.fenics.org/viper>`_, and
@@ -131,10 +134,10 @@ You will also need to install the C++/Python packages
 `DOLFIN <http://www.fenics.org/dolfin>`_.
 Instructions for how to install these packages are given below.
 
-Installation of Python packages (FFC, FIAT, Viper, and UFL)
-===========================================================
+Python packages (FFC, FIAT, Viper and UFL)
+==========================================
 
-#. First, `download the source code <http://www.fenics.org/download>`_
+#. First, `download the source code <http://www.fenics.org/wiki/Download#Download_the_source_code>`_
    for FFC, FIAT, Viper, and UFL. Then for each of these packages,
    follow the instructions below.
 #. Uncompress the archive to a convenient location.
@@ -149,7 +152,7 @@ directory. This may be accomplished by running the following command::
 
     sudo python setup.py install --prefix=~/local
 
-Installation of C++/Python packages (UFC and DOLFIN)
+C++/Python packages (UFC and DOLFIN)
 ====================================================
 
 #. First, `download the source code <http://www.fenics.org/download">`_
@@ -170,7 +173,7 @@ above commands by the following command::
 
     cmake . -DCMAKE_INSTALL_PREFIX=~/local
 
-You may also want to consider using a graphical frontend for Cmake
+You may also want to consider using a graphical frontend for CMake
 like either ``cmake-gui`` or ``ccmake`` which both provide a simple
 way to configure the installation.
 
@@ -206,3 +209,4 @@ If you have suggestions for improving the information found on this
 page with respect to the installation procedure of FEniCS, you are
 more than welcome to file a bug report or register a blueprint on
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
+
