@@ -322,8 +322,8 @@ This style guide contains information on how to create documentation for
 FEniCS using the Sphinx documentation tool. The first sections are related
 to how the reST code should look like, then follows a section on frequently
 used reST and Sphinx markup as a quick reference. The last two sections
-are guides explaining in steps how to document demos and the programmer's
-reference respectively.
+are guides explaining in steps how to document the programmer's reference
+and the demos respectively.
 
 Code layout
 -----------
