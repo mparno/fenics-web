@@ -24,37 +24,45 @@ Welcome to FEniCS's documentation!
     <td width="50%">
       <p class="biglink">
         <a class="biglink" href="introduction.html">Introduction</a>
-        <br/><span class="linkdescr"> a short introduction to this documentation</span>
+        <br/><span class="linkdescr">A short introduction to this documentation</span>
       </p>
       <p class="biglink">
         <a class="biglink" href="installation.html">Installation</a>
-        <br/><span class="linkdescr">how to install FEniCS</span>
+        <br/><span class="linkdescr">How to install FEniCS</span>
       </p>
       <p class="biglink">
         <a class="biglink" href="tutorial/index.html">Tutorial</a>
-        <br/><span class="linkdescr">how to use FEniCS, available for
+        <br/><span class="linkdescr">How to use FEniCS, available for
           <a href="tutorial/cpp/index.html"> C++ </a> and
           <a href="tutorial/python/index.html"> Python </a>
         </span>
       </p>
-    </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">documented examples, available for
+        <br/><span class="linkdescr">Documented examples, available for
           <a href="demos/cpp/index.html"> C++ </a> and
           <a href="demos/python/index.html"> Python </a>
         </span>
       </p>
+    </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
-        <br/><span class="linkdescr">interface documentation, available for
+        <br/><span class="linkdescr">Interface documentation, available for
           <a href="programmers-reference/cpp/index.html"> C++ </a> or
           <a href="programmers-reference/python/index.html"> Python </a>
         </span>
       </p>
       <p class="biglink">
         <a class="biglink" href="contributing.html">Contributing to FEniCS</a>
-        <br/><span class="linkdescr">how to contribute to the FEniCS project</span>
+        <br/><span class="linkdescr">How to contribute to the FEniCS project</span>
+      </p>
+      <p class="biglink">
+        <a class="biglink" href="developer.html">Developers</a>
+        <br/><span class="linkdescr">Information for developers</span>
+      </p>
+      <p class="biglink">
+        &nbsp
+        <br/><span class="linkdescr">&nbsp</span>
       </p>
     </td></tr>
   </table>
