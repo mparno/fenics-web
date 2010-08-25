@@ -55,7 +55,7 @@ command::
     sudo apt-get install fenics
 
 FEniCS PPA
---------------
+----------
 
 The official Ubuntu repositories may not always contain the latest
 stable FEniCS releases. To stay current with the latest releases, add
@@ -84,9 +84,9 @@ for those preferring the command line:
     <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
     these systems.
 
-************
-Using Dorsal
-************
+***********************************
+Automated installation using Dorsal
+***********************************
 
 The easiest way to install FEniCS on a UNIX-like operating environment
 is to use `Dorsal <https://launchpad.net/dorsal>`_.
@@ -95,13 +95,13 @@ compiling and installing the various FEniCS sub-projects and their requisite
 dependencies.
 It currently supports officially the following platforms:
 
-* Debian GNU/Linux 5.0, unstable
+* Debian GNU/Linux testing, unstable
 * Fedora 13
+* Gentoo (and Sabayon) Linux
 * Mac OS X 10.5, 10.6
 * openSUSE 11.3
-* Red Hat Enterprise Linux 5
+* Red Hat Enterprise Linux 6
 * Ubuntu 9.10, 10.04 LTS, 10.10
-* Gentoo (and Sabayon) Linux
 
 A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
@@ -136,41 +136,41 @@ Don't forget to follow any post-build instructions before rushing off to try
 the demos!
 
 
-*******************
-Manual installation
-*******************
+*******************************
+Manual installation from source
+*******************************
 
-If you wish to  install FEniCS components manually you can easily do so.
+You can also build and install FEniCS components manually from the source code.
+Tarballs of all packages can be downloaded from Launchpad:
+
+* `download DOLFIN   <https://launchpad.net/dolfin/+download>`_
+* `download FIAT     <https://launchpad.net/fiat/+download>`_
+* `download FFC      <https://launchpad.net/ffc/+download>`_
+* `download UFC      <https://launchpad.net/ufc/+download>`_
+* `download UFL      <https://launchpad.net/ufl/+download>`_
+* `download Instant  <https://launchpad.net/instant/+download>`_
+* `download Viper    <https://launchpad.net/fenics-viper/+download>`_
 
 Python packages (FFC, FIAT, Viper and UFL)
 ==========================================
 
-For a system wide installation of the development version of FFC do::
+After extracting a Python-base component, enter the directory and
+for a system wide installation do::
 
-    $ bzr branch lp:ffc
-    $ cd ffc
-    $ sudo python setup.py install
+    $ python setup.py install --prefix=<destination>
 
-Alternatively, you can specify the installation path, if for instance you don't
-have root privileges, for a local installation do::
+where <destination> is the desired installation directory. If you have
+root privileges, you can perform a system-wide installation::
 
-    $ python setup.py install --prefix=/home/user/local
-
-Installing UFC and UFL follows the same procedure only the project name ``ffc``
-must be ``ufc`` and ``ufl`` respectively.
-
-To install previous stable releases visit:
-
-* `download FFC <https://launchpad.net/ffc/+download>`_
-* `download UFC <https://launchpad.net/ufc/+download>`_
-* `download UFL <https://launchpad.net/ufl/+download>`_
-
-download the desired tar ball, unpack and install using the same procedure as
-outlined above.
+    $ python setup.py install
 
 UFC
 ===
 
+UFC uses CMake for installation. For a simple installation, extract
+the UFC tarball and in the UFC directory do::
+
+    $ cmake -DCMAKE_INSTALL_PREFIX=$INSTALLDIR
 
 DOLFIN
 ======
