@@ -3,9 +3,9 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-##################################
-Welcome to FEniCS's documentation!
-##################################
+####################
+FEniCS Documentation
+####################
 
 .. toctree::
     :hidden:
@@ -46,9 +46,9 @@ Welcome to FEniCS's documentation!
       </p>
     </td><td width="50%">
       <p class="biglink">
-        <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
+        <a class="biglink" href="programmers-reference/index.html">Programmer's Reference</a>
         <br/><span class="linkdescr">Interface documentation, available for
-          <a href="programmers-reference/cpp/index.html"> C++ </a> or
+          <a href="programmers-reference/cpp/index.html"> C++ </a> and
           <a href="programmers-reference/python/index.html"> Python </a>
         </span>
       </p>
