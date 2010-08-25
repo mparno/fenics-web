@@ -1,5 +1,5 @@
 .. General introduction to the FEniCS documentation effort.
-    This is where we explain the main idea and structure of the docs.
+   This is where we explain the main idea and structure of the docs.
 
 .. _introduction:
 
@@ -7,7 +7,7 @@
 Introduction
 ############
 
-This is the documentation for software related to the
+This is the documentation for the
 `FEniCS project <http://fenics.org/wiki/FEniCS_Project>`_.
 The FEniCS project consists of many
 `software components <http://fenics.org/wiki/Projects>`_, however, the
