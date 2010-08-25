@@ -7,9 +7,12 @@
 Developer information
 #####################
 
-FEniCS development takes place on Launchpad. This page explains how to obtain
-FEniCS source code from Launchpad, subscribe to developer mailing lists and
-take part in the development of FEniCS.
+This page contains information for FEniCS developers.  FEniCS development
+tools are hosted Launchpad. This page explains how to obtain source
+code from `Launchpad <https://launchpad.net/>`_, subscribe to developer
+mailing lists and take part in the development of FEniCS. An overview
+of all FEniCS projects on Launchpad can be found
+`here <https://launchpad.net/fenics-project>`_.
 
 **********************************
 Organization of FEniCS development
@@ -31,11 +34,15 @@ The source code of all FEniCS projects can be obtained directly from Launchpad
 using Bazaar, the version control system used by FEniCS. To get the source
 code for a FEniCS project, simply do
 
-bzr branch lp:project-name
+.. code-block:: sh
+
+    bzr branch lp:project-name
 
 For example, to obtain the source code for DOLFIN, run the command
 
-bzr branch lp:dolfin
+.. code-block:: sh
+
+    bzr branch lp:dolfin
 
 *************
 Mailing lists
@@ -72,5 +79,47 @@ To subscribe to branch changes for a project, visit the main Launchpad
 page of the project and click the link "Branches" in the top menu. Then
 click on the branch (lp::foo) in the list and finally "Subscribe yourself"
 in the top right corner.
+
+************
+Using Bazaar
+************
+
+A quick reference for using Bazaar can be found
+`here <http://doc.bazaar-vcs.org/bzr.2.0/en/quick-reference/index.html>`_.
+To set your identity with Bazaar, type
+
+.. code-block:: sh
+
+    bzr whoami "My Name <myname@foo.com>"
+
+To create a new branch (similar to hg clone):
+
+.. code-block:: sh
+
+    bzr branch address-to-original-branch [address-to-new-branch]
+
+To branch a project hosted by Launchpad:
+
+.. code-block:: sh
+
+    bzr branch lp:project-name
+
+To commit a change:
+
+.. code-block:: sh
+
+    bzr commit
+
+To push changes:
+
+.. code-block:: sh
+
+    bzr push [address-to-branch]
+
+To pull changes:
+
+.. code-block:: sh
+
+    bzr pull [address-to-branch]
 
 

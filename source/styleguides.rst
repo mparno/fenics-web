@@ -1,4 +1,4 @@
-.. Style guides for FEniCS documentation (Sphinx) and DOLFIN (C++).
+.. Style guides for DOLFIN (C++) and FEniCS documentation (Sphinx).
 
 .. _styleguides:
 
@@ -118,8 +118,8 @@ Miscellaneous
 Indentation
 ^^^^^^^^^^^
 
-Indentation should be two spaces and it should be spaces, **not**
-tab(s).
+Indentation should be two spaces and it should be spaces. Do **not**
+use tab(s).
 
 Comments
 ^^^^^^^^
@@ -153,22 +153,20 @@ Integers and reals
 ^^^^^^^^^^^^^^^^^^
 
 Use ``dolfin::uint`` instead of ``int`` (unless you really
-want to use negative integers which is rare) and ``dolfin::real``
-instead of ``double``:
+want to use negative integers). Use ``dolfin::real``
+instead of ``double`` if you are sure that you want to exploit
+arbitray precision:
 
 .. code-block:: c++
 
     uint i = 0;
     double x = 0.0;
 
-These are typedefs for the standard ``C++`` types ``unsigned int``
-and ``double`` (defined in ``dolfin/common/types.h``).
-
 Placement of brackets
 ^^^^^^^^^^^^^^^^^^^^^
 
-Curly brackets following a control statement should appear in the next
-line and not be indented:
+Curly brackets following for multi-line control statements should appear on
+the next line and should not be indented:
 
 .. code-block:: c++
 
@@ -176,6 +174,13 @@ line and not be indented:
     {
       ...
     }
+
+For one line statements, ommit the brackets
+
+.. code-block:: c++
+
+    for (uint i = 0; i < 10; i++)
+      foo(i);
 
 Header file layout
 ^^^^^^^^^^^^^^^^^^
@@ -252,25 +257,20 @@ Implementation files should follow the below template:
 The horizontal lines above (including the slashes) should be exactly 79
 characters wide.
 
-Including header files
-^^^^^^^^^^^^^^^^^^^^^^
+Including header files and using forward declarations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Don't use ``#include <dolfin.h>`` or ``#include``
+Do not use ``#include <dolfin.h>`` or ``#include``
 ``<dolfin/dolfin_foo.h>`` inside the DOLFIN kernel. Only include the
 portions of DOLFIN you are actually using.
 
-Forward declarations
-^^^^^^^^^^^^^^^^^^^^
-
-Actually, try to include as little as possible and use forward
-declarations whenever possible (in header files). Put the
-``#include`` in the implementation file.
+Include as few header files a possible and use forward declarations whenever
+possible (in header files). Put the ``#include`` in the implementation file.
 
 Explicit constructors
 ^^^^^^^^^^^^^^^^^^^^^
 
-Make all constructors (except copy constructors) explicit if there is no
-particular reason not to do so:
+Make all one argument constructors (except copy constructors) explicit:
 
 .. code-block:: c++
 
@@ -302,27 +302,28 @@ This makes it easier to spot which functions are virtual.
 Use of libraries
 ----------------
 
-Prefer ``C++`` strings and streams to old ``C``-style ``char*``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prefer ``C++`` strings and streams over old ``C``-style ``char*``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``std::string`` instead of ``const char*`` and use ``std::istream`` and
 ``std::ostream`` instead of ``FILE``. Avoid ``printf``,
-``sprintf`` and the like.
+``sprintf`` and other C functions.
 
-There are exceptions to this rule where we need to use old ``C``-style
-function calls. One such exception is handling of command-line
-arguments (``char* argv[]``).
+There are some exceptions to this rule where we need to use old ``C``-style
+function calls. One such exception is handling of command-line arguments
+(``char* argv[]``).
 
 .. _styleguides_sphinx_coding_style:
 
 Sphinx coding style for FEniCS documentation
 ============================================
 
-This style guide contains information on how to create documentation for FEniCS
-using the Sphinx documentation tool. The first sections are related to how the
-reST code should look like, then follows a section on frequently used reST and
-Sphinx markup as a quick reference. The last two sections are guides explaining
-in steps how to document demos and the programmer's reference respectively.
+This style guide contains information on how to create documentation for
+FEniCS using the Sphinx documentation tool. The first sections are related
+to how the reST code should look like, then follows a section on frequently
+used reST and Sphinx markup as a quick reference. The last two sections
+are guides explaining in steps how to document demos and the programmer's
+reference respectively.
 
 Code layout
 -----------
@@ -371,12 +372,12 @@ to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
     It refers to the section itself, see :ref:`my-reference-label`.
 
 For this to work properly, the label names **must** be unique in the entire
-documentation source.
-To ensure this, the label names should begin with the path to the file where
-the label is located relative to the source directory. As an example the label
-for the ``C++`` version of the Poisson demo which is located at the top of the
-``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
-``demos_cpp_pde_poisson`` while the label to this sub section is:
+documentation source.  To ensure this, the label names should begin with
+the path to the file where the label is located relative to the source
+directory. As an example the label for the ``C++`` version of the Poisson
+demo which is located at the top of the ``demos/cpp/pde/poisson/poisson.rst``
+file should be given the name ``demos_cpp_pde_poisson`` while the label to
+this sub section is:
 
 .. code-block:: rest
 
@@ -720,7 +721,7 @@ Documenting demos
 
 This short guide explains the procedure for documenting a FEniCS demo.
 As an example we will demonstrate the steps involved to create documentation
-for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and 
+for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and
 :ref:`Poisson (Python) <demos_python_pde_poisson>` demos.
 
 Files
