@@ -20,19 +20,19 @@ which cause the problem:
 * `UFC <https://answers.launchpad.net/ufc>`_
 * `UFL <https://answers.launchpad.net/ufl>`_
 
-(visit the `FEniCS Project <https://launchpad.net/fenics-project>`_ page for a
+(Visit the `FEniCS Project <https://launchpad.net/fenics-project>`_ page for a
 complete list of FEniCS components)
 
 If everything else fails you can always try the fenics@lists.launchpad.net
 mailing list.
 If you have suggestions for improving the information found on this page with
 respect to the installation procedure of FEniCS, you are more than welcome to
-file a bug report or draw up a blueprint on
+file a bug report or register a blueprint on
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
 
-************************************
-Installation for Debian/Ubuntu users
-************************************
+**********************
+Debian/Ubuntu packages
+**********************
 
 Debian
 ======
@@ -54,7 +54,7 @@ command::
 
     sudo apt-get install fenics
 
-The FEniCS PPA
+FEniCS PPA
 --------------
 
 The official Ubuntu repositories may not always contain the latest
@@ -84,25 +84,26 @@ for those preferring the command line:
     <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
     these systems.
 
-*************************
-Installation using Dorsal
-*************************
+************
+Using Dorsal
+************
 
 The easiest way to install FEniCS on a UNIX-like operating environment
 is to use `Dorsal <https://launchpad.net/dorsal>`_.
 Dorsal is a simple shell script that automates the process of fetching,
 compiling and installing the various FEniCS sub-projects and their requisite
 dependencies.
-It currently supports the following platforms:
+It currently supports officially the following platforms:
 
-* Debian GNU/Linux 4.0, 5.0, unstable
-* Fedora 10, 11, 12          
-* Mac OS X 10.4, 10.5, 10.6
-* openSUSE 11.1, 11.2      
-* Red Hat Enterprise Linux 4, 5 
-* Ubuntu 8.10, 9.04, 9.10, 10.04 LTS
+* Debian GNU/Linux 5.0, unstable
+* Fedora 13
+* Mac OS X 10.5, 10.6
+* openSUSE 11.3
+* Red Hat Enterprise Linux 5
+* Ubuntu 9.10, 10.04 LTS, 10.10
 * Gentoo (and Sabayon) Linux
 
+A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
 know if that you are interested, and we can work together toward
 adding this functionality.
@@ -128,7 +129,8 @@ platforms listed above, follow the following steps:
 If all goes according to plan, you should see a lot of
 compilation-related text scroll past your screen and eventually end up
 with a complete, up-to-date installation of various FEniCS projects
-and their corresponding dependencies.
+and their corresponding dependencies. It will take some time to build all the
+libraries, so be patient.
 
 Don't forget to follow any post-build instructions before rushing off to try
 the demos!
@@ -138,11 +140,10 @@ the demos!
 Manual installation
 *******************
 
-If you for some reason want to install FEniCS components manually you can
-easily do so.
+If you wish to  install FEniCS components manually you can easily do so.
 
-FFC, UFC and UFL
-================
+Python packages (FFC, FIAT, Viper and UFL)
+==========================================
 
 For a system wide installation of the development version of FFC do::
 
@@ -166,6 +167,10 @@ To install previous stable releases visit:
 
 download the desired tar ball, unpack and install using the same procedure as
 outlined above.
+
+UFC
+===
+
 
 DOLFIN
 ======
