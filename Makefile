@@ -31,7 +31,7 @@ help:
 clean:
 	-rm -rf build
 
-all:	latex pdf html
+all:	clean latex pdf html
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
