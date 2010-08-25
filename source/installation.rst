@@ -19,7 +19,7 @@ Debian
 ======
 
 FEniCS is included as part of Debian GNU/Linux
-(unstable/sid). To install, simply click `here <apt://fenics>`_
+(testing/squeeze and unstable/sid). To install, simply click `here <apt://fenics>`_
 (requires ``aptlinex``). FEniCS can also be installed by running the
 following command::
 
@@ -124,8 +124,7 @@ Manual installation from source
 *******************************
 
 You can also build and install FEniCS components manually from the source code.
-If you wish to  install FEniCS manually you can easily do
-so. You will need to install the Python packages
+You will need to install the Python packages
 `FFC <http://www.fenics.org/ffc>`_,
 `FIAT <http://www.fenics.org/fiat>`_,
 `Viper <http://www.fenics.org/viper>`_, and
@@ -138,7 +137,7 @@ Instructions for how to install these packages are given below.
 Python packages (FFC, FIAT, Viper and UFL)
 ==========================================
 
-#. First, `download the source code <http://www.fenics.org/download>`_
+#. First, `download the source code <http://www.fenics.org/wiki/Download#Download_the_source_code>`_
    for FFC, FIAT, Viper, and UFL. Then for each of these packages,
    follow the instructions below.
 #. Uncompress the archive to a convenient location.
@@ -153,7 +152,7 @@ directory. This may be accomplished by running the following command::
 
     sudo python setup.py install --prefix=~/local
 
-Installation of C++/Python packages (UFC and DOLFIN)
+C++/Python packages (UFC and DOLFIN)
 ====================================================
 
 #. First, `download the source code <http://www.fenics.org/download">`_
@@ -174,7 +173,7 @@ above commands by the following command::
 
     cmake . -DCMAKE_INSTALL_PREFIX=~/local
 
-You may also want to consider using a graphical frontend for Cmake
+You may also want to consider using a graphical frontend for CMake
 like either ``cmake-gui`` or ``ccmake`` which both provide a simple
 way to configure the installation.
 
@@ -210,4 +209,4 @@ If you have suggestions for improving the information found on this
 page with respect to the installation procedure of FEniCS, you are
 more than welcome to file a bug report or register a blueprint on
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
->>>>>>> MERGE-SOURCE
+
