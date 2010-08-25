@@ -36,11 +36,7 @@ command::
 
     sudo apt-get install fenics
 
-<<<<<<< TREE
-FEniCS PPA
-=======
 Ubuntu PPA
->>>>>>> MERGE-SOURCE
 ----------
 
 The official Ubuntu repositories may not always contain the latest
@@ -67,7 +63,6 @@ for those preferring the command-line:
 
     The ``add-apt-repository`` command is not available on older (pre
     9.10) Ubuntu systems. Please see the `FEniCS PPA page
-<<<<<<< TREE
     <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
     these systems.
 
