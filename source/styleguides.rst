@@ -1,4 +1,4 @@
-.. Style guides for FEniCS documentation (Sphinx) and DOLFIN (C++).
+.. Style guides for DOLFIN (C++) and FEniCS documentation (Sphinx).
 
 .. _styleguides:
 
@@ -118,8 +118,8 @@ Miscellaneous
 Indentation
 ^^^^^^^^^^^
 
-Indentation should be two spaces and it should be spaces, **not**
-tab(s).
+Indentation should be two spaces and it should be spaces. Do **not**
+use tab(s).
 
 Comments
 ^^^^^^^^
@@ -153,22 +153,20 @@ Integers and reals
 ^^^^^^^^^^^^^^^^^^
 
 Use ``dolfin::uint`` instead of ``int`` (unless you really
-want to use negative integers which is rare) and ``dolfin::real``
-instead of ``double``:
+want to use negative integers). Use ``dolfin::real``
+instead of ``double`` if you are sure that you want to exploit
+arbitray precision:
 
 .. code-block:: c++
 
     uint i = 0;
     double x = 0.0;
 
-These are typedefs for the standard ``C++`` types ``unsigned int``
-and ``double`` (defined in ``dolfin/common/types.h``).
-
 Placement of brackets
 ^^^^^^^^^^^^^^^^^^^^^
 
-Curly brackets following a control statement should appear in the next
-line and not be indented:
+Curly brackets following for multi-line control statements should appear on
+the next line and should not be indented:
 
 .. code-block:: c++
 
@@ -176,6 +174,13 @@ line and not be indented:
     {
       ...
     }
+
+For one line statements, ommit the brackets
+
+.. code-block:: c++
+
+    for (uint i = 0; i < 10; i++)
+      foo(i);
 
 Header file layout
 ^^^^^^^^^^^^^^^^^^
@@ -252,25 +257,20 @@ Implementation files should follow the below template:
 The horizontal lines above (including the slashes) should be exactly 79
 characters wide.
 
-Including header files
-^^^^^^^^^^^^^^^^^^^^^^
+Including header files and using forward declarations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Don't use ``#include <dolfin.h>`` or ``#include``
+Do not use ``#include <dolfin.h>`` or ``#include``
 ``<dolfin/dolfin_foo.h>`` inside the DOLFIN kernel. Only include the
 portions of DOLFIN you are actually using.
 
-Forward declarations
-^^^^^^^^^^^^^^^^^^^^
-
-Actually, try to include as little as possible and use forward
-declarations whenever possible (in header files). Put the
-``#include`` in the implementation file.
+Include as few header files a possible and use forward declarations whenever
+possible (in header files). Put the ``#include`` in the implementation file.
 
 Explicit constructors
 ^^^^^^^^^^^^^^^^^^^^^
 
-Make all constructors (except copy constructors) explicit if there is no
-particular reason not to do so:
+Make all one argument constructors (except copy constructors) explicit:
 
 .. code-block:: c++
 
@@ -302,27 +302,28 @@ This makes it easier to spot which functions are virtual.
 Use of libraries
 ----------------
 
-Prefer ``C++`` strings and streams to old ``C``-style ``char*``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prefer ``C++`` strings and streams over old ``C``-style ``char*``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``std::string`` instead of ``const char*`` and use ``std::istream`` and
 ``std::ostream`` instead of ``FILE``. Avoid ``printf``,
-``sprintf`` and the like.
+``sprintf`` and other C functions.
 
-There are exceptions to this rule where we need to use old ``C``-style
-function calls. One such exception is handling of command-line
-arguments (``char* argv[]``).
+There are some exceptions to this rule where we need to use old ``C``-style
+function calls. One such exception is handling of command-line arguments
+(``char* argv[]``).
 
 .. _styleguides_sphinx_coding_style:
 
 Sphinx coding style for FEniCS documentation
 ============================================
 
-This style guide contains information on how to create documentation for FEniCS
-using the Sphinx documentation tool. The first sections are related to how the
-reST code should look like, then follows a section on frequently used reST and
-Sphinx markup as a quick reference. The last two sections are guides explaining
-in steps how to document demos and the programmer's reference respectively.
+This style guide contains information on how to create documentation for
+FEniCS using the Sphinx documentation tool. The first sections are related
+to how the reST code should look like, then follows a section on frequently
+used reST and Sphinx markup as a quick reference. The last two sections
+are guides explaining in steps how to document demos and the programmer's
+reference respectively.
 
 Code layout
 -----------
@@ -371,12 +372,12 @@ to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
     It refers to the section itself, see :ref:`my-reference-label`.
 
 For this to work properly, the label names **must** be unique in the entire
-documentation source.
-To ensure this, the label names should begin with the path to the file where
-the label is located relative to the source directory. As an example the label
-for the ``C++`` version of the Poisson demo which is located at the top of the
-``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
-``demos_cpp_pde_poisson`` while the label to this sub section is:
+documentation source.  To ensure this, the label names should begin with
+the path to the file where the label is located relative to the source
+directory. As an example the label for the ``C++`` version of the Poisson
+demo which is located at the top of the ``demos/cpp/pde/poisson/poisson.rst``
+file should be given the name ``demos_cpp_pde_poisson`` while the label to
+this sub section is:
 
 .. code-block:: rest
 
@@ -500,6 +501,219 @@ If you feel a comment is in its place use the ``note`` directive:
 and ask on the fenics@lists.launchpad.net mailing list, so we can resolve the
 issue as quickly as possible to keep the documentation in good shape.
 
+.. _styleguides_sphinx_documenting_interface:
+
+Documenting the FEniCS interface (programmer's reference)
+---------------------------------------------------------
+
+This short guide explains how to write documentation for the ``C++`` and
+``Python`` interfaces to FEniCS.
+Since the ``Python`` interface is (partially) generated automatically using
+Swig from the ``C++`` implementation of DOLFIN the directory/file structure of
+the documentation follows that of the ``C++`` version of DOLFIN.
+In addition, we want the documentation for the ``Python`` version to be
+available when using FEniCS with the ``Python`` interpreter.
+To achieve this we write all documentation for the ``Python`` version in a
+pseudo module which is an exact replication of the 'real' DOLFIN module and
+then let the autodoc functionality of Sphinx handle the rest.
+
+To make matters more concrete let's consider the case of writing documentation
+for the DOLFIN ``Mesh`` class and the ``closest_cell`` member function of this
+class.
+
+The ``Mesh`` class is defined in the file ``dofin_dir/dolfin/mesh/Mesh.h``.
+We therefore start by adding the files:
+
+* ``programmers-reference/cpp/mesh/Mesh.rst``
+* ``programmers-reference/python/mesh/Mesh.rst``
+
+and updating the index files
+
+* ``programmers-reference/cpp/index.rst``
+* ``programmers-reference/cpp/mesh/index.rst``
+* ``programmers-reference/python/index.rst``
+* ``programmers-reference/python/mesh/index.rst``
+
+appropriately.
+
+We then proceed to add contents for the two different interfaces as described
+in the following sections.
+
+General comments
+^^^^^^^^^^^^^^^^
+
+To handle the documentation of two different languages in Sphinx we use
+`Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to distinguish between
+classes and functions belonging to the ``C++`` and ``Python`` interfaces.
+
+Since Spinx does not allow sections in the markup for class/function
+documentation we use *italics* (``*italics*``) and definition lists to group
+information.
+The idea is to keep the markup as simple as possible since the reST source for
+the ``Python`` documentation of classes and functions will be used 'as is' in
+the docstrings of the DOLFIN module.
+
+Most information can be put in the three sections:
+
+* *Arguments*, which are formatted using definition lists following this
+  structure::
+
+    *Arguments*
+        <name>
+            <type, description>
+        <name2>
+            <type, description>
+
+  example::
+
+      *Arguments*
+          dim
+              An integer, some dimension.
+          d
+              A double, some value.
+
+* *Returns*, which is formatted in a similar fashion::
+
+    *Returns*
+        <return type>
+            <description>
+
+  example::
+
+    *Returns*
+        integer
+            Some random integer.
+
+* *Example*, a very small code snippet which shows how the class/function
+  works. It does not necessarily have to be a stand-alone program.
+
+Links to demos which use the feature being documented should be put in a
+``seealso`` directive.
+
+The member functions of a class should be sorted alphabetically for the
+``C++`` version.
+When using autodoc, Sphinx will sort the member functions automatically for the
+``Python`` module.
+
+``C++`` interface
+^^^^^^^^^^^^^^^^^
+
+The code snippets presented in the following can be seen in their complete
+form and context by clicking on ``Show Source`` link on the page containing
+the ``C++`` documentation for the :cpp:class:`Mesh` class.
+
+The ``C++`` documentation for the ``Mesh`` class is added to the
+``programmers-reference/cpp/mesh/Mesh.rst`` file.
+
+Defining the class
+^^^^^^^^^^^^^^^^^^
+
+The begining of the ``programmers-reference/cpp/mesh/Mesh.rst`` file looks
+like this:
+
+.. code-block:: rest
+
+    Mesh.h
+    ======
+
+    .. cpp:class:: Mesh
+
+        *Parent class*
+
+            * :cpp:class:`Variable`
+
+        A Mesh consists of a set of connected and numbered mesh entities.
+
+where only the first part of the ``Mesh`` class description has been included
+for brevity.
+
+We start with a section title ``Mesh.h`` since the ``Mesh.rst`` should contain
+documentation for all classes and functions defined in ``Mesh.h`` and there
+might be multiple classes defined.
+The ``Mesh`` class is defined by the Sphinx directive ``cpp:class::`` followed
+by the name of the class.
+Since the ``Mesh`` class derives from the ``Variable`` class we list all parent
+classes explicitly where the line ``:cpp:class:`Variable``` will create a link
+to the ``C++`` documentation of the class ``Variable``.
+
+.. note::
+
+    In the future Sphinx might be clever enough to handle parent classes
+    automatically, but until then this is how we do it.
+
+Then follows a description of the purpose of the ``Mesh`` class before th
+documentation of the member functions.
+
+Construtors
+"""""""""""
+
+The constructors are documented as any other member function.
+For the ``Mesh`` class we have two additional constructors besides the empty
+constructor:
+
+.. code-block:: rest
+
+    .. cpp:class:: Mesh
+
+        [snip]
+
+        .. cpp:function:: Mesh(const Mesh& mesh)
+
+            Copy constructor.
+
+            *Arguments*
+                mesh
+                    A :cpp:class:`Mesh` object.
+
+        .. cpp:function:: Mesh(std::string filename)
+
+            Create mesh from data file.
+
+            *Arguments*
+                filename
+                    A string, name of file to load.
+
+The signature of the functions (in this case the constructors
+``Mesh(const Mesh& mesh)`` and ``Mesh(std::string filename)``) **must** be
+identical to that found in the ``dolfin/mesh/Mesh.h`` file, otherwise
+subsequent testing will report that the function is not documented and/or
+obsolete.
+
+.. note::
+
+    It also looks like the destructor ``~`` is not recognised, but we can skip
+    documenting that until it is included in Sphinx.
+
+    The empty constructor, in this case Mesh(), is implicitly created when
+    defining the class (``.. cpp:class:: Mesh``).
+    Explicitly defining it as one of the constructors will cause Sphinx to
+    complain about multiple definitions.
+
+closest_cell function
+"""""""""""""""""""""
+
+
+
+``Python`` interface
+^^^^^^^^^^^^^^^^^^^^
+
+The code snippets presented in the following can be seen in their complete
+form and context by clicking on ``Show Source`` link on the page containing
+the ``Python`` documentation for the :py:class:`Mesh` class and in the
+:download:`programmers-reference/python/docstrings/dolfin/cpp.py` file which
+contains the actual documentation for the ``Python`` ``Mesh`` class.
+
+Appendices
+^^^^^^^^^^
+
+Documentation for the FFC, UFC and UFL components of FEniCS are located in
+the :ref:`appendix <programmers_reference_appendices_index>`.
+The structure of the documentation of a given module depends on the file/class
+layout of the module and the content should be extracted from the docstrings
+as is done for the ``Python`` interface to DOLFIN.
+The layout of the docstrings should follow the same rules as outlined in the
+above sections.
+
 .. _styleguides_sphinx_documenting_demos:
 
 Documenting demos
@@ -507,7 +721,7 @@ Documenting demos
 
 This short guide explains the procedure for documenting a FEniCS demo.
 As an example we will demonstrate the steps involved to create documentation
-for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and 
+for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and
 :ref:`Poisson (Python) <demos_python_pde_poisson>` demos.
 
 Files
@@ -635,7 +849,7 @@ Additional information
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Use the ``note`` and ``warning`` directives to highligt important information.
-The ``see also`` directive should be used when pointing to alternative
+The ``seealso`` directive should be used when pointing to alternative
 solutions or functions in the :ref:`programmers_reference_index`.
 
 Keywords should be added to the index, using the ``index`` directive to make

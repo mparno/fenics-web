@@ -40,10 +40,12 @@ Contents:
     python/index
     appendices/index
 
-The user manuals are also available in PDF format, see
+The programmer's references are also available in PDF format, see
 :download:`C++ version<../../build/latex/cpp_programmers_reference.pdf>` or
 :download:`Python version<../../build/latex/python_programmers_reference.pdf>`.
 
-Build PDFs for FFC, UFC and UFL manuals and link to those too.
+.. note::
+
+    Build PDFs for FFC, UFC and UFL manuals and link to those too.
 
 

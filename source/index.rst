@@ -17,6 +17,7 @@ FEniCS Documentation
     demos/index
     contributing
     styleguides
+    developer
 
 .. raw:: html
 
