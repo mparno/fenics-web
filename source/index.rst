@@ -16,8 +16,8 @@ FEniCS Documentation
     demos/index
     programmers-reference/index
     help
-    styleguides
     developer
+    styleguides
 
 .. raw:: html
 
@@ -56,8 +56,8 @@ FEniCS Documentation
         <br/><span class="linkdescr">Information for contributors and developers</span>
       </p>
       <p class="biglink">
-        &nbsp
-        <br/><span class="linkdescr">&nbsp</span>
+        <a class="biglink" href="styleguides.html">Style guides</a>
+        <br/><span class="linkdescr">How to write FEniCS source code</span>
       </p>
     </td></tr>
   </table>
