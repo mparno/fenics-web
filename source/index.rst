@@ -33,24 +33,18 @@ FEniCS Documentation
       </p>
       <p class="biglink">
         <a class="biglink" href="tutorial/index.html">Tutorial</a>
-        <br/><span class="linkdescr">How to use FEniCS, available for
-          <a href="tutorial/cpp/index.html"> C++ </a> and
-          <a href="tutorial/python/index.html"> Python </a>
+        <br/><span class="linkdescr">How to use FEniCS
         </span>
       </p>
       <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">Documented examples, available for
-          <a href="demos/cpp/index.html"> C++ </a> and
-          <a href="demos/python/index.html"> Python </a>
+        <br/><span class="linkdescr">Documented examples
         </span>
       </p>
     </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="programmers-reference/index.html">Programmer's Reference</a>
-        <br/><span class="linkdescr">Interface documentation, available for
-          <a href="programmers-reference/cpp/index.html"> C++ </a> and
-          <a href="programmers-reference/python/index.html"> Python </a>
+        <br/><span class="linkdescr">Interface documentation
         </span>
       </p>
       <p class="biglink">
