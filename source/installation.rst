@@ -7,9 +7,10 @@ Installation
 ############
 
 Obtaining and installing FEniCS has never been easier. Packages are
-available for Debian and Ubuntu users and we provide a framework
+available for Debian and Ubuntu users, and we provide a framework
 (`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of
-FEniCS on a multitude of platforms.
+FEniCS on a multitude of platforms. Its also possible to download
+source tarballs for all components.
 
 **********************
 Debian/Ubuntu packages
@@ -19,7 +20,7 @@ Debian
 ======
 
 FEniCS is included as part of Debian GNU/Linux
-(testing/squeeze and unstable/sid). To install, simply click `here <apt://fenics>`_
+(squeeze/testing and sid/unstable). To install, simply click `here <apt://fenics>`_
 (requires ``aptlinex``). FEniCS can also be installed by running the
 following command::
 
@@ -79,19 +80,18 @@ and their requisite dependencies on Unix-like operating systems.
 
 The following platforms are officially supported by Dorsal:
 
-* Debian GNU/Linux testing, unstable
+* Debian GNU/Linux (squeeze/testing, sid/unstable)
 * Fedora 13
 * Gentoo (and Sabayon) Linux
 * Mac OS X (Snow Leopard)
 * openSUSE 11.3
 * Red Hat Enterprise Linux 6
-* Ubuntu 9.10, 10.04 LTS, 10.10
 * Ubuntu (10.04/Lucid and 10.10/Maverick)
 
 A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
-know if you are interested, and we can work together toward adding
-this functionality.
+know if you are interested, and we can work together towards supporting
+your platform.
 
 In order to install FEniCS using Dorsal, simply follow these steps:
 
@@ -148,13 +148,15 @@ Python packages (FFC, FIAT, Instant, Viper and UFL)
 
 This will install the packages system wide on your computer. You may
 easily change the installation directory. For example, you may wish to
-install the packages in a directory named ``local`` in you home
+install the packages in a directory named ``local`` in your home
 directory. This may be accomplished by running the following command::
 
     sudo python setup.py install --prefix=~/local
 
-C++/Python packages (UFC and DOLFIN)
+C++/Python packages (DOLFIN and UFC)
 ====================================================
+
+Building and installing DOLFIN and UFC requires CMake version >= 2.8.
 
 #. First, `download the source code`_
    for UFC and DOLFIN. Then for each of these packages, follow the
@@ -168,7 +170,7 @@ C++/Python packages (UFC and DOLFIN)
 
 This will install the packages system wide on your computer. You may
 easily change the installation directory. For example, you may wish to
-install the packages in a directory named ``local`` in you home
+install the packages in a directory named ``local`` in your home
 directory. This may be accomplished by replacing the first of the
 above commands by the following command::
 
@@ -183,7 +185,9 @@ During the configuration phase of DOLFIN (calling ``cmake``,
 dependencies. If a required package is missing, you will need to
 install that package and configure DOLFIN again. If an optional
 package is missing, you may choose to continue with the installation
-but some functionality may be missing.
+but some functionality may be missing. The build system will list both
+found and missing optional dependencies at the end of the configuration
+process.
 
 ***************
 Troubleshooting
@@ -203,11 +207,10 @@ causes the problem:
 * `UFC <https://answers.launchpad.net/ufc>`__
 * `UFL <https://answers.launchpad.net/ufl>`__
 
-If all else fails, you can always try the fenics@lists.launchpad.net
+If all else fails, send a message to the fenics@lists.launchpad.net
 mailing list.
 
 If you have suggestions for improving the information found on this
 page with respect to the installation procedure of FEniCS, you are
 more than welcome to file a bug report or register a blueprint on
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
-
