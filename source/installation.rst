@@ -72,7 +72,7 @@ Automated installation using Dorsal
 
 If you are not running a Debian or Ubuntu operating system, you need
 to download and compile FEniCS and all its dependencies. Luckily, this
-can be handled easily using `Dorsal <http://www.fenics.org/dorsal>`_.
+can be handled easily using `Dorsal`_.
 Dorsal is a simple shell script that automates the process of
 fetching, compiling, and installing the various FEniCS sub-projects
 and their requisite dependencies on Unix-like operating systems.
@@ -156,7 +156,7 @@ directory. This may be accomplished by running the following command::
 C++/Python packages (UFC and DOLFIN)
 ====================================================
 
-#. First, `download the source code <http://www.fenics.org/download">`_
+#. First, `download the source code`_
    for UFC and DOLFIN. Then for each of these packages, follow the
    instructions below.
 #. Uncompress the archive to a convenient location.
@@ -194,14 +194,14 @@ FEniCS component, the best place to start is the `Launchpad Answers
 <https://help.launchpad.net/Answers>`_ page for the project which
 causes the problem:
 
-* `DOLFIN <https://answers.launchpad.net/dolfin>`_
-* `Dorsal <https://answers.launchpad.net/dorsal>`_
-* `FFC <https://answers.launchpad.net/ffc>`_
-* `FIAT <https://answers.launchpad.net/fiat>`_
-* `Instant <https://answers.launchpad.net/instant>`_
-* `Viper <https://answers.launchpad.net/fenics-viper>`_
-* `UFC <https://answers.launchpad.net/ufc>`_
-* `UFL <https://answers.launchpad.net/ufl>`_
+* `DOLFIN <http://answers.launchpad.net/dolfin>__
+* `Dorsal <https://answers.launchpad.net/dorsal>`__
+* `FFC <https://answers.launchpad.net/ffc>`__
+* `FIAT <https://answers.launchpad.net/fiat>`__
+* `Instant <https://answers.launchpad.net/instant>`__
+* `Viper <https://answers.launchpad.net/fenics-viper>`__
+* `UFC <https://answers.launchpad.net/ufc>`__
+* `UFL <https://answers.launchpad.net/ufl>`__
 
 If all else fails, you can always try the fenics@lists.launchpad.net
 mailing list.
