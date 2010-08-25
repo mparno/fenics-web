@@ -6,43 +6,76 @@
 Developer information
 #####################
 
+This page contains information for FEniCS developers, including an
+overview of the organization of the FEniCS project, how to use
+Launchpad and Bazaar, and how to write code and documentation.
 
-*****************************
-Helping out through Launchpad
-*****************************
+************
+Organization
+************
 
-FEniCS uses `Launchpad <https://launchpad.net/>`_ for answering user
-questions, mailing lists, specification tracking via blueprints, bug
-tracking, and code hosting.
+FEniCS is organized as a collection of interoperable components that
+together form the FEniCS Project. Each component is developed by one
+or more authors. This means that each component can be developed at
+its own pace, but we strive to make periodic and coordinated releases
+of all components to ensure interoperability between the components.
 
-There are several ways to contribute to the FEniCS Project. The
-easiest way is to simply use the software and give feedback about the
-experience on the appropriate mailing list. However, since there are
-still plenty of things left to be done, we encourage users to take
-more active part in developing software and writing documentation.  As
-an active developer, it is also easier to influence the direction and
-focus of the project. The step from user to developer is just a patch
-away.
+Initially, FEniCS consisted of just two components (DOLFIN and FIAT)
+but over time, several new components have been added to FEniCS which
+now consists of more than 10 individual components. Some of these
+components (like FIAT and UFC) have matured and remain stable, while
+others are changing at a faster pace. Currently, most development
+takes place in DOLFIN, the C++ and Python interface of FEniCS.
 
-This page contains information for FEniCS developers.  FEniCS development
-tools are hosted Launchpad. This page explains how to obtain source
-code from `Launchpad <https://launchpad.net/>`_, subscribe to developer
-mailing lists and take part in the development of FEniCS. An overview
-of all FEniCS projects on Launchpad can be found
+***************
+Using Launchpad
+***************
+
+The FEniCS Project uses `Launchpad <http://www.launchpad.net>`_ as the
+main development platform.
+
+Each component of FEniCS is registered as a project on Launchpad and
+each project is connected to a pair of teams. The first team consists
+of developers and users interested in the development of the
+project. This team is open to everyone and has a mailing list where
+the development of the project is discussed. The second team (the core
+team) manages the project and has write-access to the source code.
+
+The first thing a prospective developer needs to do is therefore to
+register an account on Launchpad and add herself/himself to the
+relevant project teams. Membership to core teams is only granted after
+a developer has proven reliable by committing a significant number of
+high quality contributions.
+
+An overview of all FEniCS projects on Launchpad can be found
 `here <https://launchpad.net/fenics-project>`_.
+`Launchpad pages <launchpad_pages.html>`_ also contains a collection of links to
+important Launchpad pages for the various FEniCS components.
+
+Below, we describe how Launchpad is used to handle user questions, bug
+reports, blueprints, and code hosting.
+
+User questions
+==============
+
+User questions are discussed `here <help_answers>`_. Developers should
+make sure to join the relevant team for each component so that they
+will be notified about new user questions.
+
+Bug reports
+===========
+
+Bug reports are discussed `here <help_bugs>`_. Developers should make
+sure to join the relevant team for each component so that they will be
+notified about new bugs.
 
 Blueprints
 ==========
 
-As a user you might sometimes be missing features which could make
-your own code more efficient or simplify the way you solve problems
-with FEniCS. A missing feature could prevent you from solving the
-problem that you want, or maybe you have found a better way of
-implementing a current feature. FEniCS uses `Blueprints
-<https://help.launchpad.net/Blueprint>`_ to keep track of the
-specifications for new features. However, before adding a new
-blueprint it is a good idea to first discuss the design on the
-relevant mailing list.
+FEniCS uses `blueprints <https://help.launchpad.net/Blueprint>`_ to
+keep track of the specifications for new features. However, before
+adding a new blueprint it is a good idea to first discuss the design
+on the relevant mailing list.
 
 `FEniCS blueprints <https://blueprints.launchpad.net/fenics>`_ is the
 place for general FEniCS blueprints and `DOLFIN blueprints
@@ -52,78 +85,28 @@ blueprints regarding the FEniCS user interface DOLFIN.
 `Launchpad pages <launchpad_pages.html>`_ contains a collection of
 links to the blueprint pages for all FEniCS components.
 
-**********************************
-Organization of FEniCS development
-**********************************
+Code hosting
+============
 
-FEniCS is organized as a collection of interoperable components that
-together form the FEniCS Project. Each project is registered as a project
-on Launchpad and each project is connected to a pair of teams. The first
-project team consists of developers and users interested in the development
-of the project. This team is open to everyone and has a mailing list where
-the development of the project is discussed. The second team (the core team)
-manages the project and has write-access to the source code.
+FEniCS uses Launchpad for hosting code. The code is stored in a
+`Bazaar <http://bazaar.canonical.com/en/>`_ repository. Each FEniCS
+component has a Bazaar repository on Launchpad that contains all
+source code (including the entire development history) for the
+component. The repository is readable for everyone but write access is
+only granted to the members of the core team for each component.
 
-********************************
-Getting the development versions
-********************************
-
-The source code of all FEniCS projects can be obtained directly from Launchpad
-using Bazaar, the version control system used by FEniCS. To get the source
-code for a FEniCS project, simply do
-
-.. code-block:: sh
-
-    bzr branch lp:project-name
-
-For example, to obtain the source code for DOLFIN, run the command
-
-.. code-block:: sh
-
-    bzr branch lp:dolfin
-
-*************
-Mailing lists
-*************
-
-To subscribe to the mailing list for a project, you must first join the project
-team. The project teams are open to everyone. To join a project, visit the
-project team page and click "Join the team" in the top right corner. You may
-then click the link "Subscribe to mailing list" in the bottom left corner
-of the project team page.
-
-A link to the project team page can be found in the table below.
-
-Note that mailing lists do not automatically receive bug reports and
-notifications of branch changes (commit logs). See below for instructions
-on how to subscribe to bug reports and branch changes.
-
-Note also that core team members are automatically subscribed to bug mail and
-branch notifications, but not to mailing lists so developers must manually
-subscribe to the project mailing list.
-
-**************************
-Subscribing to bug reports
-**************************
-
-To subscribe to bug reports for a project, visit the main Launchpad page of
-the project and click the link "Subscribe to bug mail" in the top right corner.
-
-*****************************
-Subscribing to branch changes
-*****************************
-
-To subscribe to branch changes for a project, visit the main Launchpad
-page of the project and click the link "Branches" in the top menu. Then
-click on the branch (lp::foo) in the list and finally "Subscribe yourself"
-in the top right corner.
+Developers should subscribe to notifications of changes made to the
+the source code by visiting the repository on Launchpad and clicking
+the subscribe button.
 
 ************
 Using Bazaar
 ************
 
-A quick reference for using Bazaar can be found
-`here <http://doc.bazaar-vcs.org/bzr.2.0/en/quick-reference/index.html>`_.
+A quick reference for using Bazaar can be found `here
+<http://doc.bazaar-vcs.org/bzr.2.0/en/quick-reference/index.html>`_.
+Below follows a few useful commands for Bazaar.
+
 To set your identity with Bazaar, type
 
 .. code-block:: sh
@@ -134,13 +117,7 @@ To create a new branch (similar to hg clone):
 
 .. code-block:: sh
 
-    bzr branch address-to-original-branch [address-to-new-branch]
-
-To branch a project hosted by Launchpad:
-
-.. code-block:: sh
-
-    bzr branch lp:project-name
+    bzr branch <address-to-original-branch> [address-to-new-branch]
 
 To commit a change:
 
@@ -152,90 +129,43 @@ To push changes:
 
 .. code-block:: sh
 
-    bzr push [address-to-branch]
+    bzr push <address-to-branch>
 
 To pull changes:
 
 .. code-block:: sh
 
-    bzr pull [address-to-branch]
+    bzr pull <address-to-branch>
 
+The current development version of each FEniCS component can be
+obtained directly using a special shortcut available in Bazaar for
+code hosted on Launchpad:
 
+.. code-block:: sh
 
- The main repository, or branch, of for instance
-DOLFIN is owned by the `DOLFIN Core Team
-<https://launchpad.net/~dolfin-core>`_ which is a restricted team.
-Therefore, unless you are a member of the core team, you will not be
-able to upload any code to the main repository directly. Instead you
-will have to submit a :ref:`patch <contributing_patches>` or create
-your own :ref:`branch <contributing_branches>` which will be merged
-into the main branch by a member of the core team (if accepted).
+    bzr branch lp:<project-name>
 
-.. note::
+Thus, one may create a branch of the main DOLFIN repository by running
+the following command:
 
-    Membership of a core team is usually not granted until you have
-    committed a series of high quality patches/changesets over a
-    longer period of time.
+.. code-block:: sh
 
-Coding style
-------------
+    bzr branch lp:dolfin
 
-The FEniCS user interface DOLFIN is written mainly in C++ while other
-FEniCS components like FFC, FIAT, and UFL are written in Python. To
-streamline the source code and ease the job for maintainers that need
-to read and edit large amounts of code, a style guide for developers
-is useful. The FEniCS coding style for Python code adheres to the
-`PEP-8 style guide <http://www.python.org/dev/peps/pep-0008/>`_
-although it is not strictly enforced.
-:ref:`styleguides_cpp_coding_style` explains in more detail the
-preferred coding style for C++ code.
+*****************
+Contributing code
+*****************
 
-Note that the above style guides are *guides* only, and they can be
-abandoned in certain cases if readability demands it.
+The main repository, or branch, for each FEniCS component is owned by
+the core team of that component. Therefore, unless you are a member of
+the core team, you will not be able to upload any code to the main
+repository directly. Instead you will have to submit a :ref:`patch
+<contributing_patches>` or create your own :ref:`branch
+<contributing_branches>` which will be merged into the main branch by
+a member of the core team (if accepted).
 
-.. _contributing_license:
-
-License
--------
-
-FEniCS components are released under the GNU GPL v2, GNU GPL v3, or
-GNU LGPL v2.1 licenses. Please see the relevant component page on
-Launchpad to find out which license applies to a given
-component. License and author information is put at the top of the
-files which you have modified or added. This information should be
-provided according to the following examples.
-
-For C++ (DOLFIN):
-
-.. code-block:: c++
-
-    // Copyright (C) 2007-2009 Anders Logg.
-    // Licensed under the GNU LGPL Version 2.1.
-    //
-    // Modified by Garth N. Wells, 2007-2008.
-    // Modified by Ola Skavhaug, 2008.
-    //
-    // First added:  2007-01-17
-    // Last changed: 2009-06-22
-
-For ``Python``:
-
-.. code-block:: python
-
-    __author__ = "Anders Logg <logg@simula.no>"
-    __date__ = "2007-02-05"
-    __copyright__ = "Copyright (C) 2007-2010 " + __author__
-    __license__  = "GNU GPL version 3 or any later version"
-
-    # Modified by Kristian B. Oelgaard, 2010.
-    # Modified by Dag Lindbo, 2008.
-    # Modified by Garth N. Wells, 2009.
-    # Last changed: 2010-01-24
-
-.. _contributing_patches:
-
-Patches
--------
+Creating a patch
+================
 
 Usually, for simple bug fixes and minor changes, submitting a patch is
 the simplest method to get code uploaded to the main branch. For
@@ -289,8 +219,8 @@ identical (with ``dolfin`` replaced by the relevant component name).
 
 .. _contributing_branches:
 
-Branches
---------
+Creating a branch
+=================
 
 When implementing new features, described in
 :ref:`contributing_blueprints`, or fixing more involved bugs,
@@ -326,17 +256,68 @@ progress.  Using DOLFIN as an example, simply do the following:
 The procedure for using branches for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
 
+Before committing your work
+===========================
 
+Before committing any contributions, make sure to test the code
+thoroughly. This includes running any unit tests, regression tests
+et. present as part of the code you are modifying.
 
+************
+Writing code
+************
 
-Contributing code
-=================
+Style guides
+============
 
-Finding bugs and drawing up blueprints is a good way to contribute to
-the FEniCS Project. However, at some point those bugs have to be fixed
-and new features need to be implemented which requires that someone
-writes the code. For information about how to contribute code to the
-FEniCS project, see the `<Developer page <developer>`_.
+To streamline the source code and ease the job for maintainers that
+need to read and edit large amounts of code, a style guide for
+developers is useful.
+
+The FEniCS coding style for Python code adheres to the `PEP-8 style
+guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
+strictly enforced.  :ref:`styleguides_cpp_coding_style` explains in
+more detail the preferred coding style for C++ code.
+
+Note that the above style guides are *guides* only, and they can be
+abandoned in certain cases if readability demands it.
+
+Licenses
+========
+
+FEniCS components are released under the GNU GPL v2, GNU GPL v3, or
+GNU LGPL v2.1 licenses. Please see the relevant component page on
+Launchpad to find out which license applies to a given
+component. License and author information is put at the top of the
+files which you have modified or added. This information should be
+provided according to the following examples.
+
+For C++ (DOLFIN):
+
+.. code-block:: c++
+
+    // Copyright (C) 2007-2009 Anders Logg.
+    // Licensed under the GNU LGPL Version 2.1.
+    //
+    // Modified by Garth N. Wells, 2007-2008.
+    // Modified by Ola Skavhaug, 2008.
+    //
+    // First added:  2007-01-17
+    // Last changed: 2009-06-22
+
+For ``Python``:
+
+.. code-block:: python
+
+    __author__ = "Anders Logg <logg@simula.no>"
+    __date__ = "2007-02-05"
+    __copyright__ = "Copyright (C) 2007-2010 " + __author__
+    __license__  = "GNU GPL version 3 or any later version"
+
+    # Modified by Kristian B. Oelgaard, 2010.
+    # Modified by Dag Lindbo, 2008.
+    # Modified by Garth N. Wells, 2009.
+    # Last changed: 2010-01-24
 
 *********************
 Writing documentation
@@ -344,12 +325,10 @@ Writing documentation
 
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_ is a
 component of the FEniCS Project. It is therefore organized and
-maintained using the same framework as all other FEniCS components and
-you can :ref:`contribute <contributing>` in the same way as to any
-other component. FEniCS components and in particular DOLFIN is under
-active development, which means that the documentation needs to be
-continuously updated. Any help to accommodate this is greatly
-appreciated. In particular, we need help to:
+maintained using the same framework as all other FEniCS components.
+FEniCS and in particular DOLFIN are under active development, which
+means that the documentation needs to be continuously updated. Any
+help to accommodate this is greatly appreciated.
 
 The documentation is generated by `Sphinx
 <http://sphinx.pocoo.org/index.html>`_ and uses `reStructuredText
@@ -411,13 +390,13 @@ Python demo <demos_python_pde_poisson>` for good examples.
     Currently, as we're migrating demos from the DOLFIN source tree
     into this documentation, there are many demos that need
     documentation. Please see :ref:`demos_missing_demos` and consider
-    lending a hand to in the blanks.
+    lending a hand to fill in the blanks.
 
 Before committing your work
 ===========================
 
-There are a few simple tests that should be run before committing your work on
-the documentaion:
+There are a few simple tests that should be run before committing your
+work on the documentation:
 
 * Run the script ``test/verify_demo_code_snippets.py`` to test that all code
   snippets in the demos are exact copies of the code available in the source
@@ -426,5 +405,4 @@ the documentaion:
   the documentation is successfully build without warnings
 
 Please fix any errors you might encounter running these scripts even
-if your work did not introduce them or at least notify the mailing
-list fenics@lists.launchpad.net in case you are unable to do so.
+if your work did not introduce them.
