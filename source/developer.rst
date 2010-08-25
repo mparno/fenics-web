@@ -58,16 +58,16 @@ reports, blueprints, and code hosting.
 User questions
 ==============
 
-User questions are discussed `here <help_answers>`_. Developers should
-make sure to join the relevant team for each component so that they
-will be notified about new user questions.
+User questions are discussed on the `Answers <help_answers>`_ pages.
+Developers should make sure to join the relevant team for each component so
+that they will be notified about new user questions.
 
 Bug reports
 ===========
 
-Bug reports are discussed `here <help_bugs>`_. Developers should make
-sure to join the relevant team for each component so that they will be
-notified about new bugs.
+Bug reports are discussed on the `Bugs <help_bugs>`_ pages.
+Developers should make sure to join the relevant team for each component so
+that they will be notified about new bugs.
 
 Blueprints
 ==========
@@ -103,7 +103,7 @@ the subscribe button.
 Using Bazaar
 ************
 
-A quick reference for using Bazaar can be found `here
+Here is a quick reference for `using Bazaar
 <http://doc.bazaar-vcs.org/bzr.2.0/en/quick-reference/index.html>`_.
 Below follows a few useful commands for Bazaar.
 

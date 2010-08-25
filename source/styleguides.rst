@@ -515,7 +515,7 @@ In addition, we want the documentation for the ``Python`` version to be
 available when using FEniCS with the ``Python`` interpreter.
 To achieve this we write all documentation for the ``Python`` version in a
 pseudo module which is an exact replication of the 'real' DOLFIN module and
-then let the :ref:`Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_
+then let the `Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_
 extension handle the rest.
 
 To make matters more concrete let's consider the case of writing documentation
@@ -769,7 +769,7 @@ structure of the DOLFIN source tree (see
 The ``currentmodule`` directive tells Sphinx in which module to find the class
 that should be documented.
 The line ``.. autoclass:: Mesh`` automatically generates documentation for the
-``Mesh`` class and the arguments specifies what information to include.
+``Mesh`` class and the arguments
 
 Appendices
 ^^^^^^^^^^
