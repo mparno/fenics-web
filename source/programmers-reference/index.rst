@@ -3,7 +3,7 @@
 .. _programmers_reference_index:
 
 #############################
-FEniCS Programmer's reference
+FEniCS Programmer's Reference
 #############################
 
 From the Launchpad `blueprint

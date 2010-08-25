@@ -6,29 +6,10 @@
 Installation
 ############
 
-Obtaining and installing FEniCS software has never been easier.
-Packages are available for Debian and Ubuntu users and Dorsal provides a
-framework for custom builds of FEniCS software and dependencies.
-If for some reason you were unable to obtain, build or install a FEniCS
-component, the best place to start is the
-`Launchpad Answers <https://help.launchpad.net/Answers>`_ page for the project
-which cause the problem:
-
-* `DOLFIN <https://answers.launchpad.net/dolfin>`_
-* `Dorsal <https://answers.launchpad.net/dorsal>`__
-* `FFC <https://answers.launchpad.net/ffc>`_
-* `UFC <https://answers.launchpad.net/ufc>`_
-* `UFL <https://answers.launchpad.net/ufl>`_
-
-(Visit the `FEniCS Project <https://launchpad.net/fenics-project>`_ page for a
-complete list of FEniCS components)
-
-If everything else fails you can always try the fenics@lists.launchpad.net
-mailing list.
-If you have suggestions for improving the information found on this page with
-respect to the installation procedure of FEniCS, you are more than welcome to
-file a bug report or register a blueprint on
-`FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
+Obtaining and installing FEniCS has never been easier. Packages are
+available for Debian and Ubuntu users and we provide a framework
+(`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of
+FEniCS on a multitude of platforms.
 
 **********************
 Debian/Ubuntu packages
@@ -37,24 +18,29 @@ Debian/Ubuntu packages
 Debian
 ======
 
-The latest stable FEniCS releases are available in Debian sid. To
-install, simply click `here <apt://fenics>`_ (requires ``aptlinex``) or
-run the following command as root::
+FEniCS is included as part of Debian GNU/Linux
+(unstable/sid). To install, simply click `here <apt://fenics>`_
+(requires ``aptlinex``). FEniCS can also be installed by running the
+following command::
 
-    aptitude install fenics
+    sudo apt-get install fenics
 
 Ubuntu
 ======
 
-FEniCS is available in the official Ubuntu repositories as of Ubuntu
-10.04 (Lucid). Simply click `here <apt://fenics>`_ to install
+FEniCS is included as part of Ubuntu GNU/Linux (starting with
+10.04/Lucid). To install, simply click `here <apt://fenics>`_
 (requires ``apturl``) or install from the Ubuntu Software
 Center. FEniCS can also be installed by running the following
 command::
 
     sudo apt-get install fenics
 
+<<<<<<< TREE
 FEniCS PPA
+=======
+Ubuntu PPA
+>>>>>>> MERGE-SOURCE
 ----------
 
 The official Ubuntu repositories may not always contain the latest
@@ -62,14 +48,14 @@ stable FEniCS releases. To stay current with the latest releases, add
 the `FEniCS Personal Package Archive
 <https://launchpad.net/~fenics/+archive/ppa>`_ (PPA) to your Ubuntu
 system. You can do this by going to **System > Administration >
-Software Sources > Third-Party Software** and click on **Add**. Then
-type in ``ppa:fenics/ppa`` and click on **Add Source** and then
-**Close**. A dialog box should appear, asking whether you'd like to
-update the list of repositories. Select **Reload** to update the
-list. You can then install FEniCS from the Software Center.
+Software Sources > Third-Party Software** and clicking on
+**Add**. Then type in ``ppa:fenics/ppa`` and click on **Add Source**
+and then **Close**. A dialog box should appear, asking whether you'd
+like to update the list of repositories. Select **Reload** to update
+the list. You can then install FEniCS from the Ubuntu Software Center.
 
 Here is a list of commands for installing FEniCS from the FEniCS PPA
-for those preferring the command line:
+for those preferring the command-line:
 
 .. code-block:: sh
 
@@ -81,6 +67,7 @@ for those preferring the command line:
 
     The ``add-apt-repository`` command is not available on older (pre
     9.10) Ubuntu systems. Please see the `FEniCS PPA page
+<<<<<<< TREE
     <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
     these systems.
 
@@ -88,28 +75,30 @@ for those preferring the command line:
 Automated installation using Dorsal
 ***********************************
 
-The easiest way to install FEniCS on a UNIX-like operating environment
-is to use `Dorsal <https://launchpad.net/dorsal>`_.
-Dorsal is a simple shell script that automates the process of fetching,
-compiling and installing the various FEniCS sub-projects and their requisite
-dependencies.
-It currently supports officially the following platforms:
+If you are not running a Debian or Ubuntu operating system, you need
+to download and compile FEniCS and all its dependencies. Luckily, this
+can be handled easily using `Dorsal <http://www.fenics.org/dorsal>`_.
+Dorsal is a simple shell script that automates the process of
+fetching, compiling, and installing the various FEniCS sub-projects
+and their requisite dependencies on Unix-like operating systems.
+
+The following platforms are officially supported by Dorsal:
 
 * Debian GNU/Linux testing, unstable
 * Fedora 13
 * Gentoo (and Sabayon) Linux
-* Mac OS X 10.5, 10.6
+* Mac OS X (Snow Leopard)
 * openSUSE 11.3
 * Red Hat Enterprise Linux 6
 * Ubuntu 9.10, 10.04 LTS, 10.10
+* Ubuntu (10.04/Lucid and 10.10/Maverick)
 
 A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
-know if that you are interested, and we can work together toward
-adding this functionality.
+know if you are interested, and we can work together toward adding
+this functionality.
 
-In order to install the FEniCS project on one of the supported
-platforms listed above, follow the following steps:
+In order to install FEniCS using Dorsal, simply follow these steps:
 
 #. Fetch the most recent version of Dorsal from its
    `download page <https://launchpad.net/dorsal/+download>`_.
@@ -117,85 +106,113 @@ platforms listed above, follow the following steps:
 #. Navigate to this folder and tweak dorsal.cfg to your liking.
 #. Invoke the build script by running::
 
-    $ ./dorsal.sh
+    ./dorsal.sh
 
-#. At this point, Dorsal attempts to guess your operating environment
-   (platform) and provides a list of instructions to ensure your system is
-   ready for installing FEniCS. Go through these carefully, and copy and paste
-   appropriate commands into another terminal window to prepare your system.
-#. Once you've completed these steps, hit enter to begin the installation!
+#. At this point, Dorsal attempts to guess your operating system
+   (platform) and provides a list of instructions to ensure that your
+   system is ready for installing FEniCS. Go through these
+   instructions carefully, and copy and paste appropriate commands
+   into a separate terminal window to prepare your system.
+#. Once you have completed these steps, hit enter to begin the
+   installation!
 
+Once the build starts, you should see a lot of compilation-related
+text scrolling past your screen and eventually end up with a complete,
+up-to-date installation of FEniCS. It will take some time to build all
+the libraries, so be patient.
 
-If all goes according to plan, you should see a lot of
-compilation-related text scroll past your screen and eventually end up
-with a complete, up-to-date installation of various FEniCS projects
-and their corresponding dependencies. It will take some time to build all the
-libraries, so be patient.
-
-Don't forget to follow any post-build instructions before rushing off to try
-the demos!
-
+Don't forget to follow any post-build instructions before rushing off
+to try the demos!
 
 *******************************
 Manual installation from source
 *******************************
 
 You can also build and install FEniCS components manually from the source code.
-Tarballs of all packages can be downloaded from Launchpad:
-
-* `download DOLFIN   <https://launchpad.net/dolfin/+download>`_
-* `download FIAT     <https://launchpad.net/fiat/+download>`_
-* `download FFC      <https://launchpad.net/ffc/+download>`_
-* `download UFC      <https://launchpad.net/ufc/+download>`_
-* `download UFL      <https://launchpad.net/ufl/+download>`_
-* `download Instant  <https://launchpad.net/instant/+download>`_
-* `download Viper    <https://launchpad.net/fenics-viper/+download>`_
+If you wish to  install FEniCS manually you can easily do
+so. You will need to install the Python packages
+`FFC <http://www.fenics.org/ffc>`_,
+`FIAT <http://www.fenics.org/fiat>`_,
+`Viper <http://www.fenics.org/viper>`_, and
+`UFL <http://www.fenics.org/ufl>`_.
+You will also need to install the C++/Python packages
+`UFC <http://www.fenics.org/ufc>`_ and
+`DOLFIN <http://www.fenics.org/dolfin>`_.
+Instructions for how to install these packages are given below.
 
 Python packages (FFC, FIAT, Viper and UFL)
 ==========================================
 
-After extracting a Python-base component, enter the directory and
-for a system wide installation do::
+#. First, `download the source code <http://www.fenics.org/download>`_
+   for FFC, FIAT, Viper, and UFL. Then for each of these packages,
+   follow the instructions below.
+#. Uncompress the archive to a convenient location.
+#. Navigate to this folder and run the following command::
 
-    $ python setup.py install --prefix=<destination>
+    sudo python setup.py install
 
-where <destination> is the desired installation directory. If you have
-root privileges, you can perform a system-wide installation::
+This will install the packages system wide on your computer. You may
+easily change the installation directory. For example, you may wish to
+install the packages in a directory named ``local`` in you home
+directory. This may be accomplished by running the following command::
 
-    $ python setup.py install
+    sudo python setup.py install --prefix=~/local
 
-UFC
-===
+Installation of C++/Python packages (UFC and DOLFIN)
+====================================================
 
-UFC uses CMake for installation. For a simple installation, extract
-the UFC tarball and in the UFC directory do::
+#. First, `download the source code <http://www.fenics.org/download">`_
+   for UFC and DOLFIN. Then for each of these packages, follow the
+   instructions below.
+#. Uncompress the archive to a convenient location.
+#. Navigate to this folder and run the following commands::
 
-    $ cmake -DCMAKE_INSTALL_PREFIX=$INSTALLDIR
+    cmake .
+    make
+    sudo make install
 
-DOLFIN
-======
+This will install the packages system wide on your computer. You may
+easily change the installation directory. For example, you may wish to
+install the packages in a directory named ``local`` in you home
+directory. This may be accomplished by replacing the first of the
+above commands by the following command::
 
-For a system wide installation of the development version of DOLFIN do::
+    cmake . -DCMAKE_INSTALL_PREFIX=~/local
 
-    $ bzr branch lp:dolfin
-    $ cd dolfin
-    $ scons configure <options>
+You may also want to consider using a graphical frontend for Cmake
+like either ``cmake-gui`` or ``ccmake`` which both provide a simple
+way to configure the installation.
 
-Run the command::
+During the configuration phase of DOLFIN (calling ``cmake``,
+``cmake-gui``, or ``ccmake``), you will be notified of any missing
+dependencies. If a required package is missing, you will need to
+install that package and configure DOLFIN again. If an optional
+package is missing, you may choose to continue with the installation
+but some functionality may be missing.
 
-    $ scons configure --help
+***************
+Troubleshooting
+***************
 
-to see available ``<options>``.
-Then build and install DOLFIN by running the commands::
+If for some reason you were unable to obtain, build, or install a
+FEniCS component, the best place to start is the `Launchpad Answers
+<https://help.launchpad.net/Answers>`_ page for the project which
+causes the problem:
 
-    $ scons
-    $ scons install
+* `DOLFIN <https://answers.launchpad.net/dolfin>`_
+* `Dorsal <https://answers.launchpad.net/dorsal>`_
 
-You can also install DOLFIN in the local DOLFIN tree simply by running the
-script::
+* `FFC <https://answers.launchpad.net/ffc>`_
+* `FIAT <https://answers.launchpad.net/fiat>`_
+* `Viper <https://answers.launchpad.net/viper>`_
+* `UFC <https://answers.launchpad.net/ufc>`_
+* `UFL <https://answers.launchpad.net/ufl>`_
 
-    $ ./scons.local
+If all else fails, you can always try the fenics@lists.launchpad.net
+mailing list.
 
-Visit `download DOLFIN <https://launchpad.net/dolfin/+download>`_ to get
-previous stable releases; unpack and install following the above procedure.
-
+If you have suggestions for improving the information found on this
+page with respect to the installation procedure of FEniCS, you are
+more than welcome to file a bug report or register a blueprint on
+`FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
+>>>>>>> MERGE-SOURCE
