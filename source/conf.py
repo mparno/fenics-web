@@ -215,3 +215,7 @@ latex_elements = {'fontpkg': '\usepackage{mathptmx}',
                   'papersize': 'a4',
                   'fontenc': '',
                   'preamble': '\usepackage{amssymb}'}
+
+# Parameters affecting the LaTeX PNGs in the HTML files
+#pngmath_latex_preamble = r'\usepackage{cmbright}'
+#pngmath_dvipng_args = ['-gamma 1.5', '-D 110']
