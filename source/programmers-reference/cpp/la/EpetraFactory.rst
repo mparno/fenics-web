@@ -1,0 +1,53 @@
+.. Documentation for the header file dolfin/la/EpetraFactory.h
+
+.. _programmers_reference_cpp_la_Mesh:
+
+EpetraFactory.h
+===============
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: EpetraFactory
+
+    *Parent class*
+    
+        * :cpp:class:`LinearAlgebraFactory`
+        
+    .. cpp:function:: // Return Epetra Communicator
+                       Epetra_SerialComm& get_serial_comm() const
+    
+        --- EpetraFactory interface
+
+    .. cpp:function:: EpetraKrylovSolver* create_krylov_solver(std::string method,
+                                                               std::string pc) const
+    
+        Create Krylov solver
+
+    .. cpp:function:: EpetraLUSolver* create_lu_solver() const
+    
+        Create LU solver
+
+    .. cpp:function:: EpetraMatrix* create_matrix() const
+    
+        --- LinearAlgebraFactory interface
+        Create empty matrix
+
+    .. cpp:function:: EpetraVector* create_local_vector() const
+    
+        Create empty vector (local)
+
+    .. cpp:function:: EpetraVector* create_vector() const
+    
+        Create empty vector (global)
+
+    .. cpp:function:: SparsityPattern* create_pattern() const
+    
+        Create empty sparsity pattern
+
+    .. cpp:function:: virtual ~EpetraFactory()
+    
+        Destructor
+

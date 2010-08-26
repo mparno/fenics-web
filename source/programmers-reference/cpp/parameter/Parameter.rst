@@ -1,0 +1,352 @@
+.. Documentation for the header file dolfin/parameter/Parameter.h
+
+.. _programmers_reference_cpp_parameter_Mesh:
+
+Parameter.h
+===========
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: Parameter
+
+        Base class for parameters.
+
+    .. cpp:function:: Parameter(std::string key)
+    
+        Create parameter for given key
+
+    .. cpp:function:: std::string description() const
+    
+        Return parameter description
+
+    .. cpp:function:: std::string key() const
+    
+        Return parameter key
+
+    .. cpp:function:: uint access_count() const
+    
+        Return access count (number of times parameter has been accessed)
+
+    .. cpp:function:: uint change_count() const
+    
+        Return change count (number of times parameter has been changed)
+
+    .. cpp:function:: virtual const Parameter& operator= (bool value)
+    
+        Assignment from bool
+
+    .. cpp:function:: virtual const Parameter& operator= (const char* value)
+    
+        Assignment from string
+
+    .. cpp:function:: virtual const Parameter& operator= (double value)
+    
+        Assignment from double
+
+    .. cpp:function:: virtual const Parameter& operator= (int value)
+    
+        Assignment from int
+
+    .. cpp:function:: virtual const Parameter& operator= (real value)
+    
+        Assignment from GMP type
+
+    .. cpp:function:: virtual const Parameter& operator= (std::string value)
+    
+        Assignment from string
+
+    .. cpp:function:: virtual operator bool() const
+    
+        Cast parameter to bool
+
+    .. cpp:function:: virtual operator dolfin::uint() const
+    
+        Cast parameter to uint
+
+    .. cpp:function:: virtual operator double() const
+    
+        Cast parameter to double
+
+    .. cpp:function:: virtual operator int() const
+    
+        Cast parameter to int
+
+    .. cpp:function:: virtual operator std::string() const
+    
+        Cast parameter to string
+
+    .. cpp:function:: virtual real get_real() const
+    
+        Get real value of parameter with (possibly) extended precision
+
+    .. cpp:function:: virtual std::string range_str() const = 0
+    
+        Return range string
+
+    .. cpp:function:: virtual std::string str() const = 0
+    
+        Return short string description
+
+    .. cpp:function:: virtual std::string type_str() const = 0
+    
+        Return value type string
+
+    .. cpp:function:: virtual std::string value_str() const = 0
+    
+        Return value string
+
+    .. cpp:function:: virtual void get_range(int& min_value, int& max_value) const
+    
+        Get range for int-valued parameter
+
+    .. cpp:function:: virtual void get_range(real& min_value, real& max_value) const
+    
+        Get range for double-valued parameter
+
+    .. cpp:function:: virtual void get_range(std::set<std::string>& range) const
+    
+        Get range for string-valued parameter
+
+    .. cpp:function:: virtual void set_range(int min_value, int max_value)
+    
+        Set range for int-valued parameter
+
+    .. cpp:function:: virtual void set_range(real min_value, real max_value)
+    
+        Set range for double-valued parameter
+
+    .. cpp:function:: virtual void set_range(std::set<std::string> range)
+    
+        Set range for string-valued parameter
+
+    .. cpp:function:: virtual ~Parameter()
+    
+        Destructor
+
+.. cpp:class:: IntParameter
+
+    *Parent class*
+    
+        * :cpp:class:`Parameter`
+        
+        Parameter with value type int
+
+    .. cpp:function:: IntParameter(std::string key, int value)
+    
+        Create int-valued parameter
+
+    .. cpp:function:: const IntParameter& operator= (int value)
+    
+        Assignment
+
+    .. cpp:function:: int _min, _max
+    
+        Parameter range
+
+    .. cpp:function:: int _value
+    
+        Parameter value
+
+    .. cpp:function:: operator dolfin::uint() const
+    
+        Cast parameter to uint
+
+    .. cpp:function:: operator int() const
+    
+        Cast parameter to int
+
+    .. cpp:function:: std::string range_str() const
+    
+        Return range string
+
+    .. cpp:function:: std::string str() const
+    
+        Return short string description
+
+    .. cpp:function:: std::string type_str() const
+    
+        Return value type string
+
+    .. cpp:function:: std::string value_str() const
+    
+        Return value string
+
+    .. cpp:function:: void get_range(int &min_value, int &max_value) const
+    
+        Get range
+
+    .. cpp:function:: void set_range(int min_value, int max_value)
+    
+        Set range
+
+    .. cpp:function:: ~IntParameter()
+    
+        Destructor
+
+.. cpp:class:: RealParameter
+
+    *Parent class*
+    
+        * :cpp:class:`Parameter`
+        
+        Parameter with value type double
+
+    .. cpp:function:: RealParameter(std::string key, real value)
+    
+        Create double-valued parameter
+
+    .. cpp:function:: const RealParameter& operator= (double value)
+    
+        Assignment
+
+    .. cpp:function:: operator double() const
+    
+        Cast parameter to double
+
+    .. cpp:function:: real _min, _max
+    
+        Parameter range
+
+    .. cpp:function:: real _value
+    
+        Parameter value
+
+    .. cpp:function:: real get_real() const
+    
+        Get real value (possibly with extended precision)
+
+    .. cpp:function:: std::string range_str() const
+    
+        Return range string
+
+    .. cpp:function:: std::string str() const
+    
+        Return short string description
+
+    .. cpp:function:: std::string type_str() const
+    
+        Return value type string
+
+    .. cpp:function:: std::string value_str() const
+    
+        Return value string
+
+    .. cpp:function:: void get_range(real &min_value, real &max_value) const
+    
+        Get range
+
+    .. cpp:function:: void set_range(real min_value, real max_value)
+    
+        Set range
+
+    .. cpp:function:: ~RealParameter()
+    
+        Destructor
+
+.. cpp:class:: StringParameter
+
+    *Parent class*
+    
+        * :cpp:class:`Parameter`
+        
+        Parameter with value type string
+
+    .. cpp:function:: StringParameter(std::string key, std::string value)
+    
+        Create string-valued parameter
+
+    .. cpp:function:: const StringParameter& operator= (const char* value)
+    
+        Assignment
+
+    .. cpp:function:: const StringParameter& operator= (std::string value)
+    
+        Assignment
+
+    .. cpp:function:: operator std::string() const
+    
+        Cast parameter to string
+
+    .. cpp:function:: std::set<std::string> _range
+    
+        Parameter range
+
+    .. cpp:function:: std::string _value
+    
+        Parameter value
+
+    .. cpp:function:: std::string range_str() const
+    
+        Return range string
+
+    .. cpp:function:: std::string str() const
+    
+        Return short string description
+
+    .. cpp:function:: std::string type_str() const
+    
+        Return value type string
+
+    .. cpp:function:: std::string value_str() const
+    
+        Return value string
+
+    .. cpp:function:: void get_range(std::set<std::string>& range) const
+    
+        Get range
+
+    .. cpp:function:: void set_range(std::set<std::string> range)
+    
+        Set range
+
+    .. cpp:function:: ~StringParameter()
+    
+        Destructor
+
+.. cpp:class:: BoolParameter
+
+    *Parent class*
+    
+        * :cpp:class:`Parameter`
+        
+        Parameter with value type bool
+
+    .. cpp:function:: BoolParameter(std::string key, bool value)
+    
+        Create bool-valued parameter
+
+    .. cpp:function:: bool _value
+    
+        Parameter value
+
+    .. cpp:function:: const BoolParameter& operator= (bool value)
+    
+        Assignment
+
+    .. cpp:function:: operator bool() const
+    
+        Cast parameter to bool
+
+    .. cpp:function:: std::string range_str() const
+    
+        Return range string
+
+    .. cpp:function:: std::string str() const
+    
+        Return short string description
+
+    .. cpp:function:: std::string type_str() const
+    
+        Return value type string
+
+    .. cpp:function:: std::string value_str() const
+    
+        Return value string
+
+    .. cpp:function:: ~BoolParameter()
+    
+        Destructor
+

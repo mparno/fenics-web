@@ -1,0 +1,169 @@
+.. Documentation for the header file dolfin/la/GenericMatrix.h
+
+.. _programmers_reference_cpp_la_Mesh:
+
+GenericMatrix.h
+===============
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: GenericMatrix
+
+    *Parent class*
+    
+        * :cpp:class:`GenericTensor`
+        
+        This class defines a common interface for matrices.
+
+    .. cpp:function:: const GenericMatrix& operator+= (const GenericMatrix& A)
+    
+        Add given matrix
+
+    .. cpp:function:: const GenericMatrix& operator-= (const GenericMatrix& A)
+    
+        Subtract given matrix
+
+    .. cpp:function:: virtual GenericMatrix* copy() const = 0
+    
+        Return copy of tensor
+
+    .. cpp:function:: virtual const GenericMatrix& operator*= (double a) = 0
+    
+        Multiply matrix by given number
+
+    .. cpp:function:: virtual const GenericMatrix& operator/= (double a) = 0
+    
+        Divide matrix by given number
+
+    .. cpp:function:: virtual const GenericMatrix& operator= (const GenericMatrix& x) = 0
+    
+        Assignment operator
+
+    .. cpp:function:: virtual double getitem(std::pair<uint, uint> ij) const
+    
+        Get value of given entry
+
+    .. cpp:function:: virtual double norm(std::string norm_type) const = 0
+    
+        Return norm of matrix
+
+    .. cpp:function:: virtual double operator() (uint i, uint j) const
+    
+        Get value of given entry
+
+    .. cpp:function:: virtual std::string str(bool verbose) const = 0
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: virtual std::tr1::tuple<const std::size_t*, const std::size_t*,
+                                                                                      const double*, int> data() const
+    
+        Return pointers to underlying compresssed row/column storage data
+        For compressed row storage, data = (row_pointer[#rows +1],
+        column_index[#nz], matrix_values[#nz], nz)
+
+    .. cpp:function:: virtual uint rank() const
+    
+        Return tensor rank (number of dimensions)
+
+    .. cpp:function:: virtual uint size(uint dim) const = 0
+    
+        Return size of given dimension
+
+    .. cpp:function:: virtual void add(const double* block, const uint* num_rows,
+                                       const uint * const * rows)
+    
+        Add block of values
+
+    .. cpp:function:: virtual void add(const double* block, uint m, const uint* rows, uint n,
+                                       const uint* cols) = 0
+    
+        Add block of values
+
+    .. cpp:function:: virtual void apply(std::string mode) = 0
+    
+        Finalize assembly of tensor
+
+    .. cpp:function:: virtual void axpy(double a, const GenericMatrix& A,
+                                        bool same_nonzero_pattern) = 0
+    
+        Add multiple of given matrix (AXPY operation)
+
+    .. cpp:function:: virtual void get(double* block, const uint* num_rows,
+                                       const uint * const * rows) const
+    
+        Get block of values
+
+    .. cpp:function:: virtual void get(double* block, uint m, const uint* rows, uint n,
+                                       const uint* cols) const = 0
+    
+        Get block of values
+
+    .. cpp:function:: virtual void getrow(uint row, std::vector<uint>& columns,
+                                          std::vector<double>& values) const = 0
+    
+        Get non-zero values of given row on local process
+
+    .. cpp:function:: virtual void ident(uint m, const uint* rows) = 0
+    
+        Set given rows to identity matrix
+
+    .. cpp:function:: virtual void ident_zeros()
+    
+        Insert one on the diagonal for all zero rows
+
+    .. cpp:function:: virtual void init(const GenericSparsityPattern& sparsity_pattern) = 0
+    
+        Initialize zero tensor using sparsity pattern
+
+    .. cpp:function:: virtual void mult(const GenericVector& x, GenericVector& y) const = 0
+    
+        Matrix-vector product, y = Ax
+
+    .. cpp:function:: virtual void resize(uint M, uint N) = 0
+    
+        Resize matrix to  M x N
+
+    .. cpp:function:: virtual void resize(uint rank, const uint* dims)
+    
+        Resize tensor with given dimensions
+
+    .. cpp:function:: virtual void set(const double* block, const uint* num_rows,
+                                       const uint * const * rows)
+    
+        Set block of values
+
+    .. cpp:function:: virtual void set(const double* block, uint m, const uint* rows, uint n,
+                                       const uint* cols) = 0
+    
+        Set block of values
+
+    .. cpp:function:: virtual void setitem(std::pair<uint, uint> ij, double value)
+    
+        Set given entry to value. apply("insert") should be called before using
+        using the object.
+
+    .. cpp:function:: virtual void setrow(uint row, const std::vector<uint>& columns,
+                                          const std::vector<double>& values) = 0
+    
+        Set values for given row on local process
+
+    .. cpp:function:: virtual void transpmult(const GenericVector& x, GenericVector& y) const = 0
+    
+        Matrix-vector product, y = A^T x
+
+    .. cpp:function:: virtual void zero() = 0
+    
+        Set all entries to zero and keep any sparse structure
+
+    .. cpp:function:: virtual void zero(uint m, const uint* rows) = 0
+    
+        Set given rows to zero
+
+    .. cpp:function:: virtual ~GenericMatrix()
+    
+        Destructor
+

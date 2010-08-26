@@ -1,0 +1,65 @@
+.. Documentation for the header file dolfin/la/GenericSparsityPattern.h
+
+.. _programmers_reference_cpp_la_Mesh:
+
+GenericSparsityPattern.h
+========================
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: GenericSparsityPattern
+
+    *Parent class*
+    
+        * :cpp:class:`Variable`
+        
+        Base class (interface) for generic tensor sparsity patterns.
+        Currently, this interface is mostly limited to matrices.
+
+    .. cpp:function:: GenericSparsityPattern()
+    
+        Create empty sparsity pattern
+
+    .. cpp:function:: virtual std::pair<uint, uint> local_range(uint dim) const = 0
+    
+        Return local range for dimension dim
+
+    .. cpp:function:: virtual uint num_nonzeros() const = 0
+    
+        Return total number of nonzeros in local_range for dimension 0
+
+    .. cpp:function:: virtual uint rank() const = 0
+    
+        Return rank
+
+    .. cpp:function:: virtual uint size(uint i) const = 0
+    
+        Return global size for dimension i
+
+    .. cpp:function:: virtual void apply() = 0
+    
+        Finalize sparsity pattern
+
+    .. cpp:function:: virtual void init(uint rank, const uint* dims) = 0
+    
+        Initialize sparsity pattern for a generic tensor
+
+    .. cpp:function:: virtual void insert(const uint* num_rows, const uint * const * rows) = 0
+    
+        Insert non-zero entries
+
+    .. cpp:function:: virtual void num_nonzeros_diagonal(uint* num_nonzeros) const = 0
+    
+        Fill array with number of nonzeros for diagonal block in local_range for dimension 0
+
+    .. cpp:function:: virtual void num_nonzeros_off_diagonal(uint* num_nonzeros) const = 0
+    
+        Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
+
+    .. cpp:function:: virtual ~GenericSparsityPattern()
+    
+        Destructor
+

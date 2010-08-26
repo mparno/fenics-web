@@ -1,0 +1,54 @@
+.. Documentation for the header file dolfin/la/TrilinosPreconditioner.h
+
+.. _programmers_reference_cpp_la_Mesh:
+
+TrilinosPreconditioner.h
+========================
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: TrilinosPreconditioner
+
+    *Parent class*
+    
+        * :cpp:class:`Variable`
+        
+        This class is a wrapper for configuring Epetra preconditioners. It does
+        not own a preconditioner. It can take a EpetraKrylovSolver and set the
+        preconditioner type and parameters.
+
+    .. cpp:function:: explicit TrilinosPreconditioner(std::string type = "default")
+    
+        Create Krylov solver for a particular method and preconditioner
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
+
+    .. cpp:function:: std::string name() const
+    
+        Return preconditioner name
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: std::string type
+    
+        Named preconditioner
+
+    .. cpp:function:: virtual void set(EpetraKrylovSolver& solver, const EpetraMatrix& P)
+    
+        Set the precondtioner and matrix used in preconditioner
+
+    .. cpp:function:: virtual ~TrilinosPreconditioner()
+    
+        Destructor
+
+    .. cpp:function:: void set_ml(AztecOO& solver, const Epetra_RowMatrix& P)
+    
+        Setup the ML precondtioner
+

@@ -1,0 +1,50 @@
+.. Documentation for the header file dolfin/log/Event.h
+
+.. _programmers_reference_cpp_log_Mesh:
+
+Event.h
+=======
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: Event
+
+        A event is a string message which is displayed
+        only a limited number of times.
+        
+        Example of usage:
+        
+        Event event("System is stiff, damping is needed.");
+        while ()
+        {
+        ...
+        if ( ... )
+        {
+        event();
+        ...
+        }
+        }
+
+    .. cpp:function:: Event(const std::string msg, unsigned int maxcount = 1)
+    
+        Constructor
+
+    .. cpp:function:: unsigned int count() const
+    
+        Display count
+
+    .. cpp:function:: unsigned int maxcount() const
+    
+        Maximum display count
+
+    .. cpp:function:: void operator() ()
+    
+        Display message
+
+    .. cpp:function:: ~Event()
+    
+        Destructor
+

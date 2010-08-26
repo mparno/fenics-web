@@ -1,0 +1,71 @@
+.. Documentation for the header file dolfin/mesh/DynamicMeshEditor.h
+
+.. _programmers_reference_cpp_mesh_Mesh:
+
+DynamicMeshEditor.h
+===================
+
+.. note::
+
+    The documentation on this page was automatically extracted from
+    the DOLFIN C++ code and needs to be edited and expanded.
+
+.. cpp:class:: DynamicMeshEditor
+
+        This class provides an interface for dynamic editing of meshes,
+        that is, when the number of vertices and cells are not known
+        a priori. If the number of vertices and cells are known a priori,
+        it is more efficient to use the default editor MeshEditor.
+
+    .. cpp:function:: DynamicMeshEditor()
+    
+        Constructor
+
+    .. cpp:function:: void add_cell(uint c, const std::vector<uint>& v)
+    
+        Add cell with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1)
+    
+        Add cell (interval) with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2)
+    
+        Add cell (triangle) with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2, uint v3)
+    
+        Add cell (tetrahedron) with given vertices
+
+    .. cpp:function:: void add_vertex(uint v, const Point& p)
+    
+        Add vertex v at given point p
+
+    .. cpp:function:: void add_vertex(uint v, double x)
+    
+        Add vertex v at given coordinate x
+
+    .. cpp:function:: void add_vertex(uint v, double x, double y)
+    
+        Add vertex v at given coordinate (x, y)
+
+    .. cpp:function:: void add_vertex(uint v, double x, double y, double z)
+    
+        Add vertex v at given coordinate (x, y, z)
+
+    .. cpp:function:: void close(bool order=false)
+    
+        Close mesh, finish editing, and order entities locally
+
+    .. cpp:function:: void open(Mesh& mesh, CellType::Type type, uint tdim, uint gdim)
+    
+        Open mesh of given cell type, topological and geometrical dimension
+
+    .. cpp:function:: void open(Mesh& mesh, std::string type, uint tdim, uint gdim)
+    
+        Open mesh of given cell type, topological and geometrical dimension
+
+    .. cpp:function:: ~DynamicMeshEditor()
+    
+        Destructor
+
