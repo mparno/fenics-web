@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/quadrature/Quadrature.h
 
-.. _programmers_reference_cpp_quadrature_Mesh:
+.. _programmers_reference_cpp_quadrature_quadrature:
 
 Quadrature.h
 ============

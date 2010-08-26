@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/io/File.h
 
-.. _programmers_reference_cpp_io_Mesh:
+.. _programmers_reference_cpp_io_file:
 
 File.h
 ======

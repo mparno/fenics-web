@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/common/types.h
 
-.. _programmers_reference_cpp_common_Mesh:
+.. _programmers_reference_cpp_common_types:
 
 types.h
 =======

@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/GenericTensor.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_generictensor:
 
 GenericTensor.h
 ===============

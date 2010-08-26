@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/math/Legendre.h
 
-.. _programmers_reference_cpp_math_Mesh:
+.. _programmers_reference_cpp_math_legendre:
 
 Legendre.h
 ==========

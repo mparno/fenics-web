@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/adaptivity/TimeSeries.h
 
-.. _programmers_reference_cpp_adaptivity_Mesh:
+.. _programmers_reference_cpp_adaptivity_timeseries:
 
 TimeSeries.h
 ============

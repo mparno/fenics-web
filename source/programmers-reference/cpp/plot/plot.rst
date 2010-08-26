@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/plot/plot.h
 
-.. _programmers_reference_cpp_plot_Mesh:
+.. _programmers_reference_cpp_plot_plot:
 
 plot.h
 ======

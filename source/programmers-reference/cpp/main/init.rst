@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/main/init.h
 
-.. _programmers_reference_cpp_main_Mesh:
+.. _programmers_reference_cpp_main_init:
 
 init.h
 ======

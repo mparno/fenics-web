@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/LinearAlgebraFactory.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_linearalgebrafactory:
 
 LinearAlgebraFactory.h
 ======================

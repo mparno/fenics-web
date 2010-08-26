@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/Scalar.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_scalar:
 
 Scalar.h
 ========

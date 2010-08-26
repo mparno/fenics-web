@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/mesh/UnitInterval.h
 
-.. _programmers_reference_cpp_mesh_Mesh:
+.. _programmers_reference_cpp_mesh_unitinterval:
 
 UnitInterval.h
 ==============

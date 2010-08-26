@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/ode/ComplexODE.h
 
-.. _programmers_reference_cpp_ode_Mesh:
+.. _programmers_reference_cpp_ode_complexode:
 
 ComplexODE.h
 ============

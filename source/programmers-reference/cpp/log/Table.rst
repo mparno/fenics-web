@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/log/Table.h
 
-.. _programmers_reference_cpp_log_Mesh:
+.. _programmers_reference_cpp_log_table:
 
 Table.h
 =======

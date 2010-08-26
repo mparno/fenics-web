@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/ode/StabilityAnalysis.h
 
-.. _programmers_reference_cpp_ode_Mesh:
+.. _programmers_reference_cpp_ode_stabilityanalysis:
 
 StabilityAnalysis.h
 ===================

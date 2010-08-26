@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/nls/NewtonSolver.h
 
-.. _programmers_reference_cpp_nls_Mesh:
+.. _programmers_reference_cpp_nls_newtonsolver:
 
 NewtonSolver.h
 ==============

@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/GenericLUSolver.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_genericlusolver:
 
 GenericLUSolver.h
 =================

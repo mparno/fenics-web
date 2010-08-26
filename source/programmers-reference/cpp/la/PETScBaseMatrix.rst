@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/PETScBaseMatrix.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_petscbasematrix:
 
 PETScBaseMatrix.h
 =================

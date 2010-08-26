@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/uBLASVector.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_ublasvector:
 
 uBLASVector.h
 =============

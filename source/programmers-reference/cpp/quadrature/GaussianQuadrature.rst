@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/quadrature/GaussianQuadrature.h
 
-.. _programmers_reference_cpp_quadrature_Mesh:
+.. _programmers_reference_cpp_quadrature_gaussianquadrature:
 
 GaussianQuadrature.h
 ====================

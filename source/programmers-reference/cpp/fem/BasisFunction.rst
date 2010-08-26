@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/fem/BasisFunction.h
 
-.. _programmers_reference_cpp_fem_Mesh:
+.. _programmers_reference_cpp_fem_basisfunction:
 
 BasisFunction.h
 ===============

@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/log/Progress.h
 
-.. _programmers_reference_cpp_log_Mesh:
+.. _programmers_reference_cpp_log_progress:
 
 Progress.h
 ==========

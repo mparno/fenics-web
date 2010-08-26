@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/function/FunctionSpace.h
 
-.. _programmers_reference_cpp_function_Mesh:
+.. _programmers_reference_cpp_function_functionspace:
 
 FunctionSpace.h
 ===============

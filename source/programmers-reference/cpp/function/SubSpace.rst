@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/function/SubSpace.h
 
-.. _programmers_reference_cpp_function_Mesh:
+.. _programmers_reference_cpp_function_subspace:
 
 SubSpace.h
 ==========

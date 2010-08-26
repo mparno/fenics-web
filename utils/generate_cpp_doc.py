@@ -129,7 +129,8 @@ def write_documentation(documentation, filename, module):
         pass
 
     # Set location of documentation
-    rstfile = filename.split(".")[0] + ".rst"
+    prefix = filename.split(".")[0]
+    rstfile = prefix + ".rst"
     outfile = os.path.join(directory, rstfile)
 
     # Check that it is ok to overwrite the output file
@@ -148,7 +149,7 @@ def write_documentation(documentation, filename, module):
     # Write top of file
     f.write(".. Documentation for the header file dolfin/%s/%s\n" % (module, filename))
     f.write("\n")
-    f.write(".. _programmers_reference_cpp_%s_Mesh:\n" % module)
+    f.write(".. _programmers_reference_cpp_%s_%s:\n" % (module, prefix.lower()))
     f.write("\n")
     f.write(filename + "\n")
     f.write(len(filename)*"=" + "\n")

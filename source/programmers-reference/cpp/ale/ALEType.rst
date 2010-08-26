@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/ale/ALEType.h
 
-.. _programmers_reference_cpp_ale_Mesh:
+.. _programmers_reference_cpp_ale_aletype:
 
 ALEType.h
 =========

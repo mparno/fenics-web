@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/CholmodCholeskySolver.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_cholmodcholeskysolver:
 
 CholmodCholeskySolver.h
 =======================

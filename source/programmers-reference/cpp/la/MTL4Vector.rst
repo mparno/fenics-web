@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/MTL4Vector.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_mtl4vector:
 
 MTL4Vector.h
 ============

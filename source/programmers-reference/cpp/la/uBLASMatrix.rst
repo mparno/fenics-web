@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/uBLASMatrix.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_ublasmatrix:
 
 uBLASMatrix.h
 =============

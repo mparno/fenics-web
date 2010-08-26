@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/common/Timer.h
 
-.. _programmers_reference_cpp_common_Mesh:
+.. _programmers_reference_cpp_common_timer:
 
 Timer.h
 =======

@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/log/LogStream.h
 
-.. _programmers_reference_cpp_log_Mesh:
+.. _programmers_reference_cpp_log_logstream:
 
 LogStream.h
 ===========

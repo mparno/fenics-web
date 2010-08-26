@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/main/MPI.h
 
-.. _programmers_reference_cpp_main_Mesh:
+.. _programmers_reference_cpp_main_mpi:
 
 MPI.h
 =====

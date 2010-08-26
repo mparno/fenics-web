@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/parameter/GlobalParameters.h
 
-.. _programmers_reference_cpp_parameter_Mesh:
+.. _programmers_reference_cpp_parameter_globalparameters:
 
 GlobalParameters.h
 ==================

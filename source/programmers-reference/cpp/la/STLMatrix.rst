@@ -1,6 +1,6 @@
 .. Documentation for the header file dolfin/la/STLMatrix.h
 
-.. _programmers_reference_cpp_la_Mesh:
+.. _programmers_reference_cpp_la_stlmatrix:
 
 STLMatrix.h
 ===========
