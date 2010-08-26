@@ -307,14 +307,14 @@ This makes it easier to spot which functions are virtual.
 Use of libraries
 ----------------
 
-Prefer ``C++`` strings and streams over old ``C``-style ``char*``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Prefer C++ strings and streams over old C-style ``char*``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``std::string`` instead of ``const char*`` and use ``std::istream`` and
 ``std::ostream`` instead of ``FILE``. Avoid ``printf``,
 ``sprintf`` and other C functions.
 
-There are some exceptions to this rule where we need to use old ``C``-style
+There are some exceptions to this rule where we need to use old C-style
 function calls. One such exception is handling of command-line arguments
 (``char* argv[]``).
 
@@ -342,7 +342,7 @@ Code layout
 
 Use spaces instead of tabs for indentation.
 
-Use 4 spaces per indentation level. This does not apply to ``C++`` code
+Use 4 spaces per indentation level. This does not apply to C++ code
 examples (DOLFIN) where the 2 space indentation rule apply.
 See :ref:`C++ indentation <styleguides_cpp_coding_style_indentation>`.
 
@@ -383,13 +383,13 @@ to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
 
     It refers to the section itself, see :ref:`my-reference-label`.
 
-For this to work properly, the label names **must** be unique in the entire
-documentation source.  To ensure this, the label names should begin with
-the path to the file where the label is located relative to the source
-directory. As an example the label for the ``C++`` version of the Poisson
-demo which is located at the top of the ``demos/cpp/pde/poisson/poisson.rst``
-file should be given the name ``demos_cpp_pde_poisson`` while the label to
-this sub section is:
+For this to work properly, the label names **must** be unique in the
+entire documentation source.  To ensure this, the label names should
+begin with the path to the file where the label is located relative to
+the source directory. As an example the label for the C++ version of
+the Poisson demo which is located at the top of the
+``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
+``demos_cpp_pde_poisson`` while the label to this sub section is:
 
 .. code-block:: rest
 
@@ -409,7 +409,7 @@ Code snippets
 The FEniCS documentation makes heavy use of code snippets to illustrate how the
 interfaces work. Code snippets are created using the ``code-block`` directive
 (see `showing code examples <http://sphinx.pocoo.org/markup/code.html>`_
-for more details) which make it possible to show ``C++`` and ``Python`` code
+for more details) which make it possible to show C++ and Python code
 snippets in the the following way:
 
 .. code-block:: rest
@@ -518,14 +518,14 @@ issue as quickly as possible to keep the documentation in good shape.
 Documenting the FEniCS interface (programmer's reference)
 ---------------------------------------------------------
 
-This short guide explains how to write documentation for the ``C++`` and
-``Python`` interfaces to FEniCS.
-Since the ``Python`` interface is (partially) generated automatically using
-Swig from the ``C++`` implementation of DOLFIN the directory/file structure of
-the documentation follows that of the ``C++`` version of DOLFIN.
-In addition, we want the documentation for the ``Python`` version to be
-available when using FEniCS with the ``Python`` interpreter.
-To achieve this we write all documentation for the ``Python`` version in a
+This short guide explains how to write documentation for the C++ and
+Python interfaces to FEniCS.
+Since the Python interface is (partially) generated automatically using
+Swig from the C++ implementation of DOLFIN the directory/file structure of
+the documentation follows that of the C++ version of DOLFIN.
+In addition, we want the documentation for the Python version to be
+available when using FEniCS with the Python interpreter.
+To achieve this we write all documentation for the Python version in a
 pseudo module which is an exact replication of the 'real' DOLFIN module and
 then let the `Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_
 extension handle the rest.
@@ -557,13 +557,13 @@ General remarks
 
 To handle the documentation of two different languages in Sphinx we use
 `Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to distinguish between
-classes and functions belonging to the ``C++`` and ``Python`` interfaces.
+classes and functions belonging to the C++ and Python interfaces.
 
 Since Spinx does not allow sections in the markup for class/function
 documentation we use *italics* (``*italics*``) and definition lists to group
 information.
 The idea is to keep the markup as simple as possible since the reST source for
-the ``Python`` documentation of classes and functions will be used 'as is' in
+the Python documentation of classes and functions will be used 'as is' in
 the docstrings of the DOLFIN module.
 
 Most information can be put in the three sections:
@@ -604,18 +604,18 @@ Links to demos which use the feature being documented should be put in a
 ``seealso`` directive.
 
 The member functions of a class should be sorted alphabetically for the
-``C++`` version.
+C++ version.
 When using autodoc, Sphinx will sort the member functions automatically for the
-``Python`` module.
+Python module.
 
-``C++`` interface
+C++ interface
 ^^^^^^^^^^^^^^^^^
 
 The code snippets presented in the following can be seen in their complete
 form and context by clicking on ``Show Source`` link on the page containing
-the ``C++`` documentation for the :cpp:class:`Mesh` class.
+the C++ documentation for the :cpp:class:`Mesh` class.
 
-The ``C++`` documentation for the ``Mesh`` class is added to the
+The C++ documentation for the ``Mesh`` class is added to the
 ``programmers-reference/cpp/mesh/Mesh.rst`` file.
 
 Defining the class
@@ -647,7 +647,7 @@ The ``Mesh`` class is defined by the Sphinx directive ``cpp:class::`` followed
 by the name of the class.
 Since the ``Mesh`` class derives from the ``Variable`` class we list all parent
 classes explicitly where the line ``:cpp:class:`Variable``` will create a link
-to the ``C++`` documentation of the class ``Variable``.
+to the C++ documentation of the class ``Variable``.
 
 .. note::
 
@@ -748,19 +748,19 @@ identical to that found in the ``dolfin/mesh/Mesh.h`` file.
     actual function.
     This behaviour will hopefully change in the future.
 
-``Python`` interface
+Python interface
 ^^^^^^^^^^^^^^^^^^^^
 
 The code snippets presented in the following can be seen in their complete
 form and context by clicking on ``Show Source`` link on the page containing
-the ``Python`` documentation for the :py:class:`dolfin.cpp.Mesh` class and in the
+the Python documentation for the :py:class:`dolfin.cpp.Mesh` class and in the
 :download:`programmers-reference/python/docstrings/dolfin/cpp.py` file which
-contains the actual documentation for the ``Python`` ``Mesh`` class.
+contains the actual documentation for the Python ``Mesh`` class.
 
 Using Sphinx autodoc
 """"""""""""""""""""
 
-To complete the ``Python`` documentation for the ``Mesh`` class, we simply add
+To complete the Python documentation for the ``Mesh`` class, we simply add
 the following to the ``programmers-reference/python/mesh/Mesh.rst`` file:
 
 .. code-block:: rest
@@ -790,7 +790,7 @@ Documentation for the FFC, UFC and UFL components of FEniCS are located in
 the :ref:`appendix <programmers_reference_appendices_index>`.
 The structure of the documentation of a given module depends on the file/class
 layout of the module and the content should be extracted from the docstrings
-as is done for the ``Python`` interface to DOLFIN.
+as is done for the Python interface to DOLFIN.
 The layout of the docstrings should follow the same rules as outlined in the
 above sections.
 
@@ -830,12 +830,12 @@ In our case the Poisson demo is a partial differential equation (PDE), so
 we should add the following files:
 
 ``demos/common/pde/poisson/poisson.txt``
-    put common information is this file and include in the ``C++`` and
-    ``Python`` versions (see :ref:`styleguides_sphinx_common_information`).
+    put common information is this file and include in the C++ and
+    Python versions (see :ref:`styleguides_sphinx_common_information`).
 
 ``demos/cpp/pde/poisson/poisson.rst``
     this file contains the reST source file with the documentation which is
-    specific to the ``C++`` version of the Poisson demo.
+    specific to the C++ version of the Poisson demo.
 
 ``demos/cpp/pde/poisson/main.cpp``
     this file contains the entire source code for the solver and must be made
@@ -852,7 +852,7 @@ we should add the following files:
 
 ``demos/python/pde/poisson/poisson.rst``
     this file contains the reST source file with the documentation which is
-    specific to the ``Python`` version of the Poisson demo.
+    specific to the Python version of the Poisson demo.
 
 ``demos/python/pde/poisson/demo.py``
     this file contains the entire solver writte in PyDOLFIN, and must be made
@@ -871,7 +871,7 @@ documentation.
 Common information
 ^^^^^^^^^^^^^^^^^^
 
-The demo has to be available in a ``C++`` and a ``Python`` version.
+The demo has to be available in a C++ and a Python version.
 However, the summary (describing what features are demonstrated) along with the
 problem and method description are typically identical for both versions.
 It is therefore desirable to put this information in a common source file to
@@ -886,7 +886,7 @@ the relative path to the file:
 
   .. include:: ../../../common/pde/poisson/poisson.txt
 
-``C++`` and ``Python`` specific contents
+C++ and Python specific contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each step of the solution procedure of a demo should be explained. Often this
@@ -916,14 +916,14 @@ As an example, the definition of the Dirichlet boundary is:
       }
     };
 
-for the ``C++`` Poisson demo and
+for the C++ Poisson demo and
 
 .. code-block:: python
 
     def boundary(x):
         return x[0] < DOLFIN_EPS or x[0] > 1.0 - DOLFIN_EPS
 
-for the ``Python`` demo.
+for the Python demo.
 
 Additional information
 ^^^^^^^^^^^^^^^^^^^^^^
