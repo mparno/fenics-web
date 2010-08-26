@@ -1,15 +1,19 @@
-.. Index file for the mesh directory.
+.. Index file for the function directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_function_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+***************************
+DOLFIN ``function`` library
+***************************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    Constant
+    Data
+    Expression
+    Function
+    FunctionSpace
+    GenericFunction
+    SpecialFunctions
+    SubSpace

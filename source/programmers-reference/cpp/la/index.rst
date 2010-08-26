@@ -1,15 +1,67 @@
-.. Index file for the mesh directory.
+.. Index file for the la directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_la_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+*********************
+DOLFIN ``la`` library
+*********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    BlockMatrix
+    BlockVector
+    CholmodCholeskySolver
+    DefaultFactory
+    EpetraFactory
+    EpetraKrylovSolver
+    EpetraLUSolver
+    EpetraMatrix
+    EpetraSparsityPattern
+    EpetraVector
+    GenericLUSolver
+    GenericLinearSolver
+    GenericMatrix
+    GenericSparsityPattern
+    GenericSparsityPattern
+    GenericTensor
+    GenericVector
+    ITLKrylovSolver
+    KrylovSolver
+    LUSolver
+    LinearAlgebraFactory
+    LinearSolver
+    MTL4Factory
+    MTL4Matrix
+    MTL4Vector
+    Matrix
+    PETScBaseMatrix
+    PETScFactory
+    PETScKrylovMatrix
+    PETScKrylovSolver
+    PETScLUSolver
+    PETScMatrix
+    PETScObject
+    PETScPreconditioner
+    PETScUserPreconditioner
+    PETScVector
+    SLEPcEigenSolver
+    STLFactory
+    STLMatrix
+    Scalar
+    SingularSolver
+    SparsityPattern
+    TrilinosPreconditioner
+    UmfpackLUSolver
+    Vector
+    solve
+    uBLASDenseMatrix
+    uBLASFactory
+    uBLASILUPreconditioner
+    uBLASKrylovMatrix
+    uBLASKrylovSolver
+    uBLASMatrix
+    uBLASPreconditioner
+    uBLASSparseMatrix
+    uBLASVector
+    ublas

@@ -1,15 +1,12 @@
-.. Index file for the mesh directory.
+.. Index file for the adaptivity directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_adaptivity_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+*****************************
+DOLFIN ``adaptivity`` library
+*****************************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    TimeSeries

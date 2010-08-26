@@ -1,15 +1,13 @@
-.. Index file for the mesh directory.
+.. Index file for the ale directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_ale_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+**********************
+DOLFIN ``ale`` library
+**********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    ALE
+    ALEType

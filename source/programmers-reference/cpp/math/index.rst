@@ -1,15 +1,14 @@
-.. Index file for the mesh directory.
+.. Index file for the math directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_math_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+***********************
+DOLFIN ``math`` library
+***********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    Lagrange
+    Legendre
+    basic

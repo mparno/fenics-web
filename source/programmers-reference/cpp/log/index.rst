@@ -1,15 +1,16 @@
-.. Index file for the mesh directory.
+.. Index file for the log directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_log_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+**********************
+DOLFIN ``log`` library
+**********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    Event
+    LogStream
+    Progress
+    Table
+    log

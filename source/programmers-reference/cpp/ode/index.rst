@@ -1,15 +1,20 @@
-.. Index file for the mesh directory.
+.. Index file for the ode directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_ode_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+**********************
+DOLFIN ``ode`` library
+**********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    ComplexODE
+    Method
+    ODE
+    ODECollection
+    ODESolution
+    Sample
+    StabilityAnalysis
+    cGqMethod
+    dGqMethod

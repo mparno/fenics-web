@@ -1,15 +1,12 @@
-.. Index file for the mesh directory.
+.. Index file for the io directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_io_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+*********************
+DOLFIN ``io`` library
+*********************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    File

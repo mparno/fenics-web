@@ -1,15 +1,19 @@
-.. Index file for the mesh directory.
+.. Index file for the common directory
 
-.. _programmers_reference_cpp_mesh_index:
+.. _programmers_reference_cpp_common_index:
 
-****
-mesh
-****
-
-This is the index page for files in the directory dolfin/mesh:
+*************************
+DOLFIN ``common`` library
+*************************
 
 .. toctree::
     :maxdepth: 2
 
-    Mesh
-
+    Array
+    Set
+    Timer
+    Variable
+    constants
+    real
+    timing
+    types

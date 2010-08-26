@@ -7,16 +7,24 @@ __license__  = "GNU GPL version 3 or any later version"
 
 import os
 
-def generate_documentation(filename, module, dolfin_dir):
+# Set output directory
+output_dir = os.path.join("source", "programmers-reference", "cpp")
+
+# Set directory for DOLFIN source code
+if not "DOLFIN_DIR" in os.environ:
+    raise RuntimeError, "You need to set the DOLFIN_DIR environment variable."
+dolfin_dir = os.environ["DOLFIN_DIR"]
+
+def generate_documentation(filename, module):
     "Generate documentation for given filename in given module"
 
     # Extract documentation and sort alphabetically
-    documentation = extract_documentation(filename, module, dolfin_dir)
+    documentation = extract_documentation(filename, module)
 
     # Write documentation
     write_documentation(documentation, filename, module)
 
-def extract_documentation(filename, module, dolfin_dir):
+def extract_documentation(filename, module):
     "Extract documentation from given filename in given module"
 
     print "Generating documentation for %s..." % filename
@@ -114,7 +122,7 @@ def write_documentation(documentation, filename, module):
     "Write documentation for given filename and module"
 
     # Create containing directory
-    directory = os.path.join("source", "programmers-reference", "cpp", module)
+    directory = os.path.join(output_dir, module)
     try:
         os.makedirs(directory)
     except:
@@ -195,14 +203,45 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4))
 
     f.close()
 
+def generate_index(module, headers):
+    "Generate index file for module"
+
+    print "Generating index file for module '%s'...'" % module
+
+    # Sort headers
+    headers.sort()
+
+    # Set heading
+    heading = "DOLFIN ``%s`` library" % module
+    stars = len(heading)*"*"
+
+    # Set contents
+    contents = "\n".join(h.split(".h")[0] for h in headers)
+    contents = indent(contents, 4)
+
+    # Write top of file
+    f = open(os.path.join(output_dir, module, "index.rst"), "w")
+    f.write("""\
+.. Index file for the %s directory
+
+.. _programmers_reference_cpp_%s_index:
+
+%s
+%s
+%s
+
+.. toctree::
+    :maxdepth: 2
+
+%s
+""" % (module, module, stars, heading, stars, contents))
+
+    # Close file
+    f.close()
+
 def indent(string, num_spaces):
     "Indent given text block given number of spaces"
     return "\n".join(num_spaces*" " + l for l in string.split("\n"))
-
-# Set directory for DOLFIN source code
-if not "DOLFIN_DIR" in os.environ:
-    raise RuntimeError, "You need to set the DOLFIN_DIR environment variable."
-dolfin_dir = os.environ["DOLFIN_DIR"]
 
 # Extract modules from dolfin.h
 modules = []
@@ -218,11 +257,16 @@ for module in modules:
 
     # Extract header files from dolfin_foo.h
     f = open(os.path.join(dolfin_dir, "dolfin", module, "dolfin_%s.h" % module))
+    headers = []
     for line in f:
 
         # Generate documentation for header file
         if line.startswith("#include <dolfin/"):
             filename = line.split("/")[2].split(">")[0]
-            generate_documentation(filename, module, dolfin_dir)
+            generate_documentation(filename, module)
+            headers.append(filename)
+
+    # Generate index file
+    generate_index(module, headers)
 
     f.close()
