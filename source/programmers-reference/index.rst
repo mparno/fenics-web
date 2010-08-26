@@ -6,46 +6,44 @@
 FEniCS Programmer's Reference
 #############################
 
-From the Launchpad `blueprint
-<https://blueprints.launchpad.net/fenics-doc/+spec/user-manual>`_:
+The FEniCS Programmer's Reference documents the details of the FEniCS
+user interface. The FEniCS user interface is available in two
+different flavors: both as a Python module and as a C++ library.
 
-* The FEniCS User Manual should be hand-written in reST and converted to HTML
-  and PDF using Sphinx.
+Both interfaces are implemented as part of `DOLFIN
+<http://www.fenics.org/dolfin>`_.
 
-* Relevant parts should also be available as docstrings in the Python
-  interface. This should be possible to fix with some clever scripting
-  (assigning to __doc__).
+Python interface
+================
 
-* It should come in two different flavors, C++ and Python. As much as possible,
-  material should be reused between the two.
+To use FEniCS from Python, users need to import functionality from the
+DOLFIN Python module. In the simplest caset, one includes all
+functionality from the Python module named ``dolfin``:
 
-* It should replace the current user manuals for DOLFIN, FFC, UFL and UFC.
+.. code-block:: python
 
-* Emphasis should be on documenting the DOLFIN user interface. Details for FFC,
-  UFL and UFC should be placed in Appendix.
+    from dolfin import *
 
-* It should include numerous small examples (code snippets) that illustrate
-  each function.
+For documentation of the DOLFIN Python module, see the `Python Programmer's Reference <python/index.html>`_.
 
-* It should contain a HOWTO chapter that answers questions like how do I set
-  Neumann boundary conditions, how do I compute norms, how do I compute errors
-  etc.
+C++ interface
+=============
 
-Contents:
+To use FEniCS from C++, users need to include one or more header files
+from the DOLFIN C++ library. In the simplest case, one includes the
+header file ``dolfin.h``, which in turn includes all other DOLFIN
+header files:
 
-.. toctree::
-    :maxdepth: 1
+.. code-block:: c++
 
-    cpp/index
-    python/index
-    appendices/index
+    #include <dolfin.h>
 
-The programmer's references are also available in PDF format, see
-:download:`C++ version<../../build/latex/cpp_programmers_reference.pdf>` or
-:download:`Python version<../../build/latex/python_programmers_reference.pdf>`.
+    using namespace dolfin;
 
-.. note::
+    int main()
+    {
 
-    Build PDFs for FFC, UFC and UFL manuals and link to those too.
+      return 0;
+    }
 
-
+For documentation of the DOLFIN C++ library, see the `C++ Programmer's Reference <cpp/index.html>`_.
