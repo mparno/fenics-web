@@ -327,8 +327,8 @@ strictly enforced.
 
 .. _styleguides_sphinx_coding_style:
 
-Sphinx coding style for FEniCS documentation
-============================================
+Sphinx coding style
+===================
 
 This style guide contains information on how to create documentation for
 FEniCS using the Sphinx documentation tool. The first sections are related
