@@ -256,68 +256,20 @@ progress.  Using DOLFIN as an example, simply do the following:
 The procedure for using branches for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
 
+Style guides
+============
+
+To ease the job for maintainers that will need to read and understand
+your code, read the `coding style guides <styleguides>`_ that explain
+how to format your code so that it matches the coding style used for
+FEniCS.
+
 Before committing your work
 ===========================
 
 Before committing any contributions, make sure to test the code
 thoroughly. This includes running any unit tests, regression tests
 et. present as part of the code you are modifying.
-
-************
-Writing code
-************
-
-Style guides
-============
-
-To streamline the source code and ease the job for maintainers that
-need to read and edit large amounts of code, a style guide for
-developers is useful.
-
-The FEniCS coding style for Python code adheres to the `PEP-8 style
-guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
-strictly enforced.  :ref:`styleguides_cpp_coding_style` explains in
-more detail the preferred coding style for C++ code.
-
-Note that the above style guides are *guides* only, and they can be
-abandoned in certain cases if readability demands it.
-
-Licenses
-========
-
-FEniCS components are released under the GNU GPL v2, GNU GPL v3, or
-GNU LGPL v2.1 licenses. Please see the relevant component page on
-Launchpad to find out which license applies to a given
-component. License and author information is put at the top of the
-files which you have modified or added. This information should be
-provided according to the following examples.
-
-For C++ (DOLFIN):
-
-.. code-block:: c++
-
-    // Copyright (C) 2007-2009 Anders Logg.
-    // Licensed under the GNU LGPL Version 2.1.
-    //
-    // Modified by Garth N. Wells, 2007-2008.
-    // Modified by Ola Skavhaug, 2008.
-    //
-    // First added:  2007-01-17
-    // Last changed: 2009-06-22
-
-For ``Python``:
-
-.. code-block:: python
-
-    __author__ = "Anders Logg <logg@simula.no>"
-    __date__ = "2007-02-05"
-    __copyright__ = "Copyright (C) 2007-2010 " + __author__
-    __license__  = "GNU GPL version 3 or any later version"
-
-    # Modified by Kristian B. Oelgaard, 2010.
-    # Modified by Dag Lindbo, 2008.
-    # Modified by Garth N. Wells, 2009.
-    # Last changed: 2010-01-24
 
 *********************
 Writing documentation

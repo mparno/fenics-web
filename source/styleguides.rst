@@ -1,4 +1,8 @@
-.. Style guides for DOLFIN (C++) and FEniCS documentation (Sphinx).
+.. Style guides for C++, Python, and documentation
+
+
+
+DOLFIN (C++) and FEniCS documentation (Sphinx).
 
 .. _styleguides:
 
@@ -8,8 +12,8 @@ Style guides
 
 .. _styleguides_cpp_coding_style:
 
-``C++`` coding style for DOLFIN
-===============================
+C++ coding style
+================
 
 Naming conventions
 ------------------
@@ -314,6 +318,15 @@ function calls. One such exception is handling of command-line arguments
 (``char* argv[]``).
 
 .. _styleguides_sphinx_coding_style:
+
+
+Python coding style
+===================
+
+The FEniCS coding style for Python code adheres to the `PEP-8 style
+guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
+strictly enforced.  :ref:`styleguides_cpp_coding_style` explains in
+more detail the preferred coding style for C++ code.
 
 Sphinx coding style for FEniCS documentation
 ============================================

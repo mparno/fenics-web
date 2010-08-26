@@ -52,7 +52,7 @@ FEniCS Documentation
         <br/><span class="linkdescr">How to get help</span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="developer.html">Developers</a>
+        <a class="biglink" href="developer.html">Developer information</a>
         <br/><span class="linkdescr">Information for contributors and developers</span>
       </p>
       <p class="biglink">
