@@ -114,7 +114,7 @@ def write_documentation(documentation, filename, module):
     "Write documentation for given filename and module"
 
     # Create containing directory
-    directory = os.path.join("source", "programmers-reference", "test", "cpp", module)
+    directory = os.path.join("source", "programmers-reference", "cpp", module)
     try:
         os.makedirs(directory)
     except:
