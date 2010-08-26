@@ -24,9 +24,9 @@ Mesh.h
     +========+===========+=============+
     | Vertex |  0        |             |
     +--------+-----------+-------------+
-    | Edge   |  1        |             | 
+    | Edge   |  1        |             |
     +--------+-----------+-------------+
-    | Face   |  2        |             | 
+    | Face   |  2        |             |
     +--------+-----------+-------------+
     | Facet  |           |      1      |
     +--------+-----------+-------------+
@@ -377,7 +377,7 @@ Mesh.h
 
     .. cpp:function:: void move(const Function& displacement)
 
-        Move coordinates of mesh according to displacement function. 
+        Move coordinates of mesh according to displacement function.
 
         *Arguments*
             function
