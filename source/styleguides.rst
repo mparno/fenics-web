@@ -668,8 +668,8 @@ to the C++ documentation of the class ``Variable``.
 Then follows a description of the purpose of the ``Mesh`` class before th
 documentation of the member functions.
 
-Construtors
-"""""""""""
+Constructors
+""""""""""""
 
 The constructors are documented as any other member function.
 For the ``Mesh`` class we have two additional constructors besides the empty
