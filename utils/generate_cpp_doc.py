@@ -7,22 +7,20 @@ __license__  = "GNU GPL version 3 or any later version"
 
 import os
 
-dolfin_dir="/home/logg/scratch/src/dolfin-dev"
-
-def generate_documentation(filename, module):
+def generate_documentation(filename, module, dolfin_dir):
     "Generate documentation for given filename in given module"
 
     if not filename == "DirichletBC.h":
         return
 
     # Extract documentation and sort alphabetically
-    documentation = extract_documentation(filename, module)
+    documentation = extract_documentation(filename, module, dolfin_dir)
     documentation.sort()
 
     # Format documentation
     format_documentation(documentation, filename, module)
 
-def extract_documentation(filename, module):
+def extract_documentation(filename, module, dolfin_dir):
     "Extract documentation from given filename in given module"
 
     print "Generating documentation for %s..." % filename
@@ -97,6 +95,11 @@ def indent(string, num_spaces):
     "Indent given text block given number of spaces"
     return "\n".join(num_spaces*" " + l for l in string.split("\n"))
 
+# Set directory for DOLFIN source code
+if not "DOLFIN_DIR" in os.environ:
+    raise RuntimeError, "You need to set the DOLFIN_DIR environment variable."
+dolfin_dir = os.environ["DOLFIN_DIR"]
+
 # Extract modules from dolfin.h
 modules = []
 f = open(os.path.join(dolfin_dir, "dolfin", "dolfin.h"))
@@ -116,6 +119,6 @@ for module in modules:
         # Generate documentation for header file
         if line.startswith("#include <dolfin/"):
             filename = line.split("/")[2].split(">")[0]
-            generate_documentation(filename, module)
+            generate_documentation(filename, module, dolfin_dir)
 
     f.close()
