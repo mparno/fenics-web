@@ -13,9 +13,9 @@ FEniCS Documentation
     introduction
     installation
     tutorial/index
+    help
     demos/index
     programmers-reference/index
-    help
     developer
     styleguides
 
@@ -37,19 +37,19 @@ FEniCS Documentation
         </span>
       </p>
       <p class="biglink">
+        <a class="biglink" href="help.html">Getting help</a>
+        <br/><span class="linkdescr">How to get help</span>
+      </p>
+    </td><td width="50%">
+      <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
         <br/><span class="linkdescr">Documented examples
         </span>
       </p>
-    </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="programmers-reference/index.html">Programmer's Reference</a>
         <br/><span class="linkdescr">Interface documentation
         </span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="help.html">Getting help</a>
-        <br/><span class="linkdescr">How to get help</span>
       </p>
       <p class="biglink">
         <a class="biglink" href="developer.html">Developer information</a>
@@ -57,7 +57,7 @@ FEniCS Documentation
       </p>
       <p class="biglink">
         <a class="biglink" href="styleguides.html">Style guides</a>
-        <br/><span class="linkdescr">How to write FEniCS source code</span>
+        <br/><span class="linkdescr">Style guides for FEniCS source code</span>
       </p>
     </td></tr>
   </table>

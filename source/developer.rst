@@ -291,59 +291,6 @@ language.  Good starting points are `reStructuredText primer
 :ref:`styleguides_sphinx_coding_style` explains what the reST source
 files should look like.
 
-Programmer's reference
-======================
-
-The programmer's reference covers the C++ and Python interfaces to
-FEniCS with emphasis on the DOLFIN library. The documentation of a
-class/function should in general follow the below structure:
-
-* One line which summarizes the funtionality of the class/function
-* *Arguments*, a description of arguments
-* *Returns*, a description of return values
-* *Example*, a short code snippets that illustrate basic usage. The code does not
-  have to be a stand-alone program.
-* *See also*, links to demos which use the particular feature which is
-  documented.
-
-See the guide on how to :ref:`document the FEniCS interface
-<styleguides_sphinx_documenting_interface>` for details on how to
-implement each step and which files are needed.  Also refer to the
-:ref:`Mesh class C++ documentation
-<programmers_reference_cpp_mesh_Mesh>` and :ref:`Mesh class Python
-documentation <programmers_reference_python_mesh_Mesh>` for good
-examples of what the documentation should look like.
-
-Documenting demos
-=================
-
-When adding a new demo to the documentation, or updating an existing one,
-the below model should be followed:
-
-* Summarize what features are demonstrated
-* Problem and method description
-* Explain how each step of the solution process is implemented (include code
-  snippets if appropriate)
-* Add complete source code files for download
-* Link to relevant sections of the :ref:`programmers_reference_index` and to
-  demos that show alternative implementations (if any)
-* Add keywords to the index
-* Make the demo available in both C++ and Python versions (this is important!)
-* Have someone review the documentation
-
-See the guide on how to :ref:`document demos
-<styleguides_sphinx_documenting_demos>` for details on how to
-implement each step and which files are needed.  Also refer to the
-:ref:`Poisson C++ demo <demos_cpp_pde_poisson>` and :ref:`Poisson
-Python demo <demos_python_pde_poisson>` for good examples.
-
-.. note::
-
-    Currently, as we're migrating demos from the DOLFIN source tree
-    into this documentation, there are many demos that need
-    documentation. Please see :ref:`demos_missing_demos` and consider
-    lending a hand to fill in the blanks.
-
 Before committing your work
 ===========================
 

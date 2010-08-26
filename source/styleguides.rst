@@ -36,9 +36,9 @@ Use lower-case for function names and underscore to separate words:
 
 .. code-block:: c++
 
-    vofoo();
-    vobar();
-    vofoo_bar(...);
+    foo();
+    bar();
+    foo_bar(...);
 
 Functions returning a value should be given the name of that value,
 for example:
@@ -143,9 +143,9 @@ sentences). Here's a good example from ``TopologyComputation.cpp``:
 
     // Compute entities if they don't exist
     if (topology.size(d0) == 0)
-      computeEntities(mesh, d0);
+      compute_entities(mesh, d0);
     if (topology.size(d1) == 0)
-      computeEntities(mesh, d1);
+      compute_entities(mesh, d1);
 
     // Check if connectivity still needs to be computed
     if (connectivity.size() > 0)
@@ -156,10 +156,9 @@ sentences). Here's a good example from ``TopologyComputation.cpp``:
 Integers and reals
 ^^^^^^^^^^^^^^^^^^
 
-Use ``dolfin::uint`` instead of ``int`` (unless you really
-want to use negative integers). Use ``dolfin::real``
-instead of ``double`` if you are sure that you want to exploit
-arbitray precision:
+Use ``dolfin::uint`` instead of ``int`` (unless you really want to use
+negative integers). Use ``dolfin::real`` instead of ``double`` only if
+you are sure that you want to exploit arbitray precision:
 
 .. code-block:: c++
 
@@ -169,8 +168,8 @@ arbitray precision:
 Placement of brackets
 ^^^^^^^^^^^^^^^^^^^^^
 
-Curly brackets following for multi-line control statements should appear on
-the next line and should not be indented:
+Curly brackets following multi-line control statements should appear
+on the next line and should not be indented:
 
 .. code-block:: c++
 
@@ -179,7 +178,7 @@ the next line and should not be indented:
       ...
     }
 
-For one line statements, ommit the brackets
+For one line statements, ommit the brackets:
 
 .. code-block:: c++
 
@@ -265,11 +264,13 @@ Including header files and using forward declarations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Do not use ``#include <dolfin.h>`` or ``#include``
-``<dolfin/dolfin_foo.h>`` inside the DOLFIN kernel. Only include the
-portions of DOLFIN you are actually using.
+``<dolfin/dolfin_foo.h>`` inside the DOLFIN source tree. Only include
+the portions of DOLFIN you are actually using.
 
-Include as few header files a possible and use forward declarations whenever
-possible (in header files). Put the ``#include`` in the implementation file.
+Include as few header files a possible and use forward declarations
+whenever possible (in header files). Put the ``#include`` in the
+implementation file.  This reduces compilation times and minimizes the
+risk for cyclic dependencies.
 
 Explicit constructors
 ^^^^^^^^^^^^^^^^^^^^^
@@ -297,7 +298,7 @@ This makes it easier to spot which functions are virtual.
       virtual void bar() = 0;
     };
 
-    class Bar
+    class Bar : public Foo
     {
       virtual void foo();
       virtual void bar();
@@ -325,8 +326,7 @@ Python coding style
 
 The FEniCS coding style for Python code adheres to the `PEP-8 style
 guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
-strictly enforced.  :ref:`styleguides_cpp_coding_style` explains in
-more detail the preferred coding style for C++ code.
+strictly enforced.
 
 Sphinx coding style for FEniCS documentation
 ============================================
