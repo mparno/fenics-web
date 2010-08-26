@@ -1,4 +1,5 @@
 .. Documentation for the header file dolfin/mesh/Mesh.h
+.. DONT_TOUCH (note to documentation generation scripts)
 
 .. _programmers_reference_cpp_mesh_Mesh:
 

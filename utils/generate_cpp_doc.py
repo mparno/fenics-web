@@ -123,6 +123,18 @@ def write_documentation(documentation, filename, module):
     # Set location of documentation
     rstfile = filename.split(".")[0] + ".rst"
     outfile = os.path.join(directory, rstfile)
+
+    # Check that it is ok to overwrite the output file
+    try:
+        f = open(outfile, "r")
+        if "DONT_TOUCH" in f.read():
+            print "Not touching file %s" % outfile
+            f.close()
+            return
+    except:
+        pass
+
+    # Open output file
     f = open(outfile, "w")
 
     # Write top of file
