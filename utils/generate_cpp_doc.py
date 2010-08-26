@@ -10,23 +10,23 @@ import os
 def generate_documentation(filename, module, dolfin_dir):
     "Generate documentation for given filename in given module"
 
-    if not filename == "DirichletBC.h":
-        return
-
     # Extract documentation and sort alphabetically
     documentation = extract_documentation(filename, module, dolfin_dir)
-    documentation.sort()
 
-    # Format documentation
-    format_documentation(documentation, filename, module)
+    # Write documentation
+    write_documentation(documentation, filename, module)
 
 def extract_documentation(filename, module, dolfin_dir):
     "Extract documentation from given filename in given module"
 
     print "Generating documentation for %s..." % filename
 
-    # List of (signature, comment)
+    # List of classes with documentation
     documentation = []
+
+    # Class name and parent class name
+    classname = None
+    parent = None
 
     # Comment and signature
     comment = None
@@ -39,7 +39,7 @@ def extract_documentation(filename, module, dolfin_dir):
     f = open(os.path.join(dolfin_dir, "dolfin", module, filename))
     for line in f:
 
-        # Look for "///"
+        # Check for comment
         if "///" in line:
             c = line.split("///")[1].strip()
 
@@ -51,6 +51,23 @@ def extract_documentation(filename, module, dolfin_dir):
             else:
                 comment += "\n" + c
 
+        # Check for class
+        elif " class " in line and not ";" in line and not "//" in line:
+
+            # Get class name and parent
+            classname = line.split("class")[1].split(":")[0].strip()
+            if "public" in line:
+                parent = line.split("public")[1].strip()
+            else:
+                parent = None
+
+            # Store documentation
+            documentation.append((classname, parent, comment, []))
+            classname = None
+            parent = None
+            comment = None
+
+        # Check for signature
         elif comment is not None:
             s = line.strip()
 
@@ -63,33 +80,108 @@ def extract_documentation(filename, module, dolfin_dir):
             else:
                 signature += "\n" + indent + s
 
-            # Signature ends when we find ")"
-            if ")" in s:
+            # Signature ends when we find ";" or "{"
+            if ";" in s or "{" in s:
+
+                # Strip out last part
+                signature = signature.split(";")[0]
+                signature = signature.split("{")[0]
+                signature = signature.strip()
 
                 # Get function name
                 #function = signature.split("(")[0].split(" ")[-1]
 
                 # Store documentation
-                documentation.append((signature, comment))
+                if len(documentation) > 0:
+                    documentation[-1][-1].append((signature, comment))
+                else:
+                    documentation = [(None, None, None, [(signature, comment)])]
 
                 # Reset comment and signature
                 comment = None
                 signature = None
 
+    # Close file
     f.close()
+
+    # Sort documentation alphabetically within each class
+    for (classname, parent, comment, function_documentation) in documentation:
+        function_documentation.sort()
 
     return documentation
 
-def format_documentation(documentation, filename, module):
-    "Format documentation for given filename and module"
+def write_documentation(documentation, filename, module):
+    "Write documentation for given filename and module"
+
+    # Create containing directory
+    directory = os.path.join("source", "programmers-reference", "test", "cpp", module)
+    try:
+        os.makedirs(directory)
+    except:
+        pass
+
+    # Set location of documentation
+    rstfile = filename.split(".")[0] + ".rst"
+    outfile = os.path.join(directory, rstfile)
+    f = open(outfile, "w")
+
+    # Write top of file
+    f.write(".. Documentation for the header file dolfin/%s/%s\n" % (module, filename))
+    f.write("\n")
+    f.write(".. _programmers_reference_cpp_%s_Mesh:\n" % module)
+    f.write("\n")
+    f.write(filename + "\n")
+    f.write(len(filename)*"=" + "\n")
+    f.write("\n")
+
+    # Write a note that this file was generated automatically
+    f.write(".. note::\n")
+    f.write("\n")
+    f.write(indent("""\
+The documentation on this page was automatically extracted from
+the DOLFIN C++ code and needs to be edited and expanded.""", 4))
+    f.write("\n")
+    f.write("\n")
 
     # Write reST for all functions
-    for (signature, comment) in documentation:
+    for (classname, parent, comment, function_documentation) in documentation:
 
-        print indent(".. cpp:function:: %s" % signature, 4)
-        print ""
-        print indent(comment, 8)
-        print ""
+        # Document class
+        if classname is not None:
+
+            # Write class documentation
+            f.write(".. cpp:class:: %s\n" % classname)
+            f.write("\n")
+
+            # Write header if any
+            if parent is not None:
+                f.write(indent("*Parent class*\n", 4))
+                f.write("\n")
+                f.write(indent("* :cpp:class:`%s`\n" % parent, 8))
+                f.write("\n")
+
+            # Write class documentation
+            if comment is not None:
+                f.write(indent(comment, 8))
+                f.write("\n")
+                f.write("\n")
+
+        # Iterate over class functions
+        for (signature, comment) in function_documentation:
+
+            # Handle indentation of signature
+            if "\n" in signature:
+                lines = signature.split("\n")
+                signature = "\n".join([lines[0]] + [(len(".. cpp.function::") + 1)*" " + l for l in lines[1:]])
+
+            # Write function documentation
+            f.write(indent(".. cpp:function:: %s\n" % signature, 4))
+            f.write("\n")
+            f.write(indent(comment, 8))
+            f.write("\n")
+            f.write("\n")
+
+    f.close()
 
 def indent(string, num_spaces):
     "Indent given text block given number of spaces"
