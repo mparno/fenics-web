@@ -290,18 +290,3 @@ language.  Good starting points are `reStructuredText primer
 <http://sphinx.pocoo.org/markup/index.html>`_.  The
 :ref:`styleguides_sphinx_coding_style` explains what the reST source
 files should look like.
-
-Before committing your work
-===========================
-
-There are a few simple tests that should be run before committing your
-work on the documentation:
-
-* Run the script ``test/verify_demo_code_snippets.py`` to test that all code
-  snippets in the demos are exact copies of the code available in the source
-  code files.
-* Run ``make all`` in the top level directory to make sure that
-  the documentation is successfully build without warnings
-
-Please fix any errors you might encounter running these scripts even
-if your work did not introduce them.

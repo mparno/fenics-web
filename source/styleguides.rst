@@ -318,15 +318,14 @@ There are some exceptions to this rule where we need to use old ``C``-style
 function calls. One such exception is handling of command-line arguments
 (``char* argv[]``).
 
-.. _styleguides_sphinx_coding_style:
-
-
 Python coding style
 ===================
 
 The FEniCS coding style for Python code adheres to the `PEP-8 style
 guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
 strictly enforced.
+
+.. _styleguides_sphinx_coding_style:
 
 Sphinx coding style for FEniCS documentation
 ============================================
@@ -939,4 +938,3 @@ the documentation easier to navigate through.
 See `the Sphinx documentation
 <http://sphinx.pocoo.org/markup/para.html#index-generating-markup>`_ on how to
 use the above directives.
-
