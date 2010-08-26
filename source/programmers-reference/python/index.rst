@@ -3,9 +3,9 @@
 
 .. _programmers_reference_python_index:
 
-##################
-``Python`` version
-##################
+#############################
+Python Programmer's Reference
+#############################
 
 This is the index page for the ``Python`` programmer's reference.
 The contents follows the directory structure of DOLFIN.
