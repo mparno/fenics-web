@@ -269,7 +269,7 @@ Before committing your work
 
 Before committing any contributions, make sure to test the code
 thoroughly. This includes running any unit tests, regression tests
-et. present as part of the code you are modifying.
+etc. present as part of the code you are modifying.
 
 *********************
 Writing documentation
