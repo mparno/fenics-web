@@ -12,6 +12,19 @@ The contents follows the directory structure of DOLFIN.
 .. toctree::
     :maxdepth: 1
 
-    :ref:`testing <programmers_reference_cpp_mesh_index>`
-
-    mesh/index
+    Adaptivity <adaptivity/index>
+    Finite elements <fem/index>
+    Functions and function spaces <function/index>
+    Graphs <graph/index>
+    Input / output <io/index>
+    Linear algebra <la/index>
+    Log system <log/index>
+    Mathematical functions <math/index>
+    Meshes <mesh/index>
+    Moving meshes <ale/index>
+    Nonlinear solvers <nls/index>
+    Numerical quadrature <quadrature/index>
+    ODE solvers <ode/index>
+    Parameter system <parameter/index>
+    Plotting <plot/index>
+    Utilities <common/index>
