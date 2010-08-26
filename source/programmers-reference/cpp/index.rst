@@ -6,11 +6,12 @@
 C++ Programmer's Reference
 ##########################
 
-This is the index page for the ``C++`` programmer's reference.
+This is the index page for the C++ programmer's reference.
 The contents follows the directory structure of DOLFIN.
 
 .. toctree::
     :maxdepth: 1
 
-    mesh/index
+    :ref:`testing <programmers_reference_cpp_mesh_index>`
 
+    mesh/index
