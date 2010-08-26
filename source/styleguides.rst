@@ -318,6 +318,16 @@ There are some exceptions to this rule where we need to use old C-style
 function calls. One such exception is handling of command-line arguments
 (``char* argv[]``).
 
+Prefer smart pointers over plain pointers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use ``boost::shared_ptr`` and ``boost::scoped_ptr`` in favour or plain
+pointers. Smart pointers reduce the likelihood of memory leaks and make
+ownership clear.
+Use ``scoped_ptr`` for a pointer which is not shared and
+``shared_ptr`` when multiple pointers point to the same object.
+
+
 Python coding style
 ===================
 
@@ -1084,4 +1094,3 @@ the command:
     make all
 
 in the top directory.
-
