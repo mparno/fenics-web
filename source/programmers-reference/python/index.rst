@@ -15,4 +15,5 @@ The contents follows the directory structure of DOLFIN.
 .. toctree::
     :maxdepth: 1
 
+    cpp
     mesh/index
