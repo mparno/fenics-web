@@ -85,7 +85,6 @@ The following platforms are officially supported by Dorsal:
 * Gentoo (and Sabayon) Linux
 * Mac OS X (Snow Leopard)
 * openSUSE 11.3
-* Red Hat Enterprise Linux 6
 * Ubuntu (10.04/Lucid and 10.10/Maverick)
 
 A number of other platforms are supported through user contributions.
