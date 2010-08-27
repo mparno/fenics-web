@@ -6,10 +6,9 @@
 FEniCS Programmer's Reference
 #############################
 
-The FEniCS Programmer's Reference documents the details of the FEniCS
-user interface. The FEniCS user interface is available in two
-different flavors: both as a C++ library and as a Python module.
-
+The FEniCS Programmer's Reference documents the FEniCS
+interface. The FEniCS interface is available in two
+different flavors: as a C++ library and as a Python module.
 Both interfaces are implemented as part of `DOLFIN
 <http://www.fenics.org/dolfin>`_.
 

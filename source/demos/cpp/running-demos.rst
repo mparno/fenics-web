@@ -8,24 +8,32 @@ Running the demos
 
 To run the ``C++`` demos, follow the below procedure:
 
-* download the source files i.e., ``main.cpp`` and ``SConstruct``, from the
+* Download the source files i.e., ``main.cpp`` and ``CMakeLists.txt``, from the
   demo that you want to run. Some demos also contain UFL form files e.g.,
   ``Poisson.ufl``. Note that there may be multiple form files.
 
-* compile the form files files using DOLFIN as output language::
+* Compile the form files to generate code with DOLFIN wrappers ::
 
       $ ffc -l dolfin Poisson.ufl
 
-* compile the ``main.cpp`` file against DOLFIN by running scons::
+  Generated .h files are usually distributed with the demos. If you wish to
+  use optimized generated code, do::
 
-      $ scons
+      $ ffc -O -l dolfin Poisson.ufl
 
-* run the created executable::
+* Configure the demo build process::
+
+      $ cmake .
+
+* Compile the demo::
+
+      $ make
+
+* Run the created executable::
 
     $ ./demo
 
 .. note::
 
-    You must have a working installation of FEniCS in order to run the demo,
+    You must have a working installation of FEniCS in order to run demos,
     see :ref:`installation` for details.
-

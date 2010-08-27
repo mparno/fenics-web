@@ -1,6 +1,6 @@
 .. This is where we put the documentation for all demos from DOLFIN.
 
-    NOTE: KBO: We need to figure out how to share common text between the 
+    NOTE: KBO: We need to figure out how to share common text between the
     C++/Python versions.
 
 .. _demos_index:
@@ -9,10 +9,10 @@
 FEniCS Demos
 ############
 
-This part of the FEniCS documentation is concerned with all the demos found
+This part of the FEniCS documentation is concerned with the demos found
 in the `DOLFIN <https://launchpad.net/dolfin>`_ source directory.
 The documentation is provided in two different flavours, ``C++`` and
-``Python``, that solve the same problem, but uses slightly different syntax.
+``Python``, that solve the same problem, but use slightly different syntax.
 
 Each demo contains source files ready for download. Please see the instructions
 on :ref:`how to run the C++ demos <demos_cpp_running_demos>` and
@@ -44,4 +44,3 @@ Contents
 The demos are also available in PDF format, see
 :download:`C++ version<../../build/latex/cpp_demos.pdf>` or
 :download:`Python version<../../build/latex/python_demos.pdf>`.
-

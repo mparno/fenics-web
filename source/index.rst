@@ -43,7 +43,7 @@ FEniCS Documentation
     </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">Documented examples
+        <br/><span class="linkdescr">Documented example programs in C++ and Python
         </span>
       </p>
       <p class="biglink">

@@ -8,9 +8,10 @@ Running the demos
 
 To run the ``Python`` demos, follow the below procedure:
 
-* download the source file i.e., ``demo.py``, from the demo that you want to
+* Download the source file e.g., ``demo.py``, from the demo that you want to
   run
-* use the ``Python`` interpreter to run this file::
+
+* Use the ``Python`` interpreter to run this file::
 
       $ python demo.py
 
