@@ -210,7 +210,7 @@ latex_documents = [
 # If false, no module index is generated.
 #latex_use_modindex = True
 
-latex_elements = {'fontpkg': '\usepackage{mathptmx}',
+latex_elements = {'fontpkg': '\usepackage{mathpazo}',
                   'pointsize': '11pt',
                   'papersize': 'a4',
                   'fontenc': '',

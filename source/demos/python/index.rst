@@ -2,9 +2,9 @@
 
 .. _demos_python_index:
 
-##################
-``Python`` version
-##################
+###################
+``Python`` versions
+###################
 
 This is the index page for the ``Python`` demos.
 

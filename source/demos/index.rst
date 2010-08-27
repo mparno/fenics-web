@@ -42,5 +42,5 @@ Contents
     missing_demos
 
 The demos are also available in PDF format, see
-:download:`C++ version<../../build/latex/cpp_demos.pdf>` or
-:download:`Python version<../../build/latex/python_demos.pdf>`.
+:download:`C++ versions <../../build/latex/cpp_demos.pdf>` or
+:download:`Python versions <../../build/latex/python_demos.pdf>`.
