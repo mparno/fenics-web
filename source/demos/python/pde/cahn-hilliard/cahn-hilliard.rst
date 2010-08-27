@@ -49,7 +49,7 @@ The function ``def dim`` declares that the ``Expression`` is of dimension two.
 .. index:: NonlinearProblem
 
 A class which will represent the Cahn-Hilliard in an abstract from for use
-in the Newton solver is now defined. It is a sublass of ``NonlinearProblem``.
+in the Newton solver is now defined. It is a subclass of ``NonlinearProblem``.
 
 .. code-block:: python
 
@@ -268,5 +268,5 @@ Finally, the last computed solution for :math:`c` is plotted to the screen:
     plot(u.split()[0])
     interactive()
 
-The line ``interactive()`` hold the plot (waiting for a keyboard action).
+The line ``interactive()`` holds the plot (waiting for a keyboard action).
 
