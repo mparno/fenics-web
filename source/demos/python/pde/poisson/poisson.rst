@@ -11,30 +11,34 @@ Poisson's equation
 Implementation
 --------------
 
-The demo is implemented in a single Python file, :download:`demo.py`, which
+This demo is implemented in a single Python file, :download:`demo.py`, which
 contains both the variational forms and the solver.
 
-First we import everyting from the ``dolfin`` module.
+First, the ``dolfin`` module is imported:
 
 .. code-block:: python
 
-    from dolfin import * 
+    from dolfin import *
 
 .. index:: FunctionSpace
 
-Then we create the ``mesh`` and define the ``FunctionSpace`` :math:`V` for our
-finite element functions.
+Then, a ``mesh`` with 32 vertices in each direction is created
+and the finite element ``FunctionSpace`` :math:`V`
+is created:
 
 .. code-block:: python
 
     # Create mesh and define function space
     mesh = UnitSquare(32, 32)
-    V = FunctionSpace(mesh, "CG", 1)
+    V = FunctionSpace(mesh, "Lagrange", 1)
+
+The space :math:`V` involves first-order, continuous Lagrange finite element
+basis functions.
 
 .. index:: Subdomain
 
-We use a simple ``Python`` function, which returns a ``bool``, to define the
-subdomain for the Dirichlet boundary condition.
+A simple ``Python`` function, which returns a ``bool``, is used to define the
+subdomain for the Dirichlet boundary condition:
 
 .. code-block:: python
 
@@ -44,9 +48,10 @@ subdomain for the Dirichlet boundary condition.
 
 .. index:: DirichletBC
 
-We can then create the Dirichlet boundary condition (``DirichletBC``) for our
-variational problem where we use a ``Constant`` (equal to zero) for the value
-of :math:`u` on the Dirichlet boundary.
+A Dirichlet boundary condition (``DirichletBC``) can be created. The value
+of the boundary condition is represented using a ``Constant``
+(equal to zero for the considered case) ), then the  boundary condition is
+created:
 
 .. code-block:: python
 
@@ -54,15 +59,20 @@ of :math:`u` on the Dirichlet boundary.
     u0 = Constant(0.0)
     bc = DirichletBC(V, u0, boundary)
 
+The space :math:`V` is present to indicate that the Dirichlet boundary
+is applied to functions in :math:`V`.
+
 .. index:: Expression
 
-Next, we define the variational problem in UFL. First we initialise the
-``TestFunction`` and ``TrialFunction`` using the previously defined
-``FunctionSpace`` :math:`V`. Then we use the ``Expression`` class to define
-the source term and normal derivative term on the boundary
-(:math:`f`, :math:`g`).
-Note that the string defining these expressions uses ``C++`` syntax.
-The bilinear and linear forms (``a`` and ``L``) can then be expressed directly
+Next, the variational problem is expressed in UFL. First,
+``TestFunction`` and ``TrialFunction`` are declared on the already defined
+``FunctionSpace`` :math:`V`. Then, the source term :math:`f` and the
+normal derivative term on the boundary  :math:`g` are declared
+using ``Expression`` class.
+Note that the strings defining ``f`` and ``g`` use C++ syntax
+since, for efficiency, DOLFIN will generate and compile C++ code for these
+expressions at runtime.
+The bilinear form ``a`` and the linear form ``L`` are expressed
 in UFL.
 
 .. code-block:: python
@@ -77,11 +87,10 @@ in UFL.
 
 .. index:: VariationalProblem
 
-To compute the solution we use the ``VariationalProblem`` class which we
-initialise with the bilinear and linear forms and the Dirichlet boundary
-conditions.
-The solution is stored in variable ``u`` (a ``Function`` object) and we obtain
-it by calling the ``solve`` method of the ``VariationalProblem``.
+To compute the solution, a ``VariationalProblem`` object is created
+using the bilinear and linear forms, and the Dirichlet boundary condition.
+The ``solve`` function is then called and the solution is returned
+in variable ``u`` (a ``Function`` object):.
 
 .. code-block:: python
 
@@ -89,8 +98,11 @@ it by calling the ``solve`` method of the ``VariationalProblem``.
     problem = VariationalProblem(a, L, bc)
     u = problem.solve()
 
-Finally, we can write the solution to a ``VTK`` file and visualise the solution
-using the ``plot()`` command.
+The default settings for solving a variational problem have been used.
+Various parameters can be set control aspects of the solution process.
+
+Finally, the solution is output a ``VTK`` file for later visualization
+and the the solution plotted to the screen using the ``plot()`` command:
 
 .. code-block:: python
 

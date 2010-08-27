@@ -8,14 +8,15 @@
 
 This demo illustrates how to:
 
-* use VariationalProblem
-* create and apply Dirichlet boundary conditions
-* define Expressions
-* define FunctionSpace
-* create a Subdomain
+* Solve a linear partial differential equation
+* Use VariationalProblem
+* Create and apply Dirichlet boundary conditions
+* Define Expressions
+* Define FunctionSpace
+* Create a Subdomain
 
-Governing equations
--------------------
+Equation and problem defintion
+-------------------------------
 
 The Poisson equation is the cannonical elliptic partial differential equation.
 For a domain :math:`\Omega \subset \mathbb{R}^n`, the Poisson equation with
@@ -27,27 +28,25 @@ particular boundary conditions reads:
                 \nabla u \cdot \boldsymbol{n} &= g \quad {\rm on} \ \Gamma_{N} \\
 
 
-Find :math:`u \in V` such that
+The variational form of Poisson equation reads: find :math:`u \in V` such that
 
 .. math::
-   a(u, v) = L(v) \quad \forall v \in V,
+   a(u, v) = L(v) \quad \forall v \ \in V,
 
-where
+where :math:`V` is a suitable function space and
 
 .. math::
-   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, {\rm d}\Omega \\
+   a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, {\rm d} \Omega \\
    L(v)    &= \int_{\Omega} f v \, {\rm d}\Omega
             + \int_{\Gamma_{N}} g v \, {\rm d}\Gamma
 
 The expression :math:`a(u, v)` is the bilinear form and :math:`L(v)`
-is the linear form.
-
-Problem definition
-------------------
+is the linear form. It is assuume that all functions in :math:`V`
+satisfy the Dirichlet boundary conditions (:math:`u = 0 \ {\rm on} \ \Gamma_{D}`)
 
 The following definitions of functions and boundaries are used in this demo:
 
-* :math:`\Omega = [0,1] \times [0,1]`
+* :math:`\Omega = [0,1] \times [0,1]` (a unit square)
 * :math:`\Gamma_{D} = \{(\pm 1, y) \in \partial \Omega\}` (Dirichlet boundary)
 * :math:`\Gamma_{N} = \{(x, \pm 1) \in \partial \Omega\}` (Neumann boundary)
 * :math:`h = \sin(5x)` (normal derivative)
