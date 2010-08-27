@@ -20,6 +20,7 @@ The contents follows the directory structure of DOLFIN.
     Linear algebra <la/index>
     Log system <log/index>
     Mathematical functions <math/index>
+    Main <main/index>
     Meshes <mesh/index>
     Moving meshes <ale/index>
     Nonlinear solvers <nls/index>

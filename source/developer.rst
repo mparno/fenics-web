@@ -49,7 +49,7 @@ a developer has proven reliable by committing a significant number of
 high quality contributions.
 
 An overview of all FEniCS projects on Launchpad can be found `here
-<https://launchpad.net/fenics-<project>`_.  `Launchpad pages
+<https://launchpad.net/fenics-project>`_.  `Launchpad pages
 <launchpad_pages.html>`_ also contains a collection of links to
 important Launchpad pages for the various FEniCS components.
 
@@ -59,14 +59,14 @@ reports, blueprints, and code hosting.
 User questions
 ==============
 
-User questions are discussed on the `Answers <help_answers>`_ pages.
+User questions are discussed on the :ref:`help_answers` pages.
 Developers should make sure to join the relevant team for each component so
 that they will be notified about new user questions.
 
 Bug reports
 ===========
 
-Bug reports are discussed on the `Bugs <help_bugs>`_ pages.
+Bug reports are discussed on the :ref:`help_bugs` pages.
 Developers should make sure to join the relevant team for each component so
 that they will be notified about new bugs.
 
@@ -263,7 +263,7 @@ Style guides
 ============
 
 To ease the job for maintainers that will need to read and understand
-your code, read the `coding style guides <styleguides>`_ that explain
+your code, read the :ref:`styleguides` that explain
 how to format your code so that it matches the coding style used for
 FEniCS.
 

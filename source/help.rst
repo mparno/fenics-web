@@ -10,10 +10,10 @@ Help is available both from FEniCS developers and other FEniCS users.
 This page describes how to get in contact to solve problems you might
 encounter when using FEniCS.
 
+.. _help_answers:
+
 Getting answers
 ===============
-
-.. _help_anwers:
 
 Questions and answers are handled by the `Launchpad Answers
 <https://help.launchpad.net/Answers>`_ system.
@@ -34,10 +34,10 @@ To be notified of new questions, join the `FEniCS
 <https://launchpad.net/~fenics>`_ and the `DOLFIN
 <https://launchpad.net/~dolfin>`_ teams on Launchpad.
 
+.. _help_bugs:
+
 Reporting bugs
 ==============
-
-.. _help_bugs:
 
 FEniCS software is under active development. As a consequence, bugs
 are likely to occur from time to time. In the event that you encounter
