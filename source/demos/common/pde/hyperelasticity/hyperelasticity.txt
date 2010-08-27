@@ -1,0 +1,98 @@
+This demo illustrates how to:
+
+* Minimise a non-quadratic functional
+* Use automatic computation of the directional derivative
+* Use VariationalProblem for a nonlinear equation
+* Create and apply Dirichlet boundary conditions
+* Define Expressions
+* Create FunctionSpace
+* Define compiled subdomain
+
+Equation and problem definition
+-------------------------------
+
+Hyperelasticity problems can be expressed as minimisation problems. The
+task is to find the displacement field :math:`u \in \mathbb{R}^{d}` that
+minimises the total potential energy :math:`\Pi`:
+
+.. math::
+   \min_{u \in V} \Pi
+
+The total potential energy is given by
+
+.. math::
+   \Pi = \int_{\Omega_{0}} \psi(u) \, dx - \int_{\Omega_{0}} B \cdot u \, dx - \int_{\partial\Omega_{0}} T \cdot u \, ds
+
+where :math:`\psi` is the elastic stored energy density, :math:`B` is a
+body force (per unit reference volume) and :math:`T` is a traction force
+(per unit reference area).
+
+At minimum points of :math:`\Pi`, the directional derivative of :math:`\Pi`
+with respect to change in :math:`u`
+
+.. math::
+   L(u; v) = D_{v} \Pi = \left. \frac{d \Pi(u + \epsilon v)}{d\epsilon} \right|_{\epsilon = 0}
+
+is equal to zero for all :math:`v \in V`:
+
+.. math::
+   L(u; v) = 0 \quad \forall \ v \in V
+
+To minimise the potential energy, solutions the above equation are sought.
+:math:`L(u; v)` is nonlinear in :math:`u`, so to solve this problem using
+Newton's method the Jacobian of :math:`L` is required,
+
+.. math::
+   a(du; v) = D_{du} L = \left. \frac{d L(u + \epsilon du; v)}{d\epsilon} \right|_{\epsilon = 0}
+
+
+
+Elastic stored energy density
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To define the elastic stored energy density, consider the deformation
+gradient :math:`F`
+
+.. math::
+   F = \nabla u
+
+the right Cauchy-Green tensor :math:`C`
+
+.. math::
+   C = F^{T} F
+
+and the scalar  :math:`J`
+
+.. math::
+   J = \det(F)
+
+This demo considers a common neo-Hookean stored energy model of the form
+
+.. math::
+   \psi =  \frac{\mu}{2} (C - 3) - \mu \ln(J) + \frac{\lambda}{2}\ln(J)^{2}
+
+where :math:`\mu` and :math:`\lambda` are the Lame parameters. In terms of
+the more common Young's modulus :math:`E` and Poisson ratio :math:`\nu`:
+
+.. math::
+    \lambda &= \frac{E \nu}{(1 + \nu)(1 - 2\nu)} \\
+    \mu     &=  \frac{E}{2(1 + \nu)}
+
+
+Demo parameters
+^^^^^^^^^^^^^^^
+
+.. note::
+
+    This section is incomplete and inaccurate.
+
+
+The following definitions of functions and boundaries are used in this demo:
+
+* :math:`\Omega = [0,1] \times [0,1] \times [0,1]` (unit cube)
+* :math:`\Gamma_{D} = \{(\pm 1, y) \in \partial \Omega\}` (Dirichlet boundary)
+* :math:`\Gamma_{N} = \{(x, \pm 1) \in \partial \Omega\}` (Neumann boundary)
+* :math:`\lambda = \sin(5x)`
+* :math:`\kappa  = \sin(5x)`
+* :math:`B = \sin(5x)` (normal derivative)
+* :math:`T = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)` (source term)

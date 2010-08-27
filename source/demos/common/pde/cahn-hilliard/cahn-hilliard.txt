@@ -73,11 +73,9 @@ Demo parameters
 
 The following domains, functions and time stepping parameters are used in this demo:
 
-* :math:`\Omega = (0, 1) \times (0, 1)` (a unit square)
+* :math:`\Omega = (0, 1) \times (0, 1)` (unit square)
 * :math:`f = 100 c^{2} (1-c)^{2}`
 * :math:`\lambda = 1 \times 10^{-2}`
 * :math:`M = 1`
 * :math:`dt = 5 \times 10^{-6}`
 * :math:`\theta = 0.5`
-
-

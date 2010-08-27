@@ -10,5 +10,5 @@ PDE
     :maxdepth: 2
 
     poisson/poisson
+    hyperelasticity/hyperelasticity
     cahn-hilliard/cahn-hilliard
-
