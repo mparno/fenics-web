@@ -8,6 +8,8 @@ __license__  = "GNU LGPL Version 2.1"
 
 # Modified by Harish Narayanan, 2009.
 
+# Begin demo
+
 from dolfin import *
 
 # Optimization options for the form compiler
