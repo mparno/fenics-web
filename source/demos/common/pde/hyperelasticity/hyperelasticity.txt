@@ -1,4 +1,4 @@
-This solves a three-dimensionsal elasticity problem.  It illustrates how to:
+This solves a three-dimensional elasticity problem.  It illustrates how to:
 
 * Minimise a non-quadratic functional
 * Use automatic computation of the directional derivative
@@ -20,7 +20,7 @@ potential energy :math:`\Pi`:
 .. math::
    \min_{u \in V} \Pi
 
-where :math:`V` is a suitable function space which satisfied boundary
+where :math:`V` is a suitable function space that satisfies boundary
 conditions on :math:`u`.  The total potential energy is given by
 
 .. math::
