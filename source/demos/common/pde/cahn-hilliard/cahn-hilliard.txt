@@ -7,7 +7,7 @@ demonstrates the use of
 * Automatic linearisation
 * A mixed finite element method
 * The :math:`\theta`-method for time-dependent equations
-* User-defined expressions
+* User-defined Expressions as Python classes
 * Form compiler options
 * Interpolation of functions
 
