@@ -2,12 +2,11 @@
 in Python by Johan Hake following the C++ demo by Harish Narayanan"""
 
 __author__ = "Johan Hake (hake@simula.no)"
-__date__ = "2009-10-11 -- 2009-10-11"
-__copyright__ = "Copyright (C) 2008 Johan Hake"
+__date__ = "2009-10-11 -- 2010-08-28"
+__copyright__ = "Copyright (C) 2008-2010 Johan Hake and Garth N. Wells"
 __license__  = "GNU LGPL Version 2.1"
 
 # Modified by Harish Narayanan, 2009.
-# Modified by Garth N. Wells, 2010.
 
 from dolfin import *
 
