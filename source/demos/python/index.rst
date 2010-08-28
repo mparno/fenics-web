@@ -10,7 +10,7 @@ This is the index page for the ``Python`` demos.
 
 .. toctree::
     :maxdepth: 2
+    :numbered:
 
     running-demos
     pde/index
-
