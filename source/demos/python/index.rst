@@ -3,14 +3,15 @@
 .. _demos_python_index:
 
 ###################
-``Python`` versions
+FEniCS Python Demos
 ###################
 
-This is the index page for the ``Python`` demos.
+Below is a list of available Python demos. Before running the demos,
+please read the instructions on :ref:`how to run the Python demos
+<demos_python_running_demos>`.
 
 .. toctree::
     :maxdepth: 2
     :numbered:
 
-    running-demos
     pde/index
