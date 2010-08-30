@@ -16,9 +16,9 @@ SparsityPattern.h
     
         * :cpp:class:`GenericSparsityPattern`
         
-        This class implements the GenericSparsityPattern interface.
-        It is used by most linear algebra backends, except for Epetra
-        which uses a special/native implementation.
+    This class implements the GenericSparsityPattern interface.
+    It is used by most linear algebra backends, except for Epetra
+    which uses a special/native implementation.
 
     .. cpp:function:: SparsityPattern(Type type)
     

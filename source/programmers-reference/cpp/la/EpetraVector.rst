@@ -16,13 +16,13 @@ EpetraVector.h
     
         * :cpp:class:`GenericVector`
         
-        This class provides a simple vector class based on Epetra.
-        It is a simple wrapper for an Epetra vector object (Epetra_FEVector)
-        implementing the GenericVector interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the Epetra_FEVector object using the function vec() or vec_ptr()
-        and use the standard Epetra interface.
+    This class provides a simple vector class based on Epetra.
+    It is a simple wrapper for an Epetra vector object (Epetra_FEVector)
+    implementing the GenericVector interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the Epetra_FEVector object using the function vec() or vec_ptr()
+    and use the standard Epetra interface.
 
     .. cpp:function:: EpetraVector(const EpetraVector& x)
     

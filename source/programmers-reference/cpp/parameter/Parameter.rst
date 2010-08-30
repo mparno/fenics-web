@@ -12,7 +12,7 @@ Parameter.h
 
 .. cpp:class:: Parameter
 
-        Base class for parameters.
+    Base class for parameters.
 
     .. cpp:function:: Parameter(std::string key)
     
@@ -132,7 +132,7 @@ Parameter.h
     
         * :cpp:class:`Parameter`
         
-        Parameter with value type int
+    Parameter with value type int
 
     .. cpp:function:: IntParameter(std::string key, int value)
     
@@ -192,7 +192,7 @@ Parameter.h
     
         * :cpp:class:`Parameter`
         
-        Parameter with value type double
+    Parameter with value type double
 
     .. cpp:function:: RealParameter(std::string key, real value)
     
@@ -252,7 +252,7 @@ Parameter.h
     
         * :cpp:class:`Parameter`
         
-        Parameter with value type string
+    Parameter with value type string
 
     .. cpp:function:: StringParameter(std::string key, std::string value)
     
@@ -312,7 +312,7 @@ Parameter.h
     
         * :cpp:class:`Parameter`
         
-        Parameter with value type bool
+    Parameter with value type bool
 
     .. cpp:function:: BoolParameter(std::string key, bool value)
     

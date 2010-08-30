@@ -16,10 +16,10 @@ cGqMethod.h
     
         * :cpp:class:`Method`
         
-        Contains all numeric constants, such as nodal points and nodal weights,
-        needed for the cG(q) method. The order q must be at least 1. Note that
-        q refers to the polynomial order and not the order of convergence for
-        the method, which is 2q.
+    Contains all numeric constants, such as nodal points and nodal weights,
+    needed for the cG(q) method. The order q must be at least 1. Note that
+    q refers to the polynomial order and not the order of convergence for
+    the method, which is 2q.
 
     .. cpp:function:: inline real ueval(real x0, real values[], uint i) const
     

@@ -12,29 +12,29 @@ MeshEntityIterator.h
 
 .. cpp:class:: MeshEntityIterator
 
-        MeshEntityIterator provides a common iterator for mesh entities
-        over meshes, boundaries and incidence relations. The basic use
-        is illustrated below.
-        
-        The following example shows how to iterate over all mesh entities
-        of a mesh of topological dimension dim:
-        
+    MeshEntityIterator provides a common iterator for mesh entities
+    over meshes, boundaries and incidence relations. The basic use
+    is illustrated below.
+    
+    The following example shows how to iterate over all mesh entities
+    of a mesh of topological dimension dim:
+    
         for (MeshEntityIterator e(mesh, dim); !e.end(); ++e)
         {
-        e->foo();
+          e->foo();
         }
-        
-        The following example shows how to iterate over mesh entities of
-        topological dimension dim connected (incident) to some mesh entity f:
-        
+    
+    The following example shows how to iterate over mesh entities of
+    topological dimension dim connected (incident) to some mesh entity f:
+    
         for (MeshEntityIterator e(f, dim); !e.end(); ++e)
         {
-        e->foo();
+          e->foo();
         }
-        
-        In addition to the general iterator, a set of specific named iterators
-        are provided for entities of type Vertex, Edge, Face, Facet and Cell.
-        These iterators are defined along with their respective classes.
+    
+    In addition to the general iterator, a set of specific named iterators
+    are provided for entities of type Vertex, Edge, Face, Facet and Cell.
+    These iterators are defined along with their respective classes.
 
     .. cpp:function:: //    MeshEntityIterator(const MeshEntityIterator& entity) :  entity(entity.entity.mesh(), 0, 0), _pos(0)
                        //
@@ -43,8 +43,8 @@ MeshEntityIterator.h
         declared and thus a default version available) it would allow code like
         
         for (CellIterator c0(mesh); !c0.end(); ++c0)
-        for (CellIterator c1(c0); !c1.end(); ++c1)
-        ...
+          for (CellIterator c1(c0); !c1.end(); ++c1)
+             ...
         
         c1 looks to be an iterator over the entities around c0 when it is in
         fact a copy of c0.

@@ -16,51 +16,51 @@ ODE.h
     
         * :cpp:class:`Variable`
         
-        An ODE represents an initial value problem of the form
-        
+    An ODE represents an initial value problem of the form
+    
         u'(t) = f(u(t), t) on [0, T],
-        
+    
         u(0)  = u0,
-        
-        where u(t) is a vector of length N.
-        
-        To define an ODE, a user must create a subclass of ODE and
-        create the function u0() defining the initial condition, as well
-        the function f() defining the right-hand side.
-        
-        DOLFIN provides two types of ODE solvers: a set of standard
-        mono-adaptive solvers with equal adaptive time steps for all
-        components as well as a set of multi-adaptive solvers with
-        individual and adaptive time steps for the different
-        components. The right-hand side f() is defined differently for
-        the two sets of methods, with the multi-adaptive solvers
-        requiring a component-wise evaluation of the right-hand
-        side. Only one right-hand side function f() needs to be defined
-        for use of any particular solver.
-        
-        It is also possible to solve implicit systems of the form
-        
+    
+    where u(t) is a vector of length N.
+    
+    To define an ODE, a user must create a subclass of ODE and
+    create the function u0() defining the initial condition, as well
+    the function f() defining the right-hand side.
+    
+    DOLFIN provides two types of ODE solvers: a set of standard
+    mono-adaptive solvers with equal adaptive time steps for all
+    components as well as a set of multi-adaptive solvers with
+    individual and adaptive time steps for the different
+    components. The right-hand side f() is defined differently for
+    the two sets of methods, with the multi-adaptive solvers
+    requiring a component-wise evaluation of the right-hand
+    side. Only one right-hand side function f() needs to be defined
+    for use of any particular solver.
+    
+    It is also possible to solve implicit systems of the form
+    
         M(u(t), t) u'(t) = f(u(t),t) on (0,T],
-        
+    
         u(0)  = u0,
-        
-        by setting the option "implicit" to true and defining the
-        function M().
-        
-        Two different solve() functions are provided, one to solve the
-        ODE on the time interval [0, T], including the solution of a
-        dual problem for error control:
-        
+    
+    by setting the option "implicit" to true and defining the
+    function M().
+    
+    Two different solve() functions are provided, one to solve the
+    ODE on the time interval [0, T], including the solution of a
+    dual problem for error control:
+    
         ode.solve();
-        
-        Alternatively, a time interval may be given in which case the
-        solution will be computed in a single sweep over the given time
-        interval without solution of dual problems:
-        
+    
+    Alternatively, a time interval may be given in which case the
+    solution will be computed in a single sweep over the given time
+    interval without solution of dual problems:
+    
         ode.solve(t0, t1);
-        
-        This mode allows the state to be specified and retrieved in
-        between intervals by calling set_state() and get_state().
+    
+    This mode allows the state to be specified and retrieved in
+    between intervals by calling set_state() and get_state().
 
     .. cpp:function:: ODE(uint N, real T)
     

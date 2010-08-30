@@ -16,7 +16,7 @@ GenericTensor.h
     
         * :cpp:class:`virtual Variable`
         
-        This class defines a common interface for arbitrary rank tensors.
+    This class defines a common interface for arbitrary rank tensors.
 
     .. cpp:function:: template<class T> T& down_cast()
     

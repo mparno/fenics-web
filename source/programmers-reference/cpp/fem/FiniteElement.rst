@@ -12,7 +12,7 @@ FiniteElement.h
 
 .. cpp:class:: FiniteElement
 
-        This is a wrapper for a UFC finite element (ufc::finite_element).
+    This is a wrapper for a UFC finite element (ufc::finite_element).
 
     .. cpp:function:: FiniteElement(boost::shared_ptr<const ufc::finite_element> element)
     

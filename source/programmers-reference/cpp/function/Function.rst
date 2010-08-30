@@ -16,13 +16,13 @@ Function.h
     
         * :cpp:class:`GenericFunction`
         
-        This class represents a function u_h in a finite element
-        function space V_h, given by
-        
-        u_h = sum_i U_i phi_i
-        
-        where {phi_i}_i is a basis for V_h, and U is a vector of
-        expansion coefficients for u_h.
+    This class represents a function u_h in a finite element
+    function space V_h, given by
+    
+      u_h = sum_i U_i phi_i
+    
+    where {phi_i}_i is a basis for V_h, and U is a vector of
+    expansion coefficients for u_h.
 
     .. cpp:function:: Function& operator[] (uint i) const
     

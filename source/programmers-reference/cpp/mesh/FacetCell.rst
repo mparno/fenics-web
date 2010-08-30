@@ -16,10 +16,10 @@ FacetCell.h
     
         * :cpp:class:`Cell`
         
-        This class represents a cell in a mesh incident to a facet on
-        the boundary. It is useful in cases where one needs to iterate
-        over a boundary mesh and access the corresponding cells in the
-        original mesh.
+    This class represents a cell in a mesh incident to a facet on
+    the boundary. It is useful in cases where one needs to iterate
+    over a boundary mesh and access the corresponding cells in the
+    original mesh.
 
     .. cpp:function:: FacetCell(const Mesh& mesh, const Cell& facet)
     

@@ -16,19 +16,19 @@ Expression.h
     
         * :cpp:class:`GenericFunction`
         
-        This class represents a user-defined expression. Expressions can
-        be used as coefficients in variational forms or interpolated
-        into finite element spaces.
-        
-        An expression is defined by overloading the eval() method. Users
-        may choose to overload either a simple version of eval(), in the
-        case of expressions only depending on the coordinate x, or an
-        optional version for expressions depending on x and mesh data
-        like cell indices or facet normals.
-        
-        The geometric dimension (the size of x) and the value rank and
-        dimensions of an expression must supplied as arguments to the
-        constructor.
+    This class represents a user-defined expression. Expressions can
+    be used as coefficients in variational forms or interpolated
+    into finite element spaces.
+    
+    An expression is defined by overloading the eval() method. Users
+    may choose to overload either a simple version of eval(), in the
+    case of expressions only depending on the coordinate x, or an
+    optional version for expressions depending on x and mesh data
+    like cell indices or facet normals.
+    
+    The geometric dimension (the size of x) and the value rank and
+    dimensions of an expression must supplied as arguments to the
+    constructor.
 
     .. cpp:function:: Expression()
     

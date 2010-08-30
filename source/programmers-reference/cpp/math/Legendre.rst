@@ -12,15 +12,15 @@ Legendre.h
 
 .. cpp:class:: Legendre
 
-        Legendre polynomial of given degree n on the interval [-1,1].
-        
-        P0(x) = 1
-        P1(x) = x
-        P2(x) = (3x^2 - 1) / 2
-        ...
-        
-        The function values and derivatives are computed using
-        three-term recurrence formulas.
+    Legendre polynomial of given degree n on the interval [-1,1].
+    
+      P0(x) = 1
+      P1(x) = x
+      P2(x) = (3x^2 - 1) / 2
+      ...
+    
+    The function values and derivatives are computed using
+    three-term recurrence formulas.
 
     .. cpp:function:: real d2dx(real x)
     

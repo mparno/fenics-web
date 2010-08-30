@@ -16,7 +16,7 @@ Facet.h
     
         * :cpp:class:`MeshEntity`
         
-        A Facet is a MeshEntity of topological codimension 1.
+    A Facet is a MeshEntity of topological codimension 1.
 
     .. cpp:function:: Facet(const Mesh& mesh, uint index) : MeshEntity(mesh, mesh.topology().dim() - 1, index)
     
@@ -45,7 +45,7 @@ Facet.h
     
         * :cpp:class:`MeshEntityIterator`
         
-        A FacetIterator is a MeshEntityIterator of topological codimension 1.
+    A FacetIterator is a MeshEntityIterator of topological codimension 1.
 
 .. cpp:class:: T>
 
@@ -53,5 +53,5 @@ Facet.h
     
         * :cpp:class:`MeshFunction<T>`
         
-        A FacetFunction is a MeshFunction of topological codimension 1.
+    A FacetFunction is a MeshFunction of topological codimension 1.
 

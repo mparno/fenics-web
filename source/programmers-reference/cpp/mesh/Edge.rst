@@ -16,7 +16,7 @@ Edge.h
     
         * :cpp:class:`MeshEntity`
         
-        An Edge is a MeshEntity of topological dimension 1.
+    An Edge is a MeshEntity of topological dimension 1.
 
     .. cpp:function:: Edge(MeshEntity& entity) : MeshEntity(entity.mesh(), 1, entity.index())
     
@@ -40,7 +40,7 @@ Edge.h
     
         * :cpp:class:`MeshEntityIterator`
         
-        An EdgeIterator is a MeshEntityIterator of topological dimension 1.
+    An EdgeIterator is a MeshEntityIterator of topological dimension 1.
 
 .. cpp:class:: T>
 
@@ -48,5 +48,5 @@ Edge.h
     
         * :cpp:class:`MeshFunction<T>`
         
-        An EdgeFunction is a MeshFunction of topological dimension 1.
+    An EdgeFunction is a MeshFunction of topological dimension 1.
 

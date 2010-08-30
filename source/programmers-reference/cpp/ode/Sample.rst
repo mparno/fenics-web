@@ -16,7 +16,7 @@ Sample.h
     
         * :cpp:class:`Variable`
         
-        Sample of solution values at a given point.
+    Sample of solution values at a given point.
 
     .. cpp:function:: Sample(TimeSlab& timeslab, real t, std::string name, std::string label)
     

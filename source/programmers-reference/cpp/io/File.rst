@@ -12,11 +12,11 @@ File.h
 
 .. cpp:class:: File
 
-        A File represents a data file for reading and writing objects.
-        Unless specified explicitly, the format is determined by the
-        file name suffix.
-        A list of objects that can be read/written to file can be found in
-        GenericFile.h
+    A File represents a data file for reading and writing objects.
+    Unless specified explicitly, the format is determined by the
+    file name suffix.
+    A list of objects that can be read/written to file can be found in
+    GenericFile.h
 
     .. cpp:function:: File(const std::string filename, Type type, std::string encoding = "ascii")
     

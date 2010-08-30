@@ -16,8 +16,8 @@ KrylovSolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This class defines an interface for a Krylov solver. The approproiate solver
-        is chosen on the basis of the matrix/vector type.
+    This class defines an interface for a Krylov solver. The approproiate solver
+    is chosen on the basis of the matrix/vector type.
 
     .. cpp:function:: KrylovSolver(std::string solver_type = "default",
                        std::string pc_type = "default")

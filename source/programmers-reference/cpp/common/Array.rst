@@ -12,9 +12,9 @@ Array.h
 
 .. cpp:class:: T>
 
-        This class provides a simple wrapper for a pointer to an array. A purpose
-        of this class is to enable the simple and safe exchange of data between
-        C++ and Python.
+    This class provides a simple wrapper for a pointer to an array. A purpose
+    of this class is to enable the simple and safe exchange of data between
+    C++ and Python.
 
     .. cpp:function:: Array(const Array& other) : _size(0), x(0)
     

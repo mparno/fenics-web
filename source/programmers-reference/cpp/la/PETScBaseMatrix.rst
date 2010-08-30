@@ -18,8 +18,8 @@ PETScBaseMatrix.h
     
         * :cpp:class:`PETScObject,`
         
-        This class is a base class for matrices that can be used in
-        PETScKrylovSolver.
+    This class is a base class for matrices that can be used in
+    PETScKrylovSolver.
 
     .. cpp:function:: PETScBaseMatrix()
     

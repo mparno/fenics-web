@@ -16,30 +16,30 @@ VariationalProblem.h
     
         * :cpp:class:`Variable,`
         
-        This class represents a (system of) partial differential
-        equation(s) in variational form: Find u in V such that
-        
+    This class represents a (system of) partial differential
+    equation(s) in variational form: Find u in V such that
+    
         F_u(v) = 0  for all v in V'.
-        
-        The variational problem is defined in terms of a bilinear
-        form a(v, u) and a linear for L(v).
-        
-        For a linear variational problem, F_u(v) = a(v, u) - L(v),
-        the forms should correspond to the canonical formulation
-        
+    
+    The variational problem is defined in terms of a bilinear
+    form a(v, u) and a linear for L(v).
+    
+    For a linear variational problem, F_u(v) = a(v, u) - L(v),
+    the forms should correspond to the canonical formulation
+    
         a(v, u) = L(v)  for all v in V'.
-        
-        For a nonlinear variational problem, the forms should
-        be given by
-        
+    
+    For a nonlinear variational problem, the forms should
+    be given by
+    
         a(v, u) = F_u'(v) u = F_u'(v, u),
         L(v)    = F(v),
-        
-        that is, a(v, u) should be the Frechet derivative of F_u
-        with respect to u, and L = F.
-        
-        Parameters:
-        
+    
+    that is, a(v, u) should be the Frechet derivative of F_u
+    with respect to u, and L = F.
+    
+    Parameters:
+    
         "linear solvers": "direct" or "iterative" (default: "direct")
         "symmetric":      true or false (default: false)
 

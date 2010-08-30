@@ -16,9 +16,9 @@ FunctionSpace.h
     
         * :cpp:class:`Variable`
         
-        This class represents a finite element function space defined by
-        a mesh, a finite element, and a local-to-global mapping of the
-        degrees of freedom (dofmap).
+    This class represents a finite element function space defined by
+    a mesh, a finite element, and a local-to-global mapping of the
+    degrees of freedom (dofmap).
 
     .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh)
     

@@ -16,13 +16,13 @@ PETScVector.h
     
         * :cpp:class:`GenericVector,`
         
-        This class provides a simple vector class based on PETSc.
-        It is a simple wrapper for a PETSc vector pointer (Vec)
-        implementing the GenericVector interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the PETSc Vec pointer using the function vec() and
-        use the standard PETSc interface.
+    This class provides a simple vector class based on PETSc.
+    It is a simple wrapper for a PETSc vector pointer (Vec)
+    implementing the GenericVector interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the PETSc Vec pointer using the function vec() and
+    use the standard PETSc interface.
 
     .. cpp:function:: PETScVector(const PETScVector& x)
     

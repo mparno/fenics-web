@@ -12,10 +12,10 @@ DynamicMeshEditor.h
 
 .. cpp:class:: DynamicMeshEditor
 
-        This class provides an interface for dynamic editing of meshes,
-        that is, when the number of vertices and cells are not known
-        a priori. If the number of vertices and cells are known a priori,
-        it is more efficient to use the default editor MeshEditor.
+    This class provides an interface for dynamic editing of meshes,
+    that is, when the number of vertices and cells are not known
+    a priori. If the number of vertices and cells are known a priori,
+    it is more efficient to use the default editor MeshEditor.
 
     .. cpp:function:: DynamicMeshEditor()
     

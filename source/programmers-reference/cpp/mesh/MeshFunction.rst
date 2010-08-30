@@ -16,12 +16,12 @@ MeshFunction.h
     
         * :cpp:class:`Variable`
         
-        A MeshFunction is a function that can be evaluated at a set of
-        mesh entities. A MeshFunction is discrete and is only defined
-        at the set of mesh entities of a fixed topological dimension.
-        A MeshFunction may for example be used to store a global
-        numbering scheme for the entities of a (parallel) mesh, marking
-        sub domains or boolean markers for mesh refinement.
+    A MeshFunction is a function that can be evaluated at a set of
+    mesh entities. A MeshFunction is discrete and is only defined
+    at the set of mesh entities of a fixed topological dimension.
+    A MeshFunction may for example be used to store a global
+    numbering scheme for the entities of a (parallel) mesh, marking
+    sub domains or boolean markers for mesh refinement.
 
     .. cpp:function:: MeshFunction() :
                        Variable("f", "unnamed MeshFunction"),

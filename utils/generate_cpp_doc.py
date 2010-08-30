@@ -18,8 +18,9 @@ dolfin_dir = os.environ["DOLFIN_DIR"]
 def generate_documentation(filename, module):
     "Generate documentation for given filename in given module"
 
-    if not filename == "Mesh.h":
-        return
+    # For testing
+    #if not filename == "Mesh.h":
+    #    return
 
     # Extract documentation and sort alphabetically
     documentation = extract_documentation(filename, module)
@@ -52,7 +53,12 @@ def extract_documentation(filename, module):
 
         # Check for comment
         if "///" in line:
-            c = line.split("///")[1].strip()
+
+            # We may have either "///" and "/// "
+            if "/// " in line:
+                c = line.split("/// ")[1].rstrip()
+            else:
+                c = line.split("///")[1].rstrip()
 
             # Found start of new comment
             if comment is None:
@@ -78,7 +84,7 @@ def extract_documentation(filename, module):
             parent = None
             comment = None
 
-        # Check for signature
+        # Check for function signature
         elif comment is not None:
             s = line.strip()
 
@@ -143,29 +149,28 @@ def write_documentation(documentation, filename, module):
             print "Not touching file %s" % outfile
             f.close()
             return
+        f.close()
     except:
         pass
 
     # Open output file
-    f = open(outfile, "w")
-
-    # Write top of file
-    f.write(".. Documentation for the header file dolfin/%s/%s\n" % (module, filename))
-    f.write("\n")
-    f.write(".. _programmers_reference_cpp_%s_%s:\n" % (module, prefix.lower()))
-    f.write("\n")
-    f.write(filename + "\n")
-    f.write(len(filename)*"=" + "\n")
-    f.write("\n")
+    output = ""
+    output += ".. Documentation for the header file dolfin/%s/%s\n" % (module, filename)
+    output += "\n"
+    output += ".. _programmers_reference_cpp_%s_%s:\n" % (module, prefix.lower())
+    output += "\n"
+    output += filename + "\n"
+    output += len(filename)*"=" + "\n"
+    output += "\n"
 
     # Write a note that this file was generated automatically
-    f.write(".. note::\n")
-    f.write("\n")
-    f.write(indent("""\
+    output += ".. note::\n"
+    output += "\n"
+    output += indent("""\
 The documentation on this page was automatically extracted from
-the DOLFIN C++ code and needs to be edited and expanded.""", 4))
-    f.write("\n")
-    f.write("\n")
+the DOLFIN C++ code and needs to be edited and expanded.""", 4)
+    output += "\n"
+    output += "\n"
 
     # Write reST for all functions
     for (classname, parent, comment, function_documentation) in documentation:
@@ -174,21 +179,21 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4))
         if classname is not None:
 
             # Write class documentation
-            f.write(".. cpp:class:: %s\n" % classname)
-            f.write("\n")
+            output += ".. cpp:class:: %s\n" % classname
+            output += "\n"
 
             # Write header if any
             if parent is not None:
-                f.write(indent("*Parent class*\n", 4))
-                f.write("\n")
-                f.write(indent("* :cpp:class:`%s`\n" % parent, 8))
-                f.write("\n")
+                output += indent("*Parent class*\n", 4)
+                output += "\n"
+                output += indent("* :cpp:class:`%s`\n" % parent, 8)
+                output += "\n"
 
             # Write class documentation
             if comment is not None:
-                f.write(indent(comment, 8))
-                f.write("\n")
-                f.write("\n")
+                output += indent(comment, 4)
+                output += "\n"
+                output += "\n"
 
         # Iterate over class functions
         for (signature, comment) in function_documentation:
@@ -199,12 +204,15 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4))
                 signature = "\n".join([lines[0]] + [(len(".. cpp.function::") + 1)*" " + l for l in lines[1:]])
 
             # Write function documentation
-            f.write(indent(".. cpp:function:: %s\n" % signature, 4))
-            f.write("\n")
-            f.write(indent(comment, 8))
-            f.write("\n")
-            f.write("\n")
+            output += indent(".. cpp:function:: %s\n" % signature, 4)
+            output += "\n"
+            output += indent(comment, 8)
+            output += "\n"
+            output += "\n"
 
+    # Write file
+    f = open(outfile, "w")
+    f.write(output)
     f.close()
 
 def generate_index(module, headers):

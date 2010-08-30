@@ -12,10 +12,10 @@ BarycenterQuadrature.h
 
 .. cpp:class:: BarycenterQuadrature
 
-        This class computes the barycenter of an arbitrary polyhedron or
-        polygon in 3D and therefore allows for barycenter quadrature on
-        complex polyhedrons. Note: barycenter quadrature is exact for
-        polynom deg <= 1.
+    This class computes the barycenter of an arbitrary polyhedron or
+    polygon in 3D and therefore allows for barycenter quadrature on
+    complex polyhedrons. Note: barycenter quadrature is exact for
+    polynom deg <= 1.
 
     .. cpp:function:: BarycenterQuadrature(const Nef_polyhedron_3& polyhedron)
     

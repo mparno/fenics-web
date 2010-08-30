@@ -16,8 +16,8 @@ uBLASILUPreconditioner.h
     
         * :cpp:class:`uBLASPreconditioner`
         
-        This class implements an incomplete LU factorization (ILU)
-        preconditioner for the uBLAS Krylov solver.
+    This class implements an incomplete LU factorization (ILU)
+    preconditioner for the uBLAS Krylov solver.
 
     .. cpp:function:: uBLASILUPreconditioner(const Parameters& krylov_parameters)
     

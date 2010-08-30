@@ -20,49 +20,49 @@ SLEPcEigenSolver.h
     
         * :cpp:class:`Variable,`
         
-        This class provides an eigenvalue solver for PETSc matrices.
-        It is a wrapper for the SLEPc eigenvalue solver.
-        
-        The following parameters may be specified to control the solver.
-        
-        1. "eigenvalue spectrum"
-        
-        This parameter controls which part of the spectrum to compute.
-        Possible values are
-        
-        "largest magnitude"   (eigenvalues with largest magnitude)
-        "smallest magnitude"  (eigenvalues with smallest magnitude)
-        "largest real"        (eigenvalues with largest double part)
-        "smallest real"       (eigenvalues with smallest double part)
-        "largest imaginary"   (eigenvalues with largest imaginary part)
-        "smallest imaginary"  (eigenvalues with smallest imaginary part)
-        "default spectrum"    (default spectrum)
-        
-        2. "eigenvalue solver"
-        
-        This parameter controls which algorithm is used by SLEPc.
-        Possible values are
-        
-        "power"               (power iteration)
-        "subspace"            (subspace iteration)
-        "arnoldi"             (Arnoldi)
-        "lanczos"             (Lanczos)
-        "krylov-schur"        (Krylov-Schur)
-        "lapack"              (LAPACK, all values, direct, only for small systems)
-        "default"             (default algorithm)
-        
-        3. "eigenvalue tolerance"
-        
-        This parameter controls the tolerance used by SLEPc.
-        Possible values are positive double numbers.
-        
-        4. "eigenvalue iterations"
-        
-        This parameter controls the maximum number of iterations used by SLEPc.
-        Possible values are positive integers.
-        
-        Note that both the tolerance and the number of iterations must be
-        specified if either one is specified.
+    This class provides an eigenvalue solver for PETSc matrices.
+    It is a wrapper for the SLEPc eigenvalue solver.
+    
+    The following parameters may be specified to control the solver.
+    
+    1. "eigenvalue spectrum"
+    
+    This parameter controls which part of the spectrum to compute.
+    Possible values are
+    
+      "largest magnitude"   (eigenvalues with largest magnitude)
+      "smallest magnitude"  (eigenvalues with smallest magnitude)
+      "largest real"        (eigenvalues with largest double part)
+      "smallest real"       (eigenvalues with smallest double part)
+      "largest imaginary"   (eigenvalues with largest imaginary part)
+      "smallest imaginary"  (eigenvalues with smallest imaginary part)
+      "default spectrum"    (default spectrum)
+    
+    2. "eigenvalue solver"
+    
+    This parameter controls which algorithm is used by SLEPc.
+    Possible values are
+    
+      "power"               (power iteration)
+      "subspace"            (subspace iteration)
+      "arnoldi"             (Arnoldi)
+      "lanczos"             (Lanczos)
+      "krylov-schur"        (Krylov-Schur)
+      "lapack"              (LAPACK, all values, direct, only for small systems)
+      "default"             (default algorithm)
+    
+    3. "eigenvalue tolerance"
+    
+    This parameter controls the tolerance used by SLEPc.
+    Possible values are positive double numbers.
+    
+    4. "eigenvalue iterations"
+    
+    This parameter controls the maximum number of iterations used by SLEPc.
+    Possible values are positive integers.
+    
+    Note that both the tolerance and the number of iterations must be
+    specified if either one is specified.
 
     .. cpp:function:: SLEPcEigenSolver()
     

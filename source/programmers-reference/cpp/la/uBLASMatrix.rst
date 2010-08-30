@@ -16,17 +16,17 @@ uBLASMatrix.h
     
         * :cpp:class:`GenericMatrix`
         
-        This class provides a simple matrix class based on uBLAS.
-        It is a simple wrapper for a uBLAS matrix implementing the
-        GenericMatrix interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the underlying uBLAS matrix and use the standard
-        uBLAS interface which is documented at
-        http://www.boost.org/libs/numeric/ublas/doc/index.htm.
-        
-        Developer note: specialised member functions must be
-        inlined to avoid link errors.
+    This class provides a simple matrix class based on uBLAS.
+    It is a simple wrapper for a uBLAS matrix implementing the
+    GenericMatrix interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the underlying uBLAS matrix and use the standard
+    uBLAS interface which is documented at
+    http://www.boost.org/libs/numeric/ublas/doc/index.htm.
+    
+    Developer note: specialised member functions must be
+    inlined to avoid link errors.
 
     .. cpp:function:: Mat& mat()
     

@@ -12,7 +12,7 @@ Variable.h
 
 .. cpp:class:: Variable
 
-        Common base class for DOLFIN variables.
+    Common base class for DOLFIN variables.
 
     .. cpp:function:: Variable()
     

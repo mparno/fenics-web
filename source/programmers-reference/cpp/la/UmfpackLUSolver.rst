@@ -20,9 +20,9 @@ UmfpackLUSolver.h
     
         * :cpp:class:`GenericLUSolver`
         
-        This class implements the direct solution (LU factorization) of
-        linear systems of the form Ax = b using UMFPACK
-        (http://www.cise.ufl.edu/research/sparse/umfpack/) if installed.
+    This class implements the direct solution (LU factorization) of
+    linear systems of the form Ax = b using UMFPACK
+    (http://www.cise.ufl.edu/research/sparse/umfpack/) if installed.
 
     .. cpp:function:: UmfpackLUSolver()
     

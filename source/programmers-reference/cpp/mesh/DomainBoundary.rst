@@ -16,9 +16,9 @@ DomainBoundary.h
     
         * :cpp:class:`SubDomain`
         
-        This class provides a SubDomain which picks out the boundary of
-        a mesh, and provides a convenient way to specify boundary
-        conditions on the entire boundary of a mesh.
+    This class provides a SubDomain which picks out the boundary of
+    a mesh, and provides a convenient way to specify boundary
+    conditions on the entire boundary of a mesh.
 
     .. cpp:function:: DomainBoundary()
     

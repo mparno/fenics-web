@@ -16,14 +16,14 @@ GaussQuadrature.h
     
         * :cpp:class:`GaussianQuadrature`
         
-        Gauss (Gauss-Legendre) quadrature on the interval [-1,1].
-        The n quadrature points are given by the zeros of the
-        n:th Legendre Pn(x).
-        
-        The quadrature points are computed using Newton's method, and
-        the quadrature weights are computed by solving a linear system
-        determined by the condition that Gauss quadrature with n points
-        should be exact for polynomials of degree 2n-1.
+    Gauss (Gauss-Legendre) quadrature on the interval [-1,1].
+    The n quadrature points are given by the zeros of the
+    n:th Legendre Pn(x).
+    
+    The quadrature points are computed using Newton's method, and
+    the quadrature weights are computed by solving a linear system
+    determined by the condition that Gauss quadrature with n points
+    should be exact for polynomials of degree 2n-1.
 
     .. cpp:function:: GaussQuadrature(unsigned int n)
     

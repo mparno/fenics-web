@@ -12,7 +12,7 @@ MeshEditor.h
 
 .. cpp:class:: MeshEditor
 
-        A simple mesh editor for creating simplicial meshes in 1D, 2D and 3D.
+    A simple mesh editor for creating simplicial meshes in 1D, 2D and 3D.
 
     .. cpp:function:: MeshEditor()
     

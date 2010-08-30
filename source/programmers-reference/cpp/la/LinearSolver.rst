@@ -16,7 +16,7 @@ LinearSolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This class provides a general solver for linear systems Ax = b.
+    This class provides a general solver for linear systems Ax = b.
 
     .. cpp:function:: LinearSolver(std::string solver_type = "lu", std::string pc_type = "ilu")
     

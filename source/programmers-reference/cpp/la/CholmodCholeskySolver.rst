@@ -20,10 +20,10 @@ CholmodCholeskySolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This class implements the direct solution (Cholesky factorization) of
-        linear systems of the form Ax = b. Sparse matrices
-        are solved using CHOLMOD http://www.cise.ufl.edu/research/sparse/cholmod/
-        if installed.
+    This class implements the direct solution (Cholesky factorization) of
+    linear systems of the form Ax = b. Sparse matrices
+    are solved using CHOLMOD http://www.cise.ufl.edu/research/sparse/cholmod/
+    if installed.
 
     .. cpp:function:: CholmodCholeskySolver()
     

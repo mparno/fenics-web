@@ -12,21 +12,21 @@ Timer.h
 
 .. cpp:class:: Timer
 
-        A timer can be used for timing tasks. The basic usage is
-        
-        Timer timer("Assembling over cells");
-        
-        The timer is started at construction and timing ends
-        when the timer is destroyed (goes out of scope). It is
-        also possible to start and stop a timer explicitly by
-        
-        timer.start();
-        timer.stop();
-        
-        Timings are stored globally and a summary may be printed
-        by calling
-        
-        summary();
+    A timer can be used for timing tasks. The basic usage is
+    
+      Timer timer("Assembling over cells");
+    
+    The timer is started at construction and timing ends
+    when the timer is destroyed (goes out of scope). It is
+    also possible to start and stop a timer explicitly by
+    
+      timer.start();
+      timer.stop();
+    
+    Timings are stored globally and a summary may be printed
+    by calling
+    
+      summary();
 
     .. cpp:function:: Timer(std::string task) : task(""), t(time()), stopped(false)
     

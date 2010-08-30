@@ -16,7 +16,7 @@ BoundaryMesh.h
     
         * :cpp:class:`Mesh`
         
-        A BoundaryMesh is a mesh over the boundary of some given mesh.
+    A BoundaryMesh is a mesh over the boundary of some given mesh.
 
     .. cpp:function:: BoundaryMesh()
     

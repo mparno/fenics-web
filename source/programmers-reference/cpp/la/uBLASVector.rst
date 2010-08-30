@@ -16,14 +16,14 @@ uBLASVector.h
     
         * :cpp:class:`GenericVector`
         
-        This class provides a simple vector class based on uBLAS.
-        It is a simple wrapper for a uBLAS vector implementing the
-        GenericVector interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the underlying uBLAS vector and use the standard
-        uBLAS interface which is documented at
-        http://www.boost.org/libs/numeric/ublas/doc/index.htm.
+    This class provides a simple vector class based on uBLAS.
+    It is a simple wrapper for a uBLAS vector implementing the
+    GenericVector interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the underlying uBLAS vector and use the standard
+    uBLAS interface which is documented at
+    http://www.boost.org/libs/numeric/ublas/doc/index.htm.
 
     .. cpp:function:: const uBLASVector& operator= (const uBLASVector& x)
     

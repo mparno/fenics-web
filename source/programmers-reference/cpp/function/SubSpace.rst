@@ -16,16 +16,16 @@ SubSpace.h
     
         * :cpp:class:`FunctionSpace`
         
-        This class represents a subspace (component) of a function space.
-        
-        The subspace is specified by an array of indices. For example,
-        the array [3, 0, 2] specifies subspace 2 of subspace 0 of
-        subspace 3.
-        
-        A typical example is the function space W = V x P for Stokes.
-        Here, V = W[0] is the subspace for the velocity component and
-        P = W[1] is the subspace for the pressure component. Furthermore,
-        W[0][0] = V[0] is the first component of the velocity space etc.
+    This class represents a subspace (component) of a function space.
+    
+    The subspace is specified by an array of indices. For example,
+    the array [3, 0, 2] specifies subspace 2 of subspace 0 of
+    subspace 3.
+    
+    A typical example is the function space W = V x P for Stokes.
+    Here, V = W[0] is the subspace for the velocity component and
+    P = W[1] is the subspace for the pressure component. Furthermore,
+    W[0][0] = V[0] is the first component of the velocity space etc.
 
     .. cpp:function:: SubSpace(const FunctionSpace& V,
                                const std::vector<uint>& component)

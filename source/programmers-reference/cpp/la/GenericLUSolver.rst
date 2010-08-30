@@ -20,7 +20,7 @@ GenericLUSolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This a base class for LU solvers
+    This a base class for LU solvers
 
     .. cpp:function:: virtual uint solve(GenericVector& x, const GenericVector& b) = 0
     

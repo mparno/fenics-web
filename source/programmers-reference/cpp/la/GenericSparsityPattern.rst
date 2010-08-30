@@ -16,8 +16,8 @@ GenericSparsityPattern.h
     
         * :cpp:class:`Variable`
         
-        Base class (interface) for generic tensor sparsity patterns.
-        Currently, this interface is mostly limited to matrices.
+    Base class (interface) for generic tensor sparsity patterns.
+    Currently, this interface is mostly limited to matrices.
 
     .. cpp:function:: GenericSparsityPattern()
     

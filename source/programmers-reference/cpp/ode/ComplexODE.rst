@@ -16,25 +16,25 @@ ComplexODE.h
     
         * :cpp:class:`ODE`
         
-        A ComplexODE represents an initial value problem for a system of
-        complex-valued ordinary differential equations:
-        
+    A ComplexODE represents an initial value problem for a system of
+    complex-valued ordinary differential equations:
+    
         M(z, t) z'(t) = f(z(t), t) on (0,T]
-        
+    
         z(0) = z0,
-        
-        where z(t) is a complex-valued vector of length n. The imaginary
-        unit is provided by the member variable j satisfying j^2 = -1.
-        
-        This class is a wrapper for a standard real-valued ODE, and
-        provides an interface that automatically translates the given
-        complex-valued ODE of size n to a standard real-valued ODE of
-        size N = 2n.
-        
-        The double and imaginary parts of the solution are stored in the
-        following order in the solution vector u(t):
-        
-        u = (Re z0, Im z0, Re z1, Im z1, ..., Re z_n-1, Im z_n-1).
+    
+    where z(t) is a complex-valued vector of length n. The imaginary
+    unit is provided by the member variable j satisfying j^2 = -1.
+    
+    This class is a wrapper for a standard real-valued ODE, and
+    provides an interface that automatically translates the given
+    complex-valued ODE of size n to a standard real-valued ODE of
+    size N = 2n.
+    
+    The double and imaginary parts of the solution are stored in the
+    following order in the solution vector u(t):
+    
+    u = (Re z0, Im z0, Re z1, Im z1, ..., Re z_n-1, Im z_n-1).
 
     .. cpp:function:: ComplexODE(uint n, real T)
     
@@ -106,6 +106,6 @@ ComplexODE.h
     
         * :cpp:class:`ODE`
         
-        Dummy implementation of ComplexODE used when DOLFIN is compiled
-        with GMP support in which case ComplexODE is not available
+    Dummy implementation of ComplexODE used when DOLFIN is compiled
+    with GMP support in which case ComplexODE is not available
 

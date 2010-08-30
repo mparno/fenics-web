@@ -16,9 +16,9 @@ PETScPreconditioner.h
     
         * :cpp:class:`PETScObject,`
         
-        This class is a wrapper for configuring PETSc preconditioners. It does
-        not own a preconditioner. It can take a PETScKrylovSolver and set the
-        preconditioner type and parameters.
+    This class is a wrapper for configuring PETSc preconditioners. It does
+    not own a preconditioner. It can take a PETScKrylovSolver and set the
+    preconditioner type and parameters.
 
     .. cpp:function:: explicit PETScPreconditioner(std::string type = "default")
     

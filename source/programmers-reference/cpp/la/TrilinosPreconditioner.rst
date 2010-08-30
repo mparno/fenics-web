@@ -16,9 +16,9 @@ TrilinosPreconditioner.h
     
         * :cpp:class:`Variable`
         
-        This class is a wrapper for configuring Epetra preconditioners. It does
-        not own a preconditioner. It can take a EpetraKrylovSolver and set the
-        preconditioner type and parameters.
+    This class is a wrapper for configuring Epetra preconditioners. It does
+    not own a preconditioner. It can take a EpetraKrylovSolver and set the
+    preconditioner type and parameters.
 
     .. cpp:function:: explicit TrilinosPreconditioner(std::string type = "default")
     

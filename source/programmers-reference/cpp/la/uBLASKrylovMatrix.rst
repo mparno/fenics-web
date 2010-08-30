@@ -12,11 +12,11 @@ uBLASKrylovMatrix.h
 
 .. cpp:class:: uBLASKrylovMatrix
 
-        This class provides an interface for matrices that define linear
-        systems for the uBLASKrylovSolver. This interface is implemented
-        by the classes uBLASSparseMatrix and DenseMatrix. Users may also
-        overload the mult() function to specify a linear system only in
-        terms of its action.
+    This class provides an interface for matrices that define linear
+    systems for the uBLASKrylovSolver. This interface is implemented
+    by the classes uBLASSparseMatrix and DenseMatrix. Users may also
+    overload the mult() function to specify a linear system only in
+    terms of its action.
 
     .. cpp:function:: std::string str(bool verbose) const
     

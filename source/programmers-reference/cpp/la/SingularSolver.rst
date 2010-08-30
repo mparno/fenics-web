@@ -16,23 +16,23 @@ SingularSolver.h
     
         * :cpp:class:`Variable`
         
-        This class provides a linear solver for singular linear systems
-        Ax = b where A has a one-dimensional null-space (kernel). This
-        may happen for example when solving Poisson's equation with
-        pure Neumann boundary conditions.
-        
-        The solver attempts to create an extended non-singular system
-        by adding the constraint [1, 1, 1, ...]^T x = 0.
-        
-        If an optional mass matrix M is supplied, the solver attempts
-        to create an extended non-singular system by adding the
-        constraint m^T x = 0 where m is the lumped mass matrix. This
-        corresponds to setting the average (integral) of the finite
-        element function with coefficients x to zero.
-        
-        The solver makes not attempt to check that the null-space is
-        indeed one-dimensional. It is also assumed that the system
-        Ax = b retains its sparsity pattern between calls to solve().
+    This class provides a linear solver for singular linear systems
+    Ax = b where A has a one-dimensional null-space (kernel). This
+    may happen for example when solving Poisson's equation with
+    pure Neumann boundary conditions.
+    
+    The solver attempts to create an extended non-singular system
+    by adding the constraint [1, 1, 1, ...]^T x = 0.
+    
+    If an optional mass matrix M is supplied, the solver attempts
+    to create an extended non-singular system by adding the
+    constraint m^T x = 0 where m is the lumped mass matrix. This
+    corresponds to setting the average (integral) of the finite
+    element function with coefficients x to zero.
+    
+    The solver makes not attempt to check that the null-space is
+    indeed one-dimensional. It is also assumed that the system
+    Ax = b retains its sparsity pattern between calls to solve().
 
     .. cpp:function:: SingularSolver(std::string solver_type = "lu", std::string pc_type = "ilu")
     

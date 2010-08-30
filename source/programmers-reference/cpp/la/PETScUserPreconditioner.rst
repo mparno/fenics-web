@@ -16,10 +16,10 @@ PETScUserPreconditioner.h
     
         * :cpp:class:`PETScObject`
         
-        This class specifies the interface for user-defined Krylov
-        method PETScPreconditioners. A user wishing to implement her own
-        PETScPreconditioner needs only supply a function that approximately
-        solves the linear system given a right-hand side.
+    This class specifies the interface for user-defined Krylov
+    method PETScPreconditioners. A user wishing to implement her own
+    PETScPreconditioner needs only supply a function that approximately
+    solves the linear system given a right-hand side.
 
     .. cpp:function:: PETScUserPreconditioner()
     

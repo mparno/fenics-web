@@ -16,8 +16,8 @@ UnitInterval.h
     
         * :cpp:class:`Mesh`
         
-        Interval mesh of the 1D unit line (0,1).
-        Given the number of cells (nx) in the axial direction,
-        the total number of intervals will be nx and the
-        total number of vertices will be (nx + 1).
+    Interval mesh of the 1D unit line (0,1).
+    Given the number of cells (nx) in the axial direction,
+    the total number of intervals will be nx and the
+    total number of vertices will be (nx + 1).
 

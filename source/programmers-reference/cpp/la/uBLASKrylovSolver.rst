@@ -16,8 +16,8 @@ uBLASKrylovSolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This class implements Krylov methods for linear systems
-        of the form Ax = b using uBLAS data types.
+    This class implements Krylov methods for linear systems
+    of the form Ax = b using uBLAS data types.
 
     .. cpp:function:: bool parameters_read
     

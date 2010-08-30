@@ -16,10 +16,10 @@ dGqMethod.h
     
         * :cpp:class:`Method`
         
-        Contains all numeric constants, such as nodal points and nodal weights,
-        needed for the dG(q) method. The order q must be at least 0. Note that
-        q refers to the polynomial order and not the order of convergence for
-        the method, which is 2q + 1.
+    Contains all numeric constants, such as nodal points and nodal weights,
+    needed for the dG(q) method. The order q must be at least 0. Note that
+    q refers to the polynomial order and not the order of convergence for
+    the method, which is 2q + 1.
 
     .. cpp:function:: real error(real k, real r) const
     

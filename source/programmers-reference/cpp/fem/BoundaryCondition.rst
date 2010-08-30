@@ -16,7 +16,7 @@ BoundaryCondition.h
     
         * :cpp:class:`Variable`
         
-        Common base class for boundary conditions
+    Common base class for boundary conditions
 
     .. cpp:function:: BoundaryCondition(boost::shared_ptr<const FunctionSpace> V)
     

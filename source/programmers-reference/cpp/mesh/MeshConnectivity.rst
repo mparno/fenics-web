@@ -12,14 +12,14 @@ MeshConnectivity.h
 
 .. cpp:class:: MeshConnectivity
 
-        Mesh connectivity stores a sparse data structure of connections
-        (incidence relations) between mesh entities for a fixed pair of
-        topological dimensions.
-        
-        The connectivity can be specified either by first giving the
-        number of entities and the number of connections for each entity,
-        which may either be equal for all entities or different, or by
-        giving the entire (sparse) connectivity pattern.
+    Mesh connectivity stores a sparse data structure of connections
+    (incidence relations) between mesh entities for a fixed pair of
+    topological dimensions.
+    
+    The connectivity can be specified either by first giving the
+    number of entities and the number of connections for each entity,
+    which may either be equal for all entities or different, or by
+    giving the entire (sparse) connectivity pattern.
 
     .. cpp:function:: MeshConnectivity(const MeshConnectivity& connectivity)
     

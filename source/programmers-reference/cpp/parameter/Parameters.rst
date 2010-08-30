@@ -12,46 +12,46 @@ Parameters.h
 
 .. cpp:class:: Parameters
 
-        This class stores a set of parameters. Each parameter is
-        identified by a unique string (the key) and a value of some
-        given value type. Parameter sets can be nested at arbitrary
-        depths.
-        
-        A parameter may be either int, double, string or boolean valued.
-        
-        Parameters may be added as follows:
-        
-        Parameters p("my_parameters");
-        p.add("relative_tolerance",  1e-15);
-        p.add("absolute_tolerance",  1e-15);
-        p.add("gmres_restart",       30);
-        p.add("monitor_convergence", false);
-        
-        Parameters may be changed as follows:
-        
-        p("gmres_restart") = 50;
-        
-        Parameter values may be retrieved as follows:
-        
-        int gmres_restart = p("gmres_restart");
-        
-        Parameter sets may be nested as follows:
-        
-        Parameters q("nested_parameters");
-        p.add(q);
-        
-        Nested parameters may then be accessed by
-        
-        p["nested_parameters"]("...")
-        
-        Parameters may be nested at arbitrary depths.
-        
-        Parameters may be parsed from the command-line as follows:
-        
-        p.parse(argc, argv);
-        
-        Note: spaces in parameter keys are not allowed (to simplify
-        usage from command-line).
+    This class stores a set of parameters. Each parameter is
+    identified by a unique string (the key) and a value of some
+    given value type. Parameter sets can be nested at arbitrary
+    depths.
+    
+    A parameter may be either int, double, string or boolean valued.
+    
+    Parameters may be added as follows:
+    
+      Parameters p("my_parameters");
+      p.add("relative_tolerance",  1e-15);
+      p.add("absolute_tolerance",  1e-15);
+      p.add("gmres_restart",       30);
+      p.add("monitor_convergence", false);
+    
+    Parameters may be changed as follows:
+    
+      p("gmres_restart") = 50;
+    
+    Parameter values may be retrieved as follows:
+    
+      int gmres_restart = p("gmres_restart");
+    
+    Parameter sets may be nested as follows:
+    
+      Parameters q("nested_parameters");
+      p.add(q);
+    
+    Nested parameters may then be accessed by
+    
+      p["nested_parameters"]("...")
+    
+    Parameters may be nested at arbitrary depths.
+    
+    Parameters may be parsed from the command-line as follows:
+    
+      p.parse(argc, argv);
+    
+    Note: spaces in parameter keys are not allowed (to simplify
+    usage from command-line).
 
     .. cpp:function:: Parameter& operator[] (std::string key)
     

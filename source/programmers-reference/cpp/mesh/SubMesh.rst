@@ -16,10 +16,10 @@ SubMesh.h
     
         * :cpp:class:`Mesh`
         
-        A SubMesh is a mesh defined as a subset of a given mesh. It
-        provides a convenient way to create matching meshes for
-        multiphysics applications by creating meshes for subdomains as
-        subsets of a single global mesh.
+    A SubMesh is a mesh defined as a subset of a given mesh. It
+    provides a convenient way to create matching meshes for
+    multiphysics applications by creating meshes for subdomains as
+    subsets of a single global mesh.
 
     .. cpp:function:: SubMesh(const Mesh& mesh, const MeshFunction<uint>& sub_domains, uint sub_domain)
     

@@ -16,8 +16,8 @@ Method.h
     
         * :cpp:class:`Variable`
         
-        Base class for cGqMethod and dGqMethod, which contain all numeric constants,
-        such as nodal points and nodal weights, needed for the method.
+    Base class for cGqMethod and dGqMethod, which contain all numeric constants,
+    such as nodal points and nodal weights, needed for the method.
 
     .. cpp:function:: Method(unsigned int q, unsigned int nq, unsigned int nn)
     

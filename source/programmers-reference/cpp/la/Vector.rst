@@ -16,8 +16,8 @@ Vector.h
     
         * :cpp:class:`GenericVector`
         
-        This class provides the default DOLFIN vector class,
-        based on the default DOLFIN linear algebra backend.
+    This class provides the default DOLFIN vector class,
+    based on the default DOLFIN linear algebra backend.
 
     .. cpp:function:: Vector() : vector(0)
     

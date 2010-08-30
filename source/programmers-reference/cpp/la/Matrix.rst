@@ -16,8 +16,8 @@ Matrix.h
     
         * :cpp:class:`GenericMatrix`
         
-        This class provides the default DOLFIN matrix class,
-        based on the default DOLFIN linear algebra backend.
+    This class provides the default DOLFIN matrix class,
+    based on the default DOLFIN linear algebra backend.
 
     .. cpp:function:: Matrix() : matrix(0)
     

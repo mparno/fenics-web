@@ -16,7 +16,7 @@ Cell.h
     
         * :cpp:class:`MeshEntity`
         
-        A Cell is a MeshEntity of topological codimension 0.
+    A Cell is a MeshEntity of topological codimension 0.
 
     .. cpp:function:: Cell() : MeshEntity()
     
@@ -72,7 +72,7 @@ Cell.h
     
         * :cpp:class:`MeshEntityIterator`
         
-        A CellIterator is a MeshEntityIterator of topological codimension 0.
+    A CellIterator is a MeshEntityIterator of topological codimension 0.
 
 .. cpp:class:: T>
 
@@ -80,5 +80,5 @@ Cell.h
     
         * :cpp:class:`MeshFunction<T>`
         
-        A CellFunction is a MeshFunction of topological codimension 0.
+    A CellFunction is a MeshFunction of topological codimension 0.
 

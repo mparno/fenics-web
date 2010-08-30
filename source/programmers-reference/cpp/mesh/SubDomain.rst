@@ -12,9 +12,9 @@ SubDomain.h
 
 .. cpp:class:: SubDomain
 
-        This class defines the interface for definition of sub domains.
-        Alternatively, sub domains may be defined by a Mesh and a
-        MeshFunction<uint> over the mesh.
+    This class defines the interface for definition of sub domains.
+    Alternatively, sub domains may be defined by a Mesh and a
+    MeshFunction<uint> over the mesh.
 
     .. cpp:function:: SubDomain()
     

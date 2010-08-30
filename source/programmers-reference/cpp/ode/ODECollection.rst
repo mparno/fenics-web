@@ -12,20 +12,20 @@ ODECollection.h
 
 .. cpp:class:: ODECollection
 
-        An ODECollection represents a collection of initial value
-        problems of the form
-        
+    An ODECollection represents a collection of initial value
+    problems of the form
+    
         u'(t) = f(u(t), t) on (0, T],
-        
+    
         u(0)  = u0,
-        
-        where u(t) is a vector of length N.
-        
-        Each ODE is governed by the same equation but a separate
-        state is maintained for each ODE. Using ODECollection is
-        recommended when solving a large number of ODEs and the
-        overhead of instantiating a large number of ODE objects
-        should be avoided.
+    
+    where u(t) is a vector of length N.
+    
+    Each ODE is governed by the same equation but a separate
+    state is maintained for each ODE. Using ODECollection is
+    recommended when solving a large number of ODEs and the
+    overhead of instantiating a large number of ODE objects
+    should be avoided.
 
     .. cpp:function:: ODECollection(ODE& ode, uint num_systems)
     

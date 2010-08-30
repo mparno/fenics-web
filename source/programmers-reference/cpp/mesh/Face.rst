@@ -16,7 +16,7 @@ Face.h
     
         * :cpp:class:`MeshEntity`
         
-        A Face is a MeshEntity of topological dimension 2.
+    A Face is a MeshEntity of topological dimension 2.
 
     .. cpp:function:: Face(const Mesh& mesh, uint index) : MeshEntity(mesh, 2, index)
     
@@ -32,7 +32,7 @@ Face.h
     
         * :cpp:class:`MeshEntityIterator`
         
-        A FaceIterator is a MeshEntityIterator of topological dimension 2.
+    A FaceIterator is a MeshEntityIterator of topological dimension 2.
 
 .. cpp:class:: T>
 
@@ -40,5 +40,5 @@ Face.h
     
         * :cpp:class:`MeshFunction<T>`
         
-        A FaceFunction is a MeshFunction of topological dimension 2.
+    A FaceFunction is a MeshFunction of topological dimension 2.
 

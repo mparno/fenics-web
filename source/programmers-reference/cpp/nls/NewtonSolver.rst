@@ -16,7 +16,7 @@ NewtonSolver.h
     
         * :cpp:class:`Variable`
         
-        This class defines a Newton solver for equations of the form F(u) = 0.
+    This class defines a Newton solver for equations of the form F(u) = 0.
 
     .. cpp:function:: GenericLinearSolver& linear_solver() const
     

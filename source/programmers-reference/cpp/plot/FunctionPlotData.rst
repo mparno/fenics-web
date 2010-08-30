@@ -16,10 +16,10 @@ FunctionPlotData.h
     
         * :cpp:class:`Variable`
         
-        This class is used for communicating plot data for functions
-        to and from (XML) files. It is used by DOLFIN for plotting
-        Function objects. The data is stored as a mesh and a vector
-        of interpolated vertex values.
+    This class is used for communicating plot data for functions
+    to and from (XML) files. It is used by DOLFIN for plotting
+    Function objects. The data is stored as a mesh and a vector
+    of interpolated vertex values.
 
     .. cpp:function:: FunctionPlotData()
     

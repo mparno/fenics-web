@@ -12,15 +12,15 @@ MeshTopology.h
 
 .. cpp:class:: MeshTopology
 
-        MeshTopology stores the topology of a mesh, consisting of mesh entities
-        and connectivity (incidence relations for the mesh entities). Note that
-        the mesh entities don't need to be stored, only the number of entities
-        and the connectivity. Any numbering scheme for the mesh entities is
-        stored separately in a MeshFunction over the entities.
-        
-        A mesh entity e may be identified globally as a pair e = (dim, i), where
-        dim is the topological dimension and i is the index of the entity within
-        that topological dimension.
+    MeshTopology stores the topology of a mesh, consisting of mesh entities
+    and connectivity (incidence relations for the mesh entities). Note that
+    the mesh entities don't need to be stored, only the number of entities
+    and the connectivity. Any numbering scheme for the mesh entities is
+    stored separately in a MeshFunction over the entities.
+    
+    A mesh entity e may be identified globally as a pair e = (dim, i), where
+    dim is the topological dimension and i is the index of the entity within
+    that topological dimension.
 
     .. cpp:function:: MeshTopology()
     

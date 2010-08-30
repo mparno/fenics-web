@@ -16,7 +16,7 @@ GenericMatrix.h
     
         * :cpp:class:`GenericTensor`
         
-        This class defines a common interface for matrices.
+    This class defines a common interface for matrices.
 
     .. cpp:function:: const GenericMatrix& operator+= (const GenericMatrix& A)
     

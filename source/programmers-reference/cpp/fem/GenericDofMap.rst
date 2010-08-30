@@ -16,7 +16,7 @@ GenericDofMap.h
     
         * :cpp:class:`Variable`
         
-        This class provides a generic interface for dof maps
+    This class provides a generic interface for dof maps
 
     .. cpp:function:: virtual GenericDofMap* collapse(std::map<uint, uint>& collapsed_map,
                                                       const Mesh& dolfin_mesh) const = 0

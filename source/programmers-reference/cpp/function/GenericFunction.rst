@@ -16,16 +16,16 @@ GenericFunction.h
     
         * :cpp:class:`ufc::function,`
         
-        This is a common base class for functions. Functions can be
-        evaluated at a given point and they can be restricted to a given
-        cell in a finite element mesh. This functionality is implemented
-        by sub-classes that implement the eval() and restrict() functions.
-        
-        DOLFIN provides two implementations of the GenericFunction
-        interface in the form of the classes Function and Expression.
-        
-        Sub-classes may optionally implement the gather() function that
-        will be called prior to restriction when running in parallel.
+    This is a common base class for functions. Functions can be
+    evaluated at a given point and they can be restricted to a given
+    cell in a finite element mesh. This functionality is implemented
+    by sub-classes that implement the eval() and restrict() functions.
+    
+    DOLFIN provides two implementations of the GenericFunction
+    interface in the form of the classes Function and Expression.
+    
+    Sub-classes may optionally implement the gather() function that
+    will be called prior to restriction when running in parallel.
 
     .. cpp:function:: GenericFunction()
     

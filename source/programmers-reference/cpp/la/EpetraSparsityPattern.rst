@@ -16,11 +16,11 @@ EpetraSparsityPattern.h
     
         * :cpp:class:`GenericSparsityPattern`
         
-        This class implements the GenericSparsityPattern interface for
-        the Epetra backend. The common interface is mostly
-        ignored. Instead, the sparsity pattern is represented as an
-        Epetra_FECrsGraph and a dynamic_cast is used to retrieve the
-        underlying representation when creating Epetra matrices.
+    This class implements the GenericSparsityPattern interface for
+    the Epetra backend. The common interface is mostly
+    ignored. Instead, the sparsity pattern is represented as an
+    Epetra_FECrsGraph and a dynamic_cast is used to retrieve the
+    underlying representation when creating Epetra matrices.
 
     .. cpp:function:: EpetraSparsityPattern()
     

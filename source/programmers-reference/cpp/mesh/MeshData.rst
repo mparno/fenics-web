@@ -16,44 +16,44 @@ MeshData.h
     
         * :cpp:class:`Variable`
         
-        The class MeshData is a container for auxiliary mesh data,
-        represented either as MeshFunctions over topological mesh
-        entities, arrays or maps. Each dataset is identified by a unique
-        user-specified string. Only uint-valued data are currently
-        supported.
-        
-        The following named mesh data are recognized by DOLFIN:
-        
-        Boundary indicators
-        
-        "boundary facet cells"   - Array<uint> of size num_facets
-        "boundary facet numbers" - Array<uint> of size num_facets
-        "boundary indicators"    - Array<uint> of size num_facets
-        "material indicators"    - MeshFunction<uint> of dimension D
-        
-        Boundary indicators (alternative)
-        
-        "exterior facet domains" - MeshFunction<uint> of dimension D - 1
-        
-        Facet orientation (used for assembly over interior facets)
-        
-        "facet orientation" - MeshFunction<uint> of dimension D - 1
-        
-        Boundary extraction
-        
-        "vertex map" - MeshFunction<uint> of dimension 0
-        "cell map"   - MeshFunction<uint> of dimension D
-        
-        Mesh partitioning
-        
-        "global entity indices %d" - MeshFunction<uint> of dimension 0, 1, ..., D
-        "exterior facets"          - MeshFunction<uint> of dimension D - 1
-        "num global entities"      - Array<uint> of size D + 1
-        "overlap"                  - vector mapping
-        
-        Sub meshes
-        
-        "global vertex indices" - MeshFunction<uint> of dimension 0
+    The class MeshData is a container for auxiliary mesh data,
+    represented either as MeshFunctions over topological mesh
+    entities, arrays or maps. Each dataset is identified by a unique
+    user-specified string. Only uint-valued data are currently
+    supported.
+    
+    The following named mesh data are recognized by DOLFIN:
+    
+    Boundary indicators
+    
+      "boundary facet cells"   - Array<uint> of size num_facets
+      "boundary facet numbers" - Array<uint> of size num_facets
+      "boundary indicators"    - Array<uint> of size num_facets
+      "material indicators"    - MeshFunction<uint> of dimension D
+    
+    Boundary indicators (alternative)
+    
+      "exterior facet domains" - MeshFunction<uint> of dimension D - 1
+    
+    Facet orientation (used for assembly over interior facets)
+    
+      "facet orientation" - MeshFunction<uint> of dimension D - 1
+    
+    Boundary extraction
+    
+      "vertex map" - MeshFunction<uint> of dimension 0
+      "cell map"   - MeshFunction<uint> of dimension D
+    
+    Mesh partitioning
+    
+      "global entity indices %d" - MeshFunction<uint> of dimension 0, 1, ..., D
+      "exterior facets"          - MeshFunction<uint> of dimension D - 1
+      "num global entities"      - Array<uint> of size D + 1
+      "overlap"                  - vector mapping
+    
+    Sub meshes
+    
+       "global vertex indices" - MeshFunction<uint> of dimension 0
 
     .. cpp:function:: MeshData(Mesh& mesh)
     

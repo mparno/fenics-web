@@ -26,7 +26,7 @@ MPI.h
 
 .. cpp:class:: MPI
 
-        This class provides utility functions for easy communcation with MPI.
+    This class provides utility functions for easy communcation with MPI.
 
     .. cpp:function:: static bool is_broadcaster()
     
@@ -43,7 +43,7 @@ MPI.h
     .. cpp:function:: static std::pair<uint, uint> local_range(uint N)
     
         Return local range for local process, splitting [0, N - 1] into
-        num_processes() portions of almost equal size
+         num_processes() portions of almost equal size
 
     .. cpp:function:: static std::pair<uint, uint> local_range(uint process, uint N)
     

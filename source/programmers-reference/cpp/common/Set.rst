@@ -12,8 +12,8 @@ Set.h
 
 .. cpp:class:: Set
 
-        This is a std::set like data structure. It is not ordered and it is based
-        a std::vector. It can be faster than a std::set for some cases.
+    This is a std::set like data structure. It is not ordered and it is based
+    a std::vector. It can be faster than a std::set for some cases.
 
     .. cpp:function:: Set(const dolfin::Set<T>& x) : _x(x._x)
     

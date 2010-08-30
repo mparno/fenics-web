@@ -12,9 +12,9 @@ Point.h
 
 .. cpp:class:: Point
 
-        A Point represents a point in R^3 with coordinates x, y, z, or,
-        alternatively, a vector in R^3, supporting standard operations
-        like the norm, distances, scalar and vector products etc.
+    A Point represents a point in R^3 with coordinates x, y, z, or,
+    alternatively, a vector in R^3, supporting standard operations
+    like the norm, distances, scalar and vector products etc.
 
     .. cpp:function:: Point operator* (double a) const
     

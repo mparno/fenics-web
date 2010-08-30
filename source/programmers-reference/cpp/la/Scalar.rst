@@ -16,8 +16,8 @@ Scalar.h
     
         * :cpp:class:`GenericTensor`
         
-        This class represents a real-valued scalar quantity and
-        implements the GenericTensor interface for scalars.
+    This class represents a real-valued scalar quantity and
+    implements the GenericTensor interface for scalars.
 
     .. cpp:function:: Scalar() : GenericTensor(), value(0.0)
     

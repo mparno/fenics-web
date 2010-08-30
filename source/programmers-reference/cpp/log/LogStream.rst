@@ -12,9 +12,9 @@ LogStream.h
 
 .. cpp:class:: LogStream
 
-        This class provides functionality similar to standard C++
-        streams (std::cout, std::endl) for output but working through
-        the DOLFIN log system.
+    This class provides functionality similar to standard C++
+    streams (std::cout, std::endl) for output but working through
+    the DOLFIN log system.
 
     .. cpp:function:: LogStream& operator<< (complex z)
     

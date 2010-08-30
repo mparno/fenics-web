@@ -20,9 +20,9 @@ ITLKrylovSolver.h
     
         * :cpp:class:`GenericLinearSolver`
         
-        This class implements Krylov methods for linear systems
-        of the form Ax = b. It is a wrapper for the Krylov solvers
-        of ITL.
+    This class implements Krylov methods for linear systems
+    of the form Ax = b. It is a wrapper for the Krylov solvers
+    of ITL.
 
     .. cpp:function:: ITLKrylovSolver(std::string method = "default", std::string pc_type = "default")
     

@@ -16,16 +16,16 @@ BasisFunction.h
     
         * :cpp:class:`ufc::function`
         
-        This class represents a finite element basis function. It can be
-        used for computation of basis function values and derivatives.
-        
-        Evaluation of basis functions is also possible through the use
-        of the functions evaluate_basis and evaluate_basis_derivatives
-        available in the FiniteElement class. The BasisFunction class
-        relies on these functions for evaluation but also implements the
-        ufc::function interface which allows evaluate_dof to be
-        evaluated for a basis function (on a possibly different
-        element).
+    This class represents a finite element basis function. It can be
+    used for computation of basis function values and derivatives.
+    
+    Evaluation of basis functions is also possible through the use
+    of the functions evaluate_basis and evaluate_basis_derivatives
+    available in the FiniteElement class. The BasisFunction class
+    relies on these functions for evaluation but also implements the
+    ufc::function interface which allows evaluate_dof to be
+    evaluated for a basis function (on a possibly different
+    element).
 
     .. cpp:function:: BasisFunction(uint index, const FiniteElement& element, const ufc::cell& cell)
                        : index(index), element(element), cell(cell)

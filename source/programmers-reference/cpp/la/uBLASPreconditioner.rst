@@ -12,8 +12,8 @@ uBLASPreconditioner.h
 
 .. cpp:class:: uBLASPreconditioner
 
-        This class specifies the interface for preconditioners for the
-        uBLAS Krylov solver.
+    This class specifies the interface for preconditioners for the
+    uBLAS Krylov solver.
 
     .. cpp:function:: uBLASPreconditioner()
     

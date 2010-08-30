@@ -16,7 +16,7 @@ GenericVector.h
     
         * :cpp:class:`GenericTensor`
         
-        This class defines a common interface for vectors.
+    This class defines a common interface for vectors.
 
     .. cpp:function:: inline void init(const GenericSparsityPattern& sparsity_pattern)
     

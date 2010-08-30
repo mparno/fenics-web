@@ -12,8 +12,8 @@ NonlinearProblem.h
 
 .. cpp:class:: NonlinearProblem
 
-        This is a base class for nonlinear problems which can return the
-        nonlinear function F(u) and its Jacobian J = dF(u)/du.
+    This is a base class for nonlinear problems which can return the
+    nonlinear function F(u) and its Jacobian J = dF(u)/du.
 
     .. cpp:function:: NonlinearProblem()
     

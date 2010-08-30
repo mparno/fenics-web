@@ -16,8 +16,8 @@ Box.h
     
         * :cpp:class:`Mesh`
         
-        Tetrahedral mesh of the 3D  rectangular prism (x0, y0) x (x1, y1) x (x2, y2).
-        Given the number of cells (nx, ny, nz) in each direction,
-        the total number of tetrahedra will be 6*nx*ny*nz and the
-        total number of vertices will be (nx + 1)*(ny + 1)*(nz + 1).
+    Tetrahedral mesh of the 3D  rectangular prism (x0, y0) x (x1, y1) x (x2, y2).
+    Given the number of cells (nx, ny, nz) in each direction,
+    the total number of tetrahedra will be 6*nx*ny*nz and the
+    total number of vertices will be (nx + 1)*(ny + 1)*(nz + 1).
 

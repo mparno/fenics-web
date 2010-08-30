@@ -24,9 +24,9 @@ EpetraLUSolver.h
     
         * :cpp:class:`GenericLUSolver`
         
-        This class implements the direct solution (LU factorization) for
-        linear systems of the form Ax = b. It is a wrapper for the LU
-        solver of Epetra.
+    This class implements the direct solution (LU factorization) for
+    linear systems of the form Ax = b. It is a wrapper for the LU
+    solver of Epetra.
 
     .. cpp:function:: EpetraLUSolver()
     

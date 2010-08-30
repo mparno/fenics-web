@@ -16,18 +16,18 @@ Lagrange.h
     
         * :cpp:class:`Variable`
         
-        Lagrange polynomial (basis) with given degree q determined by n = q + 1 nodal points.
-        
-        Example: q = 1 (n = 2)
-        
-        Lagrange p(1);
-        p.set(0, 0.0);
-        p.set(1, 1.0);
-        
-        This creates a Lagrange polynomial (actually two Lagrange polynomials):
-        
-        p(0,x) = 1 - x   (one at x = 0, zero at x = 1)
-        p(1,x) = x       (zero at x = 0, one at x = 1)
+    Lagrange polynomial (basis) with given degree q determined by n = q + 1 nodal points.
+    
+    Example: q = 1 (n = 2)
+    
+      Lagrange p(1);
+      p.set(0, 0.0);
+      p.set(1, 1.0);
+    
+    This creates a Lagrange polynomial (actually two Lagrange polynomials):
+    
+      p(0,x) = 1 - x   (one at x = 0, zero at x = 1)
+      p(1,x) = x       (zero at x = 0, one at x = 1)
 
     .. cpp:function:: Lagrange(const Lagrange& p)
     

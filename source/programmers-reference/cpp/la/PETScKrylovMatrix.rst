@@ -16,18 +16,18 @@ PETScKrylovMatrix.h
     
         * :cpp:class:`PETScBaseMatrix`
         
-        This class represents a matrix-free matrix of dimension m x m.
-        It is a simple wrapper for a PETSc shell matrix. The interface
-        is intentionally simple. For advanced usage, access the PETSc
-        Mat pointer using the function mat() and use the standard PETSc
-        interface.
-        
-        The class PETScKrylovMatrix enables the use of Krylov subspace
-        methods for linear systems Ax = b, without having to explicitly
-        store the matrix A. All that is needed is that the user-defined
-        PETScKrylovMatrix implements multiplication with vectors. Note that
-        the multiplication operator needs to be defined in terms of
-        PETSc data structures (Vec), since it will be called from PETSc.
+    This class represents a matrix-free matrix of dimension m x m.
+    It is a simple wrapper for a PETSc shell matrix. The interface
+    is intentionally simple. For advanced usage, access the PETSc
+    Mat pointer using the function mat() and use the standard PETSc
+    interface.
+    
+    The class PETScKrylovMatrix enables the use of Krylov subspace
+    methods for linear systems Ax = b, without having to explicitly
+    store the matrix A. All that is needed is that the user-defined
+    PETScKrylovMatrix implements multiplication with vectors. Note that
+    the multiplication operator needs to be defined in terms of
+    PETSc data structures (Vec), since it will be called from PETSc.
 
     .. cpp:function:: PETScKrylovMatrix()
     

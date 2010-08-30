@@ -20,9 +20,9 @@ PETScKrylovSolver.h
     
         * :cpp:class:`GenericLinearSolver,`
         
-        This class implements Krylov methods for linear systems
-        of the form Ax = b. It is a wrapper for the Krylov solvers
-        of PETSc.
+    This class implements Krylov methods for linear systems
+    of the form Ax = b. It is a wrapper for the Krylov solvers
+    of PETSc.
 
     .. cpp:function:: PETScKrylovSolver(std::string method = "default", std::string pc_type = "default")
     

@@ -16,10 +16,10 @@ UnitSquare.h
     
         * :cpp:class:`Mesh`
         
-        Triangular mesh of the 2D unit square (0,1) x (0,1).
-        Given the number of cells (nx, ny) in each direction,
-        the total number of triangles will be 2*nx*ny and the
-        total number of vertices will be (nx + 1)*(ny + 1).
-        std::string diagonal ("left", "right", "right/left" or "crossed")
-        indicates the direction of the diagonals.
+    Triangular mesh of the 2D unit square (0,1) x (0,1).
+    Given the number of cells (nx, ny) in each direction,
+    the total number of triangles will be 2*nx*ny and the
+    total number of vertices will be (nx + 1)*(ny + 1).
+    std::string diagonal ("left", "right", "right/left" or "crossed")
+    indicates the direction of the diagonals.
 

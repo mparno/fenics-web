@@ -16,7 +16,7 @@ GenericLinearSolver.h
     
         * :cpp:class:`Variable`
         
-        This class provides a general solver for linear systems Ax = b.
+    This class provides a general solver for linear systems Ax = b.
 
     .. cpp:function:: virtual uint solve(GenericVector& x, const GenericVector& b)
     

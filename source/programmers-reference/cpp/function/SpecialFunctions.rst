@@ -16,7 +16,7 @@ SpecialFunctions.h
     
         * :cpp:class:`Expression`
         
-        This Function represents the mesh coordinates on a given mesh.
+    This Function represents the mesh coordinates on a given mesh.
 
     .. cpp:function:: MeshCoordinates(const Mesh& mesh)
     
@@ -32,7 +32,7 @@ SpecialFunctions.h
     
         * :cpp:class:`Expression`
         
-        This Function represents the local cell size on a given mesh.
+    This Function represents the local cell size on a given mesh.
 
     .. cpp:function:: CellSize(const Mesh& mesh)
     
@@ -48,7 +48,7 @@ SpecialFunctions.h
     
         * :cpp:class:`Expression`
         
-        This function represents the area/length of a cell facet on a given mesh.
+    This function represents the area/length of a cell facet on a given mesh.
 
     .. cpp:function:: FacetArea(const Mesh& mesh)
     

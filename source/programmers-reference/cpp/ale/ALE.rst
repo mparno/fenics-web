@@ -12,10 +12,10 @@ ALE.h
 
 .. cpp:class:: ALE
 
-        This class provides functionality useful for implementation of
-        ALE (Arbitrary Lagrangian-Eulerian) methods, in particular
-        moving the boundary vertices of a mesh and then interpolating
-        the new coordinates for the interior vertices accordingly.
+    This class provides functionality useful for implementation of
+    ALE (Arbitrary Lagrangian-Eulerian) methods, in particular
+    moving the boundary vertices of a mesh and then interpolating
+    the new coordinates for the interior vertices accordingly.
 
     .. cpp:function:: static void move(Mesh& mesh, BoundaryMesh& new_boundary, dolfin::ALEType method=lagrange)
     

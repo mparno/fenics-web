@@ -12,9 +12,9 @@ Data.h
 
 .. cpp:class:: Data
 
-        This class holds data for function evaluation, including
-        the coordinates x, the time t, and auxiliary data that a
-        function may depend on.
+    This class holds data for function evaluation, including
+    the coordinates x, the time t, and auxiliary data that a
+    function may depend on.
 
     .. cpp:function:: Data()
     

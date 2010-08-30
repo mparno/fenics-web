@@ -12,8 +12,8 @@ MeshEntity.h
 
 .. cpp:class:: MeshEntity
 
-        A MeshEntity represents a mesh entity associated with
-        a specific topological dimension of some mesh.
+    A MeshEntity represents a mesh entity associated with
+    a specific topological dimension of some mesh.
 
     .. cpp:function:: MeshEntity() :_mesh(0), _dim(0), _index(0)
     

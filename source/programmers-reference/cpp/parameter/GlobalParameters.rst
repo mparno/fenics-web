@@ -16,7 +16,7 @@ GlobalParameters.h
     
         * :cpp:class:`Parameters`
         
-        This class defines the global DOLFIN parameter database.
+    This class defines the global DOLFIN parameter database.
 
     .. cpp:function:: GlobalParameters()
     

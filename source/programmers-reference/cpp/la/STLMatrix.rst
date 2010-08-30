@@ -16,9 +16,9 @@ STLMatrix.h
     
         * :cpp:class:`GenericMatrix`
         
-        Simple implementation of a GenericMatrix for experimenting
-        with new assembly. Not sure this will be used later but it
-        might be useful.
+    Simple implementation of a GenericMatrix for experimenting
+    with new assembly. Not sure this will be used later but it
+    might be useful.
 
     .. cpp:function:: STLMatrix()
     

@@ -12,9 +12,9 @@ CellType.h
 
 .. cpp:class:: CellType
 
-        This class provides a common interface for different cell types.
-        Each cell type implements mesh functionality that is specific to
-        a certain type of cell.
+    This class provides a common interface for different cell types.
+    Each cell type implements mesh functionality that is specific to
+    a certain type of cell.
 
     .. cpp:function:: CellType(Type cell_type, Type facet_type)
     

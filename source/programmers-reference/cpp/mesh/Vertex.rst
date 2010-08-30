@@ -16,7 +16,7 @@ Vertex.h
     
         * :cpp:class:`MeshEntity`
         
-        A Vertex is a MeshEntity of topological dimension 0.
+    A Vertex is a MeshEntity of topological dimension 0.
 
     .. cpp:function:: Point point() const
     
@@ -48,7 +48,7 @@ Vertex.h
     
         * :cpp:class:`MeshEntityIterator`
         
-        A VertexIterator is a MeshEntityIterator of topological dimension 0.
+    A VertexIterator is a MeshEntityIterator of topological dimension 0.
 
 .. cpp:class:: T>
 
@@ -56,5 +56,5 @@ Vertex.h
     
         * :cpp:class:`MeshFunction<T>`
         
-        A VertexFunction is a MeshFunction of topological dimension 0.
+    A VertexFunction is a MeshFunction of topological dimension 0.
 

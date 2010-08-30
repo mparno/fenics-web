@@ -12,11 +12,11 @@ SystemAssembler.h
 
 .. cpp:class:: SystemAssembler
 
-        This class provides implements an assembler for systems
-        of the form Ax = b. It differs from the default DOLFIN
-        assembler in that it assembles both A and b and the same
-        time (leading to better performance) and in that it applies
-        boundary conditions at the time of assembly.
+    This class provides implements an assembler for systems
+    of the form Ax = b. It differs from the default DOLFIN
+    assembler in that it assembles both A and b and the same
+    time (leading to better performance) and in that it applies
+    boundary conditions at the time of assembly.
 
     .. cpp:function:: static void assemble(GenericMatrix& A,
                                            GenericVector& b,

@@ -20,13 +20,13 @@ EpetraMatrix.h
     
         * :cpp:class:`GenericMatrix`
         
-        This class provides a simple matrix class based on Epetra.
-        It is a simple wrapper for an Epetra matrix object (Epetra_FECrsMatrix)
-        implementing the GenericMatrix interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the Epetra_FECrsMatrix object using the function mat() and
-        use the standard Epetra interface.
+    This class provides a simple matrix class based on Epetra.
+    It is a simple wrapper for an Epetra matrix object (Epetra_FECrsMatrix)
+    implementing the GenericMatrix interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the Epetra_FECrsMatrix object using the function mat() and
+    use the standard Epetra interface.
 
     .. cpp:function:: EpetraMatrix()
     

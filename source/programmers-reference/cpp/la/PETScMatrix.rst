@@ -16,13 +16,13 @@ PETScMatrix.h
     
         * :cpp:class:`PETScBaseMatrix,`
         
-        This class provides a simple matrix class based on PETSc.
-        It is a wrapper for a PETSc matrix pointer (Mat)
-        implementing the GenericMatrix interface.
-        
-        The interface is intentionally simple. For advanced usage,
-        access the PETSc Mat pointer using the function mat() and
-        use the standard PETSc interface.
+    This class provides a simple matrix class based on PETSc.
+    It is a wrapper for a PETSc matrix pointer (Mat)
+    implementing the GenericMatrix interface.
+    
+    The interface is intentionally simple. For advanced usage,
+    access the PETSc Mat pointer using the function mat() and
+    use the standard PETSc interface.
 
     .. cpp:function:: PETScMatrix()
     

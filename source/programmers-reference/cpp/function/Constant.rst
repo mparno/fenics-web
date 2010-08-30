@@ -16,7 +16,7 @@ Constant.h
     
         * :cpp:class:`Expression`
         
-        This class represents a constant-valued expression.
+    This class represents a constant-valued expression.
 
     .. cpp:function:: Constant(const Constant& constant)
     

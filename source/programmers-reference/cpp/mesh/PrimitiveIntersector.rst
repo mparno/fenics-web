@@ -12,8 +12,8 @@ PrimitiveIntersector.h
 
 .. cpp:class:: PrimitiveIntersector
 
-        This class implements an intersection detection, detecting
-        whether two given (arbitrary) meshentities intersect.
+    This class implements an intersection detection, detecting
+    whether two given (arbitrary) meshentities intersect.
 
     .. cpp:function:: static bool do_intersect(const MeshEntity& entity_1,
                                                const Point& point)
