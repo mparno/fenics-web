@@ -2,7 +2,7 @@
 
 .. _demos_python_pde_mixed-poisson:
 
-A mixed formulation for Poisson's equation
+Mixed formulation for Poisson's equation
 ==========================================
 
 .. include:: ../../../common/pde/mixed-poisson/mixed-poisson.txt
