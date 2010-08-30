@@ -16,8 +16,7 @@ LinearAlgebraFactory.h
     
         Constructor
 
-    .. cpp:function:: dolfin::GenericLinearSolver*
-                                                           create_krylov_solver(std::string method, std::string pc) const = 0
+    .. cpp:function:: dolfin::GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const = 0
     
         Create Krylov solver
 

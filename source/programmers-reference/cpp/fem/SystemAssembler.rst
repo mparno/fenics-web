@@ -18,48 +18,21 @@ SystemAssembler.h
     time (leading to better performance) and in that it applies
     boundary conditions at the time of assembly.
 
-    .. cpp:function:: static void assemble(GenericMatrix& A,
-                                           GenericVector& b,
-                                           const Form& a,
-                                           const Form& L,
-                                           const DirichletBC& bc,
-                                           bool reset_sparsity=true,
-                                           bool add_values=true)
+    .. cpp:function:: static void assemble(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, bool reset_sparsity=true, bool add_values=false)
+    
+        Assemble system (A, b)
+
+    .. cpp:function:: static void assemble(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, const DirichletBC& bc, bool reset_sparsity=true, bool add_values=true)
     
         Assemble system (A, b) and apply Dirichlet boundary condition
 
-    .. cpp:function:: static void assemble(GenericMatrix& A,
-                                           GenericVector& b,
-                                           const Form& a,
-                                           const Form& L,
-                                           const std::vector<const DirichletBC*>& bcs,
-                                           bool reset_sparsity=true,
-                                           bool add_values=false)
+    .. cpp:function:: static void assemble(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, const std::vector<const DirichletBC*>& bcs, bool reset_sparsity=true, bool add_values=false)
     
         Assemble system (A, b) and apply Dirichlet boundary conditions
 
-    .. cpp:function:: static void assemble(GenericMatrix& A,
-                                           GenericVector& b,
-                                           const Form& a,
-                                           const Form& L,
-                                           const std::vector<const DirichletBC*>& bcs,
-                                           const MeshFunction<uint>* cell_domains,
-                                           const MeshFunction<uint>* exterior_facet_domains,
-                                           const MeshFunction<uint>* interior_facet_domains,
-                                           const GenericVector* x0,
-                                           bool reset_sparsity=true,
-                                           bool add_values=false)
+    .. cpp:function:: static void assemble(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, const std::vector<const DirichletBC*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, const GenericVector* x0, bool reset_sparsity=true, bool add_values=false)
     
         Assemble system (A, b) and apply Dirichlet boundary conditions
-
-    .. cpp:function:: static void assemble(GenericMatrix& A,
-                       GenericVector& b,
-                       const Form& a,
-                       const Form& L,
-                       bool reset_sparsity=true,
-                       bool add_values=false)
-    
-        Assemble system (A, b)
 
 .. cpp:class:: Scratch
 

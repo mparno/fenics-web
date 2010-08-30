@@ -47,36 +47,22 @@ VariationalProblem.h
     
         Return Newton solver (only useful when solving a nonlinear problem)
 
-    .. cpp:function:: VariationalProblem(const Form& a,
-                                         const Form& L,
-                                         const BoundaryCondition& bc,
-                                         bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, bool nonlinear=false)
+    
+        Define variational problem with natural boundary conditions
+
+    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const BoundaryCondition& bc, bool nonlinear=false)
     
         Define variational problem with a single Dirichlet boundary conditions
 
-    .. cpp:function:: VariationalProblem(const Form& a,
-                                         const Form& L,
-                                         const std::vector<const BoundaryCondition*>& bcs,
-                                         bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const std::vector<const BoundaryCondition*>& bcs, bool nonlinear=false)
     
         Define variational problem with a list of Dirichlet boundary conditions
 
-    .. cpp:function:: VariationalProblem(const Form& a,
-                                         const Form& L,
-                                         const std::vector<const BoundaryCondition*>& bcs,
-                                         const MeshFunction<uint>* cell_domains,
-                                         const MeshFunction<uint>* exterior_facet_domains,
-                                         const MeshFunction<uint>* interior_facet_domains,
-                                         bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const std::vector<const BoundaryCondition*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool nonlinear=false)
     
         Define variational problem with a list of Dirichlet boundary conditions
         and subdomains
-
-    .. cpp:function:: VariationalProblem(const Form& a,
-                       const Form& L,
-                       bool nonlinear=false)
-    
-        Define variational problem with natural boundary conditions
 
     .. cpp:function:: static Parameters default_parameters()
     

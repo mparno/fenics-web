@@ -46,8 +46,7 @@ SingularSolver.h
     
         Solve linear system Ax = b
 
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b,
-                                 const GenericMatrix& M)
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, const GenericMatrix& M)
     
         Solve linear system Ax = b using mass matrix M for setting constraint
 

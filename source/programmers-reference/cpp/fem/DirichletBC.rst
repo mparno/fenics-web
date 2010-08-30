@@ -59,24 +59,15 @@ DirichletBC.h
     "topological", "geometric" and "pointwise".
     This class specifies the interface for setting (strong)
 
-    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V,
-                                  boost::shared_ptr<const GenericFunction> g,
-                                  boost::shared_ptr<const SubDomain> sub_domain,
-                                  std::string method="topological")
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, boost::shared_ptr<const SubDomain> sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain
 
-    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V,
-                                  boost::shared_ptr<const GenericFunction> g,
-                                  const MeshFunction<uint>& sub_domains, uint sub_domain,
-                                  std::string method="topological")
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
 
-    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V,
-                                  boost::shared_ptr<const GenericFunction> g,
-                                  uint sub_domain,
-                                  std::string method="topological")
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, uint sub_domain, std::string method="topological")
     
         Create boundary condition for boundary data included in the mesh
 
@@ -84,26 +75,17 @@ DirichletBC.h
     
         Copy constructor
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V,
-                                  const GenericFunction& g,
-                                  const MeshFunction<uint>& sub_domains, uint sub_domain,
-                                  std::string method="topological")
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V,
-                                  const GenericFunction& g,
-                                  uint sub_domain,
-                                  std::string method="topological")
-    
-        Create boundary condition for boundary data included in the mesh
-
-    .. cpp:function:: DirichletBC(const FunctionSpace& V,
-                       const GenericFunction& g,
-                       const SubDomain& sub_domain,
-                       std::string method="topological")
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const SubDomain& sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain
+
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, uint sub_domain, std::string method="topological")
+    
+        Create boundary condition for boundary data included in the mesh
 
     .. cpp:function:: bool is_compatible(GenericFunction& v) const
     

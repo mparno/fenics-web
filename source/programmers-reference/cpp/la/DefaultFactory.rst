@@ -20,8 +20,7 @@ DefaultFactory.h
     
         Constructor
 
-    .. cpp:function:: dolfin::GenericLinearSolver*
-                                                           create_krylov_solver(std::string method, std::string pc) const
+    .. cpp:function:: dolfin::GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const
     
         Create Krylov solver
 

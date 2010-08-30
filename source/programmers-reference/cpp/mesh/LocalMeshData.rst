@@ -33,9 +33,7 @@ LocalMeshData.h
     data, at that point corresponding to topologically connected
     meshes instead of local mesh data.
 
-    .. cpp:function:: // FIXME: Provide a better public interface rather than using 'friend class'
-                       
-                       LocalMeshData()
+    .. cpp:function:: // FIXME: Provide a better public interface rather than using 'friend class'  LocalMeshData()
     
         Create empty local mesh data
 

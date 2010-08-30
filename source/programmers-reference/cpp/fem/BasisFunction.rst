@@ -28,7 +28,6 @@ BasisFunction.h
     element).
 
     .. cpp:function:: BasisFunction(uint index, const FiniteElement& element, const ufc::cell& cell)
-                      
     
         Create basis function with given index on element on given cell
 
@@ -52,9 +51,7 @@ BasisFunction.h
     
         Evaluate all order n derivatives at given point
 
-    .. cpp:function:: void evaluate(double* values,
-                                    const double* coordinates,
-                                    const ufc::cell& cell) const
+    .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
     
         Evaluate function at given point in cell
 

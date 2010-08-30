@@ -24,8 +24,7 @@ PETScLUSolver.h
     linear systems of the form Ax = b. It is a wrapper for the LU
     solver of PETSc.
 
-    .. cpp:function:: PETScLUSolver(boost::shared_ptr<const PETScMatrix> A,
-                                    std::string lu_package="default")
+    .. cpp:function:: PETScLUSolver(boost::shared_ptr<const PETScMatrix> A, std::string lu_package="default")
     
         Constructor
 

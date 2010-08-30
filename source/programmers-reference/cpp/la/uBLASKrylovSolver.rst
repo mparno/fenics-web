@@ -39,36 +39,27 @@ uBLASKrylovSolver.h
     
         Krylov method
 
-    .. cpp:function:: template<class Mat>
-                                          uint solveBiCGStab(const Mat& A, uBLASVector& x, const uBLASVector& b,
-                                          bool& converged) const
+    .. cpp:function:: template<class Mat> uint solveBiCGStab(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using BiCGStab
 
-    .. cpp:function:: template<class Mat>
-                                          uint solveCG(const Mat& A, uBLASVector& x, const uBLASVector& b,
-                                          bool& converged) const
+    .. cpp:function:: template<class Mat> uint solveCG(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using CG
 
-    .. cpp:function:: template<class Mat>
-                                          uint solveGMRES(const Mat& A, uBLASVector& x, const uBLASVector& b,
-                                          bool& converged) const
+    .. cpp:function:: template<class Mat> uint solveGMRES(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using restarted GMRES
 
-    .. cpp:function:: template<class Mat>
-                                          uint solve_krylov(const Mat& A, uBLASVector& x, const uBLASVector& b)
+    .. cpp:function:: template<class Mat> uint solve_krylov(const Mat& A, uBLASVector& x, const uBLASVector& b)
     
         Select solver and solve linear system Ax = b and return number of iterations
 
-    .. cpp:function:: uBLASKrylovSolver(std::string solver_type,
-                                        uBLASPreconditioner& preconditioner)
+    .. cpp:function:: uBLASKrylovSolver(std::string solver_type, uBLASPreconditioner& preconditioner)
     
         Create Krylov solver for a particular method and uBLASPreconditioner
 
-    .. cpp:function:: uBLASKrylovSolver(std::string solver_type="default",
-                       std::string pc_type="default")
+    .. cpp:function:: uBLASKrylovSolver(std::string solver_type="default", std::string pc_type="default")
     
         Create Krylov solver for a particular method and preconditioner
 
@@ -84,13 +75,11 @@ uBLASKrylovSolver.h
     
         Solve linear system Ax = b and return number of iterations (virtual matrix)
 
-    .. cpp:function:: uint solve(const uBLASMatrix<ublas_dense_matrix>& A, uBLASVector& x,
-                                 const uBLASVector& b)
+    .. cpp:function:: uint solve(const uBLASMatrix<ublas_dense_matrix>& A, uBLASVector& x, const uBLASVector& b)
     
         Solve linear system Ax = b and return number of iterations (dense matrix)
 
-    .. cpp:function:: uint solve(const uBLASMatrix<ublas_sparse_matrix>& A, uBLASVector& x,
-                                 const uBLASVector& b)
+    .. cpp:function:: uint solve(const uBLASMatrix<ublas_sparse_matrix>& A, uBLASVector& x, const uBLASVector& b)
     
         Solve linear system Ax = b and return number of iterations (sparse matrix)
 

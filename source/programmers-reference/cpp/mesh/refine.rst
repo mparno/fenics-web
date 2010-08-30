@@ -14,19 +14,15 @@ refine.h
     
         Create uniformly refined mesh
 
-    .. cpp:function:: Mesh refine(const Mesh& mesh,
-                                  const MeshFunction<bool>& cell_markers)
+    .. cpp:function:: Mesh refine(const Mesh& mesh, const MeshFunction<bool>& cell_markers)
     
         Create locally refined mesh
 
-    .. cpp:function:: void refine(Mesh& refined_mesh,
-                                  const Mesh& mesh)
+    .. cpp:function:: void refine(Mesh& refined_mesh, const Mesh& mesh)
     
         Create uniformly refined mesh
 
-    .. cpp:function:: void refine(Mesh& refined_mesh,
-                                  const Mesh& mesh,
-                                  const MeshFunction<bool>& cell_markers)
+    .. cpp:function:: void refine(Mesh& refined_mesh, const Mesh& mesh, const MeshFunction<bool>& cell_markers)
     
         Create locally refined mesh
 

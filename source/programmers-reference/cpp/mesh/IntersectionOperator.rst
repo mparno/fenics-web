@@ -12,26 +12,18 @@ IntersectionOperator.h
 
 .. cpp:class:: IntersectionOperator
 
-    .. cpp:function:: //mesh is to be cut with to be another mesh entitiy instead of being just a
-                                                                                                  //kind of geometric object. 2) Requires a runtime switch 3) would require a
-                                                                                                  //implementation for each geometric  primitive if they have no common base
-                                                                                                  //class.
-                                                                                                  void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
+    .. cpp:function:: //mesh is to be cut with to be another mesh entitiy instead of being just a //kind of geometric object. 2) Requires a runtime switch 3) would require a //implementation for each geometric  primitive if they have no common base //class. void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
     
         //@internal
         @todo This function has to improved: 1) it requires the object the
 
-    .. cpp:function:: //the (external) cell and the intersected cell of the mesh. If you
-                             //are only interested in intersection with a list of cells without caring about which
-                             //cell what intersected by which one, use
-                             // void IntersectionOperator::all_intersected_entities(const std::vector<Cell> &, uint_set &) const
+    .. cpp:function:: //the (external) cell and the intersected cell of the mesh. If you //are only interested in intersection with a list of cells without caring about which //cell what intersected by which one, use // void IntersectionOperator::all_intersected_entities(const std::vector<Cell> &, uint_set &) const
     
         Compute all id of all cells which are intersects by a \em entity.
         \param[out] ids_result The ids of the intersected entities are saved in a vector.
         This allows is more efficent than using a set and allows a map between
 
-    .. cpp:function:: IntersectionOperator(const Mesh& _mesh,
-                                           const std::string& kernel_type = "SimpleCartesian")
+    .. cpp:function:: IntersectionOperator(const Mesh& _mesh, const std::string& kernel_type = "SimpleCartesian")
     
         Create intersection detector for the mesh \em mesh.
         @param kernel_type The CGAL geometric kernel is used to compute predicates,
@@ -40,9 +32,7 @@ IntersectionOperator.h
         (without roundoff error) or only approximately (default, kernel_type =
         "SimpleCartesian").
 
-    .. cpp:function:: IntersectionOperatorImplementation*
-                                                          create_intersection_operator(boost::shared_ptr<const Mesh> mesh,
-                                                          const std::string & kernel_type)
+    .. cpp:function:: IntersectionOperatorImplementation* create_intersection_operator(boost::shared_ptr<const Mesh> mesh, const std::string & kernel_type)
     
         Factory function to create the dimension dependent intersectionoperator
         implementation.
@@ -81,15 +71,13 @@ IntersectionOperator.h
     
         String description of the used geometry kernel.
 
-    .. cpp:function:: void all_intersected_entities(const Mesh& another_mesh,
-                                                    uint_set& ids_result) const
+    .. cpp:function:: void all_intersected_entities(const Mesh& another_mesh, uint_set& ids_result) const
     
         Compute all id of all cells which are intersects by the given mesh \em another_mesh;
         \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
         reasons, to avoid to sort out duplicates later on.
 
-    .. cpp:function:: void all_intersected_entities(const Point & point,
-                                                    uint_set& ids_result) const
+    .. cpp:function:: void all_intersected_entities(const Point & point, uint_set& ids_result) const
     
         Compute all id of all cells which are intersects by a \em point.
         \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
@@ -101,8 +89,7 @@ IntersectionOperator.h
         \param[out] ids_result The ids of the intersected set are saved in a set for efficienty
         reasons, to avoid to sort out duplicates later on.
 
-    .. cpp:function:: void all_intersected_entities(const std::vector<Point>& points,
-                                                    uint_set& ids_result) const
+    .. cpp:function:: void all_intersected_entities(const std::vector<Point>& points, uint_set& ids_result) const
     
         Compute all id of all cells which are intersects any point in \em points.
         \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty

@@ -112,18 +112,15 @@ Point.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: template <typename Kernel>
-                                                 CGAL::Bbox_3  bbox()
+    .. cpp:function:: template <typename Kernel> CGAL::Bbox_3  bbox()
     
         Provides a CGAL bounding box, using conversion operator.
 
-    .. cpp:function:: template <typename Kernel>
-                                                 Point (const CGAL::Point_3<Kernel> & point)
+    .. cpp:function:: template <typename Kernel> Point (const CGAL::Point_3<Kernel> & point)
     
         Constructor taking a CGAL::Point_3. Allows conversion from CGAL Point_3 class to Point class.
 
-    .. cpp:function:: template <typename Kernel>
-                                                 operator CGAL::Point_3<Kernel>() const
+    .. cpp:function:: template <typename Kernel> operator CGAL::Point_3<Kernel>() const
     
         Conversion operator to appropriate CGAL Point_3 class.
 

@@ -58,8 +58,7 @@ Expression.h
     
         Return value rank
 
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
-                                                         const Mesh& mesh) const
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
     
         Compute values at all mesh vertices
 
@@ -71,11 +70,7 @@ Expression.h
     
         Evaluate function for given data
 
-    .. cpp:function:: void restrict(double* w,
-                                            const FiniteElement& element,
-                                            const Cell& dolfin_cell,
-                                            const ufc::cell& ufc_cell,
-                                            int local_facet) const
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const
     
         Restrict function to local cell (compute expansion coefficients w)
 

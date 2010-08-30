@@ -73,18 +73,15 @@ uBLASMatrix.h
         Return pointers to underlying compresssed storage data
         See GenericMatrix for documentation.
 
-    .. cpp:function:: template <class E>
-                                         explicit uBLASMatrix(const ublas::matrix_expression<E>& A)
+    .. cpp:function:: template <class E> explicit uBLASMatrix(const ublas::matrix_expression<E>& A)
     
         Create matrix from given uBLAS matrix expression
 
-    .. cpp:function:: template<class B>
-                                        void solveInPlace(B& X)
+    .. cpp:function:: template<class B> void solveInPlace(B& X)
     
         General uBLAS LU solver which accepts both vector and matrix right-hand sides
 
-    .. cpp:function:: template<class Mat>
-                       uBLASMatrix()
+    .. cpp:function:: template<class Mat> uBLASMatrix()
     
         Create empty matrix
 
@@ -112,8 +109,7 @@ uBLASMatrix.h
     
         Finalize assembly of tensor
 
-    .. cpp:function:: void axpy(double a, const GenericMatrix& A,
-                                        bool same_nonzero_pattern)
+    .. cpp:function:: void axpy(double a, const GenericMatrix& A, bool same_nonzero_pattern)
     
         Add multiple of given matrix (AXPY operation)
 

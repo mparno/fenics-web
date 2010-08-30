@@ -20,8 +20,7 @@ MTL4Factory.h
     
         Dummy sparsity pattern
 
-    .. cpp:function:: ITLKrylovSolver* create_krylov_solver(std::string method,
-                                                            std::string pc) const
+    .. cpp:function:: ITLKrylovSolver* create_krylov_solver(std::string method, std::string pc) const
     
         Create Krylov solver
 

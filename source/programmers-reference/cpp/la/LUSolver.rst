@@ -20,9 +20,7 @@ LUSolver.h
     
         Constructor
 
-    .. cpp:function:: public:
-                       
-                       LUSolver(std::string type = "lu")
+    .. cpp:function:: public:  LUSolver(std::string type = "lu")
     
         LU solver for the built-in LA backends. The type can be "lu" or
         "cholesky". Cholesky is suitable only for symmetric positive-definite

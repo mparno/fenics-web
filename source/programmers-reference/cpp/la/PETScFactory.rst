@@ -20,8 +20,7 @@ PETScFactory.h
     
         Private constructor
 
-    .. cpp:function:: PETScKrylovSolver* create_krylov_solver(std::string method,
-                                                              std::string pc) const
+    .. cpp:function:: PETScKrylovSolver* create_krylov_solver(std::string method, std::string pc) const
     
         Create Krylov solver
 

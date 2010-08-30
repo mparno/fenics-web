@@ -42,13 +42,11 @@ PeriodicBC.h
     applications to a linear system. The matching may be recomputed
     by calling the rebuild() function.
 
-    .. cpp:function:: PeriodicBC(boost::shared_ptr<const FunctionSpace> V,
-                                 boost::shared_ptr<const SubDomain> sub_domain)
+    .. cpp:function:: PeriodicBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const SubDomain> sub_domain)
     
         Create periodic boundary condition for sub domain
 
-    .. cpp:function:: PeriodicBC(const FunctionSpace& V,
-                       const SubDomain& sub_domain)
+    .. cpp:function:: PeriodicBC(const FunctionSpace& V, const SubDomain& sub_domain)
     
         Create periodic boundary condition for sub domain
 

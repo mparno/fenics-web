@@ -43,8 +43,7 @@ GenericFunction.h
     
         Return value size (product of value dimensions)
 
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
-                                                         const Mesh& mesh) const = 0
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const = 0
     
         Compute values at all mesh vertices
 
@@ -52,9 +51,7 @@ GenericFunction.h
     
         Evaluate function for given data
 
-    .. cpp:function:: void evaluate(double* values,
-                                            const double* coordinates,
-                                            const ufc::cell& cell) const
+    .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
     
         Evaluate function at given point in cell
 
@@ -62,18 +59,11 @@ GenericFunction.h
     
         Collect off-process coefficients to prepare for interpolation
 
-    .. cpp:function:: void restrict(double* w,
-                                            const FiniteElement& element,
-                                            const Cell& dolfin_cell,
-                                            const ufc::cell& ufc_cell,
-                                            int local_facet) const = 0
-    
-        Restrict function to local cell (compute expansion coefficients w)
-
-    .. cpp:function:: void restrict(double* w,
-                                    const FiniteElement& element,
-                                    const Cell& dolfin_cell,
-                                    const ufc::cell& ufc_cell) const
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
     
         Convenience function for restriction when facet is unknown
+
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const = 0
+    
+        Restrict function to local cell (compute expansion coefficients w)
 

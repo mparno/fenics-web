@@ -72,13 +72,11 @@ MPI.h
     
         Return proccess number
 
-    .. cpp:function:: static uint send_recv(double* send_buffer, uint send_size, uint dest,
-                                            double* recv_buffer, uint recv_size, uint source)
+    .. cpp:function:: static uint send_recv(double* send_buffer, uint send_size, uint dest, double* recv_buffer, uint recv_size, uint source)
     
         Send-receive and return number of received values (wrapper for MPI_Sendrecv)
 
-    .. cpp:function:: static uint send_recv(uint* send_buffer, uint send_size, uint dest,
-                                            uint* recv_buffer, uint recv_size, uint source)
+    .. cpp:function:: static uint send_recv(uint* send_buffer, uint send_size, uint dest, uint* recv_buffer, uint recv_size, uint source)
     
         Send-receive and return number of received values (wrapper for MPI_Sendrecv)
 
@@ -114,8 +112,7 @@ MPI.h
     
         Scatter values, one to each process
 
-    .. cpp:function:: template<class T> static void gather_all(const T& in_value,
-                                                               std::vector<T>& out_values)
+    .. cpp:function:: template<class T> static void gather_all(const T& in_value, std::vector<T>& out_values)
     
         Gather values, one from each process (wrapper for boost::mpi::all_gather)
 

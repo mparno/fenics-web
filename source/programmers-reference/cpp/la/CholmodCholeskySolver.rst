@@ -63,8 +63,7 @@ CholmodCholeskySolver.h
     
         Compute residual: b-Ax
 
-    .. cpp:function:: double residual_norm(cholmod_dense* r, cholmod_dense* x,
-                                           cholmod_dense* b)
+    .. cpp:function:: double residual_norm(cholmod_dense* r, cholmod_dense* x, cholmod_dense* b)
     
         Compute residual norm
 

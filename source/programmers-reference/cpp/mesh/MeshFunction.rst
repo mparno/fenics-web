@@ -23,40 +23,28 @@ MeshFunction.h
     numbering scheme for the entities of a (parallel) mesh, marking
     sub domains or boolean markers for mesh refinement.
 
-    .. cpp:function:: MeshFunction() :
-                       Variable("f", "unnamed MeshFunction"),
-                       _values(0), _mesh(0), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction()
     
         Create empty mesh function
 
-    .. cpp:function:: MeshFunction(const Mesh& mesh) :
-                                   Variable("f", "unnamed MeshFunction"),
-                                   _values(0), _mesh(&mesh), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction(const Mesh& mesh)
     
         Create empty mesh function on given mesh
 
-    .. cpp:function:: MeshFunction(const Mesh& mesh, const std::string filename) :
-                                   Variable("f", "unnamed MeshFunction"),
-                                   _values(0), _mesh(&mesh), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction(const Mesh& mesh, const std::string filename)
     
         Create function from data file
 
-    .. cpp:function:: MeshFunction(const Mesh& mesh, uint dim) :
-                                   Variable("f", "unnamed MeshFunction"),
-                                   _values(0), _mesh(&mesh), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction(const Mesh& mesh, uint dim)
     
         Create mesh function on given mesh of given dimension
 
-    .. cpp:function:: MeshFunction(const Mesh& mesh, uint dim, const T& value) :
-                                   Variable("f", "unnamed MeshFunction"),
-                                   _values(0), _mesh(&mesh), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction(const Mesh& mesh, uint dim, const T& value)
     
         Create mesh function on given mesh of given dimension and initialise
         to a value
 
-    .. cpp:function:: MeshFunction(const MeshFunction<T>& f) :
-                                   Variable("f", "unnamed MeshFunction"),
-                                   _values(0), _mesh(0), _dim(0), _size(0)
+    .. cpp:function:: MeshFunction(const MeshFunction<T>& f)
     
         Copy constructor
 

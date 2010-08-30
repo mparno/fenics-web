@@ -18,8 +18,7 @@ solve.h
     
         Compute residual ||Ax - b||
 
-    .. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b,
-                                 std::string solver_type = "lu", std::string pc_type = "default")
+    .. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, std::string solver_type = "lu", std::string pc_type = "default")
     
         Solve linear system Ax = b
 

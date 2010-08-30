@@ -38,8 +38,7 @@ Constant.h
     
         Create vector-valued constant
 
-    .. cpp:function:: Constant(std::vector<uint> value_shape,
-                               std::vector<double> values)
+    .. cpp:function:: Constant(std::vector<uint> value_shape, std::vector<double> values)
     
         Create tensor-valued constant for flattened array of values
 

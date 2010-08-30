@@ -114,8 +114,7 @@ GenericVector.h
     
         Return size of given dimension
 
-    .. cpp:function:: void add(const double* block, const uint* num_rows,
-                                       const uint * const * rows)
+    .. cpp:function:: void add(const double* block, const uint* num_rows, const uint * const * rows)
     
         Add block of values
 
@@ -139,8 +138,7 @@ GenericVector.h
     
         Gather entries into local vector x
 
-    .. cpp:function:: void get(double* block, const uint* num_rows,
-                                       const uint * const * rows) const
+    .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const
     
         Get block of values
 
@@ -168,8 +166,7 @@ GenericVector.h
     
         Resize tensor with given dimensions
 
-    .. cpp:function:: void set(const double* block, const uint* num_rows,
-                                       const uint * const * rows)
+    .. cpp:function:: void set(const double* block, const uint* num_rows, const uint * const * rows)
     
         Set block of values
 

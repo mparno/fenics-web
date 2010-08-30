@@ -51,8 +51,7 @@ Set.h
     
         Return the vector that stores the data in the Set
 
-    .. cpp:function:: template<class T>
-                       Set()
+    .. cpp:function:: template<class T> Set()
     
         Create empty set
 

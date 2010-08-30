@@ -16,13 +16,11 @@ EpetraFactory.h
     
         * :cpp:class:`LinearAlgebraFactory`
         
-    .. cpp:function:: // Return Epetra Communicator
-                       Epetra_SerialComm& get_serial_comm() const
+    .. cpp:function:: // Return Epetra Communicator Epetra_SerialComm& get_serial_comm() const
     
         --- EpetraFactory interface
 
-    .. cpp:function:: EpetraKrylovSolver* create_krylov_solver(std::string method,
-                                                               std::string pc) const
+    .. cpp:function:: EpetraKrylovSolver* create_krylov_solver(std::string method, std::string pc) const
     
         Create Krylov solver
 

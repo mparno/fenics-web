@@ -15,28 +15,24 @@ PrimitiveIntersector.h
     This class implements an intersection detection, detecting
     whether two given (arbitrary) meshentities intersect.
 
-    .. cpp:function:: static bool do_intersect(const MeshEntity& entity_1,
-                                               const Point& point)
-    
-        Computes whether a mesh entity and point intersect using an
-        inexact geometry kernel which is fast but may suffer from
-        floating point precision
-
-    .. cpp:function:: static bool do_intersect(const MeshEntity& entity_1,
-                       const MeshEntity& entity_2)
+    .. cpp:function:: static bool do_intersect(const MeshEntity& entity_1, const MeshEntity& entity_2)
     
         Computes whether two mesh entities intersect using an inexact
         geometry kernel which is fast but may suffer from floating
         point precision
 
-    .. cpp:function:: static bool do_intersect_exact(const MeshEntity& entity_1,
-                                                     const MeshEntity& entity_2)
+    .. cpp:function:: static bool do_intersect(const MeshEntity& entity_1, const Point& point)
+    
+        Computes whether a mesh entity and point intersect using an
+        inexact geometry kernel which is fast but may suffer from
+        floating point precision
+
+    .. cpp:function:: static bool do_intersect_exact(const MeshEntity& entity_1, const MeshEntity& entity_2)
     
         Computes whether two mesh entities intersect using an exact
         geometry kernel which is slow but always correct
 
-    .. cpp:function:: static bool do_intersect_exact(const MeshEntity& entity_1,
-                                                     const Point& point)
+    .. cpp:function:: static bool do_intersect_exact(const MeshEntity& entity_1, const Point& point)
     
         Computes whether a mesh entity and point intersect using an
         exact geometry kernel which is slow but always correct

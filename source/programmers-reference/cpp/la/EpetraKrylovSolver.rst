@@ -20,8 +20,7 @@ EpetraKrylovSolver.h
     of the form Ax = b. It is a wrapper for the Krylov solvers
     of Epetra.
 
-    .. cpp:function:: EpetraKrylovSolver(std::string method = "default",
-                       std::string pc_type = "default")
+    .. cpp:function:: EpetraKrylovSolver(std::string method = "default", std::string pc_type = "default")
     
         Create Krylov solver for a particular method and preconditioner
 

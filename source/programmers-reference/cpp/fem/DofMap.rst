@@ -24,15 +24,13 @@ DofMap.h
     larger dof map. A dof map which is a view, can be 'collapsed'
     such that the dof indices are contiguous.
 
-    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap,
-                             const Mesh& dolfin_mesh)
-    
-        Create dof map on mesh (const mesh version)
-
-    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap,
-                       Mesh& dolfin_mesh)
+    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, Mesh& dolfin_mesh)
     
         Create dof map on mesh
+
+    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, const Mesh& dolfin_mesh)
+    
+        Create dof map on mesh (const mesh version)
 
     .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, const UFCMesh& ufc_mesh)
     
@@ -58,9 +56,7 @@ DofMap.h
     
         Friends
 
-    .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap,
-                                                  const ufc::mesh ufc_mesh,
-                                                  const Mesh& dolfin_mesh)
+    .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
     
         Initialize the UFC dofmap
 

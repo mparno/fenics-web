@@ -28,20 +28,17 @@ Function.h
     
         Extract sub-function
 
-    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V,
-                               GenericVector& x)
+    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, GenericVector& x)
     
         Create function on given function space with a given vector (used by
         Python interface)
 
-    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V,
-                               boost::shared_ptr<GenericVector> x)
+    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<GenericVector> x)
     
         Create function on given function space with a given vector
         (shared data)
 
-    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V,
-                               std::string filename)
+    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, std::string filename)
     
         Create function from vector of dofs stored to file (shared data)
 
@@ -54,13 +51,11 @@ Function.h
         Sub-function constructor with shallow copy of vector (used in Python
         interface)
 
-    .. cpp:function:: Function(const FunctionSpace& V,
-                               GenericVector& x)
+    .. cpp:function:: Function(const FunctionSpace& V, GenericVector& x)
     
         Create function on given function space with a given vector
 
-    .. cpp:function:: Function(const FunctionSpace& V,
-                               std::string filename)
+    .. cpp:function:: Function(const FunctionSpace& V, std::string filename)
     
         Create function from vector of dofs stored to file
 
@@ -112,21 +107,17 @@ Function.h
     
         Return value rank
 
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
-                                                         const Mesh& mesh) const
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
     
         Compute values at all mesh vertices
-
-    .. cpp:function:: void eval(Array<double>& values,
-                                const Array<double>& x,
-                                const Cell& dolfin_cell,
-                                const ufc::cell& ufc_cell) const
-    
-        Evaluate function for given coordinate in given cell
 
     .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
     
         Evaluate function for given coordinate
+
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
+    
+        Evaluate function for given coordinate in given cell
 
     .. cpp:function:: void eval(Array<double>& values, const Data& data) const
     
@@ -144,11 +135,7 @@ Function.h
     
         Interpolate function (possibly non-matching meshes)
 
-    .. cpp:function:: void restrict(double* w,
-                                            const FiniteElement& element,
-                                            const Cell& dolfin_cell,
-                                            const ufc::cell& ufc_cell,
-                                            int local_facet) const
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const
     
         Restrict function to local cell (compute expansion coefficients w)
 

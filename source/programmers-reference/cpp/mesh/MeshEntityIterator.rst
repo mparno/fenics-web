@@ -48,11 +48,7 @@ MeshEntityIterator.h
         c1 looks to be an iterator over the entities around c0 when it is in
         fact a copy of c0.
 
-    .. cpp:function:: //dolfin/mesh/MeshEntityIterator.h:94: Warning|508| Declaration of 'operator ==' shadows declaration accessible via operator->(),
-                                                                                                                                                     //Use const_cast to use operator* inside comparison, which automatically
-                                                                                                                                                     //updates the entity index corresponding to pos *before* comparison (since
-                                                                                                                                                     //update of entity delays until request for entity)
-                                                                                                                                                     bool operator==(const MeshEntityIterator & it) const
+    .. cpp:function:: //dolfin/mesh/MeshEntityIterator.h:94: Warning|508| Declaration of 'operator ==' shadows declaration accessible via operator->(), //Use const_cast to use operator* inside comparison, which automatically //updates the entity index corresponding to pos *before* comparison (since //update of entity delays until request for entity) bool operator==(const MeshEntityIterator & it) const
     
         Comparison operator.
         @internal
@@ -94,12 +90,10 @@ MeshEntityIterator.h
         Default constructor
 
     .. cpp:function:: MeshEntityIterator(const Mesh& mesh, uint dim)
-                                        
     
         Create iterator for mesh entities over given topological dimension
 
     .. cpp:function:: MeshEntityIterator(const MeshEntity& entity, uint dim)
-                                        
     
         Create iterator for entities of given dimension connected to given entity
 

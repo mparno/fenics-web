@@ -22,28 +22,15 @@ Assembler.h
     used to specify that the tensor should be assembled over the
     entire set of cells or facets.
 
-    .. cpp:function:: static void assemble(GenericTensor& A,
-                                           const Form& a,
-                                           const MeshFunction<uint>* cell_domains,
-                                           const MeshFunction<uint>* exterior_facet_domains,
-                                           const MeshFunction<uint>* interior_facet_domains,
-                                           bool reset_sparsity=true,
-                                           bool add_values=false)
+    .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, bool reset_sparsity=true, bool add_values=false)
+    
+        Assemble tensor
+
+    .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
     
         Assemble tensor on sub domains
 
-    .. cpp:function:: static void assemble(GenericTensor& A,
-                                           const Form& a,
-                                           const SubDomain& sub_domain,
-                                           bool reset_sparsity=true,
-                                           bool add_values=false)
+    .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, const SubDomain& sub_domain, bool reset_sparsity=true, bool add_values=false)
     
         Assemble tensor on sub domain
-
-    .. cpp:function:: static void assemble(GenericTensor& A,
-                       const Form& a,
-                       bool reset_sparsity=true,
-                       bool add_values=false)
-    
-        Assemble tensor
 

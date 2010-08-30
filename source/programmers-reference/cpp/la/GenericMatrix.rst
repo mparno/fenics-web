@@ -58,8 +58,7 @@ GenericMatrix.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: std::tr1::tuple<const std::size_t*, const std::size_t*,
-                                                                                      const double*, int> data() const
+    .. cpp:function:: std::tr1::tuple<const std::size_t*, const std::size_t*, const double*, int> data() const
     
         Return pointers to underlying compresssed row/column storage data
         For compressed row storage, data = (row_pointer[#rows +1],
@@ -73,13 +72,11 @@ GenericMatrix.h
     
         Return size of given dimension
 
-    .. cpp:function:: void add(const double* block, const uint* num_rows,
-                                       const uint * const * rows)
+    .. cpp:function:: void add(const double* block, const uint* num_rows, const uint * const * rows)
     
         Add block of values
 
-    .. cpp:function:: void add(const double* block, uint m, const uint* rows, uint n,
-                                       const uint* cols) = 0
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows, uint n, const uint* cols) = 0
     
         Add block of values
 
@@ -87,23 +84,19 @@ GenericMatrix.h
     
         Finalize assembly of tensor
 
-    .. cpp:function:: void axpy(double a, const GenericMatrix& A,
-                                        bool same_nonzero_pattern) = 0
+    .. cpp:function:: void axpy(double a, const GenericMatrix& A, bool same_nonzero_pattern) = 0
     
         Add multiple of given matrix (AXPY operation)
 
-    .. cpp:function:: void get(double* block, const uint* num_rows,
-                                       const uint * const * rows) const
+    .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const
     
         Get block of values
 
-    .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n,
-                                       const uint* cols) const = 0
+    .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const = 0
     
         Get block of values
 
-    .. cpp:function:: void getrow(uint row, std::vector<uint>& columns,
-                                          std::vector<double>& values) const = 0
+    .. cpp:function:: void getrow(uint row, std::vector<uint>& columns, std::vector<double>& values) const = 0
     
         Get non-zero values of given row on local process
 
@@ -131,13 +124,11 @@ GenericMatrix.h
     
         Resize tensor with given dimensions
 
-    .. cpp:function:: void set(const double* block, const uint* num_rows,
-                                       const uint * const * rows)
+    .. cpp:function:: void set(const double* block, const uint* num_rows, const uint * const * rows)
     
         Set block of values
 
-    .. cpp:function:: void set(const double* block, uint m, const uint* rows, uint n,
-                                       const uint* cols) = 0
+    .. cpp:function:: void set(const double* block, uint m, const uint* rows, uint n, const uint* cols) = 0
     
         Set block of values
 
@@ -146,8 +137,7 @@ GenericMatrix.h
         Set given entry to value. apply("insert") should be called before using
         using the object.
 
-    .. cpp:function:: void setrow(uint row, const std::vector<uint>& columns,
-                                          const std::vector<double>& values) = 0
+    .. cpp:function:: void setrow(uint row, const std::vector<uint>& columns, const std::vector<double>& values) = 0
     
         Set values for given row on local process
 

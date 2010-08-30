@@ -27,14 +27,12 @@ NewtonSolver.h
         Create nonlinear solver using provided linear solver and linear algebra
         backend determined by factory
 
-    .. cpp:function:: NewtonSolver(std::string solver_type = "lu",
-                       std::string pc_type = "default")
+    .. cpp:function:: NewtonSolver(std::string solver_type = "lu", std::string pc_type = "default")
     
         Create nonlinear solver with default linear solver and default
         linear algebra backend
 
-    .. cpp:function:: bool converged(const GenericVector& b, const GenericVector& dx,
-                                             const NonlinearProblem& nonlinear_problem)
+    .. cpp:function:: bool converged(const GenericVector& b, const GenericVector& dx, const NonlinearProblem& nonlinear_problem)
     
         Convergence test
 
@@ -70,8 +68,7 @@ NewtonSolver.h
     
         Default parameter values
 
-    .. cpp:function:: std::pair<uint, bool> solve(NonlinearProblem& nonlinear_function,
-                                                  GenericVector& x)
+    .. cpp:function:: std::pair<uint, bool> solve(NonlinearProblem& nonlinear_function, GenericVector& x)
     
         Solve abstract nonlinear problem F(x) = 0 for given vector F and
         Jacobian dF/dx

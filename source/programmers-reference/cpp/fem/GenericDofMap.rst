@@ -18,18 +18,15 @@ GenericDofMap.h
         
     This class provides a generic interface for dof maps
 
-    .. cpp:function:: GenericDofMap* collapse(std::map<uint, uint>& collapsed_map,
-                                                      const Mesh& dolfin_mesh) const = 0
+    .. cpp:function:: GenericDofMap* collapse(std::map<uint, uint>& collapsed_map, const Mesh& dolfin_mesh) const = 0
     
         "Collapse" a sub dofmap
 
-    .. cpp:function:: GenericDofMap* extract_sub_dofmap(const std::vector<uint>& component,
-                                                                const Mesh& dolfin_mesh) const = 0
+    .. cpp:function:: GenericDofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& dolfin_mesh) const = 0
     
         Extract sub dofmap component
 
-    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh,
-                                                     bool sort = false) const = 0
+    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh, bool sort = false) const = 0
     
         Return the set of dof indices
 
@@ -62,13 +59,11 @@ GenericDofMap.h
     
         Return number of facet dofs
 
-    .. cpp:function:: void tabulate_coordinates(double** coordinates,
-                                                        const Cell& cell) const = 0
+    .. cpp:function:: void tabulate_coordinates(double** coordinates, const Cell& cell) const = 0
     
         Tabulate the coordinates of all dofs on a cell (DOLFIN cell version)
 
-    .. cpp:function:: void tabulate_coordinates(double** coordinates,
-                                                        const ufc::cell& ufc_cell) const = 0
+    .. cpp:function:: void tabulate_coordinates(double** coordinates, const ufc::cell& ufc_cell) const = 0
     
         Tabulate the coordinates of all dofs on a cell (UFC cell version)
 
@@ -77,8 +72,7 @@ GenericDofMap.h
         Tabulate the local-to-global mapping of dofs on a cell
         (DOLFIN cell version)
 
-    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell,
-                                                 uint cell_index) const = 0
+    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const = 0
     
         Tabulate the local-to-global mapping of dofs on a cell
         (UFC cell version)

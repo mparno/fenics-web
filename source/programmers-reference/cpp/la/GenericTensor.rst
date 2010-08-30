@@ -62,8 +62,7 @@ GenericTensor.h
     
         Return size of given dimension
 
-    .. cpp:function:: void add(const double* block, const uint* num_rows,
-                                       const uint * const * rows) = 0
+    .. cpp:function:: void add(const double* block, const uint* num_rows, const uint * const * rows) = 0
     
         Add block of values
 
@@ -71,8 +70,7 @@ GenericTensor.h
     
         Finalize assembly of tensor
 
-    .. cpp:function:: void get(double* block, const uint* num_rows,
-                                       const uint * const * rows) const = 0
+    .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const = 0
     
         Get block of values
 
@@ -84,8 +82,7 @@ GenericTensor.h
     
         Resize tensor with given dimensions
 
-    .. cpp:function:: void set(const double* block, const uint* num_rows,
-                                       const uint * const * rows) = 0
+    .. cpp:function:: void set(const double* block, const uint* num_rows, const uint * const * rows) = 0
     
         Set block of values
 
