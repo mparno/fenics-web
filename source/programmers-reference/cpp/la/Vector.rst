@@ -95,7 +95,7 @@ Vector.h
     
         Return minimum value of vector
 
-    .. cpp:function:: double norm(std
+    .. cpp:function:: double norm(std::string norm_type) const
     
         Return norm of vector
 
@@ -111,13 +111,13 @@ Vector.h
     
         Create vector of size N
 
-    .. cpp:function:: std
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: std
+    .. cpp:function:: std::pair<uint, uint> local_range() const
     
         Return local ownership range of a vector
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
 
     .. cpp:function:: uint size() const
     
@@ -131,7 +131,7 @@ Vector.h
     
         Add values to each entry on local process
 
-    .. cpp:function:: void apply(std
+    .. cpp:function:: void apply(std::string mode)
     
         Finalize assembly of tensor
 

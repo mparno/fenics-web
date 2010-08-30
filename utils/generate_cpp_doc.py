@@ -95,18 +95,21 @@ def generate_documentation(header, module):
             else:
                 signature += "\n" + indent + s
 
-            # Signature ends when we find ";", "{" or ":"
-            if ";" in s or "{" in s or ":" in s:
+            # Signature ends when we find ";" or "{"
+            if ";" in s or "{" in s:
 
                 # Strip out last part
                 signature = signature.split(";")[0]
                 signature = signature.split("{")[0]
-                signature = signature.split(":")[0]
                 signature = signature.strip()
 
                 # Remove stuff Spinx can't handle
                 signature = signature.replace("virtual ", "")
                 signature = signature.replace("inline ", "")
+
+                # Remove ": stuff" for constructors
+                if " : " in signature:
+                    signature = signature.split(" : ")[0]
 
                 # Get function name
                 #function = signature.split("(")[0].split(" ")[-1]
