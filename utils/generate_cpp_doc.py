@@ -3,7 +3,7 @@ __date__ = "2010-08-26"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-08-26
+# Last changed: 2010-08-30
 
 import os
 
@@ -17,6 +17,9 @@ dolfin_dir = os.environ["DOLFIN_DIR"]
 
 def generate_documentation(filename, module):
     "Generate documentation for given filename in given module"
+
+    if not filename == "Mesh.h":
+        return
 
     # Extract documentation and sort alphabetically
     documentation = extract_documentation(filename, module)

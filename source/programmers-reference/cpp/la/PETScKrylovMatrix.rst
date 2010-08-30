@@ -33,7 +33,7 @@ PETScKrylovMatrix.h
     
         Constructor
 
-    .. cpp:function:: PETScKrylovMatrix(const PETScVector& x, const PETScVector& y)
+    .. cpp:function:: PETScKrylovMatrix(uint m, uint n)
     
         Create a virtual matrix matching the given vectors
 
@@ -49,11 +49,7 @@ PETScKrylovMatrix.h
     
         Destructor
 
-    .. cpp:function:: void init(const PETScVector& x, const PETScVector& y)
+    .. cpp:function:: void resize(uint m, uint n)
     
-        Initialize virtual matrix matching the given vectors
-
-    .. cpp:function:: void resize(int M, int N)
-    
-        Resize virtual matrix, all on one processor
+        Resize virtual matrix
 
