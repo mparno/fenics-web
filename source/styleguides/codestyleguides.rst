@@ -1,11 +1,4 @@
-.. Style guides for C++, Python, and documentation
-
-
-
-DOLFIN (C++) and FEniCS documentation (Sphinx).
-
-.. _styleguides:
-
+.. Style guides for C++ and Python source code
 
 .. _styleguides_cpp_coding_style:
 
@@ -331,6 +324,4 @@ Python coding style
 The FEniCS coding style for Python code adheres to the `PEP-8 style
 guide <http://www.python.org/dev/peps/pep-0008/>`_ although it is not
 strictly enforced.
-
-.. _styleguides_sphinx_coding_style:
 
