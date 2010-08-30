@@ -104,6 +104,10 @@ def generate_documentation(header, module):
                 signature = signature.split(":")[0]
                 signature = signature.strip()
 
+                # Remove stuff Spinx can't handle
+                signature = signature.replace("virtual ", "")
+                signature = signature.replace("inline ", "")
+
                 # Get function name
                 #function = signature.split("(")[0].split(" ")[-1]
 
@@ -130,8 +134,8 @@ def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
 
     # For quick testing
-    #if not header == "Vector.h":
-    #    return
+    if not header == "Vector.h":
+        return
 
     print "Writing documentation for %s..." % header
 
