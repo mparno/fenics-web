@@ -8,7 +8,7 @@ Data.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Data
 
@@ -59,8 +59,4 @@ Data.h
     .. cpp:function:: void set(const ufc::cell& ufc_cell, const double* x)
     
         Set UFC cell and coordinate
-
-    .. cpp:function:: ~Data()
-    
-        Destructor
 

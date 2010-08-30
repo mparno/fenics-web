@@ -8,7 +8,7 @@ PETScUserPreconditioner.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: PETScUserPreconditioner
 
@@ -25,11 +25,7 @@ PETScUserPreconditioner.h
     
         Constructor
 
-    .. cpp:function:: virtual void solve(PETScVector& x, const PETScVector& b) = 0
+    .. cpp:function:: void solve(PETScVector& x, const PETScVector& b) = 0
     
         Solve linear system approximately for given right-hand side b
-
-    .. cpp:function:: virtual ~PETScUserPreconditioner()
-    
-        Destructor
 

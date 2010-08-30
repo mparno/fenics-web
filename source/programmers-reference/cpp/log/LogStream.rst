@@ -8,7 +8,7 @@ LogStream.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: LogStream
 
@@ -79,8 +79,4 @@ LogStream.h
     .. cpp:function:: extern LogStream endl
     
         dolfin::endl;
-
-    .. cpp:function:: ~LogStream()
-    
-        Destructor
 

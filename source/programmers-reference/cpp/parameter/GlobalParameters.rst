@@ -8,7 +8,7 @@ GlobalParameters.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: GlobalParameters
 
@@ -30,11 +30,7 @@ GlobalParameters.h
     
         Default parameter values
 
-    .. cpp:function:: virtual void parse(int argc, char* argv[])
+    .. cpp:function:: void parse(int argc, char* argv[])
     
         Parse parameters from command-line
-
-    .. cpp:function:: virtual ~GlobalParameters()
-    
-        Destructor
 

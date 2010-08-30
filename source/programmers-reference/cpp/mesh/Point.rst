@@ -8,7 +8,7 @@ Point.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Point
 
@@ -17,6 +17,10 @@ Point.h
     like the norm, distances, scalar and vector products etc.
 
     .. cpp:function:: Point operator* (double a) const
+    
+        Multiplication with scalar
+
+    .. cpp:function:: Point operator*(double a, const Point& p)
     
         Multiplication with scalar
 
@@ -104,10 +108,6 @@ Point.h
     
         Return address of coordinate in direction i
 
-    .. cpp:function:: inline Point operator*(double a, const Point& p)
-    
-        Multiplication with scalar
-
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
@@ -126,8 +126,4 @@ Point.h
                                                  operator CGAL::Point_3<Kernel>() const
     
         Conversion operator to appropriate CGAL Point_3 class.
-
-    .. cpp:function:: ~Point()
-    
-        Destructor
 

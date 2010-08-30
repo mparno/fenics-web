@@ -8,7 +8,7 @@ Mesh.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Mesh
 
@@ -49,6 +49,14 @@ Mesh.h
     created by a call to mesh.init(1). Similarly, connectivities
     such as all edges connected to a given vertex must also be
     explicitly created (in this case by a call to mesh.init(0, 1)).
+
+    .. cpp:function:: CellType& type()
+    
+        Get mesh cell type.
+        
+        *Returns*
+            :cpp:class:`CellType`
+                The cell type object associated with the mesh.
 
     .. cpp:function:: IntersectionOperator& intersection_operator()
     
@@ -116,6 +124,10 @@ Mesh.h
             bool
                 Return true iff topology is ordered according to the UFC
                 numbering.
+
+    .. cpp:function:: const CellType& type() const
+    
+        Get mesh cell type (const version).
 
     .. cpp:function:: const IntersectionOperator& intersection_operator() const
     
@@ -252,18 +264,6 @@ Mesh.h
         *Arguments*
             filename
                 A string, name of file to load.
-
-    .. cpp:function:: inline CellType& type()
-    
-        Get mesh cell type.
-        
-        *Returns*
-            :cpp:class:`CellType`
-                The cell type object associated with the mesh.
-
-    .. cpp:function:: inline const CellType& type() const
-    
-        Get mesh cell type (const version).
 
     .. cpp:function:: int any_intersected_entity(const Point& point) const
     
@@ -642,8 +642,4 @@ Mesh.h
             harmonic_smoothing
                 A bool, flag to turn on harmonics smoothing, default
                 value is true.
-
-    .. cpp:function:: ~Mesh()
-    
-        Destructor.
 

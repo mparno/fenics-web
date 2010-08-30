@@ -8,23 +8,23 @@ real.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: inline real real_exp(real x)
+    .. cpp:function:: real real_exp(real x)
     
         Exponential function (note: not full precision!)
 
-    .. cpp:function:: inline real real_log(const real& x)
+    .. cpp:function:: real real_log(const real& x)
     
         Logarithmic function (note: not full precision!)
-
-    .. cpp:function:: inline real real_sqrt(const real& a)
-    
-        Square root
 
     .. cpp:function:: real real_pi()
     
         Compute pi
+
+    .. cpp:function:: real real_sqrt(const real& a)
+    
+        Square root
 
     .. cpp:function:: void real_mat_exp(uint n, real* res, const real* A, const uint p=6)
     

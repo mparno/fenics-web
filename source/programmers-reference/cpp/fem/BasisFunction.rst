@@ -8,7 +8,7 @@ BasisFunction.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: BasisFunction
 
@@ -28,7 +28,7 @@ BasisFunction.h
     element).
 
     .. cpp:function:: BasisFunction(uint index, const FiniteElement& element, const ufc::cell& cell)
-                       : index(index), element(element), cell(cell)
+                      
     
         Create basis function with given index on element on given cell
 
@@ -57,8 +57,4 @@ BasisFunction.h
                                     const ufc::cell& cell) const
     
         Evaluate function at given point in cell
-
-    .. cpp:function:: ~BasisFunction()
-    
-        Destructor
 

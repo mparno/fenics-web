@@ -8,7 +8,7 @@ Expression.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Expression
 
@@ -50,36 +50,32 @@ Expression.h
     
         Create matrix-valued expression with given dimensions
 
-    .. cpp:function:: virtual uint value_dimension(uint i) const
+    .. cpp:function:: uint value_dimension(uint i) const
     
         Return value dimension for given axis
 
-    .. cpp:function:: virtual uint value_rank() const
+    .. cpp:function:: uint value_rank() const
     
         Return value rank
 
-    .. cpp:function:: virtual void compute_vertex_values(Array<double>& vertex_values,
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
                                                          const Mesh& mesh) const
     
         Compute values at all mesh vertices
 
-    .. cpp:function:: virtual void eval(Array<double>& values, const Array<double>& x) const
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
     
         Evaluate expression, must be overloaded by user (simple version)
 
-    .. cpp:function:: virtual void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
     
         Evaluate function for given data
 
-    .. cpp:function:: virtual void restrict(double* w,
+    .. cpp:function:: void restrict(double* w,
                                             const FiniteElement& element,
                                             const Cell& dolfin_cell,
                                             const ufc::cell& ufc_cell,
                                             int local_facet) const
     
         Restrict function to local cell (compute expansion coefficients w)
-
-    .. cpp:function:: virtual ~Expression()
-    
-        Destructor
 

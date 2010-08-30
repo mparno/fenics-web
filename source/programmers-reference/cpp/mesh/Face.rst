@@ -8,7 +8,7 @@ Face.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Face
 
@@ -18,13 +18,9 @@ Face.h
         
     A Face is a MeshEntity of topological dimension 2.
 
-    .. cpp:function:: Face(const Mesh& mesh, uint index) : MeshEntity(mesh, 2, index)
+    .. cpp:function:: Face(const Mesh& mesh, uint index)
     
         Constructor
-
-    .. cpp:function:: ~Face()
-    
-        Destructor
 
 .. cpp:class:: FaceIterator
 

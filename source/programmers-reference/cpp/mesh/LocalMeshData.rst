@@ -8,7 +8,7 @@ LocalMeshData.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: LocalMeshData
 
@@ -98,8 +98,4 @@ LocalMeshData.h
     .. cpp:function:: void receive_mesh_data()
     
         Receive mesh data from main process
-
-    .. cpp:function:: ~LocalMeshData()
-    
-        Destructor
 

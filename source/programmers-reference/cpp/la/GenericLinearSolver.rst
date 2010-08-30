@@ -8,7 +8,7 @@ GenericLinearSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: GenericLinearSolver
 
@@ -18,19 +18,19 @@ GenericLinearSolver.h
         
     This class provides a general solver for linear systems Ax = b.
 
-    .. cpp:function:: virtual uint solve(GenericVector& x, const GenericVector& b)
+    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b
 
-    .. cpp:function:: virtual uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b
 
-    .. cpp:function:: virtual void set_operator(const GenericMatrix& A) = 0
+    .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
     
         Solve the operator (matrix)
 
-    .. cpp:function:: virtual void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
         Solve the operator (matrix) and preconditioner matrix
 

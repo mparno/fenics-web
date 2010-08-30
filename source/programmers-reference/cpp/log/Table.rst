@@ -8,7 +8,7 @@ Table.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Table
 
@@ -74,10 +74,6 @@ Table.h
     
         Set value of table entry
 
-    .. cpp:function:: ~Table()
-    
-        Destructor
-
 .. cpp:class:: TableEntry
 
     This class represents an entry in a Table
@@ -105,8 +101,4 @@ Table.h
     .. cpp:function:: operator std::string() const
     
         Cast to entry value
-
-    .. cpp:function:: ~TableEntry()
-    
-        Destructor
 

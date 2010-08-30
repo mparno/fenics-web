@@ -8,7 +8,7 @@ PETScBaseMatrix.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: PETScMatrixDeleter
 
@@ -25,7 +25,7 @@ PETScBaseMatrix.h
     
         Constructor
 
-    .. cpp:function:: PETScBaseMatrix(boost::shared_ptr<Mat> A) : A(A)
+    .. cpp:function:: PETScBaseMatrix(boost::shared_ptr<Mat> A)
     
         Constructor
 
@@ -33,15 +33,15 @@ PETScBaseMatrix.h
     
         Return PETSc Mat pointer
 
+    .. cpp:function:: std::string str(bool verbose) const = 0
+    
+        Return informal string representation (pretty-print)
+
     .. cpp:function:: uint size(uint dim) const
     
         Return number of rows (dim = 0) or columns (dim = 1) along dimension dim
 
-    .. cpp:function:: virtual std::string str(bool verbose) const = 0
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: virtual void resize(uint m, uint n) = 0
+    .. cpp:function:: void resize(uint m, uint n) = 0
     
         Resize virtual matrin
 

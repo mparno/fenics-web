@@ -8,7 +8,7 @@ StabilityAnalysis.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class ODESolution
     
@@ -30,8 +30,4 @@ StabilityAnalysis.h
     .. cpp:function:: void analyze_integral(uint q)
     
         Compute the integral of the q'th derivative of the dual as function of (primal) endtime T
-
-    .. cpp:function:: ~StabilityAnalysis()
-    
-        Destructor
 

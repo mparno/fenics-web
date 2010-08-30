@@ -8,7 +8,7 @@ Array.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: T>
 
@@ -16,15 +16,15 @@ Array.h
     of this class is to enable the simple and safe exchange of data between
     C++ and Python.
 
-    .. cpp:function:: Array(const Array& other) : _size(0), x(0)
+    .. cpp:function:: Array(const Array& other)
     
         Copy constructor (arg name need to have a different name that 'x')
 
-    .. cpp:function:: Array(uint N, T* x) : _size(N), x(boost::shared_array<T>(x, NoDeleter<T>()))
+    .. cpp:function:: Array(uint N, T* x)
     
         Construct array from a pointer. Array will not take ownership.
 
-    .. cpp:function:: Array(uint N, boost::shared_array<T> x) : _size(N), x(x)
+    .. cpp:function:: Array(uint N, boost::shared_array<T> x)
     
         Construct array from a shared pointer
 
@@ -56,7 +56,7 @@ Array.h
     
         Return pointer to data (const version)
 
-    .. cpp:function:: explicit Array(uint N) : _size(N), x(new T[N])
+    .. cpp:function:: explicit Array(uint N)
     
         Create array of size N
 
@@ -86,8 +86,4 @@ Array.h
     .. cpp:function:: void zero_eps(double eps=DOLFIN_EPS)
     
         Set entries which meet (abs(x[i]) < eps) to zero
-
-    .. cpp:function:: ~Array()
-    
-        Destructor
 

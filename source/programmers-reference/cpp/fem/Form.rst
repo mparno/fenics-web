@@ -8,7 +8,7 @@ Form.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Form
 
@@ -44,9 +44,17 @@ Form.h
     
         Return UFC form
 
+    .. cpp:function:: dolfin::uint coefficient_number(const std::string & name) const
+    
+        Return the number of the coefficient with this name
+
     .. cpp:function:: friend class LinearPDE
     
         Friends
+
+    .. cpp:function:: std::string coefficient_name(dolfin::uint i) const
+    
+        Return the name of the coefficient with this number
 
     .. cpp:function:: std::vector<boost::shared_ptr<const FunctionSpace> > function_spaces() const
     
@@ -63,18 +71,6 @@ Form.h
     .. cpp:function:: uint rank() const
     
         Return rank of form (bilinear form = 2, linear form = 1, functional = 0, etc)
-
-    .. cpp:function:: virtual dolfin::uint coefficient_number(const std::string & name) const
-    
-        Return the number of the coefficient with this name
-
-    .. cpp:function:: virtual std::string coefficient_name(dolfin::uint i) const
-    
-        Return the name of the coefficient with this number
-
-    .. cpp:function:: virtual ~Form()
-    
-        Destructor
 
     .. cpp:function:: void check() const
     

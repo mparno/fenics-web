@@ -8,7 +8,7 @@ GenericTensor.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: GenericTensor
 
@@ -17,6 +17,30 @@ GenericTensor.h
         * :cpp:class:`virtual Variable`
         
     This class defines a common interface for arbitrary rank tensors.
+
+    .. cpp:function:: GenericTensor* copy() const = 0
+    
+        Return copy of tensor
+
+    .. cpp:function:: GenericTensor* instance()
+    
+        Return concrete instance / unwrap (non-const version)
+
+    .. cpp:function:: LinearAlgebraFactory& factory() const = 0
+    
+        Return linear algebra backend factory
+
+    .. cpp:function:: const GenericTensor& operator= (const GenericTensor& x)
+    
+        Assignment (must be overloaded by subclass)
+
+    .. cpp:function:: const GenericTensor* instance() const
+    
+        Return concrete instance / unwrap (const version)
+
+    .. cpp:function:: std::string str(bool verbose) const = 0
+    
+        Return informal string representation (pretty-print)
 
     .. cpp:function:: template<class T> T& down_cast()
     
@@ -30,70 +54,42 @@ GenericTensor.h
     
         Cast a GenericTensor to its derived class (const version)
 
-    .. cpp:function:: virtual GenericTensor* copy() const = 0
-    
-        Return copy of tensor
-
-    .. cpp:function:: virtual GenericTensor* instance()
-    
-        Return concrete instance / unwrap (non-const version)
-
-    .. cpp:function:: virtual LinearAlgebraFactory& factory() const = 0
-    
-        Return linear algebra backend factory
-
-    .. cpp:function:: virtual const GenericTensor& operator= (const GenericTensor& x)
-    
-        Assignment (must be overloaded by subclass)
-
-    .. cpp:function:: virtual const GenericTensor* instance() const
-    
-        Return concrete instance / unwrap (const version)
-
-    .. cpp:function:: virtual std::string str(bool verbose) const = 0
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: virtual uint rank() const = 0
+    .. cpp:function:: uint rank() const = 0
     
         Return tensor rank (number of dimensions)
 
-    .. cpp:function:: virtual uint size(uint dim) const = 0
+    .. cpp:function:: uint size(uint dim) const = 0
     
         Return size of given dimension
 
-    .. cpp:function:: virtual void add(const double* block, const uint* num_rows,
+    .. cpp:function:: void add(const double* block, const uint* num_rows,
                                        const uint * const * rows) = 0
     
         Add block of values
 
-    .. cpp:function:: virtual void apply(std::string mode) = 0
+    .. cpp:function:: void apply(std::string mode) = 0
     
         Finalize assembly of tensor
 
-    .. cpp:function:: virtual void get(double* block, const uint* num_rows,
+    .. cpp:function:: void get(double* block, const uint* num_rows,
                                        const uint * const * rows) const = 0
     
         Get block of values
 
-    .. cpp:function:: virtual void init(const GenericSparsityPattern& sparsity_pattern) = 0
+    .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern) = 0
     
         Initialize zero tensor using sparsity pattern
 
-    .. cpp:function:: virtual void resize(uint rank, const uint* dims) = 0
+    .. cpp:function:: void resize(uint rank, const uint* dims) = 0
     
         Resize tensor with given dimensions
 
-    .. cpp:function:: virtual void set(const double* block, const uint* num_rows,
+    .. cpp:function:: void set(const double* block, const uint* num_rows,
                                        const uint * const * rows) = 0
     
         Set block of values
 
-    .. cpp:function:: virtual void zero() = 0
+    .. cpp:function:: void zero() = 0
     
         Set all entries to zero and keep any sparse structure
-
-    .. cpp:function:: virtual ~GenericTensor()
-    
-        Destructor
 

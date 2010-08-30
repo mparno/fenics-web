@@ -8,7 +8,7 @@ Parameters.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Parameters
 
@@ -97,14 +97,6 @@ Parameters.h
     
         Define XMLHandler for use in new XML reader/writer
 
-    .. cpp:function:: virtual void parse(int argc, char* argv[])
-    
-        Parse parameters from command-line
-
-    .. cpp:function:: virtual ~Parameters()
-    
-        Destructor
-
     .. cpp:function:: void add(const Parameters& parameters)
     
         Add nested parameter set
@@ -164,6 +156,10 @@ Parameters.h
     .. cpp:function:: void get_parameter_set_keys(std::vector<std::string>& keys) const
     
         Return a vector of parameter set keys
+
+    .. cpp:function:: void parse(int argc, char* argv[])
+    
+        Parse parameters from command-line
 
     .. cpp:function:: void parse_dolfin(int argc, char* argv[])
     

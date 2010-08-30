@@ -8,7 +8,7 @@ EpetraSparsityPattern.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: EpetraSparsityPattern
 
@@ -45,10 +45,6 @@ EpetraSparsityPattern.h
     .. cpp:function:: uint size(uint i) const
     
         Return global size for dimension i
-
-    .. cpp:function:: virtual ~EpetraSparsityPattern()
-    
-        Destructor
 
     .. cpp:function:: void apply()
     

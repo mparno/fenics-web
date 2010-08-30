@@ -8,7 +8,7 @@ IntersectionOperator.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: IntersectionOperator
 
@@ -116,9 +116,4 @@ IntersectionOperator.h
     
         Rebuilds the underlying search structure from scratch and uses the kernel kernel_type
         underlying CGAL Geometry kernel.
-
-    .. cpp:function:: ~IntersectionOperator()
-    
-        Destructor. Needed be explicit written, otherwise default inline here, with prohibits
-        pImpl with scoped_ptr.
 

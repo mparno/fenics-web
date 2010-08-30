@@ -8,7 +8,7 @@ cGqMethod.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: cGqMethod
 
@@ -20,10 +20,6 @@ cGqMethod.h
     needed for the cG(q) method. The order q must be at least 1. Note that
     q refers to the polynomial order and not the order of convergence for
     the method, which is 2q.
-
-    .. cpp:function:: inline real ueval(real x0, real values[], uint i) const
-    
-        Evaluate solution at given node (inline optimized)
 
     .. cpp:function:: real error(real k, real r) const
     
@@ -40,6 +36,10 @@ cGqMethod.h
     .. cpp:function:: real ueval(real x0, real values[], real tau) const
     
         Evaluate solution at given point
+
+    .. cpp:function:: real ueval(real x0, real values[], uint i) const
+    
+        Evaluate solution at given node (inline optimized)
 
     .. cpp:function:: std::string str(bool verbose) const
     

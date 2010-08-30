@@ -8,7 +8,7 @@ Timer.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Timer
 
@@ -28,7 +28,7 @@ Timer.h
     
       summary();
 
-    .. cpp:function:: Timer(std::string task) : task(""), t(time()), stopped(false)
+    .. cpp:function:: Timer(std::string task)
     
         Create timer
 
@@ -43,8 +43,4 @@ Timer.h
     .. cpp:function:: void stop()
     
         Stop timer
-
-    .. cpp:function:: ~Timer()
-    
-        Destructor
 

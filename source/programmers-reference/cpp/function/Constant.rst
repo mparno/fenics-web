@@ -8,7 +8,7 @@ Constant.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Constant
 
@@ -55,11 +55,7 @@ Constant.h
     
         Cast to double (for scalar constants)
 
-    .. cpp:function:: virtual void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
     
         Evaluate function
-
-    .. cpp:function:: ~Constant()
-    
-        Destructor
 

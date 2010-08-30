@@ -8,7 +8,7 @@ MeshEntity.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: MeshEntity
 
@@ -82,8 +82,4 @@ MeshEntity.h
     .. cpp:function:: uint num_entities(uint dim) const
     
         Return number of incident mesh entities of given topological dimension
-
-    .. cpp:function:: virtual ~MeshEntity()
-    
-        Destructor
 

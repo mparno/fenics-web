@@ -8,7 +8,7 @@ CellType.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: CellType
 
@@ -20,21 +20,41 @@ CellType.h
     
         Constructor
 
+    .. cpp:function:: Point normal(const Cell& cell, uint facet) const = 0
+    
+        Compute of given facet with respect to the cell
+
+    .. cpp:function:: Type cell_type() const
+    
+        Return type of cell
+
+    .. cpp:function:: Type facet_type() const
+    
+        Return type of cell for facets
+
     .. cpp:function:: bool ordered(const Cell& cell, MeshFunction<uint>* global_vertex_indices) const
     
         Check if entities are ordered
 
+    .. cpp:function:: double diameter(const MeshEntity& entity) const = 0
+    
+        Compute diameter of mesh entity
+
+    .. cpp:function:: double facet_area(const Cell& cell, uint facet) const = 0
+    
+        Compute the area/length of given facet with respect to the cell
+
+    .. cpp:function:: double normal(const Cell& cell, uint facet, uint i) const = 0
+    
+        Compute component i of normal of given facet with respect to the cell
+
+    .. cpp:function:: double volume(const MeshEntity& entity) const = 0
+    
+        Compute (generalized) volume of mesh entity
+
     .. cpp:function:: enum Type
     
         Enum for different cell types
-
-    .. cpp:function:: inline Type cell_type() const
-    
-        Return type of cell
-
-    .. cpp:function:: inline Type facet_type() const
-    
-        Return type of cell for facets
 
     .. cpp:function:: static CellType* create(Type type)
     
@@ -52,59 +72,35 @@ CellType.h
     
         Convert from cell type to string
 
-    .. cpp:function:: virtual Point normal(const Cell& cell, uint facet) const = 0
-    
-        Compute of given facet with respect to the cell
-
-    .. cpp:function:: virtual double diameter(const MeshEntity& entity) const = 0
-    
-        Compute diameter of mesh entity
-
-    .. cpp:function:: virtual double facet_area(const Cell& cell, uint facet) const = 0
-    
-        Compute the area/length of given facet with respect to the cell
-
-    .. cpp:function:: virtual double normal(const Cell& cell, uint facet, uint i) const = 0
-    
-        Compute component i of normal of given facet with respect to the cell
-
-    .. cpp:function:: virtual double volume(const MeshEntity& entity) const = 0
-    
-        Compute (generalized) volume of mesh entity
-
-    .. cpp:function:: virtual std::string description(bool plural) const = 0
+    .. cpp:function:: std::string description(bool plural) const = 0
     
         Return description of cell type
 
-    .. cpp:function:: virtual uint dim() const = 0
+    .. cpp:function:: uint dim() const = 0
     
         Return topological dimension of cell
 
-    .. cpp:function:: virtual uint num_entities(uint dim) const = 0
+    .. cpp:function:: uint num_entities(uint dim) const = 0
     
         Return number of entitites of given topological dimension
 
-    .. cpp:function:: virtual uint num_vertices(uint dim) const = 0
+    .. cpp:function:: uint num_vertices(uint dim) const = 0
     
         Return number of vertices for entity of given topological dimension
 
-    .. cpp:function:: virtual uint orientation(const Cell& cell) const = 0
+    .. cpp:function:: uint orientation(const Cell& cell) const = 0
     
         Return orientation of the cell
 
-    .. cpp:function:: virtual void create_entities(uint** e, uint dim, const uint* v) const = 0
+    .. cpp:function:: void create_entities(uint** e, uint dim, const uint* v) const = 0
     
         Create entities e of given topological dimension from vertices v
 
-    .. cpp:function:: virtual void order(Cell& cell, const MeshFunction<uint>* global_vertex_indices) const = 0
+    .. cpp:function:: void order(Cell& cell, const MeshFunction<uint>* global_vertex_indices) const = 0
     
         Order entities locally
 
-    .. cpp:function:: virtual void refine_cell(Cell& cell, MeshEditor& editor, uint& current_cell) const = 0
+    .. cpp:function:: void refine_cell(Cell& cell, MeshEditor& editor, uint& current_cell) const = 0
     
         Refine cell uniformly
-
-    .. cpp:function:: virtual ~CellType()
-    
-        Destructor
 

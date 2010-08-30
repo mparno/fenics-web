@@ -8,7 +8,7 @@ uBLASKrylovMatrix.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: uBLASKrylovMatrix
 
@@ -22,21 +22,17 @@ uBLASKrylovMatrix.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: uBLASKrylovMatrix() : AA(0), ej(0), Aj(0)
+    .. cpp:function:: uBLASKrylovMatrix()
     
         Constructor
 
-    .. cpp:function:: virtual uint size(uint dim) const = 0
+    .. cpp:function:: uint size(uint dim) const = 0
     
         Return number of rows (dim = 0) or columns (dim = 1)
 
-    .. cpp:function:: virtual void mult(const uBLASVector& x, uBLASVector& y) const = 0
+    .. cpp:function:: void mult(const uBLASVector& x, uBLASVector& y) const = 0
     
         Compute product y = Ax
-
-    .. cpp:function:: virtual ~uBLASKrylovMatrix()
-    
-        Destructor
 
     .. cpp:function:: void solve(uBLASVector& x, const uBLASVector& b)
     

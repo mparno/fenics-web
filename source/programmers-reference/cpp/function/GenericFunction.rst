@@ -8,7 +8,7 @@ GenericFunction.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: GenericFunction
 
@@ -31,48 +31,44 @@ GenericFunction.h
     
         Constructor
 
+    .. cpp:function:: uint value_dimension(uint i) const = 0
+    
+        Return value dimension for given axis
+
+    .. cpp:function:: uint value_rank() const = 0
+    
+        Return value rank
+
     .. cpp:function:: uint value_size() const
     
         Return value size (product of value dimensions)
 
-    .. cpp:function:: virtual uint value_dimension(uint i) const = 0
-    
-        Return value dimension for given axis
-
-    .. cpp:function:: virtual uint value_rank() const = 0
-    
-        Return value rank
-
-    .. cpp:function:: virtual void compute_vertex_values(Array<double>& vertex_values,
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
                                                          const Mesh& mesh) const = 0
     
         Compute values at all mesh vertices
 
-    .. cpp:function:: virtual void eval(Array<double>& values, const Data& data) const = 0
+    .. cpp:function:: void eval(Array<double>& values, const Data& data) const = 0
     
         Evaluate function for given data
 
-    .. cpp:function:: virtual void evaluate(double* values,
+    .. cpp:function:: void evaluate(double* values,
                                             const double* coordinates,
                                             const ufc::cell& cell) const
     
         Evaluate function at given point in cell
 
-    .. cpp:function:: virtual void gather() const
+    .. cpp:function:: void gather() const
     
         Collect off-process coefficients to prepare for interpolation
 
-    .. cpp:function:: virtual void restrict(double* w,
+    .. cpp:function:: void restrict(double* w,
                                             const FiniteElement& element,
                                             const Cell& dolfin_cell,
                                             const ufc::cell& ufc_cell,
                                             int local_facet) const = 0
     
         Restrict function to local cell (compute expansion coefficients w)
-
-    .. cpp:function:: virtual ~GenericFunction()
-    
-        Destructor
 
     .. cpp:function:: void restrict(double* w,
                                     const FiniteElement& element,

@@ -8,7 +8,7 @@ BoundaryMesh.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: BoundaryMesh
 
@@ -33,8 +33,4 @@ BoundaryMesh.h
     .. cpp:function:: void init_interior_boundary(const Mesh& mesh)
     
         Initialize interior boundary of given mesh
-
-    .. cpp:function:: ~BoundaryMesh()
-    
-        Destructor
 

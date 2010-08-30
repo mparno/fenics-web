@@ -8,7 +8,7 @@ Function.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Function
 
@@ -104,38 +104,18 @@ Function.h
     
         Return geometric dimension
 
-    .. cpp:function:: virtual uint value_dimension(uint i) const
+    .. cpp:function:: uint value_dimension(uint i) const
     
         Return value dimension for given axis
 
-    .. cpp:function:: virtual uint value_rank() const
+    .. cpp:function:: uint value_rank() const
     
         Return value rank
 
-    .. cpp:function:: virtual void compute_vertex_values(Array<double>& vertex_values,
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values,
                                                          const Mesh& mesh) const
     
         Compute values at all mesh vertices
-
-    .. cpp:function:: virtual void eval(Array<double>& values, const Data& data) const
-    
-        Evaluate function for given data
-
-    .. cpp:function:: virtual void gather() const
-    
-        Collect off-process coefficients to prepare for interpolation
-
-    .. cpp:function:: virtual void restrict(double* w,
-                                            const FiniteElement& element,
-                                            const Cell& dolfin_cell,
-                                            const ufc::cell& ufc_cell,
-                                            int local_facet) const
-    
-        Restrict function to local cell (compute expansion coefficients w)
-
-    .. cpp:function:: virtual ~Function()
-    
-        Destructor
 
     .. cpp:function:: void eval(Array<double>& values,
                                 const Array<double>& x,
@@ -148,13 +128,29 @@ Function.h
     
         Evaluate function for given coordinate
 
+    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    
+        Evaluate function for given data
+
     .. cpp:function:: void extrapolate(const Function& v)
     
         Extrapolate function (from a possibly lower-degree function space)
 
+    .. cpp:function:: void gather() const
+    
+        Collect off-process coefficients to prepare for interpolation
+
     .. cpp:function:: void interpolate(const GenericFunction& v)
     
         Interpolate function (possibly non-matching meshes)
+
+    .. cpp:function:: void restrict(double* w,
+                                            const FiniteElement& element,
+                                            const Cell& dolfin_cell,
+                                            const ufc::cell& ufc_cell,
+                                            int local_facet) const
+    
+        Restrict function to local cell (compute expansion coefficients w)
 
 .. cpp:class:: LocalScratch
 

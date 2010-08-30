@@ -8,7 +8,7 @@ CholmodCholeskySolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class GenericVector
     
@@ -41,25 +41,21 @@ CholmodCholeskySolver.h
     
         Default parameter values
 
-    .. cpp:function:: virtual uint factorize(const GenericMatrix& A)
+    .. cpp:function:: uint factorize(const GenericMatrix& A)
     
         Cholesky-factor sparse matrix A if CHOLMOD is installed
 
-    .. cpp:function:: virtual uint factorized_solve(GenericVector& x, const GenericVector& b)
+    .. cpp:function:: uint factorized_solve(GenericVector& x, const GenericVector& b)
     
         Solve factorized system (CHOLMOD).
 
-    .. cpp:function:: virtual uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b for a sparse matrix using CHOLMOD
 
     .. cpp:function:: void set_operator(const GenericMatrix& A)
     
         Solve the operator (matrix)
-
-    .. cpp:function:: ~CholmodCholeskySolver()
-    
-        Destructor
 
 .. cpp:class:: Cholmod
 

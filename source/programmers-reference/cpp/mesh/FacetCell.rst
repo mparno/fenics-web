@@ -8,7 +8,7 @@ FacetCell.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: FacetCell
 
@@ -28,8 +28,4 @@ FacetCell.h
     .. cpp:function:: uint facet_index() const
     
         Return local index of facet with respect to the cell
-
-    .. cpp:function:: ~FacetCell()
-    
-        Destructor
 

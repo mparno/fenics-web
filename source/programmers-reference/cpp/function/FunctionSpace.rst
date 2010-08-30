@@ -8,7 +8,7 @@ FunctionSpace.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: FunctionSpace
 
@@ -27,15 +27,11 @@ FunctionSpace.h
         construct objects before the initialisation of the base class. Data can
         be attached to the base class using FunctionSpace::attach(...)
 
-    .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh,
-                       boost::shared_ptr<const FiniteElement> element,
-                       boost::shared_ptr<const GenericDofMap> dofmap)
+    .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh, boost::shared_ptr<const FiniteElement> element, boost::shared_ptr<const GenericDofMap> dofmap)
     
         Create function space for given mesh, element and dofmap (shared data)
 
-    .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh,
-                                    boost::shared_ptr<const FiniteElement> element,
-                                    boost::shared_ptr<const GenericDofMap> dofmap)
+    .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh, boost::shared_ptr<const FiniteElement> element, boost::shared_ptr<const GenericDofMap> dofmap)
     
         Create function space for given mesh, element and dofmap (shared data)
 
@@ -51,13 +47,11 @@ FunctionSpace.h
     
         Check if function space has given element
 
-    .. cpp:function:: boost::shared_ptr<FunctionSpace>
-                                                       collapse_sub_space(boost::shared_ptr<GenericDofMap> dofmap) const
+    .. cpp:function:: boost::shared_ptr<FunctionSpace> collapse_sub_space(boost::shared_ptr<GenericDofMap> dofmap) const
     
         Return function space with a new dof map
 
-    .. cpp:function:: boost::shared_ptr<FunctionSpace>
-                                                       extract_sub_space(const std::vector<uint>& component) const
+    .. cpp:function:: boost::shared_ptr<FunctionSpace> extract_sub_space(const std::vector<uint>& component) const
     
         Extract sub space for component
 
@@ -93,17 +87,11 @@ FunctionSpace.h
     
         Return dimension of function space
 
-    .. cpp:function:: virtual ~FunctionSpace()
-    
-        Destructor
-
-    .. cpp:function:: void attach(boost::shared_ptr<const FiniteElement> element,
-                                  boost::shared_ptr<const GenericDofMap> dofmap)
+    .. cpp:function:: void attach(boost::shared_ptr<const FiniteElement> element, boost::shared_ptr<const GenericDofMap> dofmap)
     
         Attach data to an empty FunctionSpace
 
-    .. cpp:function:: void interpolate(GenericVector& expansion_coefficients,
-                                       const GenericFunction& v) const
+    .. cpp:function:: void interpolate(GenericVector& expansion_coefficients, const GenericFunction& v) const
     
         Interpolate function v into function space, returning the vector of
         expansion coefficients

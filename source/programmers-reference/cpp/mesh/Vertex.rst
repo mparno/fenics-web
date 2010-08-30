@@ -8,7 +8,7 @@ Vertex.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Vertex
 
@@ -22,11 +22,11 @@ Vertex.h
     
         Return vertex coordinates as a 3D point value
 
-    .. cpp:function:: Vertex(MeshEntity& entity) : MeshEntity(entity.mesh(), 0, entity.index())
+    .. cpp:function:: Vertex(MeshEntity& entity)
     
         Create vertex from mesh entity
 
-    .. cpp:function:: Vertex(const Mesh& mesh, uint index) : MeshEntity(mesh, 0, index)
+    .. cpp:function:: Vertex(const Mesh& mesh, uint index)
     
         Create vertex on given mesh
 
@@ -37,10 +37,6 @@ Vertex.h
     .. cpp:function:: double x(uint i) const
     
         Return value of vertex coordinate i
-
-    .. cpp:function:: ~Vertex()
-    
-        Destructor
 
 .. cpp:class:: VertexIterator
 

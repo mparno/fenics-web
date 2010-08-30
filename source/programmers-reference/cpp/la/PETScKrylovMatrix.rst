@@ -8,7 +8,7 @@ PETScKrylovMatrix.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: PETScKrylovMatrix
 
@@ -41,13 +41,9 @@ PETScKrylovMatrix.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: virtual void mult(const PETScVector& x, PETScVector& y) const = 0
+    .. cpp:function:: void mult(const PETScVector& x, PETScVector& y) const = 0
     
         Compute product y = Ax
-
-    .. cpp:function:: virtual ~PETScKrylovMatrix()
-    
-        Destructor
 
     .. cpp:function:: void resize(uint m, uint n)
     

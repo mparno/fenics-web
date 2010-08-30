@@ -8,7 +8,7 @@ Edge.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Edge
 
@@ -18,21 +18,17 @@ Edge.h
         
     An Edge is a MeshEntity of topological dimension 1.
 
-    .. cpp:function:: Edge(MeshEntity& entity) : MeshEntity(entity.mesh(), 1, entity.index())
+    .. cpp:function:: Edge(MeshEntity& entity)
     
         Create edge from mesh entity
 
-    .. cpp:function:: Edge(const Mesh& mesh, uint index) : MeshEntity(mesh, 1, index)
+    .. cpp:function:: Edge(const Mesh& mesh, uint index)
     
         Create edge on given mesh
 
     .. cpp:function:: double length()
     
         Compute Euclidean length of edge
-
-    .. cpp:function:: ~Edge()
-    
-        Destructor
 
 .. cpp:class:: EdgeIterator
 

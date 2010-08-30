@@ -8,7 +8,7 @@ ODECollection.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: ODECollection
 
@@ -31,14 +31,6 @@ ODECollection.h
     
         Create a collection of ODEs
 
-    .. cpp:function:: virtual void update(real* u, real t, uint system)
-    
-        Optional user-defined update, called between solves
-
-    .. cpp:function:: virtual ~ODECollection()
-    
-        Destructor
-
     .. cpp:function:: void get_state(real* u)
     
         Get states for all ODE systems
@@ -58,4 +50,8 @@ ODECollection.h
     .. cpp:function:: void solve(real t0, real t1)
     
         Solve ODE collection on [t0, t1]
+
+    .. cpp:function:: void update(real* u, real t, uint system)
+    
+        Optional user-defined update, called between solves
 

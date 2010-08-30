@@ -8,7 +8,7 @@ PETScKrylovSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class GenericMatrix
     
@@ -111,8 +111,4 @@ PETScKrylovSolver.h
     .. cpp:function:: void write_report(int num_iterations, KSPConvergedReason reason)
     
         Report the number of iterations
-
-    .. cpp:function:: ~PETScKrylovSolver()
-    
-        Destructor
 

@@ -8,7 +8,7 @@ SparsityPattern.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: SparsityPattern
 
@@ -32,6 +32,10 @@ SparsityPattern.h
     
         Return underlying sparsity pattern (off-diagional)
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local range for dimension dim
+
     .. cpp:function:: std::string str() const
     
         Return informal string representation (pretty-print)
@@ -47,10 +51,6 @@ SparsityPattern.h
     .. cpp:function:: uint size(uint i) const
     
         Return global size for dimension i
-
-    .. cpp:function:: virtual std::pair<uint, uint> local_range(uint dim) const
-    
-        Return local range for dimension dim
 
     .. cpp:function:: void apply()
     
@@ -73,8 +73,4 @@ SparsityPattern.h
     
         Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for off-diagonal block
-
-    .. cpp:function:: ~SparsityPattern()
-    
-        Destructor
 

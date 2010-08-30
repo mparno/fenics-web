@@ -8,18 +8,18 @@ Set.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Set
 
     This is a std::set like data structure. It is not ordered and it is based
     a std::vector. It can be faster than a std::set for some cases.
 
-    .. cpp:function:: Set(const dolfin::Set<T>& x) : _x(x._x)
+    .. cpp:function:: Set(const dolfin::Set<T>& x)
     
         Copy constructor
 
-    .. cpp:function:: Set(std::vector<T>& x) : _x(x)
+    .. cpp:function:: Set(std::vector<T>& x)
     
         Wrap std::vectpr as a set. Contents will be erased.
 
@@ -71,8 +71,4 @@ Set.h
     .. cpp:function:: void sort()
     
         Sort set
-
-    .. cpp:function:: ~Set()
-    
-        Destructor
 

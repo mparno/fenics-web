@@ -8,7 +8,7 @@ Progress.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Progress
 
@@ -47,8 +47,4 @@ Progress.h
     .. cpp:function:: void operator=(double p)
     
         Set current position
-
-    .. cpp:function:: ~Progress()
-    
-        Destructor
 

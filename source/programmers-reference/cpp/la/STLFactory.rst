@@ -8,7 +8,7 @@ STLFactory.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: STLFactory
 
@@ -48,8 +48,4 @@ STLFactory.h
     .. cpp:function:: uBLASVector* create_vector() const
     
         Create empty vector (global)
-
-    .. cpp:function:: virtual ~STLFactory()
-    
-        Destructor
 

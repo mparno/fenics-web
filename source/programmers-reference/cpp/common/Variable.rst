@@ -8,7 +8,7 @@ Variable.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Variable
 
@@ -30,13 +30,9 @@ Variable.h
     
         Return name
 
-    .. cpp:function:: virtual std::string str(bool verbose) const
+    .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: virtual ~Variable()
-    
-        Destructor
 
     .. cpp:function:: void disp() const
     

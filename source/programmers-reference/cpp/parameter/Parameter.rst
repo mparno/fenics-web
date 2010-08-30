@@ -8,7 +8,7 @@ Parameter.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Parameter
 
@@ -18,6 +18,54 @@ Parameter.h
     
         Create parameter for given key
 
+    .. cpp:function:: const Parameter& operator= (bool value)
+    
+        Assignment from bool
+
+    .. cpp:function:: const Parameter& operator= (const char* value)
+    
+        Assignment from string
+
+    .. cpp:function:: const Parameter& operator= (double value)
+    
+        Assignment from double
+
+    .. cpp:function:: const Parameter& operator= (int value)
+    
+        Assignment from int
+
+    .. cpp:function:: const Parameter& operator= (real value)
+    
+        Assignment from GMP type
+
+    .. cpp:function:: const Parameter& operator= (std::string value)
+    
+        Assignment from string
+
+    .. cpp:function:: operator bool() const
+    
+        Cast parameter to bool
+
+    .. cpp:function:: operator dolfin::uint() const
+    
+        Cast parameter to uint
+
+    .. cpp:function:: operator double() const
+    
+        Cast parameter to double
+
+    .. cpp:function:: operator int() const
+    
+        Cast parameter to int
+
+    .. cpp:function:: operator std::string() const
+    
+        Cast parameter to string
+
+    .. cpp:function:: real get_real() const
+    
+        Get real value of parameter with (possibly) extended precision
+
     .. cpp:function:: std::string description() const
     
         Return parameter description
@@ -25,6 +73,22 @@ Parameter.h
     .. cpp:function:: std::string key() const
     
         Return parameter key
+
+    .. cpp:function:: std::string range_str() const = 0
+    
+        Return range string
+
+    .. cpp:function:: std::string str() const = 0
+    
+        Return short string description
+
+    .. cpp:function:: std::string type_str() const = 0
+    
+        Return value type string
+
+    .. cpp:function:: std::string value_str() const = 0
+    
+        Return value string
 
     .. cpp:function:: uint access_count() const
     
@@ -34,97 +98,29 @@ Parameter.h
     
         Return change count (number of times parameter has been changed)
 
-    .. cpp:function:: virtual const Parameter& operator= (bool value)
-    
-        Assignment from bool
-
-    .. cpp:function:: virtual const Parameter& operator= (const char* value)
-    
-        Assignment from string
-
-    .. cpp:function:: virtual const Parameter& operator= (double value)
-    
-        Assignment from double
-
-    .. cpp:function:: virtual const Parameter& operator= (int value)
-    
-        Assignment from int
-
-    .. cpp:function:: virtual const Parameter& operator= (real value)
-    
-        Assignment from GMP type
-
-    .. cpp:function:: virtual const Parameter& operator= (std::string value)
-    
-        Assignment from string
-
-    .. cpp:function:: virtual operator bool() const
-    
-        Cast parameter to bool
-
-    .. cpp:function:: virtual operator dolfin::uint() const
-    
-        Cast parameter to uint
-
-    .. cpp:function:: virtual operator double() const
-    
-        Cast parameter to double
-
-    .. cpp:function:: virtual operator int() const
-    
-        Cast parameter to int
-
-    .. cpp:function:: virtual operator std::string() const
-    
-        Cast parameter to string
-
-    .. cpp:function:: virtual real get_real() const
-    
-        Get real value of parameter with (possibly) extended precision
-
-    .. cpp:function:: virtual std::string range_str() const = 0
-    
-        Return range string
-
-    .. cpp:function:: virtual std::string str() const = 0
-    
-        Return short string description
-
-    .. cpp:function:: virtual std::string type_str() const = 0
-    
-        Return value type string
-
-    .. cpp:function:: virtual std::string value_str() const = 0
-    
-        Return value string
-
-    .. cpp:function:: virtual void get_range(int& min_value, int& max_value) const
+    .. cpp:function:: void get_range(int& min_value, int& max_value) const
     
         Get range for int-valued parameter
 
-    .. cpp:function:: virtual void get_range(real& min_value, real& max_value) const
+    .. cpp:function:: void get_range(real& min_value, real& max_value) const
     
         Get range for double-valued parameter
 
-    .. cpp:function:: virtual void get_range(std::set<std::string>& range) const
+    .. cpp:function:: void get_range(std::set<std::string>& range) const
     
         Get range for string-valued parameter
 
-    .. cpp:function:: virtual void set_range(int min_value, int max_value)
+    .. cpp:function:: void set_range(int min_value, int max_value)
     
         Set range for int-valued parameter
 
-    .. cpp:function:: virtual void set_range(real min_value, real max_value)
+    .. cpp:function:: void set_range(real min_value, real max_value)
     
         Set range for double-valued parameter
 
-    .. cpp:function:: virtual void set_range(std::set<std::string> range)
+    .. cpp:function:: void set_range(std::set<std::string> range)
     
         Set range for string-valued parameter
-
-    .. cpp:function:: virtual ~Parameter()
-    
-        Destructor
 
 .. cpp:class:: IntParameter
 
@@ -182,10 +178,6 @@ Parameter.h
     
         Set range
 
-    .. cpp:function:: ~IntParameter()
-    
-        Destructor
-
 .. cpp:class:: RealParameter
 
     *Parent class*
@@ -241,10 +233,6 @@ Parameter.h
     .. cpp:function:: void set_range(real min_value, real max_value)
     
         Set range
-
-    .. cpp:function:: ~RealParameter()
-    
-        Destructor
 
 .. cpp:class:: StringParameter
 
@@ -302,10 +290,6 @@ Parameter.h
     
         Set range
 
-    .. cpp:function:: ~StringParameter()
-    
-        Destructor
-
 .. cpp:class:: BoolParameter
 
     *Parent class*
@@ -345,8 +329,4 @@ Parameter.h
     .. cpp:function:: std::string value_str() const
     
         Return value string
-
-    .. cpp:function:: ~BoolParameter()
-    
-        Destructor
 

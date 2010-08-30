@@ -8,7 +8,7 @@ MeshGeometry.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class Mesh
     
@@ -145,8 +145,4 @@ MeshGeometry.h
     .. cpp:function:: void set_higher_order_coordinates(uint N, uint i, double x)
     
         Set value of higher order coordinate N in direction i
-
-    .. cpp:function:: ~MeshGeometry()
-    
-        Destructor
 

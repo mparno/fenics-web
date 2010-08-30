@@ -8,7 +8,7 @@ SLEPcEigenSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class PETScMatrix
     
@@ -111,8 +111,4 @@ SLEPcEigenSolver.h
     .. cpp:function:: void solve(const PETScMatrix* A, const PETScMatrix* B, uint n)
     
         Compute eigenpairs
-
-    .. cpp:function:: ~SLEPcEigenSolver()
-    
-        Destructor
 

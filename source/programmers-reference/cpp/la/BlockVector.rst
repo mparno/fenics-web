@@ -8,13 +8,17 @@ BlockVector.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: BlockVector
 
     .. cpp:function:: BlockVector(uint n_=0, bool owner=false)
     
         Constructor
+
+    .. cpp:function:: BlockVector* copy() const
+    
+        Return copy of tensor
 
     .. cpp:function:: const BlockVector& operator*= (double a)
     
@@ -67,14 +71,6 @@ BlockVector.h
     .. cpp:function:: uint size() const
     
         Number of vectors
-
-    .. cpp:function:: virtual BlockVector* copy() const
-    
-        Return copy of tensor
-
-    .. cpp:function:: virtual ~BlockVector()
-    
-        Destructor
 
     .. cpp:function:: void axpy(double a, const BlockVector& x)
     

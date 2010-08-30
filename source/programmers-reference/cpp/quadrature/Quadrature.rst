@@ -8,7 +8,7 @@ Quadrature.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Quadrature
 
@@ -35,8 +35,4 @@ Quadrature.h
     .. cpp:function:: real weight(unsigned int i) const
     
         Return quadrature weight
-
-    .. cpp:function:: virtual ~Quadrature()
-    
-        Destructor
 

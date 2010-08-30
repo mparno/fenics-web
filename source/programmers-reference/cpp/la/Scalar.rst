@@ -8,7 +8,7 @@ Scalar.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Scalar
 
@@ -19,9 +19,17 @@ Scalar.h
     This class represents a real-valued scalar quantity and
     implements the GenericTensor interface for scalars.
 
-    .. cpp:function:: Scalar() : GenericTensor(), value(0.0)
+    .. cpp:function:: LinearAlgebraFactory& factory() const
+    
+        Return a factory for the default linear algebra backend
+
+    .. cpp:function:: Scalar()
     
         Create zero scalar
+
+    .. cpp:function:: Scalar* copy() const
+    
+        Return copy of tensor
 
     .. cpp:function:: const Scalar& operator= (double value)
     
@@ -30,10 +38,6 @@ Scalar.h
     .. cpp:function:: double getval() const
     
         Get value
-
-    .. cpp:function:: inline LinearAlgebraFactory& factory() const
-    
-        Return a factory for the default linear algebra backend
 
     .. cpp:function:: operator double() const
     
@@ -51,18 +55,6 @@ Scalar.h
     
         Return size of given dimension
 
-    .. cpp:function:: virtual Scalar* copy() const
-    
-        Return copy of tensor
-
-    .. cpp:function:: virtual void resize(uint rank, const uint* dims)
-    
-        Resize tensor to given dimensions
-
-    .. cpp:function:: virtual ~Scalar()
-    
-        Destructor
-
     .. cpp:function:: void add(const double* block, const uint* num_rows, const uint * const * rows)
     
         Add block of values
@@ -78,6 +70,10 @@ Scalar.h
     .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern)
     
         Initialize zero tensor using sparsity pattern
+
+    .. cpp:function:: void resize(uint rank, const uint* dims)
+    
+        Resize tensor to given dimensions
 
     .. cpp:function:: void set(const double* block, const uint* num_rows, const uint * const * rows)
     

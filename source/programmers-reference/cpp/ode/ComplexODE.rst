@@ -8,7 +8,7 @@ ComplexODE.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: ComplexODE
 
@@ -40,53 +40,49 @@ ComplexODE.h
     
         Constructor
 
+    .. cpp:function:: bool update(const complex z[], real t, bool end)
+    
+        Update ODE, return false to stop (optional)
+
     .. cpp:function:: bool update(const real* u, real t, bool end)
     
         Update for real-valued ODE
+
+    .. cpp:function:: complex f(const complex z[], real t, uint i)
+    
+        Evaluate right-hand side (multi-adaptive version)
 
     .. cpp:function:: real f(const real* u, real t, uint i)
     
         Return right-hand side for real-valued ODE
 
+    .. cpp:function:: real k(uint i)
+    
+        Return time step for component i (optional)
+
     .. cpp:function:: real timestep(uint i)
     
         Return time step for real-valued ODE
 
-    .. cpp:function:: virtual bool update(const complex z[], real t, bool end)
-    
-        Update ODE, return false to stop (optional)
-
-    .. cpp:function:: virtual complex f(const complex z[], real t, uint i)
-    
-        Evaluate right-hand side (multi-adaptive version)
-
-    .. cpp:function:: virtual real k(uint i)
-    
-        Return time step for component i (optional)
-
-    .. cpp:function:: virtual void J(const complex x[], complex y[], const complex u[], real t)
+    .. cpp:function:: void J(const complex x[], complex y[], const complex u[], real t)
     
         Compute product y = Jx for Jacobian J
-
-    .. cpp:function:: virtual void M(const complex x[], complex y[], const complex z[], real t)
-    
-        Compute product y = Mx for implicit system
-
-    .. cpp:function:: virtual void f(const complex z[], real t, complex y[])
-    
-        Evaluate right-hand side (mono-adaptive version)
-
-    .. cpp:function:: virtual void z0(complex z[]) = 0
-    
-        Set initial values
 
     .. cpp:function:: void J(const real* x, real* y, const real* u, real t)
     
         Compute product y = Jx for real-valued ODE
 
+    .. cpp:function:: void M(const complex x[], complex y[], const complex z[], real t)
+    
+        Compute product y = Mx for implicit system
+
     .. cpp:function:: void M(const real* x, real* y, const real* u, real t)
     
         Compute product y = Mx for real-valued ODE
+
+    .. cpp:function:: void f(const complex z[], real t, complex y[])
+    
+        Evaluate right-hand side (mono-adaptive version)
 
     .. cpp:function:: void f(const real* u, real t, real* y)
     
@@ -96,9 +92,9 @@ ComplexODE.h
     
         Return initial value for real-valued ODE
 
-    .. cpp:function:: ~ComplexODE()
+    .. cpp:function:: void z0(complex z[]) = 0
     
-        Destructor
+        Set initial values
 
 .. cpp:class:: DummyComplexODE
 

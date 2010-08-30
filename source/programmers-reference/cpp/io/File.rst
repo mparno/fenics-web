@@ -8,7 +8,7 @@ File.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: File
 
@@ -53,8 +53,4 @@ File.h
     .. cpp:function:: void operator<<(const std::pair<const Function*, double> u)
     
         Write Function to file (with time)
-
-    .. cpp:function:: ~File()
-    
-        Destructor
 

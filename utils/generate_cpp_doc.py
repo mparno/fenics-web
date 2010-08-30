@@ -89,11 +89,12 @@ def generate_documentation(header, module):
             # Found start of new signature
             if signature is None:
                 signature = s
-                indent = (len(s.split("(")[0]) + 1)*" "
+                #indent = (len(s.split("(")[0]) + 1)*" "
 
             # Continuing signature on next line
             else:
-                signature += "\n" + indent + s
+                #signature += "\n" + indent + s
+                signature += " " + s
 
             # Signature ends when we find ";" or "{"
             if ";" in s or "{" in s:
@@ -138,6 +139,10 @@ def generate_documentation(header, module):
 
 def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
+
+    # For quick testing
+    if not header == "FunctionSpace.h":
+        return
 
     print "Writing documentation for %s..." % header
 

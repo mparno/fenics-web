@@ -8,7 +8,7 @@ PETScLUSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: class GenericMatrix
     
@@ -72,8 +72,4 @@ PETScLUSolver.h
     .. cpp:function:: void set_operator(const PETScMatrix& A)
     
         Set operator (matrix)
-
-    .. cpp:function:: ~PETScLUSolver()
-    
-        Destructor
 

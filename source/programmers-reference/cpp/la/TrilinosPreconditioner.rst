@@ -8,7 +8,7 @@ TrilinosPreconditioner.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: TrilinosPreconditioner
 
@@ -40,13 +40,9 @@ TrilinosPreconditioner.h
     
         Named preconditioner
 
-    .. cpp:function:: virtual void set(EpetraKrylovSolver& solver, const EpetraMatrix& P)
+    .. cpp:function:: void set(EpetraKrylovSolver& solver, const EpetraMatrix& P)
     
         Set the precondtioner and matrix used in preconditioner
-
-    .. cpp:function:: virtual ~TrilinosPreconditioner()
-    
-        Destructor
 
     .. cpp:function:: void set_ml(AztecOO& solver, const Epetra_RowMatrix& P)
     

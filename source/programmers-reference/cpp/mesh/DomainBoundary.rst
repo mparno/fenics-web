@@ -8,7 +8,7 @@ DomainBoundary.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: DomainBoundary
 
@@ -24,11 +24,7 @@ DomainBoundary.h
     
         Constructor
 
-    .. cpp:function:: virtual bool inside(const Array<double>& x, bool on_boundary) const
+    .. cpp:function:: bool inside(const Array<double>& x, bool on_boundary) const
     
         Return true for points on the boundary
-
-    .. cpp:function:: virtual ~DomainBoundary()
-    
-        Destructor
 

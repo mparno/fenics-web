@@ -8,7 +8,7 @@ MeshTopology.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: MeshTopology
 
@@ -65,8 +65,4 @@ MeshTopology.h
     .. cpp:function:: void init(uint dim, uint size)
     
         Set number of entities (size) for given topological dimension
-
-    .. cpp:function:: ~MeshTopology()
-    
-        Destructor
 

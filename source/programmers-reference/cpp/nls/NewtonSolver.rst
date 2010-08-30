@@ -8,7 +8,7 @@ NewtonSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: NewtonSolver
 
@@ -32,6 +32,11 @@ NewtonSolver.h
     
         Create nonlinear solver with default linear solver and default
         linear algebra backend
+
+    .. cpp:function:: bool converged(const GenericVector& b, const GenericVector& dx,
+                                             const NonlinearProblem& nonlinear_problem)
+    
+        Convergence test
 
     .. cpp:function:: boost::scoped_ptr<GenericMatrix> A
     
@@ -78,13 +83,4 @@ NewtonSolver.h
     .. cpp:function:: uint newton_iteration
     
         Current number of Newton iterations
-
-    .. cpp:function:: virtual bool converged(const GenericVector& b, const GenericVector& dx,
-                                             const NonlinearProblem& nonlinear_problem)
-    
-        Convergence test
-
-    .. cpp:function:: virtual ~NewtonSolver()
-    
-        Destructor
 

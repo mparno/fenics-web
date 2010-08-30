@@ -8,7 +8,7 @@ Facet.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Facet
 
@@ -18,7 +18,7 @@ Facet.h
         
     A Facet is a MeshEntity of topological codimension 1.
 
-    .. cpp:function:: Facet(const Mesh& mesh, uint index) : MeshEntity(mesh, mesh.topology().dim() - 1, index)
+    .. cpp:function:: Facet(const Mesh& mesh, uint index)
     
         Constructor
 
@@ -34,10 +34,6 @@ Facet.h
         the ordering of the two cells. If not specified, the ordering
         will depend on the (arbitrary) ordering of the mesh
         connectivity.
-
-    .. cpp:function:: ~Facet()
-    
-        Destructor
 
 .. cpp:class:: FacetIterator
 

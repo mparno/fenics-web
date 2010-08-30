@@ -8,7 +8,7 @@ EpetraKrylovSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: EpetraKrylovSolver
 
@@ -64,8 +64,4 @@ EpetraKrylovSolver.h
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
         Solve the operator (matrix)
-
-    .. cpp:function:: ~EpetraKrylovSolver()
-    
-        Destructor
 

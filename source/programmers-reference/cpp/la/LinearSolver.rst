@@ -8,7 +8,7 @@ LinearSolver.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: LinearSolver
 
@@ -41,8 +41,4 @@ LinearSolver.h
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
         Set the operator (matrix) and preconitioner matrix
-
-    .. cpp:function:: ~LinearSolver()
-    
-        Destructor
 

@@ -8,7 +8,7 @@ MeshConnectivity.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: MeshConnectivity
 
@@ -33,25 +33,25 @@ MeshConnectivity.h
     
         Assignment
 
-    .. cpp:function:: inline const uint* operator() () const
+    .. cpp:function:: const uint* operator() () const
     
         Return contiguous array of connections for all entities
 
-    .. cpp:function:: inline const uint* operator() (uint entity) const
+    .. cpp:function:: const uint* operator() (uint entity) const
     
         Return array of connections for given entity
-
-    .. cpp:function:: inline uint size() const
-    
-        Return total number of connections
-
-    .. cpp:function:: inline uint size(uint entity) const
-    
-        Return number of connections for given entity
 
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
+
+    .. cpp:function:: uint size() const
+    
+        Return total number of connections
+
+    .. cpp:function:: uint size(uint entity) const
+    
+        Return number of connections for given entity
 
     .. cpp:function:: void clear()
     
@@ -80,8 +80,4 @@ MeshConnectivity.h
     .. cpp:function:: void set(uint entity, uint* connections)
     
         Set all connections for given entity
-
-    .. cpp:function:: ~MeshConnectivity()
-    
-        Destructor
 

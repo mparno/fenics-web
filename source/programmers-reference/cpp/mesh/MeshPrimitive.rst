@@ -8,7 +8,7 @@ MeshPrimitive.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
     .. cpp:function:: //AABB_tree. Uses conversion operator in dolfin::Point to create a certain
                                                                                                  //CGAL Point_3 type.

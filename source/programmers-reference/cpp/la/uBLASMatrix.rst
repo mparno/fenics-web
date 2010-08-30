@@ -8,7 +8,7 @@ uBLASMatrix.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: uBLASMatrix
 
@@ -28,24 +28,53 @@ uBLASMatrix.h
     Developer note: specialised member functions must be
     inlined to avoid link errors.
 
+    .. cpp:function:: LinearAlgebraFactory& factory() const
+    
+        Return linear algebra backend factory
+
     .. cpp:function:: Mat& mat()
     
         Return reference to uBLAS matrix (non-const version)
+
+    .. cpp:function:: const GenericMatrix& operator= (const GenericMatrix& A)
+    
+        Assignment operator
 
     .. cpp:function:: const Mat& mat() const
     
         Return reference to uBLAS matrix (const version)
 
+    .. cpp:function:: const uBLASMatrix<Mat>& operator*= (double a)
+    
+        Multiply matrix by given number
+
+    .. cpp:function:: const uBLASMatrix<Mat>& operator/= (double a)
+    
+        Divide matrix by given number
+
     .. cpp:function:: const uBLASMatrix<Mat>& operator= (const uBLASMatrix<Mat>& A)
     
         Assignment operator
+
+    .. cpp:function:: double norm(std::string norm_type) const
+    
+        Return norm of matrix
 
     .. cpp:function:: double operator() (uint i, uint j) const
     
         Access value of given entry
 
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: std::tr1::tuple<const std::size_t*, const std::size_t*, const double*, int> data() const
+    
+        Return pointers to underlying compresssed storage data
+        See GenericMatrix for documentation.
+
     .. cpp:function:: template <class E>
-                                         explicit uBLASMatrix(const ublas::matrix_expression<E>& A) : Mat(A)
+                                         explicit uBLASMatrix(const ublas::matrix_expression<E>& A)
     
         Create matrix from given uBLAS matrix expression
 
@@ -67,107 +96,46 @@ uBLASMatrix.h
     
         Create M x N matrix
 
-    .. cpp:function:: virtual LinearAlgebraFactory& factory() const
-    
-        Return linear algebra backend factory
-
-    .. cpp:function:: virtual const GenericMatrix& operator= (const GenericMatrix& A)
-    
-        Assignment operator
-
-    .. cpp:function:: virtual const uBLASMatrix<Mat>& operator*= (double a)
-    
-        Multiply matrix by given number
-
-    .. cpp:function:: virtual const uBLASMatrix<Mat>& operator/= (double a)
-    
-        Divide matrix by given number
-
-    .. cpp:function:: virtual double norm(std::string norm_type) const
-    
-        Return norm of matrix
-
-    .. cpp:function:: virtual std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: virtual std::tr1::tuple<const std::size_t*, const std::size_t*, const double*, int> data() const
-    
-        Return pointers to underlying compresssed storage data
-        See GenericMatrix for documentation.
-
-    .. cpp:function:: virtual uBLASMatrix<Mat>* copy() const
+    .. cpp:function:: uBLASMatrix<Mat>* copy() const
     
         Return copy of tensor
 
-    .. cpp:function:: virtual uint size(uint dim) const
+    .. cpp:function:: uint size(uint dim) const
     
         Return size of given dimension
 
-    .. cpp:function:: virtual void add(const double* block, uint m, const uint* rows, uint n, const uint* cols)
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows, uint n, const uint* cols)
     
         Add block of values
 
-    .. cpp:function:: virtual void apply(std::string mode)
+    .. cpp:function:: void apply(std::string mode)
     
         Finalize assembly of tensor
 
-    .. cpp:function:: virtual void axpy(double a, const GenericMatrix& A,
+    .. cpp:function:: void axpy(double a, const GenericMatrix& A,
                                         bool same_nonzero_pattern)
     
         Add multiple of given matrix (AXPY operation)
 
-    .. cpp:function:: virtual void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const
-    
-        Get block of values
-
-    .. cpp:function:: virtual void getrow(uint row, std::vector<uint>& columns, std::vector<double>& values) const
-    
-        Get non-zero values of given row
-
-    .. cpp:function:: virtual void ident(uint m, const uint* rows)
-    
-        Set given rows to identity matrix
-
-    .. cpp:function:: virtual void init(const GenericSparsityPattern& sparsity_pattern)
-    
-        Initialize zero tensor using sparsity pattern
-
-    .. cpp:function:: virtual void mult(const GenericVector& x, GenericVector& y) const
-    
-        Matrix-vector product, y = Ax
-
-    .. cpp:function:: virtual void resize(uint M, uint N)
-    
-        Resize matrix to M x N
-
-    .. cpp:function:: virtual void set(const double* block, uint m, const uint* rows, uint n, const uint* cols)
-    
-        Set block of values
-
-    .. cpp:function:: virtual void setrow(uint row_idx, const std::vector<uint>& columns, const std::vector<double>& values)
-    
-        Set values for given row
-
-    .. cpp:function:: virtual void transpmult(const GenericVector& x, GenericVector& y) const
-    
-        Matrix-vector product, y = A^T x
-
-    .. cpp:function:: virtual void zero()
-    
-        Set all entries to zero and keep any sparse structure
-
-    .. cpp:function:: virtual void zero(uint m, const uint* rows)
-    
-        Set given rows to zero
-
-    .. cpp:function:: virtual ~uBLASMatrix()
-    
-        Destructor
-
     .. cpp:function:: void compress()
     
         Compress matrix (eliminate all non-zeros from a sparse matrix)
+
+    .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const
+    
+        Get block of values
+
+    .. cpp:function:: void getrow(uint row, std::vector<uint>& columns, std::vector<double>& values) const
+    
+        Get non-zero values of given row
+
+    .. cpp:function:: void ident(uint m, const uint* rows)
+    
+        Set given rows to identity matrix
+
+    .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern)
+    
+        Initialize zero tensor using sparsity pattern
 
     .. cpp:function:: void invert()
     
@@ -177,6 +145,22 @@ uBLASMatrix.h
     
         Lump matrix into vector m
 
+    .. cpp:function:: void mult(const GenericVector& x, GenericVector& y) const
+    
+        Matrix-vector product, y = Ax
+
+    .. cpp:function:: void resize(uint M, uint N)
+    
+        Resize matrix to M x N
+
+    .. cpp:function:: void set(const double* block, uint m, const uint* rows, uint n, const uint* cols)
+    
+        Set block of values
+
+    .. cpp:function:: void setrow(uint row_idx, const std::vector<uint>& columns, const std::vector<double>& values)
+    
+        Set values for given row
+
     .. cpp:function:: void solve(uBLASVector& x, const uBLASVector& b) const
     
         Solve Ax = b out-of-place using uBLAS (A is not destroyed)
@@ -184,4 +168,16 @@ uBLASMatrix.h
     .. cpp:function:: void solveInPlace(uBLASVector& x, const uBLASVector& b)
     
         Solve Ax = b in-place using uBLAS(A is destroyed)
+
+    .. cpp:function:: void transpmult(const GenericVector& x, GenericVector& y) const
+    
+        Matrix-vector product, y = A^T x
+
+    .. cpp:function:: void zero()
+    
+        Set all entries to zero and keep any sparse structure
+
+    .. cpp:function:: void zero(uint m, const uint* rows)
+    
+        Set given rows to zero
 

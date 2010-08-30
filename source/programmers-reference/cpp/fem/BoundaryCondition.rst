@@ -8,7 +8,7 @@ BoundaryCondition.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: BoundaryCondition
 
@@ -34,29 +34,25 @@ BoundaryCondition.h
     
         Return function space
 
-    .. cpp:function:: virtual void apply(GenericMatrix& A) const = 0
+    .. cpp:function:: void apply(GenericMatrix& A) const = 0
     
         Apply boundary condition to a matrix
 
-    .. cpp:function:: virtual void apply(GenericMatrix& A, GenericVector& b) const = 0
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b) const = 0
     
         Apply boundary condition to a linear system
 
-    .. cpp:function:: virtual void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const = 0
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const = 0
     
         Apply boundary condition to a linear system for a nonlinear problem
 
-    .. cpp:function:: virtual void apply(GenericVector& b) const = 0
+    .. cpp:function:: void apply(GenericVector& b) const = 0
     
         Apply boundary condition to a vector
 
-    .. cpp:function:: virtual void apply(GenericVector& b, const GenericVector& x) const = 0
+    .. cpp:function:: void apply(GenericVector& b, const GenericVector& x) const = 0
     
         Apply boundary condition to a vector for a nonlinear problem
-
-    .. cpp:function:: virtual ~BoundaryCondition()
-    
-        Destructor
 
 .. cpp:class:: LocalData
 

@@ -8,7 +8,7 @@ MTL4Factory.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: MTL4Factory
 
@@ -40,8 +40,4 @@ MTL4Factory.h
     .. cpp:function:: UmfpackLUSolver* create_lu_solver() const
     
         Create LU solver
-
-    .. cpp:function:: virtual ~MTL4Factory()
-    
-        Destructor
 

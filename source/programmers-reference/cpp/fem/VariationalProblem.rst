@@ -8,7 +8,7 @@ VariationalProblem.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: VariationalProblem
 
@@ -82,10 +82,6 @@ VariationalProblem.h
     
         Default parameter values
 
-    .. cpp:function:: virtual void update(const GenericVector& x)
-    
-        Optional callback called before calls to F() and J()
-
     .. cpp:function:: void F(GenericVector& b, const GenericVector& x)
     
         Compute F at current point x
@@ -106,7 +102,7 @@ VariationalProblem.h
     
         Solve variational problem and extract sub functions
 
-    .. cpp:function:: ~VariationalProblem()
+    .. cpp:function:: void update(const GenericVector& x)
     
-        Destructor
+        Optional callback called before calls to F() and J()
 

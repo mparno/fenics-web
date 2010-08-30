@@ -8,7 +8,7 @@ MeshEntityIterator.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: MeshEntityIterator
 
@@ -36,8 +36,7 @@ MeshEntityIterator.h
     are provided for entities of type Vertex, Edge, Face, Facet and Cell.
     These iterators are defined along with their respective classes.
 
-    .. cpp:function:: //    MeshEntityIterator(const MeshEntityIterator& entity) :  entity(entity.entity.mesh(), 0, 0), _pos(0)
-                       //
+    .. cpp:function:: //    MeshEntityIterator(const MeshEntityIterator& entity)
     
         Copy constructor is private to disallow usage. If it were public (or not
         declared and thus a default version available) it would allow code like
@@ -90,22 +89,21 @@ MeshEntityIterator.h
     
         Step to the previous mesh entity (prefix decrease)
 
-    .. cpp:function:: MeshEntityIterator() : _pos(0), pos_end(0), index(0)
+    .. cpp:function:: MeshEntityIterator()
     
         Default constructor
 
     .. cpp:function:: MeshEntityIterator(const Mesh& mesh, uint dim)
-                                         : entity(mesh, dim, 0), _pos(0), pos_end(mesh.size(dim)), index(0)
+                                        
     
         Create iterator for mesh entities over given topological dimension
 
     .. cpp:function:: MeshEntityIterator(const MeshEntity& entity, uint dim)
-                                         : entity(entity.mesh(), dim, 0), _pos(0), index(0)
+                                        
     
         Create iterator for entities of given dimension connected to given entity
 
-    .. cpp:function:: MeshEntityIterator(const MeshEntityIterator& it) :  entity(it.entity),
-                                         _pos(it._pos), pos_end(it.pos_end), index(it.index)
+    .. cpp:function:: MeshEntityIterator(const MeshEntityIterator& it)
     
         Copy Constructor
 
@@ -116,10 +114,6 @@ MeshEntityIterator.h
     .. cpp:function:: uint pos() const
     
         Return current position
-
-    .. cpp:function:: virtual ~MeshEntityIterator()
-    
-        Destructor
 
     .. cpp:function:: void set_end()
     

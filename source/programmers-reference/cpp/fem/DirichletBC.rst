@@ -8,7 +8,7 @@ DirichletBC.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: DirichletBC
 
@@ -165,8 +165,4 @@ DirichletBC.h
     .. cpp:function:: void zero(GenericMatrix& A) const
     
         Make row associated with boundary conditions zero, useful for non-diagonal matrices in a block matrix.
-
-    .. cpp:function:: ~DirichletBC()
-    
-        Destructor
 

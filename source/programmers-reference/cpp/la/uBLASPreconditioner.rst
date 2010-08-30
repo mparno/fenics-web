@@ -8,7 +8,7 @@ uBLASPreconditioner.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: uBLASPreconditioner
 
@@ -19,23 +19,19 @@ uBLASPreconditioner.h
     
         Constructor
 
-    .. cpp:function:: virtual void init(const uBLASKrylovMatrix& P)
+    .. cpp:function:: void init(const uBLASKrylovMatrix& P)
     
         Initialise preconditioner (virtual matrix)
 
-    .. cpp:function:: virtual void init(const uBLASMatrix<ublas_dense_matrix>& P)
+    .. cpp:function:: void init(const uBLASMatrix<ublas_dense_matrix>& P)
     
         Initialise preconditioner (dense matrix)
 
-    .. cpp:function:: virtual void init(const uBLASMatrix<ublas_sparse_matrix>& P)
+    .. cpp:function:: void init(const uBLASMatrix<ublas_sparse_matrix>& P)
     
         Initialise preconditioner (sparse matrix)
 
-    .. cpp:function:: virtual void solve(uBLASVector& x, const uBLASVector& b) const = 0
+    .. cpp:function:: void solve(uBLASVector& x, const uBLASVector& b) const = 0
     
         Solve linear system (M^-1)Ax = y
-
-    .. cpp:function:: virtual ~uBLASPreconditioner()
-    
-        Destructor
 

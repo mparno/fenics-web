@@ -8,7 +8,7 @@ ODE.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: ODE
 
@@ -66,17 +66,41 @@ ODE.h
     
         Create an ODE of size N with final time T
 
+    .. cpp:function:: bool update(const real* u, real t, bool end)
+    
+        Update ODE, return false to stop (optional)
+
     .. cpp:function:: friend class Dual
     
         Friends
+
+    .. cpp:function:: real dfdu(const real* u, real t, uint i, uint j)
+    
+        Compute entry of Jacobian (optional)
 
     .. cpp:function:: real endtime() const
     
         Return end time (final time T)
 
+    .. cpp:function:: real f(const real* u, real t, uint i)
+    
+        Evaluate right-hand side f_i(u, t), multi-adaptive version (optional)
+
     .. cpp:function:: real time() const
     
         Return current time
+
+    .. cpp:function:: real time(real t) const
+    
+        Return real time (might be flipped backwards for dual)
+
+    .. cpp:function:: real timestep(real t, real k0) const
+    
+        Time step to use for the whole system at a given time t (optional)
+
+    .. cpp:function:: real timestep(real t, uint i, real k0) const
+    
+        Time step to use for a given component at a given time t (optional)
 
     .. cpp:function:: static Parameters default_parameters()
     
@@ -86,57 +110,17 @@ ODE.h
     
         Return number of components N
 
-    .. cpp:function:: virtual bool update(const real* u, real t, bool end)
-    
-        Update ODE, return false to stop (optional)
-
-    .. cpp:function:: virtual real dfdu(const real* u, real t, uint i, uint j)
-    
-        Compute entry of Jacobian (optional)
-
-    .. cpp:function:: virtual real f(const real* u, real t, uint i)
-    
-        Evaluate right-hand side f_i(u, t), multi-adaptive version (optional)
-
-    .. cpp:function:: virtual real time(real t) const
-    
-        Return real time (might be flipped backwards for dual)
-
-    .. cpp:function:: virtual real timestep(real t, real k0) const
-    
-        Time step to use for the whole system at a given time t (optional)
-
-    .. cpp:function:: virtual real timestep(real t, uint i, real k0) const
-    
-        Time step to use for a given component at a given time t (optional)
-
-    .. cpp:function:: virtual void J(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void J(const real* dx, real* dy, const real* u, real t)
     
         Compute product dy = J dx for Jacobian J (optional)
 
-    .. cpp:function:: virtual void JT(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void JT(const real* dx, real* dy, const real* u, real t)
     
         Compute product dy = tranpose(J) dx for Jacobian J (optional, for dual problem)
 
-    .. cpp:function:: virtual void M(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void M(const real* dx, real* dy, const real* u, real t)
     
         Compute product dy = M dx for implicit system (optional)
-
-    .. cpp:function:: virtual void f(const real* u, real t, real* y)
-    
-        Evaluate right-hand side y = f(u, t), mono-adaptive version (default, optional)
-
-    .. cpp:function:: virtual void save(Sample& sample)
-    
-        Save sample (optional)
-
-    .. cpp:function:: virtual void u0(real* u) = 0
-    
-        Set initial values
-
-    .. cpp:function:: virtual ~ODE()
-    
-        Destructor
 
     .. cpp:function:: void analyze_stability(uint q, ODESolution& u)
     
@@ -158,9 +142,17 @@ ODE.h
         Compute stability factors as function of T (including solving the dual problem).
         The stability factor accounts for stability wrt errors in initial data.
 
+    .. cpp:function:: void f(const real* u, real t, real* y)
+    
+        Evaluate right-hand side y = f(u, t), mono-adaptive version (default, optional)
+
     .. cpp:function:: void get_state(real* u)
     
         Get state for ODE (only available during interval stepping)
+
+    .. cpp:function:: void save(Sample& sample)
+    
+        Save sample (optional)
 
     .. cpp:function:: void set_state(const real* u)
     
@@ -193,4 +185,8 @@ ODE.h
     .. cpp:function:: void sparse()
     
         Automatically detect sparsity (optional)
+
+    .. cpp:function:: void u0(real* u) = 0
+    
+        Set initial values
 

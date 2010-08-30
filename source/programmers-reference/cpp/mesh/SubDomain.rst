@@ -8,7 +8,7 @@ SubDomain.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: SubDomain
 
@@ -20,28 +20,24 @@ SubDomain.h
     
         Constructor
 
+    .. cpp:function:: bool inside(const Array<double>& x, bool on_boundary) const
+    
+        Return true for points inside the subdomain
+
     .. cpp:function:: uint geometric_dimension() const
     
         Return geometric dimension
 
-    .. cpp:function:: virtual bool inside(const Array<double>& x, bool on_boundary) const
-    
-        Return true for points inside the subdomain
-
-    .. cpp:function:: virtual void map(const Array<double>& x, Array<double>&) const
+    .. cpp:function:: void map(const Array<double>& x, Array<double>&) const
     
         Map coordinate x in domain H to coordinate y in domain G (used for
         periodic boundary conditions)
 
-    .. cpp:function:: virtual void snap(Array<double>& x) const
-    
-        Snap coordinate to boundary of sub domain
-
-    .. cpp:function:: virtual ~SubDomain()
-    
-        Destructor
-
     .. cpp:function:: void mark(MeshFunction<uint>& sub_domains, uint sub_domain) const
     
         Set sub domain markers for given subdomain
+
+    .. cpp:function:: void snap(Array<double>& x) const
+    
+        Snap coordinate to boundary of sub domain
 

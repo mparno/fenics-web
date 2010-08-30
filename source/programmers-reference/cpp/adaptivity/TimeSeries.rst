@@ -8,7 +8,7 @@ TimeSeries.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: TimeSeries
 
@@ -70,8 +70,4 @@ TimeSeries.h
     .. cpp:function:: void store(const Mesh& mesh, double t)
     
         Store mesh at given time
-
-    .. cpp:function:: ~TimeSeries()
-    
-        Destructor
 
