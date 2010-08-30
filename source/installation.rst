@@ -6,10 +6,10 @@
 Installation
 ############
 
-Obtaining and installing FEniCS has never been easier. Packages are
+Obtaining and installing FEniCS have never been easier. Packages are
 available for Debian and Ubuntu users, and we provide a framework
 (`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of
-FEniCS on a multitude of platforms. Its also possible to download
+FEniCS on a multitude of platforms. It is also possible to download
 source tarballs for all components.
 
 **********************
@@ -19,8 +19,8 @@ Debian/Ubuntu packages
 Debian
 ======
 
-FEniCS is included as part of Debian GNU/Linux
-(squeeze/testing and sid/unstable). To install, simply click `here <apt://fenics>`_
+FEniCS is included as part of Debian GNU/Linux (squeeze/testing and
+sid/unstable). To install, simply click `here <apt://fenics>`_
 (requires ``aptlinex``). FEniCS can also be installed by running the
 following command::
 
@@ -47,9 +47,10 @@ the `FEniCS Personal Package Archive
 system. You can do this by going to **System > Administration >
 Software Sources > Third-Party Software** and clicking on
 **Add**. Then type in ``ppa:fenics/ppa`` and click on **Add Source**
-and then **Close**. A dialog box should appear, asking whether you'd
-like to update the list of repositories. Select **Reload** to update
-the list. You can then install FEniCS from the Ubuntu Software Center.
+and then **Close**. A dialog box should appear, asking whether you
+would like to update the list of repositories. Select **Reload** to
+update the list. You can then install FEniCS from the Ubuntu Software
+Center.
 
 Here is a list of commands for installing FEniCS from the FEniCS PPA
 for those preferring the command-line:
@@ -82,7 +83,7 @@ The following platforms are officially supported by Dorsal:
 
 * Debian GNU/Linux (squeeze/testing, sid/unstable)
 * Fedora 13
-* Gentoo (and Sabayon) Linux
+* Gentoo Linux
 * Mac OS X (Snow Leopard)
 * openSUSE 11.3
 * Ubuntu (10.04/Lucid and 10.10/Maverick)
@@ -146,16 +147,17 @@ Python packages (FFC, FIAT, Instant, Viper and UFL)
     sudo python setup.py install
 
 This will install the packages system wide on your computer. You may
-easily change the installation directory. For example, you may wish to
-install the packages in a directory named ``local`` in your home
-directory. This may be accomplished by running the following command::
+easily change the installation directory. For example, if you do not
+have super-user access, you may wish to install the packages in a
+directory named ``local`` in your home directory. This may be
+accomplished by running the following command::
 
-    sudo python setup.py install --prefix=~/local
+    python setup.py install --prefix=~/local
 
 C++/Python packages (DOLFIN and UFC)
 ====================================================
 
-Building and installing DOLFIN and UFC requires CMake version >= 2.8.
+Building and installing DOLFIN and UFC require CMake version >= 2.8.
 
 #. First, `download the source code`_
    for UFC and DOLFIN. Then for each of these packages, follow the
@@ -171,13 +173,13 @@ This will install the packages system wide on your computer. You may
 easily change the installation directory. For example, you may wish to
 install the packages in a directory named ``local`` in your home
 directory. This may be accomplished by replacing the first of the
-above commands by the following command::
+above commands by::
 
     cmake . -DCMAKE_INSTALL_PREFIX=~/local
 
-You may also want to consider using a graphical frontend for CMake
-like either ``cmake-gui`` or ``ccmake`` which both provide a simple
-way to configure the installation.
+You may also want to consider using a graphical front end for CMake
+such as either ``cmake-gui`` or ``ccmake``. These both provide a
+simple way to configure the installation.
 
 During the configuration phase of DOLFIN (calling ``cmake``,
 ``cmake-gui``, or ``ccmake``), you will be notified of any missing
@@ -193,9 +195,9 @@ Troubleshooting
 ***************
 
 If for some reason you were unable to obtain, build, or install a
-FEniCS component, the best place to start is the `Launchpad Answers
-<https://help.launchpad.net/Answers>`_ page for the project which
-causes the problem:
+FEniCS component, please let us know. The best place to start is the
+`Launchpad Answers <https://help.launchpad.net/Answers>`_ page for the
+project that causes the problem:
 
 * `DOLFIN <http://answers.launchpad.net/dolfin>`__
 * `Dorsal <https://answers.launchpad.net/dorsal>`__
