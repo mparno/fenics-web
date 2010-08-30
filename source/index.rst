@@ -17,7 +17,7 @@ FEniCS Documentation
     demos/index
     programmers-reference/index
     developer
-    styleguides
+    launchpad_pages
 
 .. raw:: html
 
@@ -56,7 +56,7 @@ FEniCS Documentation
         <br/><span class="linkdescr">Information for contributors and developers</span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="styleguides.html">Style guides</a>
+        <a class="biglink" href="styleguides/index.html">Style guides</a>
         <br/><span class="linkdescr">Style guides for FEniCS source code</span>
       </p>
     </td></tr>
