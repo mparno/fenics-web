@@ -41,7 +41,7 @@ PETScBaseMatrix.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: virtual void resize(uint M, uint N) = 0
+    .. cpp:function:: virtual void resize(uint m, uint n) = 0
     
-        Resize virtual matrix, all on one processor
+        Resize virtual matrin
 
