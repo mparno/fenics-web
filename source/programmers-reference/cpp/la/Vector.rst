@@ -8,7 +8,7 @@ Vector.h
 .. note::
 
     The documentation on this page was automatically extracted from
-    the DOLFIN C++ code and needs to be edited and expanded.
+    the DOLFIN C++ code and may need to be edited or expanded.
 
 .. cpp:class:: Vector
 
@@ -19,15 +19,15 @@ Vector.h
     This class provides the default DOLFIN vector class,
     based on the default DOLFIN linear algebra backend.
 
-    .. cpp:function:: Vector() : vector(0)
+    .. cpp:function:: Vector()
     
         Create empty vector
 
-    .. cpp:function:: Vector(const GenericVector& x) : vector(x.factory().create_vector())
+    .. cpp:function:: Vector(const GenericVector& x)
     
         Create a Vector from a GenericVetor
 
-    .. cpp:function:: Vector(const Vector& x) : vector(x.vector->copy())
+    .. cpp:function:: Vector(const Vector& x)
     
         Copy constructor
 
@@ -39,7 +39,7 @@ Vector.h
     
         Assignment operator
 
-    .. cpp:function:: explicit Vector(uint N) : vector(0)
+    .. cpp:function:: explicit Vector(uint N)
     
         Create vector of size N
 
@@ -99,7 +99,7 @@ Vector.h
     
         Return minimum value of vector
 
-    .. cpp:function:: virtual double norm(std::string norm_type) const
+    .. cpp:function:: virtual double norm(std
     
         Return norm of vector
 
@@ -111,13 +111,13 @@ Vector.h
     
         Return pointer to underlying data
 
-    .. cpp:function:: virtual std::pair<uint, uint> local_range() const
-    
-        Return local ownership range of a vector
-
-    .. cpp:function:: virtual std::string str(bool verbose) const
+    .. cpp:function:: virtual std
     
         Return informal string representation (pretty-print)
+
+    .. cpp:function:: virtual std
+    
+        Return local ownership range of a vector
 
     .. cpp:function:: virtual uint size() const
     
@@ -131,7 +131,7 @@ Vector.h
     
         Add values to each entry on local process
 
-    .. cpp:function:: virtual void apply(std::string mode)
+    .. cpp:function:: virtual void apply(std
     
         Finalize assembly of tensor
 

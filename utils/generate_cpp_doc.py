@@ -95,12 +95,13 @@ def generate_documentation(header, module):
             else:
                 signature += "\n" + indent + s
 
-            # Signature ends when we find ";" or "{"
-            if ";" in s or "{" in s:
+            # Signature ends when we find ";", "{" or ":"
+            if ";" in s or "{" in s or ":" in s:
 
                 # Strip out last part
                 signature = signature.split(";")[0]
                 signature = signature.split("{")[0]
+                signature = signature.split(":")[0]
                 signature = signature.strip()
 
                 # Get function name
@@ -129,7 +130,7 @@ def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
 
     # For quick testing
-    #if not header == "Mesh.h":
+    #if not header == "Vector.h":
     #    return
 
     print "Writing documentation for %s..." % header
