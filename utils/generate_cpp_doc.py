@@ -141,8 +141,8 @@ def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
 
     # For quick testing
-    if not header == "FunctionSpace.h":
-        return
+    #if not header == "FunctionSpace.h":
+    #    return
 
     print "Writing documentation for %s..." % header
 
