@@ -15,7 +15,7 @@ This demo illustrates how to:
 * Define FunctionSpace
 * Create a Subdomain
 
-Equation and problem defintion
+Equation and problem definition
 -------------------------------
 
 The Poisson equation is the cannonical elliptic partial differential equation.

@@ -165,6 +165,22 @@ repository directly. Instead you will have to submit a :ref:`patch
 <contributing_branches>`. If the code is accepted, the patch or branch
 will be merged into the main branch by a member of the core team.
 
+
+Style guides
+============
+
+To ease the job for maintainers that will need to read and understand
+your code, read the :ref:`styleguides` that explain
+how to format your code so that it matches the coding style used for
+FEniCS.
+
+Before committing your work
+===========================
+
+Before committing any contributions, make sure to test the code
+thoroughly. This includes running any unit tests, regression tests
+etc. present as part of the code you are modifying.
+
 .. _contributing_patches:
 
 Creating a patch
@@ -258,21 +274,6 @@ progress.  Using DOLFIN as an example, simply do the following:
 
 The procedure for using branches for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
-
-Style guides
-============
-
-To ease the job for maintainers that will need to read and understand
-your code, read the :ref:`styleguides` that explain
-how to format your code so that it matches the coding style used for
-FEniCS.
-
-Before committing your work
-===========================
-
-Before committing any contributions, make sure to test the code
-thoroughly. This includes running any unit tests, regression tests
-etc. present as part of the code you are modifying.
 
 *********************
 Writing documentation
