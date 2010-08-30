@@ -171,7 +171,3 @@ Vector.h
     
         Set all entries to zero and keep any sparse structure
 
-    .. cpp:function:: ~Vector()
-    
-        Destructor
-

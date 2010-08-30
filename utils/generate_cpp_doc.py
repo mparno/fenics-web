@@ -111,13 +111,16 @@ def generate_documentation(header, module):
                 if " : " in signature:
                     signature = signature.split(" : ")[0]
 
+                # Skip destructors (not handled by Sphinx)
+                destructor = "~" in signature
+
                 # Get function name
                 #function = signature.split("(")[0].split(" ")[-1]
 
                 # Store documentation
-                if len(documentation) > 0:
+                if len(documentation) > 0 and not destructor:
                     documentation[-1][-1].append((signature, comment))
-                else:
+                elif not destructor:
                     documentation = [(None, None, None, [(signature, comment)])]
 
                 # Reset comment and signature
@@ -135,10 +138,6 @@ def generate_documentation(header, module):
 
 def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
-
-    # For quick testing
-    if not header == "Vector.h":
-        return
 
     print "Writing documentation for %s..." % header
 
