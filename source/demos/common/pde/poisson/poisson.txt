@@ -49,6 +49,6 @@ The following definitions of functions and boundaries are used in this demo:
 * :math:`\Omega = [0,1] \times [0,1]` (a unit square)
 * :math:`\Gamma_{D} = \{(\pm 1, y) \in \partial \Omega\}` (Dirichlet boundary)
 * :math:`\Gamma_{N} = \{(x, \pm 1) \in \partial \Omega\}` (Neumann boundary)
-* :math:`h = \sin(5x)` (normal derivative)
+* :math:`g = \sin(5x)` (normal derivative)
 * :math:`f = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)` (source term)
 

@@ -11,4 +11,5 @@ PDE
 
     poisson/poisson
     hyperelasticity/hyperelasticity
+    mixed-poisson/mixed-poisson
     cahn-hilliard/cahn-hilliard
