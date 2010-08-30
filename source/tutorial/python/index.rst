@@ -3,9 +3,13 @@
 
 .. _tutorial_python_index:
 
-##################
-``Python`` version
-##################
+########################
+FEniCS Tutorial (Python)
+########################
 
-This is the index page for the ``Python`` tutorial.
+The FEniCS Python Tutorial is currently only available in PDF format.
+Follow the link bellow to dowload the tutorial.
 
+:download:`FEniCS Tutorial (Python)<../../_static/fenics-tutorial-python.pdf>`.
+
+An online HTML version of the tutorial is currently being prepared.

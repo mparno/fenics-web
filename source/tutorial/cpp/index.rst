@@ -3,9 +3,13 @@
 
 .. _tutorial_cpp_index:
 
-###############
-``C++`` version
-###############
+#####################
+FEniCS Tutorial (C++)
+#####################
 
-This is the index page for the ``C++`` tutorial.
+There is as yet no C++ version available of the FEniCS tutorial. In
+the meantime, a quick way to get started is to browse through the
+:ref:`demos_index`.
 
+Since the FEniCS C++ and Python interfaces are very similar, you might
+also want to take a look at the :ref:`tutorial_python_index`.
