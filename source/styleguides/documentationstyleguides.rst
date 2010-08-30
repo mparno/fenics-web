@@ -1,7 +1,9 @@
-.. Style guides for C++, Python, and documentation
+.. Style guides for C++ and Python source code
 
-Sphinx coding style (documentation)
-===================================
+.. _styleguides_sphinx_coding_style:
+
+Sphinx coding style
+===================
 
 This style guide contains information on how to create documentation
 for FEniCS using the Sphinx documentation tool. The first sections are

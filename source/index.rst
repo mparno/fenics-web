@@ -17,6 +17,7 @@ FEniCS Documentation
     demos/index
     programmers-reference/index
     developer
+    styleguides/index
     launchpad_pages
 
 .. raw:: html
