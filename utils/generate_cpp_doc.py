@@ -172,7 +172,7 @@ def write_documentation(documentation, header, module, classnames):
     output += "\n"
     output += indent("""\
 The documentation on this page was automatically extracted from
-the DOLFIN C++ code and needs to be edited and expanded.""", 4)
+the DOLFIN C++ code and may need to be edited or expanded.""", 4)
     output += "\n"
     output += "\n"
 
