@@ -44,14 +44,13 @@ are likely to occur from time to time. In the event that you encounter
 a bug, please file a bug report using the Launchpad system for
 tracking `Bugs <https://help.launchpad.net/Bugs>`_.  Please include
 the most simple code example that exposes the bug. Let's say that
-again: *Please include the most simple code example that exposes the
-bug*. No one will want to dig through your application code to find
-the bug!
+again: *please include the most simple code example that exposes the
+bug*. Typically, 10-20 lines of code should suffice. The simpler the
+example, the more likely someone will have the time to identify and
+fix the bug.
 
-`FEniCS bugs <https://bugs.launchpad.net/fenics>`_ is the place for
-reporting general FEniCS bugs and `DOLFIN bugs
-<https://bugs.launchpad.net/dolfin>`_ is the place for reporting bugs
-in the FEniCS user interface DOLFIN.
+For reporting bugs in the FEniCS user interface DOLFIN, use `DOLFIN
+bugs <https://bugs.launchpad.net/dolfin>`_.
 
 `Launchpad pages <launchpad_pages.html>`_ contains a collection of
 links to the bug tracking pages for all FEniCS components.

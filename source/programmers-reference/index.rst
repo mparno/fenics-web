@@ -39,7 +39,7 @@ Python interface
 ================
 
 To use FEniCS from Python, users need to import functionality from the
-DOLFIN Python module. In the simplest caset, one includes all
+DOLFIN Python module. In the simplest case, one includes all
 functionality from the Python module named ``dolfin``:
 
 .. code-block:: python

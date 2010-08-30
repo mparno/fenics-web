@@ -7,8 +7,8 @@
 Python Programmer's Reference
 #############################
 
-This is the index page for the ``Python`` programmer's reference.
-The contents follows the directory structure of DOLFIN.
+This is the index page for the ``Python`` Programmer's Reference.  The
+contents follow the directory structure of DOLFIN.
 
 .. py:module:: dolfin
 
