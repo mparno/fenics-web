@@ -16,7 +16,7 @@ Mesh.h
     
         * :cpp:class:`Variable`
         
-    A Mesh consists of a set of connected and numbered mesh entities.
+    A :cpp:class:`Mesh` consists of a set of connected and numbered mesh entities.
     
     Both the representation and the interface are
     dimension-independent, but a concrete interface is also provided
@@ -24,19 +24,19 @@ Mesh.h
     
     .. tabularcolumns:: |c|c|c|
     
-        +--------+-----------+-------------+
-        | Entity | Dimension | Codimension |
-        +========+===========+=============+
-        | Vertex |  0        |             |
-        +--------+-----------+-------------+
-        | Edge   |  1        |             |
-        +--------+-----------+-------------+
-        | Face   |  2        |             |
-        +--------+-----------+-------------+
-        | Facet  |           |      1      |
-        +--------+-----------+-------------+
-        | Cell   |           |        0    |
-        +--------+-----------+-------------+
+    +--------+-----------+-------------+
+    | Entity | Dimension | Codimension |
+    +========+===========+=============+
+    | Vertex |  0        |             |
+    +--------+-----------+-------------+
+    | Edge   |  1        |             |
+    +--------+-----------+-------------+
+    | Face   |  2        |             |
+    +--------+-----------+-------------+
+    | Facet  |           |      1      |
+    +--------+-----------+-------------+
+    | Cell   |           |        0    |
+    +--------+-----------+-------------+
     
     When working with mesh iterators, all entities and connectivity
     are precomputed automatically the first time an iterator is
@@ -44,7 +44,7 @@ Mesh.h
     
     Note that for efficiency, only entities of dimension zero
     (vertices) and entities of the maximal dimension (cells) exist
-    when creating a Mesh. Other entities must be explicitly created
+    when creating a :cpp:class:`Mesh`. Other entities must be explicitly created
     by calling init(). For example, all edges in a mesh may be
     created by a call to mesh.init(1). Similarly, connectivities
     such as all edges connected to a given vertex must also be
@@ -55,7 +55,7 @@ Mesh.h
         Get intersection operator.
         
         *Returns*
-            IntersectionOperator
+            :cpp:class:`IntersectionOperator`
                 The intersection operator object associated with the mesh.
 
     .. cpp:function:: Mesh()
@@ -68,14 +68,14 @@ Mesh.h
         
         *Arguments*
             mesh
-                A Mesh object.
+                A :cpp:class:`Mesh` object.
 
     .. cpp:function:: MeshData& data()
     
         Get mesh data.
         
         *Returns*
-            MeshData
+            :cpp:class:`MeshData`
                 The mesh data object associated with the mesh.
 
     .. cpp:function:: MeshGeometry& geometry()
@@ -83,7 +83,7 @@ Mesh.h
         Get mesh geometry.
         
         *Returns*
-            MeshGeometry
+            :cpp:class:`MeshGeometry`
                 The geometry object associated with the mesh.
 
     .. cpp:function:: MeshTopology& topology()
@@ -91,7 +91,7 @@ Mesh.h
         Get topology associated with mesh.
         
         *Returns*
-            MeshTopology
+            :cpp:class:`MeshTopology`
                 The topology object associated with the mesh.
 
     .. cpp:function:: Point closest_point(const Point& point) const
@@ -101,7 +101,7 @@ Mesh.h
         
         *Arguments*
             point
-                A Point object.
+                A :cpp:class:`Point` object.
         
         *Returns*
             Point
@@ -127,7 +127,7 @@ Mesh.h
         
         *Arguments*
             mesh
-                A Mesh object.
+                A :cpp:class:`Mesh` object.
 
     .. cpp:function:: const MeshData& data() const
     
@@ -170,7 +170,7 @@ Mesh.h
         
         *Arguments*
             point
-                A Point object.
+                A :cpp:class:`Point` object.
         
         *Returns*
             integer
@@ -258,7 +258,7 @@ Mesh.h
         Get mesh cell type.
         
         *Returns*
-            CellType
+            :cpp:class:`CellType`
                 The cell type object associated with the mesh.
 
     .. cpp:function:: inline const CellType& type() const
@@ -272,7 +272,7 @@ Mesh.h
         
         *Arguments*
             point
-                A Point object.
+                A :cpp:class:`Point` object.
         
         *Returns*
             integer
@@ -286,10 +286,10 @@ Mesh.h
         
         *Arguments*
             point
-                A Point object.
+                A :cpp:class:`Point` object.
         
         *Returns*
-            pair <Point, integer>
+            pair <:cpp:class:`Point`, integer>
                 The point inside the mesh and the corresponding cell
                 index which is closest to the point query.
 
@@ -481,7 +481,7 @@ Mesh.h
         
         *Arguments*
             another_mesh
-                A Mesh object.
+                A :cpp:class:`Mesh` object.
         
             ids_result
                 A set of integers.
@@ -495,7 +495,7 @@ Mesh.h
         
         *Arguments*
             entity
-                A MeshEntity object.
+                A :cpp:class:`MeshEntity` object.
         
             ids_result
                 A list of integers.
@@ -511,7 +511,7 @@ Mesh.h
         
         *Arguments*
             point
-                A Point object.
+                A :cpp:class:`Point` object.
         
             ids_result
                 A set of integers.
@@ -525,7 +525,7 @@ Mesh.h
         
         *Arguments*
             entities
-                A vector of MeshEntity objects.
+                A vector of :cpp:class:`MeshEntity` objects.
         
             ids_result
                 A set of integers.
@@ -539,7 +539,7 @@ Mesh.h
         
         *Arguments*
             points
-                A vector of Point objects.
+                A vector of :cpp:class:`Point` objects.
         
             ids_result
                 A set of integers.
@@ -572,7 +572,7 @@ Mesh.h
         
         *Arguments*
             boundary
-                A BoundaryMesh object.
+                A :cpp:class:`BoundaryMesh` object.
         
             method
                 A ALEType (enum).
@@ -586,7 +586,7 @@ Mesh.h
         
         *Arguments*
             mesh
-                A Mesh object.
+                A :cpp:class:`Mesh` object.
         
             method
                 A ALEType (enum).
@@ -599,7 +599,7 @@ Mesh.h
         
         *Arguments*
             function
-                A Function object.
+                A :cpp:class:`Function` object.
 
     .. cpp:function:: void order()
     
@@ -637,7 +637,7 @@ Mesh.h
         
         *Arguments*
             sub_domain
-                A SubDomain object.
+                A :cpp:class:`SubDomain` object.
         
             harmonic_smoothing
                 A bool, flag to turn on harmonics smoothing, default

@@ -1,3 +1,12 @@
+# This script generates the reST input for the C++ Programmer's
+# Reference from the DOLFIN C++ header files found in DOLFIN_DIR.
+#
+# The script looks for comments starting with /// and appearing
+# before class and function declarations. The comments are copied
+# verbatim to the generate reST files.
+#
+# Ths script also replaces _Foo_ with links to class pages.
+
 __author__ = "Anders Logg (logg@simula.no)"
 __date__ = "2010-08-26"
 __copyright__ = "Copyright (C) 2010 " + __author__
@@ -5,7 +14,7 @@ __license__  = "GNU GPL version 3 or any later version"
 
 # Last changed: 2010-08-30
 
-import os
+import os, re
 
 # Set output directory
 output_dir = os.path.join("source", "programmers-reference", "cpp")
@@ -15,25 +24,13 @@ if not "DOLFIN_DIR" in os.environ:
     raise RuntimeError, "You need to set the DOLFIN_DIR environment variable."
 dolfin_dir = os.environ["DOLFIN_DIR"]
 
-def generate_documentation(filename, module):
-    "Generate documentation for given filename in given module"
+def generate_documentation(header, module):
+    "Extract documentation for given header in given module"
 
-    # For testing
-    #if not filename == "Mesh.h":
-    #    return
-
-    # Extract documentation and sort alphabetically
-    documentation = extract_documentation(filename, module)
-
-    # Write documentation
-    write_documentation(documentation, filename, module)
-
-def extract_documentation(filename, module):
-    "Extract documentation from given filename in given module"
-
-    print "Generating documentation for %s..." % filename
+    print "Generating documentation for %s..." % header
 
     # List of classes with documentation
+    classnames = []
     documentation = []
 
     # Class name and parent class name
@@ -48,7 +45,7 @@ def extract_documentation(filename, module):
     indent = 0
 
     # Iterate over each line
-    f = open(os.path.join(dolfin_dir, "dolfin", module, filename))
+    f = open(os.path.join(dolfin_dir, "dolfin", module, header))
     for line in f:
 
         # Check for comment
@@ -79,6 +76,7 @@ def extract_documentation(filename, module):
                 parent = None
 
             # Store documentation
+            classnames.append(classname)
             documentation.append((classname, parent, comment, []))
             classname = None
             parent = None
@@ -125,10 +123,16 @@ def extract_documentation(filename, module):
     for (classname, parent, comment, function_documentation) in documentation:
         function_documentation.sort()
 
-    return documentation
+    return documentation, classnames
 
-def write_documentation(documentation, filename, module):
-    "Write documentation for given filename and module"
+def write_documentation(documentation, header, module, classnames):
+    "Write documentation for given header in given module"
+
+    # For quick testing
+    #if not header == "Mesh.h":
+    #    return
+
+    print "Writing documentation for %s..." % header
 
     # Create containing directory
     directory = os.path.join(output_dir, module)
@@ -138,7 +142,7 @@ def write_documentation(documentation, filename, module):
         pass
 
     # Set location of documentation
-    prefix = filename.split(".")[0]
+    prefix = header.split(".")[0]
     rstfile = prefix + ".rst"
     outfile = os.path.join(directory, rstfile)
 
@@ -155,12 +159,12 @@ def write_documentation(documentation, filename, module):
 
     # Open output file
     output = ""
-    output += ".. Documentation for the header file dolfin/%s/%s\n" % (module, filename)
+    output += ".. Documentation for the header file dolfin/%s/%s\n" % (module, header)
     output += "\n"
     output += ".. _programmers_reference_cpp_%s_%s:\n" % (module, prefix.lower())
     output += "\n"
-    output += filename + "\n"
-    output += len(filename)*"=" + "\n"
+    output += header + "\n"
+    output += len(header)*"=" + "\n"
     output += "\n"
 
     # Write a note that this file was generated automatically
@@ -191,6 +195,7 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4)
 
             # Write class documentation
             if comment is not None:
+                comment = add_links(comment, classnames)
                 output += indent(comment, 4)
                 output += "\n"
                 output += "\n"
@@ -203,6 +208,9 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4)
                 lines = signature.split("\n")
                 signature = "\n".join([lines[0]] + [(len(".. cpp.function::") + 1)*" " + l for l in lines[1:]])
 
+            # Add crosslinks in comment
+            comment = add_links(comment, classnames)
+
             # Write function documentation
             output += indent(".. cpp:function:: %s\n" % signature, 4)
             output += "\n"
@@ -214,6 +222,14 @@ the DOLFIN C++ code and needs to be edited and expanded.""", 4)
     f = open(outfile, "w")
     f.write(output)
     f.close()
+
+def add_links(text, classnames):
+    "Add crosslinks for classes"
+    for classname in classnames:
+        p = re.compile(r"\b_%s_\b" % classname)
+        text = p.sub(":cpp:class:`%s`" % classname, text)
+
+    return text
 
 def generate_index(module, headers):
     "Generate index file for module"
@@ -265,20 +281,28 @@ for line in f:
 f.close()
 
 # Iterate over modules
+documentation = {}
+classnames = []
 for module in modules:
 
     # Extract header files from dolfin_foo.h
     f = open(os.path.join(dolfin_dir, "dolfin", module, "dolfin_%s.h" % module))
+    documentation[module] = []
     headers = []
     for line in f:
 
         # Generate documentation for header file
         if line.startswith("#include <dolfin/"):
-            filename = line.split("/")[2].split(">")[0]
-            generate_documentation(filename, module)
-            headers.append(filename)
+            header = line.split("/")[2].split(">")[0]
+            headers.append(header)
+            doc, cls = generate_documentation(header, module)
+            documentation[module].append((header, doc))
+            classnames += cls
 
-    # Generate index file
+    # Generate index
     generate_index(module, headers)
 
-    f.close()
+# Write documentation
+for module in documentation:
+    for (header, doc) in documentation[module]:
+        write_documentation(doc, header, module, classnames)
