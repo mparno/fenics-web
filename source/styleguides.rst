@@ -158,7 +158,7 @@ Integers and reals
 
 Use ``dolfin::uint`` instead of ``int`` (unless you really want to use
 negative integers). Use ``dolfin::real`` instead of ``double`` only if
-you are sure that you want to exploit arbitray precision:
+you are sure that you want to exploit arbitrary precision:
 
 .. code-block:: c++
 
@@ -168,7 +168,7 @@ you are sure that you want to exploit arbitray precision:
 Placement of brackets
 ^^^^^^^^^^^^^^^^^^^^^
 
-Curly brackets following multi-line control statements should appear
+Curly brackets following multiline control statements should appear
 on the next line and should not be indented:
 
 .. code-block:: c++
@@ -178,7 +178,7 @@ on the next line and should not be indented:
       ...
     }
 
-For one line statements, ommit the brackets:
+For one line statements, omit the brackets:
 
 .. code-block:: c++
 
@@ -267,10 +267,10 @@ Do not use ``#include <dolfin.h>`` or ``#include``
 ``<dolfin/dolfin_foo.h>`` inside the DOLFIN source tree. Only include
 the portions of DOLFIN you are actually using.
 
-Include as few header files a possible and use forward declarations
+Include as few header files as possible and use forward declarations
 whenever possible (in header files). Put the ``#include`` in the
-implementation file.  This reduces compilation times and minimizes the
-risk for cyclic dependencies.
+implementation file.  This reduces compilation time and minimizes the
+risk of cyclic dependencies.
 
 Explicit constructors
 ^^^^^^^^^^^^^^^^^^^^^
@@ -321,11 +321,11 @@ function calls. One such exception is handling of command-line arguments
 Prefer smart pointers over plain pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``boost::shared_ptr`` and ``boost::scoped_ptr`` in favour or plain
-pointers. Smart pointers reduce the likelihood of memory leaks and make
-ownership clear.
-Use ``scoped_ptr`` for a pointer which is not shared and
-``shared_ptr`` when multiple pointers point to the same object.
+Use ``boost::shared_ptr`` and ``boost::scoped_ptr`` in favour of plain
+pointers. Smart pointers reduce the likelihood of memory leaks and
+make ownership clear.  Use ``scoped_ptr`` for a pointer that is not
+shared and ``shared_ptr`` when multiple pointers point to the same
+object.
 
 
 Python coding style
@@ -340,12 +340,12 @@ strictly enforced.
 Sphinx coding style
 ===================
 
-This style guide contains information on how to create documentation for
-FEniCS using the Sphinx documentation tool. The first sections are related
-to how the reST code should look like, then follows a section on frequently
-used reST and Sphinx markup as a quick reference. The last two sections
-are guides explaining in steps how to document the programmer's reference
-and the demos respectively.
+This style guide contains information on how to create documentation
+for FEniCS using the Sphinx documentation tool. The first sections are
+related to how the reST code should look. Then, a section on some
+frequently used reST and Sphinx markup follows as a quick
+reference. The last two sections are guides explaining in steps how to
+document the programmer's reference and the demos respectively.
 
 Code layout
 -----------
@@ -353,19 +353,20 @@ Code layout
 Use spaces instead of tabs for indentation.
 
 Use 4 spaces per indentation level. This does not apply to C++ code
-examples (DOLFIN) where the 2 space indentation rule apply.
-See :ref:`C++ indentation <styleguides_cpp_coding_style_indentation>`.
+examples (DOLFIN) where the 2 space indentation rule apply
+(cf. :ref:`C++ indentation
+<styleguides_cpp_coding_style_indentation>`).
 
-The text width of normal text should not exceed 79 characters, but code example
-tables and other cases where readability demands it this rule can be
-disregarded.
+The text width of normal text should not exceed 79 characters. This
+rule can be disregarded if readability demands it, for instance for
+code example tables.
 
 
 Sections
 --------
 
-Section markers follow the convention from
-`Python <http://docs.python.org/documenting/rest.html>`_:
+Section markers follow the convention from the `Python Documentation
+<http://docs.python.org/documenting/rest.html>`_:
 
 * ``#`` with overline, for parts
 * ``*`` with overline, for chapters
@@ -379,8 +380,9 @@ Section markers follow the convention from
 Cross referencing
 -----------------
 
-Cross-references are created by placing labels at the location which you want
-to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
+Cross-references are created by placing labels at the location you
+want to refer to and then using ``:ref:\`label-name\``` to create the
+link. Example:
 
 .. code-block:: rest
 
@@ -396,10 +398,10 @@ to refer to and then use ``:ref:\`label-name\``` to create the link. Example:
 For this to work properly, the label names **must** be unique in the
 entire documentation source.  To ensure this, the label names should
 begin with the path to the file where the label is located relative to
-the source directory. As an example the label for the C++ version of
-the Poisson demo which is located at the top of the
-``demos/cpp/pde/poisson/poisson.rst`` file should be given the name
-``demos_cpp_pde_poisson`` while the label to this sub section is:
+the source directory. For example, the label for the C++ version of
+the Poisson demo, which is located at the top of the
+``demos/cpp/pde/poisson/poisson.rst`` file, should be given the name
+``demos_cpp_pde_poisson``, while the label to this sub section is:
 
 .. code-block:: rest
 
@@ -416,11 +418,12 @@ Frequently used markup (roles and directives)
 Code snippets
 ^^^^^^^^^^^^^
 
-The FEniCS documentation makes heavy use of code snippets to illustrate how the
-interfaces work. Code snippets are created using the ``code-block`` directive
-(see `showing code examples <http://sphinx.pocoo.org/markup/code.html>`_
-for more details) which make it possible to show C++ and Python code
-snippets in the the following way:
+The FEniCS documentation makes heavy use of code snippets to
+illustrate how the interfaces work. Code snippets are created using
+the ``code-block`` directive (see `showing code examples
+<http://sphinx.pocoo.org/markup/code.html>`_ for more details). This
+makes it possible to show C++ and Python code snippets in the the
+following way:
 
 .. code-block:: rest
 
@@ -457,12 +460,11 @@ respectively.
 Math
 ^^^^
 
-Writing FEniCS documentation often involves presenting mathematics especially
-when documenting demos. We use the ``math`` role and directive to display
-inline math and equations respectively (see
-`math support in Sphinx <http://sphinx.pocoo.org/ext/math.html>`_ for more
-details).
-The input markup for math is LaTeX so the inline equation,
+Writing FEniCS documentation often involves presenting mathematics,
+especially when documenting demos. We use the ``math`` role and
+directive to display inline math and equations respectively (see `math
+support in Sphinx <http://sphinx.pocoo.org/ext/math.html>`_ for more
+details).  The input markup for math is LaTeX, so the inline equation,
 :math:`f(x) = x^2`, is typeset by
 
 .. code-block:: rest
@@ -475,7 +477,7 @@ and the equation
 
     a(v,u) = \int \nabla v \cdot \nabla u \; \rm{d}\Omega
 
-is implemented as:
+is typeset as
 
 .. code-block:: rest
 
@@ -492,7 +494,7 @@ is implemented as:
 Download files
 ^^^^^^^^^^^^^^
 
-To make a file available for download use the ``download`` role (see
+To make a file available for download, use the ``download`` role (see
 `inline markup <http://sphinx.pocoo.org/markup/inline.html>`_ for more
 details) in the following way:
 
@@ -503,8 +505,8 @@ details) in the following way:
 Author comments
 ^^^^^^^^^^^^^^^
 
-Please refrain from using the keywords *note*, *todo* and *fixme* in comments
-like:
+Please refrain from using the keywords *note*, *todo* and *fixme* in
+comments such as
 
 .. code-block:: rest
 
@@ -512,7 +514,7 @@ like:
     .. todo: Add more text and equations
     .. fixme: The results look wrong, probably the boundary conditions
 
-If you feel a comment is in its place use the ``note`` directive:
+If you think a comment is required, use the ``note`` directive:
 
 .. code-block:: rest
 
@@ -520,8 +522,9 @@ If you feel a comment is in its place use the ``note`` directive:
 
         Figure out how to present this in a better way
 
-and ask on the fenics@lists.launchpad.net mailing list, so we can resolve the
-issue as quickly as possible to keep the documentation in good shape.
+and ask on the fenics@lists.launchpad.net mailing list in order for
+the issue to be resolved as quickly as possible. This helps keeping
+the documentation in good shape.
 
 .. _styleguides_sphinx_documenting_interface:
 
@@ -545,7 +548,7 @@ To make matters more concrete let's consider the case of writing documentation
 for the DOLFIN ``Mesh`` class and the ``closest_cell`` member function of this
 class.
 
-The ``Mesh`` class is defined in the file ``dofin_dir/dolfin/mesh/Mesh.h``.
+The ``Mesh`` class is defined in the file ``dolfin_dir/dolfin/mesh/Mesh.h``.
 We therefore start by adding the files:
 
 * ``programmers-reference/cpp/mesh/Mesh.rst``
@@ -566,16 +569,17 @@ in the following sections.
 General remarks
 ^^^^^^^^^^^^^^^
 
-To handle the documentation of two different languages in Sphinx we use
-`Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to distinguish between
-classes and functions belonging to the C++ and Python interfaces.
+To handle the documentation of two different languages in Sphinx, we
+use `Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to
+distinguish between classes and functions belonging to the C++ and
+Python interfaces.
 
-Since Spinx does not allow sections in the markup for class/function
-documentation we use *italics* (``*italics*``) and definition lists to group
-information.
-The idea is to keep the markup as simple as possible since the reST source for
-the Python documentation of classes and functions will be used 'as is' in
-the docstrings of the DOLFIN module.
+As Sphinx does not allow sections in the markup for class/function
+documentation, we use *italics* (``*italics*``) and definition lists
+to group information.  The idea is to keep the markup as simple as
+possible since the reST source for the Python documentation of classes
+and functions will be used 'as is' in the docstrings of the DOLFIN
+module.
 
 Most information can be put in the three sections:
 
@@ -608,23 +612,24 @@ Most information can be put in the three sections:
         integer
             Some random integer.
 
-* *Example*, a very small code snippet which shows how the class/function
-  works. It does not necessarily have to be a stand-alone program.
+* *Example*, a very small code snippet that shows how the
+  class/function works. It does not necessarily have to be a
+  stand-alone program.
 
-Links to demos which use the feature being documented should be put in a
-``seealso`` directive.
+Links to demos that use the feature being documented should be put in
+a ``seealso`` directive.
 
-The member functions of a class should be sorted alphabetically for the
-C++ version.
-When using autodoc, Sphinx will sort the member functions automatically for the
-Python module.
+The member functions of a class should be sorted alphabetically for
+the C++ version. When using autodoc, Sphinx will sort the member
+functions automatically for the Python module.
 
 C++ interface
 ^^^^^^^^^^^^^^^^^
 
-The code snippets presented in the following can be seen in their complete
-form and context by clicking on ``Show Source`` link on the page containing
-the C++ documentation for the :cpp:class:`Mesh` class.
+The code snippets presented in the following can be seen in their
+complete form and context by clicking on the ``Show Source`` link on
+the page containing the C++ documentation for the :cpp:class:`Mesh`
+class.
 
 The C++ documentation for the ``Mesh`` class is added to the
 ``programmers-reference/cpp/mesh/Mesh.rst`` file.
@@ -632,8 +637,8 @@ The C++ documentation for the ``Mesh`` class is added to the
 Defining the class
 """"""""""""""""""
 
-The begining of the ``programmers-reference/cpp/mesh/Mesh.rst`` file looks
-like this:
+The beginning of the ``programmers-reference/cpp/mesh/Mesh.rst`` file
+looks as follows:
 
 .. code-block:: rest
 
@@ -651,22 +656,22 @@ like this:
 where only the first part of the ``Mesh`` class description has been included
 for brevity.
 
-We start with a section title ``Mesh.h`` since the ``Mesh.rst`` should contain
-documentation for all classes and functions defined in ``Mesh.h`` and there
-might be multiple classes defined.
-The ``Mesh`` class is defined by the Sphinx directive ``cpp:class::`` followed
-by the name of the class.
-Since the ``Mesh`` class derives from the ``Variable`` class we list all parent
-classes explicitly where the line ``:cpp:class:`Variable``` will create a link
-to the C++ documentation of the class ``Variable``.
+We start with a section title ``Mesh.h`` since the ``Mesh.rst`` should
+contain documentation for all classes and functions defined in
+``Mesh.h`` and there might be multiple classes defined.  The ``Mesh``
+class is defined by the Sphinx directive ``cpp:class::`` followed by
+the name of the class.  Since the ``Mesh`` class derives from the
+``Variable`` class, we list all parent classes explicitly where the
+line ``:cpp:class:`Variable``` will create a link to the C++
+documentation of the class ``Variable``.
 
 .. note::
 
     In the future Sphinx might be clever enough to handle parent classes
     automatically, but until then this is how we do it.
 
-Then follows a description of the purpose of the ``Mesh`` class before th
-documentation of the member functions.
+Then follows a description of the purpose of the ``Mesh`` class before
+the documentation of the member functions.
 
 Constructors
 """"""""""""
@@ -697,13 +702,12 @@ constructor:
                 filename
                     A string, name of file to load.
 
-The funtions are defined in the class body such that they automatically have the
-``Mesh`` namespace.
-The signature of the functions (in this case the constructors
-``Mesh(const Mesh& mesh)`` and ``Mesh(std::string filename)``) **must** be
-identical to that found in the ``dolfin/mesh/Mesh.h`` file, otherwise
-subsequent testing will report that the function is not documented
-(or obsolete).
+The functions are defined in the class body such that they
+automatically have the ``Mesh`` namespace.  The signature of the
+functions (in this case the constructors ``Mesh(const Mesh& mesh)``
+and ``Mesh(std::string filename)``) **must** be identical to that
+found in the ``dolfin/mesh/Mesh.h`` file, otherwise subsequent testing
+will report that the function is not documented (or obsolete).
 
 .. note::
 
@@ -718,9 +722,9 @@ subsequent testing will report that the function is not documented
 closest_cell function
 """""""""""""""""""""
 
-The documentation for the ``closest_cell`` function is added like documentation
-for the constructors with additional information about the return value and an
-example.
+The documentation for the ``closest_cell`` function is added in the
+same manner as the documentation for the constructors, but with
+additional information about the return value and an example.
 
 .. code-block:: rest
 
@@ -748,8 +752,9 @@ example.
 
                 1
 
-Again, the funtion is defined in the class body, and the signature of the
-function is identical to that found in the ``dolfin/mesh/Mesh.h`` file.
+Again, the function is defined in the class body, and the signature of
+the function is identical to that found in the ``dolfin/mesh/Mesh.h``
+file.
 
 .. note::
 
@@ -762,17 +767,18 @@ function is identical to that found in the ``dolfin/mesh/Mesh.h`` file.
 Python interface
 ^^^^^^^^^^^^^^^^
 
-The code snippets presented in the following can be seen in their complete
-form and context by clicking on ``Show Source`` link on the page containing
-the Python documentation for the :py:class:`dolfin.cpp.Mesh` class and in the
-:download:`programmers-reference/python/docstrings/dolfin/cpp.py` file which
-contains the actual documentation for the Python ``Mesh`` class.
+The code snippets presented in the following can be seen in their
+complete form and context by clicking on the ``Show Source`` link on
+the page containing the Python documentation for the
+:py:class:`dolfin.cpp.Mesh` class and in the
+:download:`programmers-reference/python/docstrings/dolfin/cpp.py` file
+which contains the actual documentation for the Python ``Mesh`` class.
 
 The Python ``Mesh`` class is defined in the :py:mod:`dolfin.cpp`
-module which is automatically generated by Swig from the DOLFIN C++
-implementation.  In order to have the documentation for the Python
-interface available from within the Python interpreter we will put the
-docstrings for the ``Mesh`` class in the appropriate file of the
+module. This module is automatically generated by Swig from the DOLFIN
+C++ implementation.  In order to have the documentation for the Python
+interface available from within the Python interpreter, we will put
+the docstrings for the ``Mesh`` class in the appropriate file of the
 pseudo module containing the dolfin docstrings namely
 ``programmers-reference/python/docstrings/dolfin/cpp.py``.
 
@@ -791,10 +797,10 @@ the exception that it only contains docstrings and no actual code.
         [snip]
         """
 
-where only the first part of the ``Mesh`` class description has been included
-for brevity.
-Since the docstrings module requires correct Python syntax the parent class
-``Variable`` must of course be defined also.
+where only the first part of the ``Mesh`` class description has been
+included for brevity.  Since the docstrings module requires correct
+Python syntax the parent class ``Variable`` must of course be defined
+also.
 
 Construtors
 """""""""""
@@ -832,13 +838,13 @@ function like this:
                       A string, name of file to load.
             """
 
-Since the constructor is overloaded we use the argument list ``(self, *args)``
-in the function definition and the ``**Overloaded versions**`` section to
-document the overloaded versions in a standard list using ``*``.
-For each constructor we define the argument list using **bold face**. The ``\``
-is needed to avoid adding space between the function name (``Mesh``) and the
-argument list.
-Each constructor is then documented as any other function.
+Since the constructor is overloaded, we use the argument list ``(self,
+*args)`` in the function definition and the ``**Overloaded
+versions**`` section to document the overloaded versions in a standard
+list using ``*``.  For each constructor we define the argument list
+using **bold face**. The ``\`` is needed to avoid adding space between
+the function name (``Mesh``) and the argument list.  Each constructor
+is then documented as any other function.
 
 .. note::
 
@@ -850,9 +856,9 @@ Each constructor is then documented as any other function.
 closest_cell function
 """""""""""""""""""""
 
-The documentation for the ``closest_cell`` function is added like documentation
-for the constructors with additional information about the return value and an
-example.
+The documentation for the ``closest_cell`` function is added in the
+same manner as the documentation for the constructors, but with
+additional information about the return value and an example.
 
 .. code-block:: rest
 
@@ -908,13 +914,13 @@ The line ``.. autoclass:: Mesh`` automatically generates documentation for the
 Appendices
 ^^^^^^^^^^
 
-Documentation for the FFC, UFC and UFL components of FEniCS are located in
-the :ref:`appendix <programmers_reference_appendices_index>`.
-The structure of the documentation of a given module depends on the file/class
-layout of the module and the content should be extracted from the docstrings
-as is done for the Python interface to DOLFIN.
-The layout of the docstrings should follow the same rules as outlined in the
-above sections.
+Documentation for the FFC, UFC and UFL components of FEniCS is located
+in the :ref:`appendix <programmers_reference_appendices_index>`.  The
+structure of the documentation of a given module depends on the
+file/class layout of the module and the content should be extracted
+from the docstrings as is done for the Python interface to DOLFIN.
+The layout of the docstrings should follow the same rules as outlined
+in the above sections.
 
 Testing the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -941,16 +947,17 @@ Documenting demos
 -----------------
 
 This short guide explains the procedure for documenting a FEniCS demo.
-As an example we will demonstrate the steps involved to create documentation
-for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and
+As an example, we will demonstrate the steps involved to create
+documentation for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and
 :ref:`Poisson (Python) <demos_python_pde_poisson>` demos.
 
 Files
 ^^^^^
 
-The documentation is located in the ``source/demos`` directory which contains
-the directories ``common``, ``cpp`` and ``python``.
-First you must figure out which category your demo belongs to:
+The demo documentation is located in the ``source/demos``
+directory. This directory contains the sub-directories ``common``,
+``cpp`` and ``python``.  First you must figure out which category your
+demo belongs to:
 
 1. adaptivity
 2. fem
@@ -967,61 +974,73 @@ First you must figure out which category your demo belongs to:
 
     This might change in case we decide to reorganise the demos!
 
-In our case the Poisson demo is a partial differential equation (PDE), so
-we should add the following files:
+The Poisson demo mainly demonstrates how to solve a certain partial
+differential equation (PDE), so we should add the following files:
 
 ``demos/common/pde/poisson/poisson.txt``
-    put common information is this file and include in the C++ and
-    Python versions (see :ref:`styleguides_sphinx_common_information`).
+    Common information should be placed in this file, and the file
+    should then be included in the C++ and Python versions (see
+    :ref:`styleguides_sphinx_common_information`).
 
 ``demos/cpp/pde/poisson/poisson.rst``
-    this file contains the reST source file with the documentation which is
+    This file contains the reST source file with the documentation that is
     specific to the C++ version of the Poisson demo.
 
 ``demos/cpp/pde/poisson/main.cpp``
-    this file contains the entire source code for the solver and must be made
+    This file contains the entire source code for the solver and must be made
     available for :ref:`download <styleguides_sphinx_download_files>`.
 
 ``demos/cpp/pde/poisson/Poisson.ufl``
-    this file contains the form file and must be made available for
+    This file contains the form file and must be made available for
     :ref:`download <styleguides_sphinx_download_files>`.
-    If your demo contains multiple form files they too must be added.
+    If your demo contains multiple form files, all of these must be added.
+
 
 ``demos/cpp/pde/poisson/SConstruct``
-    this file is necessary to compile the demo against DOLFIN, and must be
+    This file is necessary to compile the demo against DOLFIN and must be
     made available for :ref:`download <styleguides_sphinx_download_files>`.
 
+.. warning::
+
+    The information about SConstruct must be updated cf. transition to cmake.
+
+
 ``demos/python/pde/poisson/poisson.rst``
-    this file contains the reST source file with the documentation which is
-    specific to the Python version of the Poisson demo.
+    This file contains the reST source file with the documentation
+    that is specific to the Python version of the Poisson demo.
 
 ``demos/python/pde/poisson/demo.py``
-    this file contains the entire solver writte in PyDOLFIN, and must be made
-    available for :ref:`download <styleguides_sphinx_download_files>`.
+    This file contains the entire solver written in PyDOLFIN, and must
+    be made available for :ref:`download
+    <styleguides_sphinx_download_files>`.
 
 Finally, add the demo to the index files ``demos/python/pde/index`` and
 ``demos/cpp/pde/index`` by adding ``poisson/poisson`` to the ``toctree`` to
 complete the setup of files.
 
-The source code files should of course be able to run with the versions of
-FEniCS software e.g., DOLFIN, FFC and UFL, which is covered by the current
-documentation.
+The source code files should of course compile and run with the
+versions of FEniCS software covered by the current documentation.
+
+.. note::
+
+    Will the fact that the demos in the documentation compile and run
+    be tested automatically by the buildbot?
+
 
 .. _styleguides_sphinx_common_information:
 
 Common information
 ^^^^^^^^^^^^^^^^^^
 
-The demo has to be available in a C++ and a Python version.
-However, the summary (describing what features are demonstrated) along with the
-problem and method description are typically identical for both versions.
-It is therefore desirable to put this information in a common source file to
-avoid code duplication.
-In this case this code is put in the file
-``demos/common/pde/poisson/poisson.txt`` which is then included in the two files
-``demos/cpp/pde/poisson/poisson.rst`` and
-``demos/python/pde/poisson/poisson.rst`` using the ``include`` directive with
-the relative path to the file:
+Each demo should be available in both a C++ and a Python version.
+However, the summary (describing what features are demonstrated) along
+with the problem and method description are typically identical for
+both versions.  It is therefore desirable to put this information in a
+common source file to avoid code duplication.  This common code is
+placed in the file ``demos/common/pde/poisson/poisson.txt``, which is
+then included in the two files ``demos/cpp/pde/poisson/poisson.rst``
+and ``demos/python/pde/poisson/poisson.rst`` using the ``include``
+directive with the relative path to the file:
 
 .. code-block:: rest
 
@@ -1030,9 +1049,9 @@ the relative path to the file:
 C++ and Python specific contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each step of the solution procedure of a demo should be explained. Often this
-is achieved by including :ref:`styleguides_sphinx_code_snippets` which of
-course must be given in the correct syntax depending on the demo version.
+Each step of the solution procedure of a demo should be
+explained. This can often be achieved by including
+:ref:`styleguides_sphinx_code_snippets`.
 
 .. warning::
 
@@ -1041,9 +1060,9 @@ course must be given in the correct syntax depending on the demo version.
     compiled and tested against DOLFIN and if anything is broken the demos
     needs to be updated.
 
-    Running the script ``test/verify_code_snippets.py`` in the top level directory
-    will then locate all code snippets that needs to be updated to the new
-    syntax.
+    Running the script ``test/verify_code_snippets.py`` in the top
+    level directory will then locate all code snippets that needs to
+    be updated to the new syntax.
 
 As an example, the definition of the Dirichlet boundary is:
 
@@ -1069,16 +1088,17 @@ for the Python demo.
 Additional information
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Use the ``note`` and ``warning`` directives to highligt important information.
-The ``seealso`` directive should be used when pointing to alternative
-solutions or functions in the :ref:`programmers_reference_index`.
+Use the ``note`` and ``warning`` directives to highlight important
+information.  The ``seealso`` directive should be used when pointing
+to alternative solutions or functions in the
+:ref:`programmers_reference_index`.
 
 Keywords should be added to the index, using the ``index`` directive to make
 the documentation easier to navigate through.
 
 See `the Sphinx documentation
-<http://sphinx.pocoo.org/markup/para.html#index-generating-markup>`_ on how to
-use the above directives.
+<http://sphinx.pocoo.org/markup/para.html#index-generating-markup>`_
+for how to use the above directives.
 
 Testing the documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
