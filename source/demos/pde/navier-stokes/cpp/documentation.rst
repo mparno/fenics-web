@@ -42,8 +42,10 @@ follows:
     nu = 0.01
 
     # Define bilinear and linear forms
-    a = (1/k)*inner(u, v)*dx + inner(grad(u0)*u0, v)*dx + nu*inner(grad(u), grad(v))*dx
-    L = (1/k)*inner(u0, v)*dx + inner(f, v)*dx
+    F = (1/k)*inner(u - u0, v)*dx + inner(grad(u0)*u0, v)*dx + \
+        nu*inner(grad(u), grad(v))*dx - inner(f, v)*dx
+    a = lhs(F)
+    L = rhs(F)
 
 The variational problem for the pressure update is implemented as
 follows:
@@ -375,7 +377,7 @@ pressure Poisson equation:
     // Compute tentative velocity step
     begin("Computing tentative velocity");
     assemble(b1, L1);
-    for (int i = 0; i < bcu.size(); i++)
+    for (dolfin::uint i = 0; i < bcu.size(); i++)
       bcu[i]->apply(A1, b1);
     solve(A1, u1.vector(), b1, "gmres", "ilu");
     end();
@@ -383,7 +385,7 @@ pressure Poisson equation:
     // Pressure correction
     begin("Computing pressure correction");
     assemble(b2, L2);
-    for (int i = 0; i < bcp.size(); i++)
+    for (dolfin::uint i = 0; i < bcp.size(); i++)
       bcp[i]->apply(A2, b2);
     solve(A2, p1.vector(), b2, "gmres", "amg_hypre");
     end();
@@ -391,7 +393,7 @@ pressure Poisson equation:
     // Velocity correction
     begin("Computing velocity correction");
     assemble(b3, L3);
-    for (int i = 0; i < bcu.size(); i++)
+    for (dolfin::uint i = 0; i < bcu.size(); i++)
       bcu[i]->apply(A3, b3);
     solve(A3, u1.vector(), b3, "gmres", "ilu");
     end();

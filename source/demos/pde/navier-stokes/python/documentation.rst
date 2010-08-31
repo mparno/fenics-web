@@ -113,8 +113,10 @@ and linear forms for each step:
 .. code-block:: python
 
     # Tentative velocity step
-    a1 = (1/k)*inner(u, v)*dx + inner(grad(u0)*u0, v)*dx + nu*inner(grad(u), grad(v))*dx
-    L1 = (1/k)*inner(u0, v) + inner(f, v)*dx
+    F1 = (1/k)*inner(u - u0, v)*dx + inner(grad(u0)*u0, v)*dx + \
+         nu*inner(grad(u), grad(v))*dx - inner(f, v)*dx
+    a1 = lhs(F1)
+    L1 = rhs(F1)
 
     # Pressure update
     a2 = inner(grad(p), grad(q))*dx
