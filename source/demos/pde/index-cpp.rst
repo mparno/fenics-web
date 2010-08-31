@@ -14,7 +14,7 @@ Below is a list demos which demonstrates how to solve various PDEs.
 
     poisson/cpp/documentation
     mixed-poisson/cpp/documentation
+    biharmonic/cpp/documentation
     hyperelasticity/cpp/documentation
     cahn-hilliard/cpp/documentation
     navier-stokes/cpp/documentation
-

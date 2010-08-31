@@ -1,0 +1,9 @@
+
+This demo illustrates how to:
+
+* Solve a linear partial differential equation
+* Use a discontinuous Galerkin method
+* Solve a fourth-order differential equation
+
+Equation and problem definition
+-------------------------------

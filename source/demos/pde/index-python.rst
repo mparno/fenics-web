@@ -14,7 +14,7 @@ Below is a list demos which demonstrates how to solve various PDEs.
 
     poisson/python/documentation
     mixed-poisson/python/documentation
+    biharmonic/python/documentation
     hyperelasticity/python/documentation
     cahn-hilliard/python/documentation
     navier-stokes/python/documentation
-
