@@ -17,6 +17,8 @@ __date__ = "2007-08-16 -- 2010-03-05"
 __copyright__ = "Copyright (C) 2007-2009 Anders Logg"
 __license__  = "GNU LGPL Version 2.1"
 
+# Begin demo
+
 from dolfin import *
 
 # Create mesh and define function space

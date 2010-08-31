@@ -124,8 +124,6 @@ format, and the deformed mesh is plotted to the screen:
 .. literalinclude:: demo.py
    :lines: 76-
 
-
-
 Complete code
 -------------
 

@@ -112,3 +112,8 @@ and the the solution plotted to the screen using the ``plot()`` command:
     # Plot solution
     plot(u, interactive=True)
 
+Complete code
+-------------
+
+.. literalinclude:: demo.py
+   :start-after: # Begin demo
