@@ -55,7 +55,7 @@ are defined by:
     nu = 0.01
 
 The time-dependent pressure boundary condition can be defined using
-the :python:class:`Expression` class:
+the :py:class:`Expression` class:
 
 .. code-block:: python
 
@@ -63,7 +63,7 @@ the :python:class:`Expression` class:
     p_in = Expression("sin(3.0*t)")
 
 The variable ``t`` is automatically available as part of an
-:python:class:`Expression`. Note that this variable is not
+:py:class:`Expression`. Note that this variable is not
 automatically updated during time-stepping, so we must remember to
 manually update the value of the current time in each time step.
 
@@ -102,7 +102,7 @@ below:
     f = Constant((0, 0))
 
 Note that one may use the time step ``dt`` directly in the
-form. However, using the :python:class:`Constant` class, we may freely
+form. However, using the :py:class:`Constant` class, we may freely
 change the size of the time step without triggering regeneration of
 code.
 
@@ -158,7 +158,7 @@ The time-stepping loop is now implemented as follows:
         # Update pressure boundary condition
         p_in.t = t
 
-We use the :python:class:`Progress` class to display a progress bar
+We use the :py:class:`Progress` class to display a progress bar
 during the computation. We also remember to update the current time
 for the time-dependend pressure boundary value.
 
