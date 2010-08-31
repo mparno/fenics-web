@@ -24,8 +24,8 @@ block_source =  {"cpp":     {"c++": ".cpp", "python": ".ufl"},
                 }
 
 def verify_blocks(rst_file, source_files, source_dict):
-    """Check that any code blocks in the rst file is present in at least one of
-    the source files."""
+    """Check that any code blocks in the rst file is present in at
+    least one of the source files."""
 
     for block_type, source_type in source_dict.items():
         # Extract code blocks from rst file.
@@ -138,4 +138,3 @@ if __name__ == "__main__":
         chdir(pardir)
 
     print "\nOK.\n"
-
