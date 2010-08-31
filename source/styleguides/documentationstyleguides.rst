@@ -660,15 +660,13 @@ differential equation (PDE), so we should add the following files:
     :ref:`download <styleguides_sphinx_download_files>`.
     If your demo contains multiple form files, all of these must be added.
 
-
-``demos/cpp/pde/poisson/SConstruct``
+``demos/cpp/pde/poisson/CMakeLists.txt``
     This file is necessary to compile the demo against DOLFIN and must be
     made available for :ref:`download <styleguides_sphinx_download_files>`.
 
 .. warning::
 
     The information about SConstruct must be updated cf. transition to cmake.
-
 
 ``demos/python/pde/poisson/poisson.rst``
     This file contains the reST source file with the documentation
