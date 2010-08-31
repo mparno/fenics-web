@@ -69,7 +69,7 @@ conditions for the velocity and no-slip boundary conditions on the
 remaining boundary.
 
 The (kinematic) viscosity is set to :math:`\nu = 0.01`, the time step
-is :math:`Delta t = 0.01` and the length of the interval is :math:`T =
+is :math:`\Delta t = 0.01` and the length of the interval is :math:`T =
 3`. The solution is computed using continuous vector-valued piecewise
 quadratics for the velocity, and continuous scalar piecewise linears
 for the pressure (Taylor-Hood).

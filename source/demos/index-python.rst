@@ -20,6 +20,7 @@ please read the instructions on :ref:`how to run the Python demos
     pde/hyperelasticity/python/documentation
     pde/cahn-hilliard/python/documentation
     pde/navier-stokes/python/documentation
+    la/eigenvalue/simple/python/documentation
 
 .. note::
 
