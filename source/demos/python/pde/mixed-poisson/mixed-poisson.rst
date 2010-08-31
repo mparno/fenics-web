@@ -20,8 +20,6 @@ First, the ``dolfin`` module is imported:
 
     from dolfin import *
 
-.. index:: FunctionSpace
-
 Then, we need to create a ``mesh`` covering the unit square. In this
 example, we will let the mesh consist of 32 x 32 squares with each
 square divided into two triangles:
@@ -30,6 +28,10 @@ square divided into two triangles:
 
     # Create mesh
     mesh = UnitSquare(32, 32)
+
+.. index::
+   pair: FunctionSpace; Brezzi-Douglas-Marini
+   pair: FunctionSpace; Discontinous Lagrange
 
 Next, we need to define the function spaces. We define the two
 function spaces :math:`\Sigma_h` and :math:`V_h` separately, before
@@ -104,6 +106,8 @@ the usual ``eval``) allows us to extract more geometry information
 such as the facet normals. Since this is a vector-valued expression,
 the methods ``rank`` and ``dim`` must also be specified.
 
+.. index:: Expression
+
 .. code-block:: python
 
     # Define function G such that G \cdot n = g
@@ -141,6 +145,8 @@ using the bilinear and linear forms, and the boundary condition.  The
 separate components ``sigma`` and ``u`` of the solution can be
 extracted by calling the ``split`` function. Finally, we plot the
 solutions to examine the result.
+
+.. index:: split functions
 
 .. code-block:: python
 
