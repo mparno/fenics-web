@@ -14,4 +14,14 @@ please read the instructions on :ref:`how to run the Python demos
     :maxdepth: 2
     :numbered:
 
-    pde/index
+    pde/poisson/python/documentation
+    pde/mixed-poisson/python/documentation
+    pde/hyperelasticity/python/documentation
+    pde/cahn-hilliard/python/documentation
+    pde/navier-stokes/python/documentation
+
+.. note::
+
+   We are currently migrating a large number of demos from the DOLFIN
+   source tree to this documentation. Any help with this process is
+   greatly appreciated.

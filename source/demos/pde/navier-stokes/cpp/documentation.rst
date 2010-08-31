@@ -3,13 +3,15 @@
 The Incompressible Navier-Stokes Equations
 ==========================================
 
-This demo is implemented the C++ source file :download:`main.py`.  In
+This demo is implemented the C++ source file :download:`main.cpp`.  In
 addition, this program requires the following header files that define
 the variational forms used in the program:
 :download:`TentativeVelocity.h`, :download:`VelocityUpdate.h`, and
 :download:`PressureUpdate.h`. These files can be generated (using FFC)
 from the following UFL form files: :download:`TentativeVelocity.ufl`,
 :download:`VelocityUpdate.ufl`, and :download:`PressureUpdate.ufl`.
+
+.. include:: ../common.txt
 
 Implementation
 --------------
@@ -102,7 +104,7 @@ code from within DOLFIN.
 C++ program
 ^^^^^^^^^^^
 
-In the C++ program, :download:`main.py`, we start by including
+In the C++ program, :download:`main.cpp`, we start by including
 ``dolfin.h`` and the generated header files:
 
 .. code-block:: cpp

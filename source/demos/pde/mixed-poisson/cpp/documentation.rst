@@ -5,7 +5,7 @@
 Mixed formulation for Poisson's equation
 ========================================
 
-.. include:: ../../../common/pde/mixed-poisson/mixed-poisson.txt
+.. include:: ../common.txt
 
 
 Implementation

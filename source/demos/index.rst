@@ -1,8 +1,5 @@
 .. This is where we put the documentation for all demos from DOLFIN.
 
-    NOTE: KBO: We need to figure out how to share common text between the
-    C++/Python versions.
-
 .. _demos_index:
 
 ############
@@ -28,8 +25,8 @@ Contents
 .. toctree::
     :maxdepth: 1
 
-    cpp/index
-    python/index
+    index-cpp
+    index-python
     missing_demos
 
 .. note::

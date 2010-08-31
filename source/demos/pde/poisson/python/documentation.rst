@@ -5,13 +5,13 @@
 Poisson's equation
 ==================
 
-.. include:: ../../../common/pde/poisson/poisson.txt
+This demo is implemented in a single Python file, :download:`demo.py`,
+which contains both the variational forms and the solver.
+
+.. include:: ../common.txt
 
 Implementation
 --------------
-
-This demo is implemented in a single Python file, :download:`demo.py`, which
-contains both the variational forms and the solver.
 
 First, the ``dolfin`` module is imported:
 

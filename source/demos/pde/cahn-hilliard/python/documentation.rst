@@ -5,14 +5,13 @@
 Cahn-Hilliard equation
 ======================
 
-.. include:: ../../../common/pde/cahn-hilliard/cahn-hilliard.txt
+This demo is implemented in a single Python file, :download:`demo.py`,
+which contains both the variational forms and the solver.
 
-.. _demos_python_pde_poisson:
+.. include:: ../common.txt
 
 Implementation
 --------------
-
-This demo is implemented in a single Python file, :download:`demo.py`.
 
 First, the Python module``random'' and module ``dolfin`` are imported:
 

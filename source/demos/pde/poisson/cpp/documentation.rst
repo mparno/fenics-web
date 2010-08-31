@@ -6,7 +6,7 @@
 Poisson's equation
 ==================
 
-.. include:: ../../../common/pde/poisson/poisson.txt
+.. include:: ../common.txt
 
 
 Implementation

@@ -5,10 +5,9 @@
 Cahn-Hilliard equation
 ======================
 
-.. include:: ../../../common/pde/cahn-hilliard/cahn-hilliard.txt
+.. include:: ../common.txt
 
 This text is C++ specific
-
 
 UFL input
 ---------
