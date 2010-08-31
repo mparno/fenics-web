@@ -1,4 +1,5 @@
-This solves a three-dimensional elasticity problem.  It illustrates how to:
+This example demonstrates the solution of a three-dimensional
+elasticity problem. It illustrates how to:
 
 * Minimise a non-quadratic functional
 * Use automatic computation of the directional derivative

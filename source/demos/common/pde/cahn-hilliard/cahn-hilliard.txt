@@ -1,6 +1,6 @@
-This example demonstrates the solution of a particular nonlinear time-dependent
-fourth-order equation, known as the Cahn-Hilliard equation. In particular it
-demonstrates the use of
+This example demonstrates the solution of a particular nonlinear
+time-dependent fourth-order equation, known as the Cahn-Hilliard
+equation. In particular it demonstrates the use of
 
 * The built-in Newton solver
 * The base class ``NonlinearProblem``

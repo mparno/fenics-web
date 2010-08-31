@@ -18,7 +18,7 @@ This demo illustrates how to:
 Equation and problem definition
 -------------------------------
 
-The Poisson equation is the cannonical elliptic partial differential equation.
+The Poisson equation is the canonical elliptic partial differential equation.
 For a domain :math:`\Omega \subset \mathbb{R}^n`, the Poisson equation with
 particular boundary conditions reads:
 
@@ -41,8 +41,8 @@ where :math:`V` is a suitable function space and
             + \int_{\Gamma_{N}} g v \, {\rm d}\Gamma
 
 The expression :math:`a(u, v)` is the bilinear form and :math:`L(v)`
-is the linear form. It is assuume that all functions in :math:`V`
-satisfy the Dirichlet boundary conditions (:math:`u = 0 \ {\rm on} \ \Gamma_{D}`)
+is the linear form. It is assuumed that all functions in :math:`V`
+satisfy the Dirichlet boundary conditions (:math:`u = 0 \ {\rm on} \ \Gamma_{D}`).
 
 The following definitions of functions and boundaries are used in this demo:
 
