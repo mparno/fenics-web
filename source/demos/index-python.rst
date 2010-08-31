@@ -12,15 +12,10 @@ please read the instructions on :ref:`how to run the Python demos
 
 .. toctree::
     :maxdepth: 2
-    :numbered:
 
     running-demos-python
-    pde/poisson/python/documentation
-    pde/mixed-poisson/python/documentation
-    pde/hyperelasticity/python/documentation
-    pde/cahn-hilliard/python/documentation
-    pde/navier-stokes/python/documentation
-    la/eigenvalue/simple/python/documentation
+    pde/index-python
+    la/index-python
 
 .. note::
 
