@@ -621,7 +621,7 @@ Files
 
 The demo documentation is located in the ``source/demos``
 directory. This directory contains the sub-directories ``common``,
-``cpp`` and ``python``.  First you must figure out which category your
+``cpp``, and ``python``.  First you must figure out which category your
 demo belongs to:
 
 1. adaptivity
@@ -652,7 +652,7 @@ differential equation (PDE), so we should add the following files:
     specific to the C++ version of the Poisson demo.
 
 ``demos/cpp/pde/poisson/main.cpp``
-    This file contains the entire source code for the solver and must be made
+    This file contains the entire C++ source code for the solver and must be made
     available for :ref:`download <styleguides_sphinx_download_files>`.
 
 ``demos/cpp/pde/poisson/Poisson.ufl``
@@ -669,7 +669,7 @@ differential equation (PDE), so we should add the following files:
     that is specific to the Python version of the Poisson demo.
 
 ``demos/python/pde/poisson/demo.py``
-    This file contains the entire solver written in PyDOLFIN, and must
+    This file contains the entire Python source code for the solver and must
     be made available for :ref:`download
     <styleguides_sphinx_download_files>`.
 
@@ -679,12 +679,6 @@ complete the setup of files.
 
 The source code files should of course compile and run with the
 versions of FEniCS software covered by the current documentation.
-
-.. note::
-
-    Will the fact that the demos in the documentation compile and run
-    be tested automatically by the buildbot?
-
 
 .. _styleguides_sphinx_common_information:
 
@@ -712,16 +706,11 @@ Each step of the solution procedure of a demo should be
 explained. This can often be achieved by including
 :ref:`styleguides_sphinx_code_snippets`.
 
-.. warning::
+.. note::
 
     It is important that the code snippets are exact copies of what can be
-    found in the source files. The reason being that the source files will be
-    compiled and tested against DOLFIN and if anything is broken the demos
-    needs to be updated.
-
-    Running the script ``test/verify_code_snippets.py`` in the top
-    level directory will then locate all code snippets that needs to
-    be updated to the new syntax.
+    found in the source files. This can be checked by the running the script
+    ``test/verify_code_snippets.py`` in the top level directory.
 
 As an example, the definition of the Dirichlet boundary is:
 
