@@ -74,11 +74,137 @@ Writing the solver
 
 The solver is implemented in the :download:`main.cpp` file.
 
-At the top we include the DOLFIN header file and the header file containing the
-variational forms for the Poisson equation.
-For convenience we also include the DOLFIN namespace.
+At the top we include the DOLFIN header file and the generated header
+file containing the variational forms.  For convenience we also
+include the DOLFIN namespace.
 
 .. code-block:: c++
 
-    #include <dolfin.h>
-    #include "MixedPoisson.h"
+ #include <dolfin.h>
+ #include "MixedPoisson.h"
+
+ using namespace dolfin;
+
+Then follows the definition of the coefficient functions (for :math:`f` and
+:math:`G`), which are derived from the ``Expression`` class in DOLFIN.
+
+.. code-block:: c++
+
+
+ // Source term (right-hand side)
+ class Source : public Expression
+ {
+   void eval(Array<double>& values, const Array<double>& x) const
+   {
+     double dx = x[0] - 0.5;
+     double dy = x[1] - 0.5;
+     values[0] = 10*exp(-(dx*dx + dy*dy) / 0.02);
+   }
+ };
+
+ // Boundary source for flux boundary condition
+ class BoundarySource : public Expression
+ {
+ public:
+
+   BoundarySource() : Expression(2) {}
+
+   void eval(Array<double>& values, const Data& data) const
+   {
+     double g = sin(5*data.x[0]);
+     values[0] = g*data.normal()[0];
+     values[1] = g*data.normal()[1];
+   }
+ };
+
+
+Then follows the definition of the essential boundary part of the
+boundary of the domain, which are derived from the ``SubDomain``
+class in DOLFIN.
+
+.. code-block:: c++
+
+ // Sub domain for essential boundary condition
+ class EssentialBoundary : public SubDomain
+ {
+   bool inside(const Array<double>& x, bool on_boundary) const
+   {
+     return x[1] < DOLFIN_EPS or x[1] > 1.0 - DOLFIN_EPS;
+   }
+ };
+
+Inside the ``main()`` function we first create the ``mesh`` and then
+we define the (mixed) function space for the variational
+formulation. We then also define the bilinear form ``a`` and linear
+form ``L`` relative to this function space.
+
+.. code-block:: c++
+
+  // Construct function space
+  MixedPoisson::FunctionSpace W(mesh);
+  MixedPoisson::BilinearForm a(W, W);
+  MixedPoisson::LinearForm L(W);
+
+Then we create the source (:math:`f`) and assign it to the linear form.
+
+.. code-block:: c++
+
+  // Create source and assign to L
+  Source f;
+  L.f = f;
+
+It only remains to prescribe the boundary condition for the
+flux. Essential boundary conditions are specified through the class
+``DirichletBC`` which takes three arguments: the function space the
+boundary condition is supposed to be applied to, the data for the
+boundary condition, and the relevant part of the boundary.
+
+We want to apply the boundary condition to the first subspace of the
+mixed space. This space can be accessed by ``Subspace``.
+
+Next, we need to construct the data for the boundary condition. An
+essential boundary condition is handled by replacing degrees of
+freedom by the degrees of freedom evaluated at the given data. The
+:math:`BDM` finite element spaces are vector-valued spaces and hence
+the degrees of freedom act on vector-valued objects. The effect is
+that the user is required to construct a :math:`G` such that :math:`G
+\cdot n = g`.  Such a :math:`G` can be constructed by letting :math:`G
+= g n`. This is what the derived expression class ``BoundarySource``
+defined above does.
+
+.. code-block:: c++
+
+  // Define boundary condition
+  SubSpace W0(W, 0);
+  BoundarySource G;
+  EssentialBoundary boundary;
+  DirichletBC bc(W0, G, boundary);
+
+To compute the solution we use the ``VariationalProblem`` class with
+the bilinear and linear forms, and the boundary condition. The (full)
+solution will be stored in the ``Function`` ``w``, which we also
+initialise using the ``FunctionSpace`` :math:`W`. The actual
+computation is performed by calling ``solve``.
+
+.. code-block:: c++
+
+  // Define variational problem
+  VariationalProblem problem(a, L, bc);
+
+  // Compute (full) solution
+  Function w(W);
+  problem.solve(w);
+
+Now, the separate components ``sigma`` and ``u`` of the solution can
+be extracted by taking components. These can easily be visualized by
+calling ``plot``.
+
+.. code-block:: c++
+
+  // Extract sub functions (function views)
+  Function& sigma = w[0];
+  Function& u = w[1];
+
+  // Plot solutions
+  plot(u);
+  plot(sigma);
