@@ -14,6 +14,7 @@ please read the instructions on :ref:`how to run the Python demos
     :maxdepth: 2
     :numbered:
 
+    running-demos-python
     pde/poisson/python/documentation
     pde/mixed-poisson/python/documentation
     pde/hyperelasticity/python/documentation

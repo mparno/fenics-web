@@ -14,6 +14,7 @@ please read the instructions on :ref:`how to run the C++ demos
     :maxdepth: 2
     :numbered:
 
+    running-demos-cpp
     pde/poisson/cpp/documentation
     pde/mixed-poisson/cpp/documentation
     pde/hyperelasticity/cpp/documentation
