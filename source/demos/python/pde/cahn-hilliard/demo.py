@@ -72,7 +72,7 @@ dfdc = diff(f, c)
 # mu_(n+theta)
 mu_mid = (1.0-theta)*mu0 + theta*mu
 
-# Weak statment of the euquation
+# Weak statement of the equations
 L0 = c*q*dx - c0*q*dx + dt*dot(grad(mu_mid), grad(q))*dx
 L1 = mu*v*dx - dfdc*v*dx - lmbda*dot(grad(c), grad(v))*dx
 L = L0 + L1
