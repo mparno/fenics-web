@@ -13,3 +13,4 @@ PDE
     mixed-poisson/mixed-poisson
     hyperelasticity/hyperelasticity
     cahn-hilliard/cahn-hilliard
+    navier-stokes/index

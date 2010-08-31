@@ -66,14 +66,14 @@ where the variational forms :math:`a` and :math:`L` are defined as
 
 .. math::
 
-   a((\sigma, u), (\tau, v)) =
-   & \int_{\Omega} \sigma \cdot \tau + \nabla \cdot \tau \ u
+   a((\sigma, u), (\tau, v)) &=
+     \int_{\Omega} \sigma \cdot \tau + \nabla \cdot \tau \ u
    + \nabla \cdot \sigma \ v \ {\rm d} x \\
    L((\tau, v)) &= - \int_{\Omega} f v \ {\rm d} x
    + \int_{\Gamma_D} u_0 \tau \cdot n  \ {\rm d} s
 
-and :math:`\Sigma_g = \{ \tau \in H(\rm div) \text{ such that } \tau
-\cdot n|_{\Gamma_N} = g \}` and :math:`V = L^2(\Omega)`.
+and :math:`\Sigma_g = \{ \tau \in H({\rm div}) \text{ such that } \tau \cdot n|_{\Gamma_N} = g \}`
+and :math:`V = L^2(\Omega)`.
 
 To discretize the above formulation, two discrete function spaces
 :math:`\Sigma_h \subset \Sigma` and :math:`V_h \subset V` are needed
