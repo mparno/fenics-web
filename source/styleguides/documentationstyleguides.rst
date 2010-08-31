@@ -620,9 +620,7 @@ Files
 ^^^^^
 
 The demo documentation is located in the ``source/demos``
-directory. This directory contains the sub-directories ``common``,
-``cpp``, and ``python``.  First you must figure out which category your
-demo belongs to:
+directory. This directory contains sub-directories for the various categories:
 
 1. adaptivity
 2. fem
@@ -642,40 +640,42 @@ demo belongs to:
 The Poisson demo mainly demonstrates how to solve a certain partial
 differential equation (PDE), so we should add the following files:
 
-``demos/common/pde/poisson/poisson.txt``
+``demos/pde/poisson/common.txt``
     Common information should be placed in this file, and the file
     should then be included in the C++ and Python versions (see
     :ref:`styleguides_sphinx_common_information`).
 
-``demos/cpp/pde/poisson/poisson.rst``
+``demos/pde/poisson/cpp/documentation.rst``
     This file contains the reST source file with the documentation that is
     specific to the C++ version of the Poisson demo.
 
-``demos/cpp/pde/poisson/main.cpp``
+``demos/pde/poisson/cpp/main.cpp``
     This file contains the entire C++ source code for the solver and must be made
     available for :ref:`download <styleguides_sphinx_download_files>`.
 
-``demos/cpp/pde/poisson/Poisson.ufl``
+``demos/pde/poisson/cpp/Poisson.ufl``
     This file contains the form file and must be made available for
     :ref:`download <styleguides_sphinx_download_files>`.
     If your demo contains multiple form files, all of these must be added.
 
-``demos/cpp/pde/poisson/CMakeLists.txt``
+``demos/pde/poisson/cpp/CMakeLists.txt``
     This file is necessary to compile the demo against DOLFIN and must be
     made available for :ref:`download <styleguides_sphinx_download_files>`.
 
-``demos/python/pde/poisson/poisson.rst``
+``demos/pde/poisson/python/documentation.rst``
     This file contains the reST source file with the documentation
     that is specific to the Python version of the Poisson demo.
 
-``demos/python/pde/poisson/demo.py``
+``demos/pde/poisson/python/demo.py``
     This file contains the entire Python source code for the solver and must
     be made available for :ref:`download
     <styleguides_sphinx_download_files>`.
 
-Finally, add the demo to the index files ``demos/python/pde/index`` and
-``demos/cpp/pde/index`` by adding ``poisson/poisson`` to the ``toctree`` to
-complete the setup of files.
+Finally, add the demo to the index files to complete the setup of files.
+This is done by adding the line ``poisson/cpp/documentation`` to the
+``toctree`` of the ``demos/pde/index-cpp.rst`` file and the line
+``poisson/python/documentation`` to the ``toctree`` of the
+``demos/pde/index-python.rst`` file
 
 The source code files should of course compile and run with the
 versions of FEniCS software covered by the current documentation.
@@ -690,14 +690,14 @@ However, the summary (describing what features are demonstrated) along
 with the problem and method description are typically identical for
 both versions.  It is therefore desirable to put this information in a
 common source file to avoid code duplication.  This common code is
-placed in the file ``demos/common/pde/poisson/poisson.txt``, which is
-then included in the two files ``demos/cpp/pde/poisson/poisson.rst``
-and ``demos/python/pde/poisson/poisson.rst`` using the ``include``
+placed in the file ``demos/pde/poisson/common.txt``, which is
+then included in the two files ``demos/pde/poisson/cpp/documentation.rst``
+and ``demos/pde/poisson/python/documentation.rst`` using the ``include``
 directive with the relative path to the file:
 
 .. code-block:: rest
 
-  .. include:: ../../../common/pde/poisson/poisson.txt
+  .. include:: ../common.txt
 
 C++ and Python specific contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
