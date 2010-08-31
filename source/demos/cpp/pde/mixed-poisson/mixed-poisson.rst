@@ -47,7 +47,6 @@ test functions on this space. This can be done as follows
 
 .. code-block:: python
 
-    # Define trial and test functions
     (sigma, u) = TrialFunctions(W)
     (tau, v) = TestFunctions(W)
 
@@ -81,4 +80,5 @@ For convenience we also include the DOLFIN namespace.
 
 .. code-block:: c++
 
- foo;
+#include <dolfin.h>
+#include "MixedPoisson.h"
