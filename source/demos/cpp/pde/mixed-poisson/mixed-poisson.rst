@@ -80,5 +80,5 @@ For convenience we also include the DOLFIN namespace.
 
 .. code-block:: c++
 
-#include <dolfin.h>
-#include "MixedPoisson.h"
+    #include <dolfin.h>
+    #include "MixedPoisson.h"
