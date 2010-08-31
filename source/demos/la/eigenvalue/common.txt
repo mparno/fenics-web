@@ -11,7 +11,7 @@ Problem definition
 
 Sometimes one wants to solve an eigenvalue problem such as this one:
 find the eigenvalues :math:`\lambda \in \mathbb{R}` and the
-corresponding eigenvectors :math:`x \in \mathbb{R^n}` such that
+corresponding eigenvectors :math:`x \in \mathbb{R}^n` such that
 
 .. math::
 

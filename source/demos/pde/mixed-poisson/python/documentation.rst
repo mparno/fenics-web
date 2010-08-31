@@ -137,7 +137,7 @@ boundary condition:
 
 .. code-block:: python
 
-    bc = DirichletBC(W.sub(0), G, on_boundary)
+    bc = DirichletBC(W.sub(0), G, boundary)
 
 To compute the solution, a ``VariationalProblem`` object is created
 using the bilinear and linear forms, and the boundary condition.  The

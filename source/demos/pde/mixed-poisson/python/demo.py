@@ -63,7 +63,7 @@ G = BoundarySource()
 def boundary(x):
     return x[1] < DOLFIN_EPS or x[1] > 1.0 - DOLFIN_EPS
 
-bc = DirichletBC(W.sub(0), G, on_boundary)
+bc = DirichletBC(W.sub(0), G, boundary)
 
 # Compute solution
 problem = VariationalProblem(a, L, bc)
