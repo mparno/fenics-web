@@ -436,7 +436,7 @@ The code snippets presented in the following can be seen in their
 complete form and context by clicking on the ``Show Source`` link on
 the page containing the Python documentation for the
 :py:class:`dolfin.cpp.Mesh` class and in the
-:download:`programmers-reference/python/docstrings/dolfin/cpp.py` file
+:download:`../programmers-reference/python/docstrings/dolfin/cpp.py` file
 which contains the actual documentation for the Python ``Mesh`` class.
 
 The Python ``Mesh`` class is defined in the :py:mod:`dolfin.cpp`
