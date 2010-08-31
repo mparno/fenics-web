@@ -23,32 +23,33 @@ if not has_slepc():
     print "DOLFIN has not been configured with SLEPc. Exiting."
     exit()
 
-# Make sure we use the PETSc backend
-parameters["linear_algebra_backend"] = "PETSc"
-
-# Define mesh, function space and basis functions
-mesh = UnitSquare(4, 4)
+# Define mesh, function space
+mesh = Mesh("mesh.xml.gz")
 V = FunctionSpace(mesh, "CG", 1)
-v = TestFunction(V)
-u = TrialFunction(V)
 
-# Define form for stiffness matrix
+# Define basis and then form the stiffness matrix
+u = TrialFunction(V)
+v = TestFunction(V)
 a = dot(grad(v), grad(u))*dx
 
 # Assemble stiffness form
 A = PETScMatrix()
 assemble(a, tensor=A)
 
-# Compute all eigenvalues of A x = \lambda x
-esolver = SLEPcEigenSolver()
-esolver.solve(A)
+# Create eigensolver
+eigensolver = SLEPcEigenSolver()
 
-# Get largest (first) eigenpair
-a, b, x, y = esolver.get_eigenpair(0)
-print "Largest eigenvalue: ", a
+# Compute all eigenvalues of A x = \lambda x
+print "Computing eigenvalues. This can take a minute."
+eigensolver.solve(A)
+
+# Extract largest (first) eigenpair
+r, c, rx, cx = eigensolver.get_eigenpair(0)
+
+print "Largest eigenvalue: ", r
 
 # Initialize function with eigenvector
-u = Function(V, x)
+u = Function(V, rx)
 
 # Plot eigenfunction
 plot(u)
