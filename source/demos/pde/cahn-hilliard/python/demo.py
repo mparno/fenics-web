@@ -6,6 +6,8 @@ __date__ = "2009-06-20"
 __copyright__ = "Copyright (C) 2009 Garth N. Wells"
 __license__  = "GNU LGPL Version 2.1"
 
+# Begin demo
+
 import random
 from dolfin import *
 
