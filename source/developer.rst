@@ -170,7 +170,7 @@ Style guides
 ============
 
 To ease the job for maintainers that will need to read and understand
-your code, read the :ref:`styleguides` that explain
+your code, read the :ref:`styleguides_index` that explain
 how to format your code so that it matches the coding style used for
 FEniCS.
 

@@ -34,6 +34,7 @@ DOLFIN ``mesh`` library
     MeshPrimitive
     MeshTopology
     Point
+    Point
     PrimitiveIntersector
     PrimitiveTraits
     Rectangle
