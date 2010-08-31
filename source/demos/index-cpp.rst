@@ -12,14 +12,10 @@ please read the instructions on :ref:`how to run the C++ demos
 
 .. toctree::
     :maxdepth: 2
-    :numbered:
 
     running-demos-cpp
-    pde/poisson/cpp/documentation
-    pde/mixed-poisson/cpp/documentation
-    pde/hyperelasticity/cpp/documentation
-    pde/cahn-hilliard/cpp/documentation
-    pde/navier-stokes/cpp/documentation
+    pde/index-cpp
+    la/index-cpp
 
 .. note::
 
