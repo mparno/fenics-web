@@ -83,7 +83,6 @@ Next, various parameters in the mode and defined:
 
     # Model parameters
     lmbda  = 1.0e-02  # surface parameter
-    factor = 100      # chemical free energy multiplier
     dt     = 5.0e-06  # time step
     theta  = 0.5      # time stepping family, e.g. theta=1 -> backward Euler, theta=0.5 -> Crank-Nicolson
 

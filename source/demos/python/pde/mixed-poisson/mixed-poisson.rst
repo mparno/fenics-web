@@ -3,7 +3,7 @@
 .. _demos_python_pde_mixed-poisson:
 
 Mixed formulation for Poisson's equation
-==========================================
+========================================
 
 .. include:: ../../../common/pde/mixed-poisson/mixed-poisson.txt
 
@@ -20,8 +20,6 @@ First, the ``dolfin`` module is imported:
 
     from dolfin import *
 
-.. index:: FunctionSpace
-
 Then, we need to create a ``mesh`` covering the unit square. In this
 example, we will let the mesh consist of 32 x 32 squares with each
 square divided into two triangles:
@@ -30,6 +28,10 @@ square divided into two triangles:
 
     # Create mesh
     mesh = UnitSquare(32, 32)
+
+.. index::
+   pair: FunctionSpace; Brezzi-Douglas-Marini
+   pair: FunctionSpace; Discontinous Lagrange
 
 Next, we need to define the function spaces. We define the two
 function spaces :math:`\Sigma_h` and :math:`V_h` separately, before
@@ -44,11 +46,14 @@ combining these into a mixed function space:
 
 The second argument to ``FunctionSpace`` specifies the type of finite
 element family, while the third argument specifies the polynomial
-order. The supported element families are "CG" (continuous elements),
-"BDM" (Brezzi-Douglas-Marini), "RT" (Raviart-Thomas), "NED" (Nedelec
-elements of the first kind) and "DG" (discontinuous), see the UFL user
-manual for more details.  The * operator creates a mixed (product)
-space W from the two separate spaces.
+degree. The UFL user manual contains a list of all available finite
+element families and more details.  The * operator creates a mixed
+(product) space ``W`` from the two separate spaces ``BDM`` and
+``DG``. Hence,
+
+.. math::
+
+    W = \{ (\tau, v) \ \text{such that} \ \tau \in BDM, v \in DG \}.
 
 Next, we need to specify the trial functions (the unknowns) and the
 test functions on this space. This can be done as follows
@@ -56,11 +61,11 @@ test functions on this space. This can be done as follows
 .. code-block:: python
 
     # Define trial and test functions
-    (sigma, u) = TrialFunctions(V)
-    (tau, v) = TestFunctions(V)
+    (sigma, u) = TrialFunctions(W)
+    (tau, v) = TestFunctions(W)
 
-In order to define the variational form, it only remains to define
-the source function. This is done just as for the Poisson demo:
+In order to define the variational form, it only remains to define the
+source function :math:`f`. This is done just as for the Poisson demo:
 
 .. code-block:: python
 
@@ -74,14 +79,52 @@ side vanishes.
 .. code-block:: python
 
     # Define variational form
-    a = (dot(sigma, tau) - u*div(tau) + div(sigma)*v)*dx
-    L = v*f*dx
+    a = (dot(sigma, tau) + div(tau)*u + div(sigma)*v)*dx
+    L = - f*v*dx
 
-It only remains to prescribe the boundary condition for the flux. Need
-to construct a :math:`G` such that :math:`G \cdot n = g`. A simple
-``Python`` function, which returns a ``bool``, is used to define the
-subdomain for the essential boundary condition.  For instance, we can
-let
+
+It only remains to prescribe the boundary condition for the
+flux. Essential boundary conditions are specified through the class
+``DirichletBC`` which takes three arguments: the function space the
+boundary condition is supposed to be applied to, the data for the
+boundary condition, and the relevant part of the boundary.
+
+We want to apply the boundary condition to the first subspace of the
+mixed space. This space can be accessed by ``W.sub(0)``. (Do *not* use
+the separate space ``BDM`` as this would mess up the numbering.)
+
+Next, we need to construct the data for the boundary condition. An
+essential boundary condition is handled by replacing degrees of
+freedom by the degrees of freedom evaluated at the given data. The
+:math:`BDM` finite element spaces are vector-valued spaces and hence
+the degrees of freedom act on vector-valued objects. The effect is
+that the user is required to construct a :math:`G` such that :math:`G
+\cdot n = g`.  Such a :math:`G` can be constructed by letting :math:`G
+= g n`. In particular, it can be easily created by subclassing the
+``Expression`` class. Overloading the ``eval_data`` method (instead of
+the usual ``eval``) allows us to extract more geometry information
+such as the facet normals. Since this is a vector-valued expression,
+the methods ``rank`` and ``dim`` must also be specified.
+
+.. index:: Expression
+
+.. code-block:: python
+
+    # Define function G such that G \cdot n = g
+    class BoundarySource(Expression):
+        def eval_data(self, values, data):
+            g = sin(5*data.x()[0])
+            values[0] = g*data.normal()[0]
+            values[1] = g*data.normal()[1]
+        def rank(self):
+            return 1
+        def dim(self):
+            return 2
+    G = BoundarySource()
+
+Specifying the relevant part of the boundary can be done as for the
+Poisson demo (but now the top and bottom of the unit square is the
+essential boundary):
 
 .. code-block:: python
 
@@ -89,37 +132,21 @@ let
     def boundary(x):
         return x[1] < DOLFIN_EPS or x[1] > 1.0 - DOLFIN_EPS
 
+Now, all the pieces are in place for the construction of the essential
+boundary condition:
 
 .. code-block:: python
 
-    # Define function G such that G \cdot n = g
-    class Flux(Expression):
-        def eval_data(self, values, data):
-            g = - sin(5*data.x()[0])
-            values[0] = g*data.normal()[0]
-            values[1] = g*data.normal()[1]
-        def rank(self):
-            return 1
-        def dim(self):
-            return 2
-
-    G = Flux()
-
-
-A Dirichlet boundary condition (``DirichletBC``) can be created. The value
-of the boundary condition is represented using a ``Constant``
-(equal to zero for the considered case) ), then the  boundary condition is
-created:
-
-.. code-block:: python
-
-    bc = DirichletBC(V.sub(0), G, on_boundary)
+    bc = DirichletBC(W.sub(0), G, on_boundary)
 
 To compute the solution, a ``VariationalProblem`` object is created
 using the bilinear and linear forms, and the boundary condition.  The
-``solve`` function is then called, yielding the solution. The separate
-components ``sigma`` and ``u`` of the solution can be extracted by
-calling the ``split`` function.
+``solve`` function is then called, yielding the full solution. The
+separate components ``sigma`` and ``u`` of the solution can be
+extracted by calling the ``split`` function. Finally, we plot the
+solutions to examine the result.
+
+.. index:: split functions
 
 .. code-block:: python
 
@@ -127,8 +154,10 @@ calling the ``split`` function.
     problem = VariationalProblem(a, L, bc)
     (sigma, u) = problem.solve().split()
 
+    # Plot sigma and u
     plot(sigma)
-    plot(u, interactive=True)
+    plot(u)
+    interactive()
 
 Complete code
 -------------

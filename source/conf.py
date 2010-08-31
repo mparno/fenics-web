@@ -25,6 +25,8 @@ sys.path.append(os.path.abspath('programmers-reference/python/docstrings'))
 extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
               'sphinx.ext.autodoc']
 
+
+
 # Add the docstring from class.__init__ to class.__doc__ when documenting the
 # PyDolfin interface.
 autoclass_content = "both"
@@ -213,10 +215,11 @@ latex_documents = [
 
 latex_elements = {'fontpkg': '\usepackage{mathpazo}',
                   'pointsize': '11pt',
-                  'papersize': 'a4',
+                  'papersize': 'a4paper',
                   'fontenc': '',
                   'preamble': '\usepackage{amssymb}'}
 
 # Parameters affecting the LaTeX PNGs in the HTML files
-#pngmath_latex_preamble = r'\usepackage{cmbright}'
+#pngmath_latex_preamble = '\\usepackage{cmbright}'
 #pngmath_dvipng_args = ['-gamma 1.5', '-D 110']
+#pngmath_use_preview = True
