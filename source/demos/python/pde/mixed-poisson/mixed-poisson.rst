@@ -148,8 +148,10 @@ solutions to examine the result.
     problem = VariationalProblem(a, L, bc)
     (sigma, u) = problem.solve().split()
 
+    # Plot sigma and u
     plot(sigma)
-    plot(u, interactive=True)
+    plot(u)
+    interactive()
 
 Complete code
 -------------

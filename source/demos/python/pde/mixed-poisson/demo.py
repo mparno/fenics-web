@@ -59,8 +59,8 @@ class BoundarySource(Expression):
         return 2
 G = BoundarySource()
 
-# Define essential boundary (y = 0 or y = 1)
-def on_boundary(x):
+# Define essential boundary
+def boundary(x):
     return x[1] < DOLFIN_EPS or x[1] > 1.0 - DOLFIN_EPS
 
 bc = DirichletBC(W.sub(0), G, on_boundary)
