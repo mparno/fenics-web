@@ -13,3 +13,12 @@ Implementation
 The implementation is split in two files, a form file containing the
 definition of the variational forms expressed in UFL and the solver
 which is implemented in a C++ file.
+
+
+Complete code
+-------------
+
+.. literalinclude:: main.cpp
+   :start-after: // Begin demo
+   :language: c++
+

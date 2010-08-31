@@ -431,3 +431,5 @@ Complete code
 
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
+   :language: c++
+
