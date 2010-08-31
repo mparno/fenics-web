@@ -37,7 +37,7 @@ combining these into a mixed function space:
 
 .. code-block:: python
 
-    # Define function spaces and mixed (combined) space
+    # Define function spaces and mixed (product) space
     BDM = FunctionSpace(mesh, "BDM", 1)
     DG = FunctionSpace(mesh, "DG", 0)
     W = BDM * DG

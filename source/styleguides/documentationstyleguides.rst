@@ -700,7 +700,7 @@ directive with the relative path to the file:
   .. include:: ../../../common/pde/poisson/poisson.txt
 
 C++ and Python specific contents
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each step of the solution procedure of a demo should be
 explained. This can often be achieved by including
