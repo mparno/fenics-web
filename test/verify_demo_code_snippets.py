@@ -30,9 +30,9 @@ def verify_blocks(rst_file, source_files, source_dict):
     for block_type, source_type in source_dict.items():
         # Extract code blocks from rst file.
         blocks = get_blocks(rst_file, block_type)
-        for block in blocks:
+        for line, block in blocks:
             # Check if block is in the list of files of correct type.
-            block_in_source(block, [sf for sf in source_files\
+            block_in_source(line, block, [sf for sf in source_files\
                                     if path.splitext(sf)[-1] == source_type])
 
 def get_blocks(rst_file, block_type):
@@ -46,7 +46,7 @@ def get_blocks(rst_file, block_type):
 
     code = False
     block = []
-    for l in lines:
+    for e, l in enumerate(lines):
         # Get start of code block.
         if "code-block::" in l and block_type in l:
             code = True
@@ -58,14 +58,14 @@ def get_blocks(rst_file, block_type):
             code = False
             # Join the block that we have and add to list of blocks.
             # Remove any whitespace.
-            blocks.append(remove_whitespace("\n".join(block)))
+            blocks.append((e, remove_whitespace("\n".join(block))))
         # If code is still True, then the line is part of the code block.
         if code:
             block.append(l)
 
     # Add block of code if found at the end of the rst file.
     if code:
-        blocks.append(remove_whitespace("\n".join(block)))
+        blocks.append((e, remove_whitespace("\n".join(block))))
 
     # Close file and return blocks.
     f.close()
@@ -76,7 +76,7 @@ def remove_whitespace(code):
     return "\n".join([" ".join(l.split())\
                       for l in code.split("\n") if l != ""])
 
-def block_in_source(block, source_files):
+def block_in_source(line, block, source_files):
     """Check that the code block is present in at least one of
     the source files."""
 
@@ -102,6 +102,7 @@ def block_in_source(block, source_files):
             raise RuntimeError("No source file!")
 
         print "\nError:"
+        print "\ncode line:\n", line
         print "\ncode block:\n", block
         print "\nsource_files:\n", source_files
         print "\nin directory: ", getcwd()
@@ -111,17 +112,18 @@ def block_in_source(block, source_files):
 if __name__ == "__main__":
 
     print "\nTesting that all code snippets are valid.\n"
-    # Loop directories/categories/demos
-    for directory in directories:
-        chdir(directory)
-        # Get all demo categories
-        categories = [d for d in listdir(curdir) if path.isdir(d)]
-        for category in categories:
-            chdir(category)
-            demos = [d for d in listdir(curdir) if path.isdir(d)]
-            for demo in demos:
-                chdir(demo)
-                stderr.write(" "*2 + path.join(directory, category, demo))
+    # Loop categories/demos/directories
+    # Get all demo categories (fem, la. pde, etc.)
+    categories = [d for d in listdir(curdir) if path.isdir(d)]
+    for category in categories:
+        chdir(category)
+        # Get all demos (Poisson, mixed-Poisson etc.)
+        demos = [d for d in listdir(curdir) if path.isdir(d)]
+        for demo in demos:
+            chdir(demo)
+            for directory in directories:
+                chdir(directory)
+                stderr.write(" "*2 + path.join(category, demo, directory))
                 # Get files in demo directory and sort in rst and source files.
                 files = listdir(curdir)
                 rst_files = [f for f in files if path.splitext(f)[-1] == ".rst"]
