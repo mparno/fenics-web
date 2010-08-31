@@ -1,9 +1,9 @@
-.. Documentation for the Mesh class (dolfin/mesh/Point.h)
+.. Documentation for the header file dolfin/mesh/Point.h
 
-.. _programmers_reference_python_mesh_Point:
+.. _programmers_reference_python_mesh_point:
 
-Point
-=====
+Point.h
+=======
 
 .. currentmodule:: dolfin.cpp
 
@@ -11,7 +11,3 @@ Point
     :members:
     :show-inheritance:
     :undoc-members:
-    :inherited-members:
-
-    .. automethod:: __add__
-
