@@ -1,9 +1,9 @@
-.. Documentation for the Mesh class (dolfin/mesh/Mesh.h)
+.. Documentation for the header file dolfin/mesh/Mesh.h
 
-.. _programmers_reference_python_mesh_Mesh:
+.. _programmers_reference_python_mesh_mesh:
 
-Mesh
-====
+Mesh.h
+======
 
 .. currentmodule:: dolfin.cpp
 
@@ -11,4 +11,3 @@ Mesh
     :members:
     :show-inheritance:
     :undoc-members:
-

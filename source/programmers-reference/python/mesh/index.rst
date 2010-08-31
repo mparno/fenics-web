@@ -1,15 +1,49 @@
-.. Index file for the mesh directory.
+.. Index file for the mesh directory
 
 .. _programmers_reference_python_mesh_index:
 
-****
-mesh
-****
-
-This is the index page for classes in the directory dolfin/mesh:
+***********************
+DOLFIN ``mesh`` library
+***********************
 
 .. toctree::
     :maxdepth: 2
 
+    BoundaryMesh
+    Box
+    Cell
+    CellType
+    DomainBoundary
+    DynamicMeshEditor
+    Edge
+    Face
+    Facet
+    FacetCell
+    IntersectionOperator
+    Interval
+    LocalMeshData
     Mesh
+    MeshConnectivity
+    MeshData
+    MeshEditor
+    MeshEntity
+    MeshEntityIterator
+    MeshFunction
+    MeshGeometry
+    MeshPartitioning
+    MeshPrimitive
+    MeshTopology
     Point
+    Point
+    PrimitiveIntersector
+    PrimitiveTraits
+    Rectangle
+    SubDomain
+    SubMesh
+    UnitCircle
+    UnitCube
+    UnitInterval
+    UnitSphere
+    UnitSquare
+    Vertex
+    refine
