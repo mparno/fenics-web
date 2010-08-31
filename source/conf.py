@@ -213,7 +213,7 @@ latex_documents = [
 
 latex_elements = {'fontpkg': '\usepackage{mathpazo}',
                   'pointsize': '11pt',
-                  'papersize': 'a4',
+                  'papersize': 'a4paper',
                   'fontenc': '',
                   'preamble': '\usepackage{amssymb}'}
 
