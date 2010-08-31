@@ -1,7 +1,7 @@
 .. _demos_cpp_pde_navier_stokes:
 
-The Incompressible Navier-Stokes Equations
-==========================================
+Incompressible Navier-Stokes equations
+======================================
 
 This demo is implemented the C++ source file :download:`main.cpp`.  In
 addition, this program requires the following header files that define

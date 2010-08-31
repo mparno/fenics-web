@@ -1,7 +1,7 @@
 .. _demos_python_pde_navier_stokes:
 
-The Incompressible Navier-Stokes Equations
-==========================================
+Incompressible Navier-Stokes equations
+======================================
 
 This demo is implemented in a single Python file, :download:`demo.py`,
 which contains both the variational forms and the solver.

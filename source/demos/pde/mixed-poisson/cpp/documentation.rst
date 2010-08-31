@@ -2,8 +2,8 @@
 
 .. _demos_cpp_pde_mixed-poisson:
 
-Mixed formulation for Poisson's equation
-========================================
+Mixed formulation for Poisson equation
+======================================
 
 .. include:: ../common.txt
 

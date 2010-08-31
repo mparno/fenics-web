@@ -2,8 +2,8 @@
 
 .. _demos_python_pde_mixed-poisson:
 
-Mixed formulation for Poisson's equation
-========================================
+Mixed formulation for Poisson equation
+======================================
 
 This demo is implemented in a single Python file, :download:`demo.py`,
 which contains both the variational forms and the solver.

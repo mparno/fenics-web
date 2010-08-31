@@ -5,7 +5,7 @@
     sections of the programmer's reference (for class names) are
     needed.
 
-This demo illustrates how to solve Poisson's equation using a mixed
+This demo illustrates how to solve Poisson equation using a mixed
 (two-field) formulation. In particular, it illustrates how to
 
 * Use mixed and non-continuous finite element spaces
@@ -15,7 +15,7 @@ This demo illustrates how to solve Poisson's equation using a mixed
 Equation and problem definition
 -------------------------------
 
-An alternative formulation of Poisson's equation can be formulated by
+An alternative formulation of Poisson equation can be formulated by
 introducing an additional (vector) variable, namely the (negative)
 flux: :math:`\sigma = \nabla u`. The partial differential equations
 then read

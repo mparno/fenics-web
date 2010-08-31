@@ -3,8 +3,8 @@
 .. _demos_cpp_pde_poisson:
 
 
-Poisson's equation
-==================
+Poisson equation
+================
 
 .. include:: ../common.txt
 
