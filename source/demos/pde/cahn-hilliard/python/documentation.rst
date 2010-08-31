@@ -13,7 +13,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-First, the Python module``random'' and module ``dolfin`` are imported:
+First, the Python module``random`` and module ``dolfin`` are imported:
 
 .. code-block:: python
 
@@ -267,4 +267,11 @@ Finally, the last computed solution for :math:`c` is plotted to the screen:
     interactive()
 
 The line ``interactive()`` holds the plot (waiting for a keyboard action).
+
+
+Complete code
+-------------
+
+.. literalinclude:: demo.py
+   :start-after: # Begin demo
 
