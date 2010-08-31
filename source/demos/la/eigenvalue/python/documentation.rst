@@ -47,7 +47,7 @@ assembling this form. The code is shown below
 .. code-block:: python
 
   # Define mesh, function space
-  mesh = Mesh("mesh.xml.gz")
+  mesh = Mesh("box_with_dent.xml.gz")
   V = FunctionSpace(mesh, "CG", 1)
 
   # Define basis and then form the stiffness matrix
