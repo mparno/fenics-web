@@ -6,7 +6,8 @@
 Partial Differential Equations
 ******************************
 
-Below is a list demos which demonstrates how to solve various PDEs.
+Below is a list of demos which demonstrate how to solve various
+partial differential equations (PDEs).
 
 .. toctree::
     :maxdepth: 2
