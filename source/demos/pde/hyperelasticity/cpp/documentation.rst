@@ -10,61 +10,89 @@ Hyperelasticity
 Implementation
 --------------
 
-The implementation is split in two files, a form file containing the
-definition of the variational forms expressed in UFL and the solver
-which is implemented in a C++ file.
+The implementation is split in two files: a form file containing the
+definition of the variational forms expressed in UFL
+(:download:`HyperElasticity.ufl`) and the solver which is implemented
+in a C++ file (:download:`main.cpp`).
 
-UFL form files
-^^^^^^^^^^^^^^
+UFL form file
+^^^^^^^^^^^^^
 
-# Function spaces
-element = VectorElement("Lagrange", "tetrahedron", 1)
+The first step is to define the variational problem at hand. We define
+the variational problem in UFL terms in a separate form file
+:download:`HyperElasticity.ufl`.
 
-# Test and trial functions
-v  = TestFunction(element)      # Test function
-du = TrialFunction(element)     # Incremental displacement
+We are interested in solving for a discrete vector field in three
+dimensions, so first we need the appropriate finite element space and
+trial and test functions on this space
 
-# Functions
-u  = Coefficient(element)       # Displacement from previous iteration
-B  = Coefficient(element)       # Body force per unit mass
-T  = Coefficient(element)       # Traction force on the boundary
+.. literalinclude:: HyperElasticity.ufl
+  :lines: 12-17
 
-# Kinematics
-I = Identity(element.cell().d)  # Identity tensor
-F = I + grad(u)                 # Deformation gradient
-C = F.T*F                       # Right Cauchy-Green tensor
+Note that ``VectorElement`` creates a finite element space of vector
+fields. The dimension of the vector field (the number of components)
+is assumed to be the same as the spatial dimension (in this case 3),
+unless otherwise specified.
 
-# Invariants of deformation tensors
-Ic = tr(C)
-J  = det(F)
+Next, we will be needing functions for the boundary source ``B``, the
+traction ``T`` and the displacement solution itself ``u``.
 
-# Elasticity parameters
-mu    = Constant("tetrahedron")
-lmbda = Constant("tetrahedron")
+.. literalinclude:: HyperElasticity.ufl
+  :lines: 19-22
 
-# Stored strain energy density (compressible neo-Hookean model)
-psi = (mu/2)*(Ic - 3) - mu*ln(J) + (lmbda/2)*(ln(J))**2
+Now, we can define the kinematic quantities involved in the model
 
-# Total potential energy
-Pi = psi*dx - inner(B, u)*dx - inner(T, u)*ds
+.. literalinclude:: HyperElasticity.ufl
+  :lines: 24-31
 
-# First variation of Pi (directional derivative about u in the direction of v)
-L = derivative(Pi, u, v)
+Before defining the energy density and thus the total potential
+energy, it only remains to specify constants for the elasticity
+parameters
 
-# Compute Jacobian of L
-a = derivative(L, u, du)
+.. literalinclude:: HyperElasticity.ufl
+  :lines: 33-41
+
+Both the first variation of the potential energy, and the Jacobian of
+the variation, can be automatically computed by a call to
+``derivative``:
+
+.. literalinclude:: HyperElasticity.ufl
+  :lines: 43-47
+
+Note that ``derivative`` is here used with three arguments: the form
+to be differentiated, the variable (function) we are supposed to
+differentiate with respect too, and the direction the derivative is
+taken in.
+
+Before the form file can be used in the C++ program, it must be
+compiled using FFC by running (on the command-line):
+
+.. code-block:: sh
+
+    ffc -l dolfin HyperElasticity.ufl
+
+Note the flag ``-l dolfin`` which tells FFC to generate
+DOLFIN-specific wrappers that make it easy to access the generated
+code from within DOLFIN.
 
 C++ code
 ^^^^^^^^
+
+The main solver is implemented in the :download:`main.cpp` file.
+
+At the top, we include the DOLFIN header file and the generated header
+file "HyperElasticity.h" containing the variational forms and function
+spaces.  For convenience we also include the DOLFIN namespace.
 
 .. code-block:: cpp
 
   #include <dolfin.h>
   #include "HyperElasticity.h"
 
-.. code-block:: cpp
-
   using namespace dolfin;
+
+We begin by defining two classes, deriving from ``SubDomain`` for
+later use when specifying domains for the boundary conditions.
 
 .. code-block:: cpp
 
@@ -77,8 +105,6 @@ C++ code
     }
   };
 
-.. code-block:: cpp
-
   // Sub domain for rotation at right end
   class Right : public SubDomain
   {
@@ -87,6 +113,9 @@ C++ code
       return (std::abs(x[0] - 1.0) < DOLFIN_EPS) && on_boundary;
     }
   };
+
+We also define two classes, deriving from ``Expression``, for later
+use when specifying values for the boundary conditions.
 
 .. code-block:: cpp
 
@@ -105,8 +134,6 @@ C++ code
     }
 
   };
-
-.. code-block:: cpp
 
   // Dirichlet boundary condition for rotation at right end
   class Rotation : public Expression
@@ -137,16 +164,31 @@ C++ code
     }
   };
 
+Next:
+
 .. code-block:: cpp
 
   int main()
   {
+
+Inside the ``main`` function, we begin by defining a tetrahedral mesh
+of the domain and the function space on this mesh. Here, we choose to
+create a unit cube mesh with 17 ( = 16 + 1) vertices in each
+direction. With this mesh, we initialize the (finite element) function
+space defined by the generated code.
 
 .. code-block:: cpp
 
   // Create mesh and define function space
   UnitCube mesh (16, 16, 16);
   HyperElasticity::FunctionSpace V(mesh);
+
+Now, the Dirichlet boundary conditions can be created using the class
+``DirichletBC``, the previously initialized ``FunctionSpace`` ``V`` and
+instances of the previously listed classes ``Left`` (for the left
+boundary) and ``Right`` (for the right boundary), and ``Clamp`` (for
+the value on the left boundary) and ``Rotation`` (for the value on the
+right boundary).
 
 .. code-block:: cpp
 
@@ -164,16 +206,26 @@ C++ code
   std::vector<const BoundaryCondition*> bcs;
   bcs.push_back(&bcl); bcs.push_back(&bcr);
 
+The two boundary conditions are collected in the container ``bcs``.
+
+We use two instances of the class ``Constant`` to define the source
+``B`` and the traction ``T``.
+
 .. code-block:: cpp
 
   // Define source and boundary traction functions
   Constant B(0.0, -0.5, 0.0);
   Constant T(0.1,  0.0, 0.0);
 
+The solution for the displacement will be an instance of the class
+``Function``, living in the function space ``V``; we define it here:
+
 .. code-block:: cpp
 
   // Define solution function
   Function u(V);
+
+Next, we set the material parameters
 
 .. code-block:: cpp
 
@@ -183,6 +235,11 @@ C++ code
   Constant mu(E/(2*(1 + nu)));
   Constant lambda(E*nu/((1 + nu)*(1 - 2*nu)));
 
+Now, we can initialize the bilinear and linear forms (:math:`a`,
+:math:`L`) using the previously defined ``FunctionSpace`` ``V``. We
+attach the material parameters and previously initialized functions to
+the forms.
+
 .. code-block:: cpp
 
   // Create forms
@@ -191,11 +248,24 @@ C++ code
   HyperElasticity::LinearForm L(V);
   L.mu = mu; L.lmbda = lambda; L.B = B; L.T = T; L.u = u;
 
+Now, we have specified the variational forms and can consider the
+solution of the variational problem.  First, a ``VariationalProblem``
+object is created using the bilinear and linear forms, and the
+Dirichlet boundary conditions. The last argument ``true`` specifies
+that this is a nonlinear problem and that a Newton solve should be
+performed. Then, to solve the problem, the ``solve`` function is
+called with ``u`` as a single argument; after which ``u`` will contain
+the solution.
+
 .. code-block:: cpp
 
   // Solve nonlinear variational problem
   VariationalProblem problem(a, L, bcs, true);
   problem.solve(u);
+
+Finally, the solution ``u`` is saved to a file named
+``displacement.pvd`` in VTK format, and the displacement solution is
+plotted.
 
 .. code-block:: cpp
 
@@ -208,9 +278,12 @@ C++ code
 
   return 0;
 
-
 Complete code
 -------------
+
+.. literalinclude:: HyperElasticity.ufl
+   :start-after: # Compile this form with
+   :language: python
 
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
