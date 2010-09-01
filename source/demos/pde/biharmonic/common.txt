@@ -36,9 +36,11 @@ such that
 
 .. math::
    \sum_{K} \int_{K} \nabla^{2} v \nabla^{2} u \, dx \
-  - \int_{\Tilde{\Gamma}} \left<\nabla^{2} v \right> \left[\nabla u \cdot n \right] \, ds
-  - \int_{\Tilde{\Gamma}} \left[\nabla v \cdot n \right] \left<\nabla^{2} u \right>  \, ds
-  + \int_{\Tilde{\Gamma}} \frac{\alpha}{h} \left[ \nabla v \right] \left[ \nabla u \right] \, ds
+  - \int_{\Tilde{\Gamma}} \left<\nabla^{2} v \right> \llbracket\nabla u \cdot n \rrbracket \, ds
+  - \int_{\Tilde{\Gamma}} \llbracket\nabla v \cdot n \rrbracket \left<\nabla^{2} u \right>  \, ds
+  + \int_{\Tilde{\Gamma}} \frac{\alpha}{h} \llbracket \nabla v \rrbracket \llbracket \nabla u \rrbracket \, ds
   = \int_{\Omega} vf \, dx \quad \forall \ v \in V
 
 where . . . . . and :math:`\alpha \ge 0` is a penalty term.
+
+
