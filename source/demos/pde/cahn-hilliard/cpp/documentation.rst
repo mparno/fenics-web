@@ -271,7 +271,7 @@ computing the residual vector and the Jacobian matrix as private data:
 
 .. code-block:: c++
 
-      // Pointers to FunctionSpace and forms
+      // Function space, forms and functions
       boost::scoped_ptr<Form> a;
       boost::scoped_ptr<Form> L;
       boost::scoped_ptr<Function> _u;
