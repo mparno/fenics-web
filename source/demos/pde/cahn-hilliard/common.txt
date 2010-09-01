@@ -3,7 +3,7 @@ time-dependent fourth-order equation, known as the Cahn-Hilliard
 equation. In particular it demonstrates the use of
 
 * The built-in Newton solver
-* The base class ``NonlinearProblem``
+* Advanced use of the base class ``NonlinearProblem``
 * Automatic linearisation
 * A mixed finite element method
 * The :math:`\theta`-method for time-dependent equations
