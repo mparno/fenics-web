@@ -16,4 +16,19 @@ The implementation is split in two files, a form file containing the definition
 of the variational forms expressed in UFL and the solver which is implemented
 in a C++ file.
 
+Complete code
+-------------
 
+Complete UFL file
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: Biharmonic.ufl
+   :start-after: # Compile
+   :language: python
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: main.cpp
+   :start-after: // using
+   :language: c++

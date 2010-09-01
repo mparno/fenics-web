@@ -14,7 +14,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-foo
+
 
 
 Complete code
