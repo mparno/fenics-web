@@ -70,6 +70,96 @@ internal facets are indicated by ``*dS``.
     # Linear form
     L = f*v*dx
 
+
+C++ program
+^^^^^^^^^^^
+
+.. code-block:: c++
+
+  #include <dolfin.h>
+  #include "Biharmonic.h"
+
+  using namespace dolfin;
+
+.. code-block:: c++
+
+  // Source term
+  class Source : public Expression
+  {
+  public:
+
+    void eval(Array<double>& values, const Array<double>& x) const
+    {
+      values[0] = 4.0*std::pow(DOLFIN_PI, 4)*std::sin(DOLFIN_PI*x[0])*std::sin(DOLFIN_PI*x[1]);
+    }
+
+  };
+
+.. code-block:: c++
+
+  // Sub domain for Dirichlet boundary condition
+  class DirichletBoundary : public SubDomain
+  {
+    bool inside(const Array<double>& x, bool on_boundary) const
+    {
+      return on_boundary;
+    }
+  };
+
+.. code-block:: c++
+
+  int main()
+  {
+    // Create mesh
+    UnitSquare mesh(32, 32);
+
+.. code-block:: c++
+
+    // Create functions
+    Source f;
+    CellSize h(mesh);
+    Constant alpha(8.0);
+
+.. code-block:: c++
+
+    // Create funtion space
+    Biharmonic::FunctionSpace V(mesh);
+
+.. code-block:: c++
+
+    // Define boundary condition
+    Constant u0(0.0);
+    DirichletBoundary boundary;
+    DirichletBC bc(V, u0, boundary);
+
+.. code-block:: c++
+
+    // Define forms and attach functions
+    Biharmonic::BilinearForm a(V, V);
+    Biharmonic::LinearForm L(V);
+    a.h = h; a.alpha = alpha; L.f = f;
+
+.. code-block:: c++
+
+    // Create PDE
+    VariationalProblem problem(a, L, bc);
+
+    // Solve PDE
+    Function u(V);
+    problem.solve(u);
+
+.. code-block:: c++
+
+    // Plot solution
+    plot(u);
+
+    // Save solution in VTK format
+    File file("biharmonic.pvd");
+    file << u;
+
+    return 0;
+  }
+
 Complete code
 -------------
 
