@@ -158,85 +158,25 @@ form type.  The class is first declared as a subclass of
     public:
 
 Its constructor takes the various arguments which are required
-to create the forms:
+to create the forms, and it calls a the templated private member
+function ``init``:
 
 .. code-block:: c++
 
-      // Constructor
-      CahnHilliardEquation(const Mesh& mesh, const Constant& dt,
-                           const Constant& theta, const Constant& lambda)
-                         : reset_Jacobian(true)
-      {
-
-If the geometric dimension of the mesh is two, the function space and
-the bilinear and linear forms associated with ``CahnHilliard2D`` are
-created.  Firstly, a shared pointer to a
-``CahnHilliard2D::FunctionSpace`` is created. Then two shared pointers
-``_u`` and ``_u0`` are set to point to a ``Function`` from the space
-``V``.  A shared pointer is used so that the function space is not
-destroyed when the constructor exits. (The function space will not be
-destroyed until there are no more Functions or Forms that point to
-it.)  Using the function space ``V``, bilinear and linear forms are
-created using ``new``, and the coefficient functions are
-attached. These forms are then wrapped in a shared pointer (using the
-``reset`` function) which will take care of eventually destroying the
-forms. Finally, ``_u`` is set equal to the initial condition (by
-interpolation).
-
-.. code-block:: c++
-
-        if (mesh.geometry().dim() == 2)
-        {
-          // Create function space and functions
-          boost::shared_ptr<CahnHilliard2D::FunctionSpace> V(new CahnHilliard2D::FunctionSpace(mesh));
-          _u.reset(new Function(V));
-          _u0.reset(new Function(V));
-
-          // Create forms and attach functions
-          CahnHilliard2D::BilinearForm* _a = new CahnHilliard2D::BilinearForm(V, V);
-          CahnHilliard2D::LinearForm*_L = new CahnHilliard2D::LinearForm(V);
-          _a->u = *_u; _a->lmbda = lambda; _a->dt = dt; _a->theta = theta;
-          _L->u = *_u; _L->u0 = *_u0;
-          _L->lmbda = lambda; _L->dt = dt; _L->theta = theta;
-
-          // Wrap pointers in a smart pointer
-          a.reset(_a);
-          L.reset(_L);
-
-          // Set solution to intitial condition
-          InitialConditions u_initial(mesh);
-          *_u = u_initial;
-        }
-
-The same steps are followed in the case of a three-dimensional mesh:
-
-.. code-block:: c++
-
-        else if (mesh.geometry().dim() == 3)
-        {
-          // Create function space and functions
-          boost::shared_ptr<CahnHilliard3D::FunctionSpace> V(new CahnHilliard3D::FunctionSpace(mesh));
-          _u.reset(new Function(V));
-          _u0.reset(new Function(V));
-
-          // Create forms and attach functions
-          CahnHilliard3D::BilinearForm* _a = new CahnHilliard3D::BilinearForm(V, V);
-          CahnHilliard3D::LinearForm*_L = new CahnHilliard3D::LinearForm(V);
-          _a->u = *_u; _a->lmbda = lambda; _a->dt = dt; _a->theta = theta;
-          _L->u = *_u; _L->u0 = *_u0;
-          _L->lmbda = lambda; _L->dt = dt; _L->theta = theta;
-
-          // Wrap pointers in a smart pointer
-          a.reset(_a);
-          L.reset(_L);
-
-          // Set solution to intitial condition
-          InitialConditions u_initial(mesh);
-          *_u = u_initial;
-        }
-        else
-          error("Cahn-Hilliard model is programmed for 2D and 3D only");
-      }
+    // Constructor
+    CahnHilliardEquation(const Mesh& mesh, const Constant& dt,
+                         const Constant& theta, const Constant& lambda)
+                       : reset_Jacobian(true)
+    {
+      // Initialse class (depending on geometric dimension of the mesh).
+      // Unfortunately C++ does not allow namespaces as template arguments
+      if (mesh.geometry().dim() == 2)
+        init<CahnHilliard2D::FunctionSpace, CahnHilliard2D::BilinearForm, CahnHilliard2D::LinearForm>(mesh, dt, theta, lambda);
+      else if (mesh.geometry().dim() == 3)
+        init<CahnHilliard3D::FunctionSpace, CahnHilliard3D::BilinearForm, CahnHilliard3D::LinearForm>(mesh, dt, theta, lambda);
+      else
+        error("Cahn-Hilliard model is programmed for 2D and 3D only.");
+    }
 
 The function ``F`` computes the residual vector, which corresponds to
 assembly of the form ``L``:
@@ -281,12 +221,55 @@ the solution vectors:
       Function& u0()
       { return *_u0; }
 
+The private ``init`` function is responsible for creating the forms
+and functions associated with the problem. It is a templated function
+so that the 2D and 3D cases can be handled with the same code.
+Firstly, a shared pointer to a
+``FunctionSpace`` (``X``) is created. Then two shared pointers
+``_u`` and ``_u0`` are set to point to ``Functions`` from the space
+``V``.  A shared pointer is used so that the function space is not
+destroyed when the constructor exits. (The function space will not be
+destroyed until there are no more Functions or Forms that point to
+it.)  Using the function space ``V``, bilinear and linear forms are
+created using ``new``, and the coefficient functions are
+attached. These forms are then wrapped in a shared pointer (using the
+``reset`` function) which will take care of eventually destroying the
+forms. Finally, ``_u`` is set equal to the initial condition (by
+interpolation).
+
+.. code-block:: c++
+
+  private:
+
+    template<class X, class Y, class Z>
+    void init(const Mesh& mesh, const Constant& dt, const Constant& theta,
+              const Constant& lambda)
+    {
+      // Create function space and functions
+      boost::shared_ptr<X> V(new X(mesh));
+      _u.reset(new Function(V));
+      _u0.reset(new Function(V));
+
+      // Create forms and attach functions
+      Y* _a = new Y(V, V);
+      Z* _L = new Z(V);
+      _a->u = *_u; _a->lmbda = lambda; _a->dt = dt; _a->theta = theta;
+      _L->u = *_u; _L->u0 = *_u0;
+      _L->lmbda = lambda; _L->dt = dt; _L->theta = theta;
+
+      // Wrap pointers in a smart pointer
+      a.reset(_a);
+      L.reset(_L);
+
+      // Set solution to intitial condition
+      InitialConditions u_initial(mesh);
+      *_u = u_initial;
+    }
+
 The ``CahnHilliardEquation`` class stores the data required for
 computing the residual vector and the Jacobian matrix as private data:
 
 .. code-block:: c++
-
-    private:
 
       // Pointers to FunctionSpace and forms
       boost::scoped_ptr<Form> a;

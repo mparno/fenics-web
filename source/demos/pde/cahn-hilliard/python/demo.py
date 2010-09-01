@@ -48,9 +48,9 @@ mesh = UnitSquare(96, 96)
 V = FunctionSpace(mesh, "Lagrange", 1)
 ME = V*V
 
-# Define trial and test functions
-du    = TrialFunction(ME)
+# Define test and trial functions
 q, v  = TestFunctions(ME)
+du    = TrialFunction(ME)
 
 # Define functions
 u   = Function(ME)  # current solution
