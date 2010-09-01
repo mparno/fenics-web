@@ -7,12 +7,12 @@
 #
 # Ths script also replaces _Foo_ with links to class pages.
 
-__author__ = "Anders Logg (logg@simula.no)"
+__author__ = "Anders Logg <logg@simula.no>"
 __date__ = "2010-08-26"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-08-30
+# Last changed: 2010-09-01
 
 import os, re
 
