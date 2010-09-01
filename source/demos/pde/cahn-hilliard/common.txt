@@ -22,12 +22,14 @@ reads:
 
 .. math::
    \frac{\partial c}{\partial t} - \nabla \cdot M \left(\nabla\left(\frac{d f}{d c}
-             + \lambda \nabla^{2}c\right)\right) &= 0 \quad {\rm in} \ \Omega \\
-   M\left(\nabla\left(\frac{d f}{d c} + \lambda \nabla^{2}c\right)\right) &= 0 \quad {\rm on} \ \partial\Omega \\
-   M \lambda \nabla c \cdot \boldsymbol{n} &= 0 \quad {\rm on} \ \partial\Omega
+             + \lambda \nabla^{2}c\right)\right) &= 0 \quad {\rm in} \ \Omega, \\
+   M\left(\nabla\left(\frac{d f}{d c} + \lambda \nabla^{2}c\right)\right) &= 0 \quad {\rm on} \ \partial\Omega, \\
+   M \lambda \nabla c \cdot n &= 0 \quad {\rm on} \ \partial\Omega.
 
-where :math:`c` is the unknown field and the function :math:`f` is usually non-convex in :math:`c`
-(a fourth-order polynomial is commonly used).
+where :math:`c` is the unknown field, the function :math:`f` is
+usually non-convex in :math:`c` (a fourth-order polynomial is commonly
+used), :math:`n` is the outward directed boundary normal and :math:`M`
+is a scalar parameter.
 
 Mixed form
 ^^^^^^^^^^
@@ -38,17 +40,17 @@ problem could not be solved using a standard Lagrange finite element basis.
 A solution is to rephrase the problem as two coupled second-order equations:
 
 .. math::
-   \frac{\partial c}{\partial t} - \nabla \cdot M \nabla\mu  &= 0 \quad {\rm in} \ \Omega \\
-   \mu -  \frac{d f}{d c} - \lambda \nabla^{2}c &= 0 \quad {\rm in} \ \Omega
+   \frac{\partial c}{\partial t} - \nabla \cdot M \nabla\mu  &= 0 \quad {\rm in} \ \Omega, \\
+   \mu -  \frac{d f}{d c} - \lambda \nabla^{2}c &= 0 \quad {\rm in} \ \Omega.
 
 The unknown fields are now :math:`c` and :math:`\mu`. The weak (variational)
-form of the problem reads: find :math:`c, \mu \in V \times V` such that
+form of the problem reads: find :math:`(c, \mu) \in V \times V` such that
 
 .. math::
-   \int_{\Omega} \frac{\partial c}{\partial t} q + \int_{\Omega} M \nabla\mu \cdot \nabla q \, dx
-          &= 0 \quad \forall \ q \in V  \\
-   \int_{\Omega} \mu v - \int_{\Omega} \frac{d f}{d c} v  +\int_{\Omega} \lambda \nabla c \cdot \nabla v \, dx
-          &= 0 \quad \forall \ v \in V
+   \int_{\Omega} \frac{\partial c}{\partial t} q \, {\rm d} x + \int_{\Omega} M \nabla\mu \cdot \nabla q \, {\rm d} x
+          &= 0 \quad \forall \ q \in V,  \\
+   \int_{\Omega} \mu v \, {\rm d} x - \int_{\Omega} \frac{d f}{d c} v \, {\rm d} x + \int_{\Omega} \lambda \nabla c \cdot \nabla v \, {\rm d} x
+          &= 0 \quad \forall \ v \in V.
 
 Time discretisation
 ^^^^^^^^^^^^^^^^^^^
@@ -58,9 +60,9 @@ with. Apply the :math:`\theta`-method to the mixed weak form of the equation:
 
 .. math::
 
-   \int_{\Omega} \frac{c_{n+1} - c_{n}}{dt} q \, dx + \int_{\Omega} M \nabla \mu_{n+\theta} \cdot \nabla q \, dx
+   \int_{\Omega} \frac{c_{n+1} - c_{n}}{dt} q \, {\rm d} x + \int_{\Omega} M \nabla \mu_{n+\theta} \cdot \nabla q \, {\rm d} x
           &= 0 \quad \forall \ q \in V  \\
-   \int_{\Omega} \mu_{n+1} v  \, dx - \int_{\Omega} \frac{d f_{n+1}}{d c} v  \, dx + \int_{\Omega} \lambda \nabla c_{n+1} \cdot \nabla v \, dx
+   \int_{\Omega} \mu_{n+1} v  \, {\rm d} x - \int_{\Omega} \frac{d f_{n+1}}{d c} v  \, {\rm d} x + \int_{\Omega} \lambda \nabla c_{n+1} \cdot \nabla v \, {\rm d} x
           &= 0 \quad \forall \ v \in V
 
 where :math:`dt = t_{n+1} - t_{n}`
