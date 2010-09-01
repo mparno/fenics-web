@@ -1,11 +1,4 @@
 
-.. warning::
-
-    The documentation for this demo is incomplete, we still need to link to
-    relevant sections of the programmer's reference (for class names).
-    We probably also want to give more comments on what the individual
-    statements in the code snippets mean and if there are any alternatives.
-
 This demo illustrates how to:
 
 * Solve a linear partial differential equation

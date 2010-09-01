@@ -208,3 +208,20 @@ also plot it using the ``plot`` command:
     // Plot solution
     plot(u);
 
+
+Complete code
+-------------
+
+Complete UFL file
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: Poisson.ufl
+   :start-after: # Compile this form
+   :language: python
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: main.cpp
+   :start-after: // du/dn
+   :language: c++
