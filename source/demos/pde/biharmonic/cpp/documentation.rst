@@ -74,12 +74,18 @@ internal facets are indicated by ``*dS``.
 C++ program
 ^^^^^^^^^^^
 
+The DOLFIN interface and the code generated from the UFL input is included,
+and the DOLFIN namespace is used:
+
 .. code-block:: c++
 
   #include <dolfin.h>
   #include "Biharmonic.h"
 
   using namespace dolfin;
+
+A class ``Source`` is defined for the function :math:`f`, with the
+function ``Expression::eval`` overloaded:
 
 .. code-block:: c++
 
@@ -95,6 +101,8 @@ C++ program
 
   };
 
+A boundary subdomain is defined, which in this case is the entire boundary:
+
 .. code-block:: c++
 
   // Sub domain for Dirichlet boundary condition
@@ -106,12 +114,19 @@ C++ program
     }
   };
 
+The main part of the program is begun, and a mesh is created with 32 vertices
+in each direction:
+
 .. code-block:: c++
 
   int main()
   {
     // Create mesh
     UnitSquare mesh(32, 32);
+
+
+The source function, a function for the cell size and the penalty term
+are declared:
 
 .. code-block:: c++
 
@@ -120,10 +135,17 @@ C++ program
     CellSize h(mesh);
     Constant alpha(8.0);
 
+A function space object, which is defined in the generated code, is created:
+
 .. code-block:: c++
 
-    // Create funtion space
+    // Create function space
     Biharmonic::FunctionSpace V(mesh);
+
+The Dirichlet boundary condition on :math:`u` is constructed by
+defining a ``Constant`` which is equal to zero, defining the boundary
+(``DirichletBoundary``), and using these, together with ``V``, to create
+``bc``:
 
 .. code-block:: c++
 
@@ -132,12 +154,19 @@ C++ program
     DirichletBoundary boundary;
     DirichletBC bc(V, u0, boundary);
 
+Using the function space ``V``, the bilinear and linear forms
+are created, and function are attached:
+
 .. code-block:: c++
 
     // Define forms and attach functions
     Biharmonic::BilinearForm a(V, V);
     Biharmonic::LinearForm L(V);
     a.h = h; a.alpha = alpha; L.f = f;
+
+A ``VariationalProblem`` is created from the forms and the Dirichet
+boundary condition, a finite element function ``u`` is created and the
+problem is solved:
 
 .. code-block:: c++
 
@@ -147,6 +176,9 @@ C++ program
     // Solve PDE
     Function u(V);
     problem.solve(u);
+
+The solution is then plotted to the screen and written to a file in VTK
+format:
 
 .. code-block:: c++
 

@@ -90,7 +90,6 @@ Then follows the definition of the coefficient functions (for :math:`f` and
 
 .. code-block:: c++
 
-
  // Source term (right-hand side)
  class Source : public Expression
  {
