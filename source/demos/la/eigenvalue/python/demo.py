@@ -1,6 +1,7 @@
 """
 This program illustrates basic use of the SLEPc eigenvalue solver for
-a standard eigenvalue problem."""
+a standard eigenvalue problem.
+"""
 
 __author__ = "Kristian B. Oelgaard (k.b.oelgaard@tudelft.nl)"
 __date__ = "2007-11-28 -- 2009-10-09"
@@ -24,10 +25,10 @@ if not has_slepc():
     exit()
 
 # Define mesh, function space
-mesh = Mesh("mesh.xml.gz")
+mesh = Mesh("box_with_dent.xml.gz")
 V = FunctionSpace(mesh, "CG", 1)
 
-# Define basis and then form the stiffness matrix
+# Define basis and bilinear form
 u = TrialFunction(V)
 v = TestFunction(V)
 a = dot(grad(v), grad(u))*dx

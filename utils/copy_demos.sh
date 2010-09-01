@@ -31,7 +31,7 @@ for DEMO_DIR in $DEMO_DIRS; do
     echo "Copying demos for directory '$DEMO_DIR'"
     echo
 
-    rsync -av --delete \
+    rsync -av \
         --exclude .vtu \
         --exclude .pvd \
         --exclude CMakeFiles \
