@@ -209,9 +209,9 @@ calling ``plot``.
   plot(u);
   plot(sigma);
 
+
 Complete code
 -------------
-
 
 Complete UFL file
 ^^^^^^^^^^^^^^^^^
