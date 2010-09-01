@@ -7,3 +7,38 @@ This demo illustrates how to:
 
 Equation and problem definition
 -------------------------------
+
+The biharmonic equation is a fourth-order elliptic equation. On the domain
+:math:`\Omega \subset \mathbb{R}^{d}`, :math:`1 \le d \le 3`, it reads
+
+.. math::
+   \nabla^{4} u = f \quad {\rm in} \ \Omega
+
+where :math:`\nabla^{4} \equiv \nabla^{2} \nabla^{2}` is the biharmonic
+operator and :math:`f` is a prescribed source term. To formulate a complete
+boundary value problem, the biharmonic equation must be complemented by
+suitable boundary conditions.
+
+Multiplying the biharmonic equation by a test function and integrating
+by parts twice leads to a problem second-order derivatives, which would
+requires :math:`H^{2}` conforming (roughly :math:`C^{0}` continuous) basis
+functions.  To solve the biharmonic equation using Lagrange finite element
+basis functions, the biharmonic equation can be split into two second-order
+equations (see :ref:`demos_python_pde_mixed-poisson` for a mixed method for
+the Poisson equation), or a variational formulation can be constructed that
+imposes weak continuity of normal derivatives between finite element cells.
+The demo uses a discontinuous Galerkin approach to impose continuity of the
+normal derivative weakly.
+
+A weak formulation of the biharmonic which can be solved used standard
+continuous Lagrange finite element functions reads: find :math:`u \in V`
+such that
+
+.. math::
+   \sum_{K} \int_{K} \nabla^{2} v \nabla^{2} u \, dx \
+  - \int_{\Tilde{\Gamma}} \left<\nabla^{2} v \right> \left[\nabla u \cdot n \right] \, ds
+  - \int_{\Tilde{\Gamma}} \left[\nabla v \cdot n \right] \left<\nabla^{2} u \right>  \, ds
+  + \int_{\Tilde{\Gamma}} \frac{\alpha}{h} \left[ \nabla v \right] \left[ \nabla u \right] \, ds
+  = \int_{\Omega} vf \, dx \quad \forall \ v \in V
+
+where . . . . . and :math:`\alpha \ge 0` is a penalty term.
