@@ -83,7 +83,7 @@ Dirichlet boundary condition then looks as follows:
 Next, we want to express the variational problem.  First, we need to
 specify the trial function :math:`u` and the test function :math:`v`,
 both living in the function space :math:`V`. We do this by defining a
-``TestFunction`` and a ``TrialFunction`` on the previously defined
+``TrialFunction`` and a ``TestFunction`` on the previously defined
 ``FunctionSpace`` ``V``.
 
 Further, the source :math:`f` and the boundary normal derivative
@@ -99,13 +99,13 @@ the linear form ``L`` (using UFL operators). In summary, this reads
 
 .. code-block:: python
 
-    # Define variational problem
-    v = TestFunction(V)
-    u = TrialFunction(V)
-    f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
-    g = Expression("sin(5*x[0])")
-    a = inner(grad(v), grad(u))*dx
-    L = v*f*dx + v*g*ds
+  # Define variational problem
+  u = TrialFunction(V)
+  v = TestFunction(V)
+  f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)")
+  g = Expression("sin(5*x[0])")
+  a = inner(grad(u), grad(v))*dx
+  L = f*v*dx + g*v*ds
 
 .. index:: VariationalProblem
 

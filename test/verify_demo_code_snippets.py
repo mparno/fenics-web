@@ -113,14 +113,19 @@ if __name__ == "__main__":
 
     print "\nTesting that all code snippets are valid.\n"
     # Loop categories/demos/directories
+
     # Get all demo categories (fem, la. pde, etc.)
-    categories = [d for d in listdir(curdir) if path.isdir(d)]
+    #categories = [d for d in listdir(curdir) if path.isdir(d)]
+    # For now only check la/pde
+    categories = ["la", "pde"]
+
     for category in categories:
         chdir(category)
         # Get all demos (Poisson, mixed-Poisson etc.)
         demos = [d for d in listdir(curdir) if path.isdir(d)]
         for demo in demos:
             chdir(demo)
+            stderr.write("Treating %s" % demo)
             for directory in directories:
                 chdir(directory)
                 stderr.write(" "*2 + path.join(category, demo, directory))

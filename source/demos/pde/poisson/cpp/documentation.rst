@@ -40,8 +40,8 @@ Next, we use this element to initialise the trial and test functions
 
 .. code-block:: python
 
-    v = TestFunction(element)
     u = TrialFunction(element)
+    v = TestFunction(element)
     f = Coefficient(element)
     g = Coefficient(element)
 
@@ -50,8 +50,8 @@ variational formulation of the equations:
 
 .. code-block:: python
 
-    a = inner(grad(v), grad(u))*dx
-    L = v*f*dx + v*g*ds
+    a = inner(grad(u), grad(v))*dx
+    L = f*v*dx + g*v*ds
 
 Before the form file can be used in the C++ program, it must be
 compiled using FFC by running (on the command-line):

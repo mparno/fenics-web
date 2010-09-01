@@ -121,13 +121,13 @@ created, and on this mesh a ``FunctionSpace`` :math:`V` and a
 The space ``V`` involves first-order continuous Lagrange basis functions.
 The mixed space is created using the ``*`` operator.
 
-Test and trial functions of the space ``ME`` are now defined:
+Trial and test functions of the space ``ME`` are now defined:
 
 .. code-block:: python
 
-    # Define test and trial functions
-    q, v  = TestFunctions(ME)
+    # Define trial and test functions
     du    = TrialFunction(ME)
+    q, v  = TestFunctions(ME)
 
 .. index:: split functions
 

@@ -12,7 +12,7 @@ The biharmonic equation is a fourth-order elliptic equation. On the domain
 :math:`\Omega \subset \mathbb{R}^{d}`, :math:`1 \le d \le 3`, it reads
 
 .. math::
-   \nabla^{4} u = f \quad {\rm in} \ \Omega
+   \nabla^{4} u = f \quad {\rm in} \ \Omega,
 
 where :math:`\nabla^{4} \equiv \nabla^{2} \nabla^{2}` is the biharmonic
 operator and :math:`f` is a prescribed source term. To formulate a complete
