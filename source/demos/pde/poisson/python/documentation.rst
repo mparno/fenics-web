@@ -45,8 +45,8 @@ piecewise linear polynomials).
 
 Next, we want to consider the Dirichlet boundary condition. A simple
 ``Python`` function, returning a boolean, can be used to define the
-sub-domain for the Dirichlet boundary condition (:math:`\Gamma_D`). The
-function should return ``true`` for those points inside the sub-domain
+subdomain for the Dirichlet boundary condition (:math:`\Gamma_D`). The
+function should return ``true`` for those points inside the subdomain
 and ``false`` for the points outside. In our case, we want to say that
 the points :math:`(x, y)` such that :math:`x = 0` or :math:`x = 1` are
 inside on the inside of :math:`\Gamma_D`. (Note that because of

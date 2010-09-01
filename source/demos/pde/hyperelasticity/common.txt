@@ -1,22 +1,23 @@
 This example demonstrates the solution of a three-dimensional
-elasticity problem. It illustrates how to:
+elasticity problem. In addition to illustrating how to use
+FunctionSpaces, Expressions and how to apply Dirichlet boundary
+conditions, it focuses on how to:
 
 * Minimise a non-quadratic functional
 * Use automatic computation of the directional derivative
 * Use VariationalProblem for a nonlinear equation
-* Create and apply Dirichlet boundary conditions
-* Define Expressions
-* Create FunctionSpace
-* Define compiled subdomains
-* Specific form compiler optimization options
+* Define compiled sub-domains
+* Use specific form compiler optimization options
 
 Equation and problem definition
 -------------------------------
 
-Hyperelasticity problems can be expressed as minimisation problems, and the
-minimization approach is adopted in this example.  The task is to find the
-displacement field :math:`u \in \mathbb{R}^{d}` that minimises the total
-potential energy :math:`\Pi`:
+By definition, boundary value problems for hyperelastic media can be
+expressed as minimisation problems, and the minimization approach is
+adopted in this example. For a domain :math:`\Omega \subset
+\mathbb{R}^{d}`, where :math:`d` denotes the spatial dimension, the
+task is to find the displacement field :math:`u: \Omega \rightarrow
+\mathbb{R}^{d}` that minimises the total potential energy :math:`\Pi`:
 
 .. math::
    \min_{u \in V} \Pi
@@ -25,7 +26,9 @@ where :math:`V` is a suitable function space that satisfies boundary
 conditions on :math:`u`.  The total potential energy is given by
 
 .. math::
-   \Pi = \int_{\Omega} \psi(u) \, dx - \int_{\Omega} B \cdot u \, dx - \int_{\partial\Omega} T \cdot u \, ds
+   \Pi = \int_{\Omega} \psi(u) \, {\rm d} x
+   - \int_{\Omega} B \cdot u \, {\rm d} x
+   - \int_{\partial\Omega} T \cdot u \, {\rm d} s
 
 where :math:`\psi` is the elastic stored energy density, :math:`B` is a
 body force (per unit reference volume) and :math:`T` is a traction force
@@ -42,16 +45,18 @@ with respect to change in :math:`u`
 is equal to zero for all :math:`v \in V`:
 
 .. math::
-   L(u; v) = 0 \quad \forall \ v \in V
+   L(u; v) = 0 \quad \forall \ v \in V.
 
-To minimise the potential energy, solutions the above equation are sought.
-:math:`L(u; v)` is nonlinear in :math:`u`, so to solve this problem using
-Newton's method the Jacobian of :math:`L` is required,
+To minimise the potential energy, solutions to the variational
+equations above are sought. Depending on the potential energy
+:math:`\psi`, :math:`L(u; v)` can be nonlinear in :math:`u`. In such a
+case, the Jacobian of :math:`L` is required in order to solve this
+problem using Newton's method. The Jacobian of :math:`L` is defined as
 
 .. math::
    :label: second_variation
 
-   a(du; v) = D_{du} L = \left. \frac{d L(u + \epsilon du; v)}{d\epsilon} \right|_{\epsilon = 0}
+   a(u; du, v) = D_{du} L = \left. \frac{d L(u + \epsilon du; v)}{d\epsilon} \right|_{\epsilon = 0} .
 
 
 
@@ -62,38 +67,43 @@ To define the elastic stored energy density, consider the deformation
 gradient :math:`F`
 
 .. math::
-   F = \nabla u
+
+   F = I + \nabla u,
 
 the right Cauchy-Green tensor :math:`C`
 
 .. math::
-   C = F^{T} F
+
+   C = F^{T} F,
 
 and the scalars  :math:`J` and :math:`I_{c}`
 
 .. math::
-   J     &= \det(F) \\
-   I_{c} &= {\rm trace}(C)
+   J     &= \det(F), \\
+   I_{c} &= {\rm trace}(C).
 
 This demo considers a common neo-Hookean stored energy model of the form
 
 .. math::
    \psi =  \frac{\mu}{2} (I_{c} - 3) - \mu \ln(J) + \frac{\lambda}{2}\ln(J)^{2}
 
-where :math:`\mu` and :math:`\lambda` are the Lame parameters. In terms of
-the more common Young's modulus :math:`E` and Poisson ratio :math:`\nu`:
+where :math:`\mu` and :math:`\lambda` are the Lame parameters. These
+can be expressed in terms of the more common Young's modulus :math:`E`
+and Poisson ratio :math:`\nu` by:
 
 .. math::
-    \lambda &= \frac{E \nu}{(1 + \nu)(1 - 2\nu)} \\
-    \mu     &=  \frac{E}{2(1 + \nu)}
+    \lambda = \frac{E \nu}{(1 + \nu)(1 - 2\nu)}, \quad  \quad
+    \mu     =  \frac{E}{2(1 + \nu)} .
 
 
 Demo parameters
 ^^^^^^^^^^^^^^^
 
-The following functions, boundaries and parameters are used in this demo:
+We consider a unit cube domain:
 
 * :math:`\Omega = (0, 1) \times (0, 1) \times (0, 1)` (unit cube)
+
+We use the following definitions of the boundary and boundary conditions:
 
 * :math:`\Gamma_{D_{0}} = 0 \times (0, 1) \times (0, 1)` (Dirichlet boundary)
 
@@ -106,9 +116,11 @@ The following functions, boundaries and parameters are used in this demo:
         u = (&0, \\
              &(0.5 + (y - 0.5)\cos(\pi/3) - (z - 0.5)\sin(\pi/3) - y)/2, \\
              &(0.5 + (y - 0.5)\sin(\pi/3) + (z - 0.5)\cos(\pi/3) - x))/2)
-* :math:`u = (0, 0, 0) \quad {\rm on} \ \Gamma_{D_{1}}`
+* On :math:`\Gamma_{D_{1}}`:  :math:`u = (0, 0, 0)`
 
-* :math:`T = (0.1, 0, 0) \quad {\rm on} \ \Gamma_{N}`
+* On :math:`\Gamma_{N}`: :math:`T = (0.1, 0, 0)`
+
+These are the body forces and material parameters used:
 
 * :math:`B = (0, -0.5, 0)`
 

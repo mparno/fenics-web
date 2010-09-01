@@ -207,7 +207,7 @@ C++ code
   plot(u);
 
   return 0;
-}
+
 
 Complete code
 -------------
@@ -215,4 +215,3 @@ Complete code
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
    :language: c++
-
