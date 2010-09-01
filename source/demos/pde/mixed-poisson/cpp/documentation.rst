@@ -119,8 +119,8 @@ Then follows the definition of the coefficient functions (for :math:`f` and
 
 
 Then follows the definition of the essential boundary part of the
-boundary of the domain, which are derived from the ``SubDomain``
-class in DOLFIN.
+boundary of the domain, which is derived from the ``SubDomain`` class
+in DOLFIN.
 
 .. code-block:: c++
 
@@ -135,8 +135,8 @@ class in DOLFIN.
 
 Inside the ``main()`` function we first create the ``mesh`` and then
 we define the (mixed) function space for the variational
-formulation. We then also define the bilinear form ``a`` and linear
-form ``L`` relative to this function space.
+formulation. We also define the bilinear form ``a`` and linear form
+``L`` relative to this function space.
 
 .. code-block:: c++
 
