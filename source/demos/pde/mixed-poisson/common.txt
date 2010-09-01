@@ -1,10 +1,4 @@
 
-.. warning::
-
-    The documentation for this demo is incomplete, links to relevant
-    sections of the programmer's reference (for class names) are
-    needed.
-
 This demo illustrates how to solve Poisson equation using a mixed
 (two-field) formulation. In particular, it illustrates how to
 

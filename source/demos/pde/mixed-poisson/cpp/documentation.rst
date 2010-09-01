@@ -208,3 +208,21 @@ calling ``plot``.
   // Plot solutions
   plot(u);
   plot(sigma);
+
+Complete code
+-------------
+
+
+Complete UFL file
+^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: MixedPoisson.ufl
+   :start-after: # Licensed
+   :language: python
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: main.cpp
+   :start-after: // Last changed
+   :language: c++
