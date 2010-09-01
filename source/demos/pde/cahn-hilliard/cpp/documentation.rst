@@ -47,9 +47,10 @@ their components:
     c,  mu  = split(u)
     c0, mu0 = split(u0)
 
-Various model parameters are defined as ``Constants``. This means that their
-value can be changed without recompiling the UFL file.
-Lastly, the value of :math:`\mu_{n+\theta}` is computed.
+Various model parameters can be specified using the class
+``Constant``. This means that their value can be changed without
+recompiling the UFL file.  Lastly, the value of :math:`\mu_{n+\theta}`
+is computed.
 
 .. code-block:: python
 
@@ -72,11 +73,11 @@ differentiation:
     f    = 100*c**2*(1-c)**2
     dfdc = diff(f, c)
 
-The first line declares that ``c`` is a variable that some function
-can be differentiated with respect to. The next line is the function
-:math:`f` defined in the problem statement, and the third line
-performs the differentiation of ``f`` with respect to the variable
-``c``.
+Here, the first line declares that ``c`` is a variable that some
+function can be differentiated with respect to. The next line is the
+function :math:`f` defined in the problem statement, and the third
+line performs the differentiation of ``f`` with respect to the
+variable ``c``.
 
 The linear forms for the two equations can be summed into one form
 ``L``. We wish to drive the residual of this form to zero during the
@@ -86,8 +87,8 @@ automatically, by calling ``derivative``, to form the bilinear form
 
 .. code-block:: python
 
-    L0 = q*c*dx  - q*c0*dx   + dt*dot(grad(q), grad(mu_mid))*dx
-    L1 = v*mu*dx - v*dfdc*dx - lmbda*dot(grad(v), grad(c))*dx
+    L0 = c*q*dx  - c0*q*dx   + dt*dot(grad(mu_mid), grad(q))*dx
+    L1 = mu*v*dx - dfdc*v*dx - lmbda*dot(grad(c), grad(v))*dx
     L = L0 + L1
 
     a = derivative(L, u, du)
@@ -108,12 +109,13 @@ namespace is used:
   using namespace dolfin;
 
 
-The class ``InitialConditions`` defines the initial conditions for the solver.
-In the constructor the random number generator is seeded using the process
-number so that different processes will generated different sequences when
-running in parallel. The `eval` function evaluates the initial condition. The
-first value (``[0]``) corresponds to :math:`c` and the second value (``[1]``)
-corresponds to :math:`\mu`:
+The class ``InitialConditions`` defines the initial conditions for the
+solver.  In the constructor, the random number generator is seeded
+using the process number so that different processes will generate
+different sequences when running in parallel. The ``eval`` function
+evaluates the initial condition. The first value (``[0]``) corresponds
+to :math:`c` and the second value (``[1]``) corresponds to
+:math:`\mu`:
 
 .. code-block:: c++
 
@@ -135,16 +137,18 @@ corresponds to :math:`\mu`:
 
   };
 
-The next class is a subclass of ``NonlinearProblem``. A ``NonlinearProblem``
-object can be passed to a ``NewtonSolver`` to be solved. The requirements
-of a ``NonlinearProblem`` subclass are that it provides the function ``void
-F(GenericVector& b, const GenericVector& x)`` for computing the residual
-vector and the function ``void J(GenericMatrix& A, const GenericVector& x)``
-for computing the Jacobian matrix.  The below class is designed to work for
-both two different generated forms (2D and 3D), with the appropriate form
-chosen based on the geometric dimension of the mesh. The makes the class
-more complicated than would be the case if it supported single form type.
-The class is first declared as a subclass on ``NonlinearProblem``:
+The next class is a subclass of ``NonlinearProblem``. A
+``NonlinearProblem`` object can be passed to a ``NewtonSolver`` to be
+solved. The requirements of a ``NonlinearProblem`` subclass are that
+it provides the function ``void F(GenericVector& b, const
+GenericVector& x)`` for computing the residual vector and the function
+``void J(GenericMatrix& A, const GenericVector& x)`` for computing the
+Jacobian matrix.  The below class is designed to work for two
+different generated forms (2D and 3D), with the appropriate form
+chosen based on the geometric dimension of the mesh. The makes the
+class more complicated than would be the case if it supported a single
+form type.  The class is first declared as a subclass of
+``NonlinearProblem``:
 
 .. code-block:: c++
 
@@ -164,17 +168,20 @@ to create the forms:
                          : reset_Jacobian(true)
       {
 
-If the mesh geometric dimension is two, dimension the a function space,
-bilinear and linear forms associated with ``CahnHilliard2D`` are created.
-Firstly, a shared pointer to a CahnHilliard2D::FunctionSpace is created,
-and then two shared pointers ``_u`` and ``_u0`` and set to point to a
-``Function`` from the space ``V``.  A shared pointer is used so that the
-function space is not destroyed when the constructor is exited (the space will
-not be destroyed until there are no more Functions or Forms that point to it).
-Using the function space ``V``, bilinear and linear forms are created using ``new``,
-and the coefficient functions are attached. These forms are then wrapped in a shared
-pointer (using the ``reset`` function) which will take care of eventually destroying the
-forms. Finally, ``_u`` is set equal to the initial condition (by interpolation).
+If the geometric dimension of the mesh is two, the function space and
+the bilinear and linear forms associated with ``CahnHilliard2D`` are
+created.  Firstly, a shared pointer to a
+``CahnHilliard2D::FunctionSpace`` is created. Then two shared pointers
+``_u`` and ``_u0`` are set to point to a ``Function`` from the space
+``V``.  A shared pointer is used so that the function space is not
+destroyed when the constructor exits. (The function space will not be
+destroyed until there are no more Functions or Forms that point to
+it.)  Using the function space ``V``, bilinear and linear forms are
+created using ``new``, and the coefficient functions are
+attached. These forms are then wrapped in a shared pointer (using the
+``reset`` function) which will take care of eventually destroying the
+forms. Finally, ``_u`` is set equal to the initial condition (by
+interpolation).
 
 .. code-block:: c++
 
@@ -231,8 +238,8 @@ The same steps are followed in the case of a three-dimensional mesh:
           error("Cahn-Hilliard model is programmed for 2D and 3D only");
       }
 
-The function ``F`` computes the residual vector, which corresponds the assembly
-of the form ``L``:
+The function ``F`` computes the residual vector, which corresponds to
+assembly of the form ``L``:
 
 .. code-block:: c++
 
@@ -243,11 +250,13 @@ of the form ``L``:
         assemble(b, *L);
       }
 
-The function ``J`` computes the Jacobian matrix, which corresponds the assembly
-of the form ``a``. The variable ``reset_Jacobian``, which was set set equal to ``true''
-in the constructor, instructs the assembler whether or not the sparse matrix
-structure needs to be reset. Since the sparsity structure does not change for this
-problem, ``reset_Jacobian`` is set to ``false`` after the first assembly operation.
+The function ``J`` computes the Jacobian matrix, which corresponds to
+the assembly of the form ``a``. The variable ``reset_Jacobian``, which
+was set set equal to ``true`` in the constructor, instructs the
+assembler whether or not the sparse matrix structure needs to be
+reset. Since the sparsity structure does not change for this problem,
+``reset_Jacobian`` is set to ``false`` after the first assembly
+operation.
 
 .. code-block:: c++
 
@@ -259,8 +268,8 @@ problem, ``reset_Jacobian`` is set to ``false`` after the first assembly operati
         reset_Jacobian = false;
       }
 
-The following two functions are helper functions which allow access to the
-solution vectors:
+The following two functions are helper functions which allow access to
+the solution vectors:
 
 .. code-block:: c++
 
@@ -272,8 +281,8 @@ solution vectors:
       Function& u0()
       { return *_u0; }
 
-The ``CahnHilliardEquation`` class stores data which is required for computing
-the residual vector and the Jacobian matrix as private data:
+The ``CahnHilliardEquation`` class stores the data required for
+computing the residual vector and the Jacobian matrix as private data:
 
 .. code-block:: c++
 
@@ -287,8 +296,8 @@ the residual vector and the Jacobian matrix as private data:
       bool reset_Jacobian;
   };
 
-The main program is started, and declared such that it can accept command line
-arguments, which are parsed to ``dolfin_init``:
+The main program is started, and declared such that it can accept
+command line arguments. Such are parsed to ``dolfin_init``:
 
 .. code-block:: c++
 
@@ -297,15 +306,15 @@ arguments, which are parsed to ``dolfin_init``:
     dolfin_init(argc, argv);
 
 
-A mesh is then created with 96 vertices in each direction:
+A mesh is then created with 97 (96 + 1) vertices in each direction:
 
 .. code-block:: c++
 
     // Mesh
     UnitSquare mesh(96, 96);
 
-Constants which will be used in the assembling the forms and scalars that
-will be used in the time stepping are declared:
+A set of constants (required for the assembling of the forms) and two
+scalars (to be used in the time stepping) are then declared:
 
 .. code-block:: c++
 
@@ -343,8 +352,8 @@ solver parameters are set:
     newton_solver.parameters["relative_tolerance"] = 1e-6;
     newton_solver.parameters["absolute_tolerance"] = 1e-15;
 
-A file is created for saving the solution at each time step in VTK format. The
-data will be compressed to reduced the file size.
+A file is created for saving the solution at each time step in VTK
+format. The data will be compressed to reduce the file size.
 
 .. code-block:: c++
 
@@ -352,12 +361,11 @@ data will be compressed to reduced the file size.
     File file("cahn_hilliard.pvd", "compressed");
     file << u[0];
 
-The solution process is advanced in time. At the beginning
-of each time step the time in incremented and
-:math:`u_{n} \leftarrow u_{n+1}`. The Newton solver is then used
-to solve the nonlinear equation and the first component of
-the solution (``u[0]``) is saved to a file, along with the
-time ``t``.
+The solution process is based on stepping forward in time. At the
+beginning of each time step, time is incremented and :math:`u_{n}
+\leftarrow u_{n+1}`. The Newton solver is then used to solve the
+nonlinear equation and the first component of the solution (``u[0]``)
+is saved to a file, along with the time ``t``.
 
 .. code-block:: c++
 
