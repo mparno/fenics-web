@@ -6,11 +6,13 @@
 Installation
 ############
 
-Obtaining and installing FEniCS have never been easier. Packages are
-available for Debian and Ubuntu users, and we provide a framework
-(`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of
-FEniCS on a multitude of platforms. It is also possible to download
-source tarballs for all components.
+Obtaining and installing FEniCS have never been easier. Packages
+are available for Debian and Ubuntu users, and we provide a framework
+(`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of FEniCS on
+a multitude of platforms. It is also possible to download source tarballs
+for all components. For information on accessing the development
+repositories, see :ref:`developer`.
+
 
 **********************
 Debian/Ubuntu packages
@@ -169,35 +171,40 @@ Building and installing DOLFIN and UFC require CMake version >= 2.8.
     make
     sudo make install
 
-This will install the packages system wide on your computer. You may
-easily change the installation directory. For example, you may wish to
-install the packages in a directory named ``local`` in your home
-directory. This may be accomplished by replacing the first of the
-above commands by::
+This will install the packages system wide on your computer. You may easily
+change the installation directory. For example, you may wish to install
+the packages in a directory named ``local`` in your home directory. This
+may be accomplished by replacing the first of the above commands by::
 
-    cmake . -DCMAKE_INSTALL_PREFIX=~/local
+    cmake -DCMAKE_INSTALL_PREFIX=~/local .
 
-You may also want to consider using a graphical front end for CMake
-such as either ``cmake-gui`` or ``ccmake``. These both provide a
-simple way to configure the installation.
+It is also possible (and usually recommended) to build DOLFIN 'out of
+source'.  In the directory where you wish to build DOLFIN, the build can
+be configured by::
 
-During the configuration phase of DOLFIN (calling ``cmake``,
-``cmake-gui``, or ``ccmake``), you will be notified of any missing
-dependencies. If a required package is missing, you will need to
-install that package and configure DOLFIN again. If an optional
-package is missing, you may choose to continue with the installation
-but some functionality may be missing. The build system will list both
-found and missing optional dependencies at the end of the configuration
+    cmake -DCMAKE_INSTALL_PREFIX=<prefix> <source_path>
+
+where <source_path> is the path to the DOLFIN source.
+You may also want to consider using a graphical front end for CMake such
+as either ``cmake-gui`` or ``ccmake``. These both provide a simple way to
+configure the installation.
+
+During the configuration phase of DOLFIN (calling ``cmake``, ``cmake-gui``, or
+``ccmake``), you will be notified of any missing dependencies. If a required
+package is missing, you will need to install that package and configure DOLFIN
+again. If an optional package is missing, you may choose to continue with the
+installation but some functionality may be missing. The build system will list
+both found and missing optional dependencies at the end of the configuration
 process.
 
 ***************
 Troubleshooting
 ***************
 
-If for some reason you were unable to obtain, build, or install a
-FEniCS component, please let us know. The best place to start is the
-`Launchpad Answers <https://help.launchpad.net/Answers>`_ page for the
-project that causes the problem:
+If for some reason you were unable to obtain, build, or install a FEniCS
+component, please let us know. The best place to start is the `Launchpad
+Answers <https://help.launchpad.net/Answers>`_ page for the project that
+causes the problem:
 
 * `DOLFIN <http://answers.launchpad.net/dolfin>`__
 * `Dorsal <https://answers.launchpad.net/dorsal>`__
@@ -211,7 +218,7 @@ project that causes the problem:
 If all else fails, send a message to the fenics@lists.launchpad.net
 mailing list.
 
-If you have suggestions for improving the information found on this
-page with respect to the installation procedure of FEniCS, you are
-more than welcome to file a bug report or register a blueprint on
-`FEniCS Documentation <https://launchpad.net/fenics-doc>`_.
+If you have suggestions for improving the information found on this page
+with respect to the installation procedure of FEniCS, you are more than
+welcome to file a bug report or register a blueprint on `FEniCS Documentation
+<https://launchpad.net/fenics-doc>`_.

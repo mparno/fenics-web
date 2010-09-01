@@ -6,7 +6,8 @@
 Partial Differential Equations
 ******************************
 
-Below is a list demos which demonstrates how to solve various PDEs.
+Below is a list of demos which demonstrate how to solve various
+partial differential equations (PDEs).
 
 .. toctree::
     :maxdepth: 2
@@ -14,7 +15,7 @@ Below is a list demos which demonstrates how to solve various PDEs.
 
     poisson/python/documentation
     mixed-poisson/python/documentation
+    biharmonic/python/documentation
     hyperelasticity/python/documentation
     cahn-hilliard/python/documentation
     navier-stokes/python/documentation
-

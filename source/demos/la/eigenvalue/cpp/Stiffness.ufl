@@ -1,0 +1,10 @@
+
+# Define element space
+V = FiniteElement("CG", "tetrahedron", 1)
+
+# Define basis functions
+u = TrialFunction(V)
+v = TestFunction(V)
+
+# Define bilinear form
+a = dot(grad(v), grad(u))*dx

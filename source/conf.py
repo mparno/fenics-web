@@ -217,9 +217,9 @@ latex_elements = {'fontpkg': '\usepackage{mathpazo}',
                   'pointsize': '11pt',
                   'papersize': 'a4paper',
                   'fontenc': '',
-                  'preamble': '\usepackage{amssymb}'}
+                  'preamble': '\usepackage{amssymb} \usepackage{stmaryrd}'}
 
 # Parameters affecting the LaTeX PNGs in the HTML files
-#pngmath_latex_preamble = '\\usepackage{cmbright}'
+pngmath_latex_preamble = r" \usepackage{stmaryrd} "
 #pngmath_dvipng_args = ['-gamma 1.5', '-D 110']
 #pngmath_use_preview = True

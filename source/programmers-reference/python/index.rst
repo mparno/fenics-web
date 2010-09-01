@@ -16,7 +16,6 @@ The contents follow the directory structure of DOLFIN.
     Adaptivity <adaptivity/index>
     Finite elements <fem/index>
     Functions and function spaces <function/index>
-    Graphs <graph/index>
     Input / output <io/index>
     Linear algebra <la/index>
     Log system <log/index>

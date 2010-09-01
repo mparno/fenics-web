@@ -12,5 +12,5 @@ Below is a list demos which demonstrates how to solve linear algebra problems.
     :maxdepth: 2
     :numbered:
 
-    eigenvalue/simple/python/documentation
+    eigenvalue/python/documentation
 
