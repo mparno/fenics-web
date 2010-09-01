@@ -30,7 +30,7 @@ imposes weak continuity of normal derivatives between finite element cells.
 The demo uses a discontinuous Galerkin approach to impose continuity of the
 normal derivative weakly.
 
-Consider a triangulation :math:`\mathcal{T}` of a domain :math:`\Omega`,
+Consider a triangulation :math:`\mathcal{T}` of the domain :math:`\Omega`,
 where the union of interior facets is denoted by :math:`\Gamma`.
 Functions evaluated on opposite sides of a facet are indicated by the
 subscripts ':math:`+`' and ':math:`-`'.
