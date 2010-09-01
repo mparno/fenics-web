@@ -380,6 +380,21 @@ The final result is plotted to the screen and the program is finished.
 Complete code
 -------------
 
+Complete UFL files
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: CahnHilliard2D.ufl
+   :start-after: # Compile
+   :language: python
+
+.. literalinclude:: CahnHilliard3D.ufl
+   :start-after: # Compile
+   :language: python
+
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
+
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
    :language: c++

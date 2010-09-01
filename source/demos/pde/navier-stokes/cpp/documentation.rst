@@ -417,8 +417,29 @@ Finally, we plot the solution and the program is finished:
   }
 
 
+
 Complete code
 -------------
+
+Complete UFL files
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: TentativeVelocity.ufl
+   :start-after: # Compile
+   :language: python
+
+
+.. literalinclude:: VelocityUpdate.ufl
+   :start-after: # Compile
+   :language: python
+
+
+.. literalinclude:: PressureUpdate.ufl
+   :start-after: # Compile
+   :language: python
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
