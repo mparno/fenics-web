@@ -57,19 +57,12 @@ class CahnHilliardEquation : public NonlinearProblem
         error("Cahn-Hilliard model is programmed for 2D and 3D only.");
     }
 
-    // User defined residual vector
-    void F(GenericVector& b, const GenericVector& x)
-    {
-      // Assemble RHS (Neumann boundary conditions)
-      assemble(b, *L);
-    }
-
     // User defined assemble of Jacobian
     void J(GenericMatrix& A, const GenericVector& x)
     {
       // Assemble system and RHS (Neumann boundary conditions)
       assemble(A, *a, reset_Jacobian);
-      reset_Jacobian = false;
+      reset_Jacobian  = false;
     }
 
     // Return solution function
