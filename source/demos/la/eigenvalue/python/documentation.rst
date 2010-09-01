@@ -50,7 +50,7 @@ assembling this form. The code is shown below
   mesh = Mesh("box_with_dent.xml.gz")
   V = FunctionSpace(mesh, "CG", 1)
 
-  # Define basis and then form the stiffness matrix
+  # Define basis and bilinear form
   u = TrialFunction(V)
   v = TestFunction(V)
   a = dot(grad(v), grad(u))*dx
