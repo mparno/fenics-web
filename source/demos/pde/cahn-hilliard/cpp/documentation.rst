@@ -23,18 +23,19 @@ is created:
     P1 = FiniteElement("Lagrange", "triangle", 1)
     ME = P1*P1
 
-On the mixed space, test and trial functions are defined:
+On the mixed space, trial and test functions are defined:
 
 .. code-block:: python
 
-    q, v = TestFunctions(ME)
     du   = TrialFunction(ME)
+    q, v = TestFunctions(ME)
 
 The test functions have been split into components.
 
-Coefficient functions are now defined for the current solution (the most recent
-guess) and the solution from the beginning of the time step, and the functions
-and split into components:
+Coefficient functions are now defined for the current solution (the
+most recent guess) and the solution from the beginning of the time
+step. Further, these functions (and the trial function) are split into
+their components:
 
 .. code-block:: python
 
@@ -59,9 +60,10 @@ Lastly, the value of :math:`\mu_{n+\theta}` is computed.
     # mu_(n+theta)
     mu_mid = (1-theta)*mu0 + theta*mu
 
-To compute :math:`df/dc`, ``c`` is made a variable which will permit
-differentiation with respect to it. The function :math:`f` is defined as
-a function of :math:`c`, and then
+.. index:: automatic differentiation
+
+The chemical potential :math:`df/dc` will be computed using automated
+differentiation:
 
 .. code-block:: python
 
@@ -70,9 +72,17 @@ a function of :math:`c`, and then
     f    = 100*c**2*(1-c)**2
     dfdc = diff(f, c)
 
-The fully discrete variational problem is input, and the Jacobian of the
-functional ``L`` which we we wish to drive to zero during the solution process
-is computed using the directional derivative (``a``).
+The first line declares that ``c`` is a variable that some function
+can be differentiated with respect to. The next line is the function
+:math:`f` defined in the problem statement, and the third line
+performs the differentiation of ``f`` with respect to the variable
+``c``.
+
+The linear forms for the two equations can be summed into one form
+``L``. We wish to drive the residual of this form to zero during the
+solution process. The directional derivative of ``L`` can be computed
+automatically, by calling ``derivative``, to form the bilinear form
+``a`` representing the Jacobian matrix:
 
 .. code-block:: python
 

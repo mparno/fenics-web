@@ -28,7 +28,7 @@ reads:
 
 where :math:`c` is the unknown field, the function :math:`f` is
 usually non-convex in :math:`c` (a fourth-order polynomial is commonly
-used), :math:`n` is the outward directed boundary normal and :math:`M`
+used), :math:`n` is the outward directed boundary normal, and :math:`M`
 is a scalar parameter.
 
 Mixed form
