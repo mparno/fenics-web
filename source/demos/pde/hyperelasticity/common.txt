@@ -47,8 +47,8 @@ is equal to zero for all :math:`v \in V`:
 .. math::
    L(u; v) = 0 \quad \forall \ v \in V.
 
-To minimise the potential energy, solutions to the variational
-equations above are sought. Depending on the potential energy
+To minimise the potential energy, a solution to the variational
+equation above is sought. Depending on the potential energy
 :math:`\psi`, :math:`L(u; v)` can be nonlinear in :math:`u`. In such a
 case, the Jacobian of :math:`L` is required in order to solve this
 problem using Newton's method. The Jacobian of :math:`L` is defined as
