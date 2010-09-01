@@ -57,6 +57,7 @@ Before being able to solve this problem, the time derivative must be dealt
 with. Apply the :math:`\theta`-method to the mixed weak form of the equation:
 
 .. math::
+
    \int_{\Omega} \frac{c_{n+1} - c_{n}}{dt} q \, dx + \int_{\Omega} M \nabla \mu_{n+\theta} \cdot \nabla q \, dx
           &= 0 \quad \forall \ q \in V  \\
    \int_{\Omega} \mu_{n+1} v  \, dx - \int_{\Omega} \frac{d f_{n+1}}{d c} v  \, dx + \int_{\Omega} \lambda \nabla c_{n+1} \cdot \nabla v \, dx

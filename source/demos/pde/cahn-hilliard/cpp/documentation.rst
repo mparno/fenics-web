@@ -9,46 +9,78 @@ Cahn-Hilliard equation
 
 This text is C++ specific
 
-UFL input
----------
+UFL form file
+-------------
 
-Some UFL code in :download:`CahnHilliard2D.ufl` and
-:download:`CahnHilliard3D.ufl`.
+The UFL code for this problem in two dimensions is
+:download:`CahnHilliard2D.ufl`.
+
+First, a mixed function spaces of linear Lagrange functions on triangles
+is created:
 
 .. code-block:: python
 
     P1 = FiniteElement("Lagrange", "triangle", 1)
-    ME = P1 + P1
+    ME = P1*P1
 
-    q, v  = TestFunctions(ME)
-    du    = TrialFunction(ME)
+On the mixed space, test and trial functions are defined:
+
+.. code-block:: python
+
+    q, v = TestFunctions(ME)
+    du   = TrialFunction(ME)
+
+The test functions have been split into components.
+
+Coefficient functions are now defined for the current solution (the most recent
+guess) and the solution from the beginning of the time step, and the functions
+and split into components:
+
+.. code-block:: python
 
     u   = Coefficient(ME)  # current solution
     u0  = Coefficient(ME)  # solution from previous converged step
 
     # Split mixed functions
-    dk, dc = split(du)
-    k,  c  = split(u)
-    k0, c0 = split(u0)
+    dc, dmu = split(du)
+    c,  mu  = split(u)
+    c0, mu0 = split(u0)
 
-    lmbda    = Constant(triangle) # surface parameter
-    muFactor = Constant(triangle) # chemical free energy multiplier
+Various model parameters are defined as ``Constants``. This means that their
+value can be changed without recompiling the UFL file.
+Lastly, the value of :math:`\mu_{n+\theta}` is computed.
 
+.. code-block:: python
+
+    lmbda    = Constant(triangle) # surface energy parameter
     dt       = Constant(triangle) # time step
     theta    = Constant(triangle) # time stepping parameter
 
-    # Potential mu = \phi,c (chemical free-energy \phi = c^2*(1-c)^2)
-    mu = muFactor*(2*c*(1-c)*(1-c) - 2*c*c*(1-c))
+    # mu_(n+theta)
+    mu_mid = (1-theta)*mu0 + theta*mu
 
-    # k^(n+theta)
-    k_mid = (1-theta)*k0 + theta*k
+To compute :math:`df/dc`, ``c`` is made a variable which will permit
+differentiation with respect to it. The function :math:`f` is defined as
+a function of :math:`c`, and then
 
-    L1 = q*c*dx - q*c0*dx + dt*dot(grad(q), grad(k_mid))*dx
-    L2 = v*k*dx - v*mu*dx - lmbda*dot(grad(v), grad(c))*dx
-    L = L1 + L2
+.. code-block:: python
+
+    # Compute the chemical potential df/dc
+    c    = variable(c)
+    f    = 100*c**2*(1-c)**2
+    dfdc = diff(f, c)
+
+The fully discrete variational problem is input, and the Jacobian of the
+functional ``L`` which we we wish to drive to zero during the solution process
+is computed using the directional derivative (``a``).
+
+.. code-block:: python
+
+    L0 = q*c*dx  - q*c0*dx   + dt*dot(grad(q), grad(mu_mid))*dx
+    L1 = v*mu*dx - v*dfdc*dx - lmbda*dot(grad(v), grad(c))*dx
+    L = L0 + L1
 
     a = derivative(L, u, du)
-
 
 C++ code
 --------
