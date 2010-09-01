@@ -1,9 +1,9 @@
-.. Documentation for the Poisson demo from DOLFIN.
+.. Documentation for the biharmonic demo from DOLFIN.
 
-.. _demos_python_pde_poisson:
+.. _demos_python_pde_biharmonic:
 
-Poisson equation
-================
+Biharmonic equation
+===================
 
 This demo is implemented in a single Python file, :download:`demo.py`,
 which contains both the variational forms and the solver.
