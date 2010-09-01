@@ -180,20 +180,20 @@ htmlhelp_basename = 'FEniCSdoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-#  ('tutorial/cpp/index', 'cpp_tutorial.tex', u'FEniCS Tutorial (C++ version)',
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-#  ('tutorial/python/index', 'python_tutorial.tex', u'FEniCS Tutorial (Python version)',
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-#  ('programmers-reference/cpp/index', 'cpp_programmers_reference.tex',
-#   u"Programmer's reference (C++ version)",
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-#  ('programmers-reference/python/index', 'python_programmers_reference.tex',
-#   u"Programmer's reference (Python version)",
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-#  ('demos/cpp/index', 'cpp_demos.tex', u'FEniCS Demos (C++ version)',
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
-#  ('demos/python/index', 'python_demos.tex', u'FEniCS Demos (Python version)',
-#   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  #('tutorial/cpp/index', 'cpp_tutorial.tex', u'FEniCS Tutorial (C++ version)',
+  # u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  #('tutorial/python/index', 'python_tutorial.tex', u'FEniCS Tutorial (Python version)',
+  # u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  #('programmers-reference/cpp/index', 'cpp_programmers_reference.tex',
+  # u"Programmer's reference (C++ version)",
+  # u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  #('programmers-reference/python/index', 'python_programmers_reference.tex',
+  # u"Programmer's reference (Python version)",
+  # u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  ('demos/index-cpp', 'cpp_demos.tex', u'FEniCS Demos (C++ version)',
+   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
+  ('demos/index-python', 'python_demos.tex', u'FEniCS Demos (Python version)',
+   u'FEniCS Core, https://launchpad.net/\\textasciitilde{}fenics-core', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
