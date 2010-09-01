@@ -3,9 +3,9 @@
 Incompressible Navier-Stokes equations
 ======================================
 
-This demo is implemented the C++ source file :download:`main.cpp`.  In
-addition, this program requires the following header files that define
-the variational forms used in the program:
+This demo is implemented in the C++ source file :download:`main.cpp`.
+In addition, this program requires the following header files that
+define the variational forms used in the program:
 :download:`TentativeVelocity.h`, :download:`VelocityUpdate.h`, and
 :download:`PressureUpdate.h`. These files can be generated (using FFC)
 from the following UFL form files: :download:`TentativeVelocity.ufl`,
