@@ -281,9 +281,15 @@ plotted.
 Complete code
 -------------
 
+Complete UFL file
+^^^^^^^^^^^^^^^^^
+
 .. literalinclude:: HyperElasticity.ufl
    :start-after: # Compile this form with
    :language: python
+
+Complete main file
+^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: main.cpp
    :start-after: // Begin demo
