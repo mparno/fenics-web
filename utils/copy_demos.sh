@@ -39,3 +39,15 @@ for DEMO_DIR in $DEMO_DIRS; do
         $DOLFIN_DIR/demo/$DEMO_DIR $DEST_DIR
 
 done
+
+# Check changes
+echo
+echo "------------------------------------------------------------"
+echo "All demos copied from DOLFIN. The following changes were made:"
+echo
+bzr status source/demos
+echo
+echo "You may wish to add all files to the current repository by"
+echo "running the command"
+echo
+echo "  bzr add source/demos"
