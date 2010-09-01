@@ -12,23 +12,31 @@ Poisson equation
 Implementation
 --------------
 
-The implementation is split in two files, a form file containing the definition
-of the variational forms expressed in UFL and the solver which is implemented
-in a C++ file.
+The implementation is split in two files: a form file containing the
+definition of the variational forms expressed in UFL and a C++ file
+containing the actual solver.
 
 Creating the form file
 ^^^^^^^^^^^^^^^^^^^^^^
 
-First we define the variational problem in UFL which we save in the file called
-:download:`Poisson.ufl`.
-We first define the finite element, in this case a linear Lagrange triangle:
+The first step is to define the variational problem at hand. We define
+the variational problem in UFL terms in a separate form file
+:download:`Poisson.ufl`.  We begin by defining the finite element:
 
 .. code-block:: python
 
     element = FiniteElement("Lagrange", triangle, 1)
 
-Then we use this element to initialise the test and trial functions (:math:`v`
-and :math:`u`) and coefficient functions (:math:`f` and :math:`g`):
+The first argument to ``FiniteElement`` is the finite element family,
+the second argument specifies the domain, while the third argument
+specifies the polynomial degree. Thus, in this case, our element
+``element`` consists of first-order, continuous Lagrange basis
+functions on triangles (or in order words, continuous piecewise linear
+polynomials on triangles).
+
+Next, we use this element to initialise the trial and test functions
+(:math:`u` and :math:`v`) and the coefficient functions (:math:`f` and
+:math:`g`):
 
 .. code-block:: python
 
@@ -37,22 +45,33 @@ and :math:`u`) and coefficient functions (:math:`f` and :math:`g`):
     f = Coefficient(element)
     g = Coefficient(element)
 
-Finally, we define the bilinear and linear forms according to the equations:
+Finally, we define the bilinear and linear forms according to the
+variational formulation of the equations:
 
 .. code-block:: python
 
     a = inner(grad(v), grad(u))*dx
     L = v*f*dx + v*g*ds
 
+Before the form file can be used in the C++ program, it must be
+compiled using FFC by running (on the command-line):
+
+.. code-block:: sh
+
+    ffc -l dolfin Poisson.ufl
+
+Note the flag ``-l dolfin`` which tells FFC to generate
+DOLFIN-specific wrappers that make it easy to access the generated
+code from within DOLFIN.
 
 Writing the solver
 ^^^^^^^^^^^^^^^^^^
 
-The solver is implemented in the :download:`main.cpp` file.
+The main solver is implemented in the :download:`main.cpp` file.
 
-At the top we include the DOLFIN header file and the header file containing the
-variational forms for the Poisson equation.
-For convenience we also include the DOLFIN namespace.
+At the top we include the DOLFIN header file and the generated header
+file "Poisson.h" containing the variational forms for the Poisson
+equation.  For convenience we also include the DOLFIN namespace.
 
 .. code-block:: c++
 
@@ -88,11 +107,11 @@ Then follows the definition of the coefficient functions (for :math:`f` and
       }
     };
 
-.. index:: Subdomain
+.. index:: SubDomain
 
-The ``DirichletBoundary`` is derived from the ``Subdomain`` class and defines
-the part of the boundary to which the Dirichlet boundary condition should be
-applied.
+The ``DirichletBoundary`` is derived from the ``SubDomain`` class and
+defines the part of the boundary to which the Dirichlet boundary
+condition should be applied.
 
 .. code-block:: c++
 
@@ -105,8 +124,12 @@ applied.
       }
     };
 
-Inside the ``main()`` function we first create the ``mesh`` and then we define
-the ``FunctionSpace`` :math:`V` for our finite element functions.
+Inside the ``main`` function, we begin by defining a mesh of the
+domain. As the unit square is a very standard domain, we can use a
+built-in mesh provided by the class ``UnitSquare``. In order to create
+a mesh consisting of 32 x 32 squares with each square divided into two
+triangles, and the finite element space (specified in the form file)
+defined relative to this mesh, we do as follows
 
 .. code-block:: c++
 
@@ -116,10 +139,15 @@ the ``FunctionSpace`` :math:`V` for our finite element functions.
 
 .. index:: DirichletBC
 
-After creating the ``FunctionSpace`` and defining our ``DirichletBoundary``
-class, we can create the Dirichlet boundary condition (``DirichletBC``) for our
-variational problem where we use a ``Constant`` (equal to zero) for the value
-of :math:`u` on the Dirichlet boundary.
+Now, the Dirichlet boundary condition (:math:`u = 0`) can be created
+using the class ``DirichletBC``. A ``DirichletBC`` takes three
+arguments: the function space the boundary condition applies to, the
+value of the boundary condition, and the part of the boundary on which
+the condition applies. In our example, the function space is ``V``,
+the value of the boundary condition (0.0) can represented using a
+``Constant``, and the Dirichlet boundary is defined by the class
+``DirichletBoundary`` listed above. The definition of the Dirichlet
+boundary condition then looks as follows:
 
 .. code-block:: c++
 
@@ -131,11 +159,10 @@ of :math:`u` on the Dirichlet boundary.
 .. index::
     triple: forms; attach; expression
 
-Next, we define the variational problem by initialising the bilinear and linear
-forms (:math:`a`, :math:`L`) using the previously defined ``FunctionSpace``
-:math:`V`.
-Then we can create the source and boundary flux term (:math:`f`, :math:`g`) and
-attach these to the linear form.
+Next, we define the variational problem by initialising the bilinear
+and linear forms (:math:`a`, :math:`L`) using the previously defined
+``FunctionSpace`` ``V``.  Then we can create the source and boundary
+flux term (:math:`f`, :math:`g`) and attach these to the linear form.
 
 .. code-block:: c++
 
@@ -149,10 +176,15 @@ attach these to the linear form.
 
 .. index:: VariationalProblem
 
-To compute the solution we use the ``VariationalProblem`` class and choose an
-iterative linear solver.
-The solution is stored in the ``Function`` ``u`` which we also initialise using
-the ``FunctionSpace`` :math:`V` since our objective is to find :math:`u \in V`.
+Now, we have specified the variational forms and can consider the
+solution of the variational problem.  First, a ``VariationalProblem``
+object is created using the bilinear and linear forms, and the
+Dirichlet boundary condition. The solution will be represented as a
+``Function``, living in the function space ``V``, and needs to be
+declared. Then, to solve the problem, the ``solve`` function is called
+with ``u`` as a single argument; ``u`` now contains the solution. Note
+how parameters for the variational problem can be adjusted: here, we
+specify the use of an iterative linear solver.
 
 .. code-block:: c++
 
@@ -162,8 +194,10 @@ the ``FunctionSpace`` :math:`V` since our objective is to find :math:`u \in V`.
     Function u(V);
     problem.solve(u);
 
-Finally, we can write the solution to a ``VTK`` file and visualise the solution
-using the ``plot()`` command.
+A ``Function`` can be manipulated in various ways, in particular, it
+can be plotted and saved to file. Here, we output the solution to a
+``VTK`` file (using the suffix ``.pvd``) for later visualization and
+also plot it using the ``plot`` command:
 
 .. code-block:: c++
 
