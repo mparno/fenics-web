@@ -100,7 +100,7 @@ compiled using FFC:
     ffc -l dolfin PressureUpdate.ufl
 
 Note the flag ``-l dolfin`` which tells FFC to generate
-DOLFIN-specific wrappers that makes it easy to access the generated
+DOLFIN-specific wrappers that make it easy to access the generated
 code from within DOLFIN.
 
 C++ program
@@ -214,17 +214,6 @@ spaces:
     VelocityUpdate::FunctionSpace V(mesh);
     PressureUpdate::FunctionSpace Q(mesh);
 
-
-    # Define function spaces (P2-P1)
-    V = VectorFunctionSpace(mesh, "CG", 2)
-    Q = FunctionSpace(mesh, "CG", 1)
-
-    # Define trial and test functions
-    v = TestFunction(V)
-    q = TestFunction(Q)
-    u = TrialFunction(V)
-    p = TrialFunction(Q)
-
 The time step and the length of the interval are defined by:
 
 .. code-block:: cpp
@@ -233,7 +222,7 @@ The time step and the length of the interval are defined by:
     double dt = 0.01;
     double T = 3;
 
-We next define the time-dependent pressure boundary value and zero
+We next define the time-dependent pressure boundary value, and zero
 scalar and vector constants that will be used for boundary conditions
 below.
 
@@ -300,7 +289,7 @@ The next step is now to define the variational problems for the three
 steps of Chorin's method. We do this by instantiating the classes
 generated from our UFL form files:
 
-.. code-block::cpp
+.. code-block:: cpp
 
    // Create forms
    TentativeVelocity::BilinearForm a1(V, V);
@@ -313,7 +302,7 @@ generated from our UFL form files:
 Since the forms depend on coefficients, we have to attach the
 coefficients defined above to the appropriate forms:
 
-.. code-block::cpp
+.. code-block:: cpp
 
   // Set coefficients
   a1.k = k; L1.k = k; L1.u0 = u0; L1.f = f;
@@ -363,14 +352,14 @@ The time-stepping loop is now implemented as follows:
 
 We use the :cpp:class:`Progress` class to display a progress bar
 during the computation. We also remember to update the current time
-for the time-dependend pressure boundary value.
+for the time-dependent pressure boundary value.
 
 For each of the three steps of Chorin's method, we assemble the
-right-hand side, apply boundary conditions and solve a linear
-system. Note that different use of preconditioners. Incomplete LU
+right-hand side, apply boundary conditions, and solve a linear
+system. Note the different use of preconditioners. Incomplete LU
 factorization is used for the computation of the tentative velocity
-and the velocity update, while algebraic multigrid is use for the
-pressure Poisson equation:
+and the velocity update, while algebraic multigrid is used for the
+pressure equation:
 
 .. code-block:: cpp
 
@@ -398,9 +387,9 @@ pressure Poisson equation:
     solve(A3, u1.vector(), b3, "gmres", "ilu");
     end();
 
-Note the use of ``begin`` and ``end`` which is improves the
-readability of the output from the program by adding indentation to
-diagnostic messages.
+Note the use of ``begin`` and ``end``; these improve the readability
+of the output from the program by adding indentation to diagnostic
+messages.
 
 At the end of the time-stepping loop, we store the solution to file
 and update values for the next time step:

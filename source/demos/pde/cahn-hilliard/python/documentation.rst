@@ -13,7 +13,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-First, the Python module``random`` and module ``dolfin`` are imported:
+First, the Python module ``random`` and the ``dolfin`` module are imported:
 
 .. code-block:: python
 
@@ -22,8 +22,8 @@ First, the Python module``random`` and module ``dolfin`` are imported:
 
 .. index:: Expression
 
-A class which will be used to in representing the initial conditions is
-then created:
+A class which will be used to represent the initial conditions is then
+created:
 
 .. code-block:: python
 
@@ -37,13 +37,14 @@ then created:
         def dim(self):
             return 2
 
-It is a subclass of ``Expression``. In the constructor (``def __init__``),
-the random number generator seeded. For the case in which the program is
-being run in parallel, the random number generator is seeded using the
-process number to ensure a different sequence of numbers on each process.
-The function ``def eval`` return values for a function of dimension two.
-For the first component (``x[0]``), a randomized value is returned.
-The function ``def dim`` declares that the ``Expression`` is of dimension two.
+It is a subclass of ``Expression``. In the constructor (``__init__``),
+the random number generator is seeded. If the program is run in
+parallel, the random number generator is seeded using the process
+number to ensure a different sequence of numbers on each process.  The
+function ``eval`` returns values for a function of dimension two.  For
+the first component of the function, a randomized value is returned.
+The function ``dim`` declares that the ``Expression`` is of dimension
+two.
 
 .. index:: NonlinearProblem
 
@@ -65,18 +66,20 @@ in the Newton solver is now defined. It is a subclass of ``NonlinearProblem``.
             assemble(self.a, tensor=A, reset_sparsity=self.reset_sparsity)
             self.reset_sparsity = False
 
-The constructor (``def __init__``) stores references to the bilinear (``a``)
-and linear (``L``) forms which will used to compute the Jacobian matrix and the
-residual vector, respectively, for use in a Newton solver.  The function``F``
-and ``J`` are virtual member functions of ``NonlinearProblem``. The function
-``F`` computes the residual vector ``b``, and the function ``J`` computes
-the Jacobian matrix ``A``. For the Cahn-Hilliard equation, the non-zero
-pattern of the Jacobian matrix ``A`` will remain fixed, so the argument
-``reset_sparsity`` is set to ``True`` the first time ``A`` is assembled,
-and thereafter it is set to ``False``. This has some performance advantages
-as the non-zero structure of ``A`` will only be computed once.
+The constructor (``__init__``) stores references to the bilinear
+(``a``) and linear (``L``) forms. These will used to compute the
+Jacobian matrix and the residual vector, respectively, for use in a
+Newton solver.  The function ``F`` and ``J`` are virtual member
+functions of ``NonlinearProblem``. The function ``F`` computes the
+residual vector ``b``, and the function ``J`` computes the Jacobian
+matrix ``A``. For the Cahn-Hilliard equation, the pattern of non-zero
+values in the Jacobian matrix ``A`` will remain fixed, so the argument
+``reset_sparsity`` is set to ``True`` the first time ``A`` is
+assembled, and thereafter it is set to ``False``. This has some
+performance advantages as the non-zero structure of ``A`` will only be
+computed once.
 
-Next, various parameters in the mode and defined:
+Next, various model parameters are defined:
 
 .. code-block:: python
 
@@ -88,8 +91,8 @@ Next, various parameters in the mode and defined:
 
 .. index:: form compiler options
 
-It is possible to pass arguments to the form compiler which
-control aspects of generated code. The lines
+It is possible to pass arguments that control aspects of the generated
+code to the form compiler. The lines
 
 .. code-block:: python
 
@@ -104,9 +107,9 @@ faster code (sometimes orders of magnitude faster for certain operations,
 depending on the equation), but it may take considerably longer to generate
 the code and the generation phase may use considerably more memory).
 
-A unit square mesh with 96 vertices in each direction is created,
-and on this mesh a ``FunctionSpace`` :math:`V` and a ``MixedFunctionSpace``
-space :math:`ME = V \times V` are defined:
+A unit square mesh with 97 (= 96 + 1) vertices in each direction is
+created, and on this mesh a ``FunctionSpace`` :math:`V` and a
+``MixedFunctionSpace`` space :math:`ME = V \times V` are defined:
 
 .. code-block:: python
 
@@ -128,11 +131,12 @@ Test and trial functions of the space ``ME`` are now defined:
 
 .. index:: split functions
 
-For the test functions, ``TestFunctions`` (note the 's' at the end) is used
-to define the scalar test functions ``q`` and ``v``. The trial function
-``du`` has dimension two. Some mixed ``Functions`` on ``ME`` are defined to
-represent :math:`u = (c_{n+1}, \mu_{n+1})` and :math:`u0 = (c_{n}, \mu_{n})`,
-and these are then spit into sub-functions:
+For the test functions, ``TestFunctions`` (note the 's' at the end) is
+used to define the scalar test functions ``q`` and ``v``. The trial
+function ``du`` has dimension two. Some mixed ``Functions`` on ``ME``
+are defined to represent :math:`u = (c_{n+1}, \mu_{n+1})` and
+:math:`u0 = (c_{n}, \mu_{n})`, and these are then split into
+sub-functions:
 
 .. code-block:: python
 
@@ -145,15 +149,15 @@ and these are then spit into sub-functions:
     c,  mu  = split(u)
     c0, mu0 = split(u0)
 
-The line ``c, mu = split(u)`` permits direct access to the components of a
-mixed function. Note that ``c`` and ``mu`` are references for components of
-``u``, and are not copies.
+The line ``c, mu = split(u)`` permits direct access to the components
+of a mixed function. Note that ``c`` and ``mu`` are references for
+components of ``u``, and not copies.
 
 .. index:: interpolating functions
 
-Initial conditions are created using the class created at the top at the
-beginning of the demo and interpolating the initial conditions in a finite
-element space:
+Initial conditions are created by using the class defined at the
+beginning of the demo and then interpolating the initial conditions
+into a finite element space:
 
 .. code-block:: python
 
@@ -162,8 +166,8 @@ element space:
     u.interpolate(u_init)
     u0.interpolate(u_init)
 
-The first line creates an object of type ``InitialConditions()``.
-The following two lines make ``u`` and ``u0`` interpolations of ``u_init``
+The first line creates an object of type ``InitialConditions``.
+The following two lines make ``u`` and ``u0`` interpolants of ``u_init``
 (since ``u`` and ``u0`` are finite element functions, they may not be able
 to represent a given function exactly, but the function can be approximated
 by interpolating it in a finite element space).
@@ -180,9 +184,11 @@ differentiation:
     f    = 100*c**2*(1-c)**2
     dfdc = diff(f, c)
 
-The first line declares that ``c`` is a variable that function can be
-differentiated with respect to. The next line is the function defined in
-the problem statement, and the third line the differentiation.
+The first line declares that ``c`` is a variable that some function
+can be differentiated with respect to. The next line is the function
+:math:`f` defined in the problem statement, and the third line
+performs the differentiation of ``f`` with respect to the variable
+``c``.
 
 It is convenient to introduce an expression for :math:`\mu_{n+\theta}`
 
@@ -191,7 +197,7 @@ It is convenient to introduce an expression for :math:`\mu_{n+\theta}`
     # mu_(n+theta)
     mu_mid = (1.0-theta)*mu0 + theta*mu
 
-which is then used in the definition of forms:
+which is then used in the definition of the variational forms:
 
 .. code-block:: python
 
@@ -200,10 +206,11 @@ which is then used in the definition of forms:
     L1 = mu*v*dx - dfdc*v*dx - lmbda*dot(grad(c), grad(v))*dx
     L = L0 + L1
 
-This is a statement of the time-discrete equations presented as part of the
-the problem statement, using UFL syntax. The linear forms for the two equations
-can be summed into one form ``L``, and then the directional derivative of ``L``
-can be computed to form the bilinear form which represents the Jacobian matrix:
+This is a statement of the time-discrete equations presented as part
+of the problem statement, using UFL syntax. The linear forms for the
+two equations can be summed into one form ``L``, and then the
+directional derivative of ``L`` can be computed to form the bilinear
+form which represents the Jacobian matrix:
 
 .. code-block:: python
 
@@ -212,11 +219,12 @@ can be computed to form the bilinear form which represents the Jacobian matrix:
 
 .. index:: Newton solver
 
-The DOLFIN Newton solver requires a ``NonlinearProblem`` object to solve a system
-of nonlinear equation. Using the class ``CahnHilliardEquation``, which was
-declared at the beginning of the file, and which is a
-sub-class of ``NonlinearProblem``. Both ``CahnHilliardEquation`` and
-``NewtonSolver`` objects can be created:
+The DOLFIN Newton solver requires a ``NonlinearProblem`` object to
+solve a system of nonlinear equations. Here, we are using the class
+``CahnHilliardEquation``, which was declared at the beginning of the
+file, and which is a sub-class of ``NonlinearProblem``. We need to
+instantiate objects of both ``CahnHilliardEquation`` and
+``NewtonSolver``:
 
 .. code-block:: python
 
@@ -226,12 +234,13 @@ sub-class of ``NonlinearProblem``. Both ``CahnHilliardEquation`` and
     solver.parameters["convergence_criterion"] = "incremental"
     solver.parameters["relative_tolerance"] = 1e-6
 
-The string ``"LU"`` passed to the Newton solver indicated that an LU solver
-should be used.  The parameter ``parameters["convergence_criterion"] =
-"incremental"`` specifies that the Newton solver should compute a norm of
-the solution increment to check for convergence (the other possibility is
-to use ``"residual"``, or to provide a user-defined check). The tolerance
-for convergence is specified by ``parameters["relative_tolerance"] = 1e-6``.
+The string ``"lu"`` passed to the Newton solver indicated that an LU
+solver should be used.  The setting of
+``parameters["convergence_criterion"] = "incremental"`` specifies that
+the Newton solver should compute a norm of the solution increment to
+check for convergence (the other possibility is to use ``"residual"``,
+or to provide a user-defined check). The tolerance for convergence is
+specified by ``parameters["relative_tolerance"] = 1e-6``.
 
 To run the solver and save the output to a VTK file for later visualization,
 the solver is advanced in time from :math:`t_{n}` to :math:`t_{n+1}` until
@@ -251,13 +260,14 @@ a terminal time :math:`T` is reached:
         solver.solve(problem, u.vector())
         file << (u.split()[0], t)
 
-The string ``"compressed"`` indicates that the output data should be compressed
-to reduce the file size. Within the time stepping loop, the solution vector
-associate with ``u`` is copied to ``u0`` at the beginning of each time
-step, and the nonlinear problem is solve by calling ``solver.solve(problem,
-u.vector())``, with the new solution vector returned in ``u.vector()``. The
-``c`` component of the solution (the first component of ``u``) is then
-written to file at every time step.
+The string ``"compressed"`` indicates that the output data should be
+compressed to reduce the file size. Within the time stepping loop, the
+solution vector associated with ``u`` is copied to ``u0`` at the
+beginning of each time step, and the nonlinear problem is solved by
+calling ``solver.solve(problem, u.vector())``, with the new solution
+vector returned in ``u.vector()``. The ``c`` component of the solution
+(the first component of ``u``) is then written to file at every time
+step.
 
 Finally, the last computed solution for :math:`c` is plotted to the screen:
 

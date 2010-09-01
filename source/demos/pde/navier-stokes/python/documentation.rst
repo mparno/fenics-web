@@ -44,8 +44,8 @@ spaces:
     v = TestFunction(V)
     q = TestFunction(Q)
 
-The time step, the length of the interval, and the kinematic viscosity
-are defined by:
+The time step, the length of the time interval, and the kinematic
+viscosity are defined by:
 
 .. code-block:: python
 
@@ -102,7 +102,7 @@ below:
     f = Constant((0, 0))
 
 Note that one may use the time step ``dt`` directly in the
-form. However, using the :py:class:`Constant` class, we may freely
+form. However, by using the :py:class:`Constant` class, we may freely
 change the size of the time step without triggering regeneration of
 code.
 
@@ -162,14 +162,14 @@ The time-stepping loop is now implemented as follows:
 
 We use the :py:class:`Progress` class to display a progress bar
 during the computation. We also remember to update the current time
-for the time-dependend pressure boundary value.
+for the time-dependent pressure boundary value.
 
 For each of the three steps of Chorin's method, we assemble the
 right-hand side, apply boundary conditions and solve a linear
-system. Note that different use of preconditioners. Incomplete LU
+system. Note the different use of preconditioners. Incomplete LU
 factorization is used for the computation of the tentative velocity
-and the velocity update, while algebraic multigrid is use for the
-pressure Poisson equation:
+and the velocity update, while algebraic multigrid is used for the
+pressure equation:
 
 .. code-block:: python
 
@@ -194,9 +194,9 @@ pressure Poisson equation:
     solve(A3, u1.vector(), b3, "gmres", "ilu")
     end()
 
-Note the use of ``begin`` and ``end`` which is improves the
-readability of the output from the program by adding indentation to
-diagnostic messages.
+Note the use of ``begin`` and ``end``; these improve the readability
+of the output from the program by adding indentation to diagnostic
+messages.
 
 At the end of the time-stepping loop, we plot the solution, store the
 solution to file, and update values for the next time step:
