@@ -32,8 +32,9 @@ for DEMO_DIR in $DEMO_DIRS; do
     echo
 
     rsync -av \
-        --exclude *.vtu \
-        --exclude *.pvd \
+        --exclude '*~' \
+        --exclude '*.vtu' \
+        --exclude '*.pvd' \
         --exclude CMakeFiles \
         --exclude cmake_install.cmake \
         $DOLFIN_DIR/demo/$DEMO_DIR $DEST_DIR
