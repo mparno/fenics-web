@@ -4,3 +4,14 @@ FEniCS documentation
 To build all documentation, simply type
 
   make all
+
+Note that you need to have the ufc module in your PYTHONPATH variable in order
+to generate the Python programmer's reference.
+
+In the future when we add documentation for FFC, UFC, UFL, viper etc. you will
+also need to have these modules in your path.
+
+To update the C++ programmer's reference and the demos from a specific DOLFIN
+installation you need to set the DOLFIN_DIR variable and run the two scripts
+utils/generate_cpp_doc.py and utils/copy_demos.sh before building the
+documentation.
