@@ -14,7 +14,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-First, the `dolfin`` module is imported:
+First, the ``dolfin`` module is imported:
 
 .. code-block:: python
 
