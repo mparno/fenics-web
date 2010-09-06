@@ -104,7 +104,7 @@ that the user is required to construct a :math:`G` such that :math:`G
 ``Expression`` class. Overloading the ``eval_data`` method (instead of
 the usual ``eval``) allows us to extract more geometry information
 such as the facet normals. Since this is a vector-valued expression,
-the methods ``rank`` and ``dim`` must also be specified.
+we need to overload the ``value_shape`` method.
 
 .. index:: Expression
 
@@ -116,10 +116,9 @@ the methods ``rank`` and ``dim`` must also be specified.
             g = sin(5*data.x()[0])
             values[0] = g*data.normal()[0]
             values[1] = g*data.normal()[1]
-        def rank(self):
-            return 1
-        def dim(self):
-            return 2
+        def value_shape(self):
+            return (2,)
+
     G = BoundarySource()
 
 Specifying the relevant part of the boundary can be done as for the
