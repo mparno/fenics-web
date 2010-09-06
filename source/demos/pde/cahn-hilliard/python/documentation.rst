@@ -34,8 +34,8 @@ created:
         def eval(self, values, x):
             values[0] = 0.63 + 0.02*(0.5 - random.random())
             values[1] = 0.0
-        def dim(self):
-            return 2
+        def value_shape(self):
+            return (2,)
 
 It is a subclass of ``Expression``. In the constructor (``__init__``),
 the random number generator is seeded. If the program is run in
@@ -43,8 +43,8 @@ parallel, the random number generator is seeded using the process
 number to ensure a different sequence of numbers on each process.  The
 function ``eval`` returns values for a function of dimension two.  For
 the first component of the function, a randomized value is returned.
-The function ``dim`` declares that the ``Expression`` is of dimension
-two.
+The method ``value_shape`` declares that the ``Expression`` is vector  
+valued with dimension two.
 
 .. index:: NonlinearProblem
 
