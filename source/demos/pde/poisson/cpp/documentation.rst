@@ -16,8 +16,8 @@ The implementation is split in two files: a form file containing the
 definition of the variational forms expressed in UFL and a C++ file
 containing the actual solver.
 
-Creating the form file
-^^^^^^^^^^^^^^^^^^^^^^
+UFL form file
+^^^^^^^^^^^^^
 
 The first step is to define the variational problem at hand. We define
 the variational problem in UFL terms in a separate form file
@@ -64,8 +64,8 @@ Note the flag ``-l dolfin`` which tells FFC to generate
 DOLFIN-specific wrappers that make it easy to access the generated
 code from within DOLFIN.
 
-Writing the solver
-^^^^^^^^^^^^^^^^^^
+C++ program
+^^^^^^^^^^^
 
 The main solver is implemented in the :download:`main.cpp` file.
 

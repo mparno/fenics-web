@@ -15,8 +15,8 @@ The implementation is split in two files, a form file containing the definition
 of the variational forms expressed in UFL and the solver which is implemented
 in a C++ file.
 
-Creating the form file
-^^^^^^^^^^^^^^^^^^^^^^
+UFL form file
+^^^^^^^^^^^^^
 
 First we define the variational problem in UFL which we save in the
 file called :download:`MixedPoisson.ufl`.
@@ -69,8 +69,8 @@ Finally, we define the bilinear and linear forms according to the equations:
     L = - f*v*dx
 
 
-Writing the solver
-^^^^^^^^^^^^^^^^^^
+C++ program
+^^^^^^^^^^^
 
 The solver is implemented in the :download:`main.cpp` file.
 

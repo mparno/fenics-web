@@ -75,8 +75,8 @@ Note the flag ``-l dolfin`` which tells FFC to generate
 DOLFIN-specific wrappers that make it easy to access the generated
 code from within DOLFIN.
 
-C++ code
-^^^^^^^^
+C++ program
+^^^^^^^^^^^
 
 The main solver is implemented in the :download:`main.cpp` file.
 

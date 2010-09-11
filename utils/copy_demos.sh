@@ -37,6 +37,10 @@ for DEMO_DIR in $DEMO_DIRS; do
         --exclude '*.pvd' \
         --exclude CMakeFiles \
         --exclude cmake_install.cmake \
+        --exclude CMakeCache.txt \
+        --exclude Makefile \
+        --exclude dolfin_plot_data.xml \
+        --exclude '*-demo' \
         $DOLFIN_DIR/demo/$DEMO_DIR $DEST_DIR
 
 done
