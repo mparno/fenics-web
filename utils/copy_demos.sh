@@ -41,6 +41,7 @@ for DEMO_DIR in $DEMO_DIRS; do
         --exclude Makefile \
         --exclude dolfin_plot_data.xml \
         --exclude '*-demo' \
+        --exclude '*.h' \
         $DOLFIN_DIR/demo/$DEMO_DIR $DEST_DIR
 
 done
