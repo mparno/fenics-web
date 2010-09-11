@@ -1,6 +1,6 @@
 .. Documentation for the mixed Poisson demo from DOLFIN.
 
-.. _demos_cpp_pde_mixed-poisson:
+.. _demos_pde_mixed-poisson_cpp_documentation:
 
 Mixed formulation for Poisson equation
 ======================================

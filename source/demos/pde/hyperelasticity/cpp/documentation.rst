@@ -1,6 +1,6 @@
 .. Documentation for the hyperelasticity demo from DOLFIN.
 
-.. _demos_cpp_pde_hyperelasticity:
+.. _demos_pde_hyperelasticity_cpp_documentation:
 
 Hyperelasticity
 ===============

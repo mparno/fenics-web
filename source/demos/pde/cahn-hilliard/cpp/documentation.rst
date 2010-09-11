@@ -1,6 +1,6 @@
 .. Documentation for the Cahn-Hilliard demo from DOLFIN.
 
-.. _demos_cpp_pde_cahn_hilliard:
+.. _demos_pde_cahn_hilliard_cpp_documentation:
 
 Cahn-Hilliard equation
 ======================

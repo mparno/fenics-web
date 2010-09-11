@@ -65,8 +65,8 @@ entire documentation source.  To ensure this, the label names should
 begin with the path to the file where the label is located relative to
 the source directory. For example, the label for the C++ version of
 the Poisson demo, which is located at the top of the
-``demos/cpp/pde/poisson/poisson.rst`` file, should be given the name
-``demos_cpp_pde_poisson``, while the label to this sub section is:
+``demos/pde/poisson/cpp/documentation.rst`` file, should be given the name
+``demos_pde_poisson_cpp_documentation``, while the label to this sub section is:
 
 .. code-block:: rest
 
@@ -613,8 +613,8 @@ Documenting demos
 
 This short guide explains the procedure for documenting a FEniCS demo.
 As an example, we will demonstrate the steps involved to create
-documentation for the :ref:`Poisson (C++) <demos_cpp_pde_poisson>` and
-:ref:`Poisson (Python) <demos_python_pde_poisson>` demos.
+documentation for the :ref:`Poisson (C++) <demos_pde_poisson_cpp>` and
+:ref:`Poisson (Python) <demos_pde_poisson_python>` demos.
 
 Files
 ^^^^^

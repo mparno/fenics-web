@@ -19,3 +19,4 @@ partial differential equations (PDEs).
     hyperelasticity/cpp/documentation
     cahn-hilliard/cpp/documentation
     navier-stokes/cpp/documentation
+    foo/cpp/documentation

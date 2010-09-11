@@ -1,6 +1,6 @@
 .. Documentation for the hyperelasticity demo from DOLFIN.
 
-.. _demos_python_pde_hyperelasticity:
+.. _demos_pde_hyperelasticity_python_documentation:
 
 Hyperelasticity
 ===============
