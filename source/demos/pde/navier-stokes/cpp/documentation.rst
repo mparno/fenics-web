@@ -3,18 +3,18 @@
 Incompressible Navier-Stokes equations
 ======================================
 
-This demo is implemented in the C++ source file :download:`main.cpp`.
-In addition, this program requires the following header files that
-define the variational forms used in the program:
-:download:`TentativeVelocity.h`, :download:`VelocityUpdate.h`, and
-:download:`PressureUpdate.h`. These files can be generated (using FFC)
-from the following UFL form files: :download:`TentativeVelocity.ufl`,
-:download:`VelocityUpdate.ufl`, and :download:`PressureUpdate.ufl`.
-
 .. include:: ../common.txt
 
 Implementation
 --------------
+
+The implementation is split in four files: three form files containing the
+definition of the variational forms expressed in UFL and a C++ file
+containing the actual solver.
+
+Running this demo requires the files: :download:`main.cpp`,
+:download:`TentativeVelocity.ufl`, :download:`VelocityUpdate.ufl`,
+:download:`PressureUpdate.ufl` and :download:`CMakeLists.txt`.
 
 UFL form files
 ^^^^^^^^^^^^^^

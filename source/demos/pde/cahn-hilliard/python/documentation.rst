@@ -13,6 +13,8 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
+This demo is implemented in the :download:`demo.py` file.
+
 First, the Python module ``random`` and the ``dolfin`` module are imported:
 
 .. code-block:: python
