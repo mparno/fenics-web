@@ -671,6 +671,17 @@ differential equation (PDE), so we should add the following files:
     be made available for :ref:`download
     <styleguides_sphinx_download_files>`.
 
+.. note::
+
+    Only the files ``poisson/common.txt``, ``poisson/cpp/documentation.rst``
+    and ``poisson/python/documentation.rst`` should be added manually.
+    A template with these files is :download:`available <foo.tar>`.
+
+    The source files should be added automatically but running the script
+    ``utils/copy_demos.sh`` from the top directory, note that you need to set
+    the environment variable ``DOLFIN_DIR`` to the given version of DOLFIN
+    which you are documenting.
+
 Finally, add the demo to the index files to complete the setup of files.
 This is done by adding the line ``poisson/cpp/documentation`` to the
 ``toctree`` of the ``demos/pde/index-cpp.rst`` file and the line
