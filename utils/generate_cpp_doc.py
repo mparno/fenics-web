@@ -12,137 +12,31 @@ __date__ = "2010-08-26"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-09-01
+# Modified by Kristian B. Oelgaard, 2010.
 
-import os, re
+# Last changed: 2010-09-14
+
+import os, re, sys
 
 # Set output directory
-output_dir = os.path.join("source", "programmers-reference", "cpp")
+output_dir = os.path.abspath( os.path.join(os.getcwd(), os.pardir, "source", "programmers-reference", "cpp") )
 
 # Set directory for DOLFIN source code
 if not "DOLFIN_DIR" in os.environ:
     raise RuntimeError, "You need to set the DOLFIN_DIR environment variable."
-dolfin_dir = os.environ["DOLFIN_DIR"]
+# Make sure we have an absolute path.
+dolfin_dir = os.path.abspath(os.environ["DOLFIN_DIR"])
 
-def generate_documentation(header, module):
-    "Extract documentation for given header in given module"
-
-    print "Generating documentation for %s..." % header
-
-    # List of classes with documentation
-    classnames = []
-    documentation = []
-
-    # Class name and parent class name
-    classname = None
-    parent = None
-
-    # Comment and signature
-    comment = None
-    signature = None
-
-    # Indentation of signatures
-    indent = 0
-
-    # Iterate over each line
-    f = open(os.path.join(dolfin_dir, "dolfin", module, header))
-    for line in f:
-
-        # Check for comment
-        if "///" in line:
-
-            # We may have either "///" and "/// "
-            if "/// " in line:
-                c = line.split("/// ")[1].rstrip()
-            else:
-                c = line.split("///")[1].rstrip()
-
-            # Found start of new comment
-            if comment is None:
-                comment = c
-
-            # Continuing comment on next line
-            else:
-                comment += "\n" + c
-
-        # Check for class
-        elif " class " in line and not ";" in line and not "//" in line:
-
-            # Get class name and parent
-            classname = line.split("class")[1].split(":")[0].strip()
-            if "public" in line:
-                parent = line.split("public")[1].strip()
-            else:
-                parent = None
-
-            # Store documentation
-            classnames.append(classname)
-            documentation.append((classname, parent, comment, []))
-            classname = None
-            parent = None
-            comment = None
-
-        # Check for function signature
-        elif comment is not None:
-            s = line.strip()
-
-            # Found start of new signature
-            if signature is None:
-                signature = s
-                #indent = (len(s.split("(")[0]) + 1)*" "
-
-            # Continuing signature on next line
-            else:
-                #signature += "\n" + indent + s
-                signature += " " + s
-
-            # Signature ends when we find ";" or "{"
-            if ";" in s or "{" in s:
-
-                # Strip out last part
-                signature = signature.split(";")[0]
-                signature = signature.split("{")[0]
-                signature = signature.strip()
-
-                # Remove stuff Spinx can't handle
-                signature = signature.replace("virtual ", "")
-                signature = signature.replace("inline ", "")
-
-                # Remove ": stuff" for constructors
-                if " : " in signature:
-                    signature = signature.split(" : ")[0]
-
-                # Skip destructors (not handled by Sphinx)
-                destructor = "~" in signature
-
-                # Get function name
-                #function = signature.split("(")[0].split(" ")[-1]
-
-                # Store documentation
-                if len(documentation) > 0 and not destructor:
-                    documentation[-1][-1].append((signature, comment))
-                elif not destructor:
-                    documentation = [(None, None, None, [(signature, comment)])]
-
-                # Reset comment and signature
-                comment = None
-                signature = None
-
-    # Close file
-    f.close()
-
-    # Sort documentation alphabetically within each class
-    for (classname, parent, comment, function_documentation) in documentation:
-        function_documentation.sort()
-
-    return documentation, classnames
+# Add path to dolfin_utils and import the documentation extractor.
+sys.path.append(os.path.abspath(os.path.join(dolfin_dir, "site-packages")))
+from dolfin_utils.documentation import extract_doc_representation
 
 def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
 
     # For quick testing
-    #if not header == "FunctionSpace.h":
-    #    return
+#    if not header == "Mesh.h":
+#        return
 
     print "Writing documentation for %s..." % header
 
@@ -283,38 +177,14 @@ def indent(string, num_spaces):
     "Indent given text block given number of spaces"
     return "\n".join(num_spaces*" " + l for l in string.split("\n"))
 
-# Extract modules from dolfin.h
-modules = []
-f = open(os.path.join(dolfin_dir, "dolfin", "dolfin.h"))
-for line in f:
-    if line.startswith("#include <dolfin/"):
-        module = line.split("/")[1]
-        modules += [module]
-f.close()
-
-# Iterate over modules
-documentation = {}
-classnames = []
-for module in modules:
-
-    # Extract header files from dolfin_foo.h
-    f = open(os.path.join(dolfin_dir, "dolfin", module, "dolfin_%s.h" % module))
-    documentation[module] = []
+# Get representation and write documentation.
+documentation, classnames = extract_doc_representation(dolfin_dir)
+for module in documentation:
     headers = []
-    for line in f:
-
-        # Generate documentation for header file
-        if line.startswith("#include <dolfin/"):
-            header = line.split("/")[2].split(">")[0]
-            headers.append(header)
-            doc, cls = generate_documentation(header, module)
-            documentation[module].append((header, doc))
-            classnames += cls
+    for (header, doc) in documentation[module]:
+        write_documentation(doc, header, module, classnames)
+        headers.append(header)
 
     # Generate index
     generate_index(module, headers)
 
-# Write documentation
-for module in documentation:
-    for (header, doc) in documentation[module]:
-        write_documentation(doc, header, module, classnames)

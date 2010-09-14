@@ -1,6 +1,6 @@
 .. Index file for the function directory
 
-.. _programmers_reference_cpp_function_index:
+.. _programmers_reference_python_function_index:
 
 ***************************
 DOLFIN ``function`` library

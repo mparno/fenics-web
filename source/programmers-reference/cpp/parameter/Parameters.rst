@@ -81,7 +81,7 @@ Parameters.h
     
         Assignment operator
 
-    .. cpp:function:: explicit Parameters(std::string key="parameters")
+    .. cpp:function:: explicit Parameters(std::string key = "parameters")
     
         Create empty parameter set
 
@@ -92,6 +92,11 @@ Parameters.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
+
+    .. cpp:function:: template<typename T> void add(std::string key)
+    
+        Add an unset parameter of type T. For example, to create a unset
+        parameter of type bool, do parameters.add<bool>("my_setting")
 
     .. cpp:function:: typedef XMLParameters XMLHandler
     

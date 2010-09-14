@@ -18,6 +18,10 @@ Parameter.h
     
         Create parameter for given key
 
+    .. cpp:function:: bool is_set() const
+    
+        Return true if parameter is set, return false otherwise
+
     .. cpp:function:: const Parameter& operator= (bool value)
     
         Assignment from bool
@@ -130,6 +134,10 @@ Parameter.h
         
     Parameter with value type int
 
+    .. cpp:function:: IntParameter(std::string key)
+    
+        Create unset int-valued
+
     .. cpp:function:: IntParameter(std::string key, int value)
     
         Create int-valued parameter
@@ -185,6 +193,10 @@ Parameter.h
         * :cpp:class:`Parameter`
         
     Parameter with value type double
+
+    .. cpp:function:: RealParameter(std::string key)
+    
+        Create unset double-valued parameter
 
     .. cpp:function:: RealParameter(std::string key, real value)
     
@@ -242,6 +254,10 @@ Parameter.h
         
     Parameter with value type string
 
+    .. cpp:function:: StringParameter(std::string key)
+    
+        Create unset string-valued parameter
+
     .. cpp:function:: StringParameter(std::string key, std::string value)
     
         Create string-valued parameter
@@ -297,6 +313,10 @@ Parameter.h
         * :cpp:class:`Parameter`
         
     Parameter with value type bool
+
+    .. cpp:function:: BoolParameter(std::string key)
+    
+        Create usnet bool-valued parameter
 
     .. cpp:function:: BoolParameter(std::string key, bool value)
     
