@@ -38,10 +38,6 @@ SingularSolver.h
     
         Create linear solver
 
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b
@@ -49,4 +45,8 @@ SingularSolver.h
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, const GenericMatrix& M)
     
         Solve linear system Ax = b using mass matrix M for setting constraint
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
 

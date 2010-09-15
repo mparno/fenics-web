@@ -27,10 +27,6 @@ SubSpace.h
     P = W[1] is the subspace for the pressure component. Furthermore,
     W[0][0] = V[0] is the first component of the velocity space etc.
 
-    .. cpp:function:: SubSpace(const FunctionSpace& V, const std::vector<uint>& component)
-    
-        Create subspace for given component (n levels)
-
     .. cpp:function:: SubSpace(const FunctionSpace& V, uint component)
     
         Create subspace for given component (one level)
@@ -38,4 +34,8 @@ SubSpace.h
     .. cpp:function:: SubSpace(const FunctionSpace& V, uint component, uint sub_component)
     
         Create subspace for given component (two levels)
+
+    .. cpp:function:: SubSpace(const FunctionSpace& V, const std::vector<uint>& component)
+    
+        Create subspace for given component (n levels)
 

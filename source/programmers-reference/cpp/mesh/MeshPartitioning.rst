@@ -51,10 +51,6 @@ MeshPartitioning.h
     initially created by the mesh and then contains only the number
     entities of dimension 0 (vertices) and dimension D (cells).
 
-    .. cpp:function:: static void number_entities(const Mesh& mesh, uint d)
-    
-        Create global entity indices for entities of dimension d
-
     .. cpp:function:: static void partition(Mesh& mesh)
     
         Create a partitioned mesh based on local meshes
@@ -62,4 +58,8 @@ MeshPartitioning.h
     .. cpp:function:: static void partition(Mesh& mesh, LocalMeshData& data)
     
         Create a partitioned mesh based on local mesh data
+
+    .. cpp:function:: static void number_entities(const Mesh& mesh, uint d)
+    
+        Create global entity indices for entities of dimension d
 

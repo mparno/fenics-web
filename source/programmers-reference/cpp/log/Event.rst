@@ -32,6 +32,10 @@ Event.h
     
         Constructor
 
+    .. cpp:function:: void operator() ()
+    
+        Display message
+
     .. cpp:function:: unsigned int count() const
     
         Display count
@@ -39,8 +43,4 @@ Event.h
     .. cpp:function:: unsigned int maxcount() const
     
         Maximum display count
-
-    .. cpp:function:: void operator() ()
-    
-        Display message
 

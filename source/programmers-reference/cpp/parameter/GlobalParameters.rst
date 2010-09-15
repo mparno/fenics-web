@@ -22,15 +22,15 @@ GlobalParameters.h
     
         Constructor
 
-    .. cpp:function:: extern GlobalParameters parameters
+    .. cpp:function:: void parse(int argc, char* argv[])
     
-        The global parameter database
+        Parse parameters from command-line
 
     .. cpp:function:: static Parameters default_parameters()
     
         Default parameter values
 
-    .. cpp:function:: void parse(int argc, char* argv[])
+    .. cpp:function:: extern GlobalParameters parameters
     
-        Parse parameters from command-line
+        The global parameter database
 

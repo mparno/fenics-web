@@ -24,20 +24,20 @@ SubDomain.h
     
         Return true for points inside the subdomain
 
-    .. cpp:function:: uint geometric_dimension() const
-    
-        Return geometric dimension
-
     .. cpp:function:: void map(const Array<double>& x, Array<double>&) const
     
         Map coordinate x in domain H to coordinate y in domain G (used for
         periodic boundary conditions)
 
+    .. cpp:function:: void snap(Array<double>& x) const
+    
+        Snap coordinate to boundary of sub domain
+
     .. cpp:function:: void mark(MeshFunction<uint>& sub_domains, uint sub_domain) const
     
         Set sub domain markers for given subdomain
 
-    .. cpp:function:: void snap(Array<double>& x) const
+    .. cpp:function:: uint geometric_dimension() const
     
-        Snap coordinate to boundary of sub domain
+        Return geometric dimension
 

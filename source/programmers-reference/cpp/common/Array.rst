@@ -16,49 +16,29 @@ Array.h
     of this class is to enable the simple and safe exchange of data between
     C++ and Python.
 
+    .. cpp:function:: explicit Array(uint N)
+    
+        Create array of size N
+
     .. cpp:function:: Array(const Array& other)
     
         Copy constructor (arg name need to have a different name that 'x')
-
-    .. cpp:function:: Array(uint N, T* x)
-    
-        Construct array from a pointer. Array will not take ownership.
 
     .. cpp:function:: Array(uint N, boost::shared_array<T> x)
     
         Construct array from a shared pointer
 
-    .. cpp:function:: T max() const
+    .. cpp:function:: Array(uint N, T* x)
     
-        Return maximum value of array
-
-    .. cpp:function:: T min() const
-    
-        Return minimum value of array
-
-    .. cpp:function:: T& operator[] (uint i)
-    
-        Access value of given entry (non-const version)
-
-    .. cpp:function:: boost::shared_array<T> data()
-    
-        Return pointer to data (non-const version)
+        Construct array from a pointer. Array will not take ownership.
 
     .. cpp:function:: const Array& operator= (const Array& x)
     
         Assignment operator
 
-    .. cpp:function:: const T& operator[] (uint i) const
+    .. cpp:function:: void update(uint N, T* _x)
     
-        Access value of given entry (const version)
-
-    .. cpp:function:: const boost::shared_array<T> data() const
-    
-        Return pointer to data (const version)
-
-    .. cpp:function:: explicit Array(uint N)
-    
-        Create array of size N
+        Construct array from a pointer. Array will not take ownership.
 
     .. cpp:function:: std::string str(bool verbose) const
     
@@ -67,17 +47,13 @@ Array.h
         efficiency) which means that one needs to call str() directly
         instead of using the info() function on Array objects.
 
-    .. cpp:function:: uint size() const
-    
-        Return size of array
-
     .. cpp:function:: void resize(uint N)
     
         Resize array to size N. If size changes, contents will be destroyed.
 
-    .. cpp:function:: void update(uint N, T* _x)
+    .. cpp:function:: uint size() const
     
-        Construct array from a pointer. Array will not take ownership.
+        Return size of array
 
     .. cpp:function:: void zero()
     
@@ -86,4 +62,28 @@ Array.h
     .. cpp:function:: void zero_eps(double eps=DOLFIN_EPS)
     
         Set entries which meet (abs(x[i]) < eps) to zero
+
+    .. cpp:function:: T min() const
+    
+        Return minimum value of array
+
+    .. cpp:function:: T max() const
+    
+        Return maximum value of array
+
+    .. cpp:function:: const T& operator[] (uint i) const
+    
+        Access value of given entry (const version)
+
+    .. cpp:function:: T& operator[] (uint i)
+    
+        Access value of given entry (non-const version)
+
+    .. cpp:function:: const boost::shared_array<T> data() const
+    
+        Return pointer to data (const version)
+
+    .. cpp:function:: boost::shared_array<T> data()
+    
+        Return pointer to data (non-const version)
 

@@ -22,6 +22,10 @@ GenericLUSolver.h
         
     This a base class for LU solvers
 
+    .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
+    
+        Set operator (matrix)
+
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b) = 0
     
         Solve linear system Ax = b
@@ -29,8 +33,4 @@ GenericLUSolver.h
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b
-
-    .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
-    
-        Set operator (matrix)
 

@@ -10,10 +10,6 @@ basic.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: double rand()
-    
-        Return a random number, uniformly distributed between [0.0, 1.0)
-
     .. cpp:function:: double sqr(double x)
     
         Return the square of x
@@ -21,6 +17,10 @@ basic.h
     .. cpp:function:: uint ipow(uint a, uint n)
     
         Return a to the power n
+
+    .. cpp:function:: double rand()
+    
+        Return a random number, uniformly distributed between [0.0, 1.0)
 
     .. cpp:function:: void seed(unsigned int s)
     

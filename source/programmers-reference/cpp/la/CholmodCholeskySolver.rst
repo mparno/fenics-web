@@ -29,17 +29,21 @@ CholmodCholeskySolver.h
     
         Constructor
 
-    .. cpp:function:: CholmodCholeskySolver(boost::shared_ptr<const GenericMatrix> A)
-    
-        Constructor
-
     .. cpp:function:: CholmodCholeskySolver(const GenericMatrix& A)
     
         Constructor
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: CholmodCholeskySolver(boost::shared_ptr<const GenericMatrix> A)
     
-        Default parameter values
+        Constructor
+
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    
+        Solve the operator (matrix)
+
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b for a sparse matrix using CHOLMOD
 
     .. cpp:function:: uint factorize(const GenericMatrix& A)
     
@@ -49,31 +53,19 @@ CholmodCholeskySolver.h
     
         Solve factorized system (CHOLMOD).
 
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    .. cpp:function:: static Parameters default_parameters()
     
-        Solve linear system Ax = b for a sparse matrix using CHOLMOD
-
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
-    
-        Solve the operator (matrix)
+        Default parameter values
 
 .. cpp:class:: Cholmod
-
-    .. cpp:function:: cholmod_dense* residual(cholmod_dense* x, cholmod_dense* b)
-    
-        Compute residual: b-Ax
-
-    .. cpp:function:: double residual_norm(cholmod_dense* r, cholmod_dense* x, cholmod_dense* b)
-    
-        Compute residual norm
-
-    .. cpp:function:: void check_status(std::string function)
-    
-        Check status flag returned by an CHOLMOD function
 
     .. cpp:function:: void clear()
     
         Clear data
+
+    .. cpp:function:: void init(long int* Ap, long int* Ai, double* Ax, uint M, uint nz)
+    
+        Initialise with matrix
 
     .. cpp:function:: void factorize()
     
@@ -83,11 +75,19 @@ CholmodCholeskySolver.h
     
         Factorized solve
 
-    .. cpp:function:: void init(long int* Ap, long int* Ai, double* Ax, uint M, uint nz)
+    .. cpp:function:: cholmod_dense* residual(cholmod_dense* x, cholmod_dense* b)
     
-        Initialise with matrix
+        Compute residual: b-Ax
+
+    .. cpp:function:: double residual_norm(cholmod_dense* r, cholmod_dense* x, cholmod_dense* b)
+    
+        Compute residual norm
 
     .. cpp:function:: void refine_once(cholmod_dense* x, cholmod_dense* r)
     
         Perform one refinement
+
+    .. cpp:function:: void check_status(std::string function)
+    
+        Check status flag returned by an CHOLMOD function
 

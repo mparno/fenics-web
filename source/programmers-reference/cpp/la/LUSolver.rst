@@ -16,10 +16,6 @@ LUSolver.h
     
         * :cpp:class:`GenericLUSolver`
         
-    .. cpp:function:: LUSolver(const GenericMatrix& A, std::string type = "lu")
-    
-        Constructor
-
     .. cpp:function:: public:  LUSolver(std::string type = "lu")
     
         LU solver for the built-in LA backends. The type can be "lu" or
@@ -28,9 +24,13 @@ LUSolver.h
         default to LU.
         Constructor
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: LUSolver(const GenericMatrix& A, std::string type = "lu")
     
-        Default parameter values
+        Constructor
+
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    
+        Set operator (matrix)
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
@@ -40,7 +40,7 @@ LUSolver.h
     
         Solve linear system
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: static Parameters default_parameters()
     
-        Set operator (matrix)
+        Default parameter values
 

@@ -20,27 +20,27 @@ DefaultFactory.h
     
         Constructor
 
-    .. cpp:function:: dolfin::GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const
-    
-        Create Krylov solver
-
-    .. cpp:function:: dolfin::GenericLinearSolver* create_lu_solver() const
-    
-        Create LU solver
-
     .. cpp:function:: dolfin::GenericMatrix* create_matrix() const
     
         Create empty matrix
 
-    .. cpp:function:: dolfin::GenericSparsityPattern* create_pattern() const
+    .. cpp:function:: dolfin::GenericVector* create_vector() const
     
-        Create empty sparsity pattern
+        Create empty vector (global)
 
     .. cpp:function:: dolfin::GenericVector* create_local_vector() const
     
         Create empty vector (local)
 
-    .. cpp:function:: dolfin::GenericVector* create_vector() const
+    .. cpp:function:: dolfin::GenericSparsityPattern* create_pattern() const
     
-        Create empty vector (global)
+        Create empty sparsity pattern
+
+    .. cpp:function:: dolfin::GenericLinearSolver* create_lu_solver() const
+    
+        Create LU solver
+
+    .. cpp:function:: dolfin::GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const
+    
+        Create Krylov solver
 

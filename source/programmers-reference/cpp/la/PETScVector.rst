@@ -24,73 +24,97 @@ PETScVector.h
     access the PETSc Vec pointer using the function vec() and
     use the standard PETSc interface.
 
-    .. cpp:function:: LinearAlgebraFactory& factory() const
+    .. cpp:function:: explicit PETScVector(std::string type="global")
     
-        Return linear algebra backend factory
-
-    .. cpp:function:: PETScVector(const PETScVector& x)
-    
-        Copy constructor
+        Create empty vector
 
     .. cpp:function:: PETScVector(uint N, std::string type="global")
     
         Create vector of size N
 
+    .. cpp:function:: PETScVector(const PETScVector& x)
+    
+        Copy constructor
+
+    .. cpp:function:: explicit PETScVector(boost::shared_ptr<Vec> x)
+    
+        Create vector from given PETSc Vec pointer
+
     .. cpp:function:: PETScVector* copy() const
     
         Return copy of tensor
 
-    .. cpp:function:: boost::shared_ptr<Vec> vec() const
+    .. cpp:function:: void zero()
     
-        Return shared_ptr to PETSc Vec object
+        Set all entries to zero and keep any sparse structure
 
-    .. cpp:function:: const GenericVector& operator= (const GenericVector& x)
+    .. cpp:function:: void apply(std::string mode)
     
-        Assignment operator
+        Finalize assembly of tensor
 
-    .. cpp:function:: const PETScVector& operator*= (const GenericVector& x)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Multiply vector by another vector pointwise
+        Return informal string representation (pretty-print)
 
-    .. cpp:function:: const PETScVector& operator*= (double a)
+    .. cpp:function:: void resize(uint N)
     
-        Multiply vector by given number
+        Resize vector ro size N
 
-    .. cpp:function:: const PETScVector& operator+= (const GenericVector& x)
+    .. cpp:function:: uint size() const
     
-        Add given vector
+        Return size of vector
 
-    .. cpp:function:: const PETScVector& operator-= (const GenericVector& x)
+    .. cpp:function:: std::pair<uint, uint> local_range() const
     
-        Subtract given vector
+        Return ownership range of a vector
 
-    .. cpp:function:: const PETScVector& operator/= (double a)
+    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
     
-        Divide vector by given number
+        Get block of values (values may live on any process)
 
-    .. cpp:function:: const PETScVector& operator= (const PETScVector& x)
+    .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
     
-        Assignment operator
+        Get block of values (values must all live on the local process)
 
-    .. cpp:function:: const PETScVector& operator= (double a)
+    .. cpp:function:: void set(const double* block, uint m, const uint* rows)
     
-        Assignment operator
+        Set block of values
+
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
+    
+        Add block of values
+
+    .. cpp:function:: void get_local(Array<double>& values) const
+    
+        Get all values on local process
+
+    .. cpp:function:: void set_local(const Array<double>& values)
+    
+        Set all values on local process
+
+    .. cpp:function:: void add_local(const Array<double>& values)
+    
+        Add values to each entry on local process
+
+    .. cpp:function:: void axpy(double a, const GenericVector& x)
+    
+        Add multiple of given vector (AXPY operation)
 
     .. cpp:function:: double inner(const GenericVector& v) const
     
         Return inner product with given vector
 
-    .. cpp:function:: double max() const
+    .. cpp:function:: double norm(std::string norm_type) const
     
-        Return maximum value of vector
+        Return norm of vector
 
     .. cpp:function:: double min() const
     
         Return minimum value of vector
 
-    .. cpp:function:: double norm(std::string norm_type) const
+    .. cpp:function:: double max() const
     
-        Return norm of vector
+        Return maximum value of vector
 
     .. cpp:function:: double sum() const
     
@@ -100,41 +124,45 @@ PETScVector.h
     
         Return sum of selected rows in vector
 
-    .. cpp:function:: explicit PETScVector(boost::shared_ptr<Vec> x)
+    .. cpp:function:: const PETScVector& operator*= (double a)
     
-        Create vector from given PETSc Vec pointer
+        Multiply vector by given number
 
-    .. cpp:function:: explicit PETScVector(std::string type="global")
+    .. cpp:function:: const PETScVector& operator*= (const GenericVector& x)
     
-        Create empty vector
+        Multiply vector by another vector pointwise
 
-    .. cpp:function:: std::pair<uint, uint> local_range() const
+    .. cpp:function:: const PETScVector& operator/= (double a)
     
-        Return ownership range of a vector
+        Divide vector by given number
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: const PETScVector& operator+= (const GenericVector& x)
     
-        Return informal string representation (pretty-print)
+        Add given vector
 
-    .. cpp:function:: uint size() const
+    .. cpp:function:: const PETScVector& operator-= (const GenericVector& x)
     
-        Return size of vector
+        Subtract given vector
 
-    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
+    .. cpp:function:: const GenericVector& operator= (const GenericVector& x)
     
-        Add block of values
+        Assignment operator
 
-    .. cpp:function:: void add_local(const Array<double>& values)
+    .. cpp:function:: const PETScVector& operator= (double a)
     
-        Add values to each entry on local process
+        Assignment operator
 
-    .. cpp:function:: void apply(std::string mode)
+    .. cpp:function:: LinearAlgebraFactory& factory() const
     
-        Finalize assembly of tensor
+        Return linear algebra backend factory
 
-    .. cpp:function:: void axpy(double a, const GenericVector& x)
+    .. cpp:function:: boost::shared_ptr<Vec> vec() const
     
-        Add multiple of given vector (AXPY operation)
+        Return shared_ptr to PETSc Vec object
+
+    .. cpp:function:: const PETScVector& operator= (const PETScVector& x)
+    
+        Assignment operator
 
     .. cpp:function:: void gather(GenericVector& y, const Array<uint>& indices) const
     
@@ -142,32 +170,4 @@ PETScVector.h
         0, then a local index array is created such that the order of
         the values in the return array is the same as the order in
         global_indices.
-
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
-    
-        Get block of values (values may live on any process)
-
-    .. cpp:function:: void get_local(Array<double>& values) const
-    
-        Get all values on local process
-
-    .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
-    
-        Get block of values (values must all live on the local process)
-
-    .. cpp:function:: void resize(uint N)
-    
-        Resize vector ro size N
-
-    .. cpp:function:: void set(const double* block, uint m, const uint* rows)
-    
-        Set block of values
-
-    .. cpp:function:: void set_local(const Array<double>& values)
-    
-        Set all values on local process
-
-    .. cpp:function:: void zero()
-    
-        Set all entries to zero and keep any sparse structure
 

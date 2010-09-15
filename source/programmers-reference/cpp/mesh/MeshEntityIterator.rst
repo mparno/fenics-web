@@ -36,55 +36,6 @@ MeshEntityIterator.h
     are provided for entities of type Vertex, Edge, Face, Facet and Cell.
     These iterators are defined along with their respective classes.
 
-    .. cpp:function:: //    MeshEntityIterator(const MeshEntityIterator& entity)
-    
-        Copy constructor is private to disallow usage. If it were public (or not
-        declared and thus a default version available) it would allow code like
-        
-        for (CellIterator c0(mesh); !c0.end(); ++c0)
-          for (CellIterator c1(c0); !c1.end(); ++c1)
-             ...
-        
-        c1 looks to be an iterator over the entities around c0 when it is in
-        fact a copy of c0.
-
-    .. cpp:function:: //dolfin/mesh/MeshEntityIterator.h:94: Warning|508| Declaration of 'operator ==' shadows declaration accessible via operator->(), //Use const_cast to use operator* inside comparison, which automatically //updates the entity index corresponding to pos *before* comparison (since //update of entity delays until request for entity) bool operator==(const MeshEntityIterator & it) const
-    
-        Comparison operator.
-        @internal
-        Uncommenting following  results into the warning message:
-
-    .. cpp:function:: //std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: MeshEntity& operator*()
-    
-        Dereference operator
-
-    .. cpp:function:: MeshEntity& operator[] (uint pos)
-    
-        Random access operator.
-
-    .. cpp:function:: MeshEntity* operator->()
-    
-        Member access operator
-
-    .. cpp:function:: MeshEntityIterator end_iterator()
-    
-        Provide a safeguard iterator pointing beyond the end of an iteration
-        process, either iterating over the mesh /or incident entities. Added to
-        be bit more like STL iteratoren, since many algorithms rely on a kind of
-        beyond iterator.
-
-    .. cpp:function:: MeshEntityIterator& operator++()
-    
-        Step to next mesh entity (prefix increment)
-
-    .. cpp:function:: MeshEntityIterator& operator--()
-    
-        Step to the previous mesh entity (prefix decrease)
-
     .. cpp:function:: MeshEntityIterator()
     
         Default constructor
@@ -101,13 +52,62 @@ MeshEntityIterator.h
     
         Copy Constructor
 
-    .. cpp:function:: bool end() const
+    .. cpp:function:: MeshEntityIterator& operator++()
     
-        Check if iterator has reached the end
+        Step to next mesh entity (prefix increment)
+
+    .. cpp:function:: MeshEntityIterator& operator--()
+    
+        Step to the previous mesh entity (prefix decrease)
 
     .. cpp:function:: uint pos() const
     
         Return current position
+
+    .. cpp:function:: //dolfin/mesh/MeshEntityIterator.h:94: Warning|508| Declaration of 'operator ==' shadows declaration accessible via operator->(), //Use const_cast to use operator* inside comparison, which automatically //updates the entity index corresponding to pos *before* comparison (since //update of entity delays until request for entity) bool operator==(const MeshEntityIterator & it) const
+    
+        Comparison operator.
+        @internal
+        Uncommenting following  results into the warning message:
+
+    .. cpp:function:: MeshEntity& operator*()
+    
+        Dereference operator
+
+    .. cpp:function:: MeshEntity* operator->()
+    
+        Member access operator
+
+    .. cpp:function:: MeshEntity& operator[] (uint pos)
+    
+        Random access operator.
+
+    .. cpp:function:: bool end() const
+    
+        Check if iterator has reached the end
+
+    .. cpp:function:: MeshEntityIterator end_iterator()
+    
+        Provide a safeguard iterator pointing beyond the end of an iteration
+        process, either iterating over the mesh /or incident entities. Added to
+        be bit more like STL iteratoren, since many algorithms rely on a kind of
+        beyond iterator.
+
+    .. cpp:function:: //std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: //    MeshEntityIterator(const MeshEntityIterator& entity)
+    
+        Copy constructor is private to disallow usage. If it were public (or not
+        declared and thus a default version available) it would allow code like
+        
+        for (CellIterator c0(mesh); !c0.end(); ++c0)
+          for (CellIterator c1(c0); !c1.end(); ++c1)
+             ...
+        
+        c1 looks to be an iterator over the entities around c0 when it is in
+        fact a copy of c0.
 
     .. cpp:function:: void set_end()
     

@@ -21,21 +21,13 @@ DynamicMeshEditor.h
     
         Constructor
 
-    .. cpp:function:: void add_cell(uint c, const std::vector<uint>& v)
+    .. cpp:function:: void open(Mesh& mesh, CellType::Type type, uint tdim, uint gdim)
     
-        Add cell with given vertices
+        Open mesh of given cell type, topological and geometrical dimension
 
-    .. cpp:function:: void add_cell(uint c, uint v0, uint v1)
+    .. cpp:function:: void open(Mesh& mesh, std::string type, uint tdim, uint gdim)
     
-        Add cell (interval) with given vertices
-
-    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2)
-    
-        Add cell (triangle) with given vertices
-
-    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2, uint v3)
-    
-        Add cell (tetrahedron) with given vertices
+        Open mesh of given cell type, topological and geometrical dimension
 
     .. cpp:function:: void add_vertex(uint v, const Point& p)
     
@@ -53,15 +45,23 @@ DynamicMeshEditor.h
     
         Add vertex v at given coordinate (x, y, z)
 
+    .. cpp:function:: void add_cell(uint c, const std::vector<uint>& v)
+    
+        Add cell with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1)
+    
+        Add cell (interval) with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2)
+    
+        Add cell (triangle) with given vertices
+
+    .. cpp:function:: void add_cell(uint c, uint v0, uint v1, uint v2, uint v3)
+    
+        Add cell (tetrahedron) with given vertices
+
     .. cpp:function:: void close(bool order=false)
     
         Close mesh, finish editing, and order entities locally
-
-    .. cpp:function:: void open(Mesh& mesh, CellType::Type type, uint tdim, uint gdim)
-    
-        Open mesh of given cell type, topological and geometrical dimension
-
-    .. cpp:function:: void open(Mesh& mesh, std::string type, uint tdim, uint gdim)
-    
-        Open mesh of given cell type, topological and geometrical dimension
 

@@ -24,7 +24,7 @@ PETScLUSolver.h
     linear systems of the form Ax = b. It is a wrapper for the LU
     solver of PETSc.
 
-    .. cpp:function:: PETScLUSolver(boost::shared_ptr<const PETScMatrix> A, std::string lu_package="default")
+    .. cpp:function:: PETScLUSolver(std::string lu_package="default")
     
         Constructor
 
@@ -32,25 +32,17 @@ PETScLUSolver.h
     
         Constructor
 
-    .. cpp:function:: PETScLUSolver(std::string lu_package="default")
+    .. cpp:function:: PETScLUSolver(boost::shared_ptr<const PETScMatrix> A, std::string lu_package="default")
     
         Constructor
 
-    .. cpp:function:: boost::shared_ptr<KSP> _ksp
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        PETSc solver pointer
+        Set operator (matrix)
 
-    .. cpp:function:: boost::shared_ptr<KSP> ksp() const
+    .. cpp:function:: void set_operator(const PETScMatrix& A)
     
-        Return PETSc KSP pointer
-
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
+        Set operator (matrix)
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
@@ -64,11 +56,19 @@ PETScLUSolver.h
     
         Solve linear system Ax = b
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Set operator (matrix)
+        Return informal string representation (pretty-print)
 
-    .. cpp:function:: void set_operator(const PETScMatrix& A)
+    .. cpp:function:: boost::shared_ptr<KSP> ksp() const
     
-        Set operator (matrix)
+        Return PETSc KSP pointer
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
+
+    .. cpp:function:: boost::shared_ptr<KSP> _ksp
+    
+        PETSc solver pointer
 

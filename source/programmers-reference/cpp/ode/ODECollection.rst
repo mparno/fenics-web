@@ -31,25 +31,25 @@ ODECollection.h
     
         Create a collection of ODEs
 
-    .. cpp:function:: void get_state(real* u)
+    .. cpp:function:: void solve(real t0, real t1)
     
-        Get states for all ODE systems
-
-    .. cpp:function:: void get_state(uint system, real* u)
-    
-        Get state for given ODE system
-
-    .. cpp:function:: void set_state(const real* u)
-    
-        Set states for all ODE systems
+        Solve ODE collection on [t0, t1]
 
     .. cpp:function:: void set_state(uint system, const real* u)
     
         Set state for given ODE system
 
-    .. cpp:function:: void solve(real t0, real t1)
+    .. cpp:function:: void set_state(const real* u)
     
-        Solve ODE collection on [t0, t1]
+        Set states for all ODE systems
+
+    .. cpp:function:: void get_state(uint system, real* u)
+    
+        Get state for given ODE system
+
+    .. cpp:function:: void get_state(real* u)
+    
+        Get states for all ODE systems
 
     .. cpp:function:: void update(real* u, real t, uint system)
     

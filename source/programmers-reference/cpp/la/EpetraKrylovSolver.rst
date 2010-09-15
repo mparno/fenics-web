@@ -28,9 +28,29 @@ EpetraKrylovSolver.h
     
         Create Krylov solver for a particular method and TrilinosPreconditioner
 
-    .. cpp:function:: boost::shared_ptr<AztecOO> aztecoo() const
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Return pointer to Aztec00
+        Solve the operator (matrix)
+
+    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    
+        Solve the operator (matrix)
+
+    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(EpetraVector& x, const EpetraVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(const EpetraMatrix& A, EpetraVector& x, const EpetraVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
 
     .. cpp:function:: static Parameters default_parameters()
     
@@ -40,27 +60,7 @@ EpetraKrylovSolver.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: uint solve(EpetraVector& x, const EpetraVector& b)
+    .. cpp:function:: boost::shared_ptr<AztecOO> aztecoo() const
     
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(const EpetraMatrix& A, EpetraVector& x, const EpetraVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
-    
-        Solve the operator (matrix)
-
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
-    
-        Solve the operator (matrix)
+        Return pointer to Aztec00
 

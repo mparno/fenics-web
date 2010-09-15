@@ -59,13 +59,25 @@ DirichletBC.h
     "topological", "geometric" and "pointwise".
     This class specifies the interface for setting (strong)
 
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const SubDomain& sub_domain, std::string method="topological")
+    
+        Create boundary condition for subdomain
+
     .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, boost::shared_ptr<const SubDomain> sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain
 
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
+    
+        Create boundary condition for subdomain specified by index
+
     .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
+
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, uint sub_domain, std::string method="topological")
+    
+        Create boundary condition for boundary data included in the mesh
 
     .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, uint sub_domain, std::string method="topological")
     
@@ -75,76 +87,64 @@ DirichletBC.h
     
         Copy constructor
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
+    .. cpp:function:: const DirichletBC& operator= (const DirichletBC& bc)
     
-        Create boundary condition for subdomain specified by index
+        Assignment operator
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const SubDomain& sub_domain, std::string method="topological")
+    .. cpp:function:: void apply(GenericMatrix& A) const
     
-        Create boundary condition for subdomain
+        Apply boundary condition to a matrix
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, uint sub_domain, std::string method="topological")
+    .. cpp:function:: void apply(GenericVector& b) const
     
-        Create boundary condition for boundary data included in the mesh
+        Apply boundary condition to a vector
 
-    .. cpp:function:: bool is_compatible(GenericFunction& v) const
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b) const
     
-        Check if given function is compatible with boundary condition (checking only vertex values)
+        Apply boundary condition to a linear system
+
+    .. cpp:function:: void apply(GenericVector& b, const GenericVector& x) const
+    
+        Apply boundary condition to a vector for a nonlinear problem
+
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const
+    
+        Apply boundary condition to a linear system for a nonlinear problem
+
+    .. cpp:function:: void zero(GenericMatrix& A) const
+    
+        Make row associated with boundary conditions zero, useful for non-diagonal matrices in a block matrix.
+
+    .. cpp:function:: const std::vector<std::pair<uint, uint> >& markers()
+    
+        Return boundary markers (facets stored as pairs of cells and local facet numbers)
+
+    .. cpp:function:: const GenericFunction& value()
+    
+        Return boundary value g
 
     .. cpp:function:: boost::shared_ptr<const GenericFunction> value_ptr()
     
         Return shared pointer to boundary value g
         Testing multiline comment
 
-    .. cpp:function:: const DirichletBC& operator= (const DirichletBC& bc)
-    
-        Assignment operator
-
-    .. cpp:function:: const GenericFunction& value()
-    
-        Return boundary value g
-
-    .. cpp:function:: const std::vector<std::pair<uint, uint> >& markers()
-    
-        Return boundary markers (facets stored as pairs of cells and local facet numbers)
-
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: void apply(GenericMatrix& A) const
-    
-        Apply boundary condition to a matrix
-
-    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b) const
-    
-        Apply boundary condition to a linear system
-
-    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const
-    
-        Apply boundary condition to a linear system for a nonlinear problem
-
-    .. cpp:function:: void apply(GenericVector& b) const
-    
-        Apply boundary condition to a vector
-
-    .. cpp:function:: void apply(GenericVector& b, const GenericVector& x) const
-    
-        Apply boundary condition to a vector for a nonlinear problem
-
     .. cpp:function:: void get_bc(uint* indicators, double* values) const
     
         Get Dirichlet values and indicators
 
-    .. cpp:function:: void set_value(boost::shared_ptr<const GenericFunction> g)
+    .. cpp:function:: bool is_compatible(GenericFunction& v) const
     
-        Set value g for boundary condition, domain remains unchanged
+        Check if given function is compatible with boundary condition (checking only vertex values)
 
     .. cpp:function:: void set_value(const GenericFunction& g)
     
         Set value g for boundary condition, domain remains unchanged
 
-    .. cpp:function:: void zero(GenericMatrix& A) const
+    .. cpp:function:: void set_value(boost::shared_ptr<const GenericFunction> g)
     
-        Make row associated with boundary conditions zero, useful for non-diagonal matrices in a block matrix.
+        Set value g for boundary condition, domain remains unchanged
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
 

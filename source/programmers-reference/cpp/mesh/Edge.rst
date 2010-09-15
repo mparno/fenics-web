@@ -18,13 +18,13 @@ Edge.h
         
     An Edge is a MeshEntity of topological dimension 1.
 
-    .. cpp:function:: Edge(MeshEntity& entity)
-    
-        Create edge from mesh entity
-
     .. cpp:function:: Edge(const Mesh& mesh, uint index)
     
         Create edge on given mesh
+
+    .. cpp:function:: Edge(MeshEntity& entity)
+    
+        Create edge from mesh entity
 
     .. cpp:function:: double length()
     

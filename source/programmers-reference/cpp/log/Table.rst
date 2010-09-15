@@ -38,13 +38,33 @@ Table.h
     
         Return table entry
 
-    .. cpp:function:: const Table& operator= (const Table& table)
+    .. cpp:function:: void set(std::string row, std::string col, int value)
     
-        Assignment operator
+        Set value of table entry
+
+    .. cpp:function:: void set(std::string row, std::string col, uint value)
+    
+        Set value of table entry
+
+    .. cpp:function:: void set(std::string row, std::string col, double value)
+    
+        Set value of table entry
+
+    .. cpp:function:: void set(std::string row, std::string col, std::string value)
+    
+        Set value of table entry
 
     .. cpp:function:: std::string get(std::string row, std::string col) const
     
         Get value of table entry
+
+    .. cpp:function:: std::string title() const
+    
+        Return table title
+
+    .. cpp:function:: const Table& operator= (const Table& table)
+    
+        Assignment operator
 
     .. cpp:function:: std::string str(bool verbose) const
     
@@ -54,26 +74,6 @@ Table.h
     
         Return informal string representation for LaTeX
 
-    .. cpp:function:: std::string title() const
-    
-        Return table title
-
-    .. cpp:function:: void set(std::string row, std::string col, double value)
-    
-        Set value of table entry
-
-    .. cpp:function:: void set(std::string row, std::string col, int value)
-    
-        Set value of table entry
-
-    .. cpp:function:: void set(std::string row, std::string col, std::string value)
-    
-        Set value of table entry
-
-    .. cpp:function:: void set(std::string row, std::string col, uint value)
-    
-        Set value of table entry
-
 .. cpp:class:: TableEntry
 
     This class represents an entry in a Table
@@ -82,7 +82,7 @@ Table.h
     
         Create table entry
 
-    .. cpp:function:: const TableEntry& operator= (double value)
+    .. cpp:function:: const TableEntry& operator= (uint value)
     
         Assign value to table entry
 
@@ -90,11 +90,11 @@ Table.h
     
         Assign value to table entry
 
-    .. cpp:function:: const TableEntry& operator= (std::string value)
+    .. cpp:function:: const TableEntry& operator= (double value)
     
         Assign value to table entry
 
-    .. cpp:function:: const TableEntry& operator= (uint value)
+    .. cpp:function:: const TableEntry& operator= (std::string value)
     
         Assign value to table entry
 

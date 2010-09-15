@@ -23,9 +23,13 @@ KrylovSolver.h
     
         Create Krylov solver
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Default parameter values
+        Set operator (matrix)
+
+    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    
+        Set operator (matrix) and preconditioner matrix
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
@@ -35,11 +39,7 @@ KrylovSolver.h
     
         Solve linear system Ax = b
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: static Parameters default_parameters()
     
-        Set operator (matrix)
-
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
-    
-        Set operator (matrix) and preconditioner matrix
+        Default parameter values
 

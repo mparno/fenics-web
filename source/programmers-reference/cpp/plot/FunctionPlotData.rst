@@ -21,13 +21,13 @@ FunctionPlotData.h
     Function objects. The data is stored as a mesh and a vector
     of interpolated vertex values.
 
-    .. cpp:function:: FunctionPlotData()
-    
-        Create empty data to be read from file
-
     .. cpp:function:: FunctionPlotData(const GenericFunction& v, const Mesh& mesh)
     
         Create plot data for given function
+
+    .. cpp:function:: FunctionPlotData()
+    
+        Create empty data to be read from file
 
     .. cpp:function:: GenericVector& vertex_values() const
     

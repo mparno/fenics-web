@@ -20,18 +20,6 @@ Data.h
     
         Constructor
 
-    .. cpp:function:: Point normal() const
-    
-        Return current facet normal (if available)
-
-    .. cpp:function:: bool on_facet() const
-    
-        Check if we are on a facet
-
-    .. cpp:function:: const Array<double> x
-    
-        The coordinates
-
     .. cpp:function:: const Cell& cell() const
     
         Return current cell (if available)
@@ -44,13 +32,21 @@ Data.h
     
         Return current facet (if available)
 
+    .. cpp:function:: Point normal() const
+    
+        Return current facet normal (if available)
+
     .. cpp:function:: uint geometric_dimension() const
     
         Return geometric dimension of cell
 
-    .. cpp:function:: void clear()
+    .. cpp:function:: bool on_facet() const
     
-        Clear all cell data
+        Check if we are on a facet
+
+    .. cpp:function:: const Array<double> x
+    
+        The coordinates
 
     .. cpp:function:: void set(const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet)
     
@@ -59,4 +55,8 @@ Data.h
     .. cpp:function:: void set(const ufc::cell& ufc_cell, const double* x)
     
         Set UFC cell and coordinate
+
+    .. cpp:function:: void clear()
+    
+        Clear all cell data
 

@@ -40,61 +40,61 @@ ComplexODE.h
     
         Constructor
 
-    .. cpp:function:: bool update(const complex z[], real t, bool end)
+    .. cpp:function:: void z0(complex z[]) = 0
     
-        Update ODE, return false to stop (optional)
-
-    .. cpp:function:: bool update(const real* u, real t, bool end)
-    
-        Update for real-valued ODE
+        Set initial values
 
     .. cpp:function:: complex f(const complex z[], real t, uint i)
     
         Evaluate right-hand side (multi-adaptive version)
 
-    .. cpp:function:: real f(const real* u, real t, uint i)
+    .. cpp:function:: void f(const complex z[], real t, complex y[])
     
-        Return right-hand side for real-valued ODE
-
-    .. cpp:function:: real k(uint i)
-    
-        Return time step for component i (optional)
-
-    .. cpp:function:: real timestep(uint i)
-    
-        Return time step for real-valued ODE
-
-    .. cpp:function:: void J(const complex x[], complex y[], const complex u[], real t)
-    
-        Compute product y = Jx for Jacobian J
-
-    .. cpp:function:: void J(const real* x, real* y, const real* u, real t)
-    
-        Compute product y = Jx for real-valued ODE
+        Evaluate right-hand side (mono-adaptive version)
 
     .. cpp:function:: void M(const complex x[], complex y[], const complex z[], real t)
     
         Compute product y = Mx for implicit system
 
-    .. cpp:function:: void M(const real* x, real* y, const real* u, real t)
+    .. cpp:function:: void J(const complex x[], complex y[], const complex u[], real t)
     
-        Compute product y = Mx for real-valued ODE
+        Compute product y = Jx for Jacobian J
 
-    .. cpp:function:: void f(const complex z[], real t, complex y[])
+    .. cpp:function:: real k(uint i)
     
-        Evaluate right-hand side (mono-adaptive version)
+        Return time step for component i (optional)
 
-    .. cpp:function:: void f(const real* u, real t, real* y)
+    .. cpp:function:: bool update(const complex z[], real t, bool end)
     
-        Evaluate right-hand side for real-valued ODE
+        Update ODE, return false to stop (optional)
 
     .. cpp:function:: void u0(real* u)
     
         Return initial value for real-valued ODE
 
-    .. cpp:function:: void z0(complex z[]) = 0
+    .. cpp:function:: real f(const real* u, real t, uint i)
     
-        Set initial values
+        Return right-hand side for real-valued ODE
+
+    .. cpp:function:: void f(const real* u, real t, real* y)
+    
+        Evaluate right-hand side for real-valued ODE
+
+    .. cpp:function:: void M(const real* x, real* y, const real* u, real t)
+    
+        Compute product y = Mx for real-valued ODE
+
+    .. cpp:function:: void J(const real* x, real* y, const real* u, real t)
+    
+        Compute product y = Jx for real-valued ODE
+
+    .. cpp:function:: real timestep(uint i)
+    
+        Return time step for real-valued ODE
+
+    .. cpp:function:: bool update(const real* u, real t, bool end)
+    
+        Update for real-valued ODE
 
 .. cpp:class:: DummyComplexODE
 

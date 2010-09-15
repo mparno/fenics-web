@@ -29,6 +29,14 @@ PETScBaseMatrix.h
     
         Constructor
 
+    .. cpp:function:: void resize(uint m, uint n) = 0
+    
+        Resize virtual matrin
+
+    .. cpp:function:: uint size(uint dim) const
+    
+        Return number of rows (dim = 0) or columns (dim = 1) along dimension dim
+
     .. cpp:function:: boost::shared_ptr<Mat> mat() const
     
         Return PETSc Mat pointer
@@ -36,12 +44,4 @@ PETScBaseMatrix.h
     .. cpp:function:: std::string str(bool verbose) const = 0
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: uint size(uint dim) const
-    
-        Return number of rows (dim = 0) or columns (dim = 1) along dimension dim
-
-    .. cpp:function:: void resize(uint m, uint n) = 0
-    
-        Resize virtual matrin
 

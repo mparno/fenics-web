@@ -36,37 +36,13 @@ DofMap.h
     
         Create dof map on mesh with a std::vector dof map
 
-    .. cpp:function:: DofMap* collapse(std::map<uint, uint>& collapsed_map, const Mesh& dolfin_mesh) const
-    
-        "Collapse" a sub dofmap
-
-    .. cpp:function:: DofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& dolfin_mesh) const
-    
-        Extract sub dofmap component
-
-    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh, bool sort = false) const
-    
-        Return the set of dof indices
-
-    .. cpp:function:: bool needs_mesh_entities(unsigned int d) const
-    
-        Return true iff mesh entities of topological dimension d are needed
-
-    .. cpp:function:: friend class DofMapBuilder
-    
-        Friends
-
-    .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
-    
-        Initialize the UFC dofmap
-
     .. cpp:function:: std::string signature() const
     
         Return a string identifying the dof map
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: bool needs_mesh_entities(unsigned int d) const
     
-        Return informal string representation (pretty-print)
+        Return true iff mesh entities of topological dimension d are needed
 
     .. cpp:function:: unsigned int global_dimension() const
     
@@ -84,23 +60,47 @@ DofMap.h
     
         Return number of facet dofs
 
-    .. cpp:function:: void tabulate_coordinates(double** coordinates, const Cell& cell) const
+    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const
     
-        Tabulate the coordinates of all dofs on a cell (DOLFIN cell version)
-
-    .. cpp:function:: void tabulate_coordinates(double** coordinates, const ufc::cell& ufc_cell) const
-    
-        Tabulate the coordinates of all dofs on a cell (UFC cell version)
+        Tabulate the local-to-global mapping of dofs on a cell (UFC cell version)
 
     .. cpp:function:: void tabulate_dofs(uint* dofs, const Cell& cell) const
     
         Tabulate the local-to-global mapping of dofs on a cell (DOLFIN cell version)
 
-    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const
-    
-        Tabulate the local-to-global mapping of dofs on a cell (UFC cell version)
-
     .. cpp:function:: void tabulate_facet_dofs(uint* dofs, uint local_facet) const
     
         Tabulate local-local facet dofs
+
+    .. cpp:function:: void tabulate_coordinates(double** coordinates, const ufc::cell& ufc_cell) const
+    
+        Tabulate the coordinates of all dofs on a cell (UFC cell version)
+
+    .. cpp:function:: void tabulate_coordinates(double** coordinates, const Cell& cell) const
+    
+        Tabulate the coordinates of all dofs on a cell (DOLFIN cell version)
+
+    .. cpp:function:: DofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& dolfin_mesh) const
+    
+        Extract sub dofmap component
+
+    .. cpp:function:: DofMap* collapse(std::map<uint, uint>& collapsed_map, const Mesh& dolfin_mesh) const
+    
+        "Collapse" a sub dofmap
+
+    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh, bool sort = false) const
+    
+        Return the set of dof indices
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: friend class DofMapBuilder
+    
+        Friends
+
+    .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
+    
+        Initialize the UFC dofmap
 

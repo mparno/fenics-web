@@ -16,9 +16,17 @@ uBLASFactory.h
     
         * :cpp:class:`LinearAlgebraFactory`
         
-    .. cpp:function:: GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const //
+    .. cpp:function:: uBLASMatrix<Mat>* create_matrix() const
     
-        Create Krylov solver
+        Create empty matrix
+
+    .. cpp:function:: uBLASVector* create_vector() const
+    
+        Create empty vector
+
+    .. cpp:function:: uBLASVector* create_local_vector() const
+    
+        Create empty vector (local)
 
     .. cpp:function:: SparsityPattern* create_pattern() const
     
@@ -28,15 +36,7 @@ uBLASFactory.h
     
         Create LU solver
 
-    .. cpp:function:: uBLASMatrix<Mat>* create_matrix() const
+    .. cpp:function:: GenericLinearSolver* create_krylov_solver(std::string method, std::string pc) const //
     
-        Create empty matrix
-
-    .. cpp:function:: uBLASVector* create_local_vector() const
-    
-        Create empty vector (local)
-
-    .. cpp:function:: uBLASVector* create_vector() const
-    
-        Create empty vector
+        Create Krylov solver
 

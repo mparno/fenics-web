@@ -16,30 +16,6 @@ Point.h
     alternatively, a vector in R^3, supporting standard operations
     like the norm, distances, scalar and vector products etc.
 
-    .. cpp:function:: Point operator* (double a) const
-    
-        Multiplication with scalar
-
-    .. cpp:function:: Point operator*(double a, const Point& p)
-    
-        Multiplication with scalar
-
-    .. cpp:function:: Point operator+ (const Point& p) const
-    
-        Compute sum of two points
-
-    .. cpp:function:: Point operator- (const Point& p) const
-    
-        Compute difference of two points
-
-    .. cpp:function:: Point operator/ (double a) const
-    
-        Division by scalar
-
-    .. cpp:function:: Point(const Point& p)
-    
-        Copy constructor
-
     .. cpp:function:: Point(const double x = 0.0, const double y = 0.0, const double z =0.0)
     
         Create a point at (x, y, z)
@@ -48,45 +24,13 @@ Point.h
     
         Create point from array
 
-    .. cpp:function:: const Point cross(const Point& p) const
+    .. cpp:function:: Point(const Point& p)
     
-        Compute cross product with given vector
+        Copy constructor
 
-    .. cpp:function:: const Point& operator*= (double a)
+    .. cpp:function:: double& operator[] (uint i)
     
-        Incremental multiplication with scalar
-
-    .. cpp:function:: const Point& operator+= (const Point& p)
-    
-        Add given point
-
-    .. cpp:function:: const Point& operator-= (const Point& p)
-    
-        Subtract given point
-
-    .. cpp:function:: const Point& operator/= (double a)
-    
-        Incremental division by scalar
-
-    .. cpp:function:: const Point& operator= (const Point& p)
-    
-        Assignment operator
-
-    .. cpp:function:: const double* coordinates() const
-    
-        Return coordinate array
-
-    .. cpp:function:: double distance(const Point& p) const
-    
-        Compute distance to given point
-
-    .. cpp:function:: double dot(const Point& p) const
-    
-        Compute dot product with given vector
-
-    .. cpp:function:: double norm() const
-    
-        Compute norm of point representing a vector from the origin
+        Return address of coordinate in direction i
 
     .. cpp:function:: double operator[] (uint i) const
     
@@ -104,23 +48,79 @@ Point.h
     
         Return z-coordinate
 
-    .. cpp:function:: double& operator[] (uint i)
+    .. cpp:function:: const double* coordinates() const
     
-        Return address of coordinate in direction i
+        Return coordinate array
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: Point operator+ (const Point& p) const
     
-        Return informal string representation (pretty-print)
+        Compute sum of two points
 
-    .. cpp:function:: template <typename Kernel> CGAL::Bbox_3  bbox()
+    .. cpp:function:: Point operator- (const Point& p) const
     
-        Provides a CGAL bounding box, using conversion operator.
+        Compute difference of two points
+
+    .. cpp:function:: const Point& operator+= (const Point& p)
+    
+        Add given point
+
+    .. cpp:function:: const Point& operator-= (const Point& p)
+    
+        Subtract given point
+
+    .. cpp:function:: Point operator* (double a) const
+    
+        Multiplication with scalar
+
+    .. cpp:function:: const Point& operator*= (double a)
+    
+        Incremental multiplication with scalar
+
+    .. cpp:function:: Point operator/ (double a) const
+    
+        Division by scalar
+
+    .. cpp:function:: const Point& operator/= (double a)
+    
+        Incremental division by scalar
+
+    .. cpp:function:: const Point& operator= (const Point& p)
+    
+        Assignment operator
+
+    .. cpp:function:: template <typename Kernel> operator CGAL::Point_3<Kernel>() const
+    
+        Conversion operator to appropriate CGAL Point_3 class.
 
     .. cpp:function:: template <typename Kernel> Point (const CGAL::Point_3<Kernel> & point)
     
         Constructor taking a CGAL::Point_3. Allows conversion from CGAL Point_3 class to Point class.
 
-    .. cpp:function:: template <typename Kernel> operator CGAL::Point_3<Kernel>() const
+    .. cpp:function:: template <typename Kernel> CGAL::Bbox_3  bbox()
     
-        Conversion operator to appropriate CGAL Point_3 class.
+        Provides a CGAL bounding box, using conversion operator.
+
+    .. cpp:function:: double distance(const Point& p) const
+    
+        Compute distance to given point
+
+    .. cpp:function:: double norm() const
+    
+        Compute norm of point representing a vector from the origin
+
+    .. cpp:function:: const Point cross(const Point& p) const
+    
+        Compute cross product with given vector
+
+    .. cpp:function:: double dot(const Point& p) const
+    
+        Compute dot product with given vector
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: Point operator*(double a, const Point& p)
+    
+        Multiplication with scalar
 

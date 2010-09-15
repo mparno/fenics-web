@@ -34,14 +34,6 @@ Expression.h
     
         Create scalar expression
 
-    .. cpp:function:: Expression(const Expression& expression)
-    
-        Copy constructor
-
-    .. cpp:function:: Expression(std::vector<uint> value_shape)
-    
-        Create tensor-valued expression with given shape
-
     .. cpp:function:: Expression(uint dim)
     
         Create vector-valued expression with given dimension
@@ -50,21 +42,21 @@ Expression.h
     
         Create matrix-valued expression with given dimensions
 
-    .. cpp:function:: uint value_dimension(uint i) const
+    .. cpp:function:: Expression(std::vector<uint> value_shape)
     
-        Return value dimension for given axis
+        Create tensor-valued expression with given shape
+
+    .. cpp:function:: Expression(const Expression& expression)
+    
+        Copy constructor
 
     .. cpp:function:: uint value_rank() const
     
         Return value rank
 
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
+    .. cpp:function:: uint value_dimension(uint i) const
     
-        Compute values at all mesh vertices
-
-    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
-    
-        Evaluate expression, must be overloaded by user (simple version)
+        Return value dimension for given axis
 
     .. cpp:function:: void eval(Array<double>& values, const Data& data) const
     
@@ -73,4 +65,12 @@ Expression.h
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const
     
         Restrict function to local cell (compute expansion coefficients w)
+
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
+    
+        Compute values at all mesh vertices
+
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
+    
+        Evaluate expression, must be overloaded by user (simple version)
 

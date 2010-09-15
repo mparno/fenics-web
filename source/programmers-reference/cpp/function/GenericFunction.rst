@@ -31,39 +31,39 @@ GenericFunction.h
     
         Constructor
 
-    .. cpp:function:: uint value_dimension(uint i) const = 0
-    
-        Return value dimension for given axis
-
     .. cpp:function:: uint value_rank() const = 0
     
         Return value rank
 
-    .. cpp:function:: uint value_size() const
+    .. cpp:function:: uint value_dimension(uint i) const = 0
     
-        Return value size (product of value dimensions)
-
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const = 0
-    
-        Compute values at all mesh vertices
+        Return value dimension for given axis
 
     .. cpp:function:: void eval(Array<double>& values, const Data& data) const = 0
     
         Evaluate function for given data
 
-    .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const = 0
     
-        Evaluate function at given point in cell
+        Restrict function to local cell (compute expansion coefficients w)
+
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const = 0
+    
+        Compute values at all mesh vertices
 
     .. cpp:function:: void gather() const
     
         Collect off-process coefficients to prepare for interpolation
 
+    .. cpp:function:: uint value_size() const
+    
+        Return value size (product of value dimensions)
+
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
     
         Convenience function for restriction when facet is unknown
 
-    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const = 0
+    .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
     
-        Restrict function to local cell (compute expansion coefficients w)
+        Evaluate function at given point in cell
 

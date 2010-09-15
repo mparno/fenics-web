@@ -22,19 +22,19 @@ Legendre.h
     The function values and derivatives are computed using
     three-term recurrence formulas.
 
-    .. cpp:function:: real d2dx(real x)
+    .. cpp:function:: real operator() (real x)
     
-        Evaluation of second derivative at given point
+        Evaluation at given point
 
     .. cpp:function:: real ddx(real x)
     
         Evaluation of derivative at given point
 
+    .. cpp:function:: real d2dx(real x)
+    
+        Evaluation of second derivative at given point
+
     .. cpp:function:: real eval(uint nn, real x)
     
         Evaluation of arbitrary order, nn <= n (useful ie in RadauQuadrature)
-
-    .. cpp:function:: real operator() (real x)
-    
-        Evaluation at given point
 

@@ -34,18 +34,6 @@ MeshTopology.h
     
         Assignment
 
-    .. cpp:function:: const dolfin::MeshConnectivity& operator() (uint d0, uint d1) const
-    
-        Return connectivity for given pair of topological dimensions
-
-    .. cpp:function:: dolfin::MeshConnectivity& operator() (uint d0, uint d1)
-    
-        Return connectivity for given pair of topological dimensions
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
     .. cpp:function:: uint dim() const
     
         Return topological dimension
@@ -65,4 +53,16 @@ MeshTopology.h
     .. cpp:function:: void init(uint dim, uint size)
     
         Set number of entities (size) for given topological dimension
+
+    .. cpp:function:: dolfin::MeshConnectivity& operator() (uint d0, uint d1)
+    
+        Return connectivity for given pair of topological dimensions
+
+    .. cpp:function:: const dolfin::MeshConnectivity& operator() (uint d0, uint d1) const
+    
+        Return connectivity for given pair of topological dimensions
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
 

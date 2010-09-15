@@ -19,17 +19,17 @@ uBLASPreconditioner.h
     
         Constructor
 
-    .. cpp:function:: void init(const uBLASKrylovMatrix& P)
+    .. cpp:function:: void init(const uBLASMatrix<ublas_sparse_matrix>& P)
     
-        Initialise preconditioner (virtual matrix)
+        Initialise preconditioner (sparse matrix)
 
     .. cpp:function:: void init(const uBLASMatrix<ublas_dense_matrix>& P)
     
         Initialise preconditioner (dense matrix)
 
-    .. cpp:function:: void init(const uBLASMatrix<ublas_sparse_matrix>& P)
+    .. cpp:function:: void init(const uBLASKrylovMatrix& P)
     
-        Initialise preconditioner (sparse matrix)
+        Initialise preconditioner (virtual matrix)
 
     .. cpp:function:: void solve(uBLASVector& x, const uBLASVector& b) const = 0
     

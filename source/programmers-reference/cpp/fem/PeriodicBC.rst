@@ -42,11 +42,11 @@ PeriodicBC.h
     applications to a linear system. The matching may be recomputed
     by calling the rebuild() function.
 
-    .. cpp:function:: PeriodicBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const SubDomain> sub_domain)
+    .. cpp:function:: PeriodicBC(const FunctionSpace& V, const SubDomain& sub_domain)
     
         Create periodic boundary condition for sub domain
 
-    .. cpp:function:: PeriodicBC(const FunctionSpace& V, const SubDomain& sub_domain)
+    .. cpp:function:: PeriodicBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const SubDomain> sub_domain)
     
         Create periodic boundary condition for sub domain
 
@@ -54,21 +54,21 @@ PeriodicBC.h
     
         Apply boundary condition to a matrix
 
-    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b) const
-    
-        Apply boundary condition to a linear system
-
-    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const
-    
-        Apply boundary condition to a linear system for a nonlinear problem
-
     .. cpp:function:: void apply(GenericVector& b) const
     
         Apply boundary condition to a vector
 
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b) const
+    
+        Apply boundary condition to a linear system
+
     .. cpp:function:: void apply(GenericVector& b, const GenericVector& x) const
     
         Apply boundary condition to a vector for a nonlinear problem
+
+    .. cpp:function:: void apply(GenericMatrix& A, GenericVector& b, const GenericVector& x) const
+    
+        Apply boundary condition to a linear system for a nonlinear problem
 
     .. cpp:function:: void rebuild()
     

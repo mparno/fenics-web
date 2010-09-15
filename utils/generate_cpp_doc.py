@@ -16,10 +16,11 @@ __license__  = "GNU GPL version 3 or any later version"
 
 # Last changed: 2010-09-14
 
-import os, re, sys
+import os, sys
 
 # Set output directory
-output_dir = os.path.abspath( os.path.join(os.getcwd(), os.pardir, "source", "programmers-reference", "cpp") )
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
+                          os.pardir, "source", "programmers-reference", "cpp")
 
 # Set directory for DOLFIN source code
 if not "DOLFIN_DIR" in os.environ:
@@ -29,7 +30,7 @@ dolfin_dir = os.path.abspath(os.environ["DOLFIN_DIR"])
 
 # Add path to dolfin_utils and import the documentation extractor.
 sys.path.append(os.path.abspath(os.path.join(dolfin_dir, "site-packages")))
-from dolfin_utils.documentation import extract_doc_representation
+from dolfin_utils.documentation import extract_doc_representation, indent, add_links
 
 def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
@@ -101,7 +102,7 @@ the DOLFIN C++ code and may need to be edited or expanded.""", 4)
 
             # Write class documentation
             if comment is not None:
-                comment = add_links(comment, classnames)
+                comment = add_links(comment, classnames, ":cpp:class:")
                 output += indent(comment, 4)
                 output += "\n"
                 output += "\n"
@@ -115,7 +116,7 @@ the DOLFIN C++ code and may need to be edited or expanded.""", 4)
                 signature = "\n".join([lines[0]] + [(len(".. cpp.function::") + 1)*" " + l for l in lines[1:]])
 
             # Add crosslinks in comment
-            comment = add_links(comment, classnames)
+            comment = add_links(comment, classnames, ":cpp:class:")
 
             # Write function documentation
             output += indent(".. cpp:function:: %s\n" % signature, 4)
@@ -128,14 +129,6 @@ the DOLFIN C++ code and may need to be edited or expanded.""", 4)
     f = open(outfile, "w")
     f.write(output)
     f.close()
-
-def add_links(text, classnames):
-    "Add crosslinks for classes"
-    for classname in classnames:
-        p = re.compile(r"\b_%s_\b" % classname)
-        text = p.sub(":cpp:class:`%s`" % classname, text)
-
-    return text
 
 def generate_index(module, headers):
     "Generate index file for module"
@@ -173,12 +166,8 @@ def generate_index(module, headers):
     # Close file
     f.close()
 
-def indent(string, num_spaces):
-    "Indent given text block given number of spaces"
-    return "\n".join(num_spaces*" " + l for l in string.split("\n"))
-
 # Get representation and write documentation.
-documentation, classnames = extract_doc_representation(dolfin_dir)
+documentation, classnames = extract_doc_representation()
 for module in documentation:
     headers = []
     for (header, doc) in documentation[module]:

@@ -31,18 +31,6 @@ BasisFunction.h
     
         Create basis function with given index on element on given cell
 
-    .. cpp:function:: const FiniteElement& element
-    
-        The finite element
-
-    .. cpp:function:: const ufc::cell& cell
-    
-        The (UFC) cell
-
-    .. cpp:function:: uint index
-    
-        The index
-
     .. cpp:function:: void eval(double* values, const double* x) const
     
         Evaluate basis function at given point
@@ -54,4 +42,16 @@ BasisFunction.h
     .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
     
         Evaluate function at given point in cell
+
+    .. cpp:function:: uint index
+    
+        The index
+
+    .. cpp:function:: const FiniteElement& element
+    
+        The finite element
+
+    .. cpp:function:: const ufc::cell& cell
+    
+        The (UFC) cell
 

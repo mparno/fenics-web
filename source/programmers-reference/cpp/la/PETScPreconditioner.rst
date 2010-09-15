@@ -24,19 +24,19 @@ PETScPreconditioner.h
     
         Create a particular preconditioner object
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: void set(PETScKrylovSolver& solver) const
     
-        Default parameter values
+        Set the precondtioner type and parameters
 
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
 
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
+
     .. cpp:function:: std::string type
     
         Named preconditioner
-
-    .. cpp:function:: void set(PETScKrylovSolver& solver) const
-    
-        Set the precondtioner type and parameters
 

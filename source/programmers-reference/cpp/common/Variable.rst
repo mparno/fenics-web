@@ -22,13 +22,17 @@ Variable.h
     
         Create variable with given name and label
 
-    .. cpp:function:: const std::string& label() const
+    .. cpp:function:: void rename(const std::string name, const std::string label)
     
-        Return label (description)
+        Rename variable
 
     .. cpp:function:: const std::string& name()  const
     
         Return name
+
+    .. cpp:function:: const std::string& label() const
+    
+        Return label (description)
 
     .. cpp:function:: std::string str(bool verbose) const
     
@@ -37,8 +41,4 @@ Variable.h
     .. cpp:function:: void disp() const
     
         Deprecated, to be removed
-
-    .. cpp:function:: void rename(const std::string name, const std::string label)
-    
-        Rename variable
 

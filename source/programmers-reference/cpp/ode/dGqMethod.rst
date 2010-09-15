@@ -21,9 +21,13 @@ dGqMethod.h
     q refers to the polynomial order and not the order of convergence for
     the method, which is 2q + 1.
 
-    .. cpp:function:: real error(real k, real r) const
+    .. cpp:function:: real ueval(real x0, real values[], real tau) const
     
-        Compute error estimate (modulo stability factor)
+        Evaluate solution at given point
+
+    .. cpp:function:: real ueval(real x0, real values[], uint i) const
+    
+        Evaluate solution at given node (inline optimized)
 
     .. cpp:function:: real residual(real x0, real values[], real f, real k) const
     
@@ -33,13 +37,9 @@ dGqMethod.h
     
         Compute new time step based on the given residual
 
-    .. cpp:function:: real ueval(real x0, real values[], real tau) const
+    .. cpp:function:: real error(real k, real r) const
     
-        Evaluate solution at given point
-
-    .. cpp:function:: real ueval(real x0, real values[], uint i) const
-    
-        Evaluate solution at given node (inline optimized)
+        Compute error estimate (modulo stability factor)
 
     .. cpp:function:: std::string str(bool verbose) const
     

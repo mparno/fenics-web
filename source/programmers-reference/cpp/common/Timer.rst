@@ -32,10 +32,6 @@ Timer.h
     
         Create timer
 
-    .. cpp:function:: double value() const
-    
-        Return value of timer (or time at start if not stopped)
-
     .. cpp:function:: void start()
     
         Start timer
@@ -43,4 +39,8 @@ Timer.h
     .. cpp:function:: void stop()
     
         Stop timer
+
+    .. cpp:function:: double value() const
+    
+        Return value of timer (or time at start if not stopped)
 

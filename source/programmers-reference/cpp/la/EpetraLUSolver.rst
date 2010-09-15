@@ -36,19 +36,11 @@ EpetraLUSolver.h
     
         Constructor
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Default parameter values
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
+        Set operator (matrix)
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b
-
-    .. cpp:function:: uint solve(const EpetraMatrix& A, EpetraVector& x, const EpetraVector& b)
     
         Solve linear system Ax = b
 
@@ -56,7 +48,15 @@ EpetraLUSolver.h
     
         Solve linear system Ax = b
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: uint solve(const EpetraMatrix& A, EpetraVector& x, const EpetraVector& b)
     
-        Set operator (matrix)
+        Solve linear system Ax = b
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
 

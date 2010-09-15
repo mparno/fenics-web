@@ -21,9 +21,13 @@ cGqMethod.h
     q refers to the polynomial order and not the order of convergence for
     the method, which is 2q.
 
-    .. cpp:function:: real error(real k, real r) const
+    .. cpp:function:: real ueval(real x0, real values[], real tau) const
     
-        Compute error estimate (modulo stability factor)
+        Evaluate solution at given point
+
+    .. cpp:function:: real ueval(real x0, real values[], uint i) const
+    
+        Evaluate solution at given node (inline optimized)
 
     .. cpp:function:: real residual(real x0, real values[], real f, real k) const
     
@@ -33,19 +37,15 @@ cGqMethod.h
     
         Compute new time step based on the given residual
 
-    .. cpp:function:: real ueval(real x0, real values[], real tau) const
+    .. cpp:function:: real error(real k, real r) const
     
-        Evaluate solution at given point
-
-    .. cpp:function:: real ueval(real x0, real values[], uint i) const
-    
-        Evaluate solution at given node (inline optimized)
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
+        Compute error estimate (modulo stability factor)
 
     .. cpp:function:: void get_nodal_values(const real& x0, const real* x, real* nodal_values) const
     
         Replace the solution values with the nodal values solution polynomial
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
 

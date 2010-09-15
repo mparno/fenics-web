@@ -37,15 +37,15 @@ PETScKrylovMatrix.h
     
         Create a virtual matrix matching the given vectors
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: void resize(uint m, uint n)
     
-        Return informal string representation (pretty-print)
+        Resize virtual matrix
 
     .. cpp:function:: void mult(const PETScVector& x, PETScVector& y) const = 0
     
         Compute product y = Ax
 
-    .. cpp:function:: void resize(uint m, uint n)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Resize virtual matrix
+        Return informal string representation (pretty-print)
 

@@ -23,11 +23,11 @@ StabilityAnalysis.h
     
         Constructor
 
-    .. cpp:function:: void analyze_endpoint()
-    
-        Compute z(0) (the endpoint of the dual) as function of (primal) endtime T
-
     .. cpp:function:: void analyze_integral(uint q)
     
         Compute the integral of the q'th derivative of the dual as function of (primal) endtime T
+
+    .. cpp:function:: void analyze_endpoint()
+    
+        Compute z(0) (the endpoint of the dual) as function of (primal) endtime T
 

@@ -24,25 +24,13 @@ SparsityPattern.h
     
         Create empty sparsity pattern
 
-    .. cpp:function:: const std::vector<Set<uint> >& diagonal_pattern() const
+    .. cpp:function:: void init(uint rank, const uint* dims)
     
-        Return underlying sparsity pattern (diagonal)
+        Initialize sparsity pattern for a generic tensor
 
-    .. cpp:function:: const std::vector<Set<uint> >& off_diagonal_pattern() const
+    .. cpp:function:: void insert(const uint* num_rows, const uint * const * rows)
     
-        Return underlying sparsity pattern (off-diagional)
-
-    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
-    
-        Return local range for dimension dim
-
-    .. cpp:function:: std::string str() const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: uint num_nonzeros() const
-    
-        Return total number of nonzeros in local_range for dimension 0
+        Insert non-zero entries
 
     .. cpp:function:: uint rank() const
     
@@ -52,17 +40,13 @@ SparsityPattern.h
     
         Return global size for dimension i
 
-    .. cpp:function:: void apply()
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
     
-        Finalize sparsity pattern
+        Return local range for dimension dim
 
-    .. cpp:function:: void init(uint rank, const uint* dims)
+    .. cpp:function:: uint num_nonzeros() const
     
-        Initialize sparsity pattern for a generic tensor
-
-    .. cpp:function:: void insert(const uint* num_rows, const uint * const * rows)
-    
-        Insert non-zero entries
+        Return total number of nonzeros in local_range for dimension 0
 
     .. cpp:function:: void num_nonzeros_diagonal(uint* num_nonzeros) const
     
@@ -73,4 +57,20 @@ SparsityPattern.h
     
         Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for off-diagonal block
+
+    .. cpp:function:: void apply()
+    
+        Finalize sparsity pattern
+
+    .. cpp:function:: std::string str() const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: const std::vector<Set<uint> >& diagonal_pattern() const
+    
+        Return underlying sparsity pattern (diagonal)
+
+    .. cpp:function:: const std::vector<Set<uint> >& off_diagonal_pattern() const
+    
+        Return underlying sparsity pattern (off-diagional)
 

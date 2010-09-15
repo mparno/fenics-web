@@ -24,10 +24,6 @@ Quadrature.h
     
         Return number of quadrature points
 
-    .. cpp:function:: real measure() const
-    
-        Return sum of weights (length, area, volume)
-
     .. cpp:function:: real point(unsigned int i) const
     
         Return quadrature point
@@ -35,4 +31,8 @@ Quadrature.h
     .. cpp:function:: real weight(unsigned int i) const
     
         Return quadrature weight
+
+    .. cpp:function:: real measure() const
+    
+        Return sum of weights (length, area, volume)
 

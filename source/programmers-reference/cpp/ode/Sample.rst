@@ -22,13 +22,9 @@ Sample.h
     
         Constructor
 
-    .. cpp:function:: real k(uint index) const
+    .. cpp:function:: uint size() const
     
-        Return time step for component with given index
-
-    .. cpp:function:: real r(uint index) const
-    
-        Return residual for component with given index
+        Return number of components
 
     .. cpp:function:: real t() const
     
@@ -38,7 +34,11 @@ Sample.h
     
         Return value of component with given index
 
-    .. cpp:function:: uint size() const
+    .. cpp:function:: real k(uint index) const
     
-        Return number of components
+        Return time step for component with given index
+
+    .. cpp:function:: real r(uint index) const
+    
+        Return residual for component with given index
 

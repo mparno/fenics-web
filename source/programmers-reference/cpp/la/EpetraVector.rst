@@ -24,81 +24,17 @@ EpetraVector.h
     access the Epetra_FEVector object using the function vec() or vec_ptr()
     and use the standard Epetra interface.
 
-    .. cpp:function:: EpetraVector(const EpetraVector& x)
-    
-        Copy constructor
-
     .. cpp:function:: EpetraVector(std::string type="global")
     
         Create empty vector
 
-    .. cpp:function:: EpetraVector* copy() const
+    .. cpp:function:: explicit EpetraVector(uint N, std::string type="global")
     
-        Return copy of tensor
+        Create vector of size N
 
-    .. cpp:function:: LinearAlgebraFactory& factory() const
+    .. cpp:function:: EpetraVector(const EpetraVector& x)
     
-        Return linear algebra backend factory
-
-    .. cpp:function:: boost::shared_ptr<Epetra_FEVector> vec() const
-    
-        Return Epetra_FEVector pointer
-
-    .. cpp:function:: const EpetraVector& operator*= (const GenericVector& x)
-    
-        Multiply vector by another vector pointwise
-
-    .. cpp:function:: const EpetraVector& operator*= (double a)
-    
-        Multiply vector by given number
-
-    .. cpp:function:: const EpetraVector& operator+= (const GenericVector& x)
-    
-        Add given vector
-
-    .. cpp:function:: const EpetraVector& operator-= (const GenericVector& x)
-    
-        Subtract given vector
-
-    .. cpp:function:: const EpetraVector& operator/= (double a)
-    
-        Divide vector by given number
-
-    .. cpp:function:: const EpetraVector& operator= (const EpetraVector& x)
-    
-        Assignment operator
-
-    .. cpp:function:: const EpetraVector& operator= (const GenericVector& x)
-    
-        Assignment operator
-
-    .. cpp:function:: const EpetraVector& operator= (double a)
-    
-        Assignment operator
-
-    .. cpp:function:: double inner(const GenericVector& vector) const
-    
-        Return inner product with given vector
-
-    .. cpp:function:: double max() const
-    
-        Return maximum value of vector
-
-    .. cpp:function:: double min() const
-    
-        Return minimum value of vector
-
-    .. cpp:function:: double norm(std::string norm_type) const
-    
-        Return norm of vector
-
-    .. cpp:function:: double sum() const
-    
-        Return sum of values of vector
-
-    .. cpp:function:: double sum(const Array<uint>& rows) const
-    
-        Return sum of selected rows in vector
+        Copy constructor
 
     .. cpp:function:: explicit EpetraVector(boost::shared_ptr<Epetra_FEVector> vector)
     
@@ -108,67 +44,131 @@ EpetraVector.h
     
         Create vector from given Epetra_Map
 
-    .. cpp:function:: explicit EpetraVector(uint N, std::string type="global")
+    .. cpp:function:: EpetraVector* copy() const
     
-        Create vector of size N
+        Return copy of tensor
 
-    .. cpp:function:: std::pair<uint, uint> local_range() const
+    .. cpp:function:: void zero()
     
-        Return local ownership range of a vector
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: uint size() const
-    
-        Return size of vector
-
-    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
-    
-        Add block of values
-
-    .. cpp:function:: void add_local(const Array<double>& values)
-    
-        Add all values to each entry on local process
+        Set all entries to zero and keep any sparse structure
 
     .. cpp:function:: void apply(std::string mode)
     
         Finalize assembly of tensor
 
-    .. cpp:function:: void axpy(double a, const GenericVector& x)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Add multiple of given vector (AXPY operation)
-
-    .. cpp:function:: void gather(GenericVector& x, const Array<uint>& indices) const
-    
-        Gather entries into local vector x
-
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
-    
-        Get block of values
-
-    .. cpp:function:: void get_local(Array<double>& values) const
-    
-        Get all values on local process
-
-    .. cpp:function:: void reset(const Epetra_Map& map)
-    
-        Reset Epetra_FEVector
+        Return informal string representation (pretty-print)
 
     .. cpp:function:: void resize(uint N)
     
         Resize vector to size N
 
+    .. cpp:function:: uint size() const
+    
+        Return size of vector
+
+    .. cpp:function:: std::pair<uint, uint> local_range() const
+    
+        Return local ownership range of a vector
+
+    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
+    
+        Get block of values
+
     .. cpp:function:: void set(const double* block, uint m, const uint* rows)
     
         Set block of values
+
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
+    
+        Add block of values
+
+    .. cpp:function:: void get_local(Array<double>& values) const
+    
+        Get all values on local process
 
     .. cpp:function:: void set_local(const Array<double>& values)
     
         Set all values on local process
 
-    .. cpp:function:: void zero()
+    .. cpp:function:: void add_local(const Array<double>& values)
     
-        Set all entries to zero and keep any sparse structure
+        Add all values to each entry on local process
+
+    .. cpp:function:: void gather(GenericVector& x, const Array<uint>& indices) const
+    
+        Gather entries into local vector x
+
+    .. cpp:function:: void axpy(double a, const GenericVector& x)
+    
+        Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: double inner(const GenericVector& vector) const
+    
+        Return inner product with given vector
+
+    .. cpp:function:: double norm(std::string norm_type) const
+    
+        Return norm of vector
+
+    .. cpp:function:: double min() const
+    
+        Return minimum value of vector
+
+    .. cpp:function:: double max() const
+    
+        Return maximum value of vector
+
+    .. cpp:function:: double sum() const
+    
+        Return sum of values of vector
+
+    .. cpp:function:: double sum(const Array<uint>& rows) const
+    
+        Return sum of selected rows in vector
+
+    .. cpp:function:: const EpetraVector& operator*= (double a)
+    
+        Multiply vector by given number
+
+    .. cpp:function:: const EpetraVector& operator*= (const GenericVector& x)
+    
+        Multiply vector by another vector pointwise
+
+    .. cpp:function:: const EpetraVector& operator/= (double a)
+    
+        Divide vector by given number
+
+    .. cpp:function:: const EpetraVector& operator+= (const GenericVector& x)
+    
+        Add given vector
+
+    .. cpp:function:: const EpetraVector& operator-= (const GenericVector& x)
+    
+        Subtract given vector
+
+    .. cpp:function:: const EpetraVector& operator= (const GenericVector& x)
+    
+        Assignment operator
+
+    .. cpp:function:: const EpetraVector& operator= (double a)
+    
+        Assignment operator
+
+    .. cpp:function:: LinearAlgebraFactory& factory() const
+    
+        Return linear algebra backend factory
+
+    .. cpp:function:: void reset(const Epetra_Map& map)
+    
+        Reset Epetra_FEVector
+
+    .. cpp:function:: boost::shared_ptr<Epetra_FEVector> vec() const
+    
+        Return Epetra_FEVector pointer
+
+    .. cpp:function:: const EpetraVector& operator= (const EpetraVector& x)
+    
+        Assignment operator
 

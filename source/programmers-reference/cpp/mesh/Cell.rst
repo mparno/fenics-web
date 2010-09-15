@@ -30,26 +30,6 @@ Cell.h
     
         Return type of cell
 
-    .. cpp:function:: Point normal(uint facet) const
-    
-        Compute normal of given facet with respect to the cell
-
-    .. cpp:function:: bool ordered(MeshFunction<uint>* global_vertex_indices)
-    
-        Check if entities are ordered
-
-    .. cpp:function:: double diameter() const
-    
-        Compute diameter of cell
-
-    .. cpp:function:: double facet_area(uint facet) const
-    
-        Compute the area/length of given facet with respect to the cell
-
-    .. cpp:function:: double normal(uint facet, uint i) const
-    
-        Compute component i of normal of given facet with respect to the cell
-
     .. cpp:function:: double orientation() const
     
         Compute orientation of cell (0 is right, 1 is left)
@@ -58,9 +38,29 @@ Cell.h
     
         Compute (generalized) volume of cell
 
+    .. cpp:function:: double diameter() const
+    
+        Compute diameter of cell
+
+    .. cpp:function:: double normal(uint facet, uint i) const
+    
+        Compute component i of normal of given facet with respect to the cell
+
+    .. cpp:function:: Point normal(uint facet) const
+    
+        Compute normal of given facet with respect to the cell
+
+    .. cpp:function:: double facet_area(uint facet) const
+    
+        Compute the area/length of given facet with respect to the cell
+
     .. cpp:function:: void order(MeshFunction<uint>* global_vertex_indices)
     
         Order entities locally
+
+    .. cpp:function:: bool ordered(MeshFunction<uint>* global_vertex_indices)
+    
+        Check if entities are ordered
 
 .. cpp:class:: CellIterator
 

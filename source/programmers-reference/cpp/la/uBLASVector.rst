@@ -25,25 +25,113 @@ uBLASVector.h
     uBLAS interface which is documented at
     http://www.boost.org/libs/numeric/ublas/doc/index.htm.
 
-    .. cpp:function:: LinearAlgebraFactory& factory() const
+    .. cpp:function:: uBLASVector()
     
-        Return linear algebra backend factory
+        Create empty vector
 
-    .. cpp:function:: const GenericVector& operator= (const GenericVector& x)
+    .. cpp:function:: explicit uBLASVector(uint N)
     
-        Assignment operator
+        Create vector of size N
 
-    .. cpp:function:: const double* data() const
+    .. cpp:function:: uBLASVector(const uBLASVector& x)
     
-        Return pointer to underlying data (const version)
+        Copy constructor
+
+    .. cpp:function:: explicit uBLASVector(boost::shared_ptr<ublas_vector> x)
+    
+        Construct vector from a ublas_vector
+
+    .. cpp:function:: uBLASVector* copy() const
+    
+        Create copy of tensor
+
+    .. cpp:function:: void zero()
+    
+        Set all entries to zero and keep any sparse structure
+
+    .. cpp:function:: void apply(std::string mode)
+    
+        Finalize assembly of tensor
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: void resize(uint N)
+    
+        Resize vector to size N
+
+    .. cpp:function:: uint size() const
+    
+        Return size of vector
+
+    .. cpp:function:: std::pair<uint, uint> local_range() const
+    
+        Return local ownership range of a vector
+
+    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
+    
+        Get block of values
+
+    .. cpp:function:: void set(const double* block, uint m, const uint* rows)
+    
+        Set block of values
+
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
+    
+        Add block of values
+
+    .. cpp:function:: void get_local(Array<double>& values) const
+    
+        Get all values on local process
+
+    .. cpp:function:: void set_local(const Array<double>& values)
+    
+        Set all values on local process
+
+    .. cpp:function:: void add_local(const Array<double>& values)
+    
+        Add values to each entry on local process
+
+    .. cpp:function:: void gather(GenericVector& x, const Array<uint>& indices) const
+    
+        Gather entries into local vector x
+
+    .. cpp:function:: void axpy(double a, const GenericVector& x)
+    
+        Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: double inner(const GenericVector& x) const
+    
+        Return inner product with given vector
+
+    .. cpp:function:: double norm(std::string norm_type) const
+    
+        Compute norm of vector
+
+    .. cpp:function:: double min() const
+    
+        Return minimum value of vector
+
+    .. cpp:function:: double max() const
+    
+        Return maximum value of vector
+
+    .. cpp:function:: double sum() const
+    
+        Return sum of values of vector
+
+    .. cpp:function:: const uBLASVector& operator*= (double a)
+    
+        Multiply vector by given number
 
     .. cpp:function:: const uBLASVector& operator*= (const GenericVector& x)
     
         Multiply vector by another vector pointwise
 
-    .. cpp:function:: const uBLASVector& operator*= (double a)
+    .. cpp:function:: const uBLASVector& operator/= (double a)
     
-        Multiply vector by given number
+        Divide vector by given number
 
     .. cpp:function:: const uBLASVector& operator+= (const GenericVector& x)
     
@@ -53,11 +141,7 @@ uBLASVector.h
     
         Subtract given vector
 
-    .. cpp:function:: const uBLASVector& operator/= (double a)
-    
-        Divide vector by given number
-
-    .. cpp:function:: const uBLASVector& operator= (const uBLASVector& x)
+    .. cpp:function:: const GenericVector& operator= (const GenericVector& x)
     
         Assignment operator
 
@@ -65,119 +149,35 @@ uBLASVector.h
     
         Assignment operator
 
-    .. cpp:function:: const ublas_vector& vec() const
+    .. cpp:function:: const double* data() const
     
-        Return reference to uBLAS vector (const version)
-
-    .. cpp:function:: double inner(const GenericVector& x) const
-    
-        Return inner product with given vector
-
-    .. cpp:function:: double max() const
-    
-        Return maximum value of vector
-
-    .. cpp:function:: double min() const
-    
-        Return minimum value of vector
-
-    .. cpp:function:: double norm(std::string norm_type) const
-    
-        Compute norm of vector
-
-    .. cpp:function:: double operator[] (uint i) const
-    
-        Access value of given entry (const version)
-
-    .. cpp:function:: double sum() const
-    
-        Return sum of values of vector
-
-    .. cpp:function:: double& operator[] (uint i)
-    
-        Access value of given entry (non-const version)
+        Return pointer to underlying data (const version)
 
     .. cpp:function:: double* data()
     
         Return pointer to underlying data
 
-    .. cpp:function:: explicit uBLASVector(boost::shared_ptr<ublas_vector> x)
+    .. cpp:function:: LinearAlgebraFactory& factory() const
     
-        Construct vector from a ublas_vector
+        Return linear algebra backend factory
 
-    .. cpp:function:: explicit uBLASVector(uint N)
+    .. cpp:function:: const ublas_vector& vec() const
     
-        Create vector of size N
-
-    .. cpp:function:: std::pair<uint, uint> local_range() const
-    
-        Return local ownership range of a vector
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: uBLASVector()
-    
-        Create empty vector
-
-    .. cpp:function:: uBLASVector(const uBLASVector& x)
-    
-        Copy constructor
-
-    .. cpp:function:: uBLASVector* copy() const
-    
-        Create copy of tensor
+        Return reference to uBLAS vector (const version)
 
     .. cpp:function:: ublas_vector& vec()
     
         Return reference to uBLAS vector (non-const version)
 
-    .. cpp:function:: uint size() const
+    .. cpp:function:: double operator[] (uint i) const
     
-        Return size of vector
+        Access value of given entry (const version)
 
-    .. cpp:function:: void add(const double* block, uint m, const uint* rows)
+    .. cpp:function:: double& operator[] (uint i)
     
-        Add block of values
+        Access value of given entry (non-const version)
 
-    .. cpp:function:: void add_local(const Array<double>& values)
+    .. cpp:function:: const uBLASVector& operator= (const uBLASVector& x)
     
-        Add values to each entry on local process
-
-    .. cpp:function:: void apply(std::string mode)
-    
-        Finalize assembly of tensor
-
-    .. cpp:function:: void axpy(double a, const GenericVector& x)
-    
-        Add multiple of given vector (AXPY operation)
-
-    .. cpp:function:: void gather(GenericVector& x, const Array<uint>& indices) const
-    
-        Gather entries into local vector x
-
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
-    
-        Get block of values
-
-    .. cpp:function:: void get_local(Array<double>& values) const
-    
-        Get all values on local process
-
-    .. cpp:function:: void resize(uint N)
-    
-        Resize vector to size N
-
-    .. cpp:function:: void set(const double* block, uint m, const uint* rows)
-    
-        Set block of values
-
-    .. cpp:function:: void set_local(const Array<double>& values)
-    
-        Set all values on local process
-
-    .. cpp:function:: void zero()
-    
-        Set all entries to zero and keep any sparse structure
+        Assignment operator
 

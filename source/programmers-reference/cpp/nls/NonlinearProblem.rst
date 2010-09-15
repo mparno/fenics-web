@@ -19,6 +19,11 @@ NonlinearProblem.h
     
         Constructor
 
+    .. cpp:function:: void form(GenericMatrix& A, GenericVector& b, const GenericVector& x)
+    
+        Function called by Newton solver before requesting F or J.
+        This can be used to compute F and J together
+
     .. cpp:function:: void F(GenericVector& b, const GenericVector& x) = 0
     
         Compute F at current point x
@@ -26,9 +31,4 @@ NonlinearProblem.h
     .. cpp:function:: void J(GenericMatrix& A, const GenericVector& x) = 0
     
         Compute J = F' at current point x
-
-    .. cpp:function:: void form(GenericMatrix& A, GenericVector& b, const GenericVector& x)
-    
-        Function called by Newton solver before requesting F or J.
-        This can be used to compute F and J together
 

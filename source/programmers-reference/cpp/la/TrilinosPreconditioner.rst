@@ -24,9 +24,9 @@ TrilinosPreconditioner.h
     
         Create Krylov solver for a particular method and preconditioner
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: void set(EpetraKrylovSolver& solver, const EpetraMatrix& P)
     
-        Default parameter values
+        Set the precondtioner and matrix used in preconditioner
 
     .. cpp:function:: std::string name() const
     
@@ -36,15 +36,15 @@ TrilinosPreconditioner.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: std::string type
+    .. cpp:function:: static Parameters default_parameters()
     
-        Named preconditioner
-
-    .. cpp:function:: void set(EpetraKrylovSolver& solver, const EpetraMatrix& P)
-    
-        Set the precondtioner and matrix used in preconditioner
+        Default parameter values
 
     .. cpp:function:: void set_ml(AztecOO& solver, const Epetra_RowMatrix& P)
     
         Setup the ML precondtioner
+
+    .. cpp:function:: std::string type
+    
+        Named preconditioner
 

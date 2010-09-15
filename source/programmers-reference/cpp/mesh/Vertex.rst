@@ -18,25 +18,25 @@ Vertex.h
         
     A Vertex is a MeshEntity of topological dimension 0.
 
-    .. cpp:function:: Point point() const
+    .. cpp:function:: Vertex(const Mesh& mesh, uint index)
     
-        Return vertex coordinates as a 3D point value
+        Create vertex on given mesh
 
     .. cpp:function:: Vertex(MeshEntity& entity)
     
         Create vertex from mesh entity
 
-    .. cpp:function:: Vertex(const Mesh& mesh, uint index)
+    .. cpp:function:: double x(uint i) const
     
-        Create vertex on given mesh
+        Return value of vertex coordinate i
+
+    .. cpp:function:: Point point() const
+    
+        Return vertex coordinates as a 3D point value
 
     .. cpp:function:: const double* x() const
     
         Return array of vertex coordinates (const version)
-
-    .. cpp:function:: double x(uint i) const
-    
-        Return value of vertex coordinate i
 
 .. cpp:class:: VertexIterator
 

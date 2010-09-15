@@ -45,45 +45,9 @@ LocalMeshData.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: std::vector<std::vector<double> > vertex_coordinates
-    
-        Coordinates for all vertices stored on local processor
-
-    .. cpp:function:: std::vector<std::vector<uint> > cell_vertices
-    
-        Global vertex indices for all cells stored on local processor
-
-    .. cpp:function:: std::vector<uint> global_cell_indices
-    
-        Global cell numbers for all cells stored on local processor
-
-    .. cpp:function:: std::vector<uint> vertex_indices
-    
-        Global vertex indices for all vertices stored on local processor
-
     .. cpp:function:: typedef XMLLocalMeshData XMLHandler
     
         Define XMLHandler for use in new XML reader/writer
-
-    .. cpp:function:: uint gdim
-    
-        Geometrical dimension
-
-    .. cpp:function:: uint num_global_cells
-    
-        Global number of cells
-
-    .. cpp:function:: uint num_global_vertices
-    
-        Global number of vertices
-
-    .. cpp:function:: uint tdim
-    
-        Topological dimension
-
-    .. cpp:function:: void broadcast_mesh_data()
-    
-        Broadcast mesh data from main process
 
     .. cpp:function:: void clear()
     
@@ -93,7 +57,43 @@ LocalMeshData.h
     
         Copy data from mesh
 
+    .. cpp:function:: void broadcast_mesh_data()
+    
+        Broadcast mesh data from main process
+
     .. cpp:function:: void receive_mesh_data()
     
         Receive mesh data from main process
+
+    .. cpp:function:: std::vector<std::vector<double> > vertex_coordinates
+    
+        Coordinates for all vertices stored on local processor
+
+    .. cpp:function:: std::vector<uint> vertex_indices
+    
+        Global vertex indices for all vertices stored on local processor
+
+    .. cpp:function:: std::vector<std::vector<uint> > cell_vertices
+    
+        Global vertex indices for all cells stored on local processor
+
+    .. cpp:function:: std::vector<uint> global_cell_indices
+    
+        Global cell numbers for all cells stored on local processor
+
+    .. cpp:function:: uint num_global_vertices
+    
+        Global number of vertices
+
+    .. cpp:function:: uint num_global_cells
+    
+        Global number of cells
+
+    .. cpp:function:: uint gdim
+    
+        Geometrical dimension
+
+    .. cpp:function:: uint tdim
+    
+        Topological dimension
 

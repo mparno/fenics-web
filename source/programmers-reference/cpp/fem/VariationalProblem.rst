@@ -43,10 +43,6 @@ VariationalProblem.h
         "linear solvers": "direct" or "iterative" (default: "direct")
         "symmetric":      true or false (default: false)
 
-    .. cpp:function:: NewtonSolver& newton_solver()
-    
-        Return Newton solver (only useful when solving a nonlinear problem)
-
     .. cpp:function:: VariationalProblem(const Form& a, const Form& L, bool nonlinear=false)
     
         Define variational problem with natural boundary conditions
@@ -64,18 +60,6 @@ VariationalProblem.h
         Define variational problem with a list of Dirichlet boundary conditions
         and subdomains
 
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: void F(GenericVector& b, const GenericVector& x)
-    
-        Compute F at current point x
-
-    .. cpp:function:: void J(GenericMatrix& A, const GenericVector& x)
-    
-        Compute J = F' at current point x
-
     .. cpp:function:: void solve(Function& u)
     
         Solve variational problem
@@ -88,7 +72,23 @@ VariationalProblem.h
     
         Solve variational problem and extract sub functions
 
+    .. cpp:function:: void F(GenericVector& b, const GenericVector& x)
+    
+        Compute F at current point x
+
+    .. cpp:function:: void J(GenericMatrix& A, const GenericVector& x)
+    
+        Compute J = F' at current point x
+
     .. cpp:function:: void update(const GenericVector& x)
     
         Optional callback called before calls to F() and J()
+
+    .. cpp:function:: NewtonSolver& newton_solver()
+    
+        Return Newton solver (only useful when solving a nonlinear problem)
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
 

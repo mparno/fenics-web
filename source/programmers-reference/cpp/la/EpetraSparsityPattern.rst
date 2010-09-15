@@ -26,17 +26,13 @@ EpetraSparsityPattern.h
     
         Constructor
 
-    .. cpp:function:: Epetra_FECrsGraph& pattern() const
+    .. cpp:function:: void init(uint rank, const uint* dims)
     
-        Return Epetra CRS graph
+        Initialize sparsity pattern for a generic tensor
 
-    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    .. cpp:function:: void insert(const uint* num_rows, const uint * const * rows)
     
-        Return local range for dimension dim
-
-    .. cpp:function:: uint num_nonzeros() const
-    
-        Return total number of nonzeros in local rows
+        Insert non-zero entries
 
     .. cpp:function:: uint rank() const
     
@@ -46,17 +42,13 @@ EpetraSparsityPattern.h
     
         Return global size for dimension i
 
-    .. cpp:function:: void apply()
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
     
-        Finalize sparsity pattern
+        Return local range for dimension dim
 
-    .. cpp:function:: void init(uint rank, const uint* dims)
+    .. cpp:function:: uint num_nonzeros() const
     
-        Initialize sparsity pattern for a generic tensor
-
-    .. cpp:function:: void insert(const uint* num_rows, const uint * const * rows)
-    
-        Insert non-zero entries
+        Return total number of nonzeros in local rows
 
     .. cpp:function:: void num_nonzeros_diagonal(uint* num_nonzeros) const
     
@@ -67,4 +59,12 @@ EpetraSparsityPattern.h
     
         Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for off-diagonal block
+
+    .. cpp:function:: void apply()
+    
+        Finalize sparsity pattern
+
+    .. cpp:function:: Epetra_FECrsGraph& pattern() const
+    
+        Return Epetra CRS graph
 

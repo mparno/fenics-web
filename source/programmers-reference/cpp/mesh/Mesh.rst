@@ -50,22 +50,6 @@ Mesh.h
     such as all edges connected to a given vertex must also be
     explicitly created (in this case by a call to mesh.init(0, 1)).
 
-    .. cpp:function:: CellType& type()
-    
-        Get mesh cell type.
-        
-        *Returns*
-            :cpp:class:`CellType`
-                The cell type object associated with the mesh.
-
-    .. cpp:function:: IntersectionOperator& intersection_operator()
-    
-        Get intersection operator.
-        
-        *Returns*
-            :cpp:class:`IntersectionOperator`
-                The intersection operator object associated with the mesh.
-
     .. cpp:function:: Mesh()
     
         Create empty mesh
@@ -78,60 +62,13 @@ Mesh.h
             mesh
                 A :cpp:class:`Mesh` object.
 
-    .. cpp:function:: MeshData& data()
+    .. cpp:function:: explicit Mesh(std::string filename)
     
-        Get mesh data.
-        
-        *Returns*
-            :cpp:class:`MeshData`
-                The mesh data object associated with the mesh.
-
-    .. cpp:function:: MeshGeometry& geometry()
-    
-        Get mesh geometry.
-        
-        *Returns*
-            :cpp:class:`MeshGeometry`
-                The geometry object associated with the mesh.
-
-    .. cpp:function:: MeshTopology& topology()
-    
-        Get topology associated with mesh.
-        
-        *Returns*
-            :cpp:class:`MeshTopology`
-                The topology object associated with the mesh.
-
-    .. cpp:function:: Point closest_point(const Point& point) const
-    
-        Computes the point inside the mesh and the corresponding cell
-        index which are closest to the point query.
+        Create mesh from data file.
         
         *Arguments*
-            point
-                A :cpp:class:`Point` object.
-        
-        *Returns*
-            Point
-                The point inside the mesh which is closest to the
-                point.
-
-    .. cpp:function:: bool ordered() const
-    
-        Check if mesh is ordered.
-        
-        *Returns*
-            bool
-                Return true iff topology is ordered according to the UFC
-                numbering.
-
-    .. cpp:function:: const CellType& type() const
-    
-        Get mesh cell type (const version).
-
-    .. cpp:function:: const IntersectionOperator& intersection_operator() const
-    
-        Return intersection operator (const version);
+            filename
+                A string, name of file to load.
 
     .. cpp:function:: const Mesh& operator=(const Mesh& mesh)
     
@@ -141,73 +78,13 @@ Mesh.h
             mesh
                 A :cpp:class:`Mesh` object.
 
-    .. cpp:function:: const MeshData& data() const
+    .. cpp:function:: uint num_vertices() const
     
-        Get mesh data (const version).
-
-    .. cpp:function:: const MeshGeometry& geometry() const
-    
-        Get mesh geometry (const version).
-
-    .. cpp:function:: const MeshTopology& topology() const
-    
-        Get mesh topology (const version).
-
-    .. cpp:function:: const double* coordinates() const
-    
-        Return coordinates of all vertices (const version).
-
-    .. cpp:function:: const uint* cells() const
-    
-        Get cell connectivity.
-        
-        *Returns*
-            An array of integers
-                Connectivity for all cells.
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(1,1)
-            >>> mesh.coordinates()
-            array([[0, 1, 3],
-                   [0, 2, 3]])
-
-    .. cpp:function:: dolfin::uint closest_cell(const Point& point) const
-    
-        Computes the index of the cell in the mesh which is closest to the
-        point query.
-        
-        *Arguments*
-            point
-                A :cpp:class:`Point` object.
+        Get number of vertices in mesh.
         
         *Returns*
             integer
-                The index of the cell in the mesh which is closest to point.
-        
-        *Example*
-            .. code-block:: c++
-        
-                UnitSquare mesh(1, 1);
-                Point point(0.0, 2.0);
-                info("%d", mesh.closest_cell(point));
-        
-            output::
-        
-                1
-
-    .. cpp:function:: double hmax() const
-    
-        Compute maximum cell diameter.
-        
-        *Returns*
-            double
-                The maximum cell diameter, the diameter is computed as
-                two times the circumradius
-                (http://mathworld.wolfram.com).
+                Number of vertices.
         
         *Example*
             .. warning::
@@ -215,137 +92,8 @@ Mesh.h
                 Not C++ syntax.
         
             >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.hmax()
-            0.70710678118654757
-
-    .. cpp:function:: double hmin() const
-    
-        Compute minimum cell diameter.
-        
-        *Returns*
-            double
-                The minimum cell diameter, the diameter is computed as
-                two times the circumradius
-                (http://mathworld.wolfram.com).
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.hmin()
-            0.70710678118654757
-
-    .. cpp:function:: double* coordinates()
-    
-        Get vertex coordinates.
-        
-        *Returns*
-            An array of doubles
-                Coordinates of all vertices.
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(1,1)
-            >>> mesh.coordinates()
-            array([[ 0.,  0.],
-                   [ 1.,  0.],
-                   [ 0.,  1.],
-                   [ 1.,  1.]])
-
-    .. cpp:function:: explicit Mesh(std::string filename)
-    
-        Create mesh from data file.
-        
-        *Arguments*
-            filename
-                A string, name of file to load.
-
-    .. cpp:function:: int any_intersected_entity(const Point& point) const
-    
-        Computes only the first id of the entity, which contains the
-        point.
-        
-        *Arguments*
-            point
-                A :cpp:class:`Point` object.
-        
-        *Returns*
-            integer
-                The first id of the cell, which contains the point,
-                returns -1 if no cell is intersected.
-
-    .. cpp:function:: std::pair<Point,dolfin::uint> closest_point_and_cell(const Point& point) const
-    
-        Computes the point inside the mesh and the corresponding cell
-        index which are closest to the point query.
-        
-        *Arguments*
-            point
-                A :cpp:class:`Point` object.
-        
-        *Returns*
-            pair <:cpp:class:`Point`, integer>
-                The point inside the mesh and the corresponding cell
-                index which is closest to the point query.
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Informal string representation.
-        
-        *Arguments*
-            verbose
-                A bool, flag to turn on additional output.
-        
-        *Returns*
-            string
-                An informal representation of the mesh.
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.str(False)
-            '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
-
-    .. cpp:function:: typedef XMLMesh XMLHandler
-    
-        Define XMLHandler for use in new XML reader/writer
-
-    .. cpp:function:: uint init(uint dim) const
-    
-        Compute entities of given topological dimension.
-        
-          *Arguments*
-              dim
-                  An integer, topological dimension.
-        
-          *Returns*
-              integer
-                  Number of created entities.
-
-    .. cpp:function:: uint num_cells() const
-    
-        Get number of cells in mesh.
-        
-        *Returns*
-            integer
-                Number of cells.
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_cells()
-            8
+            >>> mesh.num_vertices()
+            9
 
     .. cpp:function:: uint num_edges() const
     
@@ -367,32 +115,6 @@ Mesh.h
             16
             >>> mesh.num_edges()
             16
-
-    .. cpp:function:: uint num_entities(uint d) const
-    
-        Get number of entities of given topological dimension.
-        
-        *Arguments*
-            d
-                An integer, topological dimension.
-        
-        *Returns*
-            integer
-                Number of entities of topological dimension d.
-        
-        *Example*
-            .. warning::
-        
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.init(0,1)
-            >>> mesh.num_entities(0)
-            9
-            >>> mesh.num_entities(1)
-            16
-            >>> mesh.num_entities(2)
-            8
 
     .. cpp:function:: uint num_faces() const
     
@@ -431,13 +153,13 @@ Mesh.h
             >>> mesh.num_facets()
             16
 
-    .. cpp:function:: uint num_vertices() const
+    .. cpp:function:: uint num_cells() const
     
-        Get number of vertices in mesh.
+        Get number of cells in mesh.
         
         *Returns*
             integer
-                Number of vertices.
+                Number of cells.
         
         *Example*
             .. warning::
@@ -445,8 +167,76 @@ Mesh.h
                 Not C++ syntax.
         
             >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_vertices()
+            >>> mesh.num_cells()
+            8
+
+    .. cpp:function:: uint num_entities(uint d) const
+    
+        Get number of entities of given topological dimension.
+        
+        *Arguments*
+            d
+                An integer, topological dimension.
+        
+        *Returns*
+            integer
+                Number of entities of topological dimension d.
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.init(0,1)
+            >>> mesh.num_entities(0)
             9
+            >>> mesh.num_entities(1)
+            16
+            >>> mesh.num_entities(2)
+            8
+
+    .. cpp:function:: double* coordinates()
+    
+        Get vertex coordinates.
+        
+        *Returns*
+            An array of doubles
+                Coordinates of all vertices.
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(1,1)
+            >>> mesh.coordinates()
+            array([[ 0.,  0.],
+                   [ 1.,  0.],
+                   [ 0.,  1.],
+                   [ 1.,  1.]])
+
+    .. cpp:function:: const double* coordinates() const
+    
+        Return coordinates of all vertices (const version).
+
+    .. cpp:function:: const uint* cells() const
+    
+        Get cell connectivity.
+        
+        *Returns*
+            An array of integers
+                Connectivity for all cells.
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(1,1)
+            >>> mesh.cells()
+            array([[0, 1, 3],
+                   [0, 2, 3]])
 
     .. cpp:function:: uint size(uint dim) const
     
@@ -474,86 +264,77 @@ Mesh.h
             >>> mesh.num_entities(2)
             8
 
-    .. cpp:function:: void all_intersected_entities(const Mesh& another_mesh, uint_set& ids_result) const
+    .. cpp:function:: MeshTopology& topology()
     
-        Compute all ids of all cells which are intersected by
-        another_mesh.
+        Get topology associated with mesh.
         
-        *Arguments*
-            another_mesh
-                A :cpp:class:`Mesh` object.
-        
-            ids_result
-                A set of integers.
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+        *Returns*
+            :cpp:class:`MeshTopology`
+                The topology object associated with the mesh.
 
-    .. cpp:function:: void all_intersected_entities(const MeshEntity& entity, std::vector<uint>& ids_result) const
+    .. cpp:function:: const MeshTopology& topology() const
     
-        Compute all ids of all cells which are intersected by the given
-        entity.
-        
-        *Arguments*
-            entity
-                A :cpp:class:`MeshEntity` object.
-        
-            ids_result
-                A list of integers.
-                The ids of the intersected cells are saved in a list.
-                This is more efficent than using a set and allows a
-                map between the (external) cell and the intersected
-                cell of the mesh.
+        Get mesh topology (const version).
 
-    .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
+    .. cpp:function:: MeshGeometry& geometry()
     
-        Compute all ids of all cells which are intersected by the
-        given point.
+        Get mesh geometry.
         
-        *Arguments*
-            point
-                A :cpp:class:`Point` object.
-        
-            ids_result
-                A set of integers.
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+        *Returns*
+            :cpp:class:`MeshGeometry`
+                The geometry object associated with the mesh.
 
-    .. cpp:function:: void all_intersected_entities(const std::vector<MeshEntity>& entities, uint_set& ids_result) const
+    .. cpp:function:: const MeshGeometry& geometry() const
     
-        Compute all id of all cells which are intersected by any entity in the
-        vector entities.
-        
-        *Arguments*
-            entities
-                A vector of :cpp:class:`MeshEntity` objects.
-        
-            ids_result
-                A set of integers.
-                The cell ids which are intersected are stored in a set for
-                efficiency reasons, to avoid to sort out duplicates later on.
+        Get mesh geometry (const version).
 
-    .. cpp:function:: void all_intersected_entities(const std::vector<Point>& points, uint_set& ids_result) const
+    .. cpp:function:: IntersectionOperator& intersection_operator()
     
-        Compute all ids of all cells which are intersected by any
-        point in points.
+        Get intersection operator.
         
-        *Arguments*
-            points
-                A vector of :cpp:class:`Point` objects.
+        *Returns*
+            :cpp:class:`IntersectionOperator`
+                The intersection operator object associated with the mesh.
+
+    .. cpp:function:: const IntersectionOperator& intersection_operator() const
+    
+        Return intersection operator (const version);
+
+    .. cpp:function:: MeshData& data()
+    
+        Get mesh data.
         
-            ids_result
-                A set of integers.
-                The cell ids which are intersected are stored in a set
-                for efficiency reasons, to avoid to sort out
-                duplicates later on.
+        *Returns*
+            :cpp:class:`MeshData`
+                The mesh data object associated with the mesh.
 
-    .. cpp:function:: void clear()
+    .. cpp:function:: const MeshData& data() const
     
-        Clear all mesh data.
+        Get mesh data (const version).
 
-    .. cpp:function:: void init() const
+    .. cpp:function:: CellType& type()
     
-        Compute all entities and connectivity.
+        Get mesh cell type.
+        
+        *Returns*
+            :cpp:class:`CellType`
+                The cell type object associated with the mesh.
+
+    .. cpp:function:: const CellType& type() const
+    
+        Get mesh cell type (const version).
+
+    .. cpp:function:: uint init(uint dim) const
+    
+        Compute entities of given topological dimension.
+        
+          *Arguments*
+              dim
+                  An integer, topological dimension.
+        
+          *Returns*
+              integer
+                  Number of created entities.
 
     .. cpp:function:: void init(uint d0, uint d1) const
     
@@ -565,6 +346,31 @@ Mesh.h
         
               d1
                   An integer, topological dimension.
+
+    .. cpp:function:: void init() const
+    
+        Compute all entities and connectivity.
+
+    .. cpp:function:: void clear()
+    
+        Clear all mesh data.
+
+    .. cpp:function:: void order()
+    
+        Order all mesh entities.
+        
+        .. seealso::
+        
+            UFC documentation (put link here!)
+
+    .. cpp:function:: bool ordered() const
+    
+        Check if mesh is ordered.
+        
+        *Returns*
+            bool
+                Return true iff topology is ordered according to the UFC
+                numbering.
 
     .. cpp:function:: void move(BoundaryMesh& boundary, dolfin::ALEType method=hermite)
     
@@ -601,14 +407,6 @@ Mesh.h
             function
                 A :cpp:class:`Function` object.
 
-    .. cpp:function:: void order()
-    
-        Order all mesh entities.
-        
-        .. seealso::
-        
-            UFC documentation (put link here!)
-
     .. cpp:function:: void smooth(uint num_iterations=1)
     
         Smooth internal vertices of mesh by local averaging.
@@ -642,4 +440,206 @@ Mesh.h
             harmonic_smoothing
                 A bool, flag to turn on harmonics smoothing, default
                 value is true.
+
+    .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
+    
+        Compute all ids of all cells which are intersected by the
+        given point.
+        
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+        
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
+
+    .. cpp:function:: void all_intersected_entities(const std::vector<Point>& points, uint_set& ids_result) const
+    
+        Compute all ids of all cells which are intersected by any
+        point in points.
+        
+        *Arguments*
+            points
+                A vector of :cpp:class:`Point` objects.
+        
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set
+                for efficiency reasons, to avoid to sort out
+                duplicates later on.
+
+    .. cpp:function:: void all_intersected_entities(const MeshEntity& entity, std::vector<uint>& ids_result) const
+    
+        Compute all ids of all cells which are intersected by the given
+        entity.
+        
+        *Arguments*
+            entity
+                A :cpp:class:`MeshEntity` object.
+        
+            ids_result
+                A list of integers.
+                The ids of the intersected cells are saved in a list.
+                This is more efficent than using a set and allows a
+                map between the (external) cell and the intersected
+                cell of the mesh.
+
+    .. cpp:function:: void all_intersected_entities(const std::vector<MeshEntity>& entities, uint_set& ids_result) const
+    
+        Compute all id of all cells which are intersected by any entity in the
+        vector entities.
+        
+        *Arguments*
+            entities
+                A vector of :cpp:class:`MeshEntity` objects.
+        
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
+
+    .. cpp:function:: void all_intersected_entities(const Mesh& another_mesh, uint_set& ids_result) const
+    
+        Compute all ids of all cells which are intersected by
+        another_mesh.
+        
+        *Arguments*
+            another_mesh
+                A :cpp:class:`Mesh` object.
+        
+            ids_result
+                A set of integers.
+                The cell ids which are intersected are stored in a set for
+                efficiency reasons, to avoid to sort out duplicates later on.
+
+    .. cpp:function:: int any_intersected_entity(const Point& point) const
+    
+        Computes only the first id of the entity, which contains the
+        point.
+        
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+        
+        *Returns*
+            integer
+                The first id of the cell, which contains the point,
+                returns -1 if no cell is intersected.
+
+    .. cpp:function:: Point closest_point(const Point& point) const
+    
+        Computes the point inside the mesh and the corresponding cell
+        index which are closest to the point query.
+        
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+        
+        *Returns*
+            Point
+                The point inside the mesh which is closest to the
+                point.
+
+    .. cpp:function:: dolfin::uint closest_cell(const Point& point) const
+    
+        Computes the index of the cell in the mesh which is closest to the
+        point query.
+        
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+        
+        *Returns*
+            integer
+                The index of the cell in the mesh which is closest to point.
+        
+        *Example*
+            .. code-block:: c++
+        
+                UnitSquare mesh(1, 1);
+                Point point(0.0, 2.0);
+                info("%d", mesh.closest_cell(point));
+        
+            output::
+        
+                1
+
+    .. cpp:function:: std::pair<Point,dolfin::uint> closest_point_and_cell(const Point& point) const
+    
+        Computes the point inside the mesh and the corresponding cell
+        index which are closest to the point query.
+        
+        *Arguments*
+            point
+                A :cpp:class:`Point` object.
+        
+        *Returns*
+            pair <:cpp:class:`Point`, integer>
+                The point inside the mesh and the corresponding cell
+                index which is closest to the point query.
+
+    .. cpp:function:: double hmin() const
+    
+        Compute minimum cell diameter.
+        
+        *Returns*
+            double
+                The minimum cell diameter, the diameter is computed as
+                two times the circumradius
+                (http://mathworld.wolfram.com).
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.hmin()
+            0.70710678118654757
+
+    .. cpp:function:: double hmax() const
+    
+        Compute maximum cell diameter.
+        
+        *Returns*
+            double
+                The maximum cell diameter, the diameter is computed as
+                two times the circumradius
+                (http://mathworld.wolfram.com).
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.hmax()
+            0.70710678118654757
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Informal string representation.
+        
+        *Arguments*
+            verbose
+                A bool, flag to turn on additional output.
+        
+        *Returns*
+            string
+                An informal representation of the mesh.
+        
+        *Example*
+            .. warning::
+        
+                Not C++ syntax.
+        
+            >>> mesh = dolfin.UnitSquare(2,2)
+            >>> mesh.str(False)
+            '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
+
+    .. cpp:function:: typedef XMLMesh XMLHandler
+    
+        Define XMLHandler for use in new XML reader/writer
 

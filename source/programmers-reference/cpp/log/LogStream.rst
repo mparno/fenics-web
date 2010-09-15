@@ -16,37 +16,29 @@ LogStream.h
     streams (std::cout, std::endl) for output but working through
     the DOLFIN log system.
 
-    .. cpp:function:: LogStream& operator<< (complex z)
+    .. cpp:function:: enum Type
     
-        Output for complex
+        Stream types
+
+    .. cpp:function:: LogStream(Type type)
+    
+        Create log stream of given type
 
     .. cpp:function:: LogStream& operator<< (const LogStream& stream)
     
         Output for log stream
 
-    .. cpp:function:: LogStream& operator<< (const MeshEntity& entity)
-    
-        Output for mesh entity (not subclass of Variable for efficiency)
-
-    .. cpp:function:: LogStream& operator<< (const Point& point)
-    
-        Output for point (not subclass of Variable for efficiency)
-
-    .. cpp:function:: LogStream& operator<< (const Variable& variable)
-    
-        Output for variable (calling str() method)
-
     .. cpp:function:: LogStream& operator<< (const std::string& s)
     
         Output for string
 
-    .. cpp:function:: LogStream& operator<< (double a)
-    
-        Output for double
-
     .. cpp:function:: LogStream& operator<< (int a)
     
         Output for int
+
+    .. cpp:function:: LogStream& operator<< (uint a)
+    
+        Output for unsigned int
 
     .. cpp:function:: LogStream& operator<< (long int a)
     
@@ -56,21 +48,29 @@ LogStream.h
     
         Output for long int
 
+    .. cpp:function:: LogStream& operator<< (double a)
+    
+        Output for double
+
+    .. cpp:function:: LogStream& operator<< (complex z)
+    
+        Output for complex
+
+    .. cpp:function:: LogStream& operator<< (const Variable& variable)
+    
+        Output for variable (calling str() method)
+
+    .. cpp:function:: LogStream& operator<< (const MeshEntity& entity)
+    
+        Output for mesh entity (not subclass of Variable for efficiency)
+
+    .. cpp:function:: LogStream& operator<< (const Point& point)
+    
+        Output for point (not subclass of Variable for efficiency)
+
     .. cpp:function:: LogStream& operator<< (real a)
     
         Output for real
-
-    .. cpp:function:: LogStream& operator<< (uint a)
-    
-        Output for unsigned int
-
-    .. cpp:function:: LogStream(Type type)
-    
-        Create log stream of given type
-
-    .. cpp:function:: enum Type
-    
-        Stream types
 
     .. cpp:function:: extern LogStream cout
     

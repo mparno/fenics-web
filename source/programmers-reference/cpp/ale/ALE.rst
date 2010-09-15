@@ -21,11 +21,11 @@ ALE.h
     
         Move coordinates of mesh according to new boundary coordinates
 
-    .. cpp:function:: static void move(Mesh& mesh, const Function& displacement)
-    
-        Move coordinates of mesh according to displacement function
-
     .. cpp:function:: static void move(Mesh& mesh0, Mesh& mesh1, dolfin::ALEType method=lagrange)
     
         Move coordinates of mesh0 according to mesh1 with common global vertices
+
+    .. cpp:function:: static void move(Mesh& mesh, const Function& displacement)
+    
+        Move coordinates of mesh according to displacement function
 

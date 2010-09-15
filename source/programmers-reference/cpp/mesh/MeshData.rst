@@ -59,6 +59,14 @@ MeshData.h
     
         Constructor
 
+    .. cpp:function:: const MeshData& operator= (const MeshData& data)
+    
+        Assignment operator
+
+    .. cpp:function:: void clear()
+    
+        Clear all data
+
     .. cpp:function:: MeshFunction<uint>* create_mesh_function(std::string name)
     
         Create MeshFunction with given name (uninitialized)
@@ -67,49 +75,37 @@ MeshData.h
     
         Create MeshFunction with given name and dimension
 
-    .. cpp:function:: MeshFunction<uint>* mesh_function(const std::string name) const
+    .. cpp:function:: std::vector<uint>* create_array(std::string name, uint size)
     
-        Return MeshFunction with given name (returning zero if data is not available)
-
-    .. cpp:function:: const MeshData& operator= (const MeshData& data)
-    
-        Assignment operator
-
-    .. cpp:function:: friend class XMLFile
-    
-        Friends
-
-    .. cpp:function:: std::map<uint, std::vector<uint> >* create_vector_mapping(std::string name)
-    
-        Create mapping from uint to vector of uint with given name
-
-    .. cpp:function:: std::map<uint, std::vector<uint> >* vector_mapping(const std::string name) const
-    
-        Return vector mapping with given name (returning zero if data is not available)
+        Create array (vector) with given name and size
 
     .. cpp:function:: std::map<uint, uint>* create_mapping(std::string name)
     
         Create mapping from uint to uint with given name
 
-    .. cpp:function:: std::map<uint, uint>* mapping(const std::string name) const
+    .. cpp:function:: std::map<uint, std::vector<uint> >* create_vector_mapping(std::string name)
     
-        Return mapping with given name (returning zero if data is not available)
+        Create mapping from uint to vector of uint with given name
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: MeshFunction<uint>* mesh_function(const std::string name) const
     
-        Return informal string representation (pretty-print)
+        Return MeshFunction with given name (returning zero if data is not available)
 
     .. cpp:function:: std::vector<uint>* array(const std::string name) const
     
         Return array with given name (returning zero if data is not available)
 
-    .. cpp:function:: std::vector<uint>* create_array(std::string name, uint size)
+    .. cpp:function:: std::map<uint, uint>* mapping(const std::string name) const
     
-        Create array (vector) with given name and size
+        Return mapping with given name (returning zero if data is not available)
 
-    .. cpp:function:: void clear()
+    .. cpp:function:: std::map<uint, std::vector<uint> >* vector_mapping(const std::string name) const
     
-        Clear all data
+        Return vector mapping with given name (returning zero if data is not available)
+
+    .. cpp:function:: void erase_mesh_function(const std::string name)
+    
+        Erase MeshFunction with given name
 
     .. cpp:function:: void erase_array(const std::string name)
     
@@ -119,11 +115,15 @@ MeshData.h
     
         Erase mapping with given name
 
-    .. cpp:function:: void erase_mesh_function(const std::string name)
-    
-        Erase MeshFunction with given name
-
     .. cpp:function:: void erase_vector_mapping(const std::string name)
     
         Erase vector mapping with given name
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: friend class XMLFile
+    
+        Friends
 

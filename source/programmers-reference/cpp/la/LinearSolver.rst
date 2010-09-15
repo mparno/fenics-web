@@ -22,18 +22,6 @@ LinearSolver.h
     
         Create linear solver
 
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b
-
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b
-
     .. cpp:function:: void set_operator(const GenericMatrix& A)
     
         Set the operator (matrix)
@@ -41,4 +29,16 @@ LinearSolver.h
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
         Set the operator (matrix) and preconitioner matrix
+
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b
+
+    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
 

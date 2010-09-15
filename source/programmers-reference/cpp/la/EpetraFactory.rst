@@ -16,32 +16,32 @@ EpetraFactory.h
     
         * :cpp:class:`LinearAlgebraFactory`
         
-    .. cpp:function:: // Return Epetra Communicator Epetra_SerialComm& get_serial_comm() const
-    
-        --- EpetraFactory interface
-
-    .. cpp:function:: EpetraKrylovSolver* create_krylov_solver(std::string method, std::string pc) const
-    
-        Create Krylov solver
-
-    .. cpp:function:: EpetraLUSolver* create_lu_solver() const
-    
-        Create LU solver
-
     .. cpp:function:: EpetraMatrix* create_matrix() const
     
         --- LinearAlgebraFactory interface
         Create empty matrix
 
-    .. cpp:function:: EpetraVector* create_local_vector() const
-    
-        Create empty vector (local)
-
     .. cpp:function:: EpetraVector* create_vector() const
     
         Create empty vector (global)
 
+    .. cpp:function:: EpetraVector* create_local_vector() const
+    
+        Create empty vector (local)
+
     .. cpp:function:: SparsityPattern* create_pattern() const
     
         Create empty sparsity pattern
+
+    .. cpp:function:: EpetraLUSolver* create_lu_solver() const
+    
+        Create LU solver
+
+    .. cpp:function:: EpetraKrylovSolver* create_krylov_solver(std::string method, std::string pc) const
+    
+        Create Krylov solver
+
+    .. cpp:function:: // Return Epetra Communicator Epetra_SerialComm& get_serial_comm() const
+    
+        --- EpetraFactory interface
 

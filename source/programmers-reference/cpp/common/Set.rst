@@ -15,59 +15,59 @@ Set.h
     This is a std::set like data structure. It is not ordered and it is based
     a std::vector. It can be faster than a std::set for some cases.
 
-    .. cpp:function:: Set(const dolfin::Set<T>& x)
+    .. cpp:function:: template<class T> Set()
     
-        Copy constructor
+        Create empty set
 
     .. cpp:function:: Set(std::vector<T>& x)
     
         Wrap std::vectpr as a set. Contents will be erased.
 
-    .. cpp:function:: T operator[](uint n) const
+    .. cpp:function:: Set(const dolfin::Set<T>& x)
     
-        Index the nth entry in the set
-
-    .. cpp:function:: bool insert(const T& x)
-    
-        Insert entry
-
-    .. cpp:function:: const std::vector<T>& set() const
-    
-        Return the vector that stores the data in the Set
-
-    .. cpp:function:: const_iterator find(const T& x) const
-    
-        Find entry in set and return an iterator to the entry (const)
-
-    .. cpp:function:: dolfin::uint size() const
-    
-        Set size
+        Copy constructor
 
     .. cpp:function:: iterator find(const T& x)
     
         Find entry in set and return an iterator to the entry
 
-    .. cpp:function:: std::vector<T>& set()
+    .. cpp:function:: const_iterator find(const T& x) const
     
-        Return the vector that stores the data in the Set
+        Find entry in set and return an iterator to the entry (const)
 
-    .. cpp:function:: template<class T> Set()
+    .. cpp:function:: bool insert(const T& x)
     
-        Create empty set
+        Insert entry
 
-    .. cpp:function:: void clear()
+    .. cpp:function:: dolfin::uint size() const
     
-        Clear set
+        Set size
 
     .. cpp:function:: void erase(const T& x)
     
         Erase an entry
 
+    .. cpp:function:: void sort()
+    
+        Sort set
+
+    .. cpp:function:: void clear()
+    
+        Clear set
+
     .. cpp:function:: void resize(uint n)
     
         Resize set
 
-    .. cpp:function:: void sort()
+    .. cpp:function:: T operator[](uint n) const
     
-        Sort set
+        Index the nth entry in the set
+
+    .. cpp:function:: const std::vector<T>& set() const
+    
+        Return the vector that stores the data in the Set
+
+    .. cpp:function:: std::vector<T>& set()
+    
+        Return the vector that stores the data in the Set
 

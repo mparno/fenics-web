@@ -18,14 +18,6 @@ GenericLinearSolver.h
         
     This class provides a general solver for linear systems Ax = b.
 
-    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b
-
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b
-
     .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
     
         Solve the operator (matrix)
@@ -33,4 +25,12 @@ GenericLinearSolver.h
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
         Solve the operator (matrix) and preconditioner matrix
+
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b
+
+    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b
 

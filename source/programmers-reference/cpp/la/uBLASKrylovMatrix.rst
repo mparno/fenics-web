@@ -18,10 +18,6 @@ uBLASKrylovMatrix.h
     overload the mult() function to specify a linear system only in
     terms of its action.
 
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
     .. cpp:function:: uBLASKrylovMatrix()
     
         Constructor
@@ -37,4 +33,8 @@ uBLASKrylovMatrix.h
     .. cpp:function:: void solve(uBLASVector& x, const uBLASVector& b)
     
         Solve linear system Ax = b for a Krylov matrix using uBLAS and dense matrices
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
 

@@ -36,61 +36,9 @@ PETScKrylovSolver.h
     
         Create Krylov solver for a particular method and PETScPreconditioner
 
-    .. cpp:function:: PETScUserPreconditioner* pc_dolfin
-    
-        DOLFIN-defined PETScUserPreconditioner
-
-    .. cpp:function:: boost::shared_ptr<KSP> _ksp
-    
-        PETSc solver pointer
-
-    .. cpp:function:: boost::shared_ptr<KSP> ksp() const
-    
-        Return PETSc KSP pointer
-
-    .. cpp:function:: boost::shared_ptr<PETScPreconditioner> preconditioner
-    
-        Preconditioner
-
-    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> A
-    
-        Operator (the matrix)
-
-    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> P
-    
-        Matrix used to construct the preconditoner
-
     .. cpp:function:: explicit PETScKrylovSolver(boost::shared_ptr<KSP> ksp)
     
         Create solver from given PETSc KSP pointer
-
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(PETScVector& x, const PETScVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: uint solve(const PETScBaseMatrix& A, PETScVector& x, const PETScVector& b)
-    
-        Solve linear system Ax = b and return number of iterations
-
-    .. cpp:function:: void init(const std::string& method)
-    
-        Initialize KSP solver
 
     .. cpp:function:: void set_operator(const GenericMatrix& A)
     
@@ -108,7 +56,59 @@ PETScKrylovSolver.h
     
         Set operator (matrix) and preconditioner matrix
 
+    .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(PETScVector& x, const PETScVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: uint solve(const PETScBaseMatrix& A, PETScVector& x, const PETScVector& b)
+    
+        Solve linear system Ax = b and return number of iterations
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: boost::shared_ptr<KSP> ksp() const
+    
+        Return PETSc KSP pointer
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
+
+    .. cpp:function:: void init(const std::string& method)
+    
+        Initialize KSP solver
+
     .. cpp:function:: void write_report(int num_iterations, KSPConvergedReason reason)
     
         Report the number of iterations
+
+    .. cpp:function:: PETScUserPreconditioner* pc_dolfin
+    
+        DOLFIN-defined PETScUserPreconditioner
+
+    .. cpp:function:: boost::shared_ptr<KSP> _ksp
+    
+        PETSc solver pointer
+
+    .. cpp:function:: boost::shared_ptr<PETScPreconditioner> preconditioner
+    
+        Preconditioner
+
+    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> A
+    
+        Operator (the matrix)
+
+    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> P
+    
+        Matrix used to construct the preconditoner
 

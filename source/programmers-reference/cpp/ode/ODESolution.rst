@@ -33,6 +33,14 @@ ODESolution.h
     
         Create solution data for given ODE
 
+    .. cpp:function:: void flush()
+    
+        Make object ready for evaluating, set to read mode
+
+    .. cpp:function:: void eval(const real& t, real* y)
+    
+        Evaluate (interpolate) value of solution at given time
+
     .. cpp:function:: ODESolutionData& get_timeslab(uint index)
     
         Get timeslab (used when iterating)
@@ -40,14 +48,6 @@ ODESolution.h
     .. cpp:function:: const real* get_weights() const
     
         Get pointer to weights
-
-    .. cpp:function:: void eval(const real& t, real* y)
-    
-        Evaluate (interpolate) value of solution at given time
-
-    .. cpp:function:: void flush()
-    
-        Make object ready for evaluating, set to read mode
 
 .. cpp:class:: ODESolutionIterator
 

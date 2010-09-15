@@ -18,10 +18,6 @@ Constant.h
         
     This class represents a constant-valued expression.
 
-    .. cpp:function:: Constant(const Constant& constant)
-    
-        Copy constructor
-
     .. cpp:function:: Constant(double value)
     
         Create scalar constant
@@ -41,6 +37,10 @@ Constant.h
     .. cpp:function:: Constant(std::vector<uint> value_shape, std::vector<double> values)
     
         Create tensor-valued constant for flattened array of values
+
+    .. cpp:function:: Constant(const Constant& constant)
+    
+        Copy constructor
 
     .. cpp:function:: const Constant& operator= (const Constant& constant)
     

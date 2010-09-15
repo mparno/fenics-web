@@ -29,13 +29,37 @@ Lagrange.h
       p(0,x) = 1 - x   (one at x = 0, zero at x = 1)
       p(1,x) = x       (zero at x = 0, one at x = 1)
 
+    .. cpp:function:: Lagrange(unsigned int q)
+    
+        Constructor
+
     .. cpp:function:: Lagrange(const Lagrange& p)
     
         Copy constructor
 
-    .. cpp:function:: Lagrange(unsigned int q)
+    .. cpp:function:: void set(unsigned int i, real x)
     
-        Constructor
+        Specify point
+
+    .. cpp:function:: unsigned int size() const
+    
+        Return number of points
+
+    .. cpp:function:: unsigned int degree() const
+    
+        Return degree
+
+    .. cpp:function:: real point(unsigned int i) const
+    
+        Return point
+
+    .. cpp:function:: real operator() (unsigned int i, real x)
+    
+        Return value of polynomial i at given point x
+
+    .. cpp:function:: real eval(unsigned int i, real x)
+    
+        Return value of polynomial i at given point x
 
     .. cpp:function:: real ddx(unsigned int i, real x)
     
@@ -45,31 +69,7 @@ Lagrange.h
     
         Return derivative q (a constant) of polynomial
 
-    .. cpp:function:: real eval(unsigned int i, real x)
-    
-        Return value of polynomial i at given point x
-
-    .. cpp:function:: real operator() (unsigned int i, real x)
-    
-        Return value of polynomial i at given point x
-
-    .. cpp:function:: real point(unsigned int i) const
-    
-        Return point
-
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: unsigned int degree() const
-    
-        Return degree
-
-    .. cpp:function:: unsigned int size() const
-    
-        Return number of points
-
-    .. cpp:function:: void set(unsigned int i, real x)
-    
-        Specify point
 

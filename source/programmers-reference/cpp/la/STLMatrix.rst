@@ -20,30 +20,82 @@ STLMatrix.h
     with new assembly. Not sure this will be used later but it
     might be useful.
 
-    .. cpp:function:: LinearAlgebraFactory& factory() const
-    
-        --- Specialized matrix functions ---
-        Return linear algebra backend factory
-
     .. cpp:function:: STLMatrix()
     
         Create empty matrix
-
-    .. cpp:function:: STLMatrix(const STLMatrix& A)
-    
-        Copy constructor
 
     .. cpp:function:: STLMatrix(uint M, uint N)
     
         Create M x N matrix
 
+    .. cpp:function:: STLMatrix(const STLMatrix& A)
+    
+        Copy constructor
+
+    .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern)
+    
+        --- Implementation of the GenericTensor interface ---
+        Initialize zero tensor using sparsity pattern
+
     .. cpp:function:: STLMatrix* copy() const
     
         Return copy of tensor
 
-    .. cpp:function:: const GenericMatrix& operator= (const GenericMatrix& A)
+    .. cpp:function:: uint size(uint dim) const
     
-        Assignment operator
+        Return size of given dimension
+
+    .. cpp:function:: void zero()
+    
+        Set all entries to zero and keep any sparse structure
+
+    .. cpp:function:: void apply(std::string mode)
+    
+        Finalize assembly of tensor
+
+    .. cpp:function:: std::string str(bool verbose) const
+    
+        Return informal string representation (pretty-print)
+
+    .. cpp:function:: void resize(uint M, uint N)
+    
+        Initialize M x N matrix
+
+    .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const
+    
+        Get block of values
+
+    .. cpp:function:: void set(const double* block, uint m, const uint* rows, uint n, const uint* cols)
+    
+        Set block of values
+
+    .. cpp:function:: void add(const double* block, uint m, const uint* rows, uint n, const uint* cols)
+    
+        Add block of values
+
+    .. cpp:function:: void axpy(double a, const GenericMatrix& A, bool same_nonzero_pattern)
+    
+        Add multiple of given matrix (AXPY operation)
+
+    .. cpp:function:: double norm(std::string norm_type) const
+    
+        Return norm of matrix
+
+    .. cpp:function:: void getrow(uint row, std::vector<uint>& columns, std::vector<double>& values) const
+    
+        Get non-zero values of given row
+
+    .. cpp:function:: void setrow(uint row, const std::vector<uint>& columns, const std::vector<double>& values)
+    
+        Set values for given row
+
+    .. cpp:function:: void zero(uint m, const uint* rows)
+    
+        Set given rows to zero
+
+    .. cpp:function:: void ident(uint m, const uint* rows)
+    
+        Set given rows to identity matrix
 
     .. cpp:function:: const STLMatrix& operator*= (double a)
     
@@ -53,68 +105,16 @@ STLMatrix.h
     
         Divide matrix by given number
 
-    .. cpp:function:: double norm(std::string norm_type) const
+    .. cpp:function:: const GenericMatrix& operator= (const GenericMatrix& A)
     
-        Return norm of matrix
+        Assignment operator
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: LinearAlgebraFactory& factory() const
     
-        Return informal string representation (pretty-print)
-
-    .. cpp:function:: uint size(uint dim) const
-    
-        Return size of given dimension
-
-    .. cpp:function:: void add(const double* block, uint m, const uint* rows, uint n, const uint* cols)
-    
-        Add block of values
-
-    .. cpp:function:: void apply(std::string mode)
-    
-        Finalize assembly of tensor
-
-    .. cpp:function:: void axpy(double a, const GenericMatrix& A, bool same_nonzero_pattern)
-    
-        Add multiple of given matrix (AXPY operation)
-
-    .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const
-    
-        Get block of values
-
-    .. cpp:function:: void getrow(uint row, std::vector<uint>& columns, std::vector<double>& values) const
-    
-        Get non-zero values of given row
-
-    .. cpp:function:: void ident(uint m, const uint* rows)
-    
-        Set given rows to identity matrix
-
-    .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern)
-    
-        --- Implementation of the GenericTensor interface ---
-        Initialize zero tensor using sparsity pattern
-
-    .. cpp:function:: void resize(uint M, uint N)
-    
-        Initialize M x N matrix
+        --- Specialized matrix functions ---
+        Return linear algebra backend factory
 
     .. cpp:function:: void resize(uint rank, const uint* dims, bool reset)
     
         Resize tensor of given rank and dimensions
-
-    .. cpp:function:: void set(const double* block, uint m, const uint* rows, uint n, const uint* cols)
-    
-        Set block of values
-
-    .. cpp:function:: void setrow(uint row, const std::vector<uint>& columns, const std::vector<double>& values)
-    
-        Set values for given row
-
-    .. cpp:function:: void zero()
-    
-        Set all entries to zero and keep any sparse structure
-
-    .. cpp:function:: void zero(uint m, const uint* rows)
-    
-        Set given rows to zero
 

@@ -28,21 +28,17 @@ UmfpackLUSolver.h
     
         Constructor
 
-    .. cpp:function:: UmfpackLUSolver(boost::shared_ptr<const GenericMatrix> A)
-    
-        Constructor
-
     .. cpp:function:: UmfpackLUSolver(const GenericMatrix& A)
     
         Constructor
 
-    .. cpp:function:: static Parameters default_parameters()
+    .. cpp:function:: UmfpackLUSolver(boost::shared_ptr<const GenericMatrix> A)
     
-        Default parameter values
+        Constructor
 
-    .. cpp:function:: static void umfpack_check_status(long int status, std::string function)
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Check status flag returned by an UMFPACK function
+        Set operator (matrix)
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
@@ -52,15 +48,19 @@ UmfpackLUSolver.h
     
         Solve linear system
 
-    .. cpp:function:: uint solve_factorized(GenericVector& x, const GenericVector& b) const
+    .. cpp:function:: static Parameters default_parameters()
     
-        Solve factorized system (UMFPACK).
+        Default parameter values
 
     .. cpp:function:: void numeric_factorize()
     
         LU factorisation
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: uint solve_factorized(GenericVector& x, const GenericVector& b) const
     
-        Set operator (matrix)
+        Solve factorized system (UMFPACK).
+
+    .. cpp:function:: static void umfpack_check_status(long int status, std::string function)
+    
+        Check status flag returned by an UMFPACK function
 

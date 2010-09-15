@@ -28,21 +28,13 @@ ITLKrylovSolver.h
     
         Create Krylov solver for a particular method and preconditioner
 
-    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> A
+    .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Operator (the matrix)
+        Set operator (matrix)
 
-    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> P
+    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
-        Matrix used to construct the preconditoner
-
-    .. cpp:function:: static Parameters default_parameters()
-    
-        Default parameter values
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
+        Set operator (matrix) and preconditioner matrix
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
@@ -56,11 +48,19 @@ ITLKrylovSolver.h
     
         Solve linear system Ax = b and return number of iterations
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Set operator (matrix)
+        Return informal string representation (pretty-print)
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: static Parameters default_parameters()
     
-        Set operator (matrix) and preconditioner matrix
+        Default parameter values
+
+    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> A
+    
+        Operator (the matrix)
+
+    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> P
+    
+        Matrix used to construct the preconditoner
 

@@ -20,9 +20,41 @@ BlockVector.h
     
         Return copy of tensor
 
+    .. cpp:function:: void set(uint i, Vector& v)
+    
+        Set function
+
+    .. cpp:function:: const Vector& get(uint i) const
+    
+        Get functions (const and non-const)
+
+    .. cpp:function:: void axpy(double a, const BlockVector& x)
+    
+        Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: double inner(const BlockVector& x) const
+    
+        Return inner product with given vector
+
+    .. cpp:function:: double norm(std::string norm_type) const
+    
+        Return norm of vector
+
+    .. cpp:function:: double min() const
+    
+        Return minimum value of vector
+
+    .. cpp:function:: double max() const
+    
+        Return maximum value of vector
+
     .. cpp:function:: const BlockVector& operator*= (double a)
     
         Multiply vector by given number
+
+    .. cpp:function:: const BlockVector& operator/= (double a)
+    
+        Divide vector by given number
 
     .. cpp:function:: const BlockVector& operator+= (const BlockVector& x)
     
@@ -32,10 +64,6 @@ BlockVector.h
     
         Subtract given vector
 
-    .. cpp:function:: const BlockVector& operator/= (double a)
-    
-        Divide vector by given number
-
     .. cpp:function:: const BlockVector& operator= (const BlockVector& x)
     
         Assignment operator
@@ -44,41 +72,13 @@ BlockVector.h
     
         Assignment operator
 
-    .. cpp:function:: const Vector& get(uint i) const
-    
-        Get functions (const and non-const)
-
-    .. cpp:function:: double inner(const BlockVector& x) const
-    
-        Return inner product with given vector
-
-    .. cpp:function:: double max() const
-    
-        Return maximum value of vector
-
-    .. cpp:function:: double min() const
-    
-        Return minimum value of vector
-
-    .. cpp:function:: double norm(std::string norm_type) const
-    
-        Return norm of vector
-
-    .. cpp:function:: std::string str(bool verbose) const
-    
-        Return informal string representation (pretty-print)
-
     .. cpp:function:: uint size() const
     
         Number of vectors
 
-    .. cpp:function:: void axpy(double a, const BlockVector& x)
+    .. cpp:function:: std::string str(bool verbose) const
     
-        Add multiple of given vector (AXPY operation)
-
-    .. cpp:function:: void set(uint i, Vector& v)
-    
-        Set function
+        Return informal string representation (pretty-print)
 
 .. cpp:class:: SubVector
 

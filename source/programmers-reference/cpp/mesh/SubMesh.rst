@@ -21,13 +21,13 @@ SubMesh.h
     multiphysics applications by creating meshes for subdomains as
     subsets of a single global mesh.
 
-    .. cpp:function:: SubMesh(const Mesh& mesh, const MeshFunction<uint>& sub_domains, uint sub_domain)
-    
-        Create subset of given mesh marked by mesh function
-
     .. cpp:function:: SubMesh(const Mesh& mesh, const SubDomain& sub_domain)
     
         Create subset of given mesh marked by sub domain
+
+    .. cpp:function:: SubMesh(const Mesh& mesh, const MeshFunction<uint>& sub_domains, uint sub_domain)
+    
+        Create subset of given mesh marked by mesh function
 
     .. cpp:function:: void init(const Mesh& mesh, const MeshFunction<uint>& sub_domains, uint sub_domain)
     

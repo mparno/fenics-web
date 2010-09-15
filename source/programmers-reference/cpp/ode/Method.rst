@@ -27,49 +27,53 @@ Method.h
     
         Return type (inline optimized)
 
-    .. cpp:function:: const Lagrange get_trial() const
+    .. cpp:function:: unsigned int degree() const
     
-        Get trial functions
+        Return degree (inline optimized)
 
-    .. cpp:function:: const real* get_quadrature_weights() const
+    .. cpp:function:: unsigned int order() const
     
-        Get quadrature weights
+        Return order (inline optimized)
 
-    .. cpp:function:: real derivative(unsigned int i) const
+    .. cpp:function:: unsigned int nsize() const
     
-        Evaluation of derivative of basis function i at t = 1 (inline optimized)
+        Return number of nodal points (inline optimized)
 
-    .. cpp:function:: real error(real k, real r) const = 0
+    .. cpp:function:: unsigned int qsize() const
     
-        Compute error estimate (modulo stability factor)
-
-    .. cpp:function:: real eval(unsigned int i, real tau) const
-    
-        Evaluation of trial space basis function i at given tau (inline optimized)
+        Return number of quadrature points (inline optimized)
 
     .. cpp:function:: real npoint(unsigned int i) const
     
         Return nodal point (inline optimized)
 
-    .. cpp:function:: real nweight(unsigned int i, unsigned int j) const
-    
-        Return nodal weight j for node i, including quadrature (inline optimized)
-
     .. cpp:function:: real qpoint(unsigned int i) const
     
         Return quadrature point (inline optimized)
+
+    .. cpp:function:: real nweight(unsigned int i, unsigned int j) const
+    
+        Return nodal weight j for node i, including quadrature (inline optimized)
 
     .. cpp:function:: real qweight(unsigned int i) const
     
         Return quadrature weight, including only quadrature (inline optimized)
 
-    .. cpp:function:: real residual(real x0, real values[], real f, real k) const = 0
+    .. cpp:function:: real eval(unsigned int i, real tau) const
     
-        Compute residual at right end-point
+        Evaluation of trial space basis function i at given tau (inline optimized)
 
-    .. cpp:function:: real timestep(real r, real tol, real k0, real kmax) const = 0
+    .. cpp:function:: real derivative(unsigned int i) const
     
-        Compute new time step based on the given residual
+        Evaluation of derivative of basis function i at t = 1 (inline optimized)
+
+    .. cpp:function:: void update(real x0, real f[], real k, real values[]) const
+    
+        Update solution values using fixed-point iteration
+
+    .. cpp:function:: void update(real x0, real f[], real k, real values[], real alpha) const
+    
+        Update solution values using fixed-point iteration (damped version)
 
     .. cpp:function:: real ueval(real x0, real values[], real tau) const = 0
     
@@ -79,35 +83,31 @@ Method.h
     
         Evaluate solution at given node
 
-    .. cpp:function:: std::string str(bool verbose) const = 0
+    .. cpp:function:: real residual(real x0, real values[], real f, real k) const = 0
     
-        Return informal string representation (pretty-print)
+        Compute residual at right end-point
 
-    .. cpp:function:: unsigned int degree() const
+    .. cpp:function:: real timestep(real r, real tol, real k0, real kmax) const = 0
     
-        Return degree (inline optimized)
+        Compute new time step based on the given residual
 
-    .. cpp:function:: unsigned int nsize() const
+    .. cpp:function:: real error(real k, real r) const = 0
     
-        Return number of nodal points (inline optimized)
-
-    .. cpp:function:: unsigned int order() const
-    
-        Return order (inline optimized)
-
-    .. cpp:function:: unsigned int qsize() const
-    
-        Return number of quadrature points (inline optimized)
+        Compute error estimate (modulo stability factor)
 
     .. cpp:function:: void get_nodal_values(const real& x0, const real* x, real* nodal_values) const = 0
     
         Get nodal values
 
-    .. cpp:function:: void update(real x0, real f[], real k, real values[]) const
+    .. cpp:function:: const Lagrange get_trial() const
     
-        Update solution values using fixed-point iteration
+        Get trial functions
 
-    .. cpp:function:: void update(real x0, real f[], real k, real values[], real alpha) const
+    .. cpp:function:: const real* get_quadrature_weights() const
     
-        Update solution values using fixed-point iteration (damped version)
+        Get quadrature weights
+
+    .. cpp:function:: std::string str(bool verbose) const = 0
+    
+        Return informal string representation (pretty-print)
 

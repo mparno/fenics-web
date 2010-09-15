@@ -10,15 +10,15 @@ solve.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: double normalize(GenericVector& x, std::string normalization_type = "average")
+    .. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, std::string solver_type = "lu", std::string pc_type = "default")
     
-        Normalize vector according to given normalization type
+        Solve linear system Ax = b
 
     .. cpp:function:: double residual(const GenericMatrix& A, const GenericVector& x, const GenericVector& b)
     
         Compute residual ||Ax - b||
 
-    .. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, std::string solver_type = "lu", std::string pc_type = "default")
+    .. cpp:function:: double normalize(GenericVector& x, std::string normalization_type = "average")
     
-        Solve linear system Ax = b
+        Normalize vector according to given normalization type
 

@@ -18,29 +18,21 @@ File.h
     A list of objects that can be read/written to file can be found in
     GenericFile.h
 
-    .. cpp:function:: File(const std::string filename, Type type, std::string encoding = "ascii")
+    .. cpp:function:: enum Type
     
-        Create a file with given name and type (format)
+        File formats
 
     .. cpp:function:: File(const std::string filename, std::string encoding = "ascii")
     
         Create a file with given name
 
+    .. cpp:function:: File(const std::string filename, Type type, std::string encoding = "ascii")
+    
+        Create a file with given name and type (format)
+
     .. cpp:function:: File(std::ostream& outstream)
     
         Create a outfile object writing to stream
-
-    .. cpp:function:: enum Type
-    
-        File formats
-
-    .. cpp:function:: static bool exists(std::string filename)
-    
-        Check if file exists
-
-    .. cpp:function:: template<class T> void operator<<(const T& t)
-    
-        Write to file
 
     .. cpp:function:: template<class T> void operator>>(T& t)
     
@@ -53,4 +45,12 @@ File.h
     .. cpp:function:: void operator<<(const std::pair<const Function*, double> u)
     
         Write Function to file (with time)
+
+    .. cpp:function:: template<class T> void operator<<(const T& t)
+    
+        Write to file
+
+    .. cpp:function:: static bool exists(std::string filename)
+    
+        Check if file exists
 

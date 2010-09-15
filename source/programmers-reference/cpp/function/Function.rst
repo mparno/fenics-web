@@ -24,19 +24,31 @@ Function.h
     where {phi_i}_i is a basis for V_h, and U is a vector of
     expansion coefficients for u_h.
 
-    .. cpp:function:: Function& operator[] (uint i) const
+    .. cpp:function:: explicit Function(const FunctionSpace& V)
     
-        Extract sub-function
+        Create function on given function space
+
+    .. cpp:function:: explicit Function(boost::shared_ptr<const FunctionSpace> V)
+    
+        Create function on given function space (shared data)
+
+    .. cpp:function:: Function(const FunctionSpace& V, GenericVector& x)
+    
+        Create function on given function space with a given vector
+
+    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<GenericVector> x)
+    
+        Create function on given function space with a given vector
+        (shared data)
 
     .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, GenericVector& x)
     
         Create function on given function space with a given vector (used by
         Python interface)
 
-    .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<GenericVector> x)
+    .. cpp:function:: Function(const FunctionSpace& V, std::string filename)
     
-        Create function on given function space with a given vector
-        (shared data)
+        Create function from vector of dofs stored to file
 
     .. cpp:function:: Function(boost::shared_ptr<const FunctionSpace> V, std::string filename)
     
@@ -51,65 +63,41 @@ Function.h
         Sub-function constructor with shallow copy of vector (used in Python
         interface)
 
-    .. cpp:function:: Function(const FunctionSpace& V, GenericVector& x)
+    .. cpp:function:: const Function& operator= (const Function& v)
     
-        Create function on given function space with a given vector
-
-    .. cpp:function:: Function(const FunctionSpace& V, std::string filename)
-    
-        Create function from vector of dofs stored to file
-
-    .. cpp:function:: GenericVector& vector()
-    
-        Return vector of expansion coefficients (non-const version)
-
-    .. cpp:function:: bool in(const FunctionSpace& V) const
-    
-        Check if function is a member of the given function space
-
-    .. cpp:function:: boost::shared_ptr<const FunctionSpace> function_space_ptr() const
-    
-        Return shared pointer to function space
+        Assignment from function
 
     .. cpp:function:: const Function& operator= (const Expression& v)
     
         Assignment from expression using interpolation
 
-    .. cpp:function:: const Function& operator= (const Function& v)
+    .. cpp:function:: Function& operator[] (uint i) const
     
-        Assignment from function
+        Extract sub-function
 
     .. cpp:function:: const FunctionSpace& function_space() const
     
         Return function space
 
+    .. cpp:function:: boost::shared_ptr<const FunctionSpace> function_space_ptr() const
+    
+        Return shared pointer to function space
+
+    .. cpp:function:: GenericVector& vector()
+    
+        Return vector of expansion coefficients (non-const version)
+
     .. cpp:function:: const GenericVector& vector() const
     
         Return vector of expansion coefficients (const version)
 
-    .. cpp:function:: explicit Function(boost::shared_ptr<const FunctionSpace> V)
+    .. cpp:function:: bool in(const FunctionSpace& V) const
     
-        Create function on given function space (shared data)
-
-    .. cpp:function:: explicit Function(const FunctionSpace& V)
-    
-        Create function on given function space
+        Check if function is a member of the given function space
 
     .. cpp:function:: uint geometric_dimension() const
     
         Return geometric dimension
-
-    .. cpp:function:: uint value_dimension(uint i) const
-    
-        Return value dimension for given axis
-
-    .. cpp:function:: uint value_rank() const
-    
-        Return value rank
-
-    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
-    
-        Compute values at all mesh vertices
 
     .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
     
@@ -119,25 +107,37 @@ Function.h
     
         Evaluate function for given coordinate in given cell
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void interpolate(const GenericFunction& v)
     
-        Evaluate function for given data
+        Interpolate function (possibly non-matching meshes)
 
     .. cpp:function:: void extrapolate(const Function& v)
     
         Extrapolate function (from a possibly lower-degree function space)
 
-    .. cpp:function:: void gather() const
+    .. cpp:function:: uint value_rank() const
     
-        Collect off-process coefficients to prepare for interpolation
+        Return value rank
 
-    .. cpp:function:: void interpolate(const GenericFunction& v)
+    .. cpp:function:: uint value_dimension(uint i) const
     
-        Interpolate function (possibly non-matching meshes)
+        Return value dimension for given axis
+
+    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    
+        Evaluate function for given data
 
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const
     
         Restrict function to local cell (compute expansion coefficients w)
+
+    .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
+    
+        Compute values at all mesh vertices
+
+    .. cpp:function:: void gather() const
+    
+        Collect off-process coefficients to prepare for interpolation
 
 .. cpp:class:: LocalScratch
 
