@@ -1,24 +1,21 @@
-.. Index file for the fem directory
+.. Index file for the dolfin.fem module.
 
 .. _programmers_reference_python_fem_index:
 
-**********************
-DOLFIN ``fem`` library
-**********************
+*****************
+dolfin.fem module
+*****************
+
+Modules:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    Assembler
-    BasisFunction
-    BoundaryCondition
-    DirichletBC
-    DofMap
-    EqualityBC
-    FiniteElement
-    Form
-    GenericDofMap
-    PeriodicBC
-    SystemAssembler
-    VariationalProblem
-    assemble
+    assemble/index
+    bcs/index
+    errornorm/index
+    form/index
+    interpolate/index
+    norm/index
+    project/index
+    variationalproblem/index

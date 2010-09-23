@@ -1,19 +1,18 @@
-.. Index file for the function directory
+.. Index file for the dolfin.function module.
 
 .. _programmers_reference_python_function_index:
 
-***************************
-DOLFIN ``function`` library
-***************************
+**********************
+dolfin.function module
+**********************
+
+Modules:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    Constant
-    Data
-    Expression
-    Function
-    FunctionSpace
-    GenericFunction
-    SpecialFunctions
-    SubSpace
+    constant/index
+    expression/index
+    function/index
+    functionspace/index
+    specialfunctions/index

@@ -10,7 +10,7 @@ Array.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-.. cpp:class:: T>
+.. cpp:class:: Array
 
     This class provides a simple wrapper for a pointer to an array. A purpose
     of this class is to enable the simple and safe exchange of data between

@@ -43,11 +43,11 @@ Facet.h
         
     A FacetIterator is a MeshEntityIterator of topological codimension 1.
 
-.. cpp:class:: T>
+.. cpp:class:: FacetFunction
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction<T>`
+        * :cpp:class:`MeshFunction`
         
     A FacetFunction is a MeshFunction of topological codimension 1.
 

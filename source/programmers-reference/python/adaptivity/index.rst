@@ -1,12 +1,25 @@
-.. Index file for the adaptivity directory
+.. Index file for the dolfin.adaptivity module.
 
 .. _programmers_reference_python_adaptivity_index:
 
-*****************************
-DOLFIN ``adaptivity`` library
-*****************************
+************************
+dolfin.adaptivity module
+************************
+
+Modules:
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    TimeSeries
+    adaptive/index
+    adaptivedata/index
+    dual/index
+    errorestimator/index
+    errorestimators/index
+    formmanipulation/index
+    marking/index
+    normestimators/index
+    residual/index
+    specialfunctions/index
+    updates/index
+    utils/index

@@ -70,11 +70,11 @@ Cell.h
         
     A CellIterator is a MeshEntityIterator of topological codimension 0.
 
-.. cpp:class:: T>
+.. cpp:class:: CellFunction
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction<T>`
+        * :cpp:class:`MeshFunction`
         
     A CellFunction is a MeshFunction of topological codimension 0.
 

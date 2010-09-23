@@ -46,11 +46,11 @@ Vertex.h
         
     A VertexIterator is a MeshEntityIterator of topological dimension 0.
 
-.. cpp:class:: T>
+.. cpp:class:: VertexFunction
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction<T>`
+        * :cpp:class:`MeshFunction`
         
     A VertexFunction is a MeshFunction of topological dimension 0.
 

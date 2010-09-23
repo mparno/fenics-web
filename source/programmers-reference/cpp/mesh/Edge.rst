@@ -38,11 +38,11 @@ Edge.h
         
     An EdgeIterator is a MeshEntityIterator of topological dimension 1.
 
-.. cpp:class:: T>
+.. cpp:class:: EdgeFunction
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction<T>`
+        * :cpp:class:`MeshFunction`
         
     An EdgeFunction is a MeshFunction of topological dimension 1.
 

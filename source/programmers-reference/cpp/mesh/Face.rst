@@ -22,6 +22,10 @@ Face.h
     
         Constructor
 
+    .. cpp:function:: double area() const
+    
+        Calculate the area of the face (triangle)
+
 .. cpp:class:: FaceIterator
 
     *Parent class*
@@ -30,11 +34,11 @@ Face.h
         
     A FaceIterator is a MeshEntityIterator of topological dimension 2.
 
-.. cpp:class:: T>
+.. cpp:class:: FaceFunction
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction<T>`
+        * :cpp:class:`MeshFunction`
         
     A FaceFunction is a MeshFunction of topological dimension 2.
 
