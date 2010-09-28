@@ -147,5 +147,6 @@ Python Programmer's Reference
 modules = get_modules(dolfin, {})
 #write_module_index(modules)
 for key, mod in modules.items():
+    print "Writing files for module: ", key
     write_documentation(mod)
 

@@ -33,16 +33,21 @@ IntersectionOperator.h
         \param[out] ids_result The ids of the intersected entities are saved in a set for efficienty
         reasons, to avoid to sort out duplicates later on.
 
-    .. cpp:function:: //the (external) cell and the intersected cell of the mesh. If you //are only interested in intersection with a list of cells without caring about which //cell what intersected by which one, use // void IntersectionOperator::all_intersected_entities(const std::vector<Cell> &, uint_set &) const
+    .. cpp:function:: void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
     
         Compute all id of all cells which are intersects by a \em entity.
         \param[out] ids_result The ids of the intersected entities are saved in a vector.
         This allows is more efficent than using a set and allows a map between
-
-    .. cpp:function:: //mesh is to be cut with to be another mesh entitiy instead of being just a //kind of geometric object. 2) Requires a runtime switch 3) would require a //implementation for each geometric  primitive if they have no common base //class. void all_intersected_entities(const MeshEntity & entity, std::vector<uint> & ids_result) const
-    
-        //@internal
+        the (external) cell and the intersected cell of the mesh. If you
+        are only interested in intersection with a list of cells without caring about which
+        cell what intersected by which one, use
+        void IntersectionOperator::all_intersected_entities(const std::vector<Cell> &, uint_set &) const;
+        @internal
         @todo This function has to improved: 1) it requires the object the
+        mesh is to be cut with to be another mesh entitiy instead of being just a
+        kind of geometric object. 2) Requires a runtime switch 3) would require a
+        implementation for each geometric  primitive if they have no common base
+        class.
 
     .. cpp:function:: void all_intersected_entities(const std::vector<MeshEntity> & entities, uint_set & ids_result) const
     

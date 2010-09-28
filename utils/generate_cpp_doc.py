@@ -29,7 +29,8 @@ if not "DOLFIN_DIR" in os.environ:
 dolfin_dir = os.path.abspath(os.environ["DOLFIN_DIR"])
 
 # Add path to dolfin_utils and import the documentation extractor.
-sys.path.append(os.path.abspath(os.path.join(dolfin_dir, "site-packages")))
+#sys.path.append(os.path.abspath(os.path.join(dolfin_dir, "site-packages")))
+sys.path = [os.path.abspath(os.path.join(dolfin_dir, "site-packages"))] + sys.path
 from dolfin_utils.documentation import extract_doc_representation, indent, add_links
 
 def write_documentation(documentation, header, module, classnames):

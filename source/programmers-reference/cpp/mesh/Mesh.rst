@@ -538,7 +538,7 @@ Mesh.h
                 A :cpp:class:`Point` object.
         
         *Returns*
-            Point
+            :cpp:class:`Point`
                 The point inside the mesh which is closest to the
                 point.
 
