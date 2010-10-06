@@ -639,7 +639,3 @@ Mesh.h
             >>> mesh.str(False)
             '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
 
-    .. cpp:function:: typedef XMLMesh XMLHandler
-    
-        Define XMLHandler for use in new XML reader/writer
-

@@ -116,19 +116,3 @@ MeshFunction.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: T* _values
-    
-        Values at the set of mesh entities
-
-    .. cpp:function:: const Mesh* _mesh
-    
-        The mesh
-
-    .. cpp:function:: uint _dim
-    
-        Topological dimension
-
-    .. cpp:function:: uint _size
-    
-        Number of mesh entities
-

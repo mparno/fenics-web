@@ -97,15 +97,3 @@ IntersectionOperator.h
         Factory function to create the dimension dependent intersectionoperator
         implementation.
 
-    .. cpp:function:: mutable boost::scoped_ptr<IntersectionOperatorImplementation> _pImpl
-    
-        Pointer to implementation. Mutable to enable lazy initialization.
-
-    .. cpp:function:: boost::shared_ptr<const Mesh> _mesh
-    
-        Pointer to mesh.
-
-    .. cpp:function:: std::string _kernel_type
-    
-        String description of the used geometry kernel.
-

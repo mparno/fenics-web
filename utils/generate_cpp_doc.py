@@ -14,7 +14,7 @@ __license__  = "GNU GPL version 3 or any later version"
 
 # Modified by Kristian B. Oelgaard, 2010.
 
-# Last changed: 2010-09-14
+# Last changed: 2010-10-06
 
 import os, sys
 
@@ -170,8 +170,12 @@ def generate_index(module, headers):
 # Get representation and write documentation.
 documentation, classnames = extract_doc_representation()
 for module in documentation:
+#    if not module == "quadrature":
+#        continue
     headers = []
     for (header, doc) in documentation[module]:
+#        if not header == "MeshEntity.h":
+#            continue
         write_documentation(doc, header, module, classnames)
         headers.append(header)
 

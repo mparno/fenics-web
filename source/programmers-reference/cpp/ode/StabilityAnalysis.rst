@@ -10,13 +10,6 @@ StabilityAnalysis.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class ODESolution
-    
-        This class computes the stabilityfactors as a function of time
-        S(t). As the stabilityfactors are defined it should solve the dual
-        for each timestep. However, we can take advantage of the dual
-        being linear.
-
 .. cpp:class:: StabilityAnalysis
 
     .. cpp:function:: StabilityAnalysis(ODE& ode, ODESolution& u)

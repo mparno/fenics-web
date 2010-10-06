@@ -30,7 +30,3 @@ GlobalParameters.h
     
         Default parameter values
 
-    .. cpp:function:: extern GlobalParameters parameters
-    
-        The global parameter database
-

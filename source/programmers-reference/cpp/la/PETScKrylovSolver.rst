@@ -10,10 +10,6 @@ PETScKrylovSolver.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class GenericMatrix
-    
-        Forward declarations
-
 .. cpp:class:: PETScKrylovSolver
 
     *Parent class*
@@ -91,24 +87,4 @@ PETScKrylovSolver.h
     .. cpp:function:: void write_report(int num_iterations, KSPConvergedReason reason)
     
         Report the number of iterations
-
-    .. cpp:function:: PETScUserPreconditioner* pc_dolfin
-    
-        DOLFIN-defined PETScUserPreconditioner
-
-    .. cpp:function:: boost::shared_ptr<KSP> _ksp
-    
-        PETSc solver pointer
-
-    .. cpp:function:: boost::shared_ptr<PETScPreconditioner> preconditioner
-    
-        Preconditioner
-
-    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> A
-    
-        Operator (the matrix)
-
-    .. cpp:function:: boost::shared_ptr<const PETScBaseMatrix> P
-    
-        Matrix used to construct the preconditoner
 

@@ -186,7 +186,3 @@ ODE.h
     
         Default parameter values
 
-    .. cpp:function:: friend class Dual
-    
-        Friends
-

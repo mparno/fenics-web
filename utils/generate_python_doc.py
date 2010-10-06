@@ -6,7 +6,7 @@ __date__ = "2010-09-15"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-09-17
+# Last changed: 2010-10-06
 
 import os, sys, types
 
@@ -139,6 +139,8 @@ Python Programmer's Reference
     f.close()
 
     for o in classes:
+#        if not o == "Mesh":
+#            continue
         write_object(directory, mod_name, o, "class")
 
     for o in functions:
@@ -148,5 +150,7 @@ modules = get_modules(dolfin, {})
 #write_module_index(modules)
 for key, mod in modules.items():
     print "Writing files for module: ", key
+#    if not key == "dolfin.mesh.refine":
+#        continue
     write_documentation(mod)
 

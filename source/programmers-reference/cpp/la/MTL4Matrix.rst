@@ -10,8 +10,6 @@ MTL4Matrix.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-.. cpp:class:: implements a minimal backend for MTL4.
-
 .. cpp:class:: MTL4Matrix
 
     *Parent class*

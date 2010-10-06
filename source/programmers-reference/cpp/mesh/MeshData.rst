@@ -123,7 +123,3 @@ MeshData.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: friend class XMLFile
-    
-        Friends
-

@@ -47,7 +47,7 @@ Facet.h
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction`
+        * :cpp:class:`MeshFunction<T>`
         
     A FacetFunction is a MeshFunction of topological codimension 1.
 

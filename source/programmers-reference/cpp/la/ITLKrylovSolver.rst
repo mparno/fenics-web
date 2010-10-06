@@ -10,10 +10,6 @@ ITLKrylovSolver.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class GenericMatrix
-    
-        Forward declarations
-
 .. cpp:class:: ITLKrylovSolver
 
     *Parent class*
@@ -55,12 +51,4 @@ ITLKrylovSolver.h
     .. cpp:function:: static Parameters default_parameters()
     
         Default parameter values
-
-    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> A
-    
-        Operator (the matrix)
-
-    .. cpp:function:: boost::shared_ptr<const MTL4Matrix> P
-    
-        Matrix used to construct the preconditoner
 

@@ -15,7 +15,7 @@ Set.h
     This is a std::set like data structure. It is not ordered and it is based
     a std::vector. It can be faster than a std::set for some cases.
 
-    .. cpp:function:: template<class T> Set()
+    .. cpp:function:: Set()
     
         Create empty set
 

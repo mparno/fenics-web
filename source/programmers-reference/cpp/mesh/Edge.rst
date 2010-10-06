@@ -42,7 +42,7 @@ Edge.h
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction`
+        * :cpp:class:`MeshFunction<T>`
         
     An EdgeFunction is a MeshFunction of topological dimension 1.
 

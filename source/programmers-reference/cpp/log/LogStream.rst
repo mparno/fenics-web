@@ -16,10 +16,6 @@ LogStream.h
     streams (std::cout, std::endl) for output but working through
     the DOLFIN log system.
 
-    .. cpp:function:: enum Type
-    
-        Stream types
-
     .. cpp:function:: LogStream(Type type)
     
         Create log stream of given type
@@ -71,12 +67,4 @@ LogStream.h
     .. cpp:function:: LogStream& operator<< (real a)
     
         Output for real
-
-    .. cpp:function:: extern LogStream cout
-    
-        dolfin::cout
-
-    .. cpp:function:: extern LogStream endl
-    
-        dolfin::endl;
 

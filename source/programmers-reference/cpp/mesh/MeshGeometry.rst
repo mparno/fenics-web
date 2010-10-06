@@ -10,12 +10,6 @@ MeshGeometry.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class Mesh
-    
-        MeshGeometry stores the geometry imposed on a mesh. Currently,
-        the geometry is represented by the set of coordinates for the
-        vertices of a mesh, but other representations are possible.
-
 .. cpp:class:: MeshGeometry
 
     .. cpp:function:: MeshGeometry()

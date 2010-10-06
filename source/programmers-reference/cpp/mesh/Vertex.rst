@@ -50,7 +50,7 @@ Vertex.h
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction`
+        * :cpp:class:`MeshFunction<T>`
         
     A VertexFunction is a MeshFunction of topological dimension 0.
 

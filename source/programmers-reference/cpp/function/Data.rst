@@ -44,10 +44,6 @@ Data.h
     
         Check if we are on a facet
 
-    .. cpp:function:: const Array<double> x
-    
-        The coordinates
-
     .. cpp:function:: void set(const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet)
     
         Set cell and facet data

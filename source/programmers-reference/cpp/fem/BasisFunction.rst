@@ -43,15 +43,3 @@ BasisFunction.h
     
         Evaluate function at given point in cell
 
-    .. cpp:function:: uint index
-    
-        The index
-
-    .. cpp:function:: const FiniteElement& element
-    
-        The finite element
-
-    .. cpp:function:: const ufc::cell& cell
-    
-        The (UFC) cell
-

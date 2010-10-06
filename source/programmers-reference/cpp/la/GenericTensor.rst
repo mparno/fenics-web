@@ -66,15 +66,15 @@ GenericTensor.h
     
         Return linear algebra backend factory
 
-    .. cpp:function:: template<class T> const T& down_cast() const
+    .. cpp:function:: const T& down_cast() const
     
         Cast a GenericTensor to its derived class (const version)
 
-    .. cpp:function:: template<class T> T& down_cast()
+    .. cpp:function:: T& down_cast()
     
         Cast a GenericTensor to its derived class (non-const version)
 
-    .. cpp:function:: template<class T> bool has_type() const
+    .. cpp:function:: bool has_type() const
     
         Check whether the GenericTensor instance matches a specific type
 

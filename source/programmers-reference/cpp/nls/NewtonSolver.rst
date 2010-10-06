@@ -57,27 +57,3 @@ NewtonSolver.h
     
         Convergence test
 
-    .. cpp:function:: uint newton_iteration
-    
-        Current number of Newton iterations
-
-    .. cpp:function:: double _residual, residual0
-    
-        Most recent residual and intitial residual
-
-    .. cpp:function:: boost::shared_ptr<GenericLinearSolver> solver
-    
-        Solver
-
-    .. cpp:function:: boost::scoped_ptr<GenericMatrix> A
-    
-        Jacobian matrix
-
-    .. cpp:function:: boost::scoped_ptr<GenericVector> dx
-    
-        Solution vector
-
-    .. cpp:function:: boost::scoped_ptr<GenericVector> b
-    
-        Resdiual vector
-

@@ -74,7 +74,7 @@ Cell.h
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction`
+        * :cpp:class:`MeshFunction<T>`
         
     A CellFunction is a MeshFunction of topological codimension 0.
 

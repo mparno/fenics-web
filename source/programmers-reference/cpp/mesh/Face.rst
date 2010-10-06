@@ -38,7 +38,7 @@ Face.h
 
     *Parent class*
     
-        * :cpp:class:`MeshFunction`
+        * :cpp:class:`MeshFunction<T>`
         
     A FaceFunction is a MeshFunction of topological dimension 2.
 

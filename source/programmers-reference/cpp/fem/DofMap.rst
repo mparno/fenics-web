@@ -96,10 +96,6 @@ DofMap.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: friend class DofMapBuilder
-    
-        Friends
-
     .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
     
         Initialize the UFC dofmap

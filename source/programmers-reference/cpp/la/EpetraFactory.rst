@@ -41,7 +41,3 @@ EpetraFactory.h
     
         Create Krylov solver
 
-    .. cpp:function:: // Return Epetra Communicator Epetra_SerialComm& get_serial_comm() const
-    
-        --- EpetraFactory interface
-

@@ -44,7 +44,3 @@ TrilinosPreconditioner.h
     
         Setup the ML precondtioner
 
-    .. cpp:function:: std::string type
-    
-        Named preconditioner
-

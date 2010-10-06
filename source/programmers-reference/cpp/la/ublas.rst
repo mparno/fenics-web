@@ -10,7 +10,3 @@ ublas.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: namespace ublas = boost::numeric::ublas
-    
-        Various typedefs for uBLAS data types
-

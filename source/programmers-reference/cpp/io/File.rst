@@ -18,10 +18,6 @@ File.h
     A list of objects that can be read/written to file can be found in
     GenericFile.h
 
-    .. cpp:function:: enum Type
-    
-        File formats
-
     .. cpp:function:: File(const std::string filename, std::string encoding = "ascii")
     
         Create a file with given name
@@ -34,7 +30,7 @@ File.h
     
         Create a outfile object writing to stream
 
-    .. cpp:function:: template<class T> void operator>>(T& t)
+    .. cpp:function:: void operator>>(T& t)
     
         Read from file
 
@@ -46,7 +42,7 @@ File.h
     
         Write Function to file (with time)
 
-    .. cpp:function:: template<class T> void operator<<(const T& t)
+    .. cpp:function:: void operator<<(const T& t)
     
         Write to file
 

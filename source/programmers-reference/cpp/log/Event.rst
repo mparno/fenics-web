@@ -15,18 +15,19 @@ Event.h
     A event is a string message which is displayed
     only a limited number of times.
     
-    Example of usage:
+    *Example*
+        .. code-block:: c++
     
-      Event event("System is stiff, damping is needed.");
-      while ()
-      {
-        ...
-        if ( ... )
-        {
-          event();
-          ...
-        }
-      }
+            Event event("System is stiff, damping is needed.");
+            while ()
+            {
+              ...
+              if ( ... )
+              {
+                event();
+                ...
+              }
+            }
 
     .. cpp:function:: Event(const std::string msg, unsigned int maxcount = 1)
     

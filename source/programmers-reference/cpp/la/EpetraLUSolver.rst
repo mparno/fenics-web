@@ -10,14 +10,6 @@ EpetraLUSolver.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class Amesos_BaseSolver
-    
-        Forward declaration
-
-    .. cpp:function:: class GenericMatrix
-    
-        Forward declarations
-
 .. cpp:class:: EpetraLUSolver
 
     *Parent class*

@@ -10,7 +10,3 @@ ALEType.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: enum ALEType
-    
-        List of available methods for ALE mesh movement
-

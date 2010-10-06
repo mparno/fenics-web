@@ -16,10 +16,6 @@ CellType.h
     Each cell type implements mesh functionality that is specific to
     a certain type of cell.
 
-    .. cpp:function:: enum Type
-    
-        Enum for different cell types
-
     .. cpp:function:: CellType(Type cell_type, Type facet_type)
     
         Constructor

@@ -76,7 +76,7 @@ MPI.h
     
         Gather values, one from each process (wrapper for MPI_Allgather)
 
-    .. cpp:function:: template<class T> static void gather_all(const T& in_value, std::vector<T>& out_values)
+    .. cpp:function:: static void gather_all(const T& in_value, std::vector<T>& out_values)
     
         Gather values, one from each process (wrapper for boost::mpi::all_gather)
 

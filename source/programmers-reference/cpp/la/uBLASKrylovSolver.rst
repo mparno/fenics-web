@@ -55,19 +55,19 @@ uBLASKrylovSolver.h
     
         Default parameter values
 
-    .. cpp:function:: template<class Mat> uint solve_krylov(const Mat& A, uBLASVector& x, const uBLASVector& b)
+    .. cpp:function:: uint solve_krylov(const Mat& A, uBLASVector& x, const uBLASVector& b)
     
         Select solver and solve linear system Ax = b and return number of iterations
 
-    .. cpp:function:: template<class Mat> uint solveCG(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
+    .. cpp:function:: uint solveCG(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using CG
 
-    .. cpp:function:: template<class Mat> uint solveGMRES(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
+    .. cpp:function:: uint solveGMRES(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using restarted GMRES
 
-    .. cpp:function:: template<class Mat> uint solveBiCGStab(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
+    .. cpp:function:: uint solveBiCGStab(const Mat& A, uBLASVector& x, const uBLASVector& b, bool& converged) const
     
         Solve linear system Ax = b using BiCGStab
 
@@ -78,20 +78,4 @@ uBLASKrylovSolver.h
     .. cpp:function:: void read_parameters()
     
         Read solver parameters
-
-    .. cpp:function:: std::string solver_type
-    
-        Krylov method
-
-    .. cpp:function:: boost::shared_ptr<uBLASPreconditioner> pc
-    
-        Preconditioner
-
-    .. cpp:function:: double rtol, atol, div_tol
-    
-        Solver parameters
-
-    .. cpp:function:: bool parameters_read
-    
-        True if we have read parameters
 

@@ -36,7 +36,3 @@ PETScPreconditioner.h
     
         Default parameter values
 
-    .. cpp:function:: std::string type
-    
-        Named preconditioner
-

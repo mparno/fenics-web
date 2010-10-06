@@ -10,10 +10,6 @@ UmfpackLUSolver.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class GenericVector
-    
-        Forward declarations
-
 .. cpp:class:: UmfpackLUSolver
 
     *Parent class*

@@ -178,14 +178,6 @@ Parameter.h
     
         Return short string description
 
-    .. cpp:function:: int _value
-    
-        Parameter value
-
-    .. cpp:function:: int _min, _max
-    
-        Parameter range
-
 .. cpp:class:: RealParameter
 
     *Parent class*
@@ -237,14 +229,6 @@ Parameter.h
     .. cpp:function:: std::string str() const
     
         Return short string description
-
-    .. cpp:function:: real _value
-    
-        Parameter value
-
-    .. cpp:function:: real _min, _max
-    
-        Parameter range
 
 .. cpp:class:: StringParameter
 
@@ -298,14 +282,6 @@ Parameter.h
     
         Return short string description
 
-    .. cpp:function:: std::string _value
-    
-        Parameter value
-
-    .. cpp:function:: std::set<std::string> _range
-    
-        Parameter range
-
 .. cpp:class:: BoolParameter
 
     *Parent class*
@@ -345,8 +321,4 @@ Parameter.h
     .. cpp:function:: std::string str() const
     
         Return short string description
-
-    .. cpp:function:: bool _value
-    
-        Parameter value
 

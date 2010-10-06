@@ -102,7 +102,3 @@ Form.h
     
         Check function spaces and coefficients
 
-    .. cpp:function:: friend class LinearPDE
-    
-        Friends
-

@@ -10,21 +10,6 @@ ODESolution.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class Lagrange
-    
-        ODESolution stores the solution from the ODE solver, primarily to
-        be able to solve the dual problem. A number of interpolated values
-        is cached, since the ODE solver repeatedly requests evaluation of
-        the same t.
-        
-        The samples are stored in memory if possible, otherwise stored
-        in a temporary file and fetched from disk in blocks when needed.
-        
-        Since GMP at the moment doesn't support saving binary operands
-        on disk this class uses ascii files for storage.
-        Fortunately storing operands on disk in binary is planned in
-        the next major release of GMP.
-
 .. cpp:class:: ODESolutionData
 
 .. cpp:class:: ODESolution

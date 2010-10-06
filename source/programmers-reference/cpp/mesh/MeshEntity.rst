@@ -15,7 +15,7 @@ MeshEntity.h
     A MeshEntity represents a mesh entity associated with
     a specific topological dimension of some mesh.
 
-    .. cpp:function:: MeshEntity() :_mesh(0), _dim(0), _index(0)
+    .. cpp:function:: MeshEntity()
     
         Default Constructor
 
@@ -75,7 +75,7 @@ MeshEntity.h
     
         Compute midpoint of cell
 
-    .. cpp:function:: template <typename K> CGAL::Bbox_3 bbox() const
+    .. cpp:function:: CGAL::Bbox_3 bbox() const
     
         Returns a 3D bounding box of the mesh entity. For lower dimension it may be a degenerated box.
 

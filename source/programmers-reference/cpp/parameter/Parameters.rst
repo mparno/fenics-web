@@ -73,7 +73,7 @@ Parameters.h
     
         Clear parameter set
 
-    .. cpp:function:: template<typename T> void add(std::string key)
+    .. cpp:function:: void add(std::string key)
     
         Add an unset parameter of type T. For example, to create a unset
         parameter of type bool, do parameters.add<bool>("my_setting")
@@ -169,10 +169,6 @@ Parameters.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: typedef XMLParameters XMLHandler
-    
-        Define XMLHandler for use in new XML reader/writer
 
     .. cpp:function:: void parse_dolfin(int argc, char* argv[])
     

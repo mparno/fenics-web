@@ -10,10 +10,6 @@ PETScLUSolver.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
-    .. cpp:function:: class GenericMatrix
-    
-        Forward declarations
-
 .. cpp:class:: PETScLUSolver
 
     *Parent class*
@@ -67,8 +63,4 @@ PETScLUSolver.h
     .. cpp:function:: static Parameters default_parameters()
     
         Default parameter values
-
-    .. cpp:function:: boost::shared_ptr<KSP> _ksp
-    
-        PETSc solver pointer
 

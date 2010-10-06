@@ -28,7 +28,7 @@ uBLASMatrix.h
     Developer note: specialised member functions must be
     inlined to avoid link errors.
 
-    .. cpp:function:: template<class Mat> uBLASMatrix()
+    .. cpp:function:: uBLASMatrix()
     
         Create empty matrix
 
@@ -40,7 +40,7 @@ uBLASMatrix.h
     
         Copy constructor
 
-    .. cpp:function:: template <class E> explicit uBLASMatrix(const ublas::matrix_expression<E>& A)
+    .. cpp:function:: explicit uBLASMatrix(const ublas::matrix_expression<E>& A)
     
         Create matrix from given uBLAS matrix expression
 
@@ -173,7 +173,7 @@ uBLASMatrix.h
     
         Assignment operator
 
-    .. cpp:function:: template<class B> void solveInPlace(B& X)
+    .. cpp:function:: void solveInPlace(B& X)
     
         General uBLAS LU solver which accepts both vector and matrix right-hand sides
 

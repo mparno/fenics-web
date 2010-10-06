@@ -33,11 +33,3 @@ FunctionPlotData.h
     
         Return vertex values
 
-    .. cpp:function:: Mesh mesh
-    
-        The mesh
-
-    .. cpp:function:: uint rank
-    
-        The value rank
-
