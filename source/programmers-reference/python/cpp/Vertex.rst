@@ -8,6 +8,3 @@ Vertex
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Vertex
-    :members:
-    :show-inheritance:
-    :undoc-members:

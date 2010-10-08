@@ -8,6 +8,3 @@ ODESolution
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ODESolution
-    :members:
-    :show-inheritance:
-    :undoc-members:

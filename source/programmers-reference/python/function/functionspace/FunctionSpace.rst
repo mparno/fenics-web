@@ -8,6 +8,3 @@ FunctionSpace
 .. currentmodule:: dolfin.function.functionspace
 
 .. autoclass:: FunctionSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

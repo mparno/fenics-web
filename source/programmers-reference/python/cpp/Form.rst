@@ -8,6 +8,3 @@ Form
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Form
-    :members:
-    :show-inheritance:
-    :undoc-members:

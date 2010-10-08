@@ -8,6 +8,3 @@ LUSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: LUSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

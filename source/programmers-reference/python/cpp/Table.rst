@@ -8,6 +8,3 @@ Table
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Table
-    :members:
-    :show-inheritance:
-    :undoc-members:

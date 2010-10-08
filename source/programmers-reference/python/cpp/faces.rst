@@ -8,6 +8,3 @@ faces
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: faces
-    :members:
-    :show-inheritance:
-    :undoc-members:

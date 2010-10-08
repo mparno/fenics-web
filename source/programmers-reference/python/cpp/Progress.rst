@@ -8,6 +8,3 @@ Progress
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Progress
-    :members:
-    :show-inheritance:
-    :undoc-members:

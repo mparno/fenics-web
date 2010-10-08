@@ -8,6 +8,3 @@ MeshEntity
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshEntity
-    :members:
-    :show-inheritance:
-    :undoc-members:

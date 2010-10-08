@@ -8,6 +8,3 @@ uBLASSparseFactory
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASSparseFactory
-    :members:
-    :show-inheritance:
-    :undoc-members:

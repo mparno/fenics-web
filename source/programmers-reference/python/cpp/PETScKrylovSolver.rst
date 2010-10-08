@@ -8,6 +8,3 @@ PETScKrylovSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScKrylovSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

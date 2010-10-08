@@ -8,6 +8,3 @@ FacetCell
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: FacetCell
-    :members:
-    :show-inheritance:
-    :undoc-members:

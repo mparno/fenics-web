@@ -8,6 +8,3 @@ GlobalParameters
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GlobalParameters
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ FunctionSpace
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: FunctionSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

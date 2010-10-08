@@ -8,6 +8,3 @@ ConstDoubleArray
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ConstDoubleArray
-    :members:
-    :show-inheritance:
-    :undoc-members:

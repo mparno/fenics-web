@@ -8,6 +8,3 @@ EqualityBC
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: EqualityBC
-    :members:
-    :show-inheritance:
-    :undoc-members:

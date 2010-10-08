@@ -8,6 +8,3 @@ FiniteElement
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: FiniteElement
-    :members:
-    :show-inheritance:
-    :undoc-members:

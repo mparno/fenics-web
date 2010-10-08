@@ -8,6 +8,3 @@ Parameters
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Parameters
-    :members:
-    :show-inheritance:
-    :undoc-members:

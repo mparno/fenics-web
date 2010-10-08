@@ -30,6 +30,19 @@ extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath',
 # Add the docstring from class.__init__ to class.__doc__ when documenting the
 # PyDolfin interface.
 autoclass_content = "both"
+autodoc_default_flags = ["members", "undoc-members", "show-inheritance"]
+
+def skip_member(app, what, name, obj, skip, options):
+    excludes = ["__init__", "__repr__", "__weakref__", "__doc__",
+                "__swig_destroy__", "__module__", "__dict__", "__metaclass__",
+                "__new__", "__disown__"]
+    if name[0:2] == "__" and name[-2:] == "__" and not name in excludes:
+        return False
+#    print "wha: ", what
+#    print "nam: ", name
+#    print "obj: ", obj
+#    print "ski: ", skip
+    return skip
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -223,3 +236,6 @@ latex_elements = {'fontpkg': '\usepackage{mathpazo}',
 pngmath_latex_preamble = r" \usepackage{stmaryrd} "
 #pngmath_dvipng_args = ['-gamma 1.5', '-D 110']
 #pngmath_use_preview = True
+
+def setup(app):
+    app.connect('autodoc-skip-member', skip_member)

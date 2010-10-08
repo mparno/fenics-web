@@ -8,6 +8,3 @@ Lagrange
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Lagrange
-    :members:
-    :show-inheritance:
-    :undoc-members:

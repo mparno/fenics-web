@@ -8,6 +8,3 @@ CellSize
 .. currentmodule:: dolfin.function.specialfunctions
 
 .. autoclass:: CellSize
-    :members:
-    :show-inheritance:
-    :undoc-members:

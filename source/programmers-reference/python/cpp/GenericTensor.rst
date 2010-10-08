@@ -8,6 +8,3 @@ GenericTensor
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericTensor
-    :members:
-    :show-inheritance:
-    :undoc-members:

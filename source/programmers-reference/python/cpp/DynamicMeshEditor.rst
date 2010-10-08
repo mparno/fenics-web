@@ -8,6 +8,3 @@ DynamicMeshEditor
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DynamicMeshEditor
-    :members:
-    :show-inheritance:
-    :undoc-members:

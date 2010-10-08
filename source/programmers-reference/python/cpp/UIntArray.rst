@@ -8,6 +8,3 @@ UIntArray
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UIntArray
-    :members:
-    :show-inheritance:
-    :undoc-members:

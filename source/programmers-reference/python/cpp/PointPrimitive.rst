@@ -8,6 +8,3 @@ PointPrimitive
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PointPrimitive
-    :members:
-    :show-inheritance:
-    :undoc-members:

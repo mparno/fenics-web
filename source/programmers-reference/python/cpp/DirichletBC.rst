@@ -8,6 +8,3 @@ DirichletBC
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DirichletBC
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ Vector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Vector
-    :members:
-    :show-inheritance:
-    :undoc-members:

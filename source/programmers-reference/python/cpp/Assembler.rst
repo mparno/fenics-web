@@ -8,6 +8,3 @@ Assembler
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Assembler
-    :members:
-    :show-inheritance:
-    :undoc-members:

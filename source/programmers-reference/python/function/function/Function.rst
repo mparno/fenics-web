@@ -8,6 +8,3 @@ Function
 .. currentmodule:: dolfin.function.function
 
 .. autoclass:: Function
-    :members:
-    :show-inheritance:
-    :undoc-members:

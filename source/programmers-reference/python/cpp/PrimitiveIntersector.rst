@@ -8,6 +8,3 @@ PrimitiveIntersector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PrimitiveIntersector
-    :members:
-    :show-inheritance:
-    :undoc-members:

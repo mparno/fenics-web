@@ -8,6 +8,3 @@ MTL4Factory
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MTL4Factory
-    :members:
-    :show-inheritance:
-    :undoc-members:

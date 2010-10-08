@@ -8,6 +8,3 @@ TensorFunctionSpace
 .. currentmodule:: dolfin.function.functionspace
 
 .. autoclass:: TensorFunctionSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ IntersectionOperator
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: IntersectionOperator
-    :members:
-    :show-inheritance:
-    :undoc-members:

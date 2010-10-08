@@ -8,6 +8,3 @@ PeriodicBC
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PeriodicBC
-    :members:
-    :show-inheritance:
-    :undoc-members:

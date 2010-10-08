@@ -8,6 +8,3 @@ Event
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Event
-    :members:
-    :show-inheritance:
-    :undoc-members:

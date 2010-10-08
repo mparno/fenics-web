@@ -8,6 +8,3 @@ Bubble
 .. currentmodule:: dolfin.adaptivity.specialfunctions
 
 .. autoclass:: Bubble
-    :members:
-    :show-inheritance:
-    :undoc-members:

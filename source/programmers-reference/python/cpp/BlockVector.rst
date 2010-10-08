@@ -8,6 +8,3 @@ BlockVector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BlockVector
-    :members:
-    :show-inheritance:
-    :undoc-members:

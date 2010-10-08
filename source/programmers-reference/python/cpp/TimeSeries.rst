@@ -8,6 +8,3 @@ TimeSeries
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: TimeSeries
-    :members:
-    :show-inheritance:
-    :undoc-members:

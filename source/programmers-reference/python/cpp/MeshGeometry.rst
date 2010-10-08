@@ -8,6 +8,3 @@ MeshGeometry
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshGeometry
-    :members:
-    :show-inheritance:
-    :undoc-members:

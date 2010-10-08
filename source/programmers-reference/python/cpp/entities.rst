@@ -8,6 +8,3 @@ entities
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: entities
-    :members:
-    :show-inheritance:
-    :undoc-members:

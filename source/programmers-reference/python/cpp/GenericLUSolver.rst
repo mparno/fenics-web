@@ -8,6 +8,3 @@ GenericLUSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericLUSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

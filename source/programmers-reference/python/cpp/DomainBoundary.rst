@@ -8,6 +8,3 @@ DomainBoundary
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DomainBoundary
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ MeshConnectivity
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshConnectivity
-    :members:
-    :show-inheritance:
-    :undoc-members:

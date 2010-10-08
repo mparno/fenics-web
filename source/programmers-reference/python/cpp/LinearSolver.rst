@@ -8,6 +8,3 @@ LinearSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: LinearSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

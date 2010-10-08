@@ -8,6 +8,3 @@ MeshPartitioning
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshPartitioning
-    :members:
-    :show-inheritance:
-    :undoc-members:

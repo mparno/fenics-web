@@ -8,6 +8,3 @@ MeshFunctionDouble
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshFunctionDouble
-    :members:
-    :show-inheritance:
-    :undoc-members:

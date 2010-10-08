@@ -8,6 +8,3 @@ UnitCircle
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UnitCircle
-    :members:
-    :show-inheritance:
-    :undoc-members:

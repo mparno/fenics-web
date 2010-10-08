@@ -8,6 +8,3 @@ MeshTopology
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshTopology
-    :members:
-    :show-inheritance:
-    :undoc-members:

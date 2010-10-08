@@ -8,6 +8,3 @@ Variable
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Variable
-    :members:
-    :show-inheritance:
-    :undoc-members:

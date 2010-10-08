@@ -8,6 +8,3 @@ SubMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SubMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

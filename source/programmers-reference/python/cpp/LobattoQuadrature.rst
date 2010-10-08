@@ -8,6 +8,3 @@ LobattoQuadrature
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: LobattoQuadrature
-    :members:
-    :show-inheritance:
-    :undoc-members:

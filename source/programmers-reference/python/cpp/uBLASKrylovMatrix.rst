@@ -8,6 +8,3 @@ uBLASKrylovMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASKrylovMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

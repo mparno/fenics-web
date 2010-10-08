@@ -8,6 +8,3 @@ SparsityPattern
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SparsityPattern
-    :members:
-    :show-inheritance:
-    :undoc-members:

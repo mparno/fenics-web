@@ -8,6 +8,3 @@ VariationalProblem
 .. currentmodule:: dolfin.fem.variationalproblem
 
 .. autoclass:: VariationalProblem
-    :members:
-    :show-inheritance:
-    :undoc-members:

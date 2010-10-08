@@ -8,6 +8,3 @@ BarycenterQuadrature
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BarycenterQuadrature
-    :members:
-    :show-inheritance:
-    :undoc-members:

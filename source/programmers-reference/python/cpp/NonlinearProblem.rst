@@ -8,6 +8,3 @@ NonlinearProblem
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: NonlinearProblem
-    :members:
-    :show-inheritance:
-    :undoc-members:

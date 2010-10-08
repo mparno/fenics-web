@@ -8,6 +8,3 @@ ODESolutionIterator
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ODESolutionIterator
-    :members:
-    :show-inheritance:
-    :undoc-members:

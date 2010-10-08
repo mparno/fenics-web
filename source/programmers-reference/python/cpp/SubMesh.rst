@@ -8,6 +8,3 @@ SubMesh
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SubMesh
-    :members:
-    :show-inheritance:
-    :undoc-members:

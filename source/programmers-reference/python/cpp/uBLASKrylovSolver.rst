@@ -8,6 +8,3 @@ uBLASKrylovSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASKrylovSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

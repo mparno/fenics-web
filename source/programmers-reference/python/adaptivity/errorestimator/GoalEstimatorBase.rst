@@ -8,6 +8,3 @@ GoalEstimatorBase
 .. currentmodule:: dolfin.adaptivity.errorestimator
 
 .. autoclass:: GoalEstimatorBase
-    :members:
-    :show-inheritance:
-    :undoc-members:

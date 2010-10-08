@@ -8,6 +8,3 @@ UnitCube
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UnitCube
-    :members:
-    :show-inheritance:
-    :undoc-members:

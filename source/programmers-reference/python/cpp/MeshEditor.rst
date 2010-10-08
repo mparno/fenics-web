@@ -8,6 +8,3 @@ MeshEditor
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshEditor
-    :members:
-    :show-inheritance:
-    :undoc-members:

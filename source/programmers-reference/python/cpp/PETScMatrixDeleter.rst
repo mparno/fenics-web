@@ -8,6 +8,3 @@ PETScMatrixDeleter
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScMatrixDeleter
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ DofMap
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DofMap
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ PETScKrylovMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScKrylovMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

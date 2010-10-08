@@ -8,6 +8,3 @@ ODECollection
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ODECollection
-    :members:
-    :show-inheritance:
-    :undoc-members:

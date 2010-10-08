@@ -8,6 +8,3 @@ edges
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: edges
-    :members:
-    :show-inheritance:
-    :undoc-members:

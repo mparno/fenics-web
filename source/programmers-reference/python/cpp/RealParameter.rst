@@ -8,6 +8,3 @@ RealParameter
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: RealParameter
-    :members:
-    :show-inheritance:
-    :undoc-members:

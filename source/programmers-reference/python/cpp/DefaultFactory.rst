@@ -8,6 +8,3 @@ DefaultFactory
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DefaultFactory
-    :members:
-    :show-inheritance:
-    :undoc-members:

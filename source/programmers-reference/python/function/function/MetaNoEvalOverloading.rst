@@ -8,6 +8,3 @@ MetaNoEvalOverloading
 .. currentmodule:: dolfin.function.function
 
 .. autoclass:: MetaNoEvalOverloading
-    :members:
-    :show-inheritance:
-    :undoc-members:

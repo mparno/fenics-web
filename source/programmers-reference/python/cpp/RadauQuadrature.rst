@@ -8,6 +8,3 @@ RadauQuadrature
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: RadauQuadrature
-    :members:
-    :show-inheritance:
-    :undoc-members:

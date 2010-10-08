@@ -8,6 +8,3 @@ MTL4Vector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MTL4Vector
-    :members:
-    :show-inheritance:
-    :undoc-members:

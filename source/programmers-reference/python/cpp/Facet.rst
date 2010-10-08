@@ -8,6 +8,3 @@ Facet
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Facet
-    :members:
-    :show-inheritance:
-    :undoc-members:

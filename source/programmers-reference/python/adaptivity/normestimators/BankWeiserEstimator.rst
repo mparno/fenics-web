@@ -8,6 +8,3 @@ BankWeiserEstimator
 .. currentmodule:: dolfin.adaptivity.normestimators
 
 .. autoclass:: BankWeiserEstimator
-    :members:
-    :show-inheritance:
-    :undoc-members:

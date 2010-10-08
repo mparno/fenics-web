@@ -8,6 +8,3 @@ MeshFunctionBool
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshFunctionBool
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ MeshFunctionUInt
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshFunctionUInt
-    :members:
-    :show-inheritance:
-    :undoc-members:

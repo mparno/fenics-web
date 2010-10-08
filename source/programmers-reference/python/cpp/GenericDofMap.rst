@@ -8,6 +8,3 @@ GenericDofMap
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericDofMap
-    :members:
-    :show-inheritance:
-    :undoc-members:

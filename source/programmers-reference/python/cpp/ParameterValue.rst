@@ -8,6 +8,3 @@ ParameterValue
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ParameterValue
-    :members:
-    :show-inheritance:
-    :undoc-members:

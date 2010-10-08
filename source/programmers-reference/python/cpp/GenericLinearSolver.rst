@@ -8,6 +8,3 @@ GenericLinearSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericLinearSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

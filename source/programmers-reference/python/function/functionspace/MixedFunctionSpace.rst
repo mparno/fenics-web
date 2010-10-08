@@ -8,6 +8,3 @@ MixedFunctionSpace
 .. currentmodule:: dolfin.function.functionspace
 
 .. autoclass:: MixedFunctionSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

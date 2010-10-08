@@ -8,6 +8,3 @@ ExpressionMetaClass
 .. currentmodule:: dolfin.function.expression
 
 .. autoclass:: ExpressionMetaClass
-    :members:
-    :show-inheritance:
-    :undoc-members:

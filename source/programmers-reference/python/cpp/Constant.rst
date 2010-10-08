@@ -8,6 +8,3 @@ Constant
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Constant
-    :members:
-    :show-inheritance:
-    :undoc-members:

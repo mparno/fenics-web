@@ -8,6 +8,3 @@ cells
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: cells
-    :members:
-    :show-inheritance:
-    :undoc-members:

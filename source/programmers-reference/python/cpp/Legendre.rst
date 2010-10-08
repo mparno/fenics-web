@@ -8,6 +8,3 @@ Legendre
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Legendre
-    :members:
-    :show-inheritance:
-    :undoc-members:

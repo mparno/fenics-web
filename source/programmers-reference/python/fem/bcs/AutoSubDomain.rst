@@ -8,6 +8,3 @@ AutoSubDomain
 .. currentmodule:: dolfin.fem.bcs
 
 .. autoclass:: AutoSubDomain
-    :members:
-    :show-inheritance:
-    :undoc-members:

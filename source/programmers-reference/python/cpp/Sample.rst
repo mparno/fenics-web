@@ -8,6 +8,3 @@ Sample
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Sample
-    :members:
-    :show-inheritance:
-    :undoc-members:

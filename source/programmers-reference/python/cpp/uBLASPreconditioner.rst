@@ -8,6 +8,3 @@ uBLASPreconditioner
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASPreconditioner
-    :members:
-    :show-inheritance:
-    :undoc-members:

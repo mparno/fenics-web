@@ -8,6 +8,3 @@ Timer
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Timer
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ KrylovSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: KrylovSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

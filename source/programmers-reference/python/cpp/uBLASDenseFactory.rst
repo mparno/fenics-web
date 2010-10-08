@@ -8,6 +8,3 @@ uBLASDenseFactory
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASDenseFactory
-    :members:
-    :show-inheritance:
-    :undoc-members:

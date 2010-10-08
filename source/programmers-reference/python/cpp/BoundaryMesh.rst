@@ -8,6 +8,3 @@ BoundaryMesh
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BoundaryMesh
-    :members:
-    :show-inheritance:
-    :undoc-members:

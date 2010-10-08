@@ -8,6 +8,3 @@ SingularSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SingularSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

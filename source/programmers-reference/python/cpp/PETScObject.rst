@@ -8,6 +8,3 @@ PETScObject
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScObject
-    :members:
-    :show-inheritance:
-    :undoc-members:

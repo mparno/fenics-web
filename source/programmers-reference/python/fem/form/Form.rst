@@ -8,6 +8,3 @@ Form
 .. currentmodule:: dolfin.fem.form
 
 .. autoclass:: Form
-    :members:
-    :show-inheritance:
-    :undoc-members:

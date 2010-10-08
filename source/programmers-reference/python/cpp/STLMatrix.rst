@@ -8,6 +8,3 @@ STLMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: STLMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

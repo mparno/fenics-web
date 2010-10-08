@@ -8,6 +8,3 @@ uBLASSparseMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASSparseMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ StringParameter
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: StringParameter
-    :members:
-    :show-inheritance:
-    :undoc-members:

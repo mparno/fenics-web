@@ -8,6 +8,3 @@ SubVector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SubVector
-    :members:
-    :show-inheritance:
-    :undoc-members:

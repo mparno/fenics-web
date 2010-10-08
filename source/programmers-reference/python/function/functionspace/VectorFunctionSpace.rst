@@ -8,6 +8,3 @@ VectorFunctionSpace
 .. currentmodule:: dolfin.function.functionspace
 
 .. autoclass:: VectorFunctionSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

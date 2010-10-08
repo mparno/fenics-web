@@ -8,6 +8,3 @@ GenericSparsityPattern
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericSparsityPattern
-    :members:
-    :show-inheritance:
-    :undoc-members:

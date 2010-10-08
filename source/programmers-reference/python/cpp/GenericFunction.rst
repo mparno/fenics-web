@@ -8,6 +8,3 @@ GenericFunction
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericFunction
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ BlockMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BlockMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ ErrorEstimatorBase
 .. currentmodule:: dolfin.adaptivity.errorestimator
 
 .. autoclass:: ErrorEstimatorBase
-    :members:
-    :show-inheritance:
-    :undoc-members:

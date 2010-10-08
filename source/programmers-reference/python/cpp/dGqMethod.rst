@@ -8,6 +8,3 @@ dGqMethod
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: dGqMethod
-    :members:
-    :show-inheritance:
-    :undoc-members:

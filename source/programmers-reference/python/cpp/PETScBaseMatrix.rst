@@ -8,6 +8,3 @@ PETScBaseMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScBaseMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

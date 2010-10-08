@@ -8,6 +8,3 @@ Box
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Box
-    :members:
-    :show-inheritance:
-    :undoc-members:

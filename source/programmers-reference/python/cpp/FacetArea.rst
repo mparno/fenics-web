@@ -8,6 +8,3 @@ FacetArea
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: FacetArea
-    :members:
-    :show-inheritance:
-    :undoc-members:

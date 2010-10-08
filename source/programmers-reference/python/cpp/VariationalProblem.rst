@@ -8,6 +8,3 @@ VariationalProblem
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: VariationalProblem
-    :members:
-    :show-inheritance:
-    :undoc-members:

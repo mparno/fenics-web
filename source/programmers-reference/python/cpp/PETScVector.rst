@@ -8,6 +8,3 @@ PETScVector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScVector
-    :members:
-    :show-inheritance:
-    :undoc-members:

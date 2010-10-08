@@ -8,6 +8,3 @@ ODESolutionData
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ODESolutionData
-    :members:
-    :show-inheritance:
-    :undoc-members:

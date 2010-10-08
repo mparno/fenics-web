@@ -8,6 +8,3 @@ Quadrature
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Quadrature
-    :members:
-    :show-inheritance:
-    :undoc-members:

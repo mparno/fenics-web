@@ -8,6 +8,3 @@ uBLASVector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: uBLASVector
-    :members:
-    :show-inheritance:
-    :undoc-members:

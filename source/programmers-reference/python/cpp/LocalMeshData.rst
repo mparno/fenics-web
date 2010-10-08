@@ -8,6 +8,3 @@ LocalMeshData
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: LocalMeshData
-    :members:
-    :show-inheritance:
-    :undoc-members:

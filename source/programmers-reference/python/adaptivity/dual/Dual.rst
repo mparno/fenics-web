@@ -8,6 +8,3 @@ Dual
 .. currentmodule:: dolfin.adaptivity.dual
 
 .. autoclass:: Dual
-    :members:
-    :show-inheritance:
-    :undoc-members:

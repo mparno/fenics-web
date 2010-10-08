@@ -8,6 +8,3 @@ NewtonSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: NewtonSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

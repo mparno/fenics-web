@@ -8,6 +8,3 @@ AdaptiveData
 .. currentmodule:: dolfin.adaptivity.adaptivedata
 
 .. autoclass:: AdaptiveData
-    :members:
-    :show-inheritance:
-    :undoc-members:

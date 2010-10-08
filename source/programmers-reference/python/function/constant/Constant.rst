@@ -8,6 +8,3 @@ Constant
 .. currentmodule:: dolfin.function.constant
 
 .. autoclass:: Constant
-    :members:
-    :show-inheritance:
-    :undoc-members:

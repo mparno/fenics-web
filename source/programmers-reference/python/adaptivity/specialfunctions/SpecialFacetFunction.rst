@@ -8,6 +8,3 @@ SpecialFacetFunction
 .. currentmodule:: dolfin.adaptivity.specialfunctions
 
 .. autoclass:: SpecialFacetFunction
-    :members:
-    :show-inheritance:
-    :undoc-members:

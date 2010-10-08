@@ -8,6 +8,3 @@ SubDomain
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SubDomain
-    :members:
-    :show-inheritance:
-    :undoc-members:

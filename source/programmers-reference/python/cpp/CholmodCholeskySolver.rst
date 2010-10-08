@@ -8,6 +8,3 @@ CholmodCholeskySolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: CholmodCholeskySolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

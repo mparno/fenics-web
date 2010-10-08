@@ -8,6 +8,3 @@ CellFacetSplitEstimator
 .. currentmodule:: dolfin.adaptivity.errorestimators
 
 .. autoclass:: CellFacetSplitEstimator
-    :members:
-    :show-inheritance:
-    :undoc-members:

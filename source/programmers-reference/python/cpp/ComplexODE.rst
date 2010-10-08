@@ -8,6 +8,3 @@ ComplexODE
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ComplexODE
-    :members:
-    :show-inheritance:
-    :undoc-members:

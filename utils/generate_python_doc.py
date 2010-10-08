@@ -6,7 +6,7 @@ __date__ = "2010-09-15"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-10-06
+# Last changed: 2010-10-08
 
 import os, sys, types
 
@@ -90,12 +90,6 @@ def write_object(directory, module_name, name, obj_type):
     output += "="*len(name) + "\n"
     output += "\n.. currentmodule:: %s\n\n" % module_name
     output += ".. auto%s:: %s\n" % (obj_type, name)
-    if obj_type == "class":
-        output += indent("""\
-:members:
-:show-inheritance:
-:undoc-members:""", 4)
-
     outfile = os.path.join(directory, name + ".rst")
     f = open(outfile, "w")
     f.write(output)

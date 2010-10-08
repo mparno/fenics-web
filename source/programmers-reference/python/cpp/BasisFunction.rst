@@ -8,6 +8,3 @@ BasisFunction
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BasisFunction
-    :members:
-    :show-inheritance:
-    :undoc-members:

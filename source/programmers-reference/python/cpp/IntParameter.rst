@@ -8,6 +8,3 @@ IntParameter
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: IntParameter
-    :members:
-    :show-inheritance:
-    :undoc-members:

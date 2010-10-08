@@ -8,6 +8,3 @@ CellSize
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: CellSize
-    :members:
-    :show-inheritance:
-    :undoc-members:

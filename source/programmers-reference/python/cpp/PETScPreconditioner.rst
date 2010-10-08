@@ -8,6 +8,3 @@ PETScPreconditioner
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScPreconditioner
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ FacetBubble
 .. currentmodule:: dolfin.adaptivity.specialfunctions
 
 .. autoclass:: FacetBubble
-    :members:
-    :show-inheritance:
-    :undoc-members:

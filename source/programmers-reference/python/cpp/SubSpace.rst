@@ -8,6 +8,3 @@ SubSpace
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SubSpace
-    :members:
-    :show-inheritance:
-    :undoc-members:

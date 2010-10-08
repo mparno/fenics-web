@@ -8,6 +8,3 @@ DoubleArray
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: DoubleArray
-    :members:
-    :show-inheritance:
-    :undoc-members:

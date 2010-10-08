@@ -8,6 +8,3 @@ UnitInterval
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UnitInterval
-    :members:
-    :show-inheritance:
-    :undoc-members:

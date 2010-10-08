@@ -8,6 +8,3 @@ ALE
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ALE
-    :members:
-    :show-inheritance:
-    :undoc-members:

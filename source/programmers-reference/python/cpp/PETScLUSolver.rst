@@ -8,6 +8,3 @@ PETScLUSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: PETScLUSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

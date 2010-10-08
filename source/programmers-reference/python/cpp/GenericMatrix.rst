@@ -8,6 +8,3 @@ GenericMatrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericMatrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

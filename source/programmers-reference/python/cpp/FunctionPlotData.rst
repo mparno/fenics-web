@@ -8,6 +8,3 @@ FunctionPlotData
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: FunctionPlotData
-    :members:
-    :show-inheritance:
-    :undoc-members:

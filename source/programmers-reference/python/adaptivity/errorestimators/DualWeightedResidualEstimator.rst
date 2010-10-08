@@ -8,6 +8,3 @@ DualWeightedResidualEstimator
 .. currentmodule:: dolfin.adaptivity.errorestimators
 
 .. autoclass:: DualWeightedResidualEstimator
-    :members:
-    :show-inheritance:
-    :undoc-members:

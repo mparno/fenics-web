@@ -8,6 +8,3 @@ GaussQuadrature
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GaussQuadrature
-    :members:
-    :show-inheritance:
-    :undoc-members:

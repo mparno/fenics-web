@@ -8,6 +8,3 @@ BoolParameter
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BoolParameter
-    :members:
-    :show-inheritance:
-    :undoc-members:

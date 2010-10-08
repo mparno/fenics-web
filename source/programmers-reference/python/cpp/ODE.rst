@@ -8,6 +8,3 @@ ODE
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: ODE
-    :members:
-    :show-inheritance:
-    :undoc-members:

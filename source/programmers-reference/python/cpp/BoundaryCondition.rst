@@ -8,6 +8,3 @@ BoundaryCondition
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: BoundaryCondition
-    :members:
-    :show-inheritance:
-    :undoc-members:

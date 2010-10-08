@@ -8,6 +8,3 @@ MTL4Matrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MTL4Matrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ Scalar
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Scalar
-    :members:
-    :show-inheritance:
-    :undoc-members:

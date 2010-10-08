@@ -8,6 +8,3 @@ AdaptiveVariationalProblem
 .. currentmodule:: dolfin.adaptivity.adaptive
 
 .. autoclass:: AdaptiveVariationalProblem
-    :members:
-    :show-inheritance:
-    :undoc-members:

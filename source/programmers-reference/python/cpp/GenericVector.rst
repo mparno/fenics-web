@@ -8,6 +8,3 @@ GenericVector
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: GenericVector
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ MPI
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MPI
-    :members:
-    :show-inheritance:
-    :undoc-members:

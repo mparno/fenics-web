@@ -8,6 +8,3 @@ LinearAlgebraFactory
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: LinearAlgebraFactory
-    :members:
-    :show-inheritance:
-    :undoc-members:

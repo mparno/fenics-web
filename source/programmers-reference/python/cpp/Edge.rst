@@ -8,6 +8,3 @@ Edge
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Edge
-    :members:
-    :show-inheritance:
-    :undoc-members:

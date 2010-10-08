@@ -8,6 +8,3 @@ MeshData
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshData
-    :members:
-    :show-inheritance:
-    :undoc-members:

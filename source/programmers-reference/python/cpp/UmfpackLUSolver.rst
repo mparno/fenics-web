@@ -8,6 +8,3 @@ UmfpackLUSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UmfpackLUSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

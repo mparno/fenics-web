@@ -8,6 +8,3 @@ UnitSphere
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UnitSphere
-    :members:
-    :show-inheritance:
-    :undoc-members:

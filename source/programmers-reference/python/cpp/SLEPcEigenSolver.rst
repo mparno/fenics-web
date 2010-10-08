@@ -8,6 +8,3 @@ SLEPcEigenSolver
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SLEPcEigenSolver
-    :members:
-    :show-inheritance:
-    :undoc-members:

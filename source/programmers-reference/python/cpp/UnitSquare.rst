@@ -8,6 +8,3 @@ UnitSquare
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: UnitSquare
-    :members:
-    :show-inheritance:
-    :undoc-members:

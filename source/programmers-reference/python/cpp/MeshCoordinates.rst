@@ -8,6 +8,3 @@ MeshCoordinates
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshCoordinates
-    :members:
-    :show-inheritance:
-    :undoc-members:

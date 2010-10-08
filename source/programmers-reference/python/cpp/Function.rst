@@ -8,6 +8,3 @@ Function
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Function
-    :members:
-    :show-inheritance:
-    :undoc-members:

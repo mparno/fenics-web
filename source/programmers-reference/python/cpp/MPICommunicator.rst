@@ -8,6 +8,3 @@ MPICommunicator
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MPICommunicator
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ Matrix
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Matrix
-    :members:
-    :show-inheritance:
-    :undoc-members:

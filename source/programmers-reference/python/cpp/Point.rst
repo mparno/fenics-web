@@ -8,6 +8,3 @@ Point
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Point
-    :members:
-    :show-inheritance:
-    :undoc-members:

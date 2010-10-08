@@ -8,6 +8,3 @@ SystemAssembler
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: SystemAssembler
-    :members:
-    :show-inheritance:
-    :undoc-members:

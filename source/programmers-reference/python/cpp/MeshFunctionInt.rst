@@ -8,6 +8,3 @@ MeshFunctionInt
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: MeshFunctionInt
-    :members:
-    :show-inheritance:
-    :undoc-members:

@@ -8,6 +8,3 @@ EnergyNormEstimator
 .. currentmodule:: dolfin.adaptivity.normestimators
 
 .. autoclass:: EnergyNormEstimator
-    :members:
-    :show-inheritance:
-    :undoc-members:

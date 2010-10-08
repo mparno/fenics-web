@@ -8,6 +8,3 @@ Rectangle
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: Rectangle
-    :members:
-    :show-inheritance:
-    :undoc-members:

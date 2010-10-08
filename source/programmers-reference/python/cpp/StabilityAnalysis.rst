@@ -8,6 +8,3 @@ StabilityAnalysis
 .. currentmodule:: dolfin.cpp
 
 .. autoclass:: StabilityAnalysis
-    :members:
-    :show-inheritance:
-    :undoc-members:
