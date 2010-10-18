@@ -10,4 +10,5 @@ DOLFIN ``main`` library
     :maxdepth: 2
 
     MPI
+    SubSystemsManager
     init

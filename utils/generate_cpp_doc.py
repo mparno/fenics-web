@@ -168,7 +168,7 @@ def generate_index(module, headers):
     f.close()
 
 # Get representation and write documentation.
-documentation, classnames = extract_doc_representation()
+documentation, classnames = extract_doc_representation(dolfin_dir)
 for module in documentation:
 #    if not module == "quadrature":
 #        continue

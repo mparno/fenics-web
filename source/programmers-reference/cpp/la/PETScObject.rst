@@ -12,7 +12,7 @@ PETScObject.h
 
 .. cpp:class:: PETScObject
 
-    This class calls SubSystemsManger to initialise PETSc.
+    This class calls SubSystemsManager to initialise PETSc.
     
     All PETSc objects must be derived from this class.
 
