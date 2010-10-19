@@ -87,13 +87,9 @@ Mesh.h
                 Number of vertices.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_vertices()
-            9
+                No example code available for this function.
 
     .. cpp:function:: uint num_edges() const
     
@@ -104,17 +100,9 @@ Mesh.h
                 Number of edges.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_edges()
-            0
-            >>> mesh.init(1)
-            16
-            >>> mesh.num_edges()
-            16
+                No example code available for this function.
 
     .. cpp:function:: uint num_faces() const
     
@@ -125,13 +113,9 @@ Mesh.h
                 Number of faces.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_faces()
-            8
+                No example code available for this function.
 
     .. cpp:function:: uint num_facets() const
     
@@ -142,16 +126,9 @@ Mesh.h
                 Number of facets.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_facets()
-            0
-            >>> mesh.init(0,1)
-            >>> mesh.num_facets()
-            16
+                No example code available for this function.
 
     .. cpp:function:: uint num_cells() const
     
@@ -162,13 +139,9 @@ Mesh.h
                 Number of cells.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.num_cells()
-            8
+                No example code available for this function.
 
     .. cpp:function:: uint num_entities(uint d) const
     
@@ -183,18 +156,9 @@ Mesh.h
                 Number of entities of topological dimension d.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.init(0,1)
-            >>> mesh.num_entities(0)
-            9
-            >>> mesh.num_entities(1)
-            16
-            >>> mesh.num_entities(2)
-            8
+                No example code available for this function.
 
     .. cpp:function:: double* coordinates()
     
@@ -205,16 +169,9 @@ Mesh.h
                 Coordinates of all vertices.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(1,1)
-            >>> mesh.coordinates()
-            array([[ 0.,  0.],
-                   [ 1.,  0.],
-                   [ 0.,  1.],
-                   [ 1.,  1.]])
+                No example code available for this function.
 
     .. cpp:function:: const double* coordinates() const
     
@@ -229,14 +186,9 @@ Mesh.h
                 Connectivity for all cells.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(1,1)
-            >>> mesh.cells()
-            array([[0, 1, 3],
-                   [0, 2, 3]])
+                No example code available for this function.
 
     .. cpp:function:: uint size(uint dim) const
     
@@ -251,18 +203,9 @@ Mesh.h
                 Number of entities of topological dimension d.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.init(0,1)
-            >>> mesh.num_entities(0)
-            9
-            >>> mesh.num_entities(1)
-            16
-            >>> mesh.num_entities(2)
-            8
+                No example code available for this function.
 
     .. cpp:function:: MeshTopology& topology()
     
@@ -591,13 +534,9 @@ Mesh.h
                 (http://mathworld.wolfram.com).
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.hmin()
-            0.70710678118654757
+                No example code available for this function.
 
     .. cpp:function:: double hmax() const
     
@@ -610,13 +549,9 @@ Mesh.h
                 (http://mathworld.wolfram.com).
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.hmax()
-            0.70710678118654757
+                No example code available for this function.
 
     .. cpp:function:: std::string str(bool verbose) const
     
@@ -631,11 +566,7 @@ Mesh.h
                 An informal representation of the mesh.
         
         *Example*
-            .. warning::
+            .. note::
         
-                Not C++ syntax.
-        
-            >>> mesh = dolfin.UnitSquare(2,2)
-            >>> mesh.str(False)
-            '<Mesh of topological dimension 2 (triangles) with 9 vertices and 8 cells, ordered>'
+                No example code available for this function.
 

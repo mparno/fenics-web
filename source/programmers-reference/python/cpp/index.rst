@@ -136,6 +136,7 @@ Classes:
     SubMatrix
     SubMesh
     SubSpace
+    SubSystemsManager
     SubVector
     SystemAssembler
     Table
@@ -217,6 +218,9 @@ Functions:
     SLEPcEigenSolver_default_parameters
     STLFactory_instance
     SingularSolver_default_parameters
+    SubSystemsManager_finalize
+    SubSystemsManager_init_mpi
+    SubSystemsManager_init_petsc
     SystemAssembler_assemble
     TimeSeries_filename_data
     TimeSeries_filename_times

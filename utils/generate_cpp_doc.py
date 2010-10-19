@@ -40,7 +40,7 @@ def write_documentation(documentation, header, module, classnames):
 #    if not header == "Mesh.h":
 #        return
 
-    print "Writing documentation for %s..." % header
+    print "  Writing documentation for %s..." % header
 
     # Create containing directory
     directory = os.path.join(output_dir, module)
@@ -172,6 +172,7 @@ documentation, classnames = extract_doc_representation(dolfin_dir)
 for module in documentation:
 #    if not module == "quadrature":
 #        continue
+    print "\nWriting documentation for module %s..." % module
     headers = []
     for (header, doc) in documentation[module]:
 #        if not header == "MeshEntity.h":
