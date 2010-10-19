@@ -140,7 +140,7 @@ and the equation
 
 .. math::
 
-    a(v,u) = \int \nabla v \cdot \nabla u \; \rm{d}\Omega
+    a(u, v) = \int \nabla u \cdot \nabla v \; \rm{d}\Omega
 
 is typeset as
 
@@ -148,7 +148,7 @@ is typeset as
 
     .. math::
 
-        a(v,u) = \int \nabla v \cdot \nabla u \; \rm{d}\Omega
+        a(u, v) = \int \nabla u \cdot \nabla v \; \rm{d}\Omega
 
 .. note::
 
