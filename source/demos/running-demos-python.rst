@@ -3,7 +3,7 @@
 .. _demos_python_running_demos:
 
 ***************************
-Running FEniCS Python Demos
+Running FEniCS Python demos
 ***************************
 
 To run the Python demos, follow the below procedure:

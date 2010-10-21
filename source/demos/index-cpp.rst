@@ -3,7 +3,7 @@
 .. _demos_cpp_index:
 
 ################
-FEniCS C++ Demos
+FEniCS C++ demos
 ################
 
 Below is a list of available C++ demos. Before running the demos,

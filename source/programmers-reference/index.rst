@@ -3,10 +3,10 @@
 .. _programmers_reference_index:
 
 #############################
-FEniCS Programmer's Reference
+FEniCS programmer's reference
 #############################
 
-The FEniCS Programmer's Reference documents the FEniCS
+The FEniCS programmer's reference documents the FEniCS
 interface. The FEniCS interface is available in two
 different flavors: as a C++ library and as a Python module.
 Both interfaces are implemented as part of `DOLFIN

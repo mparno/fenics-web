@@ -3,7 +3,7 @@
 .. _demos_cpp_running_demos:
 
 ************************
-Running FEniCS C++ Demos
+Running FEniCS C++ demos
 ************************
 
 To run the C++ demos, follow the below procedure:

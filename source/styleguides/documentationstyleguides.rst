@@ -40,6 +40,21 @@ Section markers follow the convention from the `Python Documentation
 * ``^``, for subsubsections
 * ``"``, for paragraphs
 
+Only the first word of section headings should be capitalised unless, of
+course, a word is a name which is normally capitalised. E.g., use
+
+.. code-block:: rest
+
+    FEniCS Python demos
+    -------------------
+
+instead of
+
+.. code-block:: rest
+
+    FEniCS Python Demos
+    -------------------
+
 .. _styleguides_sphinx_cross_referencing:
 
 Cross referencing

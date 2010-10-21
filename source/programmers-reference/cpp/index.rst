@@ -3,10 +3,10 @@
 .. _programmers_reference_cpp_index:
 
 ##########################
-C++ Programmer's Reference
+C++ programmer's reference
 ##########################
 
-This is the index page for the C++ Programmer's Reference.
+This is the index page for the C++ programmer's reference.
 The contents follow the directory structure of DOLFIN.
 
 .. toctree::

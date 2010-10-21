@@ -4,7 +4,7 @@
     contain the root `toctree` directive.
 
 ####################
-FEniCS Documentation
+FEniCS documentation
 ####################
 
 .. toctree::
@@ -48,7 +48,7 @@ FEniCS Documentation
         </span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="programmers-reference/index.html">Programmer's Reference</a>
+        <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
         <br/><span class="linkdescr">Interface documentation
         </span>
       </p>

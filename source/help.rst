@@ -3,7 +3,7 @@
 .. _contributing:
 
 ############
-Getting Help
+Getting help
 ############
 
 Help is available both from FEniCS developers and other FEniCS users.

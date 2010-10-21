@@ -4,7 +4,7 @@
 .. _tutorial_cpp_index:
 
 #####################
-FEniCS Tutorial (C++)
+FEniCS tutorial (C++)
 #####################
 
 There is as yet no C++ version available of the FEniCS tutorial. In

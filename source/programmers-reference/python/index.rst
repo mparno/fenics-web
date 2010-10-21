@@ -3,7 +3,7 @@
 .. _programmers_reference_python_index:
 
 #############################
-Python Programmer's Reference
+Python programmer's reference
 #############################
 
 Modules:

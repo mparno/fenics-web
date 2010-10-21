@@ -4,10 +4,10 @@
 .. _tutorial_index:
 
 ###############
-FEniCS Tutorial
+FEniCS tutorial
 ###############
 
-The FEniCS Tutorial is a gentle introduction to FEniCS for first time
+The FEniCS tutorial is a gentle introduction to FEniCS for first time
 users. Two different versions of the tutorial are available, one for
 C++ and one for Python. Follow one of the links below and you can be
 solving PDEs with FEniCS in no time.

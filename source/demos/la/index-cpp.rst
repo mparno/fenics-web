@@ -3,7 +3,7 @@
 .. _demos_la_cpp_index:
 
 **************
-Linear Algebra
+Linear algebra
 **************
 
 Below is a list demos which demonstrates how to solve linear algebra problems.

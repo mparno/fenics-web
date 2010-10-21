@@ -3,7 +3,7 @@
 .. _demos_python_index:
 
 ###################
-FEniCS Python Demos
+FEniCS Python demos
 ###################
 
 Below is a list of available Python demos. Before running the demos,

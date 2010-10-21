@@ -3,7 +3,7 @@
 .. _demos_pde_python_index:
 
 ******************************
-Partial Differential Equations
+Partial differential equations
 ******************************
 
 Below is a list of demos which demonstrate how to solve various

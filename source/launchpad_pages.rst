@@ -1,4 +1,4 @@
- .. Overview of launchpad links for quick reference
+.. Overview of launchpad links for quick reference
 
 ###########################
 Overview of Launchpad pages
