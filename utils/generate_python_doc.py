@@ -112,7 +112,7 @@ def write_documentation(module):
     output += ".. _programmers_reference_python_%s:\n\n" % "_".join(mod_name.split(".")[1:] + ["index"])
     if mod_name == "dolfin":
         output += """#############################
-Python Programmer's Reference
+Python programmer's reference
 #############################\n"""
     else:
         header = "%s module" % mod_name

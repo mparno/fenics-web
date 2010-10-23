@@ -25,7 +25,6 @@ Classes:
     CellSize
     CellType
     CholmodCholeskySolver
-    ComplexODE
     ConstDoubleArray
     Constant
     Data
@@ -34,6 +33,7 @@ Classes:
     DofMap
     DomainBoundary
     DoubleArray
+    DummyComplexODE
     DynamicMeshEditor
     Edge
     EqualityBC
@@ -150,6 +150,8 @@ Classes:
     UnitInterval
     UnitSphere
     UnitSquare
+    UnitTetrahedron
+    UnitTriangle
     Variable
     VariationalProblem
     Vector
