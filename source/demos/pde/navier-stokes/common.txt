@@ -77,3 +77,15 @@ is :math:`\Delta t = 0.01` and the length of the time interval is
 :math:`T = 3`. The solution is computed using continuous vector-valued
 piecewise quadratics for the velocity, and continuous scalar piecewise
 linears for the pressure (the Taylor-Hood elements).
+
+With the above input the solution for the velocity :math:`u` and pressure
+:math:`p` will look as follows:
+
+.. image:: ../navier-stokes_u.png
+    :scale: 75
+    :align: center
+
+.. image:: ../navier-stokes_p.png
+    :scale: 75
+    :align: center
+

@@ -59,31 +59,31 @@ Mesh.h
         Copy constructor.
         
         *Arguments*
-            mesh
-                A :cpp:class:`Mesh` object.
+            mesh (:cpp:class:`Mesh`)
+                Object to be copied.
 
     .. cpp:function:: explicit Mesh(std::string filename)
     
         Create mesh from data file.
         
         *Arguments*
-            filename
-                A string, name of file to load.
+            filename (std::string)
+                Name of file to load.
 
     .. cpp:function:: const Mesh& operator=(const Mesh& mesh)
     
         Assignment operator
         
         *Arguments*
-            mesh
-                A :cpp:class:`Mesh` object.
+            mesh (:cpp:class:`Mesh`)
+                Another :cpp:class:`Mesh` object.
 
     .. cpp:function:: uint num_vertices() const
     
         Get number of vertices in mesh.
         
         *Returns*
-            integer
+            uint
                 Number of vertices.
         
         *Example*
@@ -96,7 +96,7 @@ Mesh.h
         Get number of edges in mesh.
         
         *Returns*
-            integer
+            uint
                 Number of edges.
         
         *Example*
@@ -109,7 +109,7 @@ Mesh.h
         Get number of faces in mesh.
         
         *Returns*
-            integer
+            uint
                 Number of faces.
         
         *Example*
@@ -122,7 +122,7 @@ Mesh.h
         Get number of facets in mesh.
         
         *Returns*
-            integer
+            uint
                 Number of facets.
         
         *Example*
@@ -135,7 +135,7 @@ Mesh.h
         Get number of cells in mesh.
         
         *Returns*
-            integer
+            uint
                 Number of cells.
         
         *Example*
@@ -148,11 +148,11 @@ Mesh.h
         Get number of entities of given topological dimension.
         
         *Arguments*
-            d
-                An integer, topological dimension.
+            d (uint)
+                Topological dimension.
         
         *Returns*
-            integer
+            uint
                 Number of entities of topological dimension d.
         
         *Example*
@@ -165,7 +165,7 @@ Mesh.h
         Get vertex coordinates.
         
         *Returns*
-            An array of doubles
+            double*
                 Coordinates of all vertices.
         
         *Example*
@@ -182,7 +182,7 @@ Mesh.h
         Get cell connectivity.
         
         *Returns*
-            An array of integers
+            uint*
                 Connectivity for all cells.
         
         *Example*
@@ -195,11 +195,11 @@ Mesh.h
         Get number of entities of given topological dimension.
         
         *Arguments*
-            dim
-                An integer, topological dimension.
+            dim (uint)
+                Topological dimension.
         
         *Returns*
-            integer
+            uint
                 Number of entities of topological dimension d.
         
         *Example*
@@ -272,11 +272,11 @@ Mesh.h
         Compute entities of given topological dimension.
         
           *Arguments*
-              dim
-                  An integer, topological dimension.
+              dim (uint)
+                  Topological dimension.
         
           *Returns*
-              integer
+              uint
                   Number of created entities.
 
     .. cpp:function:: void init(uint d0, uint d1) const
@@ -284,11 +284,11 @@ Mesh.h
         Compute connectivity between given pair of dimensions.
         
           *Arguments*
-              d0
-                  An integer, topological dimension.
+              d0 (uint)
+                  Topological dimension.
         
-              d1
-                  An integer, topological dimension.
+              d1 (uint)
+                  Topological dimension.
 
     .. cpp:function:: void init() const
     
@@ -320,11 +320,10 @@ Mesh.h
         Move coordinates of mesh according to new boundary coordinates.
         
         *Arguments*
-            boundary
-                A :cpp:class:`BoundaryMesh` object.
+            boundary (:cpp:class:`BoundaryMesh`)
+                A mesh containing just the boundary cells.
         
-            method
-                A ALEType (enum).
+            method (enum)
                 Method which defines how the coordinates should be
                 moved, default is *hermite*.
 
@@ -334,11 +333,10 @@ Mesh.h
         vertices.
         
         *Arguments*
-            mesh
+            mesh (:cpp:class:`Mesh`)
                 A :cpp:class:`Mesh` object.
         
-            method
-                A ALEType (enum).
+            method (enum)
                 Method which defines how the coordinates should be
                 moved, default is *hermite*.
 
@@ -347,7 +345,7 @@ Mesh.h
         Move coordinates of mesh according to displacement function.
         
         *Arguments*
-            function
+            displacement (:cpp:class:`Function`)
                 A :cpp:class:`Function` object.
 
     .. cpp:function:: void smooth(uint num_iterations=1)
@@ -355,8 +353,8 @@ Mesh.h
         Smooth internal vertices of mesh by local averaging.
         
         *Arguments*
-            num_iterations
-                An integer, number of iterations to perform smoothing,
+            num_iterations (uint)
+                Number of iterations to perform smoothing,
                 default value is 1.
 
     .. cpp:function:: void smooth_boundary(uint num_iterations=1, bool harmonic_smoothing=true)
@@ -364,12 +362,12 @@ Mesh.h
         Smooth boundary vertices of mesh by local averaging.
         
         *Arguments*
-            num_iterations
-                An integer, number of iterations to perform smoothing,
+            num_iterations (uint)
+                Number of iterations to perform smoothing,
                 default value is 1.
         
-            harmonic_smoothing
-                A bool, flag to turn on harmonics smoothing, default
+            harmonic_smoothing (bool)
+                Flag to turn on harmonics smoothing, default
                 value is true.
 
     .. cpp:function:: void snap_boundary(const SubDomain& sub_domain, bool harmonic_smoothing=true)
@@ -377,11 +375,11 @@ Mesh.h
         Snap boundary vertices of mesh to match given sub domain.
         
         *Arguments*
-            sub_domain
+            sub_domain (:cpp:class:`SubDomain`)
                 A :cpp:class:`SubDomain` object.
         
-            harmonic_smoothing
-                A bool, flag to turn on harmonics smoothing, default
+            harmonic_smoothing (bool)
+                Flag to turn on harmonics smoothing, default
                 value is true.
 
     .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
@@ -390,11 +388,10 @@ Mesh.h
         given point.
         
         *Arguments*
-            point
+            point (:cpp:class:`Point`)
                 A :cpp:class:`Point` object.
         
-            ids_result
-                A set of integers.
+            ids_result (std::set<uint>)
                 The cell ids which are intersected are stored in a set for
                 efficiency reasons, to avoid to sort out duplicates later on.
 
@@ -404,11 +401,10 @@ Mesh.h
         point in points.
         
         *Arguments*
-            points
+            points (std::vector<:cpp:class:`Point`>)
                 A vector of :cpp:class:`Point` objects.
         
-            ids_result
-                A set of integers.
+            ids_result (std::set<uint>)
                 The cell ids which are intersected are stored in a set
                 for efficiency reasons, to avoid to sort out
                 duplicates later on.
@@ -419,11 +415,10 @@ Mesh.h
         entity.
         
         *Arguments*
-            entity
+            entity (:cpp:class:`MeshEntity`)
                 A :cpp:class:`MeshEntity` object.
         
-            ids_result
-                A list of integers.
+            ids_result (std::vector<uint>)
                 The ids of the intersected cells are saved in a list.
                 This is more efficent than using a set and allows a
                 map between the (external) cell and the intersected
@@ -435,11 +430,10 @@ Mesh.h
         vector entities.
         
         *Arguments*
-            entities
+            entities (std::vector<:cpp:class:`MeshEntity`>)
                 A vector of :cpp:class:`MeshEntity` objects.
         
-            ids_result
-                A set of integers.
+            ids_result (std::set<uint>)
                 The cell ids which are intersected are stored in a set for
                 efficiency reasons, to avoid to sort out duplicates later on.
 
@@ -449,11 +443,10 @@ Mesh.h
         another_mesh.
         
         *Arguments*
-            another_mesh
+            another_mesh (:cpp:class:`Mesh`)
                 A :cpp:class:`Mesh` object.
         
-            ids_result
-                A set of integers.
+            ids_result (std::set<uint>)
                 The cell ids which are intersected are stored in a set for
                 efficiency reasons, to avoid to sort out duplicates later on.
 
@@ -463,11 +456,11 @@ Mesh.h
         point.
         
         *Arguments*
-            point
+            point (:cpp:class:`Point`)
                 A :cpp:class:`Point` object.
         
         *Returns*
-            integer
+            int
                 The first id of the cell, which contains the point,
                 returns -1 if no cell is intersected.
 
@@ -477,7 +470,7 @@ Mesh.h
         index which are closest to the point query.
         
         *Arguments*
-            point
+            point (:cpp:class:`Point`)
                 A :cpp:class:`Point` object.
         
         *Returns*
@@ -491,11 +484,11 @@ Mesh.h
         point query.
         
         *Arguments*
-            point
+            point (:cpp:class:`Point`)
                 A :cpp:class:`Point` object.
         
         *Returns*
-            integer
+            uint
                 The index of the cell in the mesh which is closest to point.
         
         *Example*
@@ -515,11 +508,11 @@ Mesh.h
         index which are closest to the point query.
         
         *Arguments*
-            point
+            point (:cpp:class:`Point`)
                 A :cpp:class:`Point` object.
         
         *Returns*
-            pair <:cpp:class:`Point`, integer>
+            std::pair<:cpp:class:`Point`, uint>
                 The point inside the mesh and the corresponding cell
                 index which is closest to the point query.
 
@@ -558,11 +551,11 @@ Mesh.h
         Informal string representation.
         
         *Arguments*
-            verbose
-                A bool, flag to turn on additional output.
+            verbose (bool)
+                Flag to turn on additional output.
         
         *Returns*
-            string
+            std::string
                 An informal representation of the mesh.
         
         *Example*

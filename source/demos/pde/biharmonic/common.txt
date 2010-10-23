@@ -24,7 +24,7 @@ by parts twice leads to a problem second-order derivatives, which would
 requires :math:`H^{2}` conforming (roughly :math:`C^{0}` continuous) basis
 functions.  To solve the biharmonic equation using Lagrange finite element
 basis functions, the biharmonic equation can be split into two second-order
-equations (see :ref:`demos_python_pde_mixed-poisson` for a mixed method for
+equations (see :ref:`demos_pde_mixed-poisson_python` for a mixed method for
 the Poisson equation), or a variational formulation can be constructed that
 imposes weak continuity of normal derivatives between finite element cells.
 The demo uses a discontinuous Galerkin approach to impose continuity of the
@@ -69,3 +69,16 @@ and the linear form
 
 .. math::
   L(v) = \int_{\Omega} vf \, dx
+
+The input parameters for this demos are defined as follows:
+
+* :math:`\Omega = [0,1] \times [0,1]` (a unit square)
+* :math:`\alpha = 8.0` (penalty parameter)
+* :math:`f = 4.0 \pi^4\sin(\pi x)\sin(\pi y)` (source term)
+
+With the above input the solution for :math:`u` will look as follows:
+
+.. image:: ../biharmonic_u.png
+    :scale: 75
+    :align: center
+

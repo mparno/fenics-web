@@ -51,8 +51,7 @@ functions, the domain, and the boundaries:
 
 With the above input the solution for :math:`u` will look as follows:
 
-.. image:: ../simulation0000.png
+.. image:: ../poisson_u.png
     :scale: 75
     :align: center
-
 

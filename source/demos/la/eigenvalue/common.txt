@@ -30,4 +30,11 @@ of continuous piecewise linear polynomials defined relative to some
 mesh (Lagrange finite elements). For this example, we will consider a
 3-D mesh of tetrahedra generated elsewhere.
 
+With the above input the eigenfunction will look as follows:
+
+.. image:: ../eigenvalue_x.png
+    :scale: 75
+    :align: center
+
 In the following, we show how this eigenvalue problem can be solved.
+

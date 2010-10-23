@@ -44,5 +44,7 @@ DOLFIN ``mesh`` library
     UnitInterval
     UnitSphere
     UnitSquare
+    UnitTetrahedron
+    UnitTriangle
     Vertex
     refine

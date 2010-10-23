@@ -127,3 +127,14 @@ These are the body forces and material parameters used:
 * :math:`E    = 10.0`
 
 * :math:`\nu  = 0.3`
+
+With the above input the solution for :math:`u` will look as follows:
+
+.. image:: ../hyperelasticity_u0.png
+    :scale: 75
+    :align: center
+
+.. image:: ../hyperelasticity_u1.png
+    :scale: 75
+    :align: center
+

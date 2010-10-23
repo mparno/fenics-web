@@ -206,6 +206,21 @@ and ask on the fenics@lists.launchpad.net mailing list in order for
 the issue to be resolved as quickly as possible. This helps keeping
 the documentation in good shape.
 
+.. _styleguides_sphinx_images:
+
+Images
+^^^^^^
+
+To include an image, simply use the ``image`` directive (see
+`Image <http://docutils.sourceforge.net/docs/ref/rst/directives.html#image>`_
+for more details and options) in the following way:
+
+.. code-block:: rest
+
+    .. image:: image.png
+        :scale: 75
+        :align: center
+
 .. _styleguides_sphinx_documenting_interface:
 
 Documenting the FEniCS interface (programmer's reference)
@@ -724,6 +739,26 @@ directive with the relative path to the file:
 .. code-block:: rest
 
   .. include:: ../common.txt
+
+For some demos a picture showing the solution obtained from the input is
+appropriate. The picture can be saved by pressing the ``i`` key in the Viper
+plot window. This file e.g., ``simulation0000.png``, should then be copied to
+the same location as the ``common.txt`` file (but use a different name
+for instance ``poisson_u.png`` to avoid name conflicts) and included like this:
+
+.. code-block:: rest
+
+    .. image:: ../poisson_u.png
+        :scale: 75
+        :align: center
+
+(see :ref:`styleguides_sphinx_images` for more details).
+Notice that the parent directory is included in the path although the two files
+``common.txt`` and ``poisson_u.png`` are located in the same directory.
+This is necessary because the ``common.txt`` file will be included in files in
+the two sub directories ``cpp`` and ``python``. The picture should be included
+immediately after the input information as seen for instance in the
+:ref:`Poisson (C++) <demos_pde_poisson_cpp>` demo.
 
 C++ and Python specific contents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -124,3 +124,7 @@ PETScMatrix.h
     
         Assignment operator
 
+    .. cpp:function:: void binary_dump(std::string file_name) const
+    
+        Dump matrix to PETSc binary format
+

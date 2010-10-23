@@ -86,3 +86,14 @@ demo for Poisson's equation. These are:
 * :math:`g = \sin(5x)`   (flux)
 * :math:`f = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)`   (source term)
 
+With the above input the solution for :math:`u` and :math:`\sigma` will look as
+follows:
+
+.. image:: ../mixed-poisson_u.png
+    :scale: 75
+    :align: center
+
+.. image:: ../mixed-poisson_sigma.png
+    :scale: 75
+    :align: center
+
