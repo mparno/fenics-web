@@ -5,6 +5,12 @@ This demo illustrates how to:
 * Use a discontinuous Galerkin method
 * Solve a fourth-order differential equation
 
+The solution for :math:`u` in this demo will look as follows:
+
+.. image:: ../biharmonic_u.png
+    :scale: 75
+    :align: center
+
 Equation and problem definition
 -------------------------------
 
@@ -75,10 +81,4 @@ The input parameters for this demos are defined as follows:
 * :math:`\Omega = [0,1] \times [0,1]` (a unit square)
 * :math:`\alpha = 8.0` (penalty parameter)
 * :math:`f = 4.0 \pi^4\sin(\pi x)\sin(\pi y)` (source term)
-
-With the above input the solution for :math:`u` will look as follows:
-
-.. image:: ../biharmonic_u.png
-    :scale: 75
-    :align: center
 

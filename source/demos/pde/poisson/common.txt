@@ -8,6 +8,11 @@ This demo illustrates how to:
 * Define a FunctionSpace
 * Create a SubDomain
 
+The solution for :math:`u` in this demo will look as follows:
+
+.. image:: ../poisson_u.png
+    :scale: 75 %
+
 Equation and problem definition
 -------------------------------
 
@@ -48,10 +53,4 @@ functions, the domain, and the boundaries:
 * :math:`\Gamma_{N} = \{(x, 0) \cup (x, 1) \subset \partial \Omega\}` (Neumann boundary)
 * :math:`g = \sin(5x)` (normal derivative)
 * :math:`f = 10\exp(-((x - 0.5)^2 + (y - 0.5)^2) / 0.02)` (source term)
-
-With the above input the solution for :math:`u` will look as follows:
-
-.. image:: ../poisson_u.png
-    :scale: 75
-    :align: center
 
