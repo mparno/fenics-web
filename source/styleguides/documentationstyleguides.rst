@@ -226,55 +226,62 @@ for more details and options) in the following way:
 Documenting the FEniCS interface (programmer's reference)
 ---------------------------------------------------------
 
-This short guide explains how to write documentation for the C++ and
-Python interfaces to FEniCS.
-Since the Python interface is (partially) generated automatically using
-`Swig <http://www.swig.org/>`_ from the C++ implementation of DOLFIN the
-directory/file structure of the documentation follows that of the C++ version
-of DOLFIN.
-In addition, we want the documentation for the Python version to be
-available when using FEniCS with the Python interpreter.
-To achieve this we write all documentation for the Python version in a
-pseudo module which is an exact replication of the 'real' DOLFIN module and
-then let the `Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_
-extension handle the rest.
+The reST files from which the :ref:`programmers_reference_index` is generated,
+are automatically generated for the DOLFIN C++ library and the Python module
+``dolfin``.
+This short guide explains how to accomplish this and how to format the
+documentation.
 
-To make matters more concrete let's consider the case of writing documentation
-for the DOLFIN ``Mesh`` class and the ``closest_cell`` member function of this
-class.
+Design considerations
+^^^^^^^^^^^^^^^^^^^^^
 
-The ``Mesh`` class is defined in the file ``dolfin_dir/dolfin/mesh/Mesh.h``.
-We therefore start by adding the files:
+The procedure for writing documentation might seem cumbersome so let's have a
+look at the design considerations which have led to this ostensible case of
+overengineering.
 
-* ``programmers-reference/cpp/mesh/Mesh.rst``
-* ``programmers-reference/python/mesh/Mesh.rst``
+The Python interface is (partially) generated automatically using
+`Swig <http://www.swig.org/>`_ from the C++ implementation of DOLFIN.
+Some classes are extended when building (see the ``dolfin/dolfin/swig/*post.i``
+files) while others are added or extended manually in the Python layer defined
+in ``dolfin/site-packages/dolfin``.
+While this approach saves a lot of work when implementing the Python interface
+it puts some constraints on the way the documentation can be handled.
+In addition we have the following design goals for writing and maintaining the
+documentation:
 
-and updating the index files
+Avoid duplicate text
+    In many cases the documentation of a feature will be virtually identical
+    for the C++ and Python interfaces, and since the Python interface is
+    generated from the C++ code, the documentation should be in the C++ source
+    code.
+    To avoid that the documentation on these pages and the comments in the
+    source code (and the implementation itself) diverge, the documentation
+    should be automatically generated from the C++ source code.
+    Therefore the comments should be written using Sphinx markup.
 
-* ``programmers-reference/cpp/index.rst``
-* ``programmers-reference/cpp/mesh/index.rst``
-* ``programmers-reference/python/index.rst``
-* ``programmers-reference/python/mesh/index.rst``
+Help in the Python interpreter
+    The documentation of a class/function when running ``help(dolfin.foo)``
+    in the Python interpreter should be identical to what can be found online.
+    In practice this means that we have to generate the
+    ``dolfin/dolfin/swig/docstrings.i`` file using the comments extracted from
+    the C++ source before building the Python interface with Swig.
 
-appropriately.
-
-We then proceed to add contents for the two different interfaces as described
-in the following sections.
+Simple markup
+    Since the documentation is written directly in the C++ source code, we want
+    markup to be simple such that we have 'code with comments' rather than
+    'comments with code'.
+    Another reason for preferring simple markup is that it is the raw docstring
+    which will be available from the Python interpreter.
 
 General remarks
 ^^^^^^^^^^^^^^^
 
-To handle the documentation of two different languages in Sphinx, we
-use `Sphinx Domains <http://sphinx.pocoo.org/domains.html>`_ to
-distinguish between classes and functions belonging to the C++ and
-Python interfaces.
-
 As Sphinx does not allow sections in the markup for class/function
-documentation, we use *italics* (``*italics*``) and definition lists
-to group information.  The idea is to keep the markup as simple as
-possible since the reST source for the Python documentation of classes
-and functions will be used 'as is' in the docstrings of the DOLFIN
-module.
+documentation, we use *italics* (``*italics*``) and definition lists to group
+information.
+This is to keep the markup as simple as possible since the reST source for the
+Python documentation of classes and functions will be used 'as is' in the
+docstrings of the DOLFIN module.
 
 Most information can be put in the three sections:
 
@@ -282,18 +289,18 @@ Most information can be put in the three sections:
   structure::
 
     *Arguments*
-        <name>
-            <type, description>
-        <name2>
-            <type, description>
+        <name> (<type>)
+            <description>
+        <name2> (<type>)
+            <description>
 
   example::
 
       *Arguments*
-          dim
-              An integer, some dimension.
-          d
-              A double, some value.
+          dim (int)
+              some dimension.
+          d (double)
+              some value.
 
 * *Returns*, which is formatted in a similar fashion::
 
@@ -303,9 +310,9 @@ Most information can be put in the three sections:
 
   example::
 
-    *Returns*
-        integer
-            Some random integer.
+      *Returns*
+          int
+              Some random integer.
 
 * *Example*, a very small code snippet that shows how the
   class/function works. It does not necessarily have to be a
@@ -314,297 +321,168 @@ Most information can be put in the three sections:
 Links to demos that use the feature being documented should be put in
 a ``seealso`` directive.
 
-The member functions of a class should be sorted alphabetically for
-the C++ version. When using autodoc, Sphinx will sort the member
-functions automatically for the Python module.
 
-C++ interface
-^^^^^^^^^^^^^^^^^
+Documenting a feature
+^^^^^^^^^^^^^^^^^^^^^
 
-The code snippets presented in the following can be seen in their
-complete form and context by clicking on the ``Show Source`` link on
-the page containing the C++ documentation for the :cpp:class:`Mesh`
-class.
+To make matters more concrete let's consider the case of writing documentation
+for the member function ``closest_cell`` of the DOLFIN ``Mesh`` class.
+The Python interface to this class is generated by Swig and it is not extended
+in the Python layer.
+Writing documentation for other classes and functions in DOLFIN which are not
+extended or added in the Python layer follow a similar procedure.
 
-The C++ documentation for the ``Mesh`` class is added to the
-``programmers-reference/cpp/mesh/Mesh.rst`` file.
+Adding docstrings to source files
+"""""""""""""""""""""""""""""""""
 
-Defining the class
-""""""""""""""""""
+The ``Mesh::closest_cell`` function is defined in the file
+``dolfin_dir/dolfin/mesh/Mesh.h``, and the comment lines and function
+definition look as follows:
 
-The beginning of the ``programmers-reference/cpp/mesh/Mesh.rst`` file
-looks as follows:
+.. code-block:: c++
 
-.. code-block:: rest
+    /// Computes the index of the cell in the mesh which is closest to the
+    /// point query.
+    ///
+    /// *Arguments*
+    ///     point (_Point_)
+    ///         A _Point_ object.
+    ///
+    /// *Returns*
+    ///     uint
+    ///         The index of the cell in the mesh which is closest to point.
+    ///
+    /// *Example*
+    ///     .. code-block:: c++
+    ///
+    ///         UnitSquare mesh(1, 1);
+    ///         Point point(0.0, 2.0);
+    ///         info("%d", mesh.closest_cell(point));
+    ///
+    ///     output::
+    ///
+    ///         1
+    dolfin::uint closest_cell(const Point& point) const;
 
-    Mesh.h
-    ======
+Note that the documentation of a function or class is placed above the
+definition in the source code.
+The structure and content follow the guidelines in the previous section.
 
-    .. cpp:class:: Mesh
-
-        *Parent class*
-
-            * :cpp:class:`Variable`
-
-        A Mesh consists of a set of connected and numbered mesh entities.
-
-where only the first part of the ``Mesh`` class description has been included
-for brevity.
-
-We start with a section title ``Mesh.h`` since the ``Mesh.rst`` should
-contain documentation for all classes and functions defined in
-``Mesh.h`` and there might be multiple classes defined.  The ``Mesh``
-class is defined by the Sphinx directive ``cpp:class::`` followed by
-the name of the class.  Since the ``Mesh`` class derives from the
-``Variable`` class, we list all parent classes explicitly where the
-line ``:cpp:class:`Variable``` will create a link to the C++
-documentation of the class ``Variable``.
-
-.. note::
-
-    In the future Sphinx might be clever enough to handle parent classes
-    automatically, but until then this is how we do it.
-
-Then follows a description of the purpose of the ``Mesh`` class before
-the documentation of the member functions.
-
-Constructors
-""""""""""""
-
-The constructors are documented as any other member function.
-For the ``Mesh`` class we have two additional constructors besides the empty
-constructor:
-
-.. code-block:: rest
-
-    .. cpp:class:: Mesh
-
-        [snip]
-
-        .. cpp:function:: Mesh(const Mesh& mesh)
-
-            Copy constructor.
-
-            *Arguments*
-                mesh
-                    A :cpp:class:`Mesh` object.
-
-        .. cpp:function:: Mesh(std::string filename)
-
-            Create mesh from data file.
-
-            *Arguments*
-                filename
-                    A string, name of file to load.
-
-The functions are defined in the class body such that they
-automatically have the ``Mesh`` namespace.  The signature of the
-functions (in this case the constructors ``Mesh(const Mesh& mesh)``
-and ``Mesh(std::string filename)``) **must** be identical to that
-found in the ``dolfin/mesh/Mesh.h`` file, otherwise subsequent testing
-will report that the function is not documented (or obsolete).
+The Point object is a class like Mesh and it is defined in the FEniCS interface.
+To insert a link to the documentation of this class use leading and trailing
+underscore i.e., ``_Point_``.
+When parsing the comment lines this string will be substituted with either
+``:cpp:class:`Point``` or ``:py:class:`Point``` depending on whether
+documentation for the C++ or Python interface is being generated.
+The return type, in this case ``dolfin::uint``, will automatically be mapped to
+the correct Python type when generating the documentation for the Python
+interface.
 
 .. note::
 
-    It looks like the destructor ``~`` is not recognised, but we can skip
-    documenting that until it is included in Sphinx.
+    If you are writing documentation for one of the functions/classes which are
+    added to the Python layer manually you have to add manually the correct
+    links and types. In the above case ``:py:class:`Point``` and ``int``
+    respectively.
 
-    The empty constructor, in this case Mesh(), is implicitly created when
-    defining the class (``.. cpp:class:: Mesh``).
-    Explicitly defining it as one of the constructors will cause Sphinx to
-    complain about multiple definitions.
+The example code uses C++ syntax because it is located in the C++ header file.
+Translating this code to a correct Python equivalent is rather difficult.
+It is therefore necessary to add example code using the Python syntax manually.
+This code should be put in the ``dolfin/dolfin/swig/codeexamples.py`` which
+contains a simple dictionary of example code.
+The dictionary containing only the example code for the example above should
+look as follows:
 
-closest_cell function
-"""""""""""""""""""""
+.. code-block:: python
 
-The documentation for the ``closest_cell`` function is added in the
-same manner as the documentation for the constructors, but with
-additional information about the return value and an example.
+    codesnippets = {
+    "Mesh":{
+    "dolfin::uint closest_cell(const Point& point) const":
+    """
+    .. code-block:: python
 
-.. code-block:: rest
+        >>> mesh = dolfin.UnitSquare(1, 1)
+        >>> point = dolfin.Point(0.0, 2.0)
+        >>> mesh.closest_cell(point)
+        1
+    """}
+    }
 
-    .. cpp:function:: dolfin::uint closest_cell(const Point & point) const
+The first dictionary contains dictionaries for all classes with code examples
+for each function.
+Note that the full C++ function signature has been used to identify the
+function to which the code example belongs.
 
-        Computes the index of the cell in the mesh which is closest to the
-        point query.
+After adding the documentation to the ``Mesh.h`` file and Python code example
+to the ``codeexamples.py`` file, you have to run the script
+``dolfin/dolfin/swig/generate.py`` to generate the
+``dolfin/dolfin/swig/docstrings.i`` file and then build DOLFIN to update the
+docstrings in the ``dolfin`` Python module.
 
-        *Arguments*
-            point
-                A :cpp:class:`Point` object.
+Generating the documentation
+""""""""""""""""""""""""""""
 
-        *Returns*
-            integer
-                The index of the cell in the mesh which is closest to point.
+To generate the documentation pages for the C++ interface, you need to run the
+script ``fenics-doc/utils/generate_cpp_doc.py``.
+This will create reST files containing the documentation from all header files
+found in DOLFIN.
+The contents from ``Mesh.h`` will be saved in the
+``programmers-reference/cpp/mesh/Mesh.rst`` file which can be seen in its
+complete form and context by clicking on the ``Show Source`` link on the
+:cpp:class:`Mesh` class page.
+You have to set the ``DOLFIN_DIR`` variable first which should point to the
+directory where the DOLFIN version which you want to document is located.
 
-        *Example*
-            .. code-block:: c++
+To generate the documentation pages for the Python interface, you need to run
+the script ``fenics-doc/utils/generate_python_doc.py``.
+The Python ``dolfin`` module has to be in your ``PYTHONPATH`` for this to work.
+Since the Python ``Mesh`` class is defined in the :py:mod:`dolfin.cpp`
+module generated by Swig the output reST file for the Mesh class is
+``programmers-reference/python/cpp/Mesh.rst`` which can be seen by clicking on
+the ``Show Source`` link on the :py:class:`dolfin.cpp.Mesh` class page.
+This file contain very little markup since we rely on the
+`Sphinx autodoc <http://sphinx.pocoo.org/ext/autodoc.html>`_ extension to
+extract the Python docstrings automatically.
 
-                UnitSquare mesh(1, 1);
-                Point point(0.0, 2.0);
-                info("%d", mesh.closest_cell(point));
+Finally, build the documentation by running::
 
-            output::
+    make all
 
-                1
+in the ``fenics-doc`` directory.
 
-Again, the function is defined in the class body, and the signature of
-the function is identical to that found in the ``dolfin/mesh/Mesh.h``
-file.
+Summary
+^^^^^^^
 
-.. note::
+In summary, to update/generate the documentation follow the below procedure:
 
-    Since Sphinx does not yet handle overloaded functions that well, links to
-    :cpp:func:`Mesh::closest_cell` (``:cpp:func:`Mesh::closest_cell```) from the
-    index page will point to the class where it is defined instead of the
-    actual function.
-    This behaviour will hopefully change in the future.
+* Make appropriate changes to the DOLFIN source code.
+* If you made changes to C++ header files or docstrings in
+  ``dolfin/dolfin/swig/*.i`` you should update the
+  ``dolfin/dolfin/swig/codeexamples.py`` file with an example snippet if
+  applicable and run the script ``dolfin/dolfin/swig/generate.py``
+  to update the ``dolfin/dolfin/swig/docstrings.i`` file.
 
-Python interface
-^^^^^^^^^^^^^^^^
+* Build DOLFIN to update the ``dolfin`` Python module.
+* Update your ``PYTHONPATH`` variable to point to the ``dolfin`` module
+  and set the ``DOLFIN_DIR`` variable to point to the DOLFIN directory.
+* Run the scripts ``fenics-doc/utils/generate_cpp_doc.py`` and
+  ``fenics-doc/utils/generate_python_doc.py``.
+* Build the documentation by running::
 
-The code snippets presented in the following can be seen in their
-complete form and context by clicking on the ``Show Source`` link on
-the page containing the Python documentation for the
-:py:class:`dolfin.cpp.Mesh` class and in the
-:download:`../programmers-reference/python/docstrings/dolfin/cpp.py` file
-which contains the actual documentation for the Python ``Mesh`` class.
+    make all
 
-The Python ``Mesh`` class is defined in the :py:mod:`dolfin.cpp`
-module. This module is automatically generated by Swig from the DOLFIN
-C++ implementation.  In order to have the documentation for the Python
-interface available from within the Python interpreter, we will put
-the docstrings for the ``Mesh`` class in the appropriate file of the
-pseudo module containing the dolfin docstrings namely
-``programmers-reference/python/docstrings/dolfin/cpp.py``.
+  in the top directory.
 
-Defining the class
-""""""""""""""""""
+Python modules
+^^^^^^^^^^^^^^
 
-We simply define the class as it is defined in the 'real' DOLFIN module with
-the exception that it only contains docstrings and no actual code.
-
-.. code-block:: rest
-
-    class Mesh(Variable):
-        """
-        A Mesh consists of a set of connected and numbered mesh entities.
-
-        [snip]
-        """
-
-where only the first part of the ``Mesh`` class description has been
-included for brevity.  Since the docstrings module requires correct
-Python syntax the parent class ``Variable`` must of course be defined
-also.
-
-Construtors
-"""""""""""
-
-The constructors are documented in the docstring of the ``Mesh.__init__``
-function like this:
-
-.. code-block:: rest
-
-    class Mesh(Variable):
-        [snip]
-
-        def __init__(self, *args):
-            """
-            **Overloaded versions**
-
-            * Mesh\ **()**
-
-              Create empty mesh.
-
-            * Mesh\ **(mesh)**
-
-              Copy constructor.
-
-              *Arguments*
-                  mesh
-                      A :py:class:`Mesh` instance.
-
-            * Mesh\ **(filename)**
-
-              Create mesh from data file.
-
-              *Arguments*
-                  filename
-                      A string, name of file to load.
-            """
-
-Since the constructor is overloaded, we use the argument list ``(self,
-*args)`` in the function definition and the ``**Overloaded
-versions**`` section to document the overloaded versions in a standard
-list using ``*``.  For each constructor we define the argument list
-using **bold face**. The ``\`` is needed to avoid adding space between
-the function name (``Mesh``) and the argument list.  Each constructor
-is then documented as any other function.
+Describe how to write documentation (docstrings and autodoc) for Python modules
+UFL, FFC etc.
 
 .. note::
 
-    The above approach applies to any overloaded function, not just
-    constructors and is necessary because Sphinx/Python does not handle
-    overloaded functions (which we need to since the Python interface is
-    generated from a C++ implementation).
-
-closest_cell function
-"""""""""""""""""""""
-
-The documentation for the ``closest_cell`` function is added in the
-same manner as the documentation for the constructors, but with
-additional information about the return value and an example.
-
-.. code-block:: rest
-
-    class Mesh(Variable):
-        [snip]
-
-        def closest_cell(self, point):
-            """
-            Computes the index of the cell in the mesh which is closest to the
-            point query.
-
-            *Arguments*
-                point
-                    A :py:class:`Point` instance.
-
-            *Returns*
-                integer
-                    The index of the cell in the mesh which is closest to point.
-
-            *Example*
-                >>> mesh = dolfin.UnitSquare(1,1)
-                >>> point = dolfin.Point(0.0, 2.0)
-                >>> mesh.closest_cell(point)
-                1
-            """
-
-Using Sphinx autodoc
-""""""""""""""""""""
-
-To complete the Python documentation for the ``Mesh`` class, we simply add
-the following to the ``programmers-reference/python/mesh/Mesh.rst`` file:
-
-.. code-block:: rest
-
-    Mesh
-    ====
-
-    .. currentmodule:: dolfin.cpp
-
-    .. autoclass:: Mesh
-        :members:
-        :show-inheritance:
-        :undoc-members:
-
-We use the file ``programmers-reference/python/mesh/Mesh.rst`` to mirror the
-structure of the DOLFIN source tree (see
-:ref:`styleguides_sphinx_documenting_interface`).
-The ``currentmodule`` directive tells Sphinx in which module to find the class
-that should be documented.
-The line ``.. autoclass:: Mesh`` automatically generates documentation for the
-``Mesh`` class and the arguments specifies what information to be included.
+    This section is incomplete because we have not yet started to migrate the
+    old manuals yet.
 
 Appendices
 ^^^^^^^^^^
@@ -616,25 +494,6 @@ file/class layout of the module and the content should be extracted
 from the docstrings as is done for the Python interface to DOLFIN.
 The layout of the docstrings should follow the same rules as outlined
 in the above sections.
-
-Testing the documentation
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-When you are done writing documentation for the programmer's reference you
-should run the two tests:
-
-* ``test/verify_cpp_documentation.py``
-* ``test/verify_python_documentation.py``
-
-and build the documentation to ensure everything is in working order by running
-the command:
-
-.. code-block:: sh
-
-    make all
-
-in the top directory.
-
 
 .. _styleguides_sphinx_documenting_demos:
 
