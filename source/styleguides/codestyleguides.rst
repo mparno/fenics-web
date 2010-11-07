@@ -159,10 +159,12 @@ you are sure that you want to exploit arbitrary precision:
     uint i = 0;
     double x = 0.0;
 
-Placement of brackets
-^^^^^^^^^^^^^^^^^^^^^
+Placement of brackets and indent style
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Curly brackets following multiline control statements should appear
+Use the `BSD/Allman <http://en.wikipedia.org/wiki/Indent_style>`_ style when
+formatting blocks of code.
+I.e., curly brackets following multiline control statements should appear
 on the next line and should not be indented:
 
 .. code-block:: c++
