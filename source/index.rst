@@ -34,10 +34,6 @@ in case you need it, and encourage contributions from our users.
   <table class="contentstable" align="center"><tr>
     <td width="50%">
       <p class="biglink">
-        <a class="biglink" href="introduction.html">Introduction</a>
-        <br/><span class="linkdescr">A short introduction to this documentation</span>
-      </p>
-      <p class="biglink">
         <a class="biglink" href="installation.html">Installation</a>
         <br/><span class="linkdescr">How to install FEniCS</span>
       </p>
@@ -53,7 +49,7 @@ in case you need it, and encourage contributions from our users.
     </td><td width="50%">
       <p class="biglink">
         <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">Documented example programs in C++ and Python
+        <br/><span class="linkdescr">Documented example programs
         </span>
       </p>
       <p class="biglink">
@@ -63,19 +59,7 @@ in case you need it, and encourage contributions from our users.
       </p>
       <p class="biglink">
         <a class="biglink" href="developer.html">Developer information</a>
-        <br/><span class="linkdescr">Information for contributors and developers</span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="styleguides/index.html">Style guides</a>
-        <br/><span class="linkdescr">Style guides for FEniCS source code</span>
+        <br/><span class="linkdescr">How to contribute to FEniCS</span>
       </p>
     </td></tr>
   </table>
-
-##################
-Indices and tables
-##################
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
