@@ -43,7 +43,7 @@ in case you need it, and encourage contributions from our users.
         </span>
       </p>
       <p class="biglink">
-        <a class="biglink" href="help.html">Getting help</a>
+        <a class="biglink" href="help.html">Support</a>
         <br/><span class="linkdescr">How to get help</span>
       </p>
     </td><td width="50%">
