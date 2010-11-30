@@ -15,3 +15,16 @@ To update the C++ programmer's reference and the demos from a specific DOLFIN
 installation you need to set the DOLFIN_DIR variable and run the two scripts
 utils/generate_cpp_doc.py and utils/copy_demos.sh before building the
 documentation.
+
+FEniCS web page
+---------------
+
+1. push to lp:fenics-web
+
+2. navigate to fenics@fenics.org:~/fenics-web-sphinx and bzr pull
+
+3. export PYTHONPATH=/home/fenics-doc/local/lib/python2.6/site-packages:${PYTHONPATH}
+
+4. export PATH=/home/fenics-doc/local/bin:${PATH}
+
+5. make html
