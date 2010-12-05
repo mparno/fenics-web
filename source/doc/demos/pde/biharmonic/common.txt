@@ -8,8 +8,7 @@ This demo illustrates how to:
 The solution for :math:`u` in this demo will look as follows:
 
 .. image:: ../biharmonic_u.png
-    :scale: 75
-    :align: center
+    :scale: 75 %
 
 Equation and problem definition
 -------------------------------
@@ -81,4 +80,3 @@ The input parameters for this demos are defined as follows:
 * :math:`\Omega = [0,1] \times [0,1]` (a unit square)
 * :math:`\alpha = 8.0` (penalty parameter)
 * :math:`f = 4.0 \pi^4\sin(\pi x)\sin(\pi y)` (source term)
-

@@ -8,13 +8,8 @@ Introduction
 ############
 
 Welcome to the documentation for the `FEniCS Project
-<http://fenics.org/wiki/FEniCS_Project>`_.
-
-Although the FEniCS Project consists of many `software components
-<http://fenics.org/wiki/Projects>`_, the main focus of this
-documentation is on the FEniCS user interface.
-
-The documentation comprises three main parts:
+<http://www.fenicsproject.org/>`_. The FEniCS documentation comprises
+three main parts:
 
 * :ref:`tutorial_index`, which focuses on getting users started
   solving partial differential equations (PDEs) in FEniCS. The
@@ -33,6 +28,5 @@ The documentation comprises three main parts:
 
 Each part is available in both a C++ and a Python version.
 
-Suggestions on how to improve the FEniCS software and the
-documentation are very welcome. Please see :ref:`contributing` for how
-to proceed.
+Suggestions on how to improve the FEniCS software and the documentation
+are very welcome. Please see :ref:`contributing` for how to proceed.
