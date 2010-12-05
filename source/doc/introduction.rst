@@ -3,9 +3,9 @@
 
 .. _introduction:
 
-############
-Introduction
-############
+#############
+Documentation
+#############
 
 Welcome to the documentation for the `FEniCS Project
 <http://www.fenicsproject.org/>`_. The FEniCS documentation comprises
