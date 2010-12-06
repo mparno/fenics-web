@@ -10,7 +10,6 @@ DOLFIN ``function`` library
     :maxdepth: 2
 
     Constant
-    Data
     Expression
     Function
     FunctionSpace

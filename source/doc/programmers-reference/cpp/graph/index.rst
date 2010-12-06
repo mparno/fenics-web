@@ -9,4 +9,4 @@ DOLFIN ``graph`` library
 .. toctree::
     :maxdepth: 2
 
-    
+    MatrixRenumbering

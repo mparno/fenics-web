@@ -43,6 +43,10 @@ GenericDofMap.h
     
         Return number of facet dofs
 
+    .. cpp:function:: const std::vector<uint>& cell_dofs(uint cell_index) const = 0
+    
+        Local-to-global mapping of dofs on a cell
+
     .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const = 0
     
         Tabulate the local-to-global mapping of dofs on a cell

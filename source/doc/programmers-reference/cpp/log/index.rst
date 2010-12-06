@@ -10,6 +10,7 @@ DOLFIN ``log`` library
     :maxdepth: 2
 
     Event
+    LogLevel
     LogStream
     Progress
     Table

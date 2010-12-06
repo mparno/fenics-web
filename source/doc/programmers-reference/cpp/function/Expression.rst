@@ -58,11 +58,11 @@ Expression.h
     
         Return value dimension for given axis
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
     
-        Evaluate function for given data
+        Evaluate function for given cell
 
-    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
     
         Restrict function to local cell (compute expansion coefficients w)
 

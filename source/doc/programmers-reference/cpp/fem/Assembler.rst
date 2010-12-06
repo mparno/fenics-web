@@ -24,13 +24,13 @@ Assembler.h
 
     .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, bool reset_sparsity=true, bool add_values=false)
     
-        Assemble tensor
+        Assemble tensor from given form
 
     .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, const SubDomain& sub_domain, bool reset_sparsity=true, bool add_values=false)
     
-        Assemble tensor on sub domain
+        Assemble tensor from given form on sub domain
 
     .. cpp:function:: static void assemble(GenericTensor& A, const Form& a, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
     
-        Assemble tensor on sub domains
+        Assemble tensor from given form on sub domains
 

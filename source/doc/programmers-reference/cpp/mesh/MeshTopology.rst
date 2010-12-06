@@ -46,6 +46,10 @@ MeshTopology.h
     
         Clear all data
 
+    .. cpp:function:: void clear(uint d0, uint d1)
+    
+        Clear data for given pair of topological dimensions
+
     .. cpp:function:: void init(uint dim)
     
         Initialize topology of given maximum dimension

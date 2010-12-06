@@ -39,11 +39,11 @@ GenericFunction.h
     
         Return value dimension for given axis
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const = 0
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const = 0
     
         Evaluate function for given data
 
-    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell, int local_facet) const = 0
+    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const = 0
     
         Restrict function to local cell (compute expansion coefficients w)
 
@@ -58,10 +58,6 @@ GenericFunction.h
     .. cpp:function:: uint value_size() const
     
         Return value size (product of value dimensions)
-
-    .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
-    
-        Convenience function for restriction when facet is unknown
 
     .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const
     

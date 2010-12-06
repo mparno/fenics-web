@@ -27,7 +27,7 @@ Facet.h
         Determine whether or not facet is an interior facet. This is 'relative'
         to the given partition of the mesh if the mesh is distributed
 
-    .. cpp:function:: std::pair<const Cell, const Cell> adjacent_cells(MeshFunction<uint>* facet_orientation=0) const
+    .. cpp:function:: std::pair<const Cell, const Cell> adjacent_cells(const MeshFunction<uint>* facet_orientation=0) const
     
         Return adjacent cells. An optional argument that lists for
         each facet the index of the first cell may be given to specify

@@ -16,9 +16,14 @@ STLMatrix.h
     
         * :cpp:class:`GenericMatrix`
         
-    Simple implementation of a GenericMatrix for experimenting
-    with new assembly. Not sure this will be used later but it
-    might be useful.
+    Simple STL-based implementation of the GenericMatrix interface.
+    The sparse matrix is stored as a pair of std::vector of
+    std::vector, one for the columns and one for the values.
+    
+    Historically, this class has undergone a number of different
+    incarnations, based on various combinations of std::vector,
+    std::set and std::map. The current implementation has proven to
+    be the fastest.
 
     .. cpp:function:: STLMatrix()
     

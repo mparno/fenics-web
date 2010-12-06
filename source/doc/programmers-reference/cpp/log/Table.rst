@@ -58,6 +58,10 @@ Table.h
     
         Get value of table entry
 
+    .. cpp:function:: double get_value(std::string row, std::string col) const
+    
+        Get value of table entry
+
     .. cpp:function:: std::string title() const
     
         Return table title

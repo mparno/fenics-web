@@ -16,14 +16,6 @@ DofMap.h
     
         * :cpp:class:`GenericDofMap`
         
-    This class handles the mapping of degrees of freedom. It builds
-    a dof map based on a ufc::dof_map on a specific mesh. It will
-    reorder the dofs when running in parallel.
-    
-    If ufc_offset != 0, then the dof map provides a view into a
-    larger dof map. A dof map which is a view, can be 'collapsed'
-    such that the dof indices are contiguous.
-
     .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, Mesh& dolfin_mesh)
     
         Create dof map on mesh
@@ -59,6 +51,10 @@ DofMap.h
     .. cpp:function:: unsigned int num_facet_dofs() const
     
         Return number of facet dofs
+
+    .. cpp:function:: const std::vector<uint>& cell_dofs(uint cell_index) const
+    
+        Local-to-global mapping of dofs on a cell
 
     .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const
     

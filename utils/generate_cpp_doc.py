@@ -20,7 +20,7 @@ import os, sys
 
 # Set output directory
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "programmers-reference", "cpp")
+                          os.pardir, "source", "doc/programmers-reference", "cpp")
 
 # Set directory for DOLFIN source code
 if not "DOLFIN_DIR" in os.environ:

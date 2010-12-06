@@ -23,6 +23,7 @@ DOLFIN ``mesh`` library
     Interval
     LocalMeshData
     Mesh
+    MeshColoring
     MeshConnectivity
     MeshData
     MeshEditor
@@ -32,6 +33,7 @@ DOLFIN ``mesh`` library
     MeshGeometry
     MeshPartitioning
     MeshPrimitive
+    MeshRenumbering
     MeshTopology
     Point
     PrimitiveIntersector
@@ -39,6 +41,7 @@ DOLFIN ``mesh`` library
     Rectangle
     SubDomain
     SubMesh
+    SubsetIterator
     UnitCircle
     UnitCube
     UnitInterval

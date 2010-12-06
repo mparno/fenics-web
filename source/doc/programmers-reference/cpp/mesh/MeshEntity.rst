@@ -47,6 +47,10 @@ MeshEntity.h
     
         Return array of indices for incident mesh entitites of given topological dimension
 
+    .. cpp:function:: uint mesh_id() const
+    
+        Return unique mesh ID
+
     .. cpp:function:: bool incident(const MeshEntity& entity) const
     
         Check if given entity is indicent

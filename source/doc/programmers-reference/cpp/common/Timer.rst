@@ -36,7 +36,7 @@ Timer.h
     
         Start timer
 
-    .. cpp:function:: void stop()
+    .. cpp:function:: double stop()
     
         Stop timer
 

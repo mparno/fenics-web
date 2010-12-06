@@ -50,6 +50,10 @@ GenericVector.h
     
         Add block of values
 
+    .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows)
+    
+        Add block of values
+
     .. cpp:function:: void zero() = 0
     
         Set all entries to zero and keep any sparse structure
@@ -82,7 +86,7 @@ GenericVector.h
     
         Get block of values (values may live on any process)
 
-    .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
+    .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const = 0
     
         Get block of values (values must all live on the local process)
 

@@ -54,7 +54,3 @@ Constant.h
     
         Cast to double (for scalar constants)
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
-    
-        Evaluate function
-

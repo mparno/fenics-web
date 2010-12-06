@@ -12,5 +12,4 @@ Modules:
     :maxdepth: 1
 
     ale/index
-    meshfunction/index
     refine/index

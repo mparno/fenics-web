@@ -57,7 +57,7 @@ MeshEntityIterator.h
 
     .. cpp:function:: MeshEntityIterator(const MeshEntityIterator& it)
     
-        Copy Constructor
+        Copy constructor
 
     .. cpp:function:: MeshEntityIterator& operator++()
     
@@ -70,6 +70,14 @@ MeshEntityIterator.h
     .. cpp:function:: uint pos() const
     
         Return current position
+
+    .. cpp:function:: bool operator==(const MeshEntityIterator & it) const
+    
+        Comparison operator.
+
+    .. cpp:function:: bool operator!=(const MeshEntityIterator & it) const
+    
+        Comparison operator
 
     .. cpp:function:: MeshEntity& operator*()
     
@@ -91,7 +99,7 @@ MeshEntityIterator.h
     
         Provide a safeguard iterator pointing beyond the end of an iteration
         process, either iterating over the mesh /or incident entities. Added to
-        be bit more like STL iteratoren, since many algorithms rely on a kind of
+        be bit more like STL iterators, since many algorithms rely on a kind of
         beyond iterator.
 
     .. cpp:function:: void set_end()

@@ -22,7 +22,7 @@ SpecialFunctions.h
     
         Constructor
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
     
         Evaluate function
 
@@ -54,7 +54,7 @@ SpecialFunctions.h
     
         Constructor
 
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
     
         Evaluate function
 

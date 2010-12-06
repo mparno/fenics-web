@@ -79,6 +79,10 @@ Array.h
     
         Access value of given entry (non-const version)
 
+    .. cpp:function:: const Array<T>& operator= (T& x)
+    
+        Assign value to all entries
+
     .. cpp:function:: const boost::shared_array<T> data() const
     
         Return pointer to data (const version)

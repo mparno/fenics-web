@@ -112,6 +112,11 @@ MPI.h
         Return local range for given process, splitting [0, N - 1] into
         num_processes() portions of almost equal size
 
+    .. cpp:function:: static std::pair<uint, uint> local_range(uint process, uint N, uint num_processes)
+    
+        Return local range for given process, splitting [0, N - 1] into
+        num_processes portions of almost equal size
+
     .. cpp:function:: static uint index_owner(uint index, uint N)
     
         Return which process owns index (inverse of local_range)

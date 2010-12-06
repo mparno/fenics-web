@@ -17,10 +17,9 @@ SparsityPattern.h
         * :cpp:class:`GenericSparsityPattern`
         
     This class implements the GenericSparsityPattern interface.
-    It is used by most linear algebra backends, except for Epetra
-    which uses a special/native implementation.
+    It is used by most linear algebra backends.
 
-    .. cpp:function:: SparsityPattern(Type type)
+    .. cpp:function:: SparsityPattern()
     
         Create empty sparsity pattern
 
@@ -66,11 +65,13 @@ SparsityPattern.h
     
         Return informal string representation (pretty-print)
 
-    .. cpp:function:: const std::vector<Set<uint> >& diagonal_pattern() const
+    .. cpp:function:: std::vector<std::vector<uint> > diagonal_pattern(Type type) const
     
-        Return underlying sparsity pattern (diagonal)
+        Return underlying sparsity pattern (diagonal). Options are
+        'sorted' and 'unsorted'.
 
-    .. cpp:function:: const std::vector<Set<uint> >& off_diagonal_pattern() const
+    .. cpp:function:: std::vector<std::vector<uint> > off_diagonal_pattern(Type type) const
     
-        Return underlying sparsity pattern (off-diagional)
+        Return underlying sparsity pattern (off-diagional). Options are
+        'sorted' and 'unsorted'.
 

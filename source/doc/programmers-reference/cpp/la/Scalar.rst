@@ -55,6 +55,10 @@ Scalar.h
     
         Add block of values
 
+    .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows)
+    
+        Add block of values
+
     .. cpp:function:: void zero()
     
         Set all entries to zero and keep any sparse structure

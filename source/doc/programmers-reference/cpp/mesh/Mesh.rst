@@ -231,6 +231,14 @@ Mesh.h
     
         Get mesh geometry (const version).
 
+    .. cpp:function:: uint id() const
+    
+        Get unique mesh identifier.
+        
+        *Returns*
+            _uint_
+                The unique integer identifier associated with the mesh.
+
     .. cpp:function:: IntersectionOperator& intersection_operator()
     
         Get intersection operator.
@@ -271,24 +279,24 @@ Mesh.h
     
         Compute entities of given topological dimension.
         
-          *Arguments*
-              dim (uint)
-                  Topological dimension.
+        *Arguments*
+            dim (uint)
+                Topological dimension.
         
-          *Returns*
-              uint
-                  Number of created entities.
+        *Returns*
+            uint
+                Number of created entities.
 
     .. cpp:function:: void init(uint d0, uint d1) const
     
         Compute connectivity between given pair of dimensions.
         
-          *Arguments*
-              d0 (uint)
-                  Topological dimension.
+        *Arguments*
+            d0 (uint)
+                Topological dimension.
         
-              d1 (uint)
-                  Topological dimension.
+            d1 (uint)
+                Topological dimension.
 
     .. cpp:function:: void init() const
     
@@ -297,6 +305,12 @@ Mesh.h
     .. cpp:function:: void clear()
     
         Clear all mesh data.
+
+    .. cpp:function:: void clean()
+    
+        Clean out all auxiliary topology data. This clears all
+        topological data, except the connectivity between cells and
+        vertices.
 
     .. cpp:function:: void order()
     
@@ -381,6 +395,41 @@ Mesh.h
             harmonic_smoothing (bool)
                 Flag to turn on harmonics smoothing, default
                 value is true.
+
+    .. cpp:function:: const MeshFunction<uint>& color(std::string coloring_type) const
+    
+        Color the cells of the mesh such that no two neighboring cells
+        share the same color. A colored mesh keeps a
+        CellFunction<uint> named "cell colors" as mesh data which
+        holds the colors of the mesh.
+        
+        *Arguments*
+            coloring_type (std::string)
+                Coloring type, specifying what relation makes two
+                cells neighbors, can be one of "vertex", "edge" or
+                "facet".
+        
+        *Returns*
+            MeshFunction<uint>
+                The colors as a mesh function over the cells of the mesh.
+
+    .. cpp:function:: const MeshFunction<uint>& color(uint dim) const
+    
+        Color the cells of the mesh such that no two neighboring cells
+        share the same color. A colored mesh keeps a
+        CellFunction<uint> named "cell colors" as mesh data which
+        holds the colors of the mesh.
+        
+        *Arguments*
+            dim (uint)
+                Coloring type given as topological dimension,
+                specifying what relation makes two cells neighbors.
+                Two cells are neighbors if they are both adjacent to a
+                mesh entity of the given dimension.
+        
+        *Returns*
+            MeshFunction<uint>
+                The colors as a mesh function over the cells of the mesh.
 
     .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
     

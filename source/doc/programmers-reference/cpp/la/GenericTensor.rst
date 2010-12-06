@@ -46,6 +46,10 @@ GenericTensor.h
     
         Set block of values
 
+    .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows) = 0
+    
+        Add block of values
+
     .. cpp:function:: void add(const double* block, const uint* num_rows, const uint * const * rows) = 0
     
         Add block of values

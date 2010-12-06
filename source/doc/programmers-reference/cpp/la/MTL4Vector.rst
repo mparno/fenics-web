@@ -60,6 +60,10 @@ MTL4Vector.h
     
         Get block of values
 
+    .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
+    
+        Get block of values
+
     .. cpp:function:: void set(const double* block, uint m, const uint* rows)
     
         Set block of values
