@@ -27,4 +27,6 @@ FEniCS web page
 
 4. export PATH=/home/fenics-doc/local/bin:${PATH}
 
-5. make html
+5. source /home/fenics-doc/fenics/share/dolfin/dolfin.conf
+
+6. make html
