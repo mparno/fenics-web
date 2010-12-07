@@ -11,7 +11,6 @@ Classes:
 .. toctree::
     :maxdepth: 1
 
-    CellSize
     FacetArea
     MeshCoordinates
 
@@ -20,4 +19,5 @@ Functions:
 .. toctree::
     :maxdepth: 1
 
+    CellSize
     FacetNormal

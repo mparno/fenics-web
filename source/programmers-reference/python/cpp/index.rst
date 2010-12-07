@@ -22,27 +22,51 @@ Classes:
     BoundaryMesh
     Box
     Cell
-    CellSize
+    CellFunction
+    CellFunctionBool
+    CellFunctionDouble
+    CellFunctionInt
+    CellFunctionUInt
     CellType
     CholmodCholeskySolver
+    ComplexODE
     ConstDoubleArray
     Constant
-    Data
     DefaultFactory
     DirichletBC
     DofMap
     DomainBoundary
     DoubleArray
-    DummyComplexODE
     DynamicMeshEditor
     Edge
+    EdgeFunction
+    EdgeFunctionBool
+    EdgeFunctionDouble
+    EdgeFunctionInt
+    EdgeFunctionUInt
+    EpetraFactory
+    EpetraKrylovSolver
+    EpetraLUSolver
+    EpetraMatrix
+    EpetraSparsityPattern
+    EpetraVector
     EqualityBC
     Event
     Expression
     Face
+    FaceFunction
+    FaceFunctionBool
+    FaceFunctionDouble
+    FaceFunctionInt
+    FaceFunctionUInt
     Facet
     FacetArea
     FacetCell
+    FacetFunction
+    FacetFunctionBool
+    FacetFunctionDouble
+    FacetFunctionInt
+    FacetFunctionUInt
     File
     FiniteElement
     Form
@@ -79,7 +103,9 @@ Classes:
     MTL4Matrix
     MTL4Vector
     Matrix
+    MatrixRenumbering
     Mesh
+    MeshColoring
     MeshConnectivity
     MeshCoordinates
     MeshData
@@ -92,8 +118,10 @@ Classes:
     MeshFunctionUInt
     MeshGeometry
     MeshPartitioning
+    MeshRenumbering
     MeshTopology
     Method
+    MulticoreAssembler
     NewtonSolver
     NonlinearProblem
     ODE
@@ -101,6 +129,7 @@ Classes:
     ODESolution
     ODESolutionData
     ODESolutionIterator
+    OpenMpAssembler
     PETScBaseMatrix
     PETScFactory
     PETScKrylovMatrix
@@ -130,6 +159,7 @@ Classes:
     Scalar
     SingularSolver
     SparsityPattern
+    SparsityPatternBuilder
     StabilityAnalysis
     StringParameter
     SubDomain
@@ -138,11 +168,13 @@ Classes:
     SubSpace
     SubSystemsManager
     SubVector
+    SubsetIterator
     SystemAssembler
     Table
     TableEntry
     TimeSeries
     Timer
+    TrilinosPreconditioner
     UIntArray
     UmfpackLUSolver
     UnitCircle
@@ -156,6 +188,11 @@ Classes:
     VariationalProblem
     Vector
     Vertex
+    VertexFunction
+    VertexFunctionBool
+    VertexFunctionDouble
+    VertexFunctionInt
+    VertexFunctionUInt
     cGqMethod
     cells
     dGqMethod
@@ -187,6 +224,8 @@ Functions:
     CholmodCholeskySolver_default_parameters
     DirichletBC_default_parameters
     DofMap_extract_sub_dofmap
+    EpetraKrylovSolver_default_parameters
+    EpetraLUSolver_default_parameters
     File_exists
     GlobalParameters_default_parameters
     ITLKrylovSolver_default_parameters
@@ -207,10 +246,15 @@ Functions:
     MPI_scatter
     MPI_send_recv
     MPI_sum
+    MeshColoring_color_cells
+    MeshColoring_compute_cell_colors
+    MeshColoring_type_to_dim
     MeshPartitioning_number_entities
     MeshPartitioning_partition
+    MulticoreAssembler_assemble
     NewtonSolver_default_parameters
     ODE_default_parameters
+    OpenMpAssembler_assemble
     PETScFactory_instance
     PETScKrylovSolver_default_parameters
     PETScLUSolver_default_parameters
@@ -220,16 +264,19 @@ Functions:
     SLEPcEigenSolver_default_parameters
     STLFactory_instance
     SingularSolver_default_parameters
+    SparsityPatternBuilder_build
     SubSystemsManager_finalize
     SubSystemsManager_init_mpi
     SubSystemsManager_init_petsc
     SystemAssembler_assemble
     TimeSeries_filename_data
     TimeSeries_filename_times
+    TrilinosPreconditioner_default_parameters
     UmfpackLUSolver_default_parameters
     VariationalProblem_default_parameters
     __new_Parameter_init__
     _info
+    _new_closure
     _refine
     _swig_getattr
     _swig_repr
