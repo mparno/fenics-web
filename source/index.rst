@@ -3,70 +3,25 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-####################
-FEniCS documentation
-####################
+############
+Introduction
+############
+
+The FEniCS Project is a collection of free software aimed at
+automated, efficient solution of differential equations. The project
+provides tools for working with computational meshes, finite element
+variational formulations of PDEs, ODE solvers and linear algebra.
+
+*The FEniCS web pages were vandalised recently, so we're in the process
+of building a new site.*
 
 .. toctree::
+    :maxdepth: 2
     :hidden:
 
-    introduction
-    installation
-    tutorial/index
-    help
-    demos/index
-    programmers-reference/index
-    developer
-    styleguides/index
-    launchpad_pages
-
-.. raw:: html
-
-  <table class="contentstable" align="center"><tr>
-    <td width="50%">
-      <p class="biglink">
-        <a class="biglink" href="introduction.html">Introduction</a>
-        <br/><span class="linkdescr">A short introduction to this documentation</span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="installation.html">Installation</a>
-        <br/><span class="linkdescr">How to install FEniCS</span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="tutorial/index.html">Tutorial</a>
-        <br/><span class="linkdescr">How to use FEniCS
-        </span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="help.html">Getting help</a>
-        <br/><span class="linkdescr">How to get help</span>
-      </p>
-    </td><td width="50%">
-      <p class="biglink">
-        <a class="biglink" href="demos/index.html">Demos</a>
-        <br/><span class="linkdescr">Documented example programs in C++ and Python
-        </span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="programmers-reference/index.html">Programmer's reference</a>
-        <br/><span class="linkdescr">Interface documentation
-        </span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="developer.html">Developer information</a>
-        <br/><span class="linkdescr">Information for contributors and developers</span>
-      </p>
-      <p class="biglink">
-        <a class="biglink" href="styleguides/index.html">Style guides</a>
-        <br/><span class="linkdescr">Style guides for FEniCS source code</span>
-      </p>
-    </td></tr>
-  </table>
-
-##################
-Indices and tables
-##################
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    about/about
+    installation/installation
+    contact/help
+    doc/introduction
+    developer/developer
+    cite/cite

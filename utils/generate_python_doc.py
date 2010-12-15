@@ -12,7 +12,7 @@ import os, sys, types
 
 # Set output directory
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "programmers-reference", "python")
+                          os.pardir, "source", "doc/programmers-reference", "python")
 #output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "python-source")
 
 
@@ -36,7 +36,7 @@ index_string = \
 
 def get_modules(mod, modules, top_module=""):
     """Extract all modules defined in a module.
-  
+
     This function will not return external modules which are imported. To get
     all modules, the function is called recursively."""
     # This is the first call to the function, store name of module.

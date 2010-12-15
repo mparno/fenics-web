@@ -117,7 +117,9 @@ pygments_style = 'sphinx'
 #html_theme = 'haiku'
 #html_theme = 'nature'
 #html_theme = 'scrolls'
-html_theme = 'sphinxdoc'
+#html_theme = 'sphinxdoc'
+html_theme = 'slim-agogo'
+#html_theme = 'classy'
 #html_theme = 'traditional'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -126,11 +128,11 @@ html_theme = 'sphinxdoc'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ["_themes"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-#html_title = None
+html_title = "FEniCS Project"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
