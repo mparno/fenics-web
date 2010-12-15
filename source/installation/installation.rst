@@ -14,9 +14,9 @@ for all components. For information on accessing the development
 repositories, see :ref:`developer`.
 
 
-**********************
-Debian/Ubuntu packages
-**********************
+*****************
+Prebuilt binaries
+*****************
 
 Debian
 ======
@@ -42,12 +42,12 @@ command::
 Ubuntu PPA
 ----------
 
-The official Ubuntu repositories may not always contain the latest
-stable FEniCS releases. To stay current with the latest releases, add
-the `FEniCS Personal Package Archive
+Ubuntu has a policy of not updating the version of a shipped application,
+so the FEniCS version available might be old. To keep up with the latest
+releases, add the `FEniCS Personal Package Archive
 <https://launchpad.net/~fenics/+archive/ppa>`_ (PPA) to your Ubuntu
 system. You can do this by going to **System > Administration >
-Software Sources > Third-Party Software** and clicking on
+Software Sources > Other Software** and click on
 **Add**. Then type in ``ppa:fenics/ppa`` and click on **Add Source**
 and then **Close**. A dialog box should appear, asking whether you
 would like to update the list of repositories. Select **Reload** to
@@ -69,6 +69,48 @@ for those preferring the command-line:
     9.10) Ubuntu systems. Please see the `FEniCS PPA page
     <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
     these systems.
+
+Mac OS X
+========
+
+The Mac OS X binary installer is a *beta-quality release* based on
+unstable FEniCS packages. We encourage you to test and report
+issues. Other comments or suggestions for improvements are also much
+appreciated.
+
+The FEniCS binary for OS X runs on Intel 10.6 only. *10.5 and older and
+the PowerPC architecture are not supported.* XCode 3 (available on the
+OS X install disc) is required to run the binary.
+
+* Install `FEniCS <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.6.dmg>`_
+
+The installer should be mounted automatically after the download
+completes. Otherwise, doubleclick on the ``.dmg`` file to fire up the
+installer. Then simply drag the FEniCS icon into the Applications folder
+to complete the installation.
+
+To start using FEniCS, click on the FEniCS icon in the Applications
+folder. This will bring up a terminal with everything set up to work
+with FEniCS. Alternatively, source the file
+``/Applications/FEniCS.app/Contents/Resources/share/fenics/fenics.conf``
+to set up the necessary paths to work with FEniCS. You can do this by
+adding the following line to the ``.profile`` file in your home
+directory::
+
+    source /Applications/FEniCS.app/Contents/Resources/share/fenics/fenics.conf
+
+This will make FEniCS available whenever you start a new terminal.
+
+.. note::
+
+    If the FEniCS icon does not show up in the Applications folder
+    after the installation, run ``killall -KILL Dock`` in a terminal to
+    restart the Dock.
+
+.. warning::
+
+    This binary package is built against system Python and will not work
+    with MacPorts Python or similar.
 
 ***********************************
 Automated installation using Dorsal
