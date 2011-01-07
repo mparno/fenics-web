@@ -6,12 +6,12 @@
 Installation
 ############
 
-Obtaining and installing FEniCS have never been easier. Packages
-are available for Debian and Ubuntu users, and we provide a framework
-(`Dorsal <http://www.fenics.org/dorsal/>`_) for simple builds of FEniCS on
-a multitude of platforms. It is also possible to download source tarballs
-for all components. For information on accessing the development
-repositories, see :ref:`developer`.
+Obtaining and installing FEniCS have never been easier. Packages are
+available for Debian/Ubuntu, Mac OS X and Windows users, and we provide
+a framework (`Dorsal <http://www.fenics.org/dorsal/>`_) for simple
+builds of FEniCS on a multitude of platforms. It is also possible to
+download source tarballs for all components. For information on
+accessing the development repositories, see :ref:`developer`.
 
 
 *****************
@@ -85,7 +85,7 @@ OS X install disc) is required to run the binary.
 * Install `FEniCS <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.6.dmg>`_
 
 The installer should be mounted automatically after the download
-completes. Otherwise, doubleclick on the ``.dmg`` file to fire up the
+completes. Otherwise, double-click on the ``.dmg`` file to fire up the
 installer. Then simply drag the FEniCS icon into the Applications folder
 to complete the installation.
 
@@ -111,6 +111,19 @@ This will make FEniCS available whenever you start a new terminal.
 
     This binary package is built against system Python and will not work
     with MacPorts Python or similar.
+
+Windows
+=======
+
+The Windows binary installer will install everything needed to run
+FEniCS on Windows, including MinGW compilers, Python, CMake, SWIG, and
+others. It has been verified to run on XP, Vista, and on Windows 7.
+
+You can download the installer by clicking `here
+<http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-mingw32.exe>`_.
+Then double-click on the file and follow the instructions. When the
+installation is complete, simply start the FEniCS command shell from the
+start menu and you are ready to start working.
 
 ***********************************
 Automated installation using Dorsal
