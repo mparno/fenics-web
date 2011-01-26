@@ -4,6 +4,8 @@
 Overview of Launchpad pages
 ###########################
 
+.. _launchpad_pages:
+
 This page contains links to all FEniCS projects on Launchpad for convenience.
 
 `FEniCS Project <https://launchpad.net/fenics-project>`_
