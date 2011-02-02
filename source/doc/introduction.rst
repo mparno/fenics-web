@@ -30,3 +30,12 @@ Each part is available in both a C++ and a Python version.
 
 Suggestions on how to improve the FEniCS software and the documentation
 are very welcome. Please see :ref:`contributing` for how to proceed.
+
+.. toctree::
+    :hidden:
+
+    tutorial/index
+    demos/index
+    programmers-reference/index
+    styleguides/index
+
