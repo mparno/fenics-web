@@ -12,7 +12,7 @@ from sys import stderr, path as sys_path
 chdir(sys_path[0])
 
 # We currently only verify demo code.
-chdir(path.join(pardir, "source", "demos"))
+chdir(path.join(pardir, "source", "doc", "demos"))
 
 # We have C++ and Python versions of the demos.
 directories = ["cpp", "python"]
