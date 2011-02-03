@@ -46,12 +46,12 @@ combining these into a mixed function space:
     DG = FunctionSpace(mesh, "DG", 0)
     W = BDM * DG
 
-The second argument to ``FunctionSpace`` specifies the type of finite
-element family, while the third argument specifies the polynomial
-degree. The UFL user manual contains a list of all available finite
-element families and more details.  The * operator creates a mixed
-(product) space ``W`` from the two separate spaces ``BDM`` and
-``DG``. Hence,
+The second argument to :py:class:`FunctionSpace` specifies the type of
+finite element family, while the third argument specifies the
+polynomial degree. The UFL user manual contains a list of all
+available finite element families and more details.  The * operator
+creates a mixed (product) space ``W`` from the two separate spaces
+``BDM`` and ``DG``. Hence,
 
 .. math::
 
@@ -87,9 +87,9 @@ side vanishes.
 
 It only remains to prescribe the boundary condition for the
 flux. Essential boundary conditions are specified through the class
-``DirichletBC`` which takes three arguments: the function space the
-boundary condition is supposed to be applied to, the data for the
-boundary condition, and the relevant part of the boundary.
+:py:class:`DirichletBC` which takes three arguments: the function
+space the boundary condition is supposed to be applied to, the data
+for the boundary condition, and the relevant part of the boundary.
 
 We want to apply the boundary condition to the first subspace of the
 mixed space. This space can be accessed by ``W.sub(0)``. (Do *not* use
@@ -102,11 +102,11 @@ freedom by the degrees of freedom evaluated at the given data. The
 the degrees of freedom act on vector-valued objects. The effect is
 that the user is required to construct a :math:`G` such that :math:`G
 \cdot n = g`.  Such a :math:`G` can be constructed by letting :math:`G
-= g n`. In particular, it can be easily created by subclassing the
-``Expression`` class. Overloading the ``eval_data`` method (instead of
-the usual ``eval``) allows us to extract more geometry information
-such as the facet normals. Since this is a vector-valued expression,
-we need to overload the ``value_shape`` method.
+= g n`. In particular, it can be created by subclassing the
+:py:class:`Expression` class. Overloading the ``eval_cell`` method
+(instead of the usual ``eval``) allows us to extract more geometry
+information such as the facet normals. Since this is a vector-valued
+expression, we need to overload the ``value_shape`` method.
 
 .. index:: Expression
 
@@ -114,14 +114,18 @@ we need to overload the ``value_shape`` method.
 
     # Define function G such that G \cdot n = g
     class BoundarySource(Expression):
-        def eval_data(self, values, data):
-            g = sin(5*data.x()[0])
-            values[0] = g*data.normal()[0]
-            values[1] = g*data.normal()[1]
-        def value_shape(self):
-            return (2,)
+           def __init__(self, mesh):
+               self.mesh = mesh
+           def eval_cell(self, values, x, ufc_cell):
+               cell = Cell(self.mesh, ufc_cell.index)
+               n = cell.normal(ufc_cell.local_facet)
+               g = sin(5*x[0])
+               values[0] = g*n[0]
+               values[1] = g*n[1]
+           def value_shape(self):
+               return (2,)
 
-    G = BoundarySource()
+     G = BoundarySource(mesh)
 
 Specifying the relevant part of the boundary can be done as for the
 Poisson demo (but now the top and bottom of the unit square is the
@@ -140,12 +144,12 @@ boundary condition:
 
     bc = DirichletBC(W.sub(0), G, boundary)
 
-To compute the solution, a ``VariationalProblem`` object is created
-using the bilinear and linear forms, and the boundary condition.  The
-``solve`` function is then called, yielding the full solution. The
-separate components ``sigma`` and ``u`` of the solution can be
-extracted by calling the ``split`` function. Finally, we plot the
-solutions to examine the result.
+To compute the solution, a :py:class:`VariationalProblem` object is
+created using the bilinear and linear forms, and the boundary
+condition.  The ``solve`` function is then called, yielding the full
+solution. The separate components ``sigma`` and ``u`` of the solution
+can be extracted by calling the ``split`` function. Finally, we plot
+the solutions to examine the result.
 
 .. index:: split functions
 

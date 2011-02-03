@@ -34,12 +34,12 @@ before combining these into a mixed finite element space:
     DG  = FiniteElement("DG", "triangle", 0)
     W = BDM * DG
 
-The first argument to ``FiniteElement`` specifies the type of finite
-element family, while the third argument specifies the polynomial
-degree. The UFL user manual contains a list of all available finite
-element families and more details.  The * operator creates a mixed
-(product) space ``W`` from the two separate spaces ``BDM`` and
-``DG``. Hence,
+The first argument to :py:class:`FiniteElement` specifies the type of
+finite element family, while the third argument specifies the
+polynomial degree. The UFL user manual contains a list of all
+available finite element families and more details.  The * operator
+creates a mixed (product) space ``W`` from the two separate spaces
+``BDM`` and ``DG``. Hence,
 
 .. math::
 
@@ -88,8 +88,9 @@ include the DOLFIN namespace.
 
  using namespace dolfin;
 
-Then follows the definition of the coefficient functions (for :math:`f` and
-:math:`G`), which are derived from the ``Expression`` class in DOLFIN.
+Then follows the definition of the coefficient functions (for
+:math:`f` and :math:`G`), which are derived from the DOLFIN
+:cpp:class:`Expression` class.
 
 .. code-block:: c++
 
@@ -104,25 +105,35 @@ Then follows the definition of the coefficient functions (for :math:`f` and
    }
  };
 
- // Boundary source for flux boundary condition
- class BoundarySource : public Expression
- {
- public:
+// Boundary source for flux boundary condition
+class BoundarySource : public Expression
+{
+public:
 
-   BoundarySource() : Expression(2) {}
+  BoundarySource(const Mesh& mesh) : Expression(2), mesh(mesh) {}
 
-   void eval(Array<double>& values, const Data& data) const
-   {
-     double g = sin(5*data.x[0]);
-     values[0] = g*data.normal()[0];
-     values[1] = g*data.normal()[1];
-   }
- };
+  void eval(Array<double>& values, const Array<double>& x,
+            const ufc::cell& ufc_cell) const
+  {
+    assert(ufc_cell.local_facet >= 0);
 
+    Cell cell(mesh, ufc_cell.index);
+    Point n = cell.normal(ufc_cell.local_facet);
+
+    const double g = sin(5*x[0]);
+    values[0] = g*n[0];
+    values[1] = g*n[1];
+  }
+
+private:
+
+  const Mesh& mesh;
+
+};
 
 Then follows the definition of the essential boundary part of the
-boundary of the domain, which is derived from the ``SubDomain`` class
-in DOLFIN.
+boundary of the domain, which is derived from the
+:cpp:class:`SubDomain` class.
 
 .. code-block:: c++
 
@@ -157,12 +168,13 @@ Then we create the source (:math:`f`) and assign it to the linear form.
 
 It only remains to prescribe the boundary condition for the
 flux. Essential boundary conditions are specified through the class
-``DirichletBC`` which takes three arguments: the function space the
-boundary condition is supposed to be applied to, the data for the
-boundary condition, and the relevant part of the boundary.
+:cpp:class:`DirichletBC` which takes three arguments: the function
+space the boundary condition is supposed to be applied to, the data
+for the boundary condition, and the relevant part of the boundary.
 
 We want to apply the boundary condition to the first subspace of the
-mixed space. This space can be accessed by ``Subspace``.
+mixed space. This space can be accessed by the :cpp:class:`Subspace`
+class.
 
 Next, we need to construct the data for the boundary condition. An
 essential boundary condition is handled by replacing degrees of
@@ -178,7 +190,7 @@ defined above does.
 
   // Define boundary condition
   SubSpace W0(W, 0);
-  BoundarySource G;
+  BoundarySource G(mesh);
   EssentialBoundary boundary;
   DirichletBC bc(W0, G, boundary);
 

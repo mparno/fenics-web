@@ -42,18 +42,19 @@ are defined:
     v = TestFunction(element)
     f = Coefficient(element)
 
-Next, the outward unit normal to cell boundaries and a measure of the cell
-size are defined. The average size of cells sharing a facet will be used
-(``h_avg``).  The UFL syntax ``('+')`` and ``('-')`` restricts a function
-to the ``('+')`` and ``('-')`` sides of a facet, respectively.
-The penalty parameter ``alpha`` is made a ``Constant`` so that it can be changed
-in the program without regenerating the code.
+Next, the outward unit normal to cell boundaries and a measure of the
+cell size are defined. The average size of cells sharing a facet will
+be used (``h_avg``).  The UFL syntax ``('+')`` and ``('-')`` restricts
+a function to the ``('+')`` and ``('-')`` sides of a facet,
+respectively.  The penalty parameter ``alpha`` is made a
+:cpp:class:`Constant` so that it can be changed in the program without
+regenerating the code.
 
 .. code-block:: python
 
     # Normal component, mesh size and right-hand side
     n  = element.cell().n
-    h  = Constant(triangle)
+    h = 2.0*triangle.circumradius
     h_avg = (h('+') + h('-'))/2
 
     # Parameters
@@ -135,7 +136,6 @@ are declared:
 
     // Create functions
     Source f;
-    CellSize h(mesh);
     Constant alpha(8.0);
 
 A function space object, which is defined in the generated code, is created:
@@ -146,7 +146,7 @@ A function space object, which is defined in the generated code, is created:
     Biharmonic::FunctionSpace V(mesh);
 
 The Dirichlet boundary condition on :math:`u` is constructed by
-defining a ``Constant`` which is equal to zero, defining the boundary
+defining a :cpp:class:`Constant` which is equal to zero, defining the boundary
 (``DirichletBoundary``), and using these, together with ``V``, to create
 ``bc``:
 
@@ -165,11 +165,11 @@ are created, and function are attached:
     // Define forms and attach functions
     Biharmonic::BilinearForm a(V, V);
     Biharmonic::LinearForm L(V);
-    a.h = h; a.alpha = alpha; L.f = f;
+    a.alpha = alpha; L.f = f;
 
-A ``VariationalProblem`` is created from the forms and the Dirichet
-boundary condition, a finite element function ``u`` is created and the
-problem is solved:
+A :cpp:class:`VariationalProblem` is created from the forms and the
+Dirichet boundary condition, a finite element function ``u`` is
+created and the problem is solved:
 
 .. code-block:: c++
 

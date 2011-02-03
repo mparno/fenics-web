@@ -58,9 +58,9 @@ their components:
     c0, mu0 = split(u0)
 
 Various model parameters can be specified using the class
-``Constant``. This means that their value can be changed without
-recompiling the UFL file.  Lastly, the value of :math:`\mu_{n+\theta}`
-is computed.
+:py:class:`Constant`. This means that their value can be changed
+without recompiling the UFL file.  Lastly, the value of
+:math:`\mu_{n+\theta}` is computed.
 
 .. code-block:: python
 
@@ -129,36 +129,36 @@ to :math:`c` and the second value (``[1]``) corresponds to
 
 .. code-block:: c++
 
-  // Initial conditions
-  class InitialConditions : public Expression
-  {
-  public:
+   // Initial conditions
+   class InitialConditions : public Expression
+   {
+   public:
 
-    InitialConditions(const Mesh& mesh) : Expression(mesh.topology().dim())
-    {
-      dolfin::seed(2 + dolfin::MPI::process_number());
-    }
+     InitialConditions(const Mesh& mesh) : Expression(mesh.topology().dim())
+     {
+        dolfin::seed(2 + dolfin::MPI::process_number());
+     }
 
-    void eval(Array<double>& values, const Data& data) const
-    {
-      values[0]= 0.63 + 0.02*(0.5 - dolfin::rand());
-      values[1]= 0.0;
-    }
+     void eval(Array<double>& values, const Array<double>& x) const
+     {
+       values[0]= 0.63 + 0.02*(0.5 - dolfin::rand());
+       values[1]= 0.0;
+     }
+   };
 
-  };
 
-The next class is a subclass of ``NonlinearProblem``. A
-``NonlinearProblem`` object can be passed to a ``NewtonSolver`` to be
-solved. The requirements of a ``NonlinearProblem`` subclass are that
-it provides the function ``void F(GenericVector& b, const
-GenericVector& x)`` for computing the residual vector and the function
-``void J(GenericMatrix& A, const GenericVector& x)`` for computing the
-Jacobian matrix.  The below class is designed to work for two
-different generated forms (2D and 3D), with the appropriate form
-chosen based on the geometric dimension of the mesh. The makes the
-class more complicated than would be the case if it supported a single
-form type.  The class is first declared as a subclass of
-``NonlinearProblem``:
+The next class is a subclass of :cpp:class:`NonlinearProblem`. A
+:cpp:class:`NonlinearProblem` object can be passed to a
+:cpp:class:`NewtonSolver` to be solved. The requirements of a
+:cpp:class:`NonlinearProblem` subclass are that it provides the
+function ``void F(GenericVector& b, const GenericVector& x)`` for
+computing the residual vector and the function ``void J(GenericMatrix&
+A, const GenericVector& x)`` for computing the Jacobian matrix.  The
+below class is designed to work for two different generated forms (2D
+and 3D), with the appropriate form chosen based on the geometric
+dimension of the mesh. The makes the class more complicated than would
+be the case if it supported a single form type.  The class is first
+declared as a subclass of cpp:class:`NonlinearProblem`:
 
 .. code-block:: c++
 
@@ -234,18 +234,17 @@ the solution vectors:
 The private ``init`` function is responsible for creating the forms
 and functions associated with the problem. It is a templated function
 so that the 2D and 3D cases can be handled with the same code.
-Firstly, a shared pointer to a
-``FunctionSpace`` (``X``) is created. Then two shared pointers
-``_u`` and ``_u0`` are set to point to ``Functions`` from the space
-``V``.  A shared pointer is used so that the function space is not
-destroyed when the constructor exits. (The function space will not be
-destroyed until there are no more Functions or Forms that point to
-it.)  Using the function space ``V``, bilinear and linear forms are
-created using ``new``, and the coefficient functions are
-attached. These forms are then wrapped in a shared pointer (using the
-``reset`` function) which will take care of eventually destroying the
-forms. Finally, ``_u`` is set equal to the initial condition (by
-interpolation).
+Firstly, a shared pointer to a :cpp:class:`FunctionSpace` (``X``) is
+created. Then two shared pointers ``_u`` and ``_u0`` are set to point
+to :cpp:class:`Function`s from the space ``V``.  A shared pointer is
+used so that the function space is not destroyed when the constructor
+exits. (The function space will not be destroyed until there are no
+more Functions or Forms that point to it.)  Using the function space
+``V``, bilinear and linear forms are created using ``new``, and the
+coefficient functions are attached. These forms are then wrapped in a
+shared pointer (using the ``reset`` function) which will take care of
+eventually destroying the forms. Finally, ``_u`` is set equal to the
+initial condition (by interpolation).
 
 .. code-block:: c++
 
@@ -290,13 +289,13 @@ computing the residual vector and the Jacobian matrix as private data:
   };
 
 The main program is started, and declared such that it can accept
-command line arguments. Such are parsed to ``dolfin_init``:
+command line arguments. Such are parsed to ``init``:
 
 .. code-block:: c++
 
   int main(int argc, char* argv[])
   {
-    dolfin_init(argc, argv);
+    init(argc, argv);
 
 
 A mesh is then created with 97 (96 + 1) vertices in each direction:

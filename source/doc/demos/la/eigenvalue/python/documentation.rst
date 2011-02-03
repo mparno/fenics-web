@@ -42,7 +42,7 @@ PETSc and SLEPc are available, and exit if not, as follows:
       exit()
 
 First, we need to construct the matrix :math:`A`. This will be done in
-three steps: define the mesh and the function space associated with
+three steps: defining the mesh and the function space associated with
 it; constructing the variational form defining the matrix; and then
 assembling this form. The code is shown below
 
@@ -62,26 +62,27 @@ assembling this form. The code is shown below
   assemble(a, tensor=A)
 
 Note that we (in this example) first define the matrix ``A`` as a
-``PETScMatrix`` and then assemble the form into it. This is an easy
-way to ensure that the matrix has the right type.
+:py:class:`PETScMatrix` and then assemble the form into it. This is
+an easy way to ensure that the matrix has the right type.
 
-In order to solve the eigenproblem, we need an eigensolver:
+In order to solve the eigenproblem, we need to define an
+eigensolver. To solve a standard eigenvalue problem, the eigensolver
+is initialized with a single argument, namely the matrix ``A``.
 
 .. code-block:: python
 
   # Create eigensolver
-  eigensolver = SLEPcEigenSolver()
+  eigensolver = SLEPcEigenSolver(A)
 
 Now, we ready solve the eigenproblem by calling the ``solve`` method
-of the eigensolver, giving the matrix ``A`` as a single argument. Note
-that eigenvalue problems tend to be computationally intensive and may
-hence take a while.
+of the eigensolver. Note that eigenvalue problems tend to be
+computationally intensive and may hence take a while.
 
 .. code-block:: python
 
   # Compute all eigenvalues of A x = \lambda x
   print "Computing eigenvalues. This can take a minute."
-  eigensolver.solve(A)
+  eigensolver.solve()
 
 The result is kept by the eigensolver, but can fortunately be
 extracted. Here, we have computed all eigenvalues, and they will be
@@ -98,10 +99,10 @@ for the first eigenpair as follows:
 Finally, we want to examine the results. The eigenvalue can easily be
 printed. But, the real part of eigenvector is probably most easily
 visualized by constructing the corresponding eigenfunction. This can
-be done by creating a ``Function`` in the function space ``V`` with
-the eigenvector ``rx`` as an additional argument. Then the
-eigenfunction can be manipulated as any other ``Function``, and in
-particular plotted:
+be done by creating a :py:class:`Function` in the function space
+``V`` with the eigenvector ``rx`` as an additional argument. Then the
+eigenfunction can be manipulated as any other :py:class:`Function`,
+and in particular plotted:
 
 .. code-block:: python
 

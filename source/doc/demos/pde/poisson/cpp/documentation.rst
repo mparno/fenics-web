@@ -30,10 +30,10 @@ the variational problem in UFL terms in a separate form file
 
     element = FiniteElement("Lagrange", triangle, 1)
 
-The first argument to ``FiniteElement`` is the finite element family,
-the second argument specifies the domain, while the third argument
-specifies the polynomial degree. Thus, in this case, our element
-``element`` consists of first-order, continuous Lagrange basis
+The first argument to :py:class:`FiniteElement` is the finite element
+family, the second argument specifies the domain, while the third
+argument specifies the polynomial degree. Thus, in this case, our
+element ``element`` consists of first-order, continuous Lagrange basis
 functions on triangles (or in order words, continuous piecewise linear
 polynomials on triangles).
 
@@ -85,8 +85,9 @@ equation.  For convenience we also include the DOLFIN namespace.
 
 .. index:: Expression
 
-Then follows the definition of the coefficient functions (for :math:`f` and
-:math:`g`), which are derived from the ``Expression`` class in DOLFIN.
+Then follows the definition of the coefficient functions (for
+:math:`f` and :math:`g`), which are derived from the
+:cpp:class:`Expression` class in DOLFIN.
 
 .. code-block:: c++
 
@@ -112,9 +113,9 @@ Then follows the definition of the coefficient functions (for :math:`f` and
 
 .. index:: SubDomain
 
-The ``DirichletBoundary`` is derived from the ``SubDomain`` class and
-defines the part of the boundary to which the Dirichlet boundary
-condition should be applied.
+The ``DirichletBoundary`` is derived from the :cpp:class:`SubDomain`
+class and defines the part of the boundary to which the Dirichlet
+boundary condition should be applied.
 
 .. code-block:: c++
 
@@ -129,10 +130,10 @@ condition should be applied.
 
 Inside the ``main`` function, we begin by defining a mesh of the
 domain. As the unit square is a very standard domain, we can use a
-built-in mesh provided by the class ``UnitSquare``. In order to create
-a mesh consisting of 32 x 32 squares with each square divided into two
-triangles, and the finite element space (specified in the form file)
-defined relative to this mesh, we do as follows
+built-in mesh provided by the class :cpp:class:`UnitSquare`. In order
+to create a mesh consisting of 32 x 32 squares with each square
+divided into two triangles, and the finite element space (specified in
+the form file) defined relative to this mesh, we do as follows
 
 .. code-block:: c++
 
@@ -143,14 +144,15 @@ defined relative to this mesh, we do as follows
 .. index:: DirichletBC
 
 Now, the Dirichlet boundary condition (:math:`u = 0`) can be created
-using the class ``DirichletBC``. A ``DirichletBC`` takes three
-arguments: the function space the boundary condition applies to, the
-value of the boundary condition, and the part of the boundary on which
-the condition applies. In our example, the function space is ``V``,
-the value of the boundary condition (0.0) can represented using a
-``Constant``, and the Dirichlet boundary is defined by the class
-``DirichletBoundary`` listed above. The definition of the Dirichlet
-boundary condition then looks as follows:
+using the class :cpp:class:`DirichletBC`. A :cpp:class:`DirichletBC`
+takes three arguments: the function space the boundary condition
+applies to, the value of the boundary condition, and the part of the
+boundary on which the condition applies. In our example, the function
+space is ``V``, the value of the boundary condition (0.0) can
+represented using a :cpp:class:`Constant`, and the Dirichlet boundary
+is defined by the class :cpp:class:`DirichletBoundary` listed
+above. The definition of the Dirichlet boundary condition then looks
+as follows:
 
 .. code-block:: c++
 
@@ -164,8 +166,9 @@ boundary condition then looks as follows:
 
 Next, we define the variational problem by initialising the bilinear
 and linear forms (:math:`a`, :math:`L`) using the previously defined
-``FunctionSpace`` ``V``.  Then we can create the source and boundary
-flux term (:math:`f`, :math:`g`) and attach these to the linear form.
+:cpp:class:`FunctionSpace` ``V``.  Then we can create the source and
+boundary flux term (:math:`f`, :math:`g`) and attach these to the
+linear form.
 
 .. code-block:: c++
 
@@ -180,27 +183,25 @@ flux term (:math:`f`, :math:`g`) and attach these to the linear form.
 .. index:: VariationalProblem
 
 Now, we have specified the variational forms and can consider the
-solution of the variational problem.  First, a ``VariationalProblem``
-object is created using the bilinear and linear forms, and the
-Dirichlet boundary condition. The solution will be represented as a
-``Function``, living in the function space ``V``, and needs to be
-declared. Then, to solve the problem, the ``solve`` function is called
-with ``u`` as a single argument; ``u`` now contains the solution. Note
-how parameters for the variational problem can be adjusted: here, we
-specify the use of an iterative linear solver.
+solution of the variational problem.  First, a
+:cpp:class:`VariationalProblem` object is created using the bilinear
+and linear forms, and the Dirichlet boundary condition. The solution
+will be represented as a :cpp:class:`Function`, living in the function
+space ``V``, and needs to be declared. Then, to solve the problem, the
+``solve`` function is called with ``u`` as a single argument; ``u``
+now contains the solution.
 
 .. code-block:: c++
 
     // Compute solution
     VariationalProblem problem(a, L, bc);
-    problem.parameters["linear_solver"] = "iterative";
     Function u(V);
     problem.solve(u);
 
-A ``Function`` can be manipulated in various ways, in particular, it
-can be plotted and saved to file. Here, we output the solution to a
-``VTK`` file (using the suffix ``.pvd``) for later visualization and
-also plot it using the ``plot`` command:
+A :cpp:class:`Function` can be manipulated in various ways, in
+particular, it can be plotted and saved to file. Here, we output the
+solution to a ``VTK`` file (using the suffix ``.pvd``) for later
+visualization and also plot it using the ``plot`` command:
 
 .. code-block:: c++
 
