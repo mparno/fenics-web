@@ -35,6 +35,7 @@ for DEMO_DIR in $DEMO_DIRS; do
         --exclude '*~' \
         --exclude '*.vtu' \
         --exclude '*.pvd' \
+        --exclude '*.log' \
         --exclude CMakeFiles \
         --exclude cmake_install.cmake \
         --exclude CMakeCache.txt \
