@@ -30,7 +30,11 @@ GenericDofMap.h
     
         Return the dimension of the global finite element function space
 
-    .. cpp:function:: unsigned int local_dimension(const ufc::cell& cell) const = 0
+    .. cpp:function:: unsigned int local_dimension() const = 0
+    
+        Return the dimension of the local (process) finite element function space
+
+    .. cpp:function:: unsigned int dimension(uint index) const = 0
     
         Return the dimension of the local finite element function space on a
         cell
@@ -43,19 +47,21 @@ GenericDofMap.h
     
         Return number of facet dofs
 
-    .. cpp:function:: const std::vector<uint>& cell_dofs(uint cell_index) const = 0
+    .. cpp:function:: std::pair<unsigned int, unsigned int> ownership_range() const = 0
+    
+        Return the ownership range (dofs in this range are owned by this process)
+
+    .. cpp:function:: const boost::unordered_map<unsigned int, unsigned int>& off_process_owner() const = 0
+    
+        Return map from nonlocal-dofs (that appear in local dof map) to owning process
+
+    .. cpp:function:: const std::vector<unsigned int>& cell_dofs(uint cell_index) const = 0
     
         Local-to-global mapping of dofs on a cell
-
-    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const = 0
-    
-        Tabulate the local-to-global mapping of dofs on a cell
-        (UFC cell version)
 
     .. cpp:function:: void tabulate_dofs(uint* dofs, const Cell& cell) const = 0
     
         Tabulate the local-to-global mapping of dofs on a cell
-        (DOLFIN cell version)
 
     .. cpp:function:: void tabulate_facet_dofs(uint* dofs, uint local_facet) const = 0
     
@@ -77,7 +83,7 @@ GenericDofMap.h
     
         "Collapse" a sub dofmap
 
-    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh, bool sort = false) const = 0
+    .. cpp:function:: boost::unordered_set<dolfin::uint> dofs() const = 0
     
         Return the set of dof indices
 

@@ -12,19 +12,15 @@ BlockMatrix.h
 
 .. cpp:class:: BlockMatrix
 
-    .. cpp:function:: SubMatrix operator() (uint i, uint j)
-    
-        Return SubMatrix reference number (i,j)
-
-    .. cpp:function:: void set(uint i, uint j, Matrix& m)
+    .. cpp:function:: void set_block(uint i, uint j, boost::shared_ptr<GenericMatrix> m)
     
         Set block
 
-    .. cpp:function:: const Matrix& get(uint i, uint j) const
+    .. cpp:function:: const boost::shared_ptr<GenericMatrix> get_block(uint i, uint j) const
     
         Get block (const version)
 
-    .. cpp:function:: Matrix& get(uint i, uint j)
+    .. cpp:function:: boost::shared_ptr<GenericMatrix> get_block(uint i, uint j)
     
         Get block
 
@@ -48,9 +44,8 @@ BlockMatrix.h
     
         Matrix-vector product, y = Ax
 
-.. cpp:class:: SubMatrix
-
-    .. cpp:function:: const SubMatrix& operator= (Matrix& m)
+    .. cpp:function:: boost::shared_ptr<GenericMatrix> schur_approximation(double symmetry=1) const
     
-        Assign Matrix to SubMatrix
+        Create a crude explicit Schur approximation of S = D - C A^-1 B of (A B; C D)
+        If symmetry != 0, then the caller promises that B = symmetry * transpose(C).
 

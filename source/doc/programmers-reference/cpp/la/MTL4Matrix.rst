@@ -20,10 +20,6 @@ MTL4Matrix.h
     
         Create empty matrix
 
-    .. cpp:function:: MTL4Matrix(uint M, uint N)
-    
-        Create M x N matrix
-
     .. cpp:function:: MTL4Matrix(const MTL4Matrix& A)
     
         Copy constuctor
@@ -39,6 +35,10 @@ MTL4Matrix.h
     .. cpp:function:: uint size(uint dim) const
     
         Return size of given dimension
+
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
 
     .. cpp:function:: void zero()
     

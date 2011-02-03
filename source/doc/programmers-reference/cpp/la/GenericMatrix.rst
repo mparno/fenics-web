@@ -38,6 +38,10 @@ GenericMatrix.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const = 0
+    
+        Return local ownership range
+
     .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const
     
         Get block of values
@@ -54,6 +58,10 @@ GenericMatrix.h
     
         Add block of values
 
+    .. cpp:function:: void add(const double* block, const std::vector<std::vector<uint> >& rows)
+    
+        Add block of values
+
     .. cpp:function:: void zero() = 0
     
         Set all entries to zero and keep any sparse structure
@@ -65,10 +73,6 @@ GenericMatrix.h
     .. cpp:function:: std::string str(bool verbose) const = 0
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: void resize(uint M, uint N) = 0
-    
-        Resize matrix to  M x N
 
     .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const = 0
     

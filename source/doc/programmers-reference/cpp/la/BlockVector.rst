@@ -12,7 +12,7 @@ BlockVector.h
 
 .. cpp:class:: BlockVector
 
-    .. cpp:function:: BlockVector(uint n_=0, bool owner=false)
+    .. cpp:function:: BlockVector(uint n = 0)
     
         Constructor
 
@@ -20,13 +20,17 @@ BlockVector.h
     
         Return copy of tensor
 
-    .. cpp:function:: void set(uint i, Vector& v)
+    .. cpp:function:: void set_block(uint i, boost::shared_ptr<GenericVector> v)
     
         Set function
 
-    .. cpp:function:: const Vector& get(uint i) const
+    .. cpp:function:: const boost::shared_ptr<GenericVector> get_block(uint i) const
     
-        Get functions (const and non-const)
+        Get sub-vector (const)
+
+    .. cpp:function:: boost::shared_ptr<GenericVector> get_block(uint)
+    
+        Get sub-vector (non-const)
 
     .. cpp:function:: void axpy(double a, const BlockVector& x)
     
@@ -79,6 +83,4 @@ BlockVector.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-.. cpp:class:: SubVector
 

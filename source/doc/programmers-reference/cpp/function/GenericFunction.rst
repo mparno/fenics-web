@@ -39,9 +39,13 @@ GenericFunction.h
     
         Return value dimension for given axis
 
-    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const = 0
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
     
-        Evaluate function for given data
+        Evaluate at given point in given cell
+
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
+    
+        Evaluate at given point
 
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const = 0
     
@@ -55,8 +59,41 @@ GenericFunction.h
     
         Collect off-process coefficients to prepare for interpolation
 
+    .. cpp:function:: double operator() (double x)
+    
+        Evaluation at given point (scalar function)
+
+    .. cpp:function:: double operator() (double x, double y)
+    
+        Evaluation at given point (scalar function)
+
+    .. cpp:function:: double operator() (double x, double y, double z)
+    
+        Evaluation at given point (scalar function)
+
+    .. cpp:function:: double operator() (const Point& p)
+    
+        Evaluation at given point (scalar function)
+
+    .. cpp:function:: void operator() (Array<double>& values, double x)
+    
+        Evaluation at given point (vector-valued function)
+
+    .. cpp:function:: void operator() (Array<double>& values, double x, double y)
+    
+        Evaluation at given point (vector-valued function)
+
+    .. cpp:function:: void operator() (Array<double>& values, double x, double y, double z)
+    
+        Evaluation at given point (vector-valued function)
+
+    .. cpp:function:: void operator() (Array<double>& values, const Point& p)
+    
+        Evaluation at given point (vector-valued function)
+
     .. cpp:function:: uint value_size() const
     
+        Evaluation at given point
         Return value size (product of value dimensions)
 
     .. cpp:function:: void evaluate(double* values, const double* coordinates, const ufc::cell& cell) const

@@ -16,49 +16,61 @@ VariationalProblem.h
     
         * :cpp:class:`Variable,`
         
-    This class represents a (system of) partial differential
-    equation(s) in variational form: Find u in V such that
+    A :cpp:class:`VariationalProblem` represents a (system of) partial
+    differential equation(s) in variational form:
     
-        F_u(v) = 0  for all v in V'.
+    Find u_h in V_h such that
     
-    The variational problem is defined in terms of a bilinear
-    form a(v, u) and a linear for L(v).
+        F(u_h; v) = 0  for all v in V_h',
     
-    For a linear variational problem, F_u(v) = a(v, u) - L(v),
-    the forms should correspond to the canonical formulation
+    where V_h is the trial space and V_h' is the test space.
     
-        a(v, u) = L(v)  for all v in V'.
+    The variational problem is specified in terms of a pair of
+    _Form_s and, optionally, a set of _BoundaryCondition_s and
+    _MeshFunction_s that specify any subdomains involved in the
+    definition of the _Form_s.
     
-    For a nonlinear variational problem, the forms should
-    be given by
+    The pair of forms may either specify a nonlinear problem
     
-        a(v, u) = F_u'(v) u = F_u'(v, u),
-        L(v)    = F(v),
+       (1) F(u_h; v) = 0
     
-    that is, a(v, u) should be the Frechet derivative of F_u
-    with respect to u, and L = F.
+    in terms of the residual F and its derivative J = F':
     
-    Parameters:
+       F, J  (F linear, J bilinear)
     
-        "linear solvers": "direct" or "iterative" (default: "direct")
-        "symmetric":      true or false (default: false)
+    or a linear problem
+    
+       (2) F(u_h; v) = a(u_h, v) - L(v) = 0
+    
+    in terms of the bilinear form a and a linear form L:
+    
+       a, L  (a bilinear, L linear)
+    
+    Thus, a pair of forms is interpreted either as a nonlinear
+    problem or a linear problem depending on the ranks of the given
+    forms.
 
-    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& form_0, const Form& form_1)
     
         Define variational problem with natural boundary conditions
 
-    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const BoundaryCondition& bc, bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& form_0, const Form& form_1, const BoundaryCondition& bc)
     
-        Define variational problem with a single Dirichlet boundary conditions
+        Define variational problem with a single Dirichlet boundary condition
 
-    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const std::vector<const BoundaryCondition*>& bcs, bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& form_0, const Form& form_1, const std::vector<const BoundaryCondition*>& bcs)
     
         Define variational problem with a list of Dirichlet boundary conditions
 
-    .. cpp:function:: VariationalProblem(const Form& a, const Form& L, const std::vector<const BoundaryCondition*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool nonlinear=false)
+    .. cpp:function:: VariationalProblem(const Form& form_0, const Form& form_1, const std::vector<const BoundaryCondition*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains)
     
         Define variational problem with a list of Dirichlet boundary conditions
-        and subdomains
+        and subdomains for cells, exterior and interior facets of the mesh
+
+    .. cpp:function:: VariationalProblem(boost::shared_ptr<const Form> form_0, boost::shared_ptr<const Form> form_1, std::vector<boost::shared_ptr<const BoundaryCondition> > bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains)
+    
+        Define variational problem with a list of Dirichlet boundary conditions
+        and subdomains for cells, exterior and interior facets of the mesh
 
     .. cpp:function:: void solve(Function& u)
     
@@ -72,21 +84,69 @@ VariationalProblem.h
     
         Solve variational problem and extract sub functions
 
-    .. cpp:function:: void F(GenericVector& b, const GenericVector& x)
+    .. cpp:function:: void solve(Function& u, double tol, GoalFunctional& M)
     
-        Compute F at current point x
+        Solve variational problem adaptively to within given tolerance
 
-    .. cpp:function:: void J(GenericMatrix& A, const GenericVector& x)
+    .. cpp:function:: void solve(Function& u, double tol, Form& M, ErrorControl& ec)
     
-        Compute J = F' at current point x
+        Solve variational problem adaptively to within given tolerance
 
-    .. cpp:function:: void update(const GenericVector& x)
+    .. cpp:function:: const bool is_nonlinear() const
     
-        Optional callback called before calls to F() and J()
+        Return true if problem is non-linear
 
-    .. cpp:function:: NewtonSolver& newton_solver()
+    .. cpp:function:: const FunctionSpace& trial_space() const
     
-        Return Newton solver (only useful when solving a nonlinear problem)
+        Return trial space for variational problem
+
+    .. cpp:function:: const FunctionSpace& test_space() const
+    
+        Return test space for variational problem
+
+    .. cpp:function:: const Form& bilinear_form() const
+    
+        Return the bilinear form
+
+    .. cpp:function:: boost::shared_ptr<const Form> bilinear_form_shared_ptr() const
+    
+        Return the bilinear form (shared_ptr version)
+
+    .. cpp:function:: boost::shared_ptr<const Form> form_0_shared_ptr() const
+    
+        Return form_0 (shared_ptr version)
+
+    .. cpp:function:: boost::shared_ptr<const Form> form_1_shared_ptr() const
+    
+        Return form_1 (shared_ptr version)
+
+    .. cpp:function:: const Form& linear_form() const
+    
+        Return the linear form
+
+    .. cpp:function:: boost::shared_ptr<const Form> linear_form_shared_ptr() const
+    
+        Return the linear form (shared_ptr version)
+
+    .. cpp:function:: const std::vector<const BoundaryCondition*> bcs() const
+    
+        Return the list of boundary conditions
+
+    .. cpp:function:: const std::vector<boost::shared_ptr<const BoundaryCondition> > bcs_shared_ptr() const
+    
+        Return the list of boundary conditions (shared_ptr version)
+
+    .. cpp:function:: const MeshFunction<uint>* cell_domains() const
+    
+        Return the cell domains
+
+    .. cpp:function:: const MeshFunction<uint>* exterior_facet_domains() const
+    
+        Return the exterior facet domains
+
+    .. cpp:function:: const MeshFunction<uint>* interior_facet_domains() const
+    
+        Return the interior facet domains
 
     .. cpp:function:: static Parameters default_parameters()
     

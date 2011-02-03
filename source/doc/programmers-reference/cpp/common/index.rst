@@ -10,10 +10,14 @@ DOLFIN ``common`` library
     :maxdepth: 2
 
     Array
+    Hierarchical
+    MPI
     Set
+    SubSystemsManager
     Timer
     Variable
     constants
+    init
     real
     timing
     types

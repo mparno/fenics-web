@@ -15,6 +15,8 @@ from dolfin import *
 parameters["form_compiler"]["cpp_optimize"] = True
 parameters["form_compiler"]["optimize"] = True
 
+set_log_level(0)
+
 # Load mesh and define function space
 mesh = Mesh("gear.xml.gz")
 mesh.order()
@@ -86,8 +88,11 @@ problem.parameters["symmetric"] = True
 u = problem.solve()
 
 # Save solution to VTK format
-vtk_file = File("elasticity.pvd")
-vtk_file << u
+File("elasticity.pvd") << u
+
+# Save colored mesh partitions in VTK format if running in parallel
+if MPI.num_processes() > 1:
+    File("partitions.pvd") << CellFunction("uint", mesh, MPI.process_number())
 
 # Plot solution
-plot(u, mode="displacement", interactive=True)
+#plot(u, mode="displacement", interactive=True)

@@ -48,17 +48,29 @@ MTL4Vector.h
     
         Resize vector to size N
 
+    .. cpp:function:: void resize(std::pair<uint, uint> range)
+    
+        Resize vector with given ownership range
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range, const std::vector<uint>& ghost_indices)
+    
+        Resize vector with given ownership range and with ghost values
+
     .. cpp:function:: uint size() const
     
         Return size of vector
+
+    .. cpp:function:: uint local_size() const
+    
+        Return local size of vector
 
     .. cpp:function:: std::pair<uint, uint> local_range() const
     
         Return local ownership range of a vector
 
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
+    .. cpp:function:: bool owns_index(uint i) const
     
-        Get block of values
+        Determine whether global vector index is owned by this process
 
     .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
     
@@ -91,6 +103,10 @@ MTL4Vector.h
     .. cpp:function:: void axpy(double a, const GenericVector& x)
     
         Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: void abs()
+    
+        Replace all entries in the vector by their absolute values
 
     .. cpp:function:: double inner(const GenericVector& vector) const
     

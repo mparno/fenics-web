@@ -83,6 +83,16 @@ DirichletBC.h
     
         Create boundary condition for boundary data included in the mesh
 
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const std::vector<std::pair<uint, uint> >& markers, std::string method="topological")
+    
+        Create boundary condition for subdomain by boundary markers
+        (cells, local facet numbers)
+
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const std::vector<std::pair<uint, uint> >& markers, std::string method="topological")
+    
+        Create boundary condition for subdomain by boundary markers
+        (cells, local facet numbers)
+
     .. cpp:function:: DirichletBC(const DirichletBC& bc)
     
         Copy constructor
@@ -111,13 +121,25 @@ DirichletBC.h
     
         Apply boundary condition to a linear system for a nonlinear problem
 
+    .. cpp:function:: void get_boundary_values(Map& boundary_values, std::string method="default") const
+    
+        Get Dirichlet dofs and values
+
     .. cpp:function:: void zero(GenericMatrix& A) const
     
-        Make row associated with boundary conditions zero, useful for non-diagonal matrices in a block matrix.
+        Make row associated with boundary conditions zero, useful for
+        non-diagonal matrices in a block matrix.
+
+    .. cpp:function:: void zero_columns(GenericMatrix& A, GenericVector& b, double diag_val=0) const
+    
+        Make columns associated with boundary conditions zero, and
+        update the RHS to reflect the changes. Useful for non-diagonals.
+        The diag_val parameter would normally be -1, 0 or 1.
 
     .. cpp:function:: const std::vector<std::pair<uint, uint> >& markers()
     
-        Return boundary markers (facets stored as pairs of cells and local facet numbers)
+        Return boundary markers (facets stored as pairs of cells and local
+        facet numbers)
 
     .. cpp:function:: const GenericFunction& value()
     
@@ -128,13 +150,10 @@ DirichletBC.h
         Return shared pointer to boundary value g
         Testing multiline comment
 
-    .. cpp:function:: void get_bc(uint* indicators, double* values) const
-    
-        Get Dirichlet values and indicators
-
     .. cpp:function:: bool is_compatible(GenericFunction& v) const
     
-        Check if given function is compatible with boundary condition (checking only vertex values)
+        Check if given function is compatible with boundary condition
+        (checking only vertex values)
 
     .. cpp:function:: void set_value(const GenericFunction& g)
     
@@ -143,6 +162,11 @@ DirichletBC.h
     .. cpp:function:: void set_value(boost::shared_ptr<const GenericFunction> g)
     
         Set value g for boundary condition, domain remains unchanged
+
+    .. cpp:function:: std::string method() const
+    
+        Return method used for computing Dirichet dofs ("topological",
+        "geometric" or "pointwise")
 
     .. cpp:function:: static Parameters default_parameters()
     

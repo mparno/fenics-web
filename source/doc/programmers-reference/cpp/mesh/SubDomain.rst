@@ -35,9 +35,25 @@ SubDomain.h
 
     .. cpp:function:: void mark(MeshFunction<uint>& sub_domains, uint sub_domain) const
     
-        Set sub domain markers for given subdomain
+        Set sub domain markers (uint) for given subdomain
+
+    .. cpp:function:: void mark(MeshFunction<int>& sub_domains, int sub_domain) const
+    
+        Set sub domain markers (int) for given subdomain
+
+    .. cpp:function:: void mark(MeshFunction<double>& sub_domains, double sub_domain) const
+    
+        Set sub domain markers (double) for given subdomain
+
+    .. cpp:function:: void mark(MeshFunction<bool>& sub_domains, bool sub_domain) const
+    
+        Set sub domain markers (bool) for given subdomain
 
     .. cpp:function:: uint geometric_dimension() const
     
         Return geometric dimension
+
+    .. cpp:function:: void mark_meshfunction(MeshFunction<T>& sub_domains, T sub_domain) const
+    
+        Set sub domain markers for given subdomain
 

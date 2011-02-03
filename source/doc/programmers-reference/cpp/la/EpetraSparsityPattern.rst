@@ -50,15 +50,25 @@ EpetraSparsityPattern.h
     
         Return total number of nonzeros in local rows
 
-    .. cpp:function:: void num_nonzeros_diagonal(uint* num_nonzeros) const
+    .. cpp:function:: void num_nonzeros_diagonal(std::vector<uint>& num_nonzeros) const
     
         Fill array with number of nonzeros for diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for diagonal block
 
-    .. cpp:function:: void num_nonzeros_off_diagonal(uint* num_nonzeros) const
+    .. cpp:function:: void num_nonzeros_off_diagonal(std::vector<uint>& num_nonzeros) const
     
         Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for off-diagonal block
+
+    .. cpp:function:: std::vector<std::vector<uint> > diagonal_pattern(Type type) const
+    
+        Return underlying sparsity pattern (diagonal). Options are
+        'sorted' and 'unsorted'.
+
+    .. cpp:function:: std::vector<std::vector<uint> > off_diagonal_pattern(Type type) const
+    
+        Return underlying sparsity pattern (off-diagional). Options are
+        'sorted' and 'unsorted'.
 
     .. cpp:function:: void apply()
     

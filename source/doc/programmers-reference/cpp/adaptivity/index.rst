@@ -9,4 +9,6 @@ DOLFIN ``adaptivity`` library
 .. toctree::
     :maxdepth: 2
 
+    ErrorControl
     TimeSeries
+    refine

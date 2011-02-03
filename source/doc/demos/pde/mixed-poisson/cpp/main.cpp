@@ -27,14 +27,25 @@ class BoundarySource : public Expression
 {
 public:
 
-  BoundarySource() : Expression(2) {}
+  BoundarySource(const Mesh& mesh) : Expression(2), mesh(mesh) {}
 
-  void eval(Array<double>& values, const Data& data) const
+  void eval(Array<double>& values, const Array<double>& x,
+            const ufc::cell& ufc_cell) const
   {
-    double g = sin(5*data.x[0]);
-    values[0] = g*data.normal()[0];
-    values[1] = g*data.normal()[1];
+    assert(ufc_cell.local_facet >= 0);
+
+    Cell cell(mesh, ufc_cell.index);
+    Point n = cell.normal(ufc_cell.local_facet);
+
+    const double g = sin(5*x[0]);
+    values[0] = g*n[0];
+    values[1] = g*n[1];
   }
+
+private:
+
+  const Mesh& mesh;
+
 };
 
 // Sub domain for essential boundary condition
@@ -62,7 +73,7 @@ int main()
 
   // Define boundary condition
   SubSpace W0(W, 0);
-  BoundarySource G;
+  BoundarySource G(mesh);
   EssentialBoundary boundary;
   DirichletBC bc(W0, G, boundary);
 

@@ -14,7 +14,7 @@ Mesh.h
 
     *Parent class*
     
-        * :cpp:class:`Variable`
+        * :cpp:class:`Variable,`
         
     A :cpp:class:`Mesh` consists of a set of connected and numbered mesh entities.
     
@@ -263,6 +263,18 @@ Mesh.h
     
         Get mesh data (const version).
 
+    .. cpp:function:: ParallelData& parallel_data()
+    
+        Get parallel mesh data.
+        
+        *Returns*
+            _ParallelData_
+                The parallel data object associated with the mesh.
+
+    .. cpp:function:: const ParallelData& parallel_data() const
+    
+        Get parallel mesh data (const version).
+
     .. cpp:function:: CellType& type()
     
         Get mesh cell type.
@@ -322,12 +334,11 @@ Mesh.h
 
     .. cpp:function:: bool ordered() const
     
-        Check if mesh is ordered.
+        Check if mesh is ordered according to the UFC numbering convention.
         
         *Returns*
             bool
-                Return true iff topology is ordered according to the UFC
-                numbering.
+                The return values is true iff the mesh is ordered.
 
     .. cpp:function:: void move(BoundaryMesh& boundary, dolfin::ALEType method=hermite)
     
@@ -413,7 +424,7 @@ Mesh.h
             MeshFunction<uint>
                 The colors as a mesh function over the cells of the mesh.
 
-    .. cpp:function:: const MeshFunction<uint>& color(uint dim) const
+    .. cpp:function:: const MeshFunction<uint>& color(std::vector<uint> coloring_type) const
     
         Color the cells of the mesh such that no two neighboring cells
         share the same color. A colored mesh keeps a
@@ -421,15 +432,13 @@ Mesh.h
         holds the colors of the mesh.
         
         *Arguments*
-            dim (uint)
-                Coloring type given as topological dimension,
-                specifying what relation makes two cells neighbors.
-                Two cells are neighbors if they are both adjacent to a
-                mesh entity of the given dimension.
+            coloring_type (std::vector<uint>)
+                Coloring type given as list of topological dimensions,
+                specifying what relation makes two mesh entinties neighbors.
         
         *Returns*
             MeshFunction<uint>
-                The colors as a mesh function over the cells of the mesh.
+                The colors as a mesh function over entities of the mesh.
 
     .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
     

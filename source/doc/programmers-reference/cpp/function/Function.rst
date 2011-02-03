@@ -14,7 +14,7 @@ Function.h
 
     *Parent class*
     
-        * :cpp:class:`GenericFunction`
+        * :cpp:class:`GenericFunction,`
         
     This class represents a function u_h in a finite element
     function space V_h, given by
@@ -138,6 +138,4 @@ Function.h
     .. cpp:function:: void gather() const
     
         Collect off-process coefficients to prepare for interpolation
-
-.. cpp:class:: GatherScratch
 

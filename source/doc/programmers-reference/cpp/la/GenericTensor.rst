@@ -18,10 +18,6 @@ GenericTensor.h
         
     This class defines a common interface for arbitrary rank tensors.
 
-    .. cpp:function:: void resize(uint rank, const uint* dims) = 0
-    
-        Resize tensor with given dimensions
-
     .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern) = 0
     
         Initialize zero tensor using sparsity pattern
@@ -38,6 +34,10 @@ GenericTensor.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const = 0
+    
+        Return local ownership range
+
     .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const = 0
     
         Get block of values
@@ -47,6 +47,10 @@ GenericTensor.h
         Set block of values
 
     .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows) = 0
+    
+        Add block of values
+
+    .. cpp:function:: void add(const double* block, const std::vector<std::vector<uint> >& rows) = 0
     
         Add block of values
 

@@ -37,6 +37,10 @@ PETScBaseMatrix.h
     
         Return number of rows (dim = 0) or columns (dim = 1) along dimension dim
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local rang along dimension dim
+
     .. cpp:function:: boost::shared_ptr<Mat> mat() const
     
         Return PETSc Mat pointer

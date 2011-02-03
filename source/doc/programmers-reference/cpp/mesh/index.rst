@@ -50,4 +50,3 @@ DOLFIN ``mesh`` library
     UnitTetrahedron
     UnitTriangle
     Vertex
-    refine

@@ -16,6 +16,14 @@ DofMap.h
     
         * :cpp:class:`GenericDofMap`
         
+    This class handles the mapping of degrees of freedom. It builds
+    a dof map based on a ufc::dof_map on a specific mesh. It will
+    reorder the dofs when running in parallel.
+    
+    If ufc_offset != 0, then the dof map provides a view into a
+    larger dof map. A dof map which is a view, can be 'collapsed'
+    such that the dof indices are contiguous.
+
     .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, Mesh& dolfin_mesh)
     
         Create dof map on mesh
@@ -40,10 +48,6 @@ DofMap.h
     
         Return the dimension of the global finite element function space
 
-    .. cpp:function:: unsigned int local_dimension(const ufc::cell& cell) const
-    
-        Return the dimension of the local finite element function space on a cell
-
     .. cpp:function:: unsigned int max_local_dimension() const
     
         Return the maximum dimension of the local finite element function space
@@ -52,17 +56,22 @@ DofMap.h
     
         Return number of facet dofs
 
+    .. cpp:function:: std::pair<unsigned int, unsigned int> ownership_range() const
+    
+        Return the ownership range (dofs in this range are owned by this process)
+
+    .. cpp:function:: const boost::unordered_map<unsigned int, unsigned int>& off_process_owner() const
+    
+        Return map from nonlocal-dofs that appear in local dof map to owning
+        process
+
     .. cpp:function:: const std::vector<uint>& cell_dofs(uint cell_index) const
     
         Local-to-global mapping of dofs on a cell
 
-    .. cpp:function:: void tabulate_dofs(uint* dofs, const ufc::cell& ufc_cell, uint cell_index) const
-    
-        Tabulate the local-to-global mapping of dofs on a cell (UFC cell version)
-
     .. cpp:function:: void tabulate_dofs(uint* dofs, const Cell& cell) const
     
-        Tabulate the local-to-global mapping of dofs on a cell (DOLFIN cell version)
+        Tabulate the local-to-global mapping of dofs on a cell
 
     .. cpp:function:: void tabulate_facet_dofs(uint* dofs, uint local_facet) const
     
@@ -84,13 +93,17 @@ DofMap.h
     
         "Collapse" a sub dofmap
 
-    .. cpp:function:: Set<dolfin::uint> dofs(const Mesh& mesh, bool sort = false) const
+    .. cpp:function:: boost::unordered_set<dolfin::uint> dofs() const
     
         Return the set of dof indices
 
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
+
+    .. cpp:function:: boost::shared_ptr<const ufc::dof_map> ufc_dofmap() const
+    
+        Return ufc::dof_map
 
     .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
     

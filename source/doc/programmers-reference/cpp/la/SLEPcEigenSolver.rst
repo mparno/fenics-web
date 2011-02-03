@@ -102,49 +102,49 @@ SLEPcEigenSolver.h
     possible values are real numbers.
     
 
-    .. cpp:function:: SLEPcEigenSolver()
+    .. cpp:function:: SLEPcEigenSolver(const PETScMatrix& A)
     
-        Create eigenvalue solver
+        Create eigenvalue solver for Ax = \lambda x
 
-    .. cpp:function:: void solve(const PETScMatrix& A)
+    .. cpp:function:: SLEPcEigenSolver(const PETScMatrix& A, const PETScMatrix& B)
+    
+        Create eigenvalue solver Ax = \lambda Bx
+
+    .. cpp:function:: SLEPcEigenSolver(boost::shared_ptr<const PETScMatrix> A)
+    
+        Create eigenvalue solver for Ax = \lambda x
+
+    .. cpp:function:: SLEPcEigenSolver(boost::shared_ptr<const PETScMatrix> A, boost::shared_ptr<const PETScMatrix> B)
+    
+        Create eigenvalue solver for Ax = \lambda x
+
+    .. cpp:function:: void solve()
     
         Compute all eigenpairs of the matrix A (solve Ax = \lambda x)
 
-    .. cpp:function:: void solve(const PETScMatrix& A, uint n)
+    .. cpp:function:: void solve(uint n)
     
         Compute the n first eigenpairs of the matrix A (solve Ax = \lambda x)
 
-    .. cpp:function:: void solve(const PETScMatrix& A, const PETScMatrix& B)
-    
-        Compute all eigenpairs of the generalised problem Ax = \lambda Bx
-
-    .. cpp:function:: void solve(const PETScMatrix& A, const PETScMatrix& B, uint n)
-    
-        Compute the n first eigenpairs of the generalised problem Ax = \lambda Bx
-
-    .. cpp:function:: void get_eigenvalue(double& lr, double& lc)
+    .. cpp:function:: void get_eigenvalue(double& lr, double& lc) const
     
         Get the first eigenvalue
 
-    .. cpp:function:: void get_eigenpair(double& lr, double& lc, PETScVector& r, PETScVector& c)
+    .. cpp:function:: void get_eigenpair(double& lr, double& lc, PETScVector& r, PETScVector& c) const
     
         Get the first eigenpair
 
-    .. cpp:function:: void get_eigenvalue(double& lr, double& lc, uint i)
+    .. cpp:function:: void get_eigenvalue(double& lr, double& lc, uint i) const
     
         Get eigenvalue i
 
-    .. cpp:function:: void get_eigenpair(double& lr, double& lc, PETScVector& r, PETScVector& c, uint i)
+    .. cpp:function:: void get_eigenpair(double& lr, double& lc, PETScVector& r, PETScVector& c, uint i) const
     
         Get eigenpair i
 
     .. cpp:function:: static Parameters default_parameters()
     
         Default parameter values
-
-    .. cpp:function:: void solve(const PETScMatrix* A, const PETScMatrix* B, uint n)
-    
-        Compute eigenpairs
 
     .. cpp:function:: void read_parameters()
     

@@ -18,7 +18,6 @@ DOLFIN ``fem`` library
     FiniteElement
     Form
     GenericDofMap
-    MulticoreAssembler
     OpenMpAssembler
     PeriodicBC
     SparsityPatternBuilder

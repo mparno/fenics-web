@@ -14,7 +14,7 @@ PETScMatrix.h
 
     *Parent class*
     
-        * :cpp:class:`PETScBaseMatrix,`
+        * :cpp:class:`GenericMatrix,`
         
     This class provides a simple matrix class based on PETSc.
     It is a wrapper for a PETSc matrix pointer (Mat)
@@ -27,10 +27,6 @@ PETScMatrix.h
     .. cpp:function:: PETScMatrix()
     
         Create empty matrix
-
-    .. cpp:function:: PETScMatrix(uint M, uint N)
-    
-        Create M x N matrix
 
     .. cpp:function:: PETScMatrix(const PETScMatrix& A)
     
@@ -51,6 +47,10 @@ PETScMatrix.h
     .. cpp:function:: uint size(uint dim) const
     
         Return size of given dimension
+
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
 
     .. cpp:function:: void zero()
     

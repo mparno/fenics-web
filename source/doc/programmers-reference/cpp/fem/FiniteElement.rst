@@ -26,11 +26,11 @@ FiniteElement.h
     
         Create sub element
 
-    .. cpp:function:: boost::shared_ptr<const ufc::finite_element> ufc_element() const
-    
-        Return ufc::finite_element
-
     .. cpp:function:: boost::shared_ptr<const FiniteElement> extract_sub_element(const std::vector<uint>& component) const
     
         Extract sub finite element for component
+
+    .. cpp:function:: boost::shared_ptr<const ufc::finite_element> ufc_element() const
+    
+        Return ufc::finite_element
 

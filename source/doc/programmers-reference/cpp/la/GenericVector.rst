@@ -38,6 +38,10 @@ GenericVector.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
+
     .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const
     
         Get block of values
@@ -51,6 +55,10 @@ GenericVector.h
         Add block of values
 
     .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows)
+    
+        Add block of values
+
+    .. cpp:function:: void add(const double* block, const std::vector<std::vector<uint> >& rows)
     
         Add block of values
 
@@ -68,13 +76,21 @@ GenericVector.h
 
     .. cpp:function:: void resize(uint N) = 0
     
-        Resize vector to size N
+        Resize vector to global size N
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range) = 0
+    
+        Resize vector with given ownership range
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range, const std::vector<uint>& ghost_indices) = 0
+    
+        Resize vector with given ownership range and with ghost values
 
     .. cpp:function:: uint size() const = 0
     
         Return global size of vector
 
-    .. cpp:function:: uint local_size() const
+    .. cpp:function:: uint local_size() const = 0
     
         Return local size of vector
 
@@ -82,7 +98,11 @@ GenericVector.h
     
         Return local ownership range of a vector
 
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const = 0
+    .. cpp:function:: bool owns_index(uint i) const = 0
+    
+        Determine whether global vector index is owned by this process
+
+    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
     
         Get block of values (values may live on any process)
 
@@ -114,9 +134,17 @@ GenericVector.h
     
         Gather entries into local vector x
 
+    .. cpp:function:: void gather(Array<double>& x, const Array<uint>& indices) const = 0
+    
+        Gather entries into Array x
+
     .. cpp:function:: void axpy(double a, const GenericVector& x) = 0
     
         Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: void abs() = 0
+    
+        Replace all entries in the vector by their absolute values
 
     .. cpp:function:: double inner(const GenericVector& x) const = 0
     
@@ -177,6 +205,10 @@ GenericVector.h
     .. cpp:function:: double* data()
     
         Return pointer to underlying data
+
+    .. cpp:function:: void update_ghost_values()
+    
+        Update ghost values
 
     .. cpp:function:: double operator[] (uint i) const
     

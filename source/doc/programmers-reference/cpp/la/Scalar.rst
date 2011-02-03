@@ -43,6 +43,10 @@ Scalar.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
+
     .. cpp:function:: void get(double* block, const uint* num_rows, const uint * const * rows) const
     
         Get block of values
@@ -56,6 +60,10 @@ Scalar.h
         Add block of values
 
     .. cpp:function:: void add(const double* block, const std::vector<const std::vector<uint>* >& rows)
+    
+        Add block of values
+
+    .. cpp:function:: void add(const double* block, const std::vector<std::vector<uint> >& rows)
     
         Add block of values
 

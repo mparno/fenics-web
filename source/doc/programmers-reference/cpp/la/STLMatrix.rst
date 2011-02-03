@@ -50,6 +50,10 @@ STLMatrix.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
+
     .. cpp:function:: void zero()
     
         Set all entries to zero and keep any sparse structure

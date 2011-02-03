@@ -69,6 +69,10 @@ log.h
     
         Set log level
 
+    .. cpp:function:: void set_output_stream(std::ostream& out)
+    
+        Set output stream
+
     .. cpp:function:: int get_log_level()
     
         Get log level

@@ -12,9 +12,6 @@ Set.h
 
 .. cpp:class:: Set
 
-    This is a std::set like data structure. It is not ordered and it is based
-    a std::vector. It can be faster than a std::set for some cases.
-
     .. cpp:function:: Set()
     
         Create empty set
@@ -39,6 +36,10 @@ Set.h
     
         Insert entry
 
+    .. cpp:function:: void insert(const InputIt first, const InputIt last)
+    
+        Insert entries
+
     .. cpp:function:: dolfin::uint size() const
     
         Set size
@@ -54,10 +55,6 @@ Set.h
     .. cpp:function:: void clear()
     
         Clear set
-
-    .. cpp:function:: void resize(uint n)
-    
-        Resize set
 
     .. cpp:function:: T operator[](uint n) const
     

@@ -28,10 +28,6 @@ EpetraMatrix.h
     
         Create empty matrix
 
-    .. cpp:function:: EpetraMatrix(uint M, uint N)
-    
-        Create M x N matrix
-
     .. cpp:function:: EpetraMatrix(const EpetraMatrix& A)
     
         Copy constuctor
@@ -56,6 +52,10 @@ EpetraMatrix.h
     
         Return size of given dimension
 
+    .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
+    
+        Return local ownership range
+
     .. cpp:function:: void zero()
     
         Set all entries to zero and keep any sparse structure
@@ -67,10 +67,6 @@ EpetraMatrix.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: void resize(uint M, uint N)
-    
-        Resize matrix to M x N
 
     .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const
     

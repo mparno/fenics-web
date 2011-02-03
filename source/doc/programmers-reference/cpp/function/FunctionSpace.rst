@@ -14,7 +14,7 @@ FunctionSpace.h
 
     *Parent class*
     
-        * :cpp:class:`Variable`
+        * :cpp:class:`Variable,`
         
     This class represents a finite element function space defined by
     a mesh, a finite element, and a local-to-global mapping of the
@@ -30,10 +30,15 @@ FunctionSpace.h
 
     .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh)
     
-        Create an empty function space for later intialisation. This
-        constructor is intended for use by any sub-classes which need to
-        construct objects before the initialisation of the base class. Data can
-        be attached to the base class using FunctionSpace::attach(...)
+        Create empty function space for later initialization. This
+        constructor is intended for use by any sub-classes which need
+        to construct objects before the initialisation of the base
+        class. Data can be attached to the base class using
+        FunctionSpace::attach(...).
+
+    .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh)
+    
+        Create empty function space for later initialization (const version)
 
     .. cpp:function:: FunctionSpace(const FunctionSpace& V)
     

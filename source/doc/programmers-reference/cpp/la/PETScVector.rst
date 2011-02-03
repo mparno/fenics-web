@@ -32,6 +32,10 @@ PETScVector.h
     
         Create vector of size N
 
+    .. cpp:function:: PETScVector(const GenericSparsityPattern& sparsity_pattern)
+    
+        Create vector
+
     .. cpp:function:: PETScVector(const PETScVector& x)
     
         Copy constructor
@@ -58,19 +62,31 @@ PETScVector.h
 
     .. cpp:function:: void resize(uint N)
     
-        Resize vector ro size N
+        Resize vector to global size N
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range)
+    
+        Resize vector with given ownership range
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range, const std::vector<uint>& ghost_indices)
+    
+        Resize vector with given ownership range and with ghost values
 
     .. cpp:function:: uint size() const
     
         Return size of vector
 
+    .. cpp:function:: uint local_size() const
+    
+        Return local size of vector
+
     .. cpp:function:: std::pair<uint, uint> local_range() const
     
         Return ownership range of a vector
 
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
+    .. cpp:function:: bool owns_index(uint i) const
     
-        Get block of values (values may live on any process)
+        Determine whether global vector index is owned by this process
 
     .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
     
@@ -99,6 +115,10 @@ PETScVector.h
     .. cpp:function:: void axpy(double a, const GenericVector& x)
     
         Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: void abs()
+    
+        Replace all entries in the vector by their absolute values
 
     .. cpp:function:: double inner(const GenericVector& v) const
     
@@ -166,8 +186,9 @@ PETScVector.h
 
     .. cpp:function:: void gather(GenericVector& y, const Array<uint>& indices) const
     
-        Gather vector entries into a local vector. If local_indices is
-        0, then a local index array is created such that the order of
-        the values in the return array is the same as the order in
-        global_indices.
+        Gather vector entries into a local vector
+
+    .. cpp:function:: void gather(Array<double>& x, const Array<uint>& indices) const
+    
+        Gather entries into Array x
 

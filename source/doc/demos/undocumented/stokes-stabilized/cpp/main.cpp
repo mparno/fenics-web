@@ -2,7 +2,7 @@
 // Licensed under the GNU LGPL Version 2.1.
 //
 // First added:  2006-02-09
-// Last changed: 2010-09-02
+// Last changed: 2011-01-17
 //
 // This demo solves the Stokes equations, using stabilized
 // first order elements for the velocity and pressure. The
@@ -75,17 +75,15 @@ int main()
   bcs.push_back(&bc0); bcs.push_back(&bc1); bcs.push_back(&bc2);
 
   // Set up PDE
-  CellSize h(mesh);
   Constant f(0.0, 0.0);
   Stokes::BilinearForm a(W, W);
-  a.h = h;
   Stokes::LinearForm L(W);
-  L.f = f; L.h = h;
+  L.f = f;
   VariationalProblem problem(a, L, bcs);
 
   // Solve PDE
   Function w(W);
-  problem.parameters["linear_solver"] = "direct";
+  problem.parameters("solver")["linear_solver"] = "direct";
   problem.solve(w);
 
   // Extract subfunctions

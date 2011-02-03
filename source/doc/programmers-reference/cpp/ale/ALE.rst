@@ -17,11 +17,11 @@ ALE.h
     moving the boundary vertices of a mesh and then interpolating
     the new coordinates for the interior vertices accordingly.
 
-    .. cpp:function:: static void move(Mesh& mesh, BoundaryMesh& new_boundary, dolfin::ALEType method=lagrange)
+    .. cpp:function:: static void move(Mesh& mesh, const BoundaryMesh& new_boundary, dolfin::ALEType method=lagrange)
     
         Move coordinates of mesh according to new boundary coordinates
 
-    .. cpp:function:: static void move(Mesh& mesh0, Mesh& mesh1, dolfin::ALEType method=lagrange)
+    .. cpp:function:: static void move(Mesh& mesh0, const Mesh& mesh1, dolfin::ALEType method=lagrange)
     
         Move coordinates of mesh0 according to mesh1 with common global vertices
 

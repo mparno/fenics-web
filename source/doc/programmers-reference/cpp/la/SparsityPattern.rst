@@ -23,11 +23,11 @@ SparsityPattern.h
     
         Create empty sparsity pattern
 
-    .. cpp:function:: void init(uint rank, const uint* dims)
+    .. cpp:function:: void init(const std::vector<uint>& dims, const std::vector<std::pair<uint, uint> >& ownership_range, const std::vector<const boost::unordered_map<uint, uint>* > off_process_owner)
     
         Initialize sparsity pattern for a generic tensor
 
-    .. cpp:function:: void insert(const uint* num_rows, const uint * const * rows)
+    .. cpp:function:: void insert(const std::vector<const std::vector<uint>* >& entries)
     
         Insert non-zero entries
 
@@ -47,12 +47,12 @@ SparsityPattern.h
     
         Return total number of nonzeros in local_range for dimension 0
 
-    .. cpp:function:: void num_nonzeros_diagonal(uint* num_nonzeros) const
+    .. cpp:function:: void num_nonzeros_diagonal(std::vector<uint>& num_nonzeros) const
     
         Fill array with number of nonzeros for diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for diagonal block
 
-    .. cpp:function:: void num_nonzeros_off_diagonal(uint* num_nonzeros) const
+    .. cpp:function:: void num_nonzeros_off_diagonal(std::vector<uint>& num_nonzeros) const
     
         Fill array with number of nonzeros for off-diagonal block in local_range for dimension 0
         For matrices, fill array with number of nonzeros per local row for off-diagonal block

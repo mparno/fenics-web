@@ -29,11 +29,11 @@ Parameters.h
     
     Parameters may be changed as follows:
     
-      p("gmres_restart") = 50;
+      p["gmres_restart"] = 50;
     
     Parameter values may be retrieved as follows:
     
-      int gmres_restart = p("gmres_restart");
+      int gmres_restart = p["gmres_restart"];
     
     Parameter sets may be nested as follows:
     
@@ -42,7 +42,7 @@ Parameters.h
     
     Nested parameters may then be accessed by
     
-      p["nested_parameters"]("...")
+      p("nested_parameters")["..."]
     
     Parameters may be nested at arbitrary depths.
     

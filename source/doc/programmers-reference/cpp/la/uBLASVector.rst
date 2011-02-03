@@ -61,17 +61,29 @@ uBLASVector.h
     
         Resize vector to size N
 
+    .. cpp:function:: void resize(std::pair<uint, uint> range)
+    
+        Resize vector with given ownership range
+
+    .. cpp:function:: void resize(std::pair<uint, uint> range, const std::vector<uint>& ghost_indices)
+    
+        Resize vector with given ownership range and with ghost values
+
     .. cpp:function:: uint size() const
     
         Return size of vector
+
+    .. cpp:function:: uint local_size() const
+    
+        Return local size of vector
 
     .. cpp:function:: std::pair<uint, uint> local_range() const
     
         Return local ownership range of a vector
 
-    .. cpp:function:: void get(double* block, uint m, const uint* rows) const
+    .. cpp:function:: bool owns_index(uint i) const
     
-        Get block of values
+        Determine whether global vector index is owned by this process
 
     .. cpp:function:: void get_local(double* block, uint m, const uint* rows) const
     
@@ -101,9 +113,17 @@ uBLASVector.h
     
         Gather entries into local vector x
 
+    .. cpp:function:: void gather(Array<double>& x, const Array<uint>& indices) const
+    
+        Gather entries into Array x
+
     .. cpp:function:: void axpy(double a, const GenericVector& x)
     
         Add multiple of given vector (AXPY operation)
+
+    .. cpp:function:: void abs()
+    
+        Replace all entries in the vector by their absolute values
 
     .. cpp:function:: double inner(const GenericVector& x) const
     

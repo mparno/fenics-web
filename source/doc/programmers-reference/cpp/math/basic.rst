@@ -26,3 +26,11 @@ basic.h
     
         Seed random number generator
 
+    .. cpp:function:: bool near(double x, double x0)
+    
+        Return true if x is within DOLFIN_EPS of x0
+
+    .. cpp:function:: bool between(double x0, double x, double x1)
+    
+        Return true if x is between x0 and x1 (inclusive)
+

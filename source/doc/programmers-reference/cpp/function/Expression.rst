@@ -50,6 +50,15 @@ Expression.h
     
         Copy constructor
 
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
+    
+        Note: The reimplementation of eval is needed for the Python interface
+        Evaluate at given point in given cell
+
+    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
+    
+        Evaluate at given point
+
     .. cpp:function:: uint value_rank() const
     
         Return value rank
@@ -58,10 +67,6 @@ Expression.h
     
         Return value dimension for given axis
 
-    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x, const ufc::cell& cell) const
-    
-        Evaluate function for given cell
-
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
     
         Restrict function to local cell (compute expansion coefficients w)
@@ -69,8 +74,4 @@ Expression.h
     .. cpp:function:: void compute_vertex_values(Array<double>& vertex_values, const Mesh& mesh) const
     
         Compute values at all mesh vertices
-
-    .. cpp:function:: void eval(Array<double>& values, const Array<double>& x) const
-    
-        Evaluate expression, must be overloaded by user (simple version)
 

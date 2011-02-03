@@ -2,7 +2,7 @@
 // Licensed under the GNU LGPL Version 2.1.
 //
 // First added:  2006-02-09
-// Last changed: 2008-12-12
+// Last changed: 2011-01-17
 //
 // This demo solves the time-dependent advection-diffusion equation
 // by a least-squares stabilized cG(1)cG(1) method. The velocity field
@@ -18,10 +18,6 @@ using namespace dolfin;
 
 int main(int argc, char *argv[])
 {
-  //parameters["linear_algebra_backend"] = "uBLAS";
-  parameters["linear_algebra_backend"] = "PETSc";
-  //parameters["linear_algebra_backend"] = "Epetra";
-
   // Read mesh
   Mesh mesh("../mesh.xml.gz");
   mesh.init();
@@ -69,7 +65,7 @@ int main(int argc, char *argv[])
   lu.parameters["reuse_factorization"] = true;
 
   // Parameters for time-stepping
-  double T = 20.0;
+  double T = 2.0;
   const double k = 0.05;
   double t = k;
 
@@ -94,7 +90,7 @@ int main(int argc, char *argv[])
     p = t / T;
     t += k;
   }
-  std::cout << "Test " << u.vector().norm("l2") << std::endl;
+  std::cout << "Test vector norm: " << u.vector().norm("l2") << std::endl;
 
   // Plot solution
   plot(u);
