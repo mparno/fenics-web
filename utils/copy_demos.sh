@@ -9,10 +9,10 @@
 # Licensed under the GNU GPL version 3 or any later version
 #
 # First added:  2010-09-01
-# Last changed: 2010-09-01
+# Last changed: 2011-02-03
 
 # Set destination directory
-DEST_DIR="source/demos"
+DEST_DIR="source/doc/demos"
 
 # Set directories that should be copied
 DEMO_DIRS="la pde undocumented"
@@ -51,9 +51,9 @@ echo
 echo "------------------------------------------------------------"
 echo "All demos copied from DOLFIN. The following changes were made:"
 echo
-bzr status source/demos
+bzr status source/doc/demos
 echo
 echo "You may wish to add all files to the current repository by"
 echo "running the command"
 echo
-echo "  bzr add source/demos"
+echo "  bzr add source/doc/demos"
