@@ -8,9 +8,9 @@ Installation
 
 Obtaining and installing FEniCS have never been easier. Packages are
 available for Debian/Ubuntu, Mac OS X and Windows users, and we provide
-a framework (`Dorsal <http://www.fenics.org/dorsal/>`_) for simple
-builds of FEniCS on a multitude of platforms. It is also possible to
-download source tarballs for all components. For information on
+a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for
+simple builds of FEniCS on a multitude of platforms. It is also possible
+to download source tarballs for all components. For information on
 accessing the development repositories, see :ref:`developer`.
 
 
@@ -182,22 +182,21 @@ Manual installation from source
 
 You can also build and install FEniCS components manually from the source code.
 You will need to install the Python packages
-`FFC <http://www.fenics.org/ffc>`_,
-`FIAT <http://www.fenics.org/fiat>`_,
-`Instant <http://www.fenics.org/instant>`_,
-`Viper <http://www.fenics.org/fenics-viper>`_, and
-`UFL <http://www.fenics.org/ufl>`_.
+`FFC <http://launchpad.net/ffc>`_,
+`FIAT <http://launchpad.net/fiat>`_,
+`Instant <http://launchpad.net/instant>`_,
+`Viper <http://launchpad.net/fenics-viper>`_, and
+`UFL <http://launchpad.net/ufl>`_.
 You will also need to install the C++/Python packages
-`UFC <http://www.fenics.org/ufc>`_ and
-`DOLFIN <http://www.fenics.org/dolfin>`_.
+`UFC <http://launchpad.net/ufc>`_ and
+`DOLFIN <http://launchpad.net/dolfin>`_.
 Instructions for how to install these packages are given below.
 
 Python packages (FFC, FIAT, Instant, Viper and UFL)
 ===================================================
 
-#. First, `download the source code <http://www.fenics.org/wiki/Download#Download_the_source_code>`_
-   for FFC, FIAT, Instant, Viper and UFL. Then for each of these packages,
-   follow the instructions below.
+#. First, download the source code for FFC, FIAT, Instant, Viper and
+   UFL. Then for each of these packages, follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following command::
 
