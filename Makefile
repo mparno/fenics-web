@@ -35,6 +35,7 @@ all:	clean latex pdf html
 
 update:
 	scripts/generate_programmers_reference_cpp
+	scripts/copy_demos
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
