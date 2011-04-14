@@ -38,7 +38,6 @@ for DEMO_DIR in $DEMO_DIRS; do
         --exclude '*.pvd' \
         --exclude '*.log' \
         --exclude '*.bin' \
-        --exclude CMakeLists.txt \
         --exclude CMakeFiles \
         --exclude cmake_install.cmake \
         --exclude CMakeCache.txt \
