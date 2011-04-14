@@ -6,7 +6,7 @@
 DOLFIN documentation
 ####################
 
-DOLFIN docs
+This page will point to the DOLFIN docs
 
 .. toctree::
     :hidden:

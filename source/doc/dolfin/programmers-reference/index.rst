@@ -1,9 +1,9 @@
-.. The programmer's reference for FEniCS goes here.
+.. The programmer's reference for DOLFIN goes here.
 
 .. _programmers_reference_index:
 
 #############################
-FEniCS programmer's reference
+DOLFIN programmer's reference
 #############################
 
 The FEniCS programmer's reference documents the FEniCS

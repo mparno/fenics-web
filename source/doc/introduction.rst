@@ -35,6 +35,7 @@ are very welcome. Please see :ref:`contributing` for how to proceed.
     :hidden:
 
     tutorial/index
-    dolfin/introduction
+    dolfin/index
+    ufl/index
     styleguides/index
 
