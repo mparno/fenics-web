@@ -9,7 +9,8 @@ UFL documentation
 This page will point to the UFL docs
 
 .. toctree::
-    :hidden:
+    :maxdepth: 20
+    :numbered:
 
     user/index
 
