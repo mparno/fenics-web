@@ -11,6 +11,6 @@ This page will point to the DOLFIN docs
 .. toctree::
     :hidden:
 
-    demos/index
-    programmers-reference/index
+    Demos <demos/index>
+    Programmers reference <programmers-reference/index>
 
