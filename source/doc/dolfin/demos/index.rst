@@ -3,7 +3,7 @@
 .. _demos_index:
 
 ############
-FEniCS demos
+DOLFIN demos
 ############
 
 A simple way to learn how to use FEniCS is to study the collection of
