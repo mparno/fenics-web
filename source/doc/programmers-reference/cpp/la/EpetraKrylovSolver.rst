@@ -30,11 +30,15 @@ EpetraKrylovSolver.h
 
     .. cpp:function:: void set_operator(const GenericMatrix& A)
     
-        Solve the operator (matrix)
+        Set the operator (matrix)
 
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
-        Solve the operator (matrix)
+        Set the operator (matrix)
+
+    .. cpp:function:: const GenericMatrix& get_operator() const
+    
+        Get the operator (matrix)
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     

@@ -26,6 +26,14 @@ Face.h
     
         Calculate the area of the face (triangle)
 
+    .. cpp:function:: double normal(uint i) const
+    
+        Compute component i of the normal to the face
+
+    .. cpp:function:: Point normal() const
+    
+        Compute normal to the face
+
 .. cpp:class:: FaceIterator
 
     *Parent class*

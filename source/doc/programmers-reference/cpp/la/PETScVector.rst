@@ -10,6 +10,8 @@ PETScVector.h
     The documentation on this page was automatically extracted from
     the DOLFIN C++ code and may need to be edited or expanded.
 
+.. cpp:class:: PETScVectorDeleter
+
 .. cpp:class:: PETScVector
 
     *Parent class*
@@ -171,6 +173,10 @@ PETScVector.h
     .. cpp:function:: const PETScVector& operator= (double a)
     
         Assignment operator
+
+    .. cpp:function:: void reset()
+    
+        Reset data and PETSc vector object
 
     .. cpp:function:: LinearAlgebraFactory& factory() const
     

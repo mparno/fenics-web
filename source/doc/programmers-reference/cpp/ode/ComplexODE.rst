@@ -68,23 +68,23 @@ ComplexODE.h
     
         Update ODE, return false to stop (optional)
 
-    .. cpp:function:: void u0(real* u)
+    .. cpp:function:: void u0(Array<real>& u)
     
         Return initial value for real-valued ODE
 
-    .. cpp:function:: real f(const real* u, real t, uint i)
+    .. cpp:function:: real f(const Array<real>& u, real t, uint i)
     
         Return right-hand side for real-valued ODE
 
-    .. cpp:function:: void f(const real* u, real t, real* y)
+    .. cpp:function:: void f(const Array<real>& u, real t, Array<real>& y)
     
         Evaluate right-hand side for real-valued ODE
 
-    .. cpp:function:: void M(const real* x, real* y, const real* u, real t)
+    .. cpp:function:: void M(const Array<real>& x, Array<real>& y, const Array<real>& u, real t)
     
         Compute product y = Mx for real-valued ODE
 
-    .. cpp:function:: void J(const real* x, real* y, const real* u, real t)
+    .. cpp:function:: void J(const Array<real>& x, Array<real>& y, const Array<real>& u, real t)
     
         Compute product y = Jx for real-valued ODE
 
@@ -92,7 +92,7 @@ ComplexODE.h
     
         Return time step for real-valued ODE
 
-    .. cpp:function:: bool update(const real* u, real t, bool end)
+    .. cpp:function:: bool update(const Array<real>& u, real t, bool end)
     
         Update for real-valued ODE
 

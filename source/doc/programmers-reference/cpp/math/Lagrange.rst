@@ -24,10 +24,13 @@ Lagrange.h
       p.set(0, 0.0);
       p.set(1, 1.0);
     
+    It is the callers reponsibility that the points are distinct.
+    
     This creates a Lagrange polynomial (actually two Lagrange polynomials):
     
       p(0,x) = 1 - x   (one at x = 0, zero at x = 1)
       p(1,x) = x       (zero at x = 0, one at x = 1)
+    
 
     .. cpp:function:: Lagrange(unsigned int q)
     

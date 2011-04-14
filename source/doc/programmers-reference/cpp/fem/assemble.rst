@@ -18,7 +18,7 @@ assemble.h
     
         Assemble tensor on sub domain
 
-    .. cpp:function:: void assemble(GenericTensor& A, const Form& a, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
+    .. cpp:function:: void assemble(GenericTensor& A, const Form& a, const MeshFunction<unsigned int>* cell_domains, const MeshFunction<unsigned int>* exterior_facet_domains, const MeshFunction<unsigned int>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
     
         Assemble tensor on sub domains
 
@@ -34,7 +34,7 @@ assemble.h
     
         Assemble system (A, b) and apply Dirichlet boundary conditions
 
-    .. cpp:function:: void assemble_system(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, const std::vector<const DirichletBC*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, const GenericVector* x0, bool reset_sparsities=true, bool add_values=false)
+    .. cpp:function:: void assemble_system(GenericMatrix& A, GenericVector& b, const Form& a, const Form& L, const std::vector<const DirichletBC*>& bcs, const MeshFunction<unsigned int>* cell_domains, const MeshFunction<unsigned int>* exterior_facet_domains, const MeshFunction<unsigned int>* interior_facet_domains, const GenericVector* x0, bool reset_sparsities=true, bool add_values=false)
     
         Assemble system (A, b) on sub domains and apply Dirichlet boundary conditions
 
@@ -46,7 +46,7 @@ assemble.h
     
         Assemble scalar on sub domain
 
-    .. cpp:function:: double assemble(const Form& a, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
+    .. cpp:function:: double assemble(const Form& a, const MeshFunction<unsigned int>* cell_domains, const MeshFunction<unsigned int>* exterior_facet_domains, const MeshFunction<unsigned int>* interior_facet_domains, bool reset_sparsity=true, bool add_values=false)
     
         Assemble scalar on sub domains
 

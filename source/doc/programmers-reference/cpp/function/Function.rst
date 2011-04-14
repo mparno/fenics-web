@@ -127,6 +127,10 @@ Function.h
     
         Evaluate function for given data
 
+    .. cpp:function:: void non_matching_eval(Array<double>& values, const Array<double>& x, const ufc::cell& ufc_cell) const
+    
+        Evaluate function for given data
+
     .. cpp:function:: void restrict(double* w, const FiniteElement& element, const Cell& dolfin_cell, const ufc::cell& ufc_cell) const
     
         Restrict function to local cell (compute expansion coefficients w)

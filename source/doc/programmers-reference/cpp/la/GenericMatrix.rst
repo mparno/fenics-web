@@ -74,6 +74,12 @@ GenericMatrix.h
     
         Return informal string representation (pretty-print)
 
+    .. cpp:function:: void resize(GenericVector& y, uint dim) const = 0
+    
+        Resize vector y such that is it compatible with matrix for
+        multuplication Ax = b (dim = 0 -> b, dim = 1 -> x) In parallel
+        case, size and layout are important.
+
     .. cpp:function:: void get(double* block, uint m, const uint* rows, uint n, const uint* cols) const = 0
     
         Get block of values

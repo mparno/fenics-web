@@ -26,9 +26,13 @@ Edge.h
     
         Create edge from mesh entity
 
-    .. cpp:function:: double length()
+    .. cpp:function:: double length() const
     
         Compute Euclidean length of edge
+
+    .. cpp:function:: double dot(const Edge& edge) const
+    
+        Compute dot product between edge and other edge
 
 .. cpp:class:: EdgeIterator
 

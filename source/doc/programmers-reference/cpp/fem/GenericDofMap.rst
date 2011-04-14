@@ -18,9 +18,9 @@ GenericDofMap.h
         
     This class provides a generic interface for dof maps
 
-    .. cpp:function:: std::string signature() const = 0
+    .. cpp:function:: bool is_view() const = 0
     
-        Return a string identifying the dof map
+        True if dof map is a view into another map (is a sub-dofmap)
 
     .. cpp:function:: bool needs_mesh_entities(unsigned int d) const = 0
     
@@ -30,16 +30,12 @@ GenericDofMap.h
     
         Return the dimension of the global finite element function space
 
-    .. cpp:function:: unsigned int local_dimension() const = 0
-    
-        Return the dimension of the local (process) finite element function space
-
-    .. cpp:function:: unsigned int dimension(uint index) const = 0
+    .. cpp:function:: unsigned int cell_dimension(uint index) const = 0
     
         Return the dimension of the local finite element function space on a
         cell
 
-    .. cpp:function:: unsigned int max_local_dimension() const = 0
+    .. cpp:function:: unsigned int max_cell_dimension() const = 0
     
         Return the maximum dimension of the local finite element function space
 
@@ -75,13 +71,17 @@ GenericDofMap.h
     
         Tabulate the coordinates of all dofs on a cell (DOLFIN cell version)
 
-    .. cpp:function:: GenericDofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& dolfin_mesh) const = 0
+    .. cpp:function:: GenericDofMap* copy(const Mesh& mesh) const = 0
+    
+        Create a copy of the dof map
+
+    .. cpp:function:: GenericDofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& mesh) const = 0
     
         Extract sub dofmap component
 
-    .. cpp:function:: GenericDofMap* collapse(std::map<uint, uint>& collapsed_map, const Mesh& dolfin_mesh) const = 0
+    .. cpp:function:: GenericDofMap* collapse(boost::unordered_map<uint, uint>& collapsed_map, const Mesh& mesh) const = 0
     
-        "Collapse" a sub dofmap
+        Create a "collapsed" a dofmap (collapses from a sub-dofmap view)
 
     .. cpp:function:: boost::unordered_set<dolfin::uint> dofs() const = 0
     

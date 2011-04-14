@@ -33,7 +33,7 @@ SubDomain.h
     
         Snap coordinate to boundary of sub domain
 
-    .. cpp:function:: void mark(MeshFunction<uint>& sub_domains, uint sub_domain) const
+    .. cpp:function:: void mark(MeshFunction<unsigned int>& sub_domains, unsigned int sub_domain) const
     
         Set sub domain markers (uint) for given subdomain
 

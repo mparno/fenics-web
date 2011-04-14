@@ -20,6 +20,7 @@ DOLFIN ``fem`` library
     GenericDofMap
     OpenMpAssembler
     PeriodicBC
+    PointSource
     SparsityPatternBuilder
     SystemAssembler
     VariationalProblem

@@ -17,28 +17,33 @@ DofMap.h
         * :cpp:class:`GenericDofMap`
         
     This class handles the mapping of degrees of freedom. It builds
-    a dof map based on a ufc::dof_map on a specific mesh. It will
-    reorder the dofs when running in parallel.
-    
-    If ufc_offset != 0, then the dof map provides a view into a
-    larger dof map. A dof map which is a view, can be 'collapsed'
-    such that the dof indices are contiguous.
+    a dof map based on a ufc::dofmap on a specific mesh. It will
+    reorder the dofs when running in parallel. Sub-dofmaps, both
+    views and copies, are supported.
 
-    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, Mesh& dolfin_mesh)
+    .. cpp:function:: DofMap(boost::shared_ptr<const ufc::dofmap> ufc_dofmap, Mesh& mesh)
     
-        Create dof map on mesh
+        Create dof map on mesh (data is not shared)
 
-    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, const Mesh& dolfin_mesh)
+    .. cpp:function:: DofMap(boost::shared_ptr<const ufc::dofmap> ufc_dofmap, const Mesh& mesh)
     
-        Create dof map on mesh (const mesh version)
+        Create dof map on mesh ((data is not shared), const mesh version)
 
-    .. cpp:function:: DofMap(boost::shared_ptr<ufc::dof_map> ufc_dofmap, const UFCMesh& ufc_mesh)
+    .. cpp:function:: DofMap(const DofMap& dofmap)
     
-        Create dof map on mesh with a std::vector dof map
+        Copy constructor
 
-    .. cpp:function:: std::string signature() const
+    .. cpp:function:: DofMap(const DofMap& parent_dofmap, const std::vector<uint>& component, const Mesh& mesh, bool distributed)
     
-        Return a string identifying the dof map
+        Create a sub-dofmap (a view) from parent_dofmap
+
+    .. cpp:function:: DofMap(boost::unordered_map<uint, uint>& collapsed_map, const DofMap& dofmap_view, const Mesh& mesh, bool distributed)
+    
+        Create a collapsed dofmap from parent_dofmap
+
+    .. cpp:function:: bool is_view() const
+    
+        True if dof map is a view into another map (is a sub-dofmap)
 
     .. cpp:function:: bool needs_mesh_entities(unsigned int d) const
     
@@ -48,7 +53,7 @@ DofMap.h
     
         Return the dimension of the global finite element function space
 
-    .. cpp:function:: unsigned int max_local_dimension() const
+    .. cpp:function:: unsigned int max_cell_dimension() const
     
         Return the maximum dimension of the local finite element function space
 
@@ -85,13 +90,17 @@ DofMap.h
     
         Tabulate the coordinates of all dofs on a cell (DOLFIN cell version)
 
-    .. cpp:function:: DofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& dolfin_mesh) const
+    .. cpp:function:: DofMap* copy(const Mesh& mesh) const
+    
+        Create a copy of the dof map
+
+    .. cpp:function:: DofMap* extract_sub_dofmap(const std::vector<uint>& component, const Mesh& mesh) const
     
         Extract sub dofmap component
 
-    .. cpp:function:: DofMap* collapse(std::map<uint, uint>& collapsed_map, const Mesh& dolfin_mesh) const
+    .. cpp:function:: DofMap* collapse(boost::unordered_map<uint, uint>& collapsed_map, const Mesh& mesh) const
     
-        "Collapse" a sub dofmap
+        Create a "collapsed" dofmap (collapses a sub-dofmap)
 
     .. cpp:function:: boost::unordered_set<dolfin::uint> dofs() const
     
@@ -100,12 +109,4 @@ DofMap.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
-
-    .. cpp:function:: boost::shared_ptr<const ufc::dof_map> ufc_dofmap() const
-    
-        Return ufc::dof_map
-
-    .. cpp:function:: static void init_ufc_dofmap(ufc::dof_map& dofmap, const ufc::mesh ufc_mesh, const Mesh& dolfin_mesh)
-    
-        Initialize the UFC dofmap
 

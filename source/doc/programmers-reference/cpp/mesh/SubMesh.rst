@@ -25,7 +25,7 @@ SubMesh.h
     
         Create subset of given mesh marked by sub domain
 
-    .. cpp:function:: SubMesh(const Mesh& mesh, const MeshFunction<uint>& sub_domains, uint sub_domain)
+    .. cpp:function:: SubMesh(const Mesh& mesh, const MeshFunction<unsigned int>& sub_domains, uint sub_domain)
     
         Create subset of given mesh marked by mesh function
 

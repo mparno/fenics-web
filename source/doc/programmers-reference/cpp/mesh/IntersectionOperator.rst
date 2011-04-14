@@ -68,7 +68,7 @@ IntersectionOperator.h
 
     .. cpp:function:: Point closest_point(const Point & point) const
     
-        Computes the point inside the mesh which are closest to the point query.
+        Computes the point inside the mesh which is closest to the point query.
 
     .. cpp:function:: dolfin::uint closest_cell(const Point & point) const
     
@@ -77,23 +77,14 @@ IntersectionOperator.h
     .. cpp:function:: std::pair<Point,uint> closest_point_and_cell(const Point & point) const
     
         Computes the point inside the mesh and the corresponding cell index
-        which are closest to the point query.
+        that are closest to the point query.
 
     .. cpp:function:: void reset_kernel(const std::string& kernel_type  = "SimpleCartesian")
     
-        Rebuilds the underlying search structure from scratch and uses the kernel kernel_type
-        underlying CGAL Geometry kernel.
+        Rebuilds the underlying search structure from scratch and uses
+        the kernel kernel_type underlying CGAL Geometry kernel.
 
     .. cpp:function:: void clear()
     
         Clears search structure. Should be used if the mesh has changed
-
-    .. cpp:function:: const IntersectionOperatorImplementation& rImpl() const
-    
-        Helper function to introduce lazy initialization.
-
-    .. cpp:function:: IntersectionOperatorImplementation* create_intersection_operator(boost::shared_ptr<const Mesh> mesh, const std::string & kernel_type)
-    
-        Factory function to create the dimension dependent intersectionoperator
-        implementation.
 

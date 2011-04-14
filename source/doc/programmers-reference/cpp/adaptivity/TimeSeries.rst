@@ -39,7 +39,7 @@ TimeSeries.h
     
         Store mesh at given time
 
-    .. cpp:function:: void retrieve(GenericVector& vector, double t) const
+    .. cpp:function:: void retrieve(GenericVector& vector, double t, bool interpolate=true) const
     
         Retrieve vector at given time
 
@@ -70,4 +70,8 @@ TimeSeries.h
     .. cpp:function:: std::string str(bool verbose) const
     
         Return informal string representation (pretty-print)
+
+    .. cpp:function:: static Parameters default_parameters()
+    
+        Default parameter values
 

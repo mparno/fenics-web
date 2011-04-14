@@ -22,10 +22,19 @@ Facet.h
     
         Constructor
 
-    .. cpp:function:: bool interior() const
+    .. cpp:function:: double normal(uint i) const
     
-        Determine whether or not facet is an interior facet. This is 'relative'
-        to the given partition of the mesh if the mesh is distributed
+        Compute component i of the normal to the facet
+
+    .. cpp:function:: Point normal() const
+    
+        Compute normal to the facet
+
+    .. cpp:function:: bool exterior() const
+    
+        Return true if facet is an exterior facet (relative to global mesh,
+        so this function will return false for facets on partition boundaries)
+        Facet connectivity must be initialized before calling this function.
 
     .. cpp:function:: std::pair<const Cell, const Cell> adjacent_cells(const MeshFunction<uint>* facet_orientation=0) const
     

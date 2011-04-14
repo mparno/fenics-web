@@ -20,11 +20,15 @@ GenericLinearSolver.h
 
     .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
     
-        Solve the operator (matrix)
+        Set operator (matrix)
 
     .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
     
-        Solve the operator (matrix) and preconditioner matrix
+        Set operator (matrix) and preconditioner matrix
+
+    .. cpp:function:: const GenericMatrix& get_operator() const = 0
+    
+        Get operator (matrix)
 
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     

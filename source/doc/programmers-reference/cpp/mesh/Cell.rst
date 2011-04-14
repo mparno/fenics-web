@@ -54,11 +54,11 @@ Cell.h
     
         Compute the area/length of given facet with respect to the cell
 
-    .. cpp:function:: void order(MeshFunction<uint>* global_vertex_indices)
+    .. cpp:function:: void order(const MeshFunction<uint>* global_vertex_indices)
     
         Order entities locally
 
-    .. cpp:function:: bool ordered(MeshFunction<uint>* global_vertex_indices)
+    .. cpp:function:: bool ordered(const MeshFunction<uint>* global_vertex_indices) const
     
         Check if entities are ordered
 

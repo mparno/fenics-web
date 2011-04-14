@@ -16,7 +16,7 @@ Quadrature.h
     
         * :cpp:class:`Variable`
         
-    .. cpp:function:: Quadrature(unsigned int n)
+    .. cpp:function:: Quadrature(unsigned int n, real m=1.0)
     
         Constructor
 

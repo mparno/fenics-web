@@ -116,7 +116,7 @@ Point.h
     
         Compute dot product with given vector
 
-    .. cpp:function:: std::string str(bool verbose) const
+    .. cpp:function:: std::string str(bool verbose=false) const
     
         Return informal string representation (pretty-print)
 

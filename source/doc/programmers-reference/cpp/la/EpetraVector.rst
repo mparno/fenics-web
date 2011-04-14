@@ -40,9 +40,9 @@ EpetraVector.h
     
         Create vector view from given Epetra_FEVector pointer
 
-    .. cpp:function:: explicit EpetraVector(const Epetra_Map& map)
+    .. cpp:function:: explicit EpetraVector(const Epetra_BlockMap& map)
     
-        Create vector from given Epetra_Map
+        Create vector from given Epetra_BlockMap
 
     .. cpp:function:: EpetraVector* copy() const
     
@@ -180,7 +180,7 @@ EpetraVector.h
     
         Return linear algebra backend factory
 
-    .. cpp:function:: void reset(const Epetra_Map& map)
+    .. cpp:function:: void reset(const Epetra_BlockMap& map)
     
         Reset Epetra_FEVector
 

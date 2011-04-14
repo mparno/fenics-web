@@ -92,7 +92,7 @@ CellType.h
     
         Order entities locally
 
-    .. cpp:function:: bool ordered(const Cell& cell, MeshFunction<uint>* global_vertex_indices) const
+    .. cpp:function:: bool ordered(const Cell& cell, const MeshFunction<uint>* global_vertex_indices) const
     
         Check if entities are ordered
 

@@ -145,6 +145,10 @@ uBLASVector.h
     
         Return sum of values of vector
 
+    .. cpp:function:: double sum(const Array<uint>& rows) const
+    
+        Return sum of selected rows in vector. Repeated entries are only summed once.
+
     .. cpp:function:: const uBLASVector& operator*= (double a)
     
         Multiply vector by given number

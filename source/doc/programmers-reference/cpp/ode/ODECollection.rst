@@ -35,23 +35,23 @@ ODECollection.h
     
         Solve ODE collection on [t0, t1]
 
-    .. cpp:function:: void set_state(uint system, const real* u)
+    .. cpp:function:: void set_state(uint system, const Array<real>& u)
     
         Set state for given ODE system
 
-    .. cpp:function:: void set_state(const real* u)
+    .. cpp:function:: void set_state(const Array<real>& u)
     
         Set states for all ODE systems
 
-    .. cpp:function:: void get_state(uint system, real* u)
+    .. cpp:function:: void get_state(uint system, Array<real>& u)
     
         Get state for given ODE system
 
-    .. cpp:function:: void get_state(real* u)
+    .. cpp:function:: void get_state(Array<real>& u)
     
         Get states for all ODE systems
 
-    .. cpp:function:: void update(real* u, real t, uint system)
+    .. cpp:function:: void update(Array<real>& u, real t, uint system)
     
         Optional user-defined update, called between solves
 

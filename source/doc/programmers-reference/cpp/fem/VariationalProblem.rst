@@ -26,9 +26,7 @@ VariationalProblem.h
     where V_h is the trial space and V_h' is the test space.
     
     The variational problem is specified in terms of a pair of
-    _Form_s and, optionally, a set of _BoundaryCondition_s and
-    _MeshFunction_s that specify any subdomains involved in the
-    definition of the _Form_s.
+    _Form_s and, optionally, a set of _BoundaryCondition_s.
     
     The pair of forms may either specify a nonlinear problem
     
@@ -62,33 +60,27 @@ VariationalProblem.h
     
         Define variational problem with a list of Dirichlet boundary conditions
 
-    .. cpp:function:: VariationalProblem(const Form& form_0, const Form& form_1, const std::vector<const BoundaryCondition*>& bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains)
+    .. cpp:function:: VariationalProblem(boost::shared_ptr<const Form> form_0, boost::shared_ptr<const Form> form_1, std::vector<boost::shared_ptr<const BoundaryCondition> > bcs)
     
         Define variational problem with a list of Dirichlet boundary conditions
-        and subdomains for cells, exterior and interior facets of the mesh
 
-    .. cpp:function:: VariationalProblem(boost::shared_ptr<const Form> form_0, boost::shared_ptr<const Form> form_1, std::vector<boost::shared_ptr<const BoundaryCondition> > bcs, const MeshFunction<uint>* cell_domains, const MeshFunction<uint>* exterior_facet_domains, const MeshFunction<uint>* interior_facet_domains)
-    
-        Define variational problem with a list of Dirichlet boundary conditions
-        and subdomains for cells, exterior and interior facets of the mesh
-
-    .. cpp:function:: void solve(Function& u)
+    .. cpp:function:: void solve(Function& u) const
     
         Solve variational problem
 
-    .. cpp:function:: void solve(Function& u0, Function& u1)
+    .. cpp:function:: void solve(Function& u0, Function& u1) const
     
         Solve variational problem and extract sub functions
 
-    .. cpp:function:: void solve(Function& u0, Function& u1, Function& u2)
+    .. cpp:function:: void solve(Function& u0, Function& u1, Function& u2) const
     
         Solve variational problem and extract sub functions
 
-    .. cpp:function:: void solve(Function& u, double tol, GoalFunctional& M)
+    .. cpp:function:: void solve(Function& u, const double tol, GoalFunctional& M) const
     
         Solve variational problem adaptively to within given tolerance
 
-    .. cpp:function:: void solve(Function& u, double tol, Form& M, ErrorControl& ec)
+    .. cpp:function:: void solve(Function& u, const double tol, Form& M, ErrorControl& ec) const
     
         Solve variational problem adaptively to within given tolerance
 
@@ -135,18 +127,6 @@ VariationalProblem.h
     .. cpp:function:: const std::vector<boost::shared_ptr<const BoundaryCondition> > bcs_shared_ptr() const
     
         Return the list of boundary conditions (shared_ptr version)
-
-    .. cpp:function:: const MeshFunction<uint>* cell_domains() const
-    
-        Return the cell domains
-
-    .. cpp:function:: const MeshFunction<uint>* exterior_facet_domains() const
-    
-        Return the exterior facet domains
-
-    .. cpp:function:: const MeshFunction<uint>* interior_facet_domains() const
-    
-        Return the interior facet domains
 
     .. cpp:function:: static Parameters default_parameters()
     

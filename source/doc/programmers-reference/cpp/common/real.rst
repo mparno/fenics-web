@@ -18,10 +18,6 @@ real.h
     
         Compute pi
 
-    .. cpp:function:: void real_mat_exp(uint n, real* res, const real* A, const uint p=6)
-    
-        Compute matrix exponential using Pade approximation og degree p
-
     .. cpp:function:: real real_exp(real x)
     
         Exponential function (note: not full precision!)

@@ -30,6 +30,10 @@ LinearSolver.h
     
         Set the operator (matrix) and preconitioner matrix
 
+    .. cpp:function:: const GenericMatrix& get_operator() const
+    
+        Get the operator (matrix)
+
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b

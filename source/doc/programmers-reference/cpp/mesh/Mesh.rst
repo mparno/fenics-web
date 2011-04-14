@@ -35,7 +35,7 @@ Mesh.h
     +--------+-----------+-------------+
     | Facet  |           |      1      |
     +--------+-----------+-------------+
-    | Cell   |           |        0    |
+    | Cell   |           |      0      |
     +--------+-----------+-------------+
     
     When working with mesh iterators, all entities and connectivity
@@ -407,11 +407,11 @@ Mesh.h
                 Flag to turn on harmonics smoothing, default
                 value is true.
 
-    .. cpp:function:: const MeshFunction<uint>& color(std::string coloring_type) const
+    .. cpp:function:: const MeshFunction<unsigned int>& color(std::string coloring_type) const
     
         Color the cells of the mesh such that no two neighboring cells
         share the same color. A colored mesh keeps a
-        CellFunction<uint> named "cell colors" as mesh data which
+        CellFunction<unsigned int> named "cell colors" as mesh data which
         holds the colors of the mesh.
         
         *Arguments*
@@ -421,23 +421,23 @@ Mesh.h
                 "facet".
         
         *Returns*
-            MeshFunction<uint>
+            MeshFunction<unsigned int>
                 The colors as a mesh function over the cells of the mesh.
 
-    .. cpp:function:: const MeshFunction<uint>& color(std::vector<uint> coloring_type) const
+    .. cpp:function:: const MeshFunction<unsigned int>& color(std::vector<unsigned int> coloring_type) const
     
         Color the cells of the mesh such that no two neighboring cells
         share the same color. A colored mesh keeps a
-        CellFunction<uint> named "cell colors" as mesh data which
+        CellFunction<unsigned int> named "cell colors" as mesh data which
         holds the colors of the mesh.
         
         *Arguments*
-            coloring_type (std::vector<uint>)
+            coloring_type (std::vector<unsigned int>)
                 Coloring type given as list of topological dimensions,
                 specifying what relation makes two mesh entinties neighbors.
         
         *Returns*
-            MeshFunction<uint>
+            MeshFunction<unsigned int>
                 The colors as a mesh function over entities of the mesh.
 
     .. cpp:function:: void all_intersected_entities(const Point& point, uint_set& ids_result) const
@@ -560,7 +560,7 @@ Mesh.h
         
                 1
 
-    .. cpp:function:: std::pair<Point,dolfin::uint> closest_point_and_cell(const Point& point) const
+    .. cpp:function:: std::pair<Point, dolfin::uint> closest_point_and_cell(const Point& point) const
     
         Computes the point inside the mesh and the corresponding cell
         index which are closest to the point query.

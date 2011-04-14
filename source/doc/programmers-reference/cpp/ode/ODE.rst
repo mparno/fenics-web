@@ -66,31 +66,31 @@ ODE.h
     
         Create an ODE of size N with final time T
 
-    .. cpp:function:: void u0(real* u) = 0
+    .. cpp:function:: void u0(Array<real>& u) = 0
     
         Set initial values
 
-    .. cpp:function:: void f(const real* u, real t, real* y)
+    .. cpp:function:: void f(const Array<real>& u, real t, Array<real>& y)
     
         Evaluate right-hand side y = f(u, t), mono-adaptive version (default, optional)
 
-    .. cpp:function:: real f(const real* u, real t, uint i)
+    .. cpp:function:: real f(const Array<real>& u, real t, uint i)
     
         Evaluate right-hand side f_i(u, t), multi-adaptive version (optional)
 
-    .. cpp:function:: void M(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void M(const Array<real>& dx, Array<real>& dy, const Array<real>& u, real t)
     
         Compute product dy = M dx for implicit system (optional)
 
-    .. cpp:function:: void J(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void J(const Array<real>& dx, Array<real>& dy, const Array<real>& u, real t)
     
         Compute product dy = J dx for Jacobian J (optional)
 
-    .. cpp:function:: void JT(const real* dx, real* dy, const real* u, real t)
+    .. cpp:function:: void JT(const Array<real>& dx, Array<real>& dy, const Array<real>& u, real t)
     
         Compute product dy = tranpose(J) dx for Jacobian J (optional, for dual problem)
 
-    .. cpp:function:: real dfdu(const real* u, real t, uint i, uint j)
+    .. cpp:function:: real dfdu(const Array<real>& u, real t, uint i, uint j)
     
         Compute entry of Jacobian (optional)
 
@@ -102,7 +102,7 @@ ODE.h
     
         Time step to use for a given component at a given time t (optional)
 
-    .. cpp:function:: bool update(const real* u, real t, bool end)
+    .. cpp:function:: bool update(const Array<real>& u, real t, bool end)
     
         Update ODE, return false to stop (optional)
 
@@ -174,11 +174,11 @@ ODE.h
         Compute stability factors as function of T (including solving the dual problem).
         The stability factor accounts for stability wrt errors in initial data.
 
-    .. cpp:function:: void set_state(const real* u)
+    .. cpp:function:: void set_state(const Array<real>& u)
     
         Set state for ODE (only available during interval stepping)
 
-    .. cpp:function:: void get_state(real* u)
+    .. cpp:function:: void get_state(Array<real>& u)
     
         Get state for ODE (only available during interval stepping)
 

@@ -14,7 +14,7 @@ DirichletBC.h
 
     *Parent class*
     
-        * :cpp:class:`BoundaryCondition`
+        * :cpp:class:`BoundaryCondition,`
         
     This class specifies the interface for setting (strong)
     Dirichlet boundary conditions for partial differential
@@ -67,11 +67,11 @@ DirichletBC.h
     
         Create boundary condition for subdomain
 
-    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
+    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const MeshFunction<unsigned int>& sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
 
-    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const MeshFunction<uint>& sub_domains, uint sub_domain, std::string method="topological")
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const MeshFunction<unsigned int>& sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
 
@@ -136,19 +136,23 @@ DirichletBC.h
         update the RHS to reflect the changes. Useful for non-diagonals.
         The diag_val parameter would normally be -1, 0 or 1.
 
-    .. cpp:function:: const std::vector<std::pair<uint, uint> >& markers()
+    .. cpp:function:: const std::vector<std::pair<uint, uint> >& markers() const
     
         Return boundary markers (facets stored as pairs of cells and local
         facet numbers)
 
-    .. cpp:function:: const GenericFunction& value()
+    .. cpp:function:: const GenericFunction& value() const
     
         Return boundary value g
 
-    .. cpp:function:: boost::shared_ptr<const GenericFunction> value_ptr()
+    .. cpp:function:: boost::shared_ptr<const GenericFunction> value_ptr() const
     
         Return shared pointer to boundary value g
         Testing multiline comment
+
+    .. cpp:function:: boost::shared_ptr<const SubDomain> user_sub_domain_ptr() const
+    
+        Return shared pointer to sub-domain
 
     .. cpp:function:: bool is_compatible(GenericFunction& v) const
     
@@ -162,6 +166,10 @@ DirichletBC.h
     .. cpp:function:: void set_value(boost::shared_ptr<const GenericFunction> g)
     
         Set value g for boundary condition, domain remains unchanged
+
+    .. cpp:function:: void homogenize()
+    
+        Set value to 0.0
 
     .. cpp:function:: std::string method() const
     

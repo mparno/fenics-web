@@ -11,4 +11,4 @@ DOLFIN ``adaptivity`` library
 
     ErrorControl
     TimeSeries
-    refine
+    adapt

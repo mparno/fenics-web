@@ -40,6 +40,10 @@ PETScLUSolver.h
     
         Set operator (matrix)
 
+    .. cpp:function:: const GenericMatrix& get_operator() const
+    
+        Get operator (matrix)
+
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)
     
         Solve linear system Ax = b

@@ -22,7 +22,7 @@ ODESolution.h
     
         Make object ready for evaluating, set to read mode
 
-    .. cpp:function:: void eval(const real& t, real* y)
+    .. cpp:function:: void eval(const real& t, Array<real>& y)
     
         Evaluate (interpolate) value of solution at given time
 

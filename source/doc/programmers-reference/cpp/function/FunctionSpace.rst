@@ -20,25 +20,17 @@ FunctionSpace.h
     a mesh, a finite element, and a local-to-global mapping of the
     degrees of freedom (dofmap).
 
-    .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh, boost::shared_ptr<const FiniteElement> element, boost::shared_ptr<const GenericDofMap> dofmap)
-    
-        Create function space for given mesh, element and dofmap (shared data)
-
     .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh, boost::shared_ptr<const FiniteElement> element, boost::shared_ptr<const GenericDofMap> dofmap)
     
         Create function space for given mesh, element and dofmap (shared data)
 
-    .. cpp:function:: FunctionSpace(boost::shared_ptr<Mesh> mesh)
+    .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh)
     
         Create empty function space for later initialization. This
         constructor is intended for use by any sub-classes which need
         to construct objects before the initialisation of the base
         class. Data can be attached to the base class using
         FunctionSpace::attach(...).
-
-    .. cpp:function:: FunctionSpace(boost::shared_ptr<const Mesh> mesh)
-    
-        Create empty function space for later initialization (const version)
 
     .. cpp:function:: FunctionSpace(const FunctionSpace& V)
     
@@ -81,9 +73,10 @@ FunctionSpace.h
     
         Extract sub space for component
 
-    .. cpp:function:: boost::shared_ptr<FunctionSpace> collapse_sub_space(boost::shared_ptr<GenericDofMap> dofmap) const
+    .. cpp:function:: boost::shared_ptr<FunctionSpace> collapse(boost::unordered_map<uint, uint>& collapsed_dofs) const
     
-        Return function space with a new dof map
+        Collapse a subspace and return a new function space and a map from new
+        to old dofs
 
     .. cpp:function:: bool has_cell(const Cell& cell) const
     
@@ -93,7 +86,7 @@ FunctionSpace.h
     
         Check if function space has given element
 
-    .. cpp:function:: const Array<uint>& component() const
+    .. cpp:function:: const std::vector<uint>& component() const
     
         Return component (relative to super space)
 

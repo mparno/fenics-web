@@ -18,12 +18,8 @@ log.h
         
         Only messages with a debug level higher than or equal to the current
         log level are printed (the default being zero). Logging may also be
-        turned off by calling log(false).
+        turned off by calling set_log_active(false).
         Print message
-
-    .. cpp:function:: void info(int debug_level, std::string msg, ...)
-    
-        Print message at given debug level
 
     .. cpp:function:: void info(const Parameters& parameters, bool verbose=false)
     
@@ -49,6 +45,10 @@ log.h
     
         Print error message and throw an exception
 
+    .. cpp:function:: void log(int debug_level, std::string msg, ...)
+    
+        Print message at given debug level
+
     .. cpp:function:: void begin(std::string msg, ...)
     
         Begin task (increase indentation level)
@@ -61,9 +61,13 @@ log.h
     
         End task (decrease indentation level)
 
+    .. cpp:function:: void set_log_active(bool active=true)
+    
+        Turn logging on or off (deprecated)
+
     .. cpp:function:: void logging(bool active=true)
     
-        Turn logging on or off
+        Turn logging on or off (deprecated, will be removed)
 
     .. cpp:function:: void set_log_level(int level)
     

@@ -26,14 +26,16 @@ MeshData.h
     
     Boundary indicators
     
-      "boundary facet cells"   - Array<uint> of size num_facets
-      "boundary facet numbers" - Array<uint> of size num_facets
-      "boundary indicators"    - Array<uint> of size num_facets
-      "material indicators"    - MeshFunction<uint> of dimension D
+      "boundary_facet_cells"   - Array<uint> of size num_facets
+      "boundary_facet_numbers" - Array<uint> of size num_facets
+      "boundary_indicators"    - Array<uint> of size num_facets
+      "material_indicators"    - MeshFunction<uint> of dimension D
     
-    Boundary indicators (alternative)
+    Subdomain indicators
     
-      "exterior facet domains" - MeshFunction<uint> of dimension D - 1
+      "cell_domains"           - MeshFunction<uint> of dimension D
+      "interior_facet_domains" - MeshFunction<uint> of dimension D - 1
+      "exterior_facet_domains" - MeshFunction<uint> of dimension D - 1
     
     Facet orientation (used for assembly over interior facets)
     
@@ -46,10 +48,10 @@ MeshData.h
     
     Mesh partitioning
     
-      "global entity indices %d" - MeshFunction<uint> of dimension 0, 1, ..., D
-      "exterior facets"          - MeshFunction<uint> of dimension D - 1
-      "num global entities"      - Array<uint> of size D + 1
-      "overlap"                  - vector mapping
+      (moved to ParallelData) "global entity indices %d" - MeshFunction<uint> of dimension 0, 1, ..., D
+      (moved to ParallelData) "exterior facets"          - MeshFunction<uint> of dimension D - 1
+      (moved to ParallelData) "num global entities"      - Array<uint> of size D + 1
+      (moved to ParallelData) "overlap"                  - vector mapping
     
     Sub meshes
     
@@ -73,11 +75,11 @@ MeshData.h
     
         Clear all data
 
-    .. cpp:function:: MeshFunction<uint>* create_mesh_function(std::string name)
+    .. cpp:function:: boost::shared_ptr<MeshFunction<unsigned int> > create_mesh_function(std::string name)
     
         Create MeshFunction with given name (uninitialized)
 
-    .. cpp:function:: MeshFunction<uint>* create_mesh_function(std::string name, uint dim)
+    .. cpp:function:: boost::shared_ptr<MeshFunction<unsigned int> > create_mesh_function(std::string name, uint dim)
     
         Create MeshFunction with given name and dimension
 
@@ -97,7 +99,7 @@ MeshData.h
     
         Create mapping from uint to vector of uint with given name
 
-    .. cpp:function:: MeshFunction<uint>* mesh_function(const std::string name) const
+    .. cpp:function:: boost::shared_ptr<MeshFunction<unsigned int> > mesh_function(const std::string name) const
     
         Return MeshFunction with given name (returning zero if data is not available)
 

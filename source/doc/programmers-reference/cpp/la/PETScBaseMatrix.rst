@@ -31,15 +31,21 @@ PETScBaseMatrix.h
 
     .. cpp:function:: void resize(uint m, uint n) = 0
     
-        Resize virtual matrin
+        Resize virtual matrix
 
     .. cpp:function:: uint size(uint dim) const
     
-        Return number of rows (dim = 0) or columns (dim = 1) along dimension dim
+        Return number of rows (dim = 0) or columns (dim = 1)
 
     .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
     
         Return local rang along dimension dim
+
+    .. cpp:function:: void resize(GenericVector& y, uint dim) const
+    
+        Resize vector y such that is it compatible with matrix for
+        multuplication Ax = b (dim = 0 -> b, dim = 1 -> x) In parallel
+        case, size and layout are important.
 
     .. cpp:function:: boost::shared_ptr<Mat> mat() const
     

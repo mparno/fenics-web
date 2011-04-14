@@ -14,7 +14,7 @@ MeshFunction.h
 
     *Parent class*
     
-        * :cpp:class:`Variable`
+        * :cpp:class:`Variable,`
         
     A MeshFunction is a function that can be evaluated at a set of
     mesh entities. A MeshFunction is discrete and is only defined
@@ -111,6 +111,10 @@ MeshFunction.h
     .. cpp:function:: void set_all(const T& value)
     
         Set all values to given value
+
+    .. cpp:function:: void set(const std::vector<T>& values)
+    
+        Set values
 
     .. cpp:function:: std::string str(bool verbose) const
     

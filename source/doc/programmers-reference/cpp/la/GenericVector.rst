@@ -166,9 +166,9 @@ GenericVector.h
     
         Return sum of vector
 
-    .. cpp:function:: double sum(const Array<uint>& rows) const
+    .. cpp:function:: double sum(const Array<uint>& rows) const = 0
     
-        Return sum of selected rows in vector. Repeated entries only summed once.
+        Return sum of selected rows in vector. Repeated entries are only summed once.
 
     .. cpp:function:: const GenericVector& operator*= (double a) = 0
     

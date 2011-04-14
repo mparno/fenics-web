@@ -11,6 +11,7 @@ DOLFIN ``common`` library
 
     Array
     Hierarchical
+    IndexSet
     MPI
     Set
     SubSystemsManager
