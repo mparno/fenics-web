@@ -11,4 +11,6 @@ This page will point to the UFL docs
 .. toctree::
     :hidden:
 
+    user/index
+
 
