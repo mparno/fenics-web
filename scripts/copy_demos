@@ -12,7 +12,7 @@
 # Last changed: 2011-04-14
 
 # Set destination directory
-DEST_DIR="source/doc/demos"
+DEST_DIR="source/doc/dolfin/demos"
 
 # Set directories that should be copied
 DEMO_DIRS="la pde undocumented"
@@ -54,9 +54,9 @@ echo
 echo "------------------------------------------------------------"
 echo "All demos copied from DOLFIN. The following changes were made:"
 echo
-bzr status source/doc/demos
+bzr status $DEST_DIR
 echo
 echo "You may wish to add all files to the current repository by"
 echo "running the command"
 echo
-echo "  bzr add source/doc/demos"
+echo "  bzr add $DEST_DIR"

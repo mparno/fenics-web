@@ -2,7 +2,7 @@
 // Licensed under the GNU LGPL Version 2.1.
 //
 // First added:  2006-02-07
-// Last changed: 2011-02-03
+// Last changed: 2010-11-29
 //
 // This demo program solves Poisson's equation
 //
@@ -79,7 +79,7 @@ int main()
   File file("poisson.pvd");
   file << u;
 
-  // Plot solution
+  //Plot solution
   plot(u);
 
   return 0;
