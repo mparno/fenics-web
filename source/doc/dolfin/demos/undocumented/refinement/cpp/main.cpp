@@ -4,7 +4,7 @@
 // Modified by Johan Hoffman, 2006.
 //
 // First added:  2006-10-26
-// Last changed: 2011-02-04
+// Last changed: 2011-01-31
 
 #include <dolfin.h>
 
@@ -16,17 +16,18 @@ int main()
 
   // Create mesh of unit square
   UnitSquare unit_square(5, 5);
-  Mesh mesh(unit_square);
-  file << mesh;
+  file << unit_square;
 
   // Uniform refinement
-  mesh = refine(mesh);
-  file << mesh;
+  file << refine(unit_square);
 
   // Refine mesh close to x = (0.5, 0.5)
   Point p(0.5, 0.5);
   for (unsigned int i = 0; i < 5; i++)
   {
+    // Get finest mesh in hierarchy
+    Mesh& mesh = unit_square.fine();
+
     // Mark cells for refinement
     MeshFunction<bool> cell_markers(mesh, mesh.topology().dim(), false);
     for (CellIterator c(mesh); !c.end(); ++c)
@@ -36,10 +37,10 @@ int main()
     }
 
     // Refine mesh
-    mesh = refine(mesh, cell_markers);
+    Mesh& refined_mesh = refine(mesh, cell_markers);
 
-    file << mesh;
-    plot(mesh);
+    file << refined_mesh;
+    plot(refined_mesh);
   }
 
   return 0;

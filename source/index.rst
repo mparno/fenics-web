@@ -16,7 +16,7 @@ variational formulations of PDEs, ODE solvers and linear algebra.
 of building a new site.*
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 10
     :hidden:
 
     about/about

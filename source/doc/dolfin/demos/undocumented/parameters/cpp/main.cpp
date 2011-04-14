@@ -20,6 +20,7 @@ int main(int argc, char* argv[])
 
   // Set some global DOLFIN parameters
   parameters["linear_algebra_backend"] = "uBLAS";
+  parameters["floating_point_precision"] = 32;
 
   // Print global DOLFIN parameters
   info(parameters, true);
