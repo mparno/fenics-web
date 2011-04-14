@@ -9,7 +9,7 @@
 # Licensed under the GNU GPL version 3 or any later version
 #
 # First added:  2010-09-01
-# Last changed: 2011-02-03
+# Last changed: 2011-04-14
 
 # Set destination directory
 DEST_DIR="source/doc/demos"
@@ -34,8 +34,11 @@ for DEMO_DIR in $DEMO_DIRS; do
     rsync -av \
         --exclude '*~' \
         --exclude '*.vtu' \
+        --exclude '*.pvtu' \
         --exclude '*.pvd' \
         --exclude '*.log' \
+        --exclude '*.bin' \
+        --exclude CMakeLists.txt \
         --exclude CMakeFiles \
         --exclude cmake_install.cmake \
         --exclude CMakeCache.txt \
