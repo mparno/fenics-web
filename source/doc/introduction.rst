@@ -34,9 +34,10 @@ are very welcome. Please see :ref:`contributing` for how to proceed.
 .. toctree::
     :hidden:
 
-    tutorial/index
+    Tutorial <tutorial/index>
     DOLFIN <dolfin/index>
     UFL <ufl/index>
     FFC <ffc/index>
+    UFC <ufc/index>
     styleguides/index
 
