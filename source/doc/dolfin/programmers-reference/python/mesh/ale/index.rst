@@ -11,4 +11,6 @@ Functions:
 .. toctree::
     :maxdepth: 1
 
+    compute_edge_map
     compute_vertex_map
+    init_global_edge_indices

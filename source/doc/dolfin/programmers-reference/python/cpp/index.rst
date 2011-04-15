@@ -51,6 +51,7 @@ Classes:
     EpetraSparsityPattern
     EpetraVector
     EqualityBC
+    ErrorControl
     Event
     Expression
     Face
@@ -84,7 +85,19 @@ Classes:
     GenericTensor
     GenericVector
     GlobalParameters
+    HierarchicalDirichletBC
+    HierarchicalErrorControl
+    HierarchicalForm
+    HierarchicalFunction
+    HierarchicalFunctionSpace
+    HierarchicalMesh
+    HierarchicalMeshFunctionBool
+    HierarchicalMeshFunctionDouble
+    HierarchicalMeshFunctionInt
+    HierarchicalMeshFunctionUInt
+    HierarchicalVariationalProblem
     ITLKrylovSolver
+    IndexSet
     IntArray
     IntParameter
     IntersectionOperator
@@ -121,7 +134,6 @@ Classes:
     MeshRenumbering
     MeshTopology
     Method
-    MulticoreAssembler
     NewtonSolver
     NonlinearProblem
     ODE
@@ -141,11 +153,13 @@ Classes:
     PETScPreconditioner
     PETScUserPreconditioner
     PETScVector
+    PETScVectorDeleter
     ParameterValue
     Parameters
     PeriodicBC
     Point
     PointPrimitive
+    PointSource
     PrimitiveIntersector
     Progress
     Quadrature
@@ -163,11 +177,9 @@ Classes:
     StabilityAnalysis
     StringParameter
     SubDomain
-    SubMatrix
     SubMesh
     SubSpace
     SubSystemsManager
-    SubVector
     SubsetIterator
     SystemAssembler
     Table
@@ -223,7 +235,6 @@ Functions:
     CellType_type2string
     CholmodCholeskySolver_default_parameters
     DirichletBC_default_parameters
-    DofMap_extract_sub_dofmap
     EpetraKrylovSolver_default_parameters
     EpetraLUSolver_default_parameters
     File_exists
@@ -246,12 +257,12 @@ Functions:
     MPI_scatter
     MPI_send_recv
     MPI_sum
+    MeshColoring_color
     MeshColoring_color_cells
-    MeshColoring_compute_cell_colors
+    MeshColoring_compute_colors
     MeshColoring_type_to_dim
     MeshPartitioning_number_entities
     MeshPartitioning_partition
-    MulticoreAssembler_assemble
     NewtonSolver_default_parameters
     ODE_default_parameters
     OpenMpAssembler_assemble
@@ -269,6 +280,7 @@ Functions:
     SubSystemsManager_init_mpi
     SubSystemsManager_init_petsc
     SystemAssembler_assemble
+    TimeSeries_default_parameters
     TimeSeries_filename_data
     TimeSeries_filename_times
     TrilinosPreconditioner_default_parameters
@@ -277,18 +289,19 @@ Functions:
     __new_Parameter_init__
     _info
     _new_closure
-    _refine
     _swig_getattr
     _swig_repr
     _swig_setattr
     _swig_setattr_nondynamic
     _swig_setattr_nondynamic_method
+    adapt
+    adapt_markers
     assemble
     assemble_system
     begin
+    between
     check_equal
     debug
-    dolfin_init
     down_cast
     end
     error
@@ -298,19 +311,24 @@ Functions:
     info
     info_stream
     info_underline
+    init
     ipow
+    log
     logging
+    near
     normalize
     not_working_in_parallel
     rand
     real_exp
     real_log
-    real_mat_exp
     real_pi
     real_sqrt
+    refine
     residual
     seed
+    set_log_active
     set_log_level
+    set_output_stream
     solve
     sqr
     summary

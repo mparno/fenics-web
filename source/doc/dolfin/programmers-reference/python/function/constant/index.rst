@@ -12,10 +12,3 @@ Classes:
     :maxdepth: 1
 
     Constant
-
-Functions:
-
-.. toctree::
-    :maxdepth: 1
-
-    _to_float

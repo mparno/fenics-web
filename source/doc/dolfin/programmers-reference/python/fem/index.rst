@@ -11,11 +11,7 @@ Modules:
 .. toctree::
     :maxdepth: 1
 
-    assemble/index
     bcs/index
-    errornorm/index
     form/index
-    interpolate/index
-    norm/index
-    project/index
+    formmanipulations/index
     variationalproblem/index
