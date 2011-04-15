@@ -6,7 +6,7 @@
 Linear algebra
 **************
 
-Below is a list demos which demonstrates how to solve linear algebra problems.
+Below is a list of demos which demonstrate how to solve linear algebra problems.
 
 .. toctree::
     :maxdepth: 2
