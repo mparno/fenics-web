@@ -1,12 +1,12 @@
-.. UFL documentation
+.. FFC documentation
 
-.. _ufl_introduction:
+.. _ffc_introduction:
 
 #################
-UFL documentation
+FFC documentation
 #################
 
-This page will point to the UFL docs
+This page will point to the FFC docs
 
 .. toctree::
     :maxdepth: 1
