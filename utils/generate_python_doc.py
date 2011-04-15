@@ -12,8 +12,8 @@ import os, sys, types
 
 # Set output directory
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "doc/programmers-reference", "python")
-#output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "python-source")
+                          os.pardir, "source", \
+                                     "doc/dolfin/programmers-reference", "python")
 
 
 # Import the dolfin and dolfindocstrings modules.
@@ -147,4 +147,3 @@ for key, mod in modules.items():
 #    if not key == "dolfin.mesh.refine":
 #        continue
     write_documentation(mod)
-

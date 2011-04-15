@@ -12,4 +12,3 @@ Modules:
     :maxdepth: 1
 
     ale/index
-    refine/index

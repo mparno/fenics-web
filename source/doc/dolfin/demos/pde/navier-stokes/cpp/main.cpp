@@ -2,7 +2,7 @@
 // Licensed under the GNU LGPL Version 2.1.
 //
 // First added:  2010-08-30
-// Last changed: 2010-08-31
+// Last changed: 2011-02-04
 //
 // This demo program solves the incompressible Navier-Stokes equations
 // on an L-shaped domain using Chorin's splitting method.
