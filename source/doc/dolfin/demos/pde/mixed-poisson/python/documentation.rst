@@ -168,3 +168,4 @@ Complete code
 -------------
 .. literalinclude:: demo_mixed-poisson.py
    :start-after: # Begin demo
+
