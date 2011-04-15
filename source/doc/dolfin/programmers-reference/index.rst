@@ -54,4 +54,4 @@ For documentation of the DOLFIN Python module, see the
 
     cpp/index
     python/index
-    appendices/index
+
