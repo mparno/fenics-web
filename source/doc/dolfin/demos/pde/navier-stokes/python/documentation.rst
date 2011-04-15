@@ -13,7 +13,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-This demo is implemented in the :download:`demo.py` file.
+This demo is implemented in the :download:`demo_navier-stokes.py` file.
 
 First, the ``dolfin`` module is imported:
 

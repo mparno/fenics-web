@@ -2,12 +2,10 @@
 
 .. _demos_pde_poisson_cpp_documentation:
 
-
 Poisson equation
 ================
 
 .. include:: ../common.txt
-
 
 Implementation
 --------------
@@ -16,7 +14,7 @@ The implementation is split in two files: a form file containing the
 definition of the variational forms expressed in UFL and a C++ file
 containing the actual solver.
 
-Running this demo requires the files: :download:`main.cpp`,
+Running this demo requires the following files: :download:`main.cpp`,
 :download:`Poisson.ufl` and :download:`CMakeLists.txt`.
 
 UFL form file

@@ -5,7 +5,7 @@
 Mixed formulation for Poisson equation
 ======================================
 
-This demo is implemented in a single Python file, :download:`demo.py`,
+This demo is implemented in a single Python file, :download:`demo_mixed-poisson.py`,
 which contains both the variational forms and the solver.
 
 .. include:: ../common.txt

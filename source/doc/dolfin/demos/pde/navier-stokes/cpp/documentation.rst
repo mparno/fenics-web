@@ -14,7 +14,7 @@ The implementation is split in four files: three form files containing the
 definition of the variational forms expressed in UFL and a C++ file
 containing the actual solver.
 
-Running this demo requires the files: :download:`main.cpp`,
+Running this demo requires the following files: :download:`main.cpp`,
 :download:`TentativeVelocity.ufl`, :download:`VelocityUpdate.ufl`,
 :download:`PressureUpdate.ufl` and :download:`CMakeLists.txt`.
 

@@ -14,7 +14,7 @@ The implementation is split in three files: two form files containing the
 definition of the variational forms expressed in UFL and a C++ file
 containing the actual solver.
 
-Running this demo requires the files: :download:`main.cpp`,
+Running this demo requires the following files: :download:`main.cpp`,
 :download:`CahnHilliard2D.ufl`, :download:`CahnHilliard3D.ufl` and
 :download:`CMakeLists.txt`.
 

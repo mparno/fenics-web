@@ -15,12 +15,10 @@ before looking at this demo.
 If you want a more complex problem, we suggest that you look at the
 other eigenvalue demo.
 
-
-
 Implementation
 --------------
 
-This demo is implemented in a single Python file, :download:`demo.py`,
+This demo is implemented in a single Python file, :download:`demo_poisson.py`,
 which contains both the variational forms and the solver.
 
 The eigensolver functionality in DOLFIN relies on the library SLEPc

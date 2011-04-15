@@ -10,11 +10,10 @@ which contains both the variational forms and the solver.
 
 .. include:: ../common.txt
 
-
 Implementation
 --------------
 
-This demo is implemented in the :download:`demo.py` file.
+This demo is implemented in the :download:`demo_biharmonic.py` file.
 
 First, the ``dolfin`` module is imported:
 
