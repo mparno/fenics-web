@@ -5,7 +5,7 @@
 Incompressible Navier-Stokes equations
 ======================================
 
-This demo is implemented in a single Python file, :download:`demo.py`,
+This demo is implemented in a single Python file, :download:`demo_navier-stokes.py`,
 which contains both the variational forms and the solver.
 
 .. include:: ../common.txt
@@ -227,5 +227,5 @@ rotate) the solution.
 Complete code
 -------------
 
-.. literalinclude:: demo.py
+.. literalinclude:: demo_navier-stokes.py
    :start-after: # Begin demo

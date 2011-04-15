@@ -5,7 +5,7 @@
 Cahn-Hilliard equation
 ======================
 
-This demo is implemented in a single Python file, :download:`demo.py`,
+This demo is implemented in a single Python file, :download:`demo_cahn-hilliard.py`,
 which contains both the variational forms and the solver.
 
 .. include:: ../common.txt
@@ -284,6 +284,6 @@ The line ``interactive()`` holds the plot (waiting for a keyboard action).
 Complete code
 -------------
 
-.. literalinclude:: demo.py
+.. literalinclude:: demo_cahn-hilliard.py
    :start-after: # Begin demo
 

@@ -5,7 +5,7 @@
 Poisson equation
 ================
 
-This demo is implemented in a single Python file, :download:`demo.py`,
+This demo is implemented in a single Python file, :download:`demo_poisson.py`,
 which contains both the variational forms and the solver.
 
 .. include:: ../common.txt
@@ -149,5 +149,5 @@ visualization and also plot it using the ``plot`` command:
 Complete code
 -------------
 
-.. literalinclude:: demo.py
+.. literalinclude:: demo_poisson.py
    :start-after: # Begin demo

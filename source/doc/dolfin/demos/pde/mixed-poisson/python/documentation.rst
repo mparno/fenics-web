@@ -14,7 +14,7 @@ which contains both the variational forms and the solver.
 Implementation
 --------------
 
-This demo is implemented in the :download:`demo.py` file.
+This demo is implemented in the :download:`demo_mixed-poisson.py` file.
 
 First, the ``dolfin`` module is imported:
 
@@ -166,5 +166,5 @@ the solutions to examine the result.
 
 Complete code
 -------------
-.. literalinclude:: demo.py
+.. literalinclude:: demo_mixed-poisson.py
    :start-after: # Begin demo
