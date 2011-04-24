@@ -13,6 +13,6 @@ This page will point to the FFC docs
     :numbered:
 
     user/index
-    programmers-reference/modules
+    programmers-reference/index
 
 

@@ -6,128 +6,115 @@ __date__ = "2010-09-15"
 __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
-# Last changed: 2010-10-08
+# Last changed: 2011-04-24
 
 import os, sys, types
-
-# Set output directory
-output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "doc/dolfin/programmers-reference", "python")
-#output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "python-source")
-
 
 # Import the dolfin and dolfindocstrings modules.
 try:
     import dolfin
+    import ffc
+    import ufl
     from dolfin_utils.documentation import indent
 except Exception as what:
     raise ImportError("Could not import the dolfin module \n  (error: %s),\n\
   update your PYTHONPATH variable?" % what)
 
-index_string = \
-"""
+not_define_all = []
+
+class Module(object):
+    def __init__(self, name, mod_file):
+        self.name = name
+        self.file = mod_file
+        self.submodules = []
+    def __hash__(self):
+        return self.name
+
+def get_modules(parent, loc, modules):
+    for mod in os.listdir(loc):
+        f = os.path.join(loc, mod)
+        new_mod = None
+        # Add modules (files) to global dict and to parent as submodules.
+        if os.path.isfile(f):
+            m, e = os.path.splitext(mod)
+            if e == ".py" and m != "__init__":
+                new_mod = Module(".".join([parent.name, m]), f)
+                parent.submodules.append(m)
+        # Add submodules (directories with '__init__.py' files) to global dict
+        # and to parent as submodules.
+        if os.path.isdir(f):
+            if not "__init__.py" in os.listdir(f):
+                continue
+            new_mod = Module(".".join([parent.name, mod]), os.path.join(f, "__init__.py"))
+            parent.submodules.append(mod)
+
+            # Recursively extract submodules.
+            get_modules(new_mod, f, modules)
+
+        if new_mod is not None:
+            if new_mod in modules:
+                print new_mod, modules
+                raise RuntimeError("module already present???")
+            modules.append(new_mod)
+
+def get_objects(module):
+    """Extract classes and functions defined in a module.
+    The function will not return imported classes and functions."""
+    classes = []
+    functions = []
+    objects = {}
+
+    # NOTE: Dirty hack for Python 2.6, in 2.7 it should be possible to use
+    # importlib for submodules to test if __all__ is defined.
+    define_all = False
+    if "__all__" in open(module.file, "r").read():
+        define_all = True
+    else:
+        not_define_all.append(module.file)
+
+    # Get objects listed in __all__ by developer.
+    exec("from %s import *" % module.name, objects)
+
+    for key, val in objects.items():
+#        print "key: ", key
+        if isinstance(val, (types.ClassType, types.TypeType)):
+            if define_all or module.name == val.__module__:
+                classes.append(key)
+        elif isinstance(val, types.FunctionType):
+#            print "fun, mod: ", val.__module__
+            if define_all or module.name == val.__module__:
+                functions.append(key)
+        # Anything else we need to catch?
+        else:
+            pass
+
+    return classes, functions
+
+def index_items(item_type, items):
+    return """
 %s:
 
 .. toctree::
     :maxdepth: 1
 
 %s
-"""
+""" % (item_type, indent("\n".join(sorted(items)), 4))
 
-def get_modules(parent, loc, modules):
-#    print "parent: ", parent
-#    print "dir: ", loc
-    for mod in os.listdir(loc):
-        f = os.path.join(loc, mod)
-        # Add modules (files) to global dict and to parent as submodules.
-        if os.path.isfile(f):
-            m, e = os.path.splitext(mod)
-            if e == ".py" and m != "__init__":
-#                print "mod: ", m
-                new_mod = ".".join([parent, m])
-                if new_mod in modules:
-                    print new_mod, modules.keys()
-                    raise RuntimeError("module already present???")
-                modules[new_mod] = []
-                modules[parent].append(m)
-        # Add submodules (directories with '__init__.py' files) to global dict
-        # and to parent as submodules.
-        if os.path.isdir(f):
-            if not "__init__.py" in os.listdir(f):
-                continue
-#            print "f: ", f
-            new_mod = ".".join([parent, mod])
-            if new_mod in modules:
-                print new_mod, modules.keys()
-                raise RuntimeError("module already present???")
-            modules[new_mod] = []
-            modules[parent].append(mod)
+def caption(string, level, top=False):
+    markers = level*len(string)
+    if top:
+        return "%s\n%s\n%s\n" % (markers, string, markers)
+    return "%s\n%s\n" % (string, markers)
 
-            # Recursively extract submodules.
-            get_modules(new_mod, f, modules)
+def label(package_name, name):
+    output = ".. _doc_%s_programmers_reference_" % package_name
+    if package_name == "dolfin":
+        output += "python_"
+    return output + "%s:\n\n" % name
 
-#def get_modules(mod, modules, top_module=""):
-#    """Extract all modules defined in a module.
-
-#    This function will not return external modules which are imported. To get
-#    all modules, the function is called recursively."""
-#    # This is the first call to the function, store name of module.
-#    if top_module == "":
-#        top_module = mod.__name__
-#    print "\nmod: ", mod.__name__
-#    # Get all sub modules.
-#    for k, v in mod.__dict__.items():
-#        if not isinstance(v, types.ModuleType):
-#            continue
-#        print "k: ", k
-#        n = v.__name__
-#        print "n: ", n
-#        if n.split(".")[0] != top_module:
-#            continue
-#        # To avoid infinite recursion.
-#        if n in modules:
-#            continue
-#        modules[n] = v
-#        modules.update(get_modules(v, modules, top_module))
-#    return modules
-
-def get_objects(module, submodules):
-    """Extract classes and functions defined in a module.
-    The function will not return imported classes and functions."""
-
-    modules = []
-    # Special handling of 'cpp' module.
-    for sub in submodules:
-        if sub == "cpp":
-            sub = "cpp (Swig autogenerated module) <cpp/index>"
-            modules.append(sub)
-        else:
-            modules.append(sub + "/index")
-
-    classes = []
-    functions = []
-    d = {}
-    exec("from %s import *" % module, d)
-    for key, val in d.items():
-#        print "key: ", key
-        if isinstance(val, (types.ClassType, types.TypeType)):
-#            print "cls, mod: ", val.__module__
-            if module == val.__module__:
-                classes.append(key)
-        elif isinstance(val, types.FunctionType):
-#            print "fun, mod: ", val.__module__
-            if module == val.__module__:
-                functions.append(key)
-        # Anything else we need to catch?
-        else:
-            pass
-
-    return modules, classes, functions
-
-def write_object(directory, module_name, name, obj_type):
-
+def write_object(package_name, directory, module_name, name, obj_type):
     output = ".. Documentation for the %s %s\n\n" % (obj_type, module_name + "." + name)
-    output += ".. _programmers_reference_python_%s:\n\n" % "_".join(module_name.split(".")[1:] + [name.lower()])
+    output += label(package_name, "_".join(module_name.split(".")[1:] + [name.lower()]))
     output += name + "\n"
     output += "="*len(name) + "\n"
     output += "\n.. currentmodule:: %s\n\n" % module_name
@@ -137,9 +124,13 @@ def write_object(directory, module_name, name, obj_type):
     f.write(output)
     f.close()
 
-def write_documentation(module, submodules):
+def write_documentation(package_name, module):
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
+                          os.pardir, "source", "doc", package_name, "programmers-reference")
+    if package_name == "dolfin":
+        output_dir = os.path.join(output_dir, "python")
     dirs = [output_dir]
-    dirs += module.split(".")[1:]
+    dirs += module.name.split(".")[1:]
     directory = os.path.sep.join(dirs)
 
     try:
@@ -147,47 +138,66 @@ def write_documentation(module, submodules):
     except:
         pass
 
-    modules, classes, functions = get_objects(module, submodules)
+    modules = []
+    # Special handling of cpp module in dolfin.
+    for sub in module.submodules:
+        if sub == "cpp" and package_name == "dolfin":
+            modules.append("cpp (Swig autogenerated module) <cpp/index>")
+        else:
+            modules.append(sub + "/index")
 
-    output = ".. Index file for the %s module.\n\n" % module
-    output += ".. _programmers_reference_python_%s:\n\n" % "_".join(module.split(".")[1:] + ["index"])
-    if module == "dolfin":
-        output += """#############################
-Python programmer's reference
-#############################\n"""
+    classes, functions = get_objects(module)
+
+    output = ".. Index file for the %s module.\n\n" % module.name
+    output += label(package_name, "_".join(module.name.split(".")[1:] + ["index"]))
+
+    if module.name == package_name and package_name == "dolfin":
+        output += caption("Python programmer's reference", "#")
+    elif module.name == package_name:
+        output += caption("Programmer's reference", "#")
     else:
-        header = "%s module" % module
-        stars = "*"*len(header)
-        output += stars + "\n"
-        output += header + "\n"
-        output += stars + "\n"
+        header = "%s module" % module.name
+        output += caption(header, "*")
 
     outfile = os.path.join(directory, "index.rst")
     f = open(outfile, "w")
     f.write(output)
     if modules:
-        f.write(index_string % ("Modules", indent("\n".join(sorted(modules)), 4)))
+        f.write(index_items("Modules", modules))
     if classes:
-        f.write(index_string % ("Classes", indent("\n".join(sorted(classes)), 4)))
+        f.write(index_items("Classes", classes))
     if functions:
-        f.write(index_string % ("Functions", indent("\n".join(sorted(functions)), 4)))
+        f.write(index_items("Functions", functions))
+
+    f.write("""\nModule docstring:
+
+.. automodule:: %s
+  :no-members:
+  :no-undoc-members:
+  :no-show-inheritance:""" % module.name)
     f.close()
 
     for o in classes:
-#        if not o == "Mesh":
-#            continue
-        write_object(directory, module, o, "class")
+        write_object(package_name, directory, module.name, o, "class")
 
     for o in functions:
-        write_object(directory, module, o, "function")
+        write_object(package_name, directory, module.name, o, "function")
 
-#modules = get_modules(dolfin, {})
-modules = {"dolfin":[]}
-get_modules("dolfin", os.path.dirname(dolfin.__file__), modules)
-for mod in sorted(modules.keys()):
-    print "Writing files for module: ", mod
-#    if not mod == "dolfin.mesh":
-#    if not mod == "dolfin":
-#        continue
-    write_documentation(mod, modules[mod])
+modules = [dolfin, ffc, ufl]
+for mod in modules:
+    print "\nWriting files for module: ", mod.__name__
+    submods = [Module(mod.__name__, os.path.join(os.path.dirname(mod.__file__), "__init__.py"))]
+    get_modules(submods[0], os.path.dirname(mod.__file__), submods)
+    for submod in sorted(submods, key=lambda o: o.name):
+#        if not submod[0] == "ffc.errorcontrol.errorcontrol":
+#        if not submod[0] == "ffc.quadrature.symbolics":
+#        if not submod[0] == "dolfin.compilemodules.compilemodule":
+#        if not submod[0] == "dolfin.function.function":
+#            continue
+        print "  Writing files for sub module: ", submod.name
+        write_documentation(mod.__name__, submod)
+
+if not_define_all:
+    print "\nThe following modules did not define the __all__ variable:"
+    print "\n".join(["  " + m for m in not_define_all])
 
