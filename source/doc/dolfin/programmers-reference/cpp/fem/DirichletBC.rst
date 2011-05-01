@@ -71,7 +71,7 @@ DirichletBC.h
     
         Create boundary condition for subdomain specified by index
 
-    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const MeshFunction<unsigned int>& sub_domains, uint sub_domain, std::string method="topological")
+    .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, boost::shared_ptr<const MeshFunction<unsigned int> > sub_domains, uint sub_domain, std::string method="topological")
     
         Create boundary condition for subdomain specified by index
 
@@ -82,11 +82,6 @@ DirichletBC.h
     .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, uint sub_domain, std::string method="topological")
     
         Create boundary condition for boundary data included in the mesh
-
-    .. cpp:function:: DirichletBC(const FunctionSpace& V, const GenericFunction& g, const std::vector<std::pair<uint, uint> >& markers, std::string method="topological")
-    
-        Create boundary condition for subdomain by boundary markers
-        (cells, local facet numbers)
 
     .. cpp:function:: DirichletBC(boost::shared_ptr<const FunctionSpace> V, boost::shared_ptr<const GenericFunction> g, const std::vector<std::pair<uint, uint> >& markers, std::string method="topological")
     
@@ -141,16 +136,11 @@ DirichletBC.h
         Return boundary markers (facets stored as pairs of cells and local
         facet numbers)
 
-    .. cpp:function:: const GenericFunction& value() const
+    .. cpp:function:: boost::shared_ptr<const GenericFunction> value() const
     
         Return boundary value g
 
-    .. cpp:function:: boost::shared_ptr<const GenericFunction> value_ptr() const
-    
-        Return shared pointer to boundary value g
-        Testing multiline comment
-
-    .. cpp:function:: boost::shared_ptr<const SubDomain> user_sub_domain_ptr() const
+    .. cpp:function:: boost::shared_ptr<const SubDomain> user_sub_domain() const
     
         Return shared pointer to sub-domain
 

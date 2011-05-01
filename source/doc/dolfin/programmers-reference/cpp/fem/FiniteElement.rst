@@ -86,6 +86,10 @@ FiniteElement.h
     
         Evaluate basis function i at given point in cell
 
+    .. cpp:function:: void evaluate_basis_all(double* values, const double* coordinates, const Cell& cell) const
+    
+        Evaluate all basis functions at given point in cell
+
     .. cpp:function:: boost::shared_ptr<const FiniteElement> create_sub_element(uint i) const
     
         Create a new finite element for sub element i (for a mixed element)

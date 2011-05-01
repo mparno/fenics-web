@@ -96,35 +96,23 @@ VariationalProblem.h
     
         Return test space for variational problem
 
-    .. cpp:function:: const Form& bilinear_form() const
+    .. cpp:function:: boost::shared_ptr<const Form> bilinear_form() const
     
         Return the bilinear form
 
-    .. cpp:function:: boost::shared_ptr<const Form> bilinear_form_shared_ptr() const
+    .. cpp:function:: boost::shared_ptr<const Form> form_0() const
     
-        Return the bilinear form (shared_ptr version)
+        Return form_0
 
-    .. cpp:function:: boost::shared_ptr<const Form> form_0_shared_ptr() const
+    .. cpp:function:: boost::shared_ptr<const Form> form_1() const
     
-        Return form_0 (shared_ptr version)
+        Return form_1
 
-    .. cpp:function:: boost::shared_ptr<const Form> form_1_shared_ptr() const
-    
-        Return form_1 (shared_ptr version)
-
-    .. cpp:function:: const Form& linear_form() const
+    .. cpp:function:: boost::shared_ptr<const Form> linear_form() const
     
         Return the linear form
 
-    .. cpp:function:: boost::shared_ptr<const Form> linear_form_shared_ptr() const
-    
-        Return the linear form (shared_ptr version)
-
-    .. cpp:function:: const std::vector<const BoundaryCondition*> bcs() const
-    
-        Return the list of boundary conditions
-
-    .. cpp:function:: const std::vector<boost::shared_ptr<const BoundaryCondition> > bcs_shared_ptr() const
+    .. cpp:function:: const std::vector<boost::shared_ptr<const BoundaryCondition> > bcs() const
     
         Return the list of boundary conditions (shared_ptr version)
 
