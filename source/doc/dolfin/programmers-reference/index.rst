@@ -47,7 +47,7 @@ functionality from the Python module named ``dolfin``:
     from dolfin import *
 
 For documentation of the DOLFIN Python module, see the
-:ref:`programmers_reference_python_index`.
+:ref:`doc_dolfin_programmers_reference_python_index`.
 
 .. toctree::
     :hidden:

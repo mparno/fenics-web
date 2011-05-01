@@ -4,7 +4,7 @@
 # Licensed under the GNU LGPL version 3 or any later version.
 #
 # First added:  2011-04-15
-# Last changed: 2011-04-15
+# Last changed: 2011-05-01
 #
 # This script updates the sources for all relevant packages by pulling
 # from Launchpad into a temporary directory. This script should be run
@@ -26,7 +26,8 @@ for PACKAGE in $PACKAGES; do
     if [ -d $PACKAGE ]; then
         echo "Found sources for package $PACKAGE, updating from Launchpad..."
         cd $PACKAGE
-        bzr update
+        bzr merge
+        bzr commit -m merge
         cd ..
     else
         echo "Sources for package $PACKAGE does not exist, cloning from Launchpad..."

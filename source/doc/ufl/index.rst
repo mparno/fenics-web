@@ -13,6 +13,6 @@ This page will point to the UFL docs
     :numbered:
 
     user/index
-    programmers-reference/modules
+    programmers-reference/index
 
 
