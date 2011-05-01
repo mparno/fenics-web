@@ -14,18 +14,24 @@ __license__  = "GNU GPL version 3 or any later version"
 import os, sys, types
 
 # List of modules to generate documentation for
-modules = [dolfin, ffc, ufl]
+module_names = ["dolfin", "ffc", "ufl"]
 
-# Import the dolfin and dolfindocstrings modules.
-try:
-    import dolfin
-    import ffc
-    import ufl
-    from dolfin_utils.documentation import indent
-except Exception as what:
-    raise ImportError("Could not import the dolfin module \n  (error: %s),\n\
-  update your PYTHONPATH variable?" % what)
+# Import modules
+modules = []
+for module in module_names:
+    try:
+        exec("import %s" % module)
+        exec("modules.append(%s)" % module)
+    except Exception as what:
+        raise ImportError("""
+Unable to import the %s module
+Error: %s
+Did you forget to update your PYTHONPATH variable?""" % (module, what))
 
+# Import some utilities
+from dolfin_utils.documentation import indent
+
+# Temporary hack
 not_define_all = []
 
 class Module(object):
@@ -189,21 +195,24 @@ def write_documentation(package_name, module):
     for o in functions:
         write_object(package_name, directory, module.name, o, "function")
 
-# Generate documentation for all modules
-for mod in modules:
-    print "\nWriting files for module: ", mod.__name__
-    submods = [Module(mod.__name__, os.path.join(os.path.dirname(mod.__file__), "__init__.py"))]
-    get_modules(submods[0], os.path.dirname(mod.__file__), submods)
-    for submod in sorted(submods, key=lambda o: o.name):
-#        if not submod[0] == "ffc.errorcontrol.errorcontrol":
-#        if not submod[0] == "ffc.quadrature.symbolics":
-#        if not submod[0] == "dolfin.compilemodules.compilemodule":
-#        if not submod[0] == "dolfin.function.function":
-#            continue
-        print "  Writing files for sub module: ", submod.name
-        write_documentation(mod.__name__, submod)
+if __name__ == "__main__":
 
-if not_define_all:
-    print "\nThe following modules did not define the __all__ variable:"
-    print "\n".join(["  " + m for m in not_define_all])
+    print modules
 
+    # Generate documentation for all modules
+    for mod in modules:
+        print "\nWriting files for module: ", mod.__name__
+        submods = [Module(mod.__name__, os.path.join(os.path.dirname(mod.__file__), "__init__.py"))]
+        get_modules(submods[0], os.path.dirname(mod.__file__), submods)
+        for submod in sorted(submods, key=lambda o: o.name):
+            #        if not submod[0] == "ffc.errorcontrol.errorcontrol":
+            #        if not submod[0] == "ffc.quadrature.symbolics":
+            #        if not submod[0] == "dolfin.compilemodules.compilemodule":
+            #        if not submod[0] == "dolfin.function.function":
+            #            continue
+            print "  Writing files for sub module: ", submod.name
+            write_documentation(mod.__name__, submod)
+
+    if not_define_all:
+        print "\nThe following modules did not define the __all__ variable:"
+        print "\n".join(["  " + m for m in not_define_all])
