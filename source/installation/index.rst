@@ -2,9 +2,9 @@
 
 .. _installation:
 
-############
-Installation
-############
+#########################
+Installation instructions
+#########################
 
 Obtaining and installing FEniCS have never been easier. Packages are
 available for Debian/Ubuntu, Mac OS X and Windows users, and we provide

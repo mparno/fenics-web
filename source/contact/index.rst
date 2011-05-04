@@ -2,13 +2,13 @@
 
 .. _contributing:
 
-############
-Getting help
-############
+################
+Getting in touch
+################
 
-Help is available both from FEniCS developers and other FEniCS users.
 This page describes how to get in contact to solve problems you might
-encounter when using FEniCS.
+encounter when using FEniCS. Help is available both from FEniCS
+developers and other FEniCS users.
 
 .. _help_answers:
 
@@ -55,8 +55,8 @@ bugs <https://bugs.launchpad.net/dolfin>`_.
 `Launchpad pages <launchpad_pages.html>`_ contains a collection of
 links to the bug tracking pages for all FEniCS components.
 
-Getting in touch
-================
+Mailing lists
+=============
 
 .. _help_mailinglists:
 
@@ -83,4 +83,5 @@ Contributing
 We encourage users to take active part in developing and documenting
 FEniCS. As an active developer, it is easy to influence the direction
 and focus of the project. The step from user to developer is just a
-patch away!
+patch away! For information about how to contribute code to the FEniCS
+Project, visit the page :ref:`developers`.

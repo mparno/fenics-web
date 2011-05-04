@@ -1,6 +1,6 @@
 .. Developer information.
 
-.. _developer:
+.. _developers:
 
 #####################
 Developer information

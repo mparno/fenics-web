@@ -2,9 +2,9 @@
 
 .. _About:
 
-#####
-About
-#####
+########################
+About the FEniCS Project
+########################
 
 The FEniCS Project is a collaborative project on automating aspects of
 scientific computing. Users and developers come from universities and

@@ -1,10 +1,8 @@
-.. Citing the FEniCS Project.
+.. _citing:
 
-.. _Citing:
-
-######
-Citing
-######
+##############
+How to cite us
+##############
 
 Aspects of the methods and software developed under the umbrella of the
 FEniCS Project are published in journals and conference proceedings.
