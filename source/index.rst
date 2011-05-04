@@ -1,6 +1,9 @@
 .. raw:: html
    :file: index.inc
 
+.. raw:: html
+   :file: download.inc
+
 .. toctree::
     :maxdepth: 10
     :hidden:
