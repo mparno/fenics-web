@@ -28,7 +28,6 @@
 html {
     margin: 0px;
     padding: 0px;
-    background: #FFF url(bg-page.png) top left repeat-x;
 }
 
 body {
@@ -115,9 +114,11 @@ div.header {
     left: 0px;
     top: 0px;
     height: 85px;
-    /* background: #eeeeee; */
     padding: 0 40px;
+    background: #FFF url(bg-page.png) top left repeat-x;
+    color: #ffffff;
 }
+
 div.header h1 {
     font-size: 1.6em;
     font-weight: normal;
@@ -127,16 +128,18 @@ div.header h1 {
     margin: 0;
     padding-top: 15px;
 }
+
 div.header h1 a {
     font-weight: normal;
-    color: {{ theme_headingcolor }};
+    color: #ffffff;
 }
+
 div.header h2 {
     font-size: 1.3em;
     font-weight: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #aaa;
+    color: #e0e0e0;
     border: 0;
     margin-top: -3px;
     padding: 0;
@@ -146,17 +149,19 @@ div.header img.rightlogo {
     float: right;
 }
 
-
 div.title {
     font-size: 1.3em;
     font-weight: bold;
     color: {{ theme_headingcolor }};
     border-bottom: dotted thin #e0e0e0;
     margin-bottom: 25px;
+    color: #ffffff;
 }
+
 div.topnav {
-    /* background: #e0e0e0; */
+    background: #e0e0e0;
 }
+
 div.topnav p {
     margin-top: 0;
     margin-left: 40px;
@@ -165,9 +170,11 @@ div.topnav p {
     text-align: right;
     font-size: 0.8em;
 }
+
 div.bottomnav {
-    background: #eeeeee;
+    background: #d81e28;
 }
+
 div.bottomnav p {
     margin-right: 40px;
     text-align: right;
@@ -178,7 +185,6 @@ a.uplink {
     font-weight: normal;
 }
 
-
 /* contents box */
 
 table.index {
@@ -188,15 +194,18 @@ table.index {
     border-style: dotted;
     border-color: #e0e0e0;
 }
+
 table.index tr.heading {
     background-color: #e0e0e0;
     text-align: center;
     font-weight: bold;
     font-size: 1.1em;
 }
+
 table.index tr.index {
     background-color: #eeeeee;
 }
+
 table.index td {
     padding: 5px 20px;
 }
@@ -210,7 +219,6 @@ table.index a:hover, table.index a:active {
     text-decoration: underline;
     color: {{ theme_hoverlinkcolor }};
 }
-
 
 /* FEniCS User Guide styles and layout */
 
@@ -228,16 +236,19 @@ div.admonition {
     margin-bottom: 15px;
     margin-top: 15px;
 }
+
 div.note {
     padding: 10px 15px 10px 80px;
     background: #e4ffde url(alert_info_32.png) 15px 15px no-repeat;
     min-height: 42px;
 }
+
 div.warning {
     padding: 10px 15px 10px 80px;
     background: #fffbc6 url(alert_warning_32.png) 15px 15px no-repeat;
     min-height: 42px;
 }
+
 div.seealso {
     background: #e4ffde;
 }
@@ -370,4 +381,8 @@ div.viewcode-block:target {
     border-bottom: 1px solid #ac9;
     margin: -1px -12px;
     padding: 0 12px;
+}
+
+div.title a:visited {
+    color: #ffffff;
 }
