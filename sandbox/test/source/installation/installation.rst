@@ -12,7 +12,6 @@ a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for
 simple builds of FEniCS on a multitude of platforms. It is also possible
 to download source tarballs for all components.
 
-
 *****************
 Prebuilt binaries
 *****************

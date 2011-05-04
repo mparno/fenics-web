@@ -23,15 +23,12 @@
         <p>
         {%- block fenicsrel1 %}
         {%- endblock %}
-        {%- if prev %}
-        «&#160;&#160;<a href="{{ prev.link|e }}">{{ prev.title }}</a>
-        &#160;&#160;::&#160;&#160;
-        {%- endif %}
-        <a class="uplink" href="{{ pathto(master_doc) }}">{{ _('Contents') }}</a>
-        {%- if next %}
-        &#160;&#160;::&#160;&#160;
-        <a href="{{ next.link|e }}">{{ next.title }}</a>&#160;&#160;»
-        {%- endif %}
+        <a href="about">About</a> &nbsp;&nbsp;&nbsp;
+        <a href="installation">Installation</a> &nbsp;&nbsp;&nbsp;
+        <a href="documentation">Documentation</a> &nbsp;&nbsp;&nbsp;
+        <a href="developer">Developers</a> &nbsp;&nbsp;&nbsp;
+        <a href="citing">Citing</a> &nbsp;&nbsp;&nbsp;
+        <a href="contact">Contact</a>
         {%- block fenicsrel2 %}
         {%- endblock %}
         </p>
