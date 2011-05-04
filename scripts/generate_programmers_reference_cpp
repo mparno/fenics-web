@@ -15,7 +15,7 @@ __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
 # Modified by Kristian B. Oelgaard, 2010.
-# Last changed: 2011-05-02
+# Last changed: 2011-05-04
 
 import os, sys
 

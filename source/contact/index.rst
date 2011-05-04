@@ -1,5 +1,3 @@
-.. Notes on how to contribute to the FEniCS Project.
-
 .. _contributing:
 
 ################
