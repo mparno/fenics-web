@@ -122,9 +122,10 @@ pygments_style = 'sphinx'
 #html_theme = 'nature'
 #html_theme = 'scrolls'
 #html_theme = 'sphinxdoc'
-html_theme = 'slim-agogo'
+#html_theme = 'slim-agogo'
 #html_theme = 'classy'
 #html_theme = 'traditional'
+html_theme = 'fenics'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
