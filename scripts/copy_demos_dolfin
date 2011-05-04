@@ -9,7 +9,7 @@
 # Licensed under the GNU GPL version 3 or any later version
 #
 # First added:  2010-09-01
-# Last changed: 2011-04-14
+# Last changed: 2011-05-04
 
 # Set destination directory
 DEST_DIR="source/doc/dolfin/demos"
