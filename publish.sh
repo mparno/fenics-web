@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rsync -avz build/html/ fenics@fenicsproject.org:/home/fenics/www.fenicsproject.org/new/
+rsync -avz --delete build/html/ fenics@fenicsproject.org:/home/fenics/www.fenicsproject.org/new/

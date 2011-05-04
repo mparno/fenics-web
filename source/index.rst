@@ -1,8 +1,3 @@
-.. FEniCS documentation master file, created by
-    sphinx-quickstart on Thu Apr  8 13:34:04 2010.
-    You can adapt this file completely to your liking, but it should at least
-    contain the root `toctree` directive.
-
 ############
 Introduction
 ############
@@ -19,9 +14,9 @@ of building a new site.*
     :maxdepth: 10
     :hidden:
 
-    about/about
-    installation/installation
-    contact/help
-    doc/introduction
-    developer/developer
-    cite/cite
+    about/index
+    installation/index
+    contact/index
+    documentation/index
+    developer/index
+    cite/index
