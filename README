@@ -1,32 +1,9 @@
-FEniCS documentation
---------------------
+# Last changed: 2011-05-05
 
-To build all documentation, simply type
+FEniCS documentation and webpage
+--------------------------------
 
-  make all
+How to generate webpage and documentation? Someone who knows how,
+please write something here.
 
-Note that you need to have the ufc module in your PYTHONPATH variable in order
-to generate the Python programmer's reference.
 
-In the future when we add documentation for FFC, UFC, UFL, viper etc. you will
-also need to have these modules in your path.
-
-To update the C++ programmer's reference and the demos from a specific DOLFIN
-installation you need to set the DOLFIN_DIR variable and run the two scripts
-utils/generate_cpp_doc.py and utils/copy_demos.sh before building the
-documentation.
-
-FEniCS web page
----------------
-
-1. push to lp:fenics-web
-
-2. navigate to fenics@fenics.org:~/fenics-web-sphinx and bzr pull
-
-3. export PYTHONPATH=/home/fenics-doc/local/lib/python2.6/site-packages:${PYTHONPATH}
-
-4. export PATH=/home/fenics-doc/local/bin:${PATH}
-
-5. source /home/fenics-doc/fenics/share/dolfin/dolfin.conf
-
-6. make html
