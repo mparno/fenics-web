@@ -5,35 +5,27 @@ Software documentation
 ######################
 
 Welcome to the documentation for the `FEniCS Project
-<http://www.fenicsproject.org/>`_. The FEniCS documentation comprises
-three main parts:
+<http://www.fenicsproject.org/>`_.
 
-* The **tutorial** which focuses on getting users started
-  solving partial differential equations (PDEs) in FEniCS. The
-  tutorial is self-contained and shows how to use FEniCS tools to
-  setup and solve problems. This is the ideal place to start for
-  newcomers to FEniCS and people who are simply curious to learn what
-  FEniCS is all about.
+.. include:: dolfin/dolfin-dev/index.rst
 
-* The **demos** which is a collection of *ready to run code
-  examples* that demonstrate many of the features of FEniCS. The demos
-  can also serve as code templates for users who wish to implement
-  their own solvers in FEniCS.
+For other versions, see
 
-* The **programmers reference** which contains detailed documentation
-  of the FEniCS user interface.
+.. toctree::
 
-Each part is available in both a C++ and a Python version.
+   DOLFIN 0.9.11 <dolfin/dolfin-0.9.11/index>
 
-Suggestions on how to improve the FEniCS software and the
-documentation are very welcome. Please see :ref:`contributing` for how
-to proceed.
+We have been too busy coding to get the documentation of the other
+FEniCS components in place, so please wait. Suggestions on how to
+improve the FEniCS software and the documentation are very
+welcome. Please see :ref:`contributing` for how to proceed.
 
-.. .. toctree::
-..     :hidden:
+.. toctree::
+   :hidden:
 
-..     Tutorial <tutorial/index>
-..     DOLFIN <dolfin/index>
+   DOLFIN-dev <dolfin/dolfin-dev/index>
+   Tutorial <dolfin/tutorial/index>
+
 ..     UFL <ufl/index>
 ..     FFC <ffc/index>
 ..     UFC <ufc/index>
