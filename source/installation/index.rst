@@ -7,11 +7,12 @@ Installation instructions
 #########################
 
 Obtaining and installing FEniCS have never been easier. Packages are
-available for Debian/Ubuntu, Mac OS X and Windows users, and we provide
-a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for
-simple builds of FEniCS on a multitude of platforms. It is also possible
-to download source tarballs for all components. For information on
-accessing the development repositories, see :ref:`developer`.
+available for Debian/Ubuntu, Mac OS X and Windows users, and we
+provide a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for
+simple builds of FEniCS on a multitude of platforms. It is also
+possible to download source tarballs for all components. For
+information on accessing the development repositories, see
+:ref:`developers`.
 
 
 *****************
@@ -22,7 +23,7 @@ Debian
 ======
 
 FEniCS is included as part of Debian GNU/Linux (squeeze/testing and
-sid/unstable). To install, simply click `here <apt://fenics>`_
+sid/unstable). To install, simply click `here <apt://fenics>`__
 (requires ``aptlinex``). FEniCS can also be installed by running the
 following command::
 
@@ -32,7 +33,7 @@ Ubuntu
 ======
 
 FEniCS is included as part of Ubuntu GNU/Linux (starting with
-10.04/Lucid). To install, simply click `here <apt://fenics>`_
+10.04/Lucid). To install, simply click `here <apt://fenics>`__
 (requires ``apturl``) or install from the Ubuntu Software
 Center. FEniCS can also be installed by running the following
 command::

@@ -83,3 +83,8 @@ FEniCS. As an active developer, it is easy to influence the direction
 and focus of the project. The step from user to developer is just a
 patch away! For information about how to contribute code to the FEniCS
 Project, visit the page :ref:`developers`.
+
+.. toctree::
+    :hidden:
+
+    launchpad_pages

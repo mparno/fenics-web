@@ -1,10 +1,10 @@
 .. Overview of launchpad links for quick reference
 
+.. _launchpad_pages:
+
 ###########################
 Overview of Launchpad pages
 ###########################
-
-.. _launchpad_pages:
 
 This page contains links to all FEniCS projects on Launchpad for convenience.
 

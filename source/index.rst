@@ -1,5 +1,5 @@
-######
-######
+.. ######
+.. ######
 
 Experimenting with main contents
 --------------------------------
@@ -27,5 +27,5 @@ Experimenting with news feed
     installation/index
     contact/index
     documentation/index
-    developer/index
-    cite/index
+    developers/index
+    citing/index
