@@ -88,7 +88,7 @@ the DOLFIN C++ code and may need to be edited or expanded.""", 4)
     output += "\n"
 
     # Write reST for all functions
-    for (classname, parent, comment, function_documentation) in documentation:
+    for (classname, parents, comment, function_documentation) in documentation:
 
         # Document class
         if classname is not None:
@@ -98,10 +98,16 @@ the DOLFIN C++ code and may need to be edited or expanded.""", 4)
             output += "\n"
 
             # Write header if any
-            if parent is not None:
-                output += indent("*Parent class*\n", 4)
-                output += "\n"
-                output += indent("* :cpp:class:`%s`\n" % parent, 8)
+            if parents is not None:
+                if len(parents) == 1:
+                    output += indent("*Parent class*\n", 4)
+                    output += "\n"
+                    output += indent("* :cpp:class:`%s`\n" % parents[0], 8)
+                else:
+                    output += indent("*Parent classes*\n", 4)
+                    for parent in parents:
+                        output += "\n"
+                        output += indent("* :cpp:class:`%s`\n" % parent, 8)
                 output += "\n"
 
             # Write class documentation
@@ -175,8 +181,8 @@ def generate_index(module, headers):
 documentation, classnames = extract_doc_representation(dolfin_dir)
 for module in documentation:
 
-    if module != "adaptivity":
-        continue
+    #if module != "adaptivity":
+    #    continue
 
     # Write documentation
     print "\nWriting documentation for module %s..." % module
@@ -198,7 +204,7 @@ Programmer's reference for DOLFIN-%s (C++)
 
 .. toctree::
    :glob:
-   :maxdepth: 2
+   :maxdepth: 1
 
    */index
 """ % (VERSION, VERSION)
