@@ -10,7 +10,7 @@ make clean
 # input for instance) to generate reST files
 
 cd scripts
-export DOLFIN_DIR=/home/meg/local/fenics/fenics-dev/src/dolfin
+export DOLFIN_DIR=/home/meg/local/fenics/src/dolfin
 ./generate_programmers_reference_cpp
 cd ..
 
