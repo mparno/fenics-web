@@ -22,8 +22,7 @@ FEniCS components in place, so please wait. Suggestions on how to
 improve the FEniCS software and the documentation are very
 welcome. Please see :ref:`contributing` for how to proceed.
 
-..     UFL <ufl/index>
-..     FFC <ffc/index>
-..     UFC <ufc/index>
-..     styleguides/index
+.. toctree::
+   :hidden:
 
+   tutorial/index

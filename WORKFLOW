@@ -14,11 +14,12 @@ export DOLFIN_DIR=/home/meg/local/fenics/fenics-dev/src/dolfin
 ./generate_programmers_reference_cpp
 cd ..
 
-## Scripts should generate reST files for each header file + index file
-## for each module, reST files for demos, index file for this release.
+## Scripts should generate reST files for each header file + index
+## file for each module (check), reST files for demos (needs
+## updating), index file for this release (TODO)
 
 ## (If new directory, add to version control.) Commit generated reST
-##  files.
+## files.
 
 ## Update documentation/index.rst to point to latest stable version
 

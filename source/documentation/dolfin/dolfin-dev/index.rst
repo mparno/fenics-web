@@ -27,3 +27,8 @@ at random intervals). This documentation comprises three main parts:
 
 The tutorial is available in Python. The demos are available in both
 C++ and Python. The Programmer's Reference is available in C++.
+
+.. toctree::
+   :hidden:
+
+   /documentation/dolfin/dolfin-dev/programmers-reference/cpp/index.rst
