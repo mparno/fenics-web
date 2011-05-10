@@ -15,13 +15,16 @@ __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
 # Modified by Kristian B. Oelgaard, 2010.
-# Last changed: 2011-05-04
+# Last changed: 2011-05-10
 
 import os, sys
 
+# Set version number
+VERSION = "dev"
+
 # Set output directory
 output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "doc/dolfin/programmers-reference", "cpp")
+                          os.pardir, "source", "documentation/dolfin/dolfin-%s/programmers-reference" % VERSION, "cpp")
 
 # Set directory for DOLFIN source code
 if not "DOLFIN_DIR" in os.environ:
@@ -36,10 +39,6 @@ from dolfin_utils.documentation import extract_doc_representation, indent, add_l
 
 def write_documentation(documentation, header, module, classnames):
     "Write documentation for given header in given module"
-
-    # For quick testing
-#    if not header == "Mesh.h":
-#        return
 
     print "  Writing documentation for %s..." % header
 
@@ -160,10 +159,11 @@ def generate_index(module, headers):
 %s
 
 .. toctree::
-    :maxdepth: 2
+   :glob:
+   :maxdepth: 2
 
-%s
-""" % (module, module, stars, heading, stars, contents))
+   *
+""" % (module, module, stars, heading, stars))
 
     # Close file
     f.close()
@@ -171,6 +171,9 @@ def generate_index(module, headers):
 # Get representation and write documentation.
 documentation, classnames = extract_doc_representation(dolfin_dir)
 for module in documentation:
+
+    if module != "adaptivity":
+        continue
 
     # Write documentation
     print "\nWriting documentation for module %s..." % module
@@ -181,6 +184,25 @@ for module in documentation:
 
     # Generate index
     generate_index(module, headers)
+
+# Generate index for this version
+version_index_template = """\
+.. _documentation_dolfin_dolfin_%s_programmers_reference_cpp_index:
+
+#############################################
+Programmer's reference for DOLFIN-%s (C++)
+#############################################
+
+.. toctree::
+   :glob:
+   :maxdepth: 2
+
+   */index
+""" % (VERSION, VERSION)
+
+main_index_file = open(os.path.join(output_dir, "index.rst"), "w")
+main_index_file.write(version_index_template)
+main_index_file.close()
 
 # Print a message
 print

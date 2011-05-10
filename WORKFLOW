@@ -1,0 +1,26 @@
+
+# ---------------------------------------------------------------
+# Tentative work flow for updating documentation for new releases
+# ---------------------------------------------------------------
+
+# Make clean
+make clean
+
+# Run generate_programmers_reference scripts (with version number as
+# input for instance) to generate reST files
+
+cd scripts
+export DOLFIN_DIR=/home/meg/local/fenics/fenics-dev/src/dolfin
+./generate_programmers_reference_cpp
+cd ..
+
+## Scripts should generate reST files for each header file + index file
+## for each module, reST files for demos, index file for this release.
+
+## (If new directory, add to version control.) Commit generated reST
+##  files.
+
+## Update documentation/index.rst to point to latest stable version
+
+## Update html files
+make html

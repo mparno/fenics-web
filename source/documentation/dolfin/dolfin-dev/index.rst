@@ -16,14 +16,14 @@ at random intervals). This documentation comprises three main parts:
   .. :download:`FEniCS tutorial
   .. (Python)<../../../_static/fenics-tutorial-python.pdf>`.
 
-
 * The **demos** which is a collection of *ready to run code
   examples* that demonstrate many of the features of FEniCS. The demos
   can also serve as code templates for users who wish to implement
   their own solvers in FEniCS.
 
-* The **Programmer's Reference** which contains detailed documentation
-  of the FEniCS user interface.
+* The
+  :ref:`documentation_dolfin_dolfin_dev_programmers_reference_cpp_index`
+  which contains detailed documentation of the FEniCS user interface.
 
 The tutorial is available in Python. The demos are available in both
 C++ and Python. The Programmer's Reference is available in C++.
