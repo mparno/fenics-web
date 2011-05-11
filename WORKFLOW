@@ -6,12 +6,16 @@
 # Make clean
 make clean
 
-# Run generate_programmers_reference scripts (with version number as
-# input for instance) to generate reST files
+## Run generate_programmers_reference scripts (with version number as
+## input for instance) to generate reST files
+
+# Set PATHS to DOLFIN and DOLFIN installation. (User specific)
+export DOLFIN_DIR=/home/meg/local/fenics/src/dolfin
+export PYTHONPATH=/home/meg/local/fenics/lib/python2.7/site-packages:/home/meg/local/fenics/src/dolfin/local/lib/python2.7/site-packages:$PYTHONPATH
 
 cd scripts
-export DOLFIN_DIR=/home/meg/local/fenics/src/dolfin
 ./generate_programmers_reference_cpp
+./generate_programmers_reference_python
 cd ..
 
 ## Scripts should generate reST files for each header file + index

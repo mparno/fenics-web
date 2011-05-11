@@ -9,12 +9,14 @@ __copyright__ = "Copyright (C) 2010 " + __author__
 __license__  = "GNU GPL version 3 or any later version"
 
 # Modified by Anders Logg, 2011
-# Last changed: 2011-05-01
+# Last changed: 2011-05-11
 
 import os, sys, types
 
 # List of modules to generate documentation for
-module_names = ["dolfin", "ffc", "ufl"]
+module_names = ["dolfin"]#, "ffc", "ufl"]
+
+VERSION = "dev"
 
 # Import modules
 modules = []
@@ -119,7 +121,8 @@ def caption(string, level, top=False):
     return "%s\n%s\n" % (string, markers)
 
 def label(package_name, name):
-    output = ".. _doc_%s_programmers_reference_" % package_name
+    output = ".. _documentation_%s_%s_%s_programmers_reference_"\
+        % (package_name, package_name, VERSION)
     if package_name == "dolfin":
         output += "python_"
     return output + "%s:\n\n" % name
@@ -137,8 +140,12 @@ def write_object(package_name, directory, module_name, name, obj_type):
     f.close()
 
 def write_documentation(package_name, module):
-    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),\
-                          os.pardir, "source", "doc", package_name, "programmers-reference")
+
+    package_version = package_name + "-" + VERSION
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              os.pardir, "source", "documentation",
+                              package_name, package_version,
+                              "programmers-reference")
     if package_name == "dolfin":
         output_dir = os.path.join(output_dir, "python")
     dirs = [output_dir]
@@ -164,7 +171,7 @@ def write_documentation(package_name, module):
     output += label(package_name, "_".join(module.name.split(".")[1:] + ["index"]))
 
     if module.name == package_name and package_name == "dolfin":
-        output += caption("Python programmer's reference", "#")
+        output += caption("Programmer's reference for DOLFIN-%s (Python)" % VERSION, "#")
     elif module.name == package_name:
         output += caption("Programmer's reference", "#")
     else:
@@ -201,15 +208,15 @@ if __name__ == "__main__":
 
     # Generate documentation for all modules
     for mod in modules:
+
         print "\nWriting files for module: ", mod.__name__
-        submods = [Module(mod.__name__, os.path.join(os.path.dirname(mod.__file__), "__init__.py"))]
+        submods = [Module(mod.__name__,
+                          os.path.join(os.path.dirname(mod.__file__),
+                                       "__init__.py"))]
+
         get_modules(submods[0], os.path.dirname(mod.__file__), submods)
+
         for submod in sorted(submods, key=lambda o: o.name):
-            #        if not submod[0] == "ffc.errorcontrol.errorcontrol":
-            #        if not submod[0] == "ffc.quadrature.symbolics":
-            #        if not submod[0] == "dolfin.compilemodules.compilemodule":
-            #        if not submod[0] == "dolfin.function.function":
-            #            continue
             print "  Writing files for sub module: ", submod.name
             write_documentation(mod.__name__, submod)
 
