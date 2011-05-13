@@ -4,6 +4,8 @@ __license__  = "GNU LGPL version 3 or any later version"
 
 # Last changed: 2011-05-13
 
+__all__ = ["generate_dolfin_doc"]
+
 import os
 
 from generatecpprest import generate_cpp_api_documentation

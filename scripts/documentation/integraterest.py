@@ -8,6 +8,8 @@ __license__  = "GNU LGPL version 3 or any later version"
 
 # Last changed: 2011-05-13
 
+__all__ = ["init_sphinx_project_for_dolfin"]
+
 import os, shutil
 
 def init_sphinx_project_for_dolfin(project_dir, web_dir):
