@@ -63,13 +63,6 @@ for those preferring the command-line:
     sudo apt-get update
     sudo apt-get install fenics
 
-.. note::
-
-    The ``add-apt-repository`` command is not available on older (pre
-    9.10) Ubuntu systems. Please see the `FEniCS PPA page
-    <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
-    these systems.
-
 Mac OS X
 ========
 
