@@ -63,6 +63,13 @@ for those preferring the command-line:
     sudo apt-get update
     sudo apt-get install fenics
 
+.. note::
+
+    Make sure to upgrade your packages after adding the FEniCS PPA. This
+    can be done simply by running ``sudo apt-get dist-upgrade`` in a
+    terminal or by going to **System > Administration > Update Manager**
+    and upgrade the packages from there.
+
 Mac OS X
 ========
 
