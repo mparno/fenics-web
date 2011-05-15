@@ -73,11 +73,6 @@ for those preferring the command-line:
 Mac OS X
 ========
 
-The Mac OS X binary installer is a *beta-quality release* based on
-unstable FEniCS packages. We encourage you to test and report
-issues. Other comments or suggestions for improvements are also much
-appreciated.
-
 The FEniCS binary for OS X runs on Intel 10.6 only. *10.5 and older and
 the PowerPC architecture are not supported.* XCode 3 (available on the
 OS X install disc) is required to run the binary.
