@@ -7,12 +7,11 @@ Installation instructions
 #########################
 
 Obtaining and installing FEniCS have never been easier. Packages are
-available for Debian/Ubuntu, Mac OS X and Windows users, and we
-provide a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for
-simple builds of FEniCS on a multitude of platforms. It is also
-possible to download source tarballs for all components. For
-information on accessing the development repositories, see
-:ref:`developers`.
+available for Debian/Ubuntu, Mac OS X and Windows users, and we provide
+a framework (`Dorsal <http://launchpad.net/dorsal/>`_) for simple builds
+of FEniCS on a multitude of platforms. It is also possible to download
+source tarballs for all components. For information on accessing the
+development repositories, see :ref:`developer`.
 
 
 *****************
@@ -66,18 +65,13 @@ for those preferring the command-line:
 
 .. note::
 
-    The ``add-apt-repository`` command is not available on older (pre
-    9.10) Ubuntu systems. Please see the `FEniCS PPA page
-    <https://launchpad.net/~fenics/+archive/ppa>`_ for instructions on
-    these systems.
+    Make sure to upgrade your packages after adding the FEniCS PPA. This
+    can be done simply by running ``sudo apt-get dist-upgrade`` in a
+    terminal or by going to **System > Administration > Update Manager**
+    and upgrade the packages from there.
 
 Mac OS X
 ========
-
-The Mac OS X binary installer is a *beta-quality release* based on
-unstable FEniCS packages. We encourage you to test and report
-issues. Other comments or suggestions for improvements are also much
-appreciated.
 
 The FEniCS binary for OS X runs on Intel 10.6 only. *10.5 and older and
 the PowerPC architecture are not supported.* XCode 3 (available on the
