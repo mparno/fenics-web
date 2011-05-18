@@ -77,7 +77,7 @@ The FEniCS binary for OS X runs on Intel 10.6 only. *10.5 and older and
 the PowerPC architecture are not supported.* XCode 3 (available on the
 OS X install disc) is required to run the binary.
 
-* Install `FEniCS <http://www.fenicsproject.org/pub/software/fenics/fenics-11.02-osx10.6.dmg>`_
+* Install `FEniCS <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-osx10.6.dmg>`_
 
 The installer should be mounted automatically after the download
 completes. Otherwise, double-click on the ``.dmg`` file to fire up the
@@ -115,7 +115,7 @@ FEniCS on Windows, including MinGW compilers, Python, CMake, SWIG, and
 others. It has been verified to run on XP, Vista, and on Windows 7.
 
 You can download the installer by clicking `here
-<http://www.fenicsproject.org/pub/software/fenics/fenics-11.02-mingw32.exe>`_.
+<http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-mingw32.exe>`_.
 Then double-click on the file and follow the instructions. When the
 installation is complete, simply start the FEniCS command shell from the
 start menu and you are ready to start working.
