@@ -1,14 +1,10 @@
 <div class="fetched-news">
 
 <TMPL_LOOP Items>
-
-<div class="news-item">
-<div class="title"><a href="<TMPL_VAR link>"><TMPL_VAR title></a></div>
-<div class="author"><TMPL_VAR author></div>
-<div class="date"><TMPL_VAR date></div>
-<div class="content"><TMPL_VAR content></div>
-</div>
-
+<li>
+<img class="avatar" src="_static/<TMPL_VAR channel_face ESCAPE="HTML">" width="14" height="14" alt="<TMPL_VAR channel_title_plain ESCAPE="HTML"> icon">
+<a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR date>: <TMPL_VAR title></a>
+</li>
 </TMPL_LOOP>
 
 </div>
