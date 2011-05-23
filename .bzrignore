@@ -1,1 +1,5 @@
 build
+utils/newsfetcher/cache/*
+utils/newsfetcher/output/*
+*.tmplc
+

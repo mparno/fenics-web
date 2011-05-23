@@ -13,7 +13,7 @@
 # Modified by Anders Logg, 2011.
 
 # Fetch the news
-cd utils/newsfetcher
+cd ../utils/newsfetcher
 python planet.py sources.ini
 
 # Clean up the resulting output
