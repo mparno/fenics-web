@@ -51,7 +51,7 @@ Other operating systems and installation from source
 * `Automated installation using Dorsal
   <installation_using_dorsal.html>`_
 
-* `Manuall installation from source <installation_from_source.html>`_
+* `Manual installation from source <installation_from_source.html>`_
 
 #########################
 Nightly snapshot releases
