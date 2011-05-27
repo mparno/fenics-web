@@ -35,7 +35,7 @@ system. You can do this by running the following commands in a terminal:
     sudo apt-get update
     sudo apt-get install fenics
 
-If you exeperience problems with the FEniCS packages after adding the
+If you experience problems with the FEniCS packages after adding the
 FEniCS PPA, make sure that all packages are up-to-date by running the
 following command in a terminal::
 
