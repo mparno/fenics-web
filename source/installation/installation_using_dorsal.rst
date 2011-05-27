@@ -1,0 +1,51 @@
+###################################
+Automated installation using Dorsal
+###################################
+
+If you are not running one of the operating systems we provide binary
+packages for, you need to download and compile FEniCS and all its
+dependencies. Luckily, this can be handled easily using `Dorsal
+<https://launchpad.net/dorsal>`__.  Dorsal is a simple shell script that
+automates the process of fetching, compiling, and installing the various
+FEniCS sub-projects and their requisite dependencies on Unix-like
+operating systems.
+
+The following platforms are officially supported by Dorsal:
+
+* Debian GNU/Linux (squeeze/testing, sid/unstable)
+* Fedora 13
+* Gentoo Linux
+* Mac OS X (Snow Leopard)
+* openSUSE 11.3
+* Ubuntu (10.04/Lucid and 10.10/Maverick)
+
+A number of other platforms are supported through user contributions.
+It is easy to extend support to other similar platforms. Please let us
+know if you are interested, and we can work together towards supporting
+your platform.
+
+In order to install FEniCS using Dorsal, simply follow these steps:
+
+#. Fetch the most recent version of Dorsal from its
+   `download page <https://launchpad.net/dorsal/+download>`_.
+#. Uncompress the archive to a convenient location.
+#. Navigate to this folder and tweak dorsal.cfg to your liking.
+#. Invoke the build script by running::
+
+    ./dorsal.sh
+
+#. At this point, Dorsal attempts to guess your operating system
+   (platform) and provides a list of instructions to ensure that your
+   system is ready for installing FEniCS. Go through these
+   instructions carefully, and copy and paste appropriate commands
+   into a separate terminal window to prepare your system.
+#. Once you have completed these steps, hit enter to begin the
+   installation!
+
+Once the build starts, you should see a lot of compilation-related
+text scrolling past your screen and eventually end up with a complete,
+up-to-date installation of FEniCS. It will take some time to build all
+the libraries, so be patient.
+
+Don't forget to follow any post-build instructions before rushing off
+to try the demos!
