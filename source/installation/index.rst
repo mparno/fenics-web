@@ -48,9 +48,11 @@ everything needed to get you started with FEniCS.
 Other operating systems and installation from source
 ####################################################
 
+If the binaries do not apply to you, or you want to install directly
+from source, try one of the two other possibilities:
+
 * `Automated installation using Dorsal
   <installation_using_dorsal.html>`_
-
 * `Manual installation from source <installation_from_source.html>`_
 
 #########################
@@ -74,3 +76,9 @@ Troubleshooting
 
 Visit the `troubleshooting page <troubleshooting.html>`_ if you have
 problems installing FEniCS.
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   *
