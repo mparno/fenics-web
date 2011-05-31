@@ -27,7 +27,7 @@ sys.path.append(os.path.abspath('.'))
 #extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
 #              'sphinx.ext.autodoc']
 extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', \
-              'sphinx.ext.autodoc', 'mathjax']
+              'sphinx.ext.autodoc', 'mathjax', 'sphinx.ext.todo']
 mathjax_path = 'http://mathjax.connectmv.com/MathJax.js'
 
 
@@ -246,3 +246,6 @@ pngmath_latex_preamble = r" \usepackage{stmaryrd} "
 
 def setup(app):
     app.connect('autodoc-skip-member', skip_member)
+
+# Include todo notes
+todo_include_todos = True
