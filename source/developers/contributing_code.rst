@@ -22,6 +22,8 @@ will be merged into the main branch by a member of the core team.
 .. how to format your code so that it matches the coding style used for
 .. FEniCS.
 
+.. _before_committing:
+
 Before committing your work
 ===========================
 
@@ -123,3 +125,11 @@ progress.  Using DOLFIN as an example, simply do the following:
 The procedure for using branches for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
 
+.. _bzr_branch_workflow:
+
+Recommended Bazaar workflow
+===========================
+
+.. todo::
+
+   Copy mailinglist discussion here.
