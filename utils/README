@@ -1,0 +1,3 @@
+To generate module documention for pure Python modules, use
+
+  ./generate_modules.py <module dir> --dest-dir=<dest dir> --suffix=rst

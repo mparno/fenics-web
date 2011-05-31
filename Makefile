@@ -1,9 +1,9 @@
 # Makefile for FEniCS documentation
 
 # You can set these variables from the command line
-SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
-PAPER         =
+SPHINXOPTS  =
+SPHINXBUILD = sphinx-build
+PAPER       =
 
 # Internal variables
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -33,10 +33,26 @@ clean:
 
 all:	clean latex pdf html
 
+update:
+	scripts/generate_programmers_reference_cpp
+	scripts/generate_programmers_reference_python
+	scripts/copy_demos_dolfin
+
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
 	@echo
-	@echo "Build finished. The HTML pages are in build/html."
+	@echo "Build finished. HTML generated in build/html."
+
+latex:
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
+	@echo
+	@echo "Build finished. LaTeX generated in build/latex."
+
+pdf:
+	make -C build/latex all-pdf
+
+
+# AL: Don't know what the stuff below is used for, might be removed
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) build/dirhtml
@@ -67,16 +83,6 @@ qthelp:
 	@echo "# qcollectiongenerator build/qthelp/FEniCS.qhcp"
 	@echo "To view the help file:"
 	@echo "# assistant -collectionFile build/qthelp/FEniCS.qhc"
-
-latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
-	@echo
-	@echo "Build finished; the LaTeX files are in build/latex."
-	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
-	      "run these through (pdf)latex."
-
-pdf:
-	make -C build/latex all-pdf
 
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) build/changes

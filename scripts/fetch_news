@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# This script aggregates news from a list of sources and generates
+# the file newsfeed.inc. This script should run as a cronjob on the
+# FEniCS web server.
+#
+# Copyright (C) 2011 Harish Narayanan.
+# Licensed under the GNU GPL version 3 or any later version.
+#
+# First added:  2011-05-04
+# Last changed: 2011-05-04
+#
+# Modified by Anders Logg, 2011.
+
+# Fetch the news
+cd ../utils/newsfetcher
+python planet.py sources.ini
+
+# Clean up the resulting output
+#perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' include.html
+#perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' feed.xml
+
+# FIXME: When this becomes a cronjob, it should be copied to
+# FIXME: the actual pages, not the source directory
+
+# Copy file to web pages
+cp output/include.html ../../source/newsfeed.inc

@@ -1,0 +1,15 @@
+.. This is the index page for the linear algebra C++ demos.
+
+.. _demos_la_cpp_index:
+
+**************
+Linear algebra
+**************
+
+Below is a list of demos which demonstrate how to solve linear algebra problems.
+
+.. toctree::
+    :maxdepth: 2
+    :numbered:
+
+    eigenvalue/cpp/documentation

@@ -18,13 +18,17 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.append(os.path.abspath('programmers-reference/python/docstrings'))
 
+sys.path.append(os.path.abspath('.'))
+
 # -- General configuration -----------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
-              'sphinx.ext.autodoc']
-
+#extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
+#              'sphinx.ext.autodoc']
+extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', \
+              'sphinx.ext.autodoc', 'mathjax']
+mathjax_path = 'http://mathjax.connectmv.com/MathJax.js'
 
 
 # Add the docstring from class.__init__ to class.__doc__ when documenting the
@@ -118,9 +122,10 @@ pygments_style = 'sphinx'
 #html_theme = 'nature'
 #html_theme = 'scrolls'
 #html_theme = 'sphinxdoc'
-html_theme = 'slim-agogo'
+#html_theme = 'slim-agogo'
 #html_theme = 'classy'
 #html_theme = 'traditional'
+html_theme = 'fenics'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
