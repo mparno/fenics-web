@@ -14,17 +14,58 @@ DOLFIN
 ------
 
 - Logg, A. and Wells, G.N. (2010). DOLFIN: Automated finite element
-  computing, ACM Transactions on Mathematical Software, 37(2), Article
-  20, 28 pages, http://dx.doi.org/10.1145/1731022.1731030.
+  computing, ACM Transactions on Mathematical Software, 37(2):417--444,
+  http://dx.doi.org/10.1145/1731022.1731030.
+
+- Logg, A., Wells, G.N., et al. (2011).
+  DOLFIN: A C++/Python finite element library,
+  https://launchpad.net/dolfin.
+
 
 FFC
 ---
 
+- Kirby, R.C. and Logg, A. (2006).
+  A compiler for variational forms,
+  ACM Transactions on Mathematical Software 32(3), Article 20, 28 pages,
+  http://dx.doi.org/10.1145/1163641.1163644.
+
+- Ølgaard, K.B., Logg, A., and Wells, G.N. (2008).
+  Automated code generation for discontinuous Galerkin methods,
+  SIAM Journal on Scientific Computing 31(2):849-864,
+  http://dx.doi.org/10.1137/070710032.
+
+- Ølgaard, K.B. and Wells, G.N. (2010).
+  Optimisations for quadrature representations of finite element tensors
+  through automated code generation,
+  ACM Transactions on Mathematical Software 37(1), Article 8, 23 pages,
+  http://dx.doi.org/10.1145/1644001.1644009.
+
+- Logg, A., Ølgaard, K.B., Rognes, M.E. and Wells, G.N. (2011).
+  FFC: FEniCS Form Compiler,
+  https://launchpad.net/ffc.
+
+
 FIAT
 ----
+
+- Kirby, R.C. (2004).
+  Algorithm 839: FIAT, a new paradigm for computing finite element
+  basis functions,
+  ACM Transactions on Mathematical Software 30(4):502--516,
+  http://dx.doi.org/10.1145/1039813.1039820.
+
+- Kirby R.C. (2011).
+  FIAT: FInite element Automatic Tabulator,
+  https://launchpad.net/fiat.
 
 UFC
 ---
 
+
 UFL
 ---
+
+- Alnaes, M.S., Logg A., Ølgaard, K.B., Rognes, M.E. and Wells, G.N. (2011).
+  UFL: Unified Form Language,
+  https://launchpad.net/ufl.
