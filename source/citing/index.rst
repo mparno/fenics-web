@@ -17,7 +17,7 @@ DOLFIN
   computing, ACM Transactions on Mathematical Software, 37(2):417--444,
   http://dx.doi.org/10.1145/1731022.1731030.
 
-- Logg, A., Wells, G.N., et al. (2011).
+- Hake, J., Logg, A., Wells, G.N., et al. (2011).
   DOLFIN: A C++/Python finite element library,
   https://launchpad.net/dolfin.
 
@@ -59,8 +59,17 @@ FIAT
   FIAT: FInite element Automatic Tabulator,
   https://launchpad.net/fiat.
 
+
 UFC
 ---
+
+- Alnaes, M.S. and Logg, A. and Mardal, K.A. and Skavhaug, O. (2009).
+  Unified framework for finite element assembly,
+  International Journal of Computational Science and Engineering 4(4):231--244.
+
+- Alnaes, M.S., Hake, J., Logg, A. and Wells, G.N. (2011).
+  UFC: Unified Form-assembly Code,
+  https://launchpad.net/ufc.
 
 
 UFL
