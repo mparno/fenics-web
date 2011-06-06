@@ -35,6 +35,11 @@ FFC
   SIAM Journal on Scientific Computing 31(2):849-864,
   http://dx.doi.org/10.1137/070710032.
 
+- Rognes, M.E., Kirby, R.C. and Logg, A. (2009),
+  Efficient Assembly of $H(\mathrm{div})$ and $H(\mathrm{curl})$
+  Conforming Finite Elements 31(6):4130--4151,
+  http://dx.doi.org/10.1137/08073901X.
+
 - Ølgaard, K.B. and Wells, G.N. (2010).
   Optimisations for quadrature representations of finite element tensors
   through automated code generation,
