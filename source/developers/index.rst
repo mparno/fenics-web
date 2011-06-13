@@ -68,4 +68,3 @@ Be kind to your fellow developers and follow these guidelines:
 
 #. Do not rewrite history
    (:ref:`More details <bzr_branch_workflow>`)
-
