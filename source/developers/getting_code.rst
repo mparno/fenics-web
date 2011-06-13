@@ -1,8 +1,8 @@
 .. _developers_getting_code:
 
-***********************
-Getting the source code
-***********************
+*************************
+Obtaining the source code
+*************************
 
 FEniCS uses Launchpad for hosting code. Each FEniCS component has a
 `Bazaar <http://bazaar.canonical.com/en/>`_ repository on Launchpad
