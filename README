@@ -1,19 +1,19 @@
-# Last changed: 2011-06-06
+# Last changed: 2011-06-13
 
 FEniCS documentation and webpage
 --------------------------------
 
 * How to: generate web pages
 
-  Run:
+    make html
 
-  make html
+  This will read .rst files from the 'source' directory
+  and generate .html files in the 'build/html' directory.
 
-* How to: upload generated html (from build/html) to
-  fenicsproject.org/new
+* How to: publish web pages
 
-  Run:
+    ./publish.sh
 
-  ./publish.sh
-
-
+  This will upload the generated pages from 'build/html'
+  to fenicsproject.org/new. Running this script requires
+  access to the account fenics@fenicsproject.org.
