@@ -4,9 +4,14 @@
 
 .. include:: icons.rst
 
-###############
+
+########
+Download
+########
+
+***************
 Binary packages
-###############
+***************
 
 This is the main FEniCS download, suitable for most users. It includes
 everything needed to get you started with FEniCS.
@@ -44,9 +49,9 @@ everything needed to get you started with FEniCS.
 
       - For detailed instructions, click `here <windows_details.html>`__
 
-####################################################
+****************************************************
 Other operating systems and installation from source
-####################################################
+****************************************************
 
 If the binaries do not apply to you, or you want to install directly
 from source, try one of the two other possibilities:
@@ -55,24 +60,24 @@ from source, try one of the two other possibilities:
   <installation_using_dorsal.html>`_
 * `Manual installation from source <installation_from_source.html>`_
 
-#########################
+*************************
 Nightly snapshot releases
-#########################
+*************************
 
 Every night, FEniCS snapshot releases are automatically generated
 for Ubuntu, Mac OS X, and Windows. They are made available at our
 `snapshots page <snapshot_releases.html>`_.
 
-###################
+*******************
 Development version
-###################
+*******************
 
 For information on accessing the development repositories, see
 :ref:`developers`.
 
-###############
+***************
 Troubleshooting
-###############
+***************
 
 Visit the `troubleshooting page <troubleshooting.html>`_ if you have
 problems installing FEniCS.
