@@ -1,0 +1,5 @@
+This directory contains sources for API and demos imported from the
+various FEniCS components. The documentation resides in (or is
+generated as part of) each separate component. It is imported to this
+location for archival and publication on the FEniCS web page. The
+import is handled by the import_docs script.
