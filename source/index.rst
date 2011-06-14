@@ -25,7 +25,7 @@ Experimenting with news feed
 
     about/index
     installation/index
-    contact/index
-    documentation/index
-    developers/index
+    doc/index
+    dev/index
     citing/index
+    contact/index
