@@ -27,16 +27,16 @@ documentation for different versions of DOLFIN, UFL and other FEniCS
 components.
 
 .. list-table::
-    :widths: 50 50 50 50 150
+    :widths: 100 50 50 50 175
     :header-rows: 0
     :class: center
 
-    * - DOLFIN
+    * - DOLFIN (API)
       - 1.0.0
       - 0.9.12
       - 0.9.11
       - development version
-    * - UFL
+    * - UFL (API)
       - 1.0.0
       - 0.9.2
       - 0.9.1
@@ -55,7 +55,19 @@ A simple way to build your first FEniCS application is to copy and
 modify one of the existing demos from DOLFIN. These demos can be found
 either in the ``demo`` directory of the DOLFIN source tree or under
 the directory ``/usr/share/doc/dolfin-doc/demo`` if you have installed
-FEniCS from a binary package.
+FEniCS from a binary package. The table below provides links to demo
+documentation for different versions of DOLFIN.
+
+.. list-table::
+    :widths: 100 50 50 50 175
+    :header-rows: 0
+    :class: center
+
+    * - DOLFIN (demos)
+      - 1.0.0
+      - 0.9.12
+      - 0.9.11
+      - development version
 
 .. note::
 
