@@ -24,7 +24,7 @@ Experimenting with news feed
     :hidden:
 
     about/index
-    installation/index
+    download/index
     doc/index
     dev/index
     citing/index
