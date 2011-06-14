@@ -45,7 +45,7 @@ The following pages list important instructions for FEniCS developers.
    :maxdepth: 1
 
    Taking part in the development <taking_part>
-   Obtaining the source code <getting_code>
+   Obtaining the source code <obtaining_code>
    Writing code <writing_code>
    contributing_code
 

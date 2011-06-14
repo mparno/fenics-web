@@ -38,3 +38,11 @@ language.  Good starting points are `reStructuredText primer
 
 Further guidelines are given in the
 :ref:`developers_styleguide_documentation`.
+
+.. include linked documents in toctree to avoid Sphinx warning
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    styleguide_cpp
+    styleguide_doc
