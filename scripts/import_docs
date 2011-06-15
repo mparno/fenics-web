@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+#
+# This script imports API and demo documentation for various FEniCS
+# components into the doc directory, adds the files to version control
+# (only .rst, not .html), builds the html, and copies to the main
+# build tree for (later) upload together with rest of the web pages.
+#
+# Copyright (C) 2011 Anders Logg.
+# Licensed under the GNU GPL version 3 or any later version.
+#
+# First added:  2011-06-14
+# Last changed: 2011-06-15
+#
+# Modified by Anders Logg, 2011.
+
+# Check that import directories are set
+if [ x$DOLFIN_DIR == x ]; then
+    echo "* Error: DOLFIN_DIR has not been set"
+    exit 1
+fi
+if [ x$UFL_DIR == x ]; then
+    echo "* Error: UFL_DIR has not been set"
+    exit 1
+fi
+
+# Rsync command
+RSYNC="rsync -av --delete --exclude build --exclude scripts"
+
+# Command for import doc
+import_doc()
+{
+    # Get arguments
+    package=$1
+    PACKAGE=`echo $package | tr 'a-z' 'A-Z'`
+    DOCDIR=$2
+    SUFFIX=$3
+
+    # Get package directory
+    PACKAGE_DIR_VARIABLE="${PACKAGE}_DIR"
+    PACKAGE_DIR=`printenv $PACKAGE_DIR_VARIABLE`
+
+    # Check that package directory has been set
+    if [ x$PACKAGE_DIR == x ]; then
+        echo "* Error: $PACKAGE_DIR_VARIABLE has not been set"
+        exit 1
+    fi
+
+    # Get package version
+    PACKAGE_VERSION=`$package-version`
+
+    # Modify version number if necessary (+ --> dev)
+    if [[ $PACKAGE_VERSION == *+ ]]; then
+        PACKAGE_VERSION="dev"
+    fi
+
+    # Set directories for documentation
+    DOC_FROM="$PACKAGE_DIR/$DOCDIR/"
+    DOC_TO="doc/$package/$PACKAGE_VERSION/$SUFFIX"
+
+    echo "Copying documentation for $PACKAGE version $PACKAGE_VERSION"
+    echo "  from: $DOC_FROM"
+    echo "  to:   $DOC_TO"
+
+    # Copy documentation files
+    mkdir -p $DOC_TO
+    $RSYNC $DOC_FROM $DOC_TO
+
+    # Copy common FEniCS template
+    $RSYNC source/_themes/fenics/ $DOC_TO/source/_themes/fenics/
+
+    # Add to bzr
+    bzr add $DOC_TO/Makefile $DOC_TO/source
+
+    # Build HTML
+    pushd .
+    cd $DOC_TO
+    make html
+    popd
+
+    # Copy HTML to main build tree
+    HTML_DIR="build/html/doc/$package/$PACKAGE_VERSION/$SUFFIX"
+    mkdir -p $HTML_DIR
+    $RSYNC $DOC_TO/build/html/ $HTML_DIR
+}
+
+# Import documentation for all packages
+import_doc dolfin build/doc/sphinx-cpp    cpp
+import_doc dolfin build/doc/sphinx-python python
+import_doc ufl    doc/sphinx
