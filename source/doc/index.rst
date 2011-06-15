@@ -9,10 +9,12 @@ Tutorial
 ********
 
 A good starting point for new users is the :ref:`FEniCS tutorial
-<doc_tutorial>`. The tutorial will help you get quickly up and running
+<tutorial>`. The tutorial will help you get quickly up and running
 with solving differential equations in FEniCS. The tutorial focuses
 exclusively on the FEniCS Python interface, since this is the simplest
 approach to exploring FEniCS for beginners.
+
+.. _programmers_references:
 
 **********************
 Programmer's reference

@@ -36,4 +36,5 @@ All software tools are available under open sources licenses, see
 .. toctree::
    :hidden:
 
+   components
    license

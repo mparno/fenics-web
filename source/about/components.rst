@@ -14,6 +14,8 @@ each individual component.
 Core components
 ***************
 
+.. _about_projects_dolfin:
+
 DOLFIN
 ======
 
@@ -69,6 +71,7 @@ consists of a single header file ufc.h that specifies a C++ interface
 that must be implemented by code that complies with the UFC
 specification.
 
+.. _about_projects_ufl:
 
 UFL
 ===

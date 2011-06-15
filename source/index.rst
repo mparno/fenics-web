@@ -28,4 +28,5 @@ Experimenting with news feed
     doc/index
     dev/index
     citing/index
+    book/index
     contact/index

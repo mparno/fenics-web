@@ -36,8 +36,7 @@ language.  Good starting points are `reStructuredText primer
 <http://sphinx.pocoo.org/rest.html>`_ and `Sphinx Markup Constructs
 <http://sphinx.pocoo.org/markup/index.html>`_.
 
-Further guidelines are given in the
-:ref:`developers_styleguide_documentation`.
+Further guidelines are given in the :ref:`styleguide_documentation`.
 
 .. include linked documents in toctree to avoid Sphinx warning
 .. toctree::
