@@ -31,21 +31,35 @@ components.
     :header-rows: 0
     :class: center
 
-    * - DOLFIN (API)
+    * - DOLFIN (Python API)
       - 1.0.0
       - 0.9.12
       - 0.9.11
-      - development version
+      - `development version <http://www.fenicsproject.org/new/doc/dolfin/dev/python/genindex.html>`__
+    * - DOLFIN (C++ API)
+      - 1.0.0
+      - 0.9.12
+      - 0.9.11
+      - `development version <http://www.fenicsproject.org/new/doc/dolfin/dev/cpp/genindex.html>`__
     * - UFL (API)
       - 1.0.0
       - 0.9.2
       - 0.9.1
-      - development version
+      - `development version <http://www.fenicsproject.org/new/doc/ufl/dev/genindex.html>`__
 
 .. toctree::
    :hidden:
 
    tutorial/index
+
+.. note::
+    Figure out how to set relative paths rather than absolute paths as above.
+
+.. note::
+    Replace index.html by genindex.html in above links
+
+.. note::
+    Make page title more verbose for each link, like "DOLFIN C++ API version x.y.z"
 
 *****
 Demos
@@ -60,11 +74,16 @@ links to demo documentation for different DOLFIN versions.
     :header-rows: 0
     :class: center
 
-    * - DOLFIN (demos)
+    * - DOLFIN (Python demos)
       - 1.0.0
       - 0.9.12
       - 0.9.11
-      - development version
+      - `development version <http://www.fenicsproject.org/new/doc/dolfin/dev/python/demo>`__
+    * - DOLFIN (C++ demos)
+      - 1.0.0
+      - 0.9.12
+      - 0.9.11
+      - `development version <http://www.fenicsproject.org/new/doc/dolfin/dev/cpp/demo>`__
 
 More demos can be found either in the ``demo`` directory of the DOLFIN
 source tree or under one of the directories ``/usr/share/dolfin/demo``
