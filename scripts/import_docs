@@ -70,6 +70,7 @@ import_doc()
 
     # Add to bzr
     bzr add $DOC_TO/Makefile $DOC_TO/source
+    bzr commit -m "Update documentation for $PACKAGE version $PACKAGE_VERSION"
 
     # Build HTML
     pushd .

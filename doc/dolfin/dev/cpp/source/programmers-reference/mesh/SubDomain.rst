@@ -1,0 +1,72 @@
+
+.. Documentation for the header file dolfin/mesh/SubDomain.h
+
+.. _programmers_reference_cpp_mesh_subdomain:
+
+SubDomain.h
+===========
+
+.. note::
+    
+    The documentation on this page was automatically extracted from the
+    DOLFIN C++ code and may need to be edited or expanded.
+    
+
+.. cpp:class:: SubDomain
+
+    This class defines the interface for definition of sub domains.
+    Alternatively, sub domains may be defined by a Mesh and a
+    MeshFunction<uint> over the mesh.
+
+
+    .. cpp:function:: SubDomain()
+    
+        Constructor
+
+
+    .. cpp:function:: bool inside(const Array<double>& x, bool on_boundary) const
+    
+        Return true for points inside the subdomain
+
+
+    .. cpp:function:: void map(const Array<double>& x, Array<double>&) const
+    
+        Map coordinate x in domain H to coordinate y in domain G (used for
+        periodic boundary conditions)
+
+
+    .. cpp:function:: void snap(Array<double>& x) const
+    
+        Snap coordinate to boundary of sub domain
+
+
+    .. cpp:function:: void mark(MeshFunction<unsigned int>& sub_domains, unsigned int sub_domain) const
+    
+        Set sub domain markers (uint) for given subdomain
+
+
+    .. cpp:function:: void mark(MeshFunction<int>& sub_domains, int sub_domain) const
+    
+        Set sub domain markers (int) for given subdomain
+
+
+    .. cpp:function:: void mark(MeshFunction<double>& sub_domains, double sub_domain) const
+    
+        Set sub domain markers (double) for given subdomain
+
+
+    .. cpp:function:: void mark(MeshFunction<bool>& sub_domains, bool sub_domain) const
+    
+        Set sub domain markers (bool) for given subdomain
+
+
+    .. cpp:function:: uint geometric_dimension() const
+    
+        Return geometric dimension
+
+
+    .. cpp:function:: void mark_meshfunction(MeshFunction<T>& sub_domains, T sub_domain) const
+    
+        Set sub domain markers for given subdomain
+
+
