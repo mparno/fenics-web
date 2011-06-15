@@ -20,18 +20,16 @@
 {% block relbar2 %}{% endblock %}
 
 {% macro nav() %}
-        <p>
         {%- block fenicsrel1 %}
         {%- endblock %}
-        <a href="http://www.fenicsproject.org/new/about">About</a> &nbsp;&nbsp;&nbsp;
-        <a href="http://www.fenicsproject.org/new/download">Download</a> &nbsp;&nbsp;&nbsp;
-        <a href="http://www.fenicsproject.org/new/doc">Documentation</a> &nbsp;&nbsp;&nbsp;
-        <a href="http://www.fenicsproject.org/new/dev">Contributing</a> &nbsp;&nbsp;&nbsp;
-        <a href="http://www.fenicsproject.org/new/citing">Citing</a> &nbsp;&nbsp;&nbsp;
+        <a href="http://www.fenicsproject.org/new/about">About</a>
+        <a href="http://www.fenicsproject.org/new/download">Download</a>
+        <a href="http://www.fenicsproject.org/new/doc">Documentation</a>
+        <a href="http://www.fenicsproject.org/new/dev">Contributing</a>
+        <a href="http://www.fenicsproject.org/new/citing">Citing</a>
         <a href="http://www.fenicsproject.org/new/contact">Support</a>
         {%- block fenicsrel2 %}
         {%- endblock %}
-        </p>
 {% endmacro %}
 
 {% block content %}
@@ -47,7 +45,6 @@
         {%- endif -%}
         <h1 class="heading"><a href="{{ pathto('index') }}">
           <span>{{ shorttitle|e }}</span></a></h1>
-<!--        <h2 class="heading"><span>{{ title|striptags|e }}</span></h2> -->
         {%- endif %}
         {%- endblock %}
       </div>
