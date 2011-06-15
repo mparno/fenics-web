@@ -10,6 +10,7 @@
 {%- block extrahead %}
 <link rel="stylesheet" href="http://static.pylonsproject.org/fonts/nobile/stylesheet.css" type="text/css" media="screen" charset="utf-8" />
 <link rel="stylesheet" href="http://static.pylonsproject.org/fonts/neuton/stylesheet.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="{{ pathto('_static/app.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="{{ pathto('_static/ie6.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
 <![endif]-->
@@ -19,6 +20,37 @@
 {% endblock %}
 
 {% block header %}
+	<div class="header-nav">
+		<ul>
+		  <li><a href="">About</a></li>
+		  <li><a href="">Download</a></li>
+		  <li>
+		    <a href="" class="selected">Documentation</a>
+		    <div class="header-nav-submenu">
+		      <ul>
+			<li><a href="">Tutorial</a></li>
+		      </ul>
+		    </div>
+		  </li>
+		  <li>
+		    <a href="http://pylonsproject.org/projects">Contributing</a>
+		    <div class="header-nav-submenu">
+		      <ul>
+			<li><a href="">How to participate</a></li>
+			<li><a href="">How to contribute</a></li>
+			<li><a href="">Code of conduct</a></li>
+		      </ul>
+		    </div>
+			</li>
+		  <li>
+		    <a href="http://pylonsproject.org/community">Citing</a>
+		  </li>
+		  <li class="last">
+		    <a href="http://pylonsproject.org/tools">Support</a>
+		  </li>
+		</ul>
+	</div>
+
 <div class="header-small">
 	{%- if theme_logo %}
 	{% set img, ext = theme_logo.split('.', -1) %}
