@@ -32,6 +32,32 @@ To be notified of new questions, join the `FEniCS
 <https://launchpad.net/~fenics>`_ and the `DOLFIN
 <https://launchpad.net/~dolfin>`_ teams on Launchpad.
 
+.. _getting_answers_checklist:
+
+Checklist when asking a question
+--------------------------------
+
+We want to help you; by making sure that you provide us with enough
+information, you are more likely to get the answer you are looking
+for. So, please make sure that
+
+#. Check whether someone has asked the same question before by
+   searching the questions/answers.
+
+#. If you encounter problems when running a program, always include a
+   *minimal* running code example that demonstrates the problem (so that
+   we can reproduce it).
+
+   (With *minimal*, we mean *minimal*. This typically means that you
+   have to simplify your program by stripping away specific parameters
+   and/or simplifying the equations.)
+
+#. If you encounter an error, always include the error message.
+
+#. Always provide information about which *version* of a certain
+   component you are using.
+
+
 .. _help_bugs:
 
 Reporting bugs
