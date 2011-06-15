@@ -52,11 +52,8 @@ Demos
 *****
 
 A simple way to build your first FEniCS application is to copy and
-modify one of the existing demos from DOLFIN. These demos can be found
-either in the ``demo`` directory of the DOLFIN source tree or under
-the directory ``/usr/share/doc/dolfin-doc/demo`` if you have installed
-FEniCS from a binary package. The table below provides links to demo
-documentation for different versions of DOLFIN.
+modify one of the existing demos from DOLFIN. The table below provides
+links to demo documentation for different DOLFIN versions.
 
 .. list-table::
     :widths: 100 50 50 50 175
@@ -69,6 +66,9 @@ documentation for different versions of DOLFIN.
       - 0.9.11
       - development version
 
-.. note::
-
-   Where do the demos reside on Mac and Windows?
+More demos can be found either in the ``demo`` directory of the DOLFIN
+source tree or under one of the directories ``/usr/share/dolfin/demo``
+(GNU/Linux),
+``/Applications/FEniCS.app/Contents/Resources/share/dolfin/demo`` (Mac
+OS X) or ``C:\FEniCS\share\dolfin\demo`` (Windows) if FEniCS was
+installed from a binary package.
