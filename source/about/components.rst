@@ -251,15 +251,20 @@ Applications
 CBC.Block
 *********
 
+CBC.Block is a FEniCS/DOLFIN-based library for block operators,
+operator algebra and algebraic solvers. The library is implemented in
+Python and provides a simple interface for specifying
+block-partitioned problems and preconditioners, and solving them.
+
 Maintainers (in alpabetical order)
 ==================================
 
-Joachim Berdal Haga
+Joachim Berdal Haga, Kent-Andre Mardal
 
 Authors (past and present in chronological order)
 =================================================
 
-Joachim Berdal Haga
+Joachim Berdal Haga, Kent-Andre Mardal
 
 .. _about_components_cbcrans:
 
