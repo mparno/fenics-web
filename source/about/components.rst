@@ -2,7 +2,7 @@
 
 FEniCS is organized as a collection of interoperable components that
 together form the FEniCS Project. A short overview of these components
-are given below. Further information can be found in the :ref:`FEniCS
+is given below. Further information can be found in the :ref:`FEniCS
 Book <book>` and on the :ref:`Launchpad page <launchpad_pages>` for
 each individual component.
 
@@ -12,7 +12,7 @@ each individual component.
 Core components
 ###############
 
-.. _about_projects_dolfin:
+.. _about_components_dolfin:
 
 ******
 DOLFIN
@@ -46,7 +46,7 @@ in the DOLFIN source tree.
 .. note::
     Is this a good way to give credit? Who is missing? Is the order correct?
 
-.. _about_projects_ffc:
+.. _about_components_ffc:
 
 ***
 FFC
@@ -69,7 +69,7 @@ Authors (past and present in chronological order)
 
 Anders Logg, Marie Rognes, Kristian Oelgaard, Garth N. Wells
 
-.. _about_projects_fiat:
+.. _about_components_fiat:
 
 ****
 FIAT
@@ -94,7 +94,7 @@ Authors (past and present in chronological order)
 
 Robert C. Kirby, Anders Logg, Marie Rognes
 
-.. _about_projects_instant:
+.. _about_components_instant:
 
 *******
 Instant
@@ -105,8 +105,6 @@ C++ code in Python. It is a small Python module built on top of SWIG
 and Distutils. Instant is used by FFC and DOLFIN for just-in-time
 (JIT) compilation of variational forms and expressions.
 
-.. _about_projects_ufc:
-
 Maintainers (in alpabetical order)
 ==================================
 
@@ -116,6 +114,8 @@ Authors (past and present in chronological order)
 =================================================
 
 ???
+
+.. _about_components_ufc:
 
 ***
 UFC
@@ -140,7 +140,7 @@ Authors (past and present in chronological order)
 Anders Logg, Martin Sandve Alnes, Kent-Andre Mardal, Ola Skavhaug,
 Hans Petter Langtangen, Garth N. Wells
 
-.. _about_projects_ufl:
+.. _about_components_ufl:
 
 ***
 UFL
@@ -162,17 +162,19 @@ Authors (past and present in chronological order)
 
 Martin Sandve Alnes, Anders Logg, Garth N. Wells
 
+.. _about_components_additional:
+
 #####################
 Additional components
 #####################
 
-.. _about_projects_ascot:
+.. _about_components_ascot:
 
 *****
 ASCoT
 *****
 
-.. _about_projects_dorsal:
+.. _about_components_dorsal:
 
 Maintainers (in alpabetical order)
 ==================================
@@ -191,7 +193,7 @@ Dorsal
 Dorsal is a set of simple scripts to build components of the FEniCS
 Project (as well as their dependencies) for various platforms.
 
-.. _about_projects_syfi:
+.. _about_components_syfi:
 
 Maintainers (in alpabetical order)
 ==================================
@@ -217,7 +219,7 @@ Authors (past and present in chronological order)
 
 Kent-Andre Mardal, Martin Sandve Alnes
 
-.. _about_projects_viper:
+.. _about_components_viper:
 
 *****
 Viper
@@ -237,11 +239,13 @@ Authors (past and present in chronological order)
 
 Ola Skavhaug, Johannes Ring
 
+.. _about_components_applications:
+
 ############
 Applications
 ############
 
-.. _about_projects_cbcblock:
+.. _about_components_cbcblock:
 
 *********
 CBC.Block
@@ -257,7 +261,7 @@ Authors (past and present in chronological order)
 
 Joachim Berdal Haga
 
-.. _about_projects_cbcrans:
+.. _about_components_cbcrans:
 
 ********
 CBC.RANS
@@ -273,7 +277,7 @@ Authors (past and present in chronological order)
 
 Michael Mortensen
 
-.. _about_projects_solve:
+.. _about_components_solve:
 
 *********
 CBC.Solve
@@ -298,7 +302,7 @@ Authors (past and present in chronological order)
 Anders Logg, Harish Narayanan, Kristian Valen-Sendstad, Kent-Andre
 Mardal, Marie Rognes, Kristoffer Selim
 
-.. _about_projects_dolfwave:
+.. _about_components_dolfwave:
 
 ********
 DOLFWAVE
@@ -318,7 +322,7 @@ Authors (past and present in chronological order)
 
 Nuno D. Lopes
 
-.. _about_projects_unicorn:
+.. _about_components_unicorn:
 
 Unicorn
 *******

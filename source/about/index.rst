@@ -20,8 +20,19 @@ Contributors
 Components
 **********
 
-:ref:`link to components here <about_components>`
+FEniCS is organized as a collection of interoperable components that
+together form the FEniCS Project. These components include the
+problem-solving environment :ref:`DOLFIN <about_components_dolfin>`,
+the form compiler :ref:`FFC <about_components_ffc>`, the finite
+element tabulator :ref:`FIAT <about_components_fiat>`, the
+just-in-time compiler :ref:`Instant <about_components_instant>`, the
+code generation interface :ref:`UFC <about_components_ufc>`, the form
+lanuage :ref:`UFL <about_components_ufl>` and a range of
+:ref:`additional components <about_components_additional>` and
+:ref:`applications <about_components_applications>`.
 
+An full overview of the list of FEniCS components is presented
+:ref:`here <about_components>`.
 
 *******
 License
@@ -45,4 +56,3 @@ these terms `here <http://www.fenicsproject.org/pub/copyright>`__.
    :hidden:
 
    components
-   license
