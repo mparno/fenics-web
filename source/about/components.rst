@@ -236,12 +236,12 @@ for DOLFIN. [`read more <https://launchpad.net/fenics-viper>`__]
 Maintainers (in alpabetical order)
 ==================================
 
-Ola Skavhaug (?)
+Ola Skavhaug
 
 Authors (past and present in chronological order)
 =================================================
 
-Ola Skavhaug, Johannes Ring
+Ola Skavhaug
 
 .. _about_components_applications:
 
