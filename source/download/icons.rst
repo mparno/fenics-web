@@ -1,4 +1,3 @@
-
 .. |ubuntu-icon| image:: images/ubuntu.png
     :align: middle
 

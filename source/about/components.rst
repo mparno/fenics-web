@@ -1,5 +1,7 @@
 .. _about_components:
 
+.. include:: images.rst
+
 FEniCS is organized as a collection of interoperable components that
 together form the FEniCS Project. A short overview of these components
 is given below. Further information can be found in the :ref:`FEniCS
@@ -58,6 +60,8 @@ problems. FFC (FEniCS Form Compiler) is a compiler for variational
 forms. It generates efficient low-level C++ code (UFC) from a
 high-level mathematical description (UFL) of a finite element
 variational problem.
+
+|ufl-ffc-ufc|
 
 Maintainers (in alpabetical order)
 ==================================
