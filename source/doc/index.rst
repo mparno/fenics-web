@@ -23,8 +23,8 @@ Programmer's reference
 The FEniCS application programming interface (API) is documented
 separately for each FEniCS component. The most important interfaces
 are those of the C++/Python problem solving environment :ref:`DOLFIN
-<about_projects_dolfin>` and the form language :ref:`UFL
-<about_projects_ufl>`. The table below provides links to the API
+<about_components_dolfin>` and the form language :ref:`UFL
+<about_components_ufl>`. The table below provides links to the API
 documentation for different versions of DOLFIN, UFL and other FEniCS
 components.
 

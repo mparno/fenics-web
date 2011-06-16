@@ -52,6 +52,8 @@ lanuage :ref:`UFL <about_components_ufl>` and a range of
 An full overview of the list of FEniCS components is presented
 :ref:`here <about_components>`.
 
+.. _about_license:
+
 *******
 License
 *******
