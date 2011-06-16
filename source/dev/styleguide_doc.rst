@@ -12,7 +12,6 @@ See :ref:`styleguides_sphinx_documenting_interface`
 and :ref:`styleguides_sphinx_documenting_demos` for special instructions
 regarding the DOLFIN documentation.
 
-
 General
 -------
 

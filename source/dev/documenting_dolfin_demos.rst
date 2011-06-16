@@ -1,4 +1,3 @@
-
 .. _styleguides_sphinx_documenting_demos:
 
 ========================
@@ -11,7 +10,6 @@ DOLFIN demo located in the directory ``foo`` (for instance
 ``pde/poisson``), follow the below 2 steps. In general, the simplest
 way is probably to look at one of the documented demos for instance
 (``demo/pde/poisson/``) and follow the same setup.
-
 
 #. Add these 3 files
 
@@ -75,7 +73,6 @@ the relative path to the file:
 
   .. include:: ../common.txt
 
-
 Including images
 ^^^^^^^^^^^^^^^^
 
@@ -98,7 +95,6 @@ Notice that the parent directory is included in the path although the two files
 This is necessary because the ``common.txt`` file will be included in files in
 the two sub directories ``cpp`` and ``python``. The picture should be included
 immediately after the input information.
-
 
 .. _styleguides_sphinx_specific_demo_information:
 
@@ -136,4 +132,3 @@ The C++ and Python documentation reST source files should
 .. See `the Sphinx documentation
 .. <http://sphinx.pocoo.org/markup/para.html#index-generating-markup>`_
 .. for how to use the above directives.
-
