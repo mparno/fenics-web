@@ -6,6 +6,8 @@ are given below. Further information can be found in the :ref:`FEniCS
 Book <book>` and on the :ref:`Launchpad page <launchpad_pages>` for
 each individual component.
 
+.. _about_components_core:
+
 ###############
 Core components
 ###############
