@@ -1,8 +1,8 @@
-.. _contributing:
+.. _support:
 
-################
-Getting in touch
-################
+#######
+Support
+#######
 
 This page describes how to get in contact to solve problems you might
 encounter when using FEniCS. Help is available both from FEniCS
