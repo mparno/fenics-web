@@ -35,7 +35,7 @@ the supplementary material.
     :class: center
 
     * - Chapter 1
-      - `Tutorial
+      - `A FEniCS Tutorial
         <http://www.fenicsproject.org/pub/book/chapters/chapter-01>`__
     * - Chapter 20
       - `Finite elements for incompressible fluids
