@@ -1,8 +1,8 @@
 .. _about_components:
 
-########
-Projects
-########
+##########
+Components
+##########
 
 FEniCS is organized as a collection of interoperable components that
 together form the FEniCS Project. A short overview of these components
@@ -28,6 +28,24 @@ structures and algorithms for computational meshes and finite element
 assembly. To provide a simple and consistent user interface, DOLFIN
 wraps the functionality of other FEniCS components and external
 software, and handles the communication between these components.
+
+Maintainers (in alpabetical order)
+----------------------------------
+
+Johan Hake, Anders Logg, Garth N. Wells
+
+Authors (past and present in chronological order)
+-------------------------------------------------
+
+Anders Logg, Johan Hoffman, Garth N. Wells, Johan Jansson, Ola
+Skavhaug, Kent-Andre Mardal, Martin Sandve Alnes, Johan Hake, Niclas
+Jansson, Johannes Ring, Kristian Oelgaard, Marie Rognes
+
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the DOLFIN source tree.
+
+.. note::
+    Is this a good way to give credit? Who is missing? Is the order correct?
 
 FFC
 ===
