@@ -248,108 +248,27 @@ Ola Skavhaug
 Applications
 ############
 
-.. _about_components_cbcblock:
+`FEniCS Apps <https://answers.launchpad.net/fenics-group>`__ is a
+collection of applications/solvers based on FEniCS. If you have
+developed a FEniCS-based application that you think qualifies to be on
+this list, contact the `FEniCS Apps maintainers
+<https://launchpad.net/~fenics-apps-core>`__.
 
-*********
-CBC.Block
-*********
-
-CBC.Block is a FEniCS/DOLFIN-based library for block operators,
-operator algebra and algebraic solvers. The library is implemented in
-Python and provides a simple interface for specifying
-block-partitioned problems and preconditioners, and solving them.
-
-Maintainers (in alpabetical order)
-==================================
-
-Joachim Berdal Haga, Kent-Andre Mardal
-
-Authors (past and present in chronological order)
-=================================================
-
-Joachim Berdal Haga, Kent-Andre Mardal
-
-.. _about_components_cbcrans:
-
-********
-CBC.RANS
-********
-
-Maintainers (in alpabetical order)
-==================================
-
-Michael Mortensen
-
-Authors (past and present in chronological order)
-=================================================
-
-Michael Mortensen
-
-.. _about_components_solve:
-
-*********
-CBC.Solve
-*********
-
-CBC.Solve is a collection of FEniCS/DOLFIN-based solvers for a range
-of partial differential equations developed primarily at the Center
-for Biomedical Computing hosted by Simula Research Laboratory in
-Oslo. The current collection consists of three solvers: CBC.Beat,
-CBC.Flow, CBC.Rock, CBC.Swing and CBC.Twist. The solvers are primarily
-implemented in Python and provide a simple and uniform
-Python-interface.
-
-Maintainers (in alpabetical order)
-==================================
-
-Anders Logg, Harish Narayanan, Marie Rognes
-
-Authors (past and present in chronological order)
-=================================================
-
-Anders Logg, Harish Narayanan, Kristian Valen-Sendstad, Kent-Andre
-Mardal, Marie Rognes, Kristoffer Selim
-
-.. _about_components_dolfwave:
-
-********
-DOLFWAVE
-********
-
-DOLFWAVE is a software framework for the analysis, development and
-computation of models for surface water waves, based on finite
-element methods.
-
-Maintainers (in alpabetical order)
-==================================
-
-Nuno D. Lopes
-
-Authors (past and present in chronological order)
-=================================================
-
-Nuno D. Lopes
-
-.. _about_components_unicorn:
-
-Unicorn
-*******
-
-Unicorn is an adaptive finite element solver for fluid and structure
-mechanics, including fluid-structure interaction problems. Unicorn
-aims at developing one unified continuum mechanics solver for a wide
-range of applications.
-
-Maintainers (in alpabetical order)
-==================================
-
-Cem Degirmenci, Johan Hoffman, Johan Jansson, Niclas Jansson and
-Murtazo Nazarov
-
-Authors (past and present in chronological order)
-=================================================
-
-Johan Hoffman, Johan Jansson, Murtazo Nazarov, Niclas Jansson, Cem Degirmenci
+* CBC.RANS
+* CBC.Block
+* `CBC.Solve <https://launchpad.net/cbc.solve>`__,
+  a collection of Python-based PDE solvers
+* DOLFWAVE
+* DiffSim
+* FEniCS Plasticity
+* `GenFoo <https://launchpad.net/genfoo>`__,
+  a generalized Fokker-Planck solver
+* PUM Compiler
+* PUM solver
+* rheagen
+* TriTetMesh
+* `Unicorn <https://launchpad.net/unicorn>`__,
+  a unified continuum mechanics solver
 
 .. note::
     Which should be included among core components? Should we include SyFi?
