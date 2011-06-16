@@ -6,15 +6,33 @@
 About the FEniCS Project
 ########################
 
-The FEniCS Project is a collaborative project on automating aspects of
-scientific computing. Users and developers come from universities and
-research institutes from around the world.
+The FEniCS Project is a collaborative project for the development of
+innovative concepts and tools for automated scientific computing, with
+a particular focus on automated solution of differential equations by
+finite element methods.
+
+The methodology and software developed as part of the FEniCS Project
+are documented in a number of :ref:`research articles <citing>` and
+a :ref:`book <book>`.
 
 ************
 Contributors
 ************
 
+The FEniCS Project is developed by researchers from a number of
+research institutes from around the world. The following research
+institutes contribute significant resources to the FEniCS Project:
 
+* `Simula Research Laboratory <http://www.simula.no>`__
+* `University of Cambridge <http://www.cam.ac.uk>`__
+* `University of Chicago <http://www.uchicago.edu/index.shtml>`__
+* `Texas Tech University <http://www.ttu.edu/>`__
+* `KTH Royal Institute of Technology <http://www.kth.se>`__
+
+Contributions have also been made by researchers from
+`Chalmers University of Technology <http://www.chalmers.se>`__,
+`Delft University of Technology <http://www.tudelft.nl>`__  and
+`Argonne National Laboratory <http://www.anl.gov>`__.
 
 **********
 Components
@@ -56,3 +74,7 @@ these terms `here <http://www.fenicsproject.org/pub/copyright>`__.
    :hidden:
 
    components
+
+.. note::
+    In which order should we list the research institutes? In order of
+    contribution, or chronological?
