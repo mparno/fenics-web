@@ -62,7 +62,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FEniCS'
-copyright = u'2010, FEniCS Core, https://launchpad.net/~fenics-core'
+copyright = u'2011, The FEniCS Project, http://www.fenicsproject.org/'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

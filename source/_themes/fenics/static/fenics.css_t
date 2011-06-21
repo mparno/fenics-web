@@ -113,9 +113,12 @@ div.header {
     position: relative;
     left: 0px;
     top: 0px;
-    height: 85px;
-    padding: 0 40px;
-    background: #FFF url(bg-page.png) top left repeat-x;
+    height: 185px;
+    width: 1120px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: #FFF url(fenics_banner.png) top left repeat-x;
     color: #ffffff;
 }
 
