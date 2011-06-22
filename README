@@ -1,4 +1,4 @@
-# Last changed: 2011-06-13
+# Last changed: 2011-06-22
 
 FEniCS documentation and webpage
 --------------------------------
@@ -10,10 +10,24 @@ FEniCS documentation and webpage
   This will read .rst files from the 'source' directory
   and generate .html files in the 'build/html' directory.
 
+* How to: import documentation
+
+    scripts/import_docs
+
+  This will import documentation input files (.rst) from all
+  projects, build .html files and add those to 'build/html'.
+  Running this script requires that all projects (currently
+  DOLFIN and UFL) have been built and that the environment
+  variables DOLFIN_DIR and UFL_DIR have been set.
+
 * How to: publish web pages
 
     ./publish.sh
 
-  This will upload the generated pages from 'build/html'
-  to fenicsproject.org/new. Running this script requires
-  access to the account fenics@fenicsproject.org.
+  This will upload the generated pages from 'build/html' to
+  fenicsproject.org/new, including both the web pages and the
+  documentation pages. Running this script requires access to
+  the account fenics@fenicsproject.org.
+
+FIXME: Consider changing the name/location of some of the above
+scripts, possibly adding as targets to make.
