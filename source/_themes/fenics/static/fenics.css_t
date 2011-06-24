@@ -134,6 +134,7 @@ div.header h1 {
 div.header h1 a {
     font-weight: normal;
     color: #ffffff;
+    display: none;
 }
 
 div.header h2 {
