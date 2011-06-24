@@ -10,6 +10,8 @@
  */
  
 @import url("basic.css");
+@import url("nobile-fontfacekit/stylesheet.css");
+@import url("neuton-fontfacekit/stylesheet.css");
  
 /* -- page layout ----------------------------------------------------------- */
  
@@ -68,7 +70,7 @@ div.body {
     background-color: #ffffff;
     color: #3E4349;
     padding: 0 30px 30px 30px;
-    font-size: 14px;
+    font-size: 16px;
     overflow: auto;
 }
  
@@ -78,7 +80,7 @@ div.footer {
     padding: 13px 0;
     text-align: center;
     font-size: 75%;
-    background: transparent;
+    background: #d81e28;
     clear:both;
 }
  
@@ -127,7 +129,7 @@ p.sidebar-title {
 /* -- body styles ----------------------------------------------------------- */
  
 a, a .pre {
-    color: #1b61d6;
+    color: #d81e28;
     text-decoration: none;
     word-wrap: break-word;
 }
