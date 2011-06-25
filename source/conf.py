@@ -24,11 +24,11 @@ sys.path.append(os.path.abspath('.'))
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-#extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
-#              'sphinx.ext.autodoc']
-extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', \
-              'sphinx.ext.autodoc', 'mathjax', 'sphinx.ext.todo']
-mathjax_path = 'http://mathjax.connectmv.com/MathJax.js'
+extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', 'sphinx.ext.pngmath', \
+              'sphinx.ext.autodoc', 'sphinx.ext.todo']
+#extensions = ['sphinx.ext.doctest', 'sphinx.ext.coverage', \
+#              'sphinx.ext.autodoc', 'mathjax', 'sphinx.ext.todo']
+#mathjax_path = 'http://mathjax.connectmv.com/MathJax.js'
 
 
 # Add the docstring from class.__init__ to class.__doc__ when documenting the
