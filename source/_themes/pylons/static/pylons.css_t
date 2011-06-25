@@ -312,11 +312,13 @@ tt.xref {
 #access .menu-header,
 div.menu {
 	font-size: 13px;
-	margin-left: 12px;
+	margin-right: 20px;
 	width: 100%;
 }
 #access .menu-header ul,
 div.menu ul {
+        float:right;
+	margin-right:10px;
 	list-style: none;
 	margin: 0;
 }
