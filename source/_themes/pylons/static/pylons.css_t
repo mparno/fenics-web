@@ -18,7 +18,7 @@
 body {
     font-family: "Nobile", sans-serif;
     font-size: 14px;
-    background-color: #000;
+    background-color: #ffffff;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -73,34 +73,33 @@ div.body {
     font-size: 14px;
     overflow: auto;
 }
- 
+
 div.footer {
     color: #aaa;
     width: 100%;
     padding: 13px 0;
     text-align: center;
-    font-size: 75%;
+    font-size: 13px;
     background: #000;
     clear:both;
 }
- 
+
 div.footer a {
     color: #aaa;
     text-decoration: none;
 }
 
 div.footer a:hover {
-    color: #e88f00;
-    text-decoration: underline;
+    color: #fff;
 }
- 
+
 div.related {
     line-height: 30px;
     color: #373839;
     font-size: 12px;
     background-color: #eee;
 }
- 
+
 div.related a {
     color: #1b61d6;
 }
@@ -108,7 +107,7 @@ div.related a {
 div.related ul {
 	padding-left: 240px;
 }
- 
+
 /* -- sidebars -------------------------------------------------------------- */
 
 div.sidebar {

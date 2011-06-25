@@ -18,6 +18,14 @@
 </div><!-- #wrapper -->
 {% endblock %}
 
+{% block footer %}
+<div id="wrapper">
+  <div class="footer">
+    &copy; Copyright 2011, <a href="{{ pathto('/index') }}">The FEniCS Project</a>.
+  </div>
+</div>
+{% endblock %}
+
 {# do not display lower relbar #}
 {% block relbar2 %}{% endblock %}
 
