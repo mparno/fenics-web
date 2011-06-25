@@ -29,4 +29,4 @@ Experimenting with news feed
     dev/index
     citing/index
     book/index
-    contact/index
+    support/index
