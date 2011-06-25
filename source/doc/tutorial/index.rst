@@ -1,6 +1,7 @@
+.. _tutorial:
+
 .. This is a front page for Hans Petter Langtangen's tutorial
 
-.. _tutorial:
 
 ########################
 FEniCS tutorial (Python)
