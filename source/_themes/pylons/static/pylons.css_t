@@ -18,7 +18,7 @@
 body {
     font-family: "Nobile", sans-serif;
     font-size: 14px;
-    background-color: #393939;
+    background-color: #000;
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -75,17 +75,17 @@ div.body {
 }
  
 div.footer {
-    color: #ffffff;
+    color: #aaa;
     width: 100%;
     padding: 13px 0;
     text-align: center;
     font-size: 75%;
-    background: #d81e28;
+    background: #000;
     clear:both;
 }
  
 div.footer a {
-    color: #ffffff;
+    color: #aaa;
     text-decoration: none;
 }
 
@@ -98,7 +98,7 @@ div.related {
     line-height: 30px;
     color: #373839;
     font-size: 12px;
-	background-color: #eee;
+    background-color: #eee;
 }
  
 div.related a {
@@ -310,7 +310,7 @@ tt.xref {
 	float: left;
 	margin-left:auto;
 	margin-right:auto;
-	width: 940px;
+	width: 900px;
 }
 #access .menu-header,
 div.menu {

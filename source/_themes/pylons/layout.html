@@ -2,18 +2,18 @@
 
 {# override upper relbar to show our navigation menu #}
 {% block relbar1 %}
-  <div id="access">
-	<div class="menu">
-	  <ul>
-	    <li class="page_item"><a href="{{ pathto('about/index') }}" title="Find out more about the FEniCS project">About</a></li>
-	    <li class="page_item"><a href="{{ pathto('download/index') }}" title="Obtain the FEniCS project">Download</a></li>
-	    <li class="page_item"><a href="{{ pathto('doc/index') }}" title="Learn how to use the FEniCS project">Documentation</a></li>
-	    <li class="page_item"><a href="{{ pathto('dev/index') }}" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
-	    <li class="page_item"><a href="{{ pathto('citing/index') }}" title="Learn how to cite the FEniCS project">Citing</a></li>
-	    <li class="page_item"><a href="{{ pathto('contact/index') }}" title="Where to go for more help">Support</a></li>
-	  </ul>
-	</div><!-- .menu -->
-      </div><!-- #access -->
+<div id="access">
+  <div class="menu">
+    <ul>
+      <li class="page_item"><a href="{{ pathto('about/index') }}" title="Find out more about the FEniCS project">About</a></li>
+      <li class="page_item"><a href="{{ pathto('download/index') }}" title="Obtain the FEniCS project">Download</a></li>
+      <li class="page_item"><a href="{{ pathto('doc/index') }}" title="Learn how to use the FEniCS project">Documentation</a></li>
+      <li class="page_item"><a href="{{ pathto('dev/index') }}" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
+      <li class="page_item"><a href="{{ pathto('citing/index') }}" title="Learn how to cite the FEniCS project">Citing</a></li>
+      <li class="page_item"><a href="{{ pathto('contact/index') }}" title="Where to go for more help">Support</a></li>
+    </ul>
+  </div><!-- .menu -->
+</div><!-- #access -->
 {% endblock %}
 
 {# do not display lower relbar #}
