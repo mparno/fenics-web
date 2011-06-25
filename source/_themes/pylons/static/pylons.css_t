@@ -308,15 +308,13 @@ tt.xref {
 	background: #000;
 	display: block;
 	float: left;
-	margin-left:auto;
-	margin-right:auto;
-	width: 900px;
+	width: 100%;
 }
 #access .menu-header,
 div.menu {
 	font-size: 13px;
 	margin-left: 12px;
-	width: 928px;
+	width: 100%;
 }
 #access .menu-header ul,
 div.menu ul {
@@ -381,4 +379,9 @@ div.menu li {
 * html #access ul li.current-menu-parent a,
 * html #access ul li a:hover {
 	color: #fff;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 900px;
 }
