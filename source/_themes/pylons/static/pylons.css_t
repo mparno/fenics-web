@@ -392,7 +392,7 @@ div.menu li {
 
 #leader {
     border-bottom:1px solid #ccc;
-    padding:63px 0 42px 0;
+    padding:30px 0 40px 0;
 }
 #leader-container {
     margin:0 auto;
