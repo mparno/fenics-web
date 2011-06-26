@@ -8,13 +8,13 @@
  * :license: BSD, see LICENSE for details.
  *
  */
- 
+
 @import url("basic.css");
 @import url("nobile-fontfacekit/stylesheet.css");
 @import url("neuton-fontfacekit/stylesheet.css");
- 
+
 /* -- page layout ----------------------------------------------------------- */
- 
+
 body {
     font-family: "Nobile", sans-serif;
     font-size: 14px;
@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
 }
-    
+
 div.documentwrapper {
     float: left;
     width: 100%;
@@ -38,7 +38,7 @@ div.bodywrapper {
 hr {
     border: 1px solid #B1B4B6;
 }
- 
+
 div.document {
     background-color: #fff;
 }
@@ -126,17 +126,17 @@ p.sidebar-title {
 }
 
 /* -- body styles ----------------------------------------------------------- */
- 
+
 a, a .pre {
     color: #d81e28;
     text-decoration: none;
     word-wrap: break-word;
 }
- 
+
 a:hover, a:hover .pre {
     text-decoration: underline;
 }
- 
+
 div.body h1,
 div.body h2,
 div.body h3,
@@ -150,7 +150,7 @@ div.body h6 {
     margin: 30px 0px 10px 0px;
     padding: 5px 0;
 }
- 
+
 div.body h1 {
     font-size: 2.2em;
     line-height: 1;
@@ -181,22 +181,22 @@ div.body h6 {
     font-weight: bold;
     margin-bottom: 1.6em;
 }
- 
+
 a.headerlink {
     color: #1b61d6;
     font-size: 12px;
     padding: 0 4px 0 4px;
     text-decoration: none;
 }
- 
+
 a.headerlink:hover {
 	text-decoration: underline;
 }
- 
+
 div.body p, div.body dd, div.body li {
     line-height: 1.5em;
 }
- 
+
 div.admonition p.admonition-title + p {
     display: inline;
 }
@@ -212,7 +212,7 @@ div.note {
 	padding: 10px 20px 10px 60px;
 	background: #e1ecfe url(dialog-note.png) no-repeat 10px 8px;
 }
- 
+
 div.seealso {
     background: #fff6bf url(dialog-seealso.png) no-repeat 10px 8px;
     border: 2px solid #ffd324;
@@ -220,7 +220,7 @@ div.seealso {
 	border-right-style: none;
 	padding: 10px 20px 10px 60px;
 }
- 
+
 div.topic {
     background: #eeeeee;
     border: 2px solid #C6C9CB;
@@ -228,7 +228,7 @@ div.topic {
 	border-right-style: none;
 	border-left-style: none;
 }
- 
+
 div.warning {
     background: #fbe3e4 url(dialog-warning.png) no-repeat 10px 8px;
     border: 2px solid #fbc2c4;
@@ -236,11 +236,11 @@ div.warning {
 	border-left-style: none;
 	padding: 10px 20px 10px 60px;
 }
- 
+
 p.admonition-title {
     display: none;
 }
- 
+
 p.admonition-title:after {
     content: ":";
 }
@@ -255,7 +255,7 @@ pre, code {
     border-top: 2px solid #c6c9cb;
     border-bottom: 2px solid #c6c9cb;
 }
- 
+
 tt {
     background-color: transparent;
     color: #222;
@@ -385,4 +385,124 @@ div.menu li {
 #wrapper {
 	margin: 0 auto;
 	width: 900px;
+}
+
+/* =Leader and Front Page Styles
+-------------------------------------------------------------- */
+
+#leader {
+    border-bottom:1px solid #ccc;
+    padding:63px 0 42px 0;
+}
+#leader-container {
+    margin:0 auto;
+    overflow:hidden;
+    position:relative;
+    width:988px;
+}
+#leader .entry-title {
+    font-size:40px;
+    line-height:45px;
+    margin-top:-8px;
+    padding:0 0 14px 0;
+}
+#leader .entry-title span {
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-style:italic;
+}
+.single #leader .entry-title {
+    width:652px;
+}
+#leader .entry-meta {
+    position:absolute;
+    top:15px;
+    left:690px;
+}
+
+.page-template-front-page-php #feature {
+		float:left;
+}
+.page-template-front-page-php #feature img {
+float:left;
+margin:-10px 10 0 -10px;
+}
+.page-template-front-page-php #feature-info {
+    float:right;
+		margin:0 0 0 19px;
+    width:484px;
+}
+.page-template-front-page-php #feature-info h2 {
+    font-family:Arial,sans-serif;
+    font-size:40px;
+    font-weight:bold;
+    line-height:45px;
+    margin-top:-8px;
+    padding:0 0 14px 0;
+}
+.page-template-front-page-php #container,
+.page-template-front-page-php #content  {
+    margin:0;
+    padding:0;
+    width:988px;
+}
+.page-template-front-page-php #container {
+    margin-top:-21px;
+}
+.page-template-front-page-php #sub-feature {
+    font-size:13px;
+    line-height:18px;
+    position:relative;
+    overflow:hidden;
+}
+.page-template-front-page-php #sub-feature p {
+    margin:0 0 18px 0;
+}
+.page-template-front-page-php #sub-feature h3 {
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:17px;
+    font-style:italic;
+    padding:0 0 7px 0;
+    text-transform:none;
+}
+.page-template-front-page-php #sub-feature h3 img {
+    position:absolute;
+    top:3px;
+    right:0;
+}
+.page-template-front-page-php .block {
+    float:left;
+    width:484px;
+}
+#front-block-1 {
+    margin-right:20px;
+}
+.page-template-front-page-php .block .avatar {
+    float:left;
+    margin:.25em 10px 0 0;
+}
+.page-template-front-page-php .block ul {
+    border-top:1px solid #ccc;
+    list-style:none;
+    margin:0;
+}
+.page-template-front-page-php .block ul li {
+    display:inline;
+}
+.page-template-front-page-php .block ul li a {
+    border-bottom:1px solid #ccc;
+    color:#666;
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+}
+.page-template-front-page-php .block ul li a:hover,
+.page-template-front-page-php .block ul li a:active {
+    background:#fafafa;
+    color: #FF4B33;
+}
+.page .entry-content,
+.single .entry-content {
+    padding-top:0;
 }
