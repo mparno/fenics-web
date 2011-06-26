@@ -1,7 +1,7 @@
 <div id="leader">
   <div id="leader-container">
     <div id="feature">
-      <a href="http://localhost:8888/"><img src="http://localhost:8888/wp-content/themes/thematicfeaturesite/includes/images/feature-item-1.png" alt="A look at the Thematic WordPress Theme"/></a>
+      <a href="http://localhost:8888/"><img src="../_static/feature-item-1.png" alt="A look at the Thematic WordPress Theme"/></a>
       <div id="feature-info">
         <h2>Mathematical physics can be fun!</h2>
         <p>The FEniCS Project is a collection of free software aimed at automated, efficient solution of differential equations. The project provides tools for working with computational meshes, finite element variational formulations of PDEs, ODE solvers and linear algebra.</p>
