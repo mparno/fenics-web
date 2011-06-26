@@ -7,8 +7,8 @@
         <p>The FEniCS Project is a collection of free software aimed at automated, efficient solution of differential equations. The project provides tools for working with computational meshes, finite element variational formulations of PDEs, ODE solvers and linear algebra.</p>
 	<p>Through this web site, you can learn more about the project and learn how to obtain and use our software. We'd be delighted to offer support in case you need it, and encourage contributions from our users.</p>
 	<div id="buttons">
-	  <a href="http://localhost:8888/obtaining/" class="button" rel="nofollow">Download!</a>
-          <a href="http://localhost:8888/about/" class="button">Learn more...</a>
+	  <a href="/new/download/" class="button" rel="nofollow">Download!</a>
+          <a href="/new/about/" class="button">Learn more...</a>
         </div>
       </div><!-- #feature-info -->
       <div class="clear-block"></div>
@@ -28,7 +28,7 @@
           <h3>Who's behind the FEniCS project?</h3>
           <img alt='' src='/new/_static/sample-news-image.png' class='avatar avatar-84 photo' height='84' width='84' />
 	  <p>The FEniCS Project is a collaborative open source effort. In chronological order, its contributors include the University of Chicago, Argonne National Laboratory, Delft University of Technology, Royal Institute of Technology KTH, Simula Research Laboratory, Texas Tech University, and University of Cambridge.</p>
-          <p><a href="/new/about/index.html#contributors" rel="nofollow">Find out more about our project&raquo;</a></p>
+          <p><a href="/new/about/" rel="nofollow">Find out more about our project&raquo;</a></p>
         </div><!-- #front-block-1 .front-block .block-->
 
         <div id="front-block-2" class="front-block block">
