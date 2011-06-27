@@ -1,4 +1,3 @@
-
 .. _developers_contributing_code:
 
 *****************
@@ -13,15 +12,6 @@ repository directly. Instead you will have to submit a :ref:`patch
 <contributing_branches>`. If the code is accepted, the patch or branch
 will be merged into the main branch by a member of the core team.
 
-
-.. Style guides
-.. ============
-
-.. To ease the job for maintainers that will need to read and understand
-.. your code, read the :ref:`styleguides_index` that explain
-.. how to format your code so that it matches the coding style used for
-.. FEniCS.
-
 .. _before_committing:
 
 Before committing your work
@@ -29,7 +19,9 @@ Before committing your work
 
 Before committing any contributions, make sure to test the code
 thoroughly. This includes running any unit tests, regression tests
-etc. present as part of the code you are modifying.
+etc. present as part of the code you are modifying. If you are
+submitting code for a new feature, it is expected that the new feature
+is accompanied by a suitable set of unit tests.
 
 .. _contributing_patches:
 

@@ -2,13 +2,15 @@
 
 .. _developers:
 
-#####################
-Developer information
-#####################
+############
+Contributing
+############
 
-This page contains information for FEniCS developers, including an
-overview of the organization of the FEniCS project, how to use
-Launchpad and Bazaar, and how to write code and documentation.
+FEniCS is a free/open source project and everyone is invited to
+contribute. This page contains information for prospective FEniCS
+developers, including an overview of the organization of the FEniCS
+project, how to write code and documentation, and how to use tools
+like Launchpad and Bazaar.
 
 ************
 Organization
@@ -24,16 +26,9 @@ between the components.
 The FEniCS Project uses `Launchpad <http://www.launchpad.net>`_ as its
 main development platform. An overview of all FEniCS projects on
 Launchpad can be found `here
-<https://launchpad.net/fenics-project>`__. :ref:`launchpad_pages` also
-contains a collection of links to important Launchpad pages for the
-various FEniCS components.
-
-Each component of FEniCS is registered as a project on Launchpad and
-each project is connected to a pair of teams. The first team consists
-of developers and users interested in the development of the
-project. This team is open to everyone and has a mailing list where
-the development of the project is discussed. The second team (the core
-team) manages the project and has write-access to the source code.
+<https://launchpad.net/fenics-project>`__.  A collection of links to
+important Launchpad pages for the various FEniCS components can be
+found :ref:`here <launchpad_pages>`.
 
 ***************************
 Instructions for developers
@@ -48,23 +43,3 @@ The following pages list important instructions for FEniCS developers.
    Obtaining the source code <obtaining_code>
    Writing code <writing_code>
    contributing_code
-
-.. _developers_checklist:
-
-*******************************
-Summary of developer guidelines
-*******************************
-
-Be kind to your fellow developers and follow these guidelines:
-
-#. Subscribe to all relevant Launchpad mailinglists
-   (:ref:`More details <developers_taking_part>`)
-
-#. Write Code and documents according to the style guidelines
-   (:ref:`More details <developers_writing_code>`)
-
-#. Test before you push
-   (:ref:`More details <before_committing>`)
-
-#. Do not rewrite history
-   (:ref:`More details <bzr_branch_workflow>`)

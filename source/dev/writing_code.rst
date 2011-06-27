@@ -1,8 +1,8 @@
 .. _developers_writing_code:
 
-********************************
-Style guides for FEniCS software
-********************************
+************
+Writing code
+************
 
 We ask all developers and contributors to adhere to a common style
 guide. This makes the job easier for maintainers who need to review,
