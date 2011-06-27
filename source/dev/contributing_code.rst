@@ -12,6 +12,13 @@ repository directly. Instead you will have to submit a :ref:`patch
 <contributing_branches>`. If the code is accepted, the patch or branch
 will be merged into the main branch by a member of the core team.
 
+If you are not familiar with `Bazaar <http://bazaar.canonical.com>`__,
+the distributed revision control system used for all FEniCS
+components, a good starting point is `Bazaar in five minutes
+<http://doc.bazaar.canonical.com/latest/en/mini-tutorial>`__ or the
+`Bazaar user guide
+<http://doc.bazaar.canonical.com/latest/en/user-guide/index.html>`__.
+
 .. _before_committing:
 
 Before committing your work
