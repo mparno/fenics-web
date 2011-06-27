@@ -1,3 +1,5 @@
+.. _snapshot_releases:
+
 *************************
 Nightly snapshot releases
 *************************

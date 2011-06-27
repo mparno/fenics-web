@@ -1,3 +1,5 @@
+.. _installation_using_dorsal:
+
 ###################################
 Automated installation using Dorsal
 ###################################

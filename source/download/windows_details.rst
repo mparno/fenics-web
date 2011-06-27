@@ -1,3 +1,5 @@
+.. _windows_details:
+
 ########
 Download
 ########
@@ -43,5 +45,5 @@ command shell from the start menu and you are ready to start working.
 Older releases
 **************
 
-Older versions of the installer and sources are available `here
-<older_releases.html>`__.
+Older versions of the installer and sources are available :ref:`here
+<older_releases>`. 

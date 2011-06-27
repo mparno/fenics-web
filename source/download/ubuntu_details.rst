@@ -1,3 +1,5 @@
+.. _ubuntu_details:
+
 ########
 Download
 ########

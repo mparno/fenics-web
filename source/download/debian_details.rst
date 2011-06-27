@@ -1,3 +1,5 @@
+.. _debian_details:
+
 ########
 Download
 ########

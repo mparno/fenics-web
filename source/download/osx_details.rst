@@ -1,3 +1,5 @@
+.. _osx_details:
+
 ########
 Download
 ########
@@ -53,5 +55,5 @@ this binary:
 Older releases
 **************
 
-Older versions of the Mac OS X binary are available `here
-<older_releases.html>`__.
+Older versions of the Mac OS X binary are available :ref:`here
+<older_releases>`.

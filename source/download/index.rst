@@ -1,6 +1,6 @@
 .. How to download and install FEniCS projects.
 
-.. _installation:
+.. _download:
 
 .. include:: icons.rst
 
@@ -26,27 +26,27 @@ everything needed to get you started with FEniCS.
 
       - `Download <apt://fenics>`__
 
-      - For detailed instructions, click `here <ubuntu_details.html>`__
+      - For detailed instructions, click :ref:`here <ubuntu_details>`
 
     * - |debian-icon| For Debian
 
       - `Download <apt://fenics>`__
 
-      - For detailed instructions, click `here <debian_details.html>`__
+      - For detailed instructions, click :ref:`here <debian_details>`
 
     * - |mac-icon| For Mac OS X
 
       - `Download
         <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-osx10.6.dmg>`__
 
-      - For detailed instructions, click `here <osx_details.html>`__
+      - For detailed instructions, click :ref:`here <osx_details>`
 
     * - |windows-icon| For Windows
 
       - `Download
         <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-mingw32.exe>`__
 
-      - For detailed instructions, click `here <windows_details.html>`__
+      - For detailed instructions, click :ref:`here <windows_details>`
 
 ****************************************************
 Other operating systems and installation from source
@@ -55,9 +55,8 @@ Other operating systems and installation from source
 If the binaries do not apply to you, or you want to install directly
 from source, try one of the two other possibilities:
 
-* `Automated installation using Dorsal
-  <installation_using_dorsal.html>`_
-* `Manual installation from source <installation_from_source.html>`_
+* :ref:`Automated installation using Dorsal <installation_using_dorsal>`
+* :ref:`Manual installation from source <installation_from_source>`
 
 *************************
 Nightly snapshot releases
@@ -65,7 +64,7 @@ Nightly snapshot releases
 
 Every night, FEniCS snapshot releases are automatically generated
 for Ubuntu, Mac OS X, and Windows. They are made available at our
-`snapshots page <snapshot_releases.html>`_.
+:ref:`snapshots page <snapshot_releases>`.
 
 *******************
 Development version
@@ -78,7 +77,7 @@ For information on accessing the development repositories, see
 Troubleshooting
 ***************
 
-Visit the `troubleshooting page <troubleshooting.html>`_ if you have
+Visit the :ref:`troubleshooting page <troubleshooting>` if you have
 problems installing FEniCS.
 
 .. toctree::

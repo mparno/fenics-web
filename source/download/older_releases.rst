@@ -1,3 +1,5 @@
+.. _older_releases:
+
 ##############
 Older releases
 ##############
