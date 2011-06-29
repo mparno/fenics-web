@@ -31,9 +31,26 @@ submitting code for a new feature, it is expected that the new feature
 is accompanied by a suitable set of unit tests. You should also review
 the :ref:`recommended coding style <developers_writing_code>`.
 
-.. note::
-    Need to write something here about needing to submit the license
-    agreement.
+.. _copyright_consent
+
+Copyright and licensing consent
+===============================
+
+Before your contribution can be accepted into FEniCS, you must sign a
+copyright consent form. Ideally, both you and your employer should
+sign a form. The forms can be found `here
+<http://fenicsproject.org/pub/copyright/forms/>`__. After you have
+signed the form, send it by regular mail to
+
+  | Johannes Ring
+  | Simula Research Laboratory
+  | PO Box 134
+  | 1325 Lysaker
+  | Norway
+
+Copies of signed consent forms are archived
+`here <http://fenicsproject.org/pub/copyright/authors>`__
+and `here <http://fenicsproject.org/pub/copyright/institutions>`__.
 
 .. _contributing_branches:
 
