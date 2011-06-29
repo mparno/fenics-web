@@ -4,11 +4,11 @@
 Contributing code
 *****************
 
-The main repository, or branch, for each FEniCS component is owned by
-the core team of that component. Therefore, unless you are a member of
-the core team, you will not be able to upload any code to the main
-repository directly. Instead you will have to create your own
-:ref:`branch <contributing_branches>` or submit a :ref:`patch
+The main branch for each FEniCS component is owned by the core team of
+that component. Therefore, unless you are a member of the core team,
+you will not be able to upload any code to the main branch
+directly. Instead you will have to create your own :ref:`branch
+<contributing_branches>` or submit a :ref:`patch
 <contributing_patches>`. If the code is accepted, the patch or branch
 will be merged into the main branch by a member of the core team.
 
@@ -60,7 +60,7 @@ Creating a branch
 A simple way to submit your changes is to create a branch on Launchpad
 and submit a merge request. This allows the maintainers to pull the
 source code from your branch, review it and then push to the main
-development repository. Using DOLFIN as an example, simply do the
+development branch. Using DOLFIN as an example, simply do the
 following:
 
 #. Get the current development branch::
@@ -84,7 +84,7 @@ following:
 
 #. Once you have completed your work, you should propose it for
    merging into the DOLFIN main branch (via the Launchpad system). A
-   developer with write access to the main repository will then review
+   developer with write access to the main branch will then review
    the code and merge it with the main branch (assuming that it passes
    the code review).
 
@@ -96,7 +96,7 @@ identical (with ``dolfin`` replaced by the relevant component name).
 Creating a patch
 ================
 
-As an alternative to creating a branch, you may submit a patch.  The
+As an alternative to creating a branch, you may submit a patch. The
 following instructions show how to create and submit a patch for
 DOLFIN.
 
@@ -107,7 +107,7 @@ DOLFIN.
 #. Modify the files.
 
 #. If your contribution consists of new files, add those to the
-   repository::
+   branch::
 
     bzr add <files>
 
@@ -138,17 +138,78 @@ DOLFIN.
 
 #. Send the patch that you just created to the DOLFIN mailing list
    dolfin@lists.launchpad.net with a description of the patch. A
-   developer with write access to the main repository will then review
+   developer with write access to the main branch will then review
    the code and merge it with the main branch (assuming that it passes
    the code review).
 
 The procedure for creating a patch for other FEniCS components is
 identical (with ``dolfin`` replaced by the relevant component name).
 
-.. _bzr_branch_workflow:
+.. _bzr_workflow:
 
 Recommended Bazaar workflow
 ===========================
 
-.. note::
-    Need to write about Bazaar usage here.
+When working together with others on a code, it often happens that one
+needs to merge changes from two or more branches of the same code. The
+following is a recommended Bazaar workflow for handling merges. It
+applies mainly to members of core teams that have write access to the
+main branches, but may also be of use to others.
+
+#. Create a shared repository for branches::
+
+    bzr init-repo foo
+
+   This creates a directory named ``foo`` which can hold several
+   branches that share data, which not only saves disk space but also
+   speeds up merging and branching.
+
+#. Enter the shared repository::
+
+    cd foo
+
+#. Checkout the main branch of the project from Launchpad::
+
+    bzr checkout lp:foo trunk
+
+   This creates a *bound* branch of the project in the directory
+   ``trunk``. Commits in this directory will result in a commit
+   in the main Launchpad branch.
+
+#. Create a branch for local work::
+
+    bzr branch trunk work
+
+#. Make any changes, commits, merges etc. inside the ``work``
+   directory::
+
+    cd work
+    <work>
+    <work>
+    <work>
+    bzr commit
+
+#. When you want to transfer your changes to the main branch, first
+   try to push your changes directly to the main branch::
+
+    bzr push lp:foo
+
+#. If that fails, which can happen if someone else has pushed changes
+   to the main branch before you, a merge is necessary. The point now
+   is that this merge should be carried out *from* the main
+   branch. The merge should not be carried out inside the ``work``
+   directory and then pushed to the main branch (as that will create a
+   warning about revisions being removed from the main branch). Here's
+   how to carry out the merge::
+
+    cd ../trunk
+    bzr update
+    bzr merge ../work
+    bzr commit -m "merge work on <stuff>"
+
+   This will merge the changes made in ``work`` and transfer those
+   changes to the main Launchpad branch.
+
+   Some FEniCS projects have explicitly set the Bazaar flag
+   ``append_revisions_only``, which will issue an error message if an
+   attempt is made to push a merge from ``work``.
