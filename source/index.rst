@@ -6,6 +6,7 @@
     :hidden:
 
     about/index
+    apps/index
     download/index
     doc/index
     dev/index
