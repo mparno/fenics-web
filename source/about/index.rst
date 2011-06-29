@@ -34,6 +34,9 @@ Contributions have also been made by researchers from
 `Delft University of Technology <http://www.tudelft.nl>`__  and
 `Argonne National Laboratory <http://www.anl.gov>`__.
 
+.. note::
+    Johannes' revision-control-history videos can be featured here.
+
 **********
 Components
 **********
@@ -48,6 +51,10 @@ code generation interface :ref:`UFC <about_components_ufc>`, the form
 lanuage :ref:`UFL <about_components_ufl>` and a range of
 :ref:`additional components <about_components_additional>` and
 :ref:`applications <about_components_applications>`.
+
+.. note::
+    I think applications should be removed from here and featured as
+    part of their :ref:`own page <apps>`.
 
 An full overview of the list of FEniCS components is presented
 :ref:`here <about_components>`.
