@@ -33,7 +33,7 @@
 
         <div id="front-block-2" class="front-block block">
           <h3>Recent project news <a href="/new/_static/news/feed.xml" title="The FEniCS Project News RSS feed" rel="alternate nofollow" type="application/rss+xml"><img src="/new/_static/feed-icon-14x14.gif" alt="RSS"/></a></h3>
-	  <!--#include virtual="../_static/news/include.html"-->
+	  <!--#include virtual="_static/news/include.html"-->
         </div><!-- #front-block-2 .front-block .block-->
 
       </div><!-- #sub-feature -->
