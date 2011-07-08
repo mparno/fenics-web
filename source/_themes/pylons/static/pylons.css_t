@@ -443,6 +443,11 @@ width: 400px;
 #container {
     margin-top:-21px;
 }
+
+ul#recent-items{
+padding-left: 1em;
+}
+
 #sub-feature {
     font-size:13px;
     line-height:18px;
@@ -467,8 +472,12 @@ width: 400px;
 }
 .block .avatar {
     float:left;
+    margin:.55em 5px 0 0;
+}
+.block .avatar-84 {
     margin:.25em 10px 0 0;
 }
+
 .block ul {
     border-top:1px solid #ccc;
     list-style:none;
