@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>FEniCS News</title>
+	<link>http://www.fenicsproject.org/</link>
+	<language>en</language>
+	<description>FEniCS News - http://www.fenicsproject.org/</description>
+
+<item>
+	<title>ufl: UFL 1.0-beta released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-07-08:/+announcement/8638</guid>
+	<link>https://launchpad.net/ufl/+announcement/8638</link>
+	<description><p>UFL 1.0-beta is now released. Together with the rest of FEniCS, UFL is approaching the milestone 1.0 release.</p>
+<p>The changelog for this version is:</p>
+<p>1.0-beta [2011-07-08]<br />
+ - Add script ufl-version<br />
+ - Added syntax for associating an arbitrary domain data object with a measure:<br />
+ dss = ds[boundaries]; M = f*dss(1) + g*dss(2)<br />
+ - Added new operators elem_mult, elem_div, elem_pow and elem_op for<br />
+   elementwise application of scalar operators to tensors of equal shape<br />
+ - Added condition operators And(lhs,rhs) and Or(lhs,rhs) and Not(cond)<br />
+ - Fixed support for symmetries in subelements of a mixed element<br />
+ - Add support for specifying derivatives of coefficients to derivative()</p></description>
+	<pubDate>Fri, 08 Jul 2011 09:14:52 +0000</pubDate>
+</item>
+<item>
+	<title>fenics: Mac OS X and Windows binaries updated</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-18:/+announcement/8369</guid>
+	<link>https://launchpad.net/fenics/+announcement/8369</link>
+	<description><p>The Mac OS X and Windows binaries have been updated and now features DOLFIN 0.9.11, FFC 0.9.10, Instant 0.9.10, UFC 2.0.1 and UFL 0.9.1. They are available from the installation page at <a href="http://www.fenicsproject.org" rel="nofollow">http://&lt;wbr&gt;&lt;/wbr&gt;www.fenicsproje&lt;wbr&gt;&lt;/wbr&gt;ct.org</a>.</p></description>
+	<pubDate>Wed, 18 May 2011 15:17:42 +0000</pubDate>
+</item>
+<item>
+	<title>instant: Instant 0.9.10</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8364</guid>
+	<link>https://launchpad.net/instant/+announcement/8364</link>
+	<description><p>A new version of Instant has been released. This version permits the SWIG executable to be set.</p></description>
+	<pubDate>Mon, 16 May 2011 16:41:11 +0000</pubDate>
+</item>
+<item>
+	<title>ufl: UFL 0.9.1</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8363</guid>
+	<link>https://launchpad.net/ufl/+announcement/8363</link>
+	<description><p>A new version of UFL has been released.  The release provides some new features, and a range of behind-the-scenes improvements. A list of changes can be found the in ChangeLog.</p></description>
+	<pubDate>Mon, 16 May 2011 16:40:00 +0000</pubDate>
+</item>
+<item>
+	<title>dolfin: DOLFIN 0.9.11</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8362</guid>
+	<link>https://launchpad.net/dolfin/+announcement/8362</link>
+	<description><p>A new version of DOLFIN has been released with a number of improvements and a significant number of bug fixes.  A comprehensive list of new features and bug fixes can be found in the ChangeLog.</p></description>
+	<pubDate>Mon, 16 May 2011 16:38:45 +0000</pubDate>
+</item>
+<item>
+	<title>ffc: FFC 0.9.10</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8361</guid>
+	<link>https://launchpad.net/ffc/+announcement/8361</link>
+	<description><p>A new version of FFC has been released. This release makes optimised quadrature schemes for simplices available, and includes a number of behind-the-scenes improvements.</p></description>
+	<pubDate>Mon, 16 May 2011 16:37:26 +0000</pubDate>
+</item>
+<item>
+	<title>ufc: UFC 2.0.1</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8360</guid>
+	<link>https://launchpad.net/ufc/+announcement/8360</link>
+	<description><p>A new version of UFC has been released.  With this release, UFC moves to SWIG version &gt;= 2.0. This release also fixes a const bug in the interface.</p></description>
+	<pubDate>Mon, 16 May 2011 16:35:51 +0000</pubDate>
+</item>
+<item>
+	<title>ffc: Simplex quadrature improvements</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8357</guid>
+	<link>https://launchpad.net/ffc/+announcement/8357</link>
+	<description><p>The development version of FFC now provides optimised rules for quadrature on triangles and tetrahedra. The provides a performance boost when using the quadrature representation, especially for lower order forms.</p></description>
+	<pubDate>Mon, 16 May 2011 10:18:07 +0000</pubDate>
+</item>
+<item>
+	<title>apps: Unicorn HPC 0.1.2</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-04-29:/+announcement/8253</guid>
+	<link>https://launchpad.net/unicorn/+announcement/8253</link>
+	<description><p>A new version of Unicorn has been released. This release fixes various bugs and portability issues.</p></description>
+	<pubDate>Fri, 29 Apr 2011 22:07:41 +0000</pubDate>
+</item>
+<item>
+	<title>dorsal: Dorsal 0.8.2 Released!</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-02-28:/+announcement/7870</guid>
+	<link>https://launchpad.net/dorsal/+announcement/7870</link>
+	<description><p>This is a bug-fix release that makes sure all the packages are up-to-date.</p></description>
+	<pubDate>Mon, 28 Feb 2011 14:48:51 +0000</pubDate>
+</item>
+
+</channel>
+</rss>

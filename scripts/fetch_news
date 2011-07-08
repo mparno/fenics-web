@@ -19,9 +19,3 @@ python planet.py sources.ini
 # Clean up the resulting output
 #perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' include.html
 #perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' feed.xml
-
-# FIXME: When this becomes a cronjob, it should be copied to
-# FIXME: the actual pages, not the source directory
-
-# Copy file to web pages
-cp output/include.html ../../source/newsfeed.inc
