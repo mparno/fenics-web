@@ -31,7 +31,7 @@ submitting code for a new feature, it is expected that the new feature
 is accompanied by a suitable set of unit tests. You should also review
 the :ref:`recommended coding style <developers_writing_code>`.
 
-.. _copyright_consent
+.. _copyright_consent:
 
 Copyright and licensing consent
 ===============================

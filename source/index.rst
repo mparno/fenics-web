@@ -6,10 +6,10 @@
     :hidden:
 
     about/index
-    apps/index
+    applications/index
     download/index
-    doc/index
-    dev/index
+    documentation/index
+    contributing/index
     citing/index
     book/index
     support/index
