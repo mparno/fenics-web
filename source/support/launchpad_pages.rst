@@ -8,6 +8,19 @@ Overview of Launchpad pages
 
 This page contains links to all FEniCS projects on Launchpad for convenience.
 
++----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| `FEniCS Project <https://launchpad.net/fenics-project>`_ | `Get Answers <https://answers.launchpad.net/fenics-project>`_ | `Report Bugs <https://bugs.launchpad.net/fenics-project>`_ | `Email Support <fenics@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~fenics>`_ |
++----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| `DOLFIN <https://launchpad.net/dolfin>`_                 | `Get Answers <https://answers.launchpad.net/dolfin>`_         | `Report Bugs <https://bugs.launchpad.net/dolfin>`_         | `Email Support <dolfin@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~dolfin>`_ |
++----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+| `Dorsal <https://launchpad.net/dorsal>`_                 | `Get Answers <https://answers.launchpad.net/dorsal>`_         | `Report Bugs <https://bugs.launchpad.net/dorsal>`_         | `Email Support <dorsal@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~dorsal>`_ |
++----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+.. note::
+   HN: I think the following is too unwieldy to helpful. I suggest
+   using something like the preceding table, even though the syntax to
+   generate it is horrible.
+
 `FEniCS Project <https://launchpad.net/fenics-project>`_
   * Code: `<https://code.launchpad.net/fenics-project>`_
   * Bugs: `<https://bugs.launchpad.net/fenics-project>`_
