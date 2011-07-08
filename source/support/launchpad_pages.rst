@@ -17,7 +17,7 @@ This page contains links to all FEniCS projects on Launchpad for convenience.
 +----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 .. note::
-   HN: I think the following is too unwieldy to helpful. I suggest
+   HN: I think the following is too unwieldy to be helpful. I suggest
    using something like the preceding table, even though the syntax to
    generate it is horrible.
 

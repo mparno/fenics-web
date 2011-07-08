@@ -275,6 +275,10 @@ div.viewcode-block:target {
 	padding: 10px 20px;
 }
 
+table.docutils td {
+    padding: 0.5em;
+}
+
 table.highlighttable {
 	width: 100%;
 	clear: both;
