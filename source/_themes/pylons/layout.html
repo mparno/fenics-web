@@ -12,7 +12,7 @@
 {# override upper relbar to show our navigation menu #}
 {% block relbar1 %}
 <div id="wrapper">
-  <a href="/new"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px"/></a>
+  <a href="/new/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px"/></a>
   <div id="access">
     <div class="menu">
       <ul>
@@ -32,7 +32,7 @@
 {% block footer %}
 <div id="wrapper">
   <div class="footer">
-    &copy; Copyright 2011, <a href="{{ pathto('/index') }}">The FEniCS Project</a>.
+    &copy; Copyright 2011, <a href="/new/">The FEniCS Project</a>.
   </div>
 </div>
 {% endblock %}
