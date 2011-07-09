@@ -528,3 +528,26 @@ a.button:hover,
 a.button:active {
     color: #FF4B33;
 }
+
+.footer-nav {
+    text-align:left;
+    height:9em;
+}
+.footer-nav h4 {
+    margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+div.span-6 {
+    display:inline;
+    float:left;
+    margin-right:10px;
+    margin-left: 20px;
+}
+div.last {
+    margin-right: 0;
+}
+
+.footer-nav ul li{
+    padding: 0.2em;
+}
