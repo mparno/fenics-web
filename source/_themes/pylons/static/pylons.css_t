@@ -556,3 +556,9 @@ div.last {
 margin-left:20px;
 margin-top: 1em;
 }
+
+@media print {
+div#wrapper {
+display: none;
+}
+}
