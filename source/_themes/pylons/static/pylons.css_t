@@ -551,3 +551,8 @@ div.last {
 .footer-nav ul li{
     padding: 0.2em;
 }
+
+.search {
+margin-left:20px;
+margin-top: 1em;
+}
