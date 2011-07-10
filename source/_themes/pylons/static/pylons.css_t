@@ -386,7 +386,7 @@ div.menu li {
 	color: #fff;
 }
 
-#wrapper {
+.wrapper {
 	margin: 0 auto;
 	width: 900px;
 }
@@ -558,7 +558,7 @@ margin-top: 1em;
 }
 
 @media print {
-div#wrapper {
+div.wrapper {
 display: none;
 }
 }
