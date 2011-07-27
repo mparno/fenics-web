@@ -1,15 +1,12 @@
 <div id="leader">
   <div id="leader-container">
     <div id="feature">
-      <a href="http://localhost:8888/"><img src="/new/_static/feature-item-1.png" alt="A look at the Thematic WordPress Theme"/></a>
+      <a href="http://localhost:8888/"><img src="/new/_static/feature-item-1.png" alt="A placeholder image"/></a>
       <div id="feature-info">
-        <h2>Mathematical physics can be fun!</h2>
+        <h2 style="margin-top:0;">Mathematical physics can be fun!</h2>
         <p>The FEniCS Project is a collection of free software aimed at automated, efficient solution of differential equations. The project provides tools for working with computational meshes, finite element variational formulations of PDEs, ODE solvers and linear algebra.</p>
-	<p>Through this web site, you can learn more about the project and learn how to obtain and use our software. We'd be delighted to offer support in case you need it, and encourage contributions from our users.</p>
-	<div id="buttons">
-	  <a href="/new/download/" class="button" rel="nofollow">Download!</a>
-          <a href="/new/about/" class="button">Learn more...</a>
-        </div>
+	<p>Through this web site, you can <a href="/new/about/">learn more about the project</a> and learn how to obtain and use our software. We'd be delighted to offer support in case you need it, and encourage contributions from our users.</p>
+	<a href="/new/download/"><img style="width: 300px; margin-left:40px;" src="/new/_static/download-button.png" alt="Download button" /></a>
       </div><!-- #feature-info -->
       <div class="clear-block"></div>
     </div><!-- #feature -->
