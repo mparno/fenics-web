@@ -42,7 +42,7 @@
           </p>
 
           <p><a href="/new/book" rel="nofollow">Find out more about
-          the book project&raquo;</a></p>
+          the book project &raquo;</a></p>
 
           <h3>Who's behind the FEniCS Project?</h3>
           <img alt='' src='/new/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
@@ -54,7 +54,7 @@
             </p>
 
           <p><a href="/new/about/" rel="nofollow">Find out more about
-          our project&raquo;</a></p>
+          our project &raquo;</a></p>
 
         </div><!-- #front-block-1 .front-block .block-->
 
