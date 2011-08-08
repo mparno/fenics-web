@@ -1,3 +1,5 @@
+.. title:: Automated Solution of Differential Equations by the Finite Element Method
+
 .. raw:: html
     :file: index.inc
 
