@@ -44,7 +44,7 @@
           <p><a href="/new/book" rel="nofollow">Find out more about
           the book project&raquo;</a></p>
 
-          <h3>Who's behind the FEniCS project?</h3>
+          <h3>Who's behind the FEniCS Project?</h3>
           <img alt='' src='/new/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p>The FEniCS Project is a collaborative effort between
