@@ -1,8 +1,9 @@
 /*
- * pylons.css_t
+ * fenics.css_t
  * ~~~~~~~~~~~~
  *
- * Sphinx stylesheet -- pylons theme.
+ * Sphinx stylesheet -- FEniCS theme.
+ * This is a modified version of the pylons theme.
  *
  * :copyright: Copyright 2007-2010 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
@@ -512,7 +513,7 @@ padding-left: 1em;
 
 #buttons {
     padding:.75em 0;
-} 
+}
 a.button {
     border:1px solid #ccc;
     -webkit-border-radius: .7em;
@@ -521,7 +522,7 @@ a.button {
     color:#666;
     font-size:13px;
     margin:0 10px 0 0;
-    padding:.75em 1.25em;    
+    padding:.75em 1.25em;
     text-decoration:none;
 }
 a.button:hover,
