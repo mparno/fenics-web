@@ -6,10 +6,11 @@ The FEniCS Book
 
 Together with `Springer <http://www.springer.com>`__, we are preparing
 a book to document the methodology and software developed as part of
-the FEniCS Project. The working title of the book is *Automated
-Solution of Differential Equations by the Finite Element Method*.
-The book will appear as volume 84 of the Springer
-`Lecture Notes in Computational Science and Engineering
+the FEniCS Project. The title of the book is `Automated Solution of
+Differential Equations by the Finite Element Method
+<http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__. The
+book will appear as volume 84 of the Springer `Lecture Notes in
+Computational Science and Engineering
 <http://www.springer.com/series/3527>`__.
 
 The book manuscript has been submitted to the publisher and is
