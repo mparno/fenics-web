@@ -30,19 +30,32 @@
     <div id="content">
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
+
           <h3>FEniCS book about to be released!</h3>
           <img alt='' src='/new/_static/images/genericbook.png' class='avatar avatar-84 photo' width='84'/>
+
 	  <p>The FEniCS book project is nearing completion. The book,
             titled <i>Automated Solution of Differential Equations by
             the Finite Element Method</i>, will be published as part
             of the Springer Lecture Notes in Computational Science and
             Engineering in the fall of 2011.
           </p>
-          <p><a href="/new/book" rel="nofollow">Find out more about the book project&raquo;</a></p>
+
+          <p><a href="/new/book" rel="nofollow">Find out more about
+          the book project&raquo;</a></p>
+
           <h3>Who's behind the FEniCS project?</h3>
-          <img alt='' src='/new/_static/sample-news-image.png' class='avatar avatar-84 photo' height='84' width='84' />
-	  <p>The FEniCS Project is a collaborative open source effort. In chronological order, its contributors include the University of Chicago, Argonne National Laboratory, Delft University of Technology, Royal Institute of Technology KTH, Simula Research Laboratory, Texas Tech University, and University of Cambridge.</p>
-          <p><a href="/new/about/" rel="nofollow">Find out more about our project&raquo;</a></p>
+          <img alt='' src='/new/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>The FEniCS Project is a collaborative effort between
+	  research groups from Simula Research Laboratory, University
+	  of Cambridge, University of Chicago, Texas Tech University
+	  and KTH Royal Institute of Technology.
+            </p>
+
+          <p><a href="/new/about/" rel="nofollow">Find out more about
+          our project&raquo;</a></p>
+
         </div><!-- #front-block-1 .front-block .block-->
 
         <div id="front-block-2" class="front-block block">

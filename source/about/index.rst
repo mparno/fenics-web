@@ -29,10 +29,12 @@ institutes contribute significant resources to the FEniCS Project:
 * `Texas Tech University <http://www.ttu.edu/>`__
 * `KTH Royal Institute of Technology <http://www.kth.se>`__
 
-Contributions have also been made by researchers from
-`Chalmers University of Technology <http://www.chalmers.se>`__,
-`Delft University of Technology <http://www.tudelft.nl>`__  and
-`Argonne National Laboratory <http://www.anl.gov>`__.
+Contributions have also been made by researchers from `Chalmers
+University of Technology <http://www.chalmers.se>`__, `Delft
+University of Technology <http://www.tudelft.nl>`__, `Argonne National
+Laboratory <http://www.anl.gov>`__ and many other research institutes.
+A full list of contributors is maintained as part of the source code
+of each FEniCS component.
 
 .. note::
     Johannes' revision-control-history videos can be featured here.
