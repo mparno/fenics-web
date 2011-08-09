@@ -36,8 +36,9 @@ Laboratory <http://www.anl.gov>`__ and many other research institutes.
 A full list of contributors is maintained as part of the source code
 of each FEniCS component.
 
-.. note::
-    Johannes' revision-control-history videos can be featured here.
+.. raw:: html
+
+    <div style="text-align:center;margin-left:auto; margin-right:auto;"><iframe width="425" height="349" src="http://www.youtube.com/embed/0E6DGUbRrO4" frameborder="0" allowfullscreen></iframe></div>
 
 **********
 Components
