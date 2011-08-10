@@ -46,7 +46,9 @@ import_doc()
     fi
 
     # Get package version
-    PACKAGE_VERSION=`$package-version`
+    PACKAGE_VERSION=`$package-version` || exit 1
+
+    echo $PACKAGE_VERSION
 
     # Modify version number if necessary (+ --> dev)
     if [[ $PACKAGE_VERSION == *+ ]]; then
