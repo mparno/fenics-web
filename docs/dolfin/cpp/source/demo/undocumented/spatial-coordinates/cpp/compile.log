@@ -1,0 +1,704 @@
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form SpatialCoordinates
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'a'
+  Rank:                             2
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 0
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0, v_1]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v, u]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG2(?)'
+  Unique sub elements:              'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+  Name:                             'L'
+  Rank:                             1
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG2(?)'
+  Unique sub elements:              'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal SpatialCoordinate.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 6
+  quadrature_degree: auto --> 6
+  quadrature_rule:   auto --> default
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal SpatialCoordinate.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 5
+  quadrature_degree: auto --> 5
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0402131 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00388 seconds
+  Shape of reference tensor: (6, 6, 2, 2)
+  Primary multi index:   rank = 2 dims = [6, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 0], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 0], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {12: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 2, None): {None: {(0, 0): array([[-0.0551285669925, -0.0551285669925, 0.653307703047,
+          -0.124998982535, -0.124998982535, 0.00143057951779,
+          -0.0474962571988, -0.117715163308, -0.0474962571988,
+          0.173768363654, -0.117715163308, 0.173768363654],
+         [0.653307703047, -0.0551285669925, -0.0551285669925,
+          0.00143057951779, -0.124998982535, -0.124998982535, 0.173768363654,
+          0.173768363654, -0.117715163308, -0.117715163308, -0.0474962571988,
+          -0.0474962571988],
+         [-0.0551285669925, 0.653307703047, -0.0551285669925,
+          -0.124998982535, 0.00143057951779, -0.124998982535,
+          -0.117715163308, -0.0474962571988, 0.173768363654,
+          -0.0474962571988, 0.173768363654, -0.117715163308],
+         [0.22051426797, 0.22051426797, 0.015920894998, 0.49999593014,
+          0.49999593014, 0.248575525272, 0.790160442766, 0.135307828169,
+          0.790160442766, 0.0659747859186, 0.135307828169, 0.0659747859186],
+         [0.015920894998, 0.22051426797, 0.22051426797, 0.248575525272,
+          0.49999593014, 0.49999593014, 0.0659747859186, 0.0659747859186,
+          0.135307828169, 0.135307828169, 0.790160442766, 0.790160442766],
+         [0.22051426797, 0.015920894998, 0.22051426797, 0.49999593014,
+          0.248575525272, 0.49999593014, 0.135307828169, 0.790160442766,
+          0.0659747859186, 0.790160442766, 0.0659747859186, 0.135307828169]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  tables: {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0': ('FE0', (), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 2, None): {0: {(0, 0): array([[1.97758476261e-16, 2.08166817117e-16, 1.66533453694e-16],
+         [0.687298334621, 3.46944695195e-17, -0.0872983346207],
+         [-0.0872983346207, 4.16333634234e-17, 0.687298334621],
+         [0.4, 1.0, 0.4],
+         [-3.46944695195e-17, -1.38777878078e-17, -5.55111512313e-17],
+         [-1.30104260698e-16, 9.71445146547e-17, 1.38777878078e-16]], dtype=object)}, 1: {(0, 0): array([[0.687298334621, 2.77555756156e-17, -0.0872983346207],
+         [1.09287578987e-16, 4.85722573274e-17, 1.11022302463e-16],
+         [-0.0872983346207, 4.16333634234e-17, 0.687298334621],
+         [-2.77555756156e-17, -2.77555756156e-17, 0.0],
+         [0.4, 1.0, 0.4],
+         [-1.12757025938e-16, 6.93889390391e-17, 1.11022302463e-16]], dtype=object)}, 2: {(0, 0): array([[0.687298334621, 9.71445146547e-17, -0.0872983346207],
+         [-0.0872983346207, 8.32667268469e-17, 0.687298334621],
+         [0.0, 0.0, 0.0],
+         [-5.55111512313e-17, 0.0, 1.11022302463e-16],
+         [8.32667268469e-17, -2.77555756156e-17, -8.32667268469e-17],
+         [0.4, 1.0, 0.4]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[1.97758476261e-16, 0.687298334621, -0.0872983346207, 0.4,
+          -3.46944695195e-17, -1.30104260698e-16],
+         [2.08166817117e-16, 3.46944695195e-17, 4.16333634234e-17, 1.0,
+          -1.38777878078e-17, 9.71445146547e-17],
+         [1.66533453694e-16, -0.0872983346207, 0.687298334621, 0.4,
+          -5.55111512313e-17, 1.38777878078e-16]], dtype=object), 'FE0_f1': array([[0.687298334621, 1.09287578987e-16, -0.0872983346207,
+          -2.77555756156e-17, 0.4, -1.12757025938e-16],
+         [2.77555756156e-17, 4.85722573274e-17, 4.16333634234e-17,
+          -2.77555756156e-17, 1.0, 6.93889390391e-17],
+         [-0.0872983346207, 1.11022302463e-16, 0.687298334621, 0.0, 0.4,
+          1.11022302463e-16]], dtype=object), 'FE0_f2': array([[0.687298334621, -0.0872983346207, 0.0, -5.55111512313e-17,
+          8.32667268469e-17, 0.4],
+         [9.71445146547e-17, 8.32667268469e-17, 0.0, 0.0, -2.77555756156e-17,
+          1.0],
+         [-0.0872983346207, 0.687298334621, 0.0, 1.11022302463e-16,
+          -8.32667268469e-17, 0.4]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[1.97758476261e-16, 0.687298334621, -0.0872983346207, 0.4,
+          -3.46944695195e-17, -1.30104260698e-16],
+         [2.08166817117e-16, 3.46944695195e-17, 4.16333634234e-17, 1.0,
+          -1.38777878078e-17, 9.71445146547e-17],
+         [1.66533453694e-16, -0.0872983346207, 0.687298334621, 0.4,
+          -5.55111512313e-17, 1.38777878078e-16]], dtype=object), 'FE0_f1': array([[0.687298334621, 1.09287578987e-16, -0.0872983346207,
+          -2.77555756156e-17, 0.4, -1.12757025938e-16],
+         [2.77555756156e-17, 4.85722573274e-17, 4.16333634234e-17,
+          -2.77555756156e-17, 1.0, 6.93889390391e-17],
+         [-0.0872983346207, 1.11022302463e-16, 0.687298334621, 0.0, 0.4,
+          1.11022302463e-16]], dtype=object), 'FE0_f2': array([[0.687298334621, -0.0872983346207, 0.0, -5.55111512313e-17,
+          8.32667268469e-17, 0.4],
+         [9.71445146547e-17, 8.32667268469e-17, 0.0, 0.0, -2.77555756156e-17,
+          1.0],
+         [-0.0872983346207, 0.687298334621, 0.0, 1.11022302463e-16,
+          -8.32667268469e-17, 0.4]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.687298334621, -0.0872983346207, 0.4],
+         [0, 0, 1.0],
+         [-0.0872983346207, 0.687298334621, 0.4]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2, 3]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2, 4]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1, 5]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.044524 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Skipping FErari optimizations as requested.
+  Optimising expressions for cell integral
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.00143003 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Cell, number of operations to compute tensor: 397
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n1
+  Removing unused variable: n0
+  Removing unused variable: direction
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 60
+  Exterior facet 1, number of operations to compute tensor: 60
+  Exterior facet 2, number of operations to compute tensor: 60
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.26097 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.002213 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./SpatialCoordinates.h.
+  
+Compiler stage 5 finished in 0.00147915 seconds.
+
+[1;37;32mFFC finished in 0.351377 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form SpatialCoordinates
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'a'
+  Rank:                             2
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 0
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0, v_1]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v, u]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG2(?)'
+  Unique sub elements:              'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+  Name:                             'L'
+  Rank:                             1
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG2(?)'
+  Unique sub elements:              'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal SpatialCoordinate.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 6
+  quadrature_degree: auto --> 6
+  quadrature_rule:   auto --> default
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal SpatialCoordinate.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 5
+  quadrature_degree: auto --> 5
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0410318 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00595 seconds
+  Shape of reference tensor: (6, 6, 2, 2)
+  Primary multi index:   rank = 2 dims = [6, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 0], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 0], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {12: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 2, None): {None: {(0, 0): array([[-0.0551285669925, -0.0551285669925, 0.653307703047,
+          -0.124998982535, -0.124998982535, 0.00143057951779,
+          -0.0474962571988, -0.117715163308, -0.0474962571988,
+          0.173768363654, -0.117715163308, 0.173768363654],
+         [0.653307703047, -0.0551285669925, -0.0551285669925,
+          0.00143057951779, -0.124998982535, -0.124998982535, 0.173768363654,
+          0.173768363654, -0.117715163308, -0.117715163308, -0.0474962571988,
+          -0.0474962571988],
+         [-0.0551285669925, 0.653307703047, -0.0551285669925,
+          -0.124998982535, 0.00143057951779, -0.124998982535,
+          -0.117715163308, -0.0474962571988, 0.173768363654,
+          -0.0474962571988, 0.173768363654, -0.117715163308],
+         [0.22051426797, 0.22051426797, 0.015920894998, 0.49999593014,
+          0.49999593014, 0.248575525272, 0.790160442766, 0.135307828169,
+          0.790160442766, 0.0659747859186, 0.135307828169, 0.0659747859186],
+         [0.015920894998, 0.22051426797, 0.22051426797, 0.248575525272,
+          0.49999593014, 0.49999593014, 0.0659747859186, 0.0659747859186,
+          0.135307828169, 0.135307828169, 0.790160442766, 0.790160442766],
+         [0.22051426797, 0.015920894998, 0.22051426797, 0.49999593014,
+          0.248575525272, 0.49999593014, 0.135307828169, 0.790160442766,
+          0.0659747859186, 0.790160442766, 0.0659747859186, 0.135307828169]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  tables: {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0': array([[-0.0551285669925, 0.653307703047, -0.0551285669925, 0.22051426797,
+          0.015920894998, 0.22051426797],
+         [-0.0551285669925, -0.0551285669925, 0.653307703047, 0.22051426797,
+          0.22051426797, 0.015920894998],
+         [0.653307703047, -0.0551285669925, -0.0551285669925, 0.015920894998,
+          0.22051426797, 0.22051426797],
+         [-0.124998982535, 0.00143057951779, -0.124998982535, 0.49999593014,
+          0.248575525272, 0.49999593014],
+         [-0.124998982535, -0.124998982535, 0.00143057951779, 0.49999593014,
+          0.49999593014, 0.248575525272],
+         [0.00143057951779, -0.124998982535, -0.124998982535, 0.248575525272,
+          0.49999593014, 0.49999593014],
+         [-0.0474962571988, 0.173768363654, -0.117715163308, 0.790160442766,
+          0.0659747859186, 0.135307828169],
+         [-0.117715163308, 0.173768363654, -0.0474962571988, 0.135307828169,
+          0.0659747859186, 0.790160442766],
+         [-0.0474962571988, -0.117715163308, 0.173768363654, 0.790160442766,
+          0.135307828169, 0.0659747859186],
+         [0.173768363654, -0.117715163308, -0.0474962571988, 0.0659747859186,
+          0.135307828169, 0.790160442766],
+         [-0.117715163308, -0.0474962571988, 0.173768363654, 0.135307828169,
+          0.790160442766, 0.0659747859186],
+         [0.173768363654, -0.0474962571988, -0.117715163308, 0.0659747859186,
+          0.790160442766, 0.135307828169]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0': ('FE0', (), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 2, None): {0: {(0, 0): array([[1.97758476261e-16, 2.08166817117e-16, 1.66533453694e-16],
+         [0.687298334621, 3.46944695195e-17, -0.0872983346207],
+         [-0.0872983346207, 4.16333634234e-17, 0.687298334621],
+         [0.4, 1.0, 0.4],
+         [-3.46944695195e-17, -1.38777878078e-17, -5.55111512313e-17],
+         [-1.30104260698e-16, 9.71445146547e-17, 1.38777878078e-16]], dtype=object)}, 1: {(0, 0): array([[0.687298334621, 2.77555756156e-17, -0.0872983346207],
+         [1.09287578987e-16, 4.85722573274e-17, 1.11022302463e-16],
+         [-0.0872983346207, 4.16333634234e-17, 0.687298334621],
+         [-2.77555756156e-17, -2.77555756156e-17, 0.0],
+         [0.4, 1.0, 0.4],
+         [-1.12757025938e-16, 6.93889390391e-17, 1.11022302463e-16]], dtype=object)}, 2: {(0, 0): array([[0.687298334621, 9.71445146547e-17, -0.0872983346207],
+         [-0.0872983346207, 8.32667268469e-17, 0.687298334621],
+         [0.0, 0.0, 0.0],
+         [-5.55111512313e-17, 0.0, 1.11022302463e-16],
+         [8.32667268469e-17, -2.77555756156e-17, -8.32667268469e-17],
+         [0.4, 1.0, 0.4]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[1.97758476261e-16, 0.687298334621, -0.0872983346207, 0.4,
+          -3.46944695195e-17, -1.30104260698e-16],
+         [2.08166817117e-16, 3.46944695195e-17, 4.16333634234e-17, 1.0,
+          -1.38777878078e-17, 9.71445146547e-17],
+         [1.66533453694e-16, -0.0872983346207, 0.687298334621, 0.4,
+          -5.55111512313e-17, 1.38777878078e-16]], dtype=object), 'FE0_f1': array([[0.687298334621, 1.09287578987e-16, -0.0872983346207,
+          -2.77555756156e-17, 0.4, -1.12757025938e-16],
+         [2.77555756156e-17, 4.85722573274e-17, 4.16333634234e-17,
+          -2.77555756156e-17, 1.0, 6.93889390391e-17],
+         [-0.0872983346207, 1.11022302463e-16, 0.687298334621, 0.0, 0.4,
+          1.11022302463e-16]], dtype=object), 'FE0_f2': array([[0.687298334621, -0.0872983346207, 0.0, -5.55111512313e-17,
+          8.32667268469e-17, 0.4],
+         [9.71445146547e-17, 8.32667268469e-17, 0.0, 0.0, -2.77555756156e-17,
+          1.0],
+         [-0.0872983346207, 0.687298334621, 0.0, 1.11022302463e-16,
+          -8.32667268469e-17, 0.4]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[1.97758476261e-16, 0.687298334621, -0.0872983346207, 0.4,
+          -3.46944695195e-17, -1.30104260698e-16],
+         [2.08166817117e-16, 3.46944695195e-17, 4.16333634234e-17, 1.0,
+          -1.38777878078e-17, 9.71445146547e-17],
+         [1.66533453694e-16, -0.0872983346207, 0.687298334621, 0.4,
+          -5.55111512313e-17, 1.38777878078e-16]], dtype=object), 'FE0_f1': array([[0.687298334621, 1.09287578987e-16, -0.0872983346207,
+          -2.77555756156e-17, 0.4, -1.12757025938e-16],
+         [2.77555756156e-17, 4.85722573274e-17, 4.16333634234e-17,
+          -2.77555756156e-17, 1.0, 6.93889390391e-17],
+         [-0.0872983346207, 1.11022302463e-16, 0.687298334621, 0.0, 0.4,
+          1.11022302463e-16]], dtype=object), 'FE0_f2': array([[0.687298334621, -0.0872983346207, 0.0, -5.55111512313e-17,
+          8.32667268469e-17, 0.4],
+         [9.71445146547e-17, 8.32667268469e-17, 0.0, 0.0, -2.77555756156e-17,
+          1.0],
+         [-0.0872983346207, 0.687298334621, 0.0, 1.11022302463e-16,
+          -8.32667268469e-17, 0.4]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.687298334621, -0.0872983346207, 0.4],
+         [0, 0, 1.0],
+         [-0.0872983346207, 0.687298334621, 0.4]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2, 3]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2, 4]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1, 5]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0475149 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Skipping FErari optimizations as requested.
+  Optimising expressions for cell integral
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.0015099 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Cell, number of operations to compute tensor: 397
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n1
+  Removing unused variable: n0
+  Removing unused variable: direction
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 60
+  Exterior facet 1, number of operations to compute tensor: 60
+  Exterior facet 2, number of operations to compute tensor: 60
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.263888 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00222206 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./SpatialCoordinates.h.
+  
+Compiler stage 5 finished in 0.00156093 seconds.
+
+[1;37;32mFFC finished in 0.358308 seconds.[0m

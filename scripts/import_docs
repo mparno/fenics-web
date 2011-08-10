@@ -9,7 +9,7 @@
 # Licensed under the GNU GPL version 3 or any later version.
 #
 # First added:  2011-06-14
-# Last changed: 2011-06-15
+# Last changed: 2011-08-10
 #
 # Modified by Anders Logg, 2011.
 
@@ -55,7 +55,7 @@ import_doc()
 
     # Set directories for documentation
     DOC_FROM="$PACKAGE_DIR/$DOCDIR/"
-    DOC_TO="doc/$package/$PACKAGE_VERSION/$SUFFIX"
+    DOC_TO="docs/$package/$PACKAGE_VERSION/$SUFFIX"
 
     echo "Copying documentation for $PACKAGE version $PACKAGE_VERSION"
     echo "  from: $DOC_FROM"

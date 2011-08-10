@@ -1,0 +1,854 @@
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element Pressure
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000298977 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0176382 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000526905 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.105231 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00200391 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Pressure.h.
+  
+Compiler stage 5 finished in 0.00105405 seconds.
+
+[1;37;32mFFC finished in 0.127507 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Drag
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'M'
+  Rank:                             0
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           1
+  Number of cell domains:           0
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[]'
+  Coefficients:                     '[w_0]'
+  Argument names:                   '[]'
+  Coefficient names:                '[p]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal FacetNormal.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 1
+  quadrature_degree: auto --> 1
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0161998 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None): {0: {(0, 0): array([[4.16333634234e-17],
+         [0.5],
+         [0.5]], dtype=object)}, 1: {(0, 0): array([[0.5],
+         [4.16333634234e-17],
+         [0.5]], dtype=object)}, 2: {(0, 0): array([[0.5],
+         [0.5],
+         [0.0]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.5, 0.5]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.028558 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.00096488 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n1
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 8
+  Exterior facet 1, number of operations to compute tensor: 8
+  Exterior facet 2, number of operations to compute tensor: 8
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.113749 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00224996 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Drag.h.
+  
+Compiler stage 5 finished in 0.00118685 seconds.
+
+[1;37;32mFFC finished in 0.16348 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Lift
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'M'
+  Rank:                             0
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           1
+  Number of cell domains:           0
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[]'
+  Coefficients:                     '[w_0]'
+  Argument names:                   '[]'
+  Coefficient names:                '[p]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal FacetNormal.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 1
+  quadrature_degree: auto --> 1
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.016516 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None): {0: {(0, 0): array([[4.16333634234e-17],
+         [0.5],
+         [0.5]], dtype=object)}, 1: {(0, 0): array([[0.5],
+         [4.16333634234e-17],
+         [0.5]], dtype=object)}, 2: {(0, 0): array([[0.5],
+         [0.5],
+         [0.0]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.5, 0.5]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0259771 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.000976086 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n0
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 8
+  Exterior facet 1, number of operations to compute tensor: 8
+  Exterior facet 2, number of operations to compute tensor: 8
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.114217 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00227904 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Lift.h.
+  
+Compiler stage 5 finished in 0.00118804 seconds.
+
+[1;37;32mFFC finished in 0.161745 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element Pressure
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000304937 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0203249 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000524044 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.102608 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00194597 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Pressure.h.
+  
+Compiler stage 5 finished in 0.00114989 seconds.
+
+[1;37;32mFFC finished in 0.127638 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Drag
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'M'
+  Rank:                             0
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           1
+  Number of cell domains:           0
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[]'
+  Coefficients:                     '[w_0]'
+  Argument names:                   '[]'
+  Coefficient names:                '[p]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal FacetNormal.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 1
+  quadrature_degree: auto --> 1
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.018441 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None): {0: {(0, 0): array([[4.16333634234e-17],
+         [0.5],
+         [0.5]], dtype=object)}, 1: {(0, 0): array([[0.5],
+         [4.16333634234e-17],
+         [0.5]], dtype=object)}, 2: {(0, 0): array([[0.5],
+         [0.5],
+         [0.0]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.5, 0.5]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.034987 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.000991821 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n1
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 8
+  Exterior facet 1, number of operations to compute tensor: 8
+  Exterior facet 2, number of operations to compute tensor: 8
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.118433 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00231194 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Drag.h.
+  
+Compiler stage 5 finished in 0.00125694 seconds.
+
+[1;37;32mFFC finished in 0.177028 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Lift
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'M'
+  Rank:                             0
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           1
+  Number of cell domains:           0
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[]'
+  Coefficients:                     '[w_0]'
+  Argument names:                   '[]'
+  Coefficient names:                '[p]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal FacetNormal.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 1
+  quadrature_degree: auto --> 1
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0156338 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None): {0: {(0, 0): array([[4.16333634234e-17],
+         [0.5],
+         [0.5]], dtype=object)}, 1: {(0, 0): array([[0.5],
+         [4.16333634234e-17],
+         [0.5]], dtype=object)}, 2: {(0, 0): array([[0.5],
+         [0.5],
+         [0.0]], dtype=object)}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  tables: {'FE0_f0': array([[4.16333634234e-17, 0.5, 0.5]], dtype=object), 'FE0_f1': array([[0.5, 4.16333634234e-17, 0.5]], dtype=object), 'FE0_f2': array([[0.5, 0.5, 0.0]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_f0': array([[0.5, 0.5]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2]), False, False), 'FE0_f1': ('FE0_f0', (1, [0, 2]), False, False), 'FE0_f2': ('FE0_f0', (2, [0, 1]), False, False)}
+  Transforming exterior facet integral 0
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 1
+  Reusing element from cache
+  Reusing element from cache
+  Transforming exterior facet integral 2
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0283849 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for facet integral 0
+  Optimising expressions for facet integral 1
+  Optimising expressions for facet integral 2
+  
+Compiler stage 3 finished in 0.00093317 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: n0
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Exterior facet 0, number of operations to compute tensor: 8
+  Exterior facet 1, number of operations to compute tensor: 8
+  Exterior facet 2, number of operations to compute tensor: 8
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.116695 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00226688 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Lift.h.
+  
+Compiler stage 5 finished in 0.00117803 seconds.
+
+[1;37;32mFFC finished in 0.165668 seconds.[0m
