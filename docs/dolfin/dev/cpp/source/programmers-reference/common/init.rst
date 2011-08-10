@@ -14,10 +14,10 @@ init.h
 
 
 
-    .. cpp:function:: void init(int argc, char* argv[])
-    
-        Initialize DOLFIN (and PETSc) with command-line arguments. This
-        should not be needed in most cases since the initialization is
-        otherwise handled automatically.
+.. cpp:function:: void init(int argc, char* argv[])
+
+    Initialize DOLFIN (and PETSc) with command-line arguments. This
+    should not be needed in most cases since the initialization is
+    otherwise handled automatically.
 
 

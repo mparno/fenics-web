@@ -14,18 +14,18 @@ solve.h
 
 
 
-    .. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, std::string solver_type = "lu", std::string pc_type = "default")
-    
-        Solve linear system Ax = b
+.. cpp:function:: void solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b, std::string solver_type = "lu", std::string pc_type = "default")
+
+    Solve linear system Ax = b
 
 
-    .. cpp:function:: double residual(const GenericMatrix& A, const GenericVector& x, const GenericVector& b)
-    
-        Compute residual ||Ax - b||
+.. cpp:function:: double residual(const GenericMatrix& A, const GenericVector& x, const GenericVector& b)
+
+    Compute residual ||Ax - b||
 
 
-    .. cpp:function:: double normalize(GenericVector& x, std::string normalization_type = "average")
-    
-        Normalize vector according to given normalization type
+.. cpp:function:: double normalize(GenericVector& x, std::string normalization_type = "average")
+
+    Normalize vector according to given normalization type
 
 

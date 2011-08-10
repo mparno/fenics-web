@@ -101,6 +101,12 @@ GenericTensor.h
         Cast a GenericTensor to its derived class (non-const version)
 
 
+    .. cpp:function:: static boost::shared_ptr<X> down_cast(const boost::shared_ptr<Y> A)
+    
+        Cast a GenericTensor shared ptr to its derived class. Caller
+        must check for success (returns null if cast fails).
+
+
     .. cpp:function:: bool has_type() const
     
         Check whether the GenericTensor instance matches a specific type
@@ -114,6 +120,16 @@ GenericTensor.h
     .. cpp:function:: GenericTensor* instance()
     
         Return concrete instance / unwrap (non-const version)
+
+
+    .. cpp:function:: boost::shared_ptr<const GenericTensor> shared_instance() const
+    
+        Return concrete shared ptr instance / unwrap (const version)
+
+
+    .. cpp:function:: boost::shared_ptr<GenericTensor> shared_instance()
+    
+        Return concrete shared ptr instance / unwrap
 
 
     .. cpp:function:: const GenericTensor& operator= (const GenericTensor& x)

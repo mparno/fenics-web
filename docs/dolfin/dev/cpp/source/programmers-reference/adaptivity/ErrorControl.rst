@@ -26,7 +26,27 @@ ErrorControl.h
 
     .. cpp:function:: ErrorControl(boost::shared_ptr<Form> a_star, boost::shared_ptr<Form> L_star, boost::shared_ptr<Form> residual, boost::shared_ptr<Form> a_R_T, boost::shared_ptr<Form> L_R_T, boost::shared_ptr<Form> a_R_dT, boost::shared_ptr<Form> L_R_dT, boost::shared_ptr<Form> eta_T, bool is_linear)
     
-        Create error control
+        Create error control object
+        
+        *Arguments*
+            a_star (:cpp:class:`Form`)
+               the bilinear form for the dual problem
+            L_star (:cpp:class:`Form`)
+               the linear form for the dual problem
+            residual (:cpp:class:`Form`)
+               a functional for the residual (error estimate)
+            a_R_T (:cpp:class:`Form`)
+               the bilinear form for the strong cell residual problem
+            L_R_T (:cpp:class:`Form`)
+               the linear form for the strong cell residual problem
+            a_R_dT (:cpp:class:`Form`)
+               the bilinear form for the strong facet residual problem
+            L_R_dT (:cpp:class:`Form`)
+               the linear form for the strong facet residual problem
+            eta_T (:cpp:class:`Form`)
+               a linear form over DG_0 for error indicators
+            is_linear (bool)
+               true iff primal problem is linear
 
 
     .. cpp:function:: double estimate_error(const Function& u, const std::vector<boost::shared_ptr<const BoundaryCondition> > bcs)
@@ -40,7 +60,7 @@ ErrorControl.h
             u (:cpp:class:`Function`)
                the primal approximation
         
-            bcs (std::vector<const :cpp:class:`BoundaryCondition`\*>)
+            bcs (std::vector<:cpp:class:`BoundaryCondition`>)
                 the primal boundary conditions
         
         *Returns*
@@ -69,7 +89,7 @@ ErrorControl.h
             R_T (:cpp:class:`Function`)
                 the strong cell residual (to be computed)
         
-            R_dT (_SpecialFacetFunction_)
+            R_dT (:cpp:class:`SpecialFacetFunction`)
                 the strong facet residual (to be computed)
         
             u (:cpp:class:`Function`)
@@ -95,7 +115,7 @@ ErrorControl.h
         weak residual and the strong cell residual
         
         *Arguments*
-            R_dT (_SpecialFacetFunction_)
+            R_dT (:cpp:class:`SpecialFacetFunction`)
                 the strong facet residual (to be computed)
         
             u (:cpp:class:`Function`)
@@ -115,7 +135,7 @@ ErrorControl.h
             z (:cpp:class:`Function`)
                 the dual approximation (to be computed)
         
-            bcs (std::vector<const :cpp:class:`BoundaryCondition`\*>)
+            bcs (std::vector<:cpp:class:`BoundaryCondition`>)
                 the primal boundary conditions
 
 
@@ -127,7 +147,7 @@ ErrorControl.h
             z (:cpp:class:`Function`)
                 the extrapolated function (to be computed)
         
-            bcs (std::vector<const :cpp:class:`BoundaryCondition`\*>)
+            bcs (std::vector<:cpp:class:`BoundaryCondition`>)
                 the dual boundary conditions
 
 

@@ -26,19 +26,14 @@ LinearSolver.h
         Create linear solver
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set the operator (matrix)
 
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const GenericMatrix> A, const boost::shared_ptr<const GenericMatrix> P)
     
         Set the operator (matrix) and preconitioner matrix
-
-
-    .. cpp:function:: const GenericMatrix& get_operator() const
-    
-        Get the operator (matrix)
 
 
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)

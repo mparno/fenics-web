@@ -14,6 +14,9 @@
 #
 # You should have received a copy of the GNU Lesser General Public License
 # along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
+#
+# First added:  2010-08-19
+# Last changed: 2011-06-30
 
 # Begin demo
 
@@ -35,12 +38,34 @@ f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)",
 g = Expression("sin(5*x[0])", degree=1)
 a = inner(grad(u), grad(v))*dx
 L = f*v*dx + g*v*ds
-problem = VariationalProblem(a, L, bc)
 
-# Define goal (quantity of interest)
-u = Function(V) # FIXME
+# Define function for the solution
+u = Function(V)
+
+# Define goal functional (quantity of interest)
 M = u*dx
 
-# Compute solution (adaptively) with accuracy to within tol
+# Define error tolerance
 tol = 1.e-5
-problem.solve(u, tol, M)
+
+# Solve equation a = L with respect to u and the given boundary
+# conditions, such that the estimated error (measured in M) is less
+# than tol
+solve(a == L, u, bc, tol, M)
+
+## Alternative, more verbose version:
+# problem = LinearVariationalProblem(a, L, u, bc)
+# solver = AdaptiveLinearVariationalSolver(problem)
+# solver.solve(tol, M)
+
+# Extract the coarsest and finest (final) solutions
+coarse = u.coarse()
+fine = u.fine()
+
+# Plot solution(s)
+plot(coarse, title="Solution on initial mesh")
+plot(fine, title="Solution on final mesh")
+interactive()
+
+# Write a summary
+summary()

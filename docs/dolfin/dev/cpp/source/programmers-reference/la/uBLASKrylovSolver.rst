@@ -37,7 +37,7 @@ uBLASKrylovSolver.h
         Create Krylov solver for a particular method and uBLASPreconditioner
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Solve the operator (matrix)
 

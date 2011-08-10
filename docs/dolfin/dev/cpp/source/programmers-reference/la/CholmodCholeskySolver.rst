@@ -29,17 +29,12 @@ CholmodCholeskySolver.h
         Constructor
 
 
-    .. cpp:function:: CholmodCholeskySolver(const GenericMatrix& A)
-    
-        Constructor
-
-
     .. cpp:function:: CholmodCholeskySolver(boost::shared_ptr<const GenericMatrix> A)
     
         Constructor
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Solve the operator (matrix)
 

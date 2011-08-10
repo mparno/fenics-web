@@ -18,7 +18,8 @@ in Python by Johan Hake following the C++ demo by Harish Narayanan"""
 # You should have received a copy of the GNU Lesser General Public License
 # along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
 #
-# Modified by Harish Narayanan, 2009.
+# Modified by Harish Narayanan 2009
+# Modified by Anders Logg 2011
 #
 # First added:  2009-10-11
 # Last changed: 2010-08-28
@@ -47,7 +48,7 @@ c = Expression(("0.0", "0.0", "0.0"))
 r = Expression(("scale*0.0",
                 "scale*(y0 + (x[1] - y0)*cos(theta) - (x[2] - z0)*sin(theta) - x[1])",
                 "scale*(z0 + (x[1] - y0)*sin(theta) + (x[2] - z0)*cos(theta) - x[2])"),
-                defaults = dict(scale = 0.5, y0 = 0.5, z0 = 0.5, theta = pi/3))
+                scale = 0.5, y0 = 0.5, z0 = 0.5, theta = pi/3)
 
 bcl = DirichletBC(V, c, left)
 bcr = DirichletBC(V, r, right)
@@ -57,7 +58,7 @@ bcs = [bcl, bcr]
 du = TrialFunction(V)            # Incremental displacement
 v  = TestFunction(V)             # Test function
 u  = Function(V)                 # Displacement from previous iteration
-B  = Constant((0.0, -0.5, 0.0))  # Body force per unit mass
+B  = Constant((0.0, -0.5, 0.0))  # Body force per unit volume
 T  = Constant((0.1,  0.0, 0.0))  # Traction force on the boundary
 
 # Kinematics
@@ -83,11 +84,11 @@ Pi = psi*dx - dot(B, u)*dx - dot(T, u)*ds
 F = derivative(Pi, u, v)
 
 # Compute Jacobian of F
-dF = derivative(F, u, du)
+J = derivative(F, u, du)
 
-# Create nonlinear variational problem and solve
-problem = VariationalProblem(F, dF, bcs, form_compiler_parameters=ffc_options)
-problem.solve(u)
+# Solve variational problem
+solve(F == 0, u, bcs, J=J,
+      form_compiler_parameters=ffc_options)
 
 # Save solution in VTK format
 file = File("displacement.pvd");

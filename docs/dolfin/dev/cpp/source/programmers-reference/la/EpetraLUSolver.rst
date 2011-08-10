@@ -28,12 +28,12 @@ EpetraLUSolver.h
         Constructor
 
 
-    .. cpp:function:: EpetraLUSolver(const GenericMatrix& A)
+    .. cpp:function:: EpetraLUSolver(boost::shared_ptr<const GenericMatrix> A)
     
         Constructor
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
 

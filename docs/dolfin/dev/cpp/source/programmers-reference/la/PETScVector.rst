@@ -141,6 +141,21 @@ PETScVector.h
         Add values to each entry on local process
 
 
+    .. cpp:function:: void gather(GenericVector& y, const Array<uint>& indices) const
+    
+        Gather vector entries into a local vector
+
+
+    .. cpp:function:: void gather(Array<double>& x, const Array<uint>& indices) const
+    
+        Gather entries into Array x
+
+
+    .. cpp:function:: void gather_on_zero(Array<double>& x) const
+    
+        Gather all entries into Array x on process 0
+
+
     .. cpp:function:: void axpy(double a, const GenericVector& x)
     
         Add multiple of given vector (AXPY operation)
@@ -234,15 +249,5 @@ PETScVector.h
     .. cpp:function:: const PETScVector& operator= (const PETScVector& x)
     
         Assignment operator
-
-
-    .. cpp:function:: void gather(GenericVector& y, const Array<uint>& indices) const
-    
-        Gather vector entries into a local vector
-
-
-    .. cpp:function:: void gather(Array<double>& x, const Array<uint>& indices) const
-    
-        Gather entries into Array x
 
 

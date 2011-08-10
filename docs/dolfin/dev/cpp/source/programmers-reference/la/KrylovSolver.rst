@@ -27,19 +27,14 @@ KrylovSolver.h
         Create Krylov solver
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const GenericMatrix> A, const boost::shared_ptr<const GenericMatrix> P)
     
         Set operator (matrix) and preconditioner matrix
-
-
-    .. cpp:function:: const GenericMatrix& get_operator() const
-    
-        Get operator (matrix)
 
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)

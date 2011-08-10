@@ -99,12 +99,12 @@ Scalar.h
 
     .. cpp:function:: operator double() const
     
-        Cast to real
+        Cast to double
 
 
     .. cpp:function:: const Scalar& operator= (double value)
     
-        Assignment from real
+        Assignment from double
 
 
     .. cpp:function:: LinearAlgebraFactory& factory() const

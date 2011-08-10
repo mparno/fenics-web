@@ -19,7 +19,7 @@ SubsetIterator.h
     specified by a :cpp:class:`MeshFunction` that labels the entites.
 
 
-    .. cpp:function:: SubsetIterator(const MeshFunction<uint>& labels, uint label)
+    .. cpp:function:: SubsetIterator(const MeshFunction<unsigned int>& labels, uint label)
     
         Create iterator for given mesh function. The iterator visits
         all entities that match the given label.

@@ -171,6 +171,11 @@ GenericVector.h
         Gather entries into Array x
 
 
+    .. cpp:function:: void gather_on_zero(Array<double>& x) const = 0
+    
+        Gather all entries into Array x on process 0
+
+
     .. cpp:function:: void axpy(double a, const GenericVector& x) = 0
     
         Add multiple of given vector (AXPY operation)

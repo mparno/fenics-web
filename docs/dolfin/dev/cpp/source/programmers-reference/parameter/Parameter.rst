@@ -52,7 +52,7 @@ Parameter.h
         Set range for int-valued parameter
 
 
-    .. cpp:function:: void set_range(real min_value, real max_value)
+    .. cpp:function:: void set_range(double min_value, double max_value)
     
         Set range for double-valued parameter
 
@@ -67,7 +67,7 @@ Parameter.h
         Get range for int-valued parameter
 
 
-    .. cpp:function:: void get_range(real& min_value, real& max_value) const
+    .. cpp:function:: void get_range(double& min_value, double& max_value) const
     
         Get range for double-valued parameter
 
@@ -85,11 +85,6 @@ Parameter.h
     .. cpp:function:: const Parameter& operator= (double value)
     
         Assignment from double
-
-
-    .. cpp:function:: const Parameter& operator= (real value)
-    
-        Assignment from GMP type
 
 
     .. cpp:function:: const Parameter& operator= (std::string value)
@@ -130,11 +125,6 @@ Parameter.h
     .. cpp:function:: operator bool() const
     
         Cast parameter to bool
-
-
-    .. cpp:function:: real get_real() const
-    
-        Get real value of parameter with (possibly) extended precision
 
 
     .. cpp:function:: std::string type_str() const = 0
@@ -221,7 +211,7 @@ Parameter.h
         Return short string description
 
 
-.. cpp:class:: RealParameter
+.. cpp:class:: DoubleParameter
 
     *Parent class(es)*
     
@@ -230,27 +220,27 @@ Parameter.h
     Parameter with value type double
 
 
-    .. cpp:function:: RealParameter(std::string key)
+    .. cpp:function:: DoubleParameter(std::string key)
     
         Create unset double-valued parameter
 
 
-    .. cpp:function:: RealParameter(std::string key, real value)
+    .. cpp:function:: DoubleParameter(std::string key, double value)
     
         Create double-valued parameter
 
 
-    .. cpp:function:: void set_range(real min_value, real max_value)
+    .. cpp:function:: void set_range(double min_value, double max_value)
     
         Set range
 
 
-    .. cpp:function:: void get_range(real &min_value, real &max_value) const
+    .. cpp:function:: void get_range(double &min_value, double &max_value) const
     
         Get range
 
 
-    .. cpp:function:: const RealParameter& operator= (double value)
+    .. cpp:function:: const DoubleParameter& operator= (double value)
     
         Assignment
 
@@ -258,11 +248,6 @@ Parameter.h
     .. cpp:function:: operator double() const
     
         Cast parameter to double
-
-
-    .. cpp:function:: real get_real() const
-    
-        Get real value (possibly with extended precision)
 
 
     .. cpp:function:: std::string type_str() const
@@ -360,7 +345,7 @@ Parameter.h
 
     .. cpp:function:: BoolParameter(std::string key)
     
-        Create usnet bool-valued parameter
+        Create unset bool-valued parameter
 
 
     .. cpp:function:: BoolParameter(std::string key, bool value)

@@ -15,8 +15,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
 //
+// Modified by Anders Logg, 2011
+//
 // First added:  2009-09-29
-// Last changed:
+// Last changed: 2011-06-28
 //
 // This demo program solves a hyperelastic problem
 
@@ -125,16 +127,15 @@ int main()
   Constant lambda(E*nu/((1 + nu)*(1 - 2*nu)));
 
   // Create (linear) form defining (nonlinear) variational problem
-  HyperElasticity::LinearForm F(V);
+  HyperElasticity::ResidualForm F(V);
   F.mu = mu; F.lmbda = lambda; F.B = B; F.T = T; F.u = u;
 
   // Create jacobian dF = F' (for use in nonlinear solver).
-  HyperElasticity::BilinearForm dF(V, V);
-  dF.mu = mu; dF.lmbda = lambda; dF.u = u;
+  HyperElasticity::JacobianForm J(V, V);
+  J.mu = mu; J.lmbda = lambda; J.u = u;
 
-  // Solve nonlinear variational problem (F(u; v) = 0)
-  VariationalProblem problem(F, dF, bcs);
-  problem.solve(u);
+  // Solve nonlinear variational problem F(u; v) = 0
+  solve(F == 0, u, bcs, J);
 
   // Save solution in VTK format
   File file("displacement.pvd");

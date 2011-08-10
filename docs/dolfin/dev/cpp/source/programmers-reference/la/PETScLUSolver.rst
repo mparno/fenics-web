@@ -30,22 +30,17 @@ PETScLUSolver.h
         Constructor
 
 
-    .. cpp:function:: PETScLUSolver(const GenericMatrix& A, std::string lu_package="default")
-    
-        Constructor
-
-
     .. cpp:function:: PETScLUSolver(boost::shared_ptr<const PETScMatrix> A, std::string lu_package="default")
     
         Constructor
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operator(const PETScMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const PETScMatrix> A)
     
         Set operator (matrix)
 

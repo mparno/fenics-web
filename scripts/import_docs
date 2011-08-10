@@ -24,7 +24,7 @@ if [ x$UFL_DIR == x ]; then
 fi
 
 # Rsync command
-RSYNC="rsync -av --delete --exclude build --exclude scripts"
+RSYNC="rsync -a --delete --exclude build --exclude scripts"
 
 # Command for import doc
 import_doc()
@@ -46,7 +46,7 @@ import_doc()
     fi
 
     # Get package version
-    PACKAGE_VERSION=`$package-version`
+    PACKAGE_VERSION=`$package-version` || exit 1
 
     # Modify version number if necessary (+ --> dev)
     if [[ $PACKAGE_VERSION == *+ ]]; then
@@ -57,6 +57,7 @@ import_doc()
     DOC_FROM="$PACKAGE_DIR/$DOCDIR/"
     DOC_TO="docs/$package/$PACKAGE_VERSION/$SUFFIX"
 
+    echo ""
     echo "Copying documentation for $PACKAGE version $PACKAGE_VERSION"
     echo "  from: $DOC_FROM"
     echo "  to:   $DOC_TO"
@@ -73,10 +74,10 @@ import_doc()
     bzr commit -m "Update documentation for $PACKAGE version $PACKAGE_VERSION"
 
     # Build HTML
-    pushd .
+    pushd . > /dev/null
     cd $DOC_TO
     make html
-    popd
+    popd > /dev/null
 
     # Copy HTML to main build tree
     HTML_DIR="build/html/doc/$package/$PACKAGE_VERSION/$SUFFIX"

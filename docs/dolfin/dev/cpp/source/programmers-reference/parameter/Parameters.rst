@@ -107,16 +107,6 @@ Parameters.h
         Add double-valued parameter with given range
 
 
-    .. cpp:function:: void add(std::string key, real value)
-    
-        Add double-valued parameter
-
-
-    .. cpp:function:: void add(std::string key, real value, real min_value, real max_value)
-    
-        Add double-valued parameter with given range
-
-
     .. cpp:function:: void add(std::string key, std::string value)
     
         Add string-valued parameter
@@ -145,6 +135,11 @@ Parameters.h
     .. cpp:function:: void add(const Parameters& parameters)
     
         Add nested parameter set
+
+
+    .. cpp:function:: void remove(std::string key)
+    
+        Remove parameter or parameter set with given key
 
 
     .. cpp:function:: void parse(int argc, char* argv[])

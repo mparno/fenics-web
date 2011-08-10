@@ -31,6 +31,8 @@
 
 using namespace dolfin;
 
+#if defined(HAS_PETSC) || defined(HAS_TRILINOS)
+
 int main()
 {
   // Sub domain for left-hand side
@@ -118,16 +120,16 @@ int main()
   StokesPreconditioner::BilinearForm a_P(W, W);
 
   // Assemble precondtioner system (P, b_dummy)
-  Matrix P;
+  boost::shared_ptr<Matrix> P(new Matrix);
   Vector b;
-  assemble_system(P, b, a_P, L, bcs);
+  assemble_system(*P, b, a_P, L, bcs);
 
   // Assemble Stokes system (A, b)
-  Matrix A;
-  assemble_system(A, b, a, L, bcs);
+  boost::shared_ptr<Matrix> A(new Matrix);
+  assemble_system(*A, b, a, L, bcs);
 
   // Create Krylov solver with specified method and preconditioner
-  KrylovSolver solver("tfqmr", "amg_ml");
+  KrylovSolver solver("tfqmr", "amg");
 
   // Set operator (A) and precondtioner matrix (P)
   solver.set_operators(A, P);
@@ -151,3 +153,13 @@ int main()
   File pfile_pvd("pressure.pvd");
   pfile_pvd << p;
 }
+
+#else
+
+int main()
+{
+  info("DOLFIN has not been configured with Trilinos or PETSc. Exiting.");
+  return 0;
+}
+
+#endif

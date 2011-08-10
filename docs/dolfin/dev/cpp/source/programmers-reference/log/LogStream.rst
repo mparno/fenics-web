@@ -79,8 +79,3 @@ LogStream.h
         Output for point (not subclass of Variable for efficiency)
 
 
-    .. cpp:function:: LogStream& operator<< (real a)
-    
-        Output for real
-
-

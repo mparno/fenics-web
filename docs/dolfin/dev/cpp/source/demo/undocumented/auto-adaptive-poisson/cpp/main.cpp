@@ -16,7 +16,7 @@
 // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
 //
 // First added:  2010-08-19
-// Last changed: 2011-03-22
+// Last changed: 2011-06-30
 
 #include <dolfin.h>
 #include "AdaptivePoisson.h"
@@ -54,7 +54,7 @@ class DirichletBoundary : public SubDomain
 
 int main()
 {
-  // Create mesh and function space
+  // Create mesh and define function space
   UnitSquare mesh(8, 8);
   AdaptivePoisson::BilinearForm::TrialSpace V(mesh);
 
@@ -63,25 +63,38 @@ int main()
   DirichletBoundary boundary;
   DirichletBC bc(V, u0, boundary);
 
-  // Define variational problem
+  // Define variational forms
   AdaptivePoisson::BilinearForm a(V, V);
   AdaptivePoisson::LinearForm L(V);
   Source f;
   dUdN g;
   L.f = f;
   L.g = g;
-  VariationalProblem pde(a, L, bc);
 
-  // Define function for solution
+  // Define Function for solution
   Function u(V);
 
-  // Define goal (quantity of interest)
+  // Define goal functional (quantity of interest)
   AdaptivePoisson::GoalFunctional M(mesh);
 
-  // Compute solution (adaptively) with accuracy to within tol
+  // Define error tolerance
   double tol = 1.e-5;
-  pde.solve(u, tol, M);
 
+  // Solve equation a = L with respect to u and the given boundary
+  // conditions, such that the estimated error (measured in M) is less
+  // than tol
+  solve(a == L, u, bc, tol, M);
+
+  // Alternative, more verbose version:
+  // LinearVariationalProblem problem(a, L, u, bc);
+  // AdaptiveLinearVariationalSolver solver(problem);
+  // solver.solve(tol, M);
+
+  // Plot final solution
+  plot(u.fine(), "Solution on final mesh");
+
+  // Write a summary
   summary();
+
   return 0;
 }

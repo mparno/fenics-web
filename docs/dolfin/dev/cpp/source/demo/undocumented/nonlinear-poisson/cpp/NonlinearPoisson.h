@@ -124,35 +124,35 @@ public:
     double Y = (J_00*(2.0*coordinates[1] - C1) + J_10*(C0 - 2.0*coordinates[0])) / detJ;
     
     // Reset values.
-    *values = 0.000000000000000;
+    *values = 0.0;
     switch (i)
     {
     case 0:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
@@ -171,28 +171,28 @@ public:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
@@ -211,34 +211,34 @@ public:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
       // Table(s) of coefficients.
       static const double coefficients0[3] = \
-      {0.471404520791032, 0.000000000000000, 0.333333333333333};
+      {0.471404520791032, 0.0, 0.333333333333333};
       
       // Compute value(s).
       for (unsigned int r = 0; r < 3; r++)
@@ -257,7 +257,7 @@ public:
                                   const ufc::cell& c) const
   {
     // Helper variable to hold values of a single dof.
-    double dof_values = 0.000000000000000;
+    double dof_values = 0.0;
     
     // Loop dofs and call evaluate_basis.
     for (unsigned int r = 0; r < 3; r++)
@@ -361,7 +361,7 @@ public:
     // Reset values. Assuming that values is always an array.
     for (unsigned int r = 0; r < num_derivatives; r++)
     {
-      values[r] = 0.000000000000000;
+      values[r] = 0.0;
     }// end loop over 'r'
     
     switch (i)
@@ -370,28 +370,28 @@ public:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
@@ -401,34 +401,34 @@ public:
       
       // Tables of derivatives of the polynomial base (transpose).
       static const double dmats0[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {4.898979485566356, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {4.89897948556636, 0.0, 0.0},
+      {0.0, 0.0, 0.0}};
       
       static const double dmats1[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {2.449489742783178, 0.000000000000000, 0.000000000000000},
-      {4.242640687119285, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {2.44948974278318, 0.0, 0.0},
+      {4.24264068711928, 0.0, 0.0}};
       
       // Compute reference derivatives.
       // Declare pointer to array of derivatives on FIAT element.
       double *derivatives = new double[num_derivatives];
       for (unsigned int r = 0; r < num_derivatives; r++)
       {
-        derivatives[r] = 0.000000000000000;
+        derivatives[r] = 0.0;
       }// end loop over 'r'
       
       // Declare derivative matrix (of polynomial basis).
       double dmats[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Declare (auxiliary) derivative matrix (of polynomial basis).
       double dmats_old[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Loop possible derivatives.
       for (unsigned int r = 0; r < num_derivatives; r++)
@@ -438,10 +438,10 @@ public:
         {
           for (unsigned int u = 0; u < 3; u++)
           {
-            dmats[t][u] = 0.000000000000000;
+            dmats[t][u] = 0.0;
             if (t == u)
             {
-            dmats[t][u] = 1.000000000000000;
+            dmats[t][u] = 1.0;
             }
             
           }// end loop over 'u'
@@ -456,7 +456,7 @@ public:
             for (unsigned int u = 0; u < 3; u++)
             {
               dmats_old[t][u] = dmats[t][u];
-              dmats[t][u] = 0.000000000000000;
+              dmats[t][u] = 0.0;
             }// end loop over 'u'
           }// end loop over 't'
           
@@ -528,28 +528,28 @@ public:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
@@ -559,34 +559,34 @@ public:
       
       // Tables of derivatives of the polynomial base (transpose).
       static const double dmats0[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {4.898979485566356, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {4.89897948556636, 0.0, 0.0},
+      {0.0, 0.0, 0.0}};
       
       static const double dmats1[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {2.449489742783178, 0.000000000000000, 0.000000000000000},
-      {4.242640687119285, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {2.44948974278318, 0.0, 0.0},
+      {4.24264068711928, 0.0, 0.0}};
       
       // Compute reference derivatives.
       // Declare pointer to array of derivatives on FIAT element.
       double *derivatives = new double[num_derivatives];
       for (unsigned int r = 0; r < num_derivatives; r++)
       {
-        derivatives[r] = 0.000000000000000;
+        derivatives[r] = 0.0;
       }// end loop over 'r'
       
       // Declare derivative matrix (of polynomial basis).
       double dmats[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Declare (auxiliary) derivative matrix (of polynomial basis).
       double dmats_old[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Loop possible derivatives.
       for (unsigned int r = 0; r < num_derivatives; r++)
@@ -596,10 +596,10 @@ public:
         {
           for (unsigned int u = 0; u < 3; u++)
           {
-            dmats[t][u] = 0.000000000000000;
+            dmats[t][u] = 0.0;
             if (t == u)
             {
-            dmats[t][u] = 1.000000000000000;
+            dmats[t][u] = 1.0;
             }
             
           }// end loop over 'u'
@@ -614,7 +614,7 @@ public:
             for (unsigned int u = 0; u < 3; u++)
             {
               dmats_old[t][u] = dmats[t][u];
-              dmats[t][u] = 0.000000000000000;
+              dmats[t][u] = 0.0;
             }// end loop over 'u'
           }// end loop over 't'
           
@@ -686,65 +686,65 @@ public:
       {
         
       // Array of basisvalues.
-      double basisvalues[3] = {0.000000000000000, 0.000000000000000, 0.000000000000000};
+      double basisvalues[3] = {0.0, 0.0, 0.0};
       
       // Declare helper variables.
       unsigned int rr = 0;
       unsigned int ss = 0;
-      double tmp0 = (1.000000000000000 + Y + 2.000000000000000*X)/2.000000000000000;
+      double tmp0 = (1.0 + Y + 2.0*X)/2.0;
       
       // Compute basisvalues.
-      basisvalues[0] = 1.000000000000000;
+      basisvalues[0] = 1.0;
       basisvalues[1] = tmp0;
       for (unsigned int r = 0; r < 1; r++)
       {
         rr = (r + 1)*(r + 1 + 1)/2 + 1;
         ss = r*(r + 1)/2;
-        basisvalues[rr] = basisvalues[ss]*(0.500000000000000 + r + Y*(1.500000000000000 + r));
+        basisvalues[rr] = basisvalues[ss]*(0.5 + r + Y*(1.5 + r));
       }// end loop over 'r'
       for (unsigned int r = 0; r < 2; r++)
       {
         for (unsigned int s = 0; s < 2 - r; s++)
         {
           rr = (r + s)*(r + s + 1)/2 + s;
-          basisvalues[rr] *= std::sqrt((0.500000000000000 + r)*(1.000000000000000 + r + s));
+          basisvalues[rr] *= std::sqrt((0.5 + r)*(1.0 + r + s));
         }// end loop over 's'
       }// end loop over 'r'
       
       // Table(s) of coefficients.
       static const double coefficients0[3] = \
-      {0.471404520791032, 0.000000000000000, 0.333333333333333};
+      {0.471404520791032, 0.0, 0.333333333333333};
       
       // Tables of derivatives of the polynomial base (transpose).
       static const double dmats0[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {4.898979485566356, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {4.89897948556636, 0.0, 0.0},
+      {0.0, 0.0, 0.0}};
       
       static const double dmats1[3][3] = \
-      {{0.000000000000000, 0.000000000000000, 0.000000000000000},
-      {2.449489742783178, 0.000000000000000, 0.000000000000000},
-      {4.242640687119285, 0.000000000000000, 0.000000000000000}};
+      {{0.0, 0.0, 0.0},
+      {2.44948974278318, 0.0, 0.0},
+      {4.24264068711928, 0.0, 0.0}};
       
       // Compute reference derivatives.
       // Declare pointer to array of derivatives on FIAT element.
       double *derivatives = new double[num_derivatives];
       for (unsigned int r = 0; r < num_derivatives; r++)
       {
-        derivatives[r] = 0.000000000000000;
+        derivatives[r] = 0.0;
       }// end loop over 'r'
       
       // Declare derivative matrix (of polynomial basis).
       double dmats[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Declare (auxiliary) derivative matrix (of polynomial basis).
       double dmats_old[3][3] = \
-      {{1.000000000000000, 0.000000000000000, 0.000000000000000},
-      {0.000000000000000, 1.000000000000000, 0.000000000000000},
-      {0.000000000000000, 0.000000000000000, 1.000000000000000}};
+      {{1.0, 0.0, 0.0},
+      {0.0, 1.0, 0.0},
+      {0.0, 0.0, 1.0}};
       
       // Loop possible derivatives.
       for (unsigned int r = 0; r < num_derivatives; r++)
@@ -754,10 +754,10 @@ public:
         {
           for (unsigned int u = 0; u < 3; u++)
           {
-            dmats[t][u] = 0.000000000000000;
+            dmats[t][u] = 0.0;
             if (t == u)
             {
-            dmats[t][u] = 1.000000000000000;
+            dmats[t][u] = 1.0;
             }
             
           }// end loop over 'u'
@@ -772,7 +772,7 @@ public:
             for (unsigned int u = 0; u < 3; u++)
             {
               dmats_old[t][u] = dmats[t][u];
-              dmats[t][u] = 0.000000000000000;
+              dmats[t][u] = 0.0;
             }// end loop over 'u'
           }// end loop over 't'
           
@@ -861,7 +861,7 @@ public:
     double *dof_values = new double[num_derivatives];
     for (unsigned int r = 0; r < num_derivatives; r++)
     {
-      dof_values[r] = 0.000000000000000;
+      dof_values[r] = 0.0;
     }// end loop over 'r'
     
     // Loop dofs and call evaluate_basis_derivatives.
@@ -917,7 +917,7 @@ public:
       }
     }
     
-    return 0.000000000000000;
+    return 0.0;
   }
 
   /// Evaluate linear functionals for all dofs on the function f
@@ -1313,9 +1313,9 @@ public:
     {0.166666666666667, 0.666666666666667, 0.166666666666667}};
     
     static const double FE0_D01[3][2] = \
-    {{-1.000000000000000, 1.000000000000000},
-    {-1.000000000000000, 1.000000000000000},
-    {-1.000000000000000, 1.000000000000000}};
+    {{-1.0, 1.0},
+    {-1.0, 1.0},
+    {-1.0, 1.0}};
     
     // Array of non-zero columns
     static const unsigned int nzc1[2] = {0, 1};
@@ -1324,89 +1324,70 @@ public:
     static const unsigned int nzc0[2] = {0, 2};
     
     // Reset values in the element tensor.
-    for (unsigned int r = 0; r < 9; r++)
+    for (unsigned int r = 0; r < 3; r++)
     {
-      A[r] = 0.000000000000000;
+      A[r] = 0.0;
     }// end loop over 'r'
-    // Number of operations to compute geometry constants: 27.
-    double G[6];
-    G[0] = det*(K_00*K_10 + K_01*K_11);
-    G[1] = det*(K_00*K_00 + K_01*K_01);
+    // Number of operations to compute geometry constants: 12.
+    double G[3];
+    G[0] = det*(K_00*K_00 + K_01*K_01);
+    G[1] = det*(K_00*K_10 + K_01*K_11);
     G[2] = det*(K_10*K_10 + K_11*K_11);
-    G[3] = 2.000000000000000*det*(K_00*K_10 + K_01*K_11);
-    G[4] = 2.000000000000000*det*(K_10*K_10 + K_11*K_11);
-    G[5] = 2.000000000000000*det*(K_00*K_00 + K_01*K_01);
     
     // Compute element tensor using UFL quadrature representation
     // Optimisations: ('eliminate zeros', True), ('ignore ones', True), ('ignore zero tables', True), ('optimisation', 'simplify_expressions'), ('remove zero terms', True)
     
     // Loop quadrature points for integral.
-    // Number of operations to compute element tensor for following IP loop = 360
+    // Number of operations to compute element tensor for following IP loop = 168
     for (unsigned int ip = 0; ip < 3; ip++)
     {
       
       // Coefficient declarations.
-      double F0 = 0.000000000000000;
-      double F1 = 0.000000000000000;
-      double F2 = 0.000000000000000;
+      double F0 = 0.0;
+      double F1 = 0.0;
+      double F2 = 0.0;
+      double F3 = 0.0;
       
       // Total number of operations to compute function values = 8
       for (unsigned int r = 0; r < 2; r++)
       {
-        F1 += FE0_D01[ip][r]*w[0][nzc1[r]];
-        F2 += FE0_D01[ip][r]*w[0][nzc0[r]];
+        F0 += FE0_D01[ip][r]*w[1][nzc1[r]];
+        F1 += FE0_D01[ip][r]*w[1][nzc0[r]];
       }// end loop over 'r'
       
-      // Total number of operations to compute function values = 6
+      // Total number of operations to compute function values = 12
       for (unsigned int r = 0; r < 3; r++)
       {
-        F0 += FE0[ip][r]*w[0][r];
+        F2 += FE0[ip][r]*w[1][r];
+        F3 += FE0[ip][r]*w[0][r];
       }// end loop over 'r'
       
       // Number of operations to compute ip constants: 22
-      double I[5];
-      // Number of operations: 4
-      I[0] = G[0]*W3[ip]*(1.000000000000000 + F0*F0);
+      double I[3];
+      // Number of operations: 2
+      I[0] =  - F3*W3[ip]*det;
       
-      // Number of operations: 4
-      I[1] = G[1]*W3[ip]*(1.000000000000000 + F0*F0);
+      // Number of operations: 10
+      I[1] = W3[ip]*(F0*G[0]*(1.0 + F2*F2) + F1*G[1]*(1.0 + F2*F2));
       
-      // Number of operations: 4
-      I[2] = G[2]*W3[ip]*(1.000000000000000 + F0*F0);
-      
-      // Number of operations: 5
-      I[3] = F0*W3[ip]*(F1*G[3] + F2*G[4]);
-      
-      // Number of operations: 5
-      I[4] = F0*W3[ip]*(F1*G[5] + F2*G[3]);
+      // Number of operations: 10
+      I[2] = W3[ip]*(F0*G[1]*(1.0 + F2*F2) + F1*G[2]*(1.0 + F2*F2));
       
       
-      // Number of operations for primary indices: 48
-      for (unsigned int j = 0; j < 2; j++)
+      // Number of operations for primary indices: 6
+      for (unsigned int j = 0; j < 3; j++)
       {
-        for (unsigned int k = 0; k < 2; k++)
-        {
-          // Number of operations to compute entry: 3
-          A[nzc0[j]*3 + nzc1[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[0];
-          // Number of operations to compute entry: 3
-          A[nzc1[j]*3 + nzc1[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[1];
-          // Number of operations to compute entry: 3
-          A[nzc0[j]*3 + nzc0[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[2];
-          // Number of operations to compute entry: 3
-          A[nzc1[j]*3 + nzc0[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[0];
-        }// end loop over 'k'
+        // Number of operations to compute entry: 2
+        A[j] += FE0[ip][j]*I[0];
       }// end loop over 'j'
       
-      // Number of operations for primary indices: 36
+      // Number of operations for primary indices: 8
       for (unsigned int j = 0; j < 2; j++)
       {
-        for (unsigned int k = 0; k < 3; k++)
-        {
-          // Number of operations to compute entry: 3
-          A[nzc0[j]*3 + k] += FE0[ip][k]*FE0_D01[ip][j]*I[3];
-          // Number of operations to compute entry: 3
-          A[nzc1[j]*3 + k] += FE0[ip][k]*FE0_D01[ip][j]*I[4];
-        }// end loop over 'k'
+        // Number of operations to compute entry: 2
+        A[nzc1[j]] += FE0_D01[ip][j]*I[1];
+        // Number of operations to compute entry: 2
+        A[nzc0[j]] += FE0_D01[ip][j]*I[2];
       }// end loop over 'j'
     }// end loop over 'ip'
   }
@@ -1487,9 +1468,9 @@ public:
     {0.166666666666667, 0.666666666666667, 0.166666666666667}};
     
     static const double FE0_D01[3][2] = \
-    {{-1.000000000000000, 1.000000000000000},
-    {-1.000000000000000, 1.000000000000000},
-    {-1.000000000000000, 1.000000000000000}};
+    {{-1.0, 1.0},
+    {-1.0, 1.0},
+    {-1.0, 1.0}};
     
     // Array of non-zero columns
     static const unsigned int nzc1[2] = {0, 1};
@@ -1498,70 +1479,89 @@ public:
     static const unsigned int nzc0[2] = {0, 2};
     
     // Reset values in the element tensor.
-    for (unsigned int r = 0; r < 3; r++)
+    for (unsigned int r = 0; r < 9; r++)
     {
-      A[r] = 0.000000000000000;
+      A[r] = 0.0;
     }// end loop over 'r'
-    // Number of operations to compute geometry constants: 12.
-    double G[3];
-    G[0] = det*(K_00*K_00 + K_01*K_01);
-    G[1] = det*(K_00*K_10 + K_01*K_11);
+    // Number of operations to compute geometry constants: 27.
+    double G[6];
+    G[0] = det*(K_00*K_10 + K_01*K_11);
+    G[1] = det*(K_00*K_00 + K_01*K_01);
     G[2] = det*(K_10*K_10 + K_11*K_11);
+    G[3] = 2.0*det*(K_00*K_10 + K_01*K_11);
+    G[4] = 2.0*det*(K_10*K_10 + K_11*K_11);
+    G[5] = 2.0*det*(K_00*K_00 + K_01*K_01);
     
     // Compute element tensor using UFL quadrature representation
     // Optimisations: ('eliminate zeros', True), ('ignore ones', True), ('ignore zero tables', True), ('optimisation', 'simplify_expressions'), ('remove zero terms', True)
     
     // Loop quadrature points for integral.
-    // Number of operations to compute element tensor for following IP loop = 168
+    // Number of operations to compute element tensor for following IP loop = 360
     for (unsigned int ip = 0; ip < 3; ip++)
     {
       
       // Coefficient declarations.
-      double F0 = 0.000000000000000;
-      double F1 = 0.000000000000000;
-      double F2 = 0.000000000000000;
-      double F3 = 0.000000000000000;
+      double F0 = 0.0;
+      double F1 = 0.0;
+      double F2 = 0.0;
       
       // Total number of operations to compute function values = 8
       for (unsigned int r = 0; r < 2; r++)
       {
-        F0 += FE0_D01[ip][r]*w[1][nzc1[r]];
-        F1 += FE0_D01[ip][r]*w[1][nzc0[r]];
+        F1 += FE0_D01[ip][r]*w[0][nzc1[r]];
+        F2 += FE0_D01[ip][r]*w[0][nzc0[r]];
       }// end loop over 'r'
       
-      // Total number of operations to compute function values = 12
+      // Total number of operations to compute function values = 6
       for (unsigned int r = 0; r < 3; r++)
       {
-        F2 += FE0[ip][r]*w[1][r];
-        F3 += FE0[ip][r]*w[0][r];
+        F0 += FE0[ip][r]*w[0][r];
       }// end loop over 'r'
       
       // Number of operations to compute ip constants: 22
-      double I[3];
-      // Number of operations: 2
-      I[0] =  - F3*W3[ip]*det;
+      double I[5];
+      // Number of operations: 4
+      I[0] = G[0]*W3[ip]*(1.0 + F0*F0);
       
-      // Number of operations: 10
-      I[1] = W3[ip]*(F0*G[0]*(1.000000000000000 + F2*F2) + F1*G[1]*(1.000000000000000 + F2*F2));
+      // Number of operations: 4
+      I[1] = G[1]*W3[ip]*(1.0 + F0*F0);
       
-      // Number of operations: 10
-      I[2] = W3[ip]*(F0*G[1]*(1.000000000000000 + F2*F2) + F1*G[2]*(1.000000000000000 + F2*F2));
+      // Number of operations: 4
+      I[2] = G[2]*W3[ip]*(1.0 + F0*F0);
+      
+      // Number of operations: 5
+      I[3] = F0*W3[ip]*(F1*G[3] + F2*G[4]);
+      
+      // Number of operations: 5
+      I[4] = F0*W3[ip]*(F1*G[5] + F2*G[3]);
       
       
-      // Number of operations for primary indices: 6
-      for (unsigned int j = 0; j < 3; j++)
-      {
-        // Number of operations to compute entry: 2
-        A[j] += FE0[ip][j]*I[0];
-      }// end loop over 'j'
-      
-      // Number of operations for primary indices: 8
+      // Number of operations for primary indices: 48
       for (unsigned int j = 0; j < 2; j++)
       {
-        // Number of operations to compute entry: 2
-        A[nzc1[j]] += FE0_D01[ip][j]*I[1];
-        // Number of operations to compute entry: 2
-        A[nzc0[j]] += FE0_D01[ip][j]*I[2];
+        for (unsigned int k = 0; k < 2; k++)
+        {
+          // Number of operations to compute entry: 3
+          A[nzc0[j]*3 + nzc1[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[0];
+          // Number of operations to compute entry: 3
+          A[nzc1[j]*3 + nzc1[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[1];
+          // Number of operations to compute entry: 3
+          A[nzc0[j]*3 + nzc0[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[2];
+          // Number of operations to compute entry: 3
+          A[nzc1[j]*3 + nzc0[k]] += FE0_D01[ip][j]*FE0_D01[ip][k]*I[0];
+        }// end loop over 'k'
+      }// end loop over 'j'
+      
+      // Number of operations for primary indices: 36
+      for (unsigned int j = 0; j < 2; j++)
+      {
+        for (unsigned int k = 0; k < 3; k++)
+        {
+          // Number of operations to compute entry: 3
+          A[nzc0[j]*3 + k] += FE0[ip][k]*FE0_D01[ip][j]*I[3];
+          // Number of operations to compute entry: 3
+          A[nzc1[j]*3 + k] += FE0[ip][k]*FE0_D01[ip][j]*I[4];
+        }// end loop over 'k'
       }// end loop over 'j'
     }// end loop over 'ip'
   }
@@ -1614,19 +1614,19 @@ public:
   /// Return a string identifying the form
   virtual const char* signature() const
   {
-    return "Form([Integral(IndexSum(Product(Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(1),), {Index(1): 2})), Indexed(ComponentTensor(Sum(Product(Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(3),), {Index(3): 2})), Sum(IntValue(1, (), (), {}), Power(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), IntValue(2, (), (), {})))), Product(Indexed(ComponentTensor(SpatialDerivative(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(3),), {Index(3): 2})), Product(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), Product(IntValue(2, (), (), {}), Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1))))), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(1),), {Index(1): 2}))), MultiIndex((Index(1),), {Index(1): 2})), Measure('cell', 0, None))])";
+    return "Form([Integral(Sum(IndexSum(Product(Indexed(ComponentTensor(Product(Indexed(ComponentTensor(SpatialDerivative(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(1),), {Index(1): 2})), Sum(IntValue(1, (), (), {}), Power(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), IntValue(2, (), (), {})))), MultiIndex((Index(1),), {Index(1): 2})), MultiIndex((Index(2),), {Index(2): 2})), Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(2),), {Index(2): 2}))), MultiIndex((Index(2),), {Index(2): 2})), Product(IntValue(-1, (), (), {}), Product(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0)))), Measure('cell', 0, None))])";
   }
 
   /// Return the rank of the global tensor (r)
   virtual unsigned int rank() const
   {
-    return 2;
+    return 1;
   }
 
   /// Return the number of coefficients (n)
   virtual unsigned int num_coefficients() const
   {
-    return 1;
+    return 2;
   }
 
   /// Return the number of cell domains
@@ -1760,19 +1760,19 @@ public:
   /// Return a string identifying the form
   virtual const char* signature() const
   {
-    return "Form([Integral(Sum(IndexSum(Product(Indexed(ComponentTensor(Product(Indexed(ComponentTensor(SpatialDerivative(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(1),), {Index(1): 2})), Sum(IntValue(1, (), (), {}), Power(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), IntValue(2, (), (), {})))), MultiIndex((Index(1),), {Index(1): 2})), MultiIndex((Index(2),), {Index(2): 2})), Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(2),), {Index(2): 2}))), MultiIndex((Index(2),), {Index(2): 2})), Product(IntValue(-1, (), (), {}), Product(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0)))), Measure('cell', 0, None))])";
+    return "Form([Integral(IndexSum(Product(Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(0),), {Index(0): 2})), MultiIndex((Index(1),), {Index(1): 2})), Indexed(ComponentTensor(Sum(Product(Indexed(ComponentTensor(SpatialDerivative(Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(3),), {Index(3): 2})), Sum(IntValue(1, (), (), {}), Power(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), IntValue(2, (), (), {})))), Product(Indexed(ComponentTensor(SpatialDerivative(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(2),), {Index(2): 2})), MultiIndex((Index(3),), {Index(3): 2})), Product(Coefficient(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 0), Product(IntValue(2, (), (), {}), Argument(FiniteElement('Lagrange', Cell('triangle', Space(2)), 1, None), 1))))), MultiIndex((Index(3),), {Index(3): 2})), MultiIndex((Index(1),), {Index(1): 2}))), MultiIndex((Index(1),), {Index(1): 2})), Measure('cell', 0, None))])";
   }
 
   /// Return the rank of the global tensor (r)
   virtual unsigned int rank() const
   {
-    return 1;
+    return 2;
   }
 
   /// Return the number of coefficients (n)
   virtual unsigned int num_coefficients() const
   {
-    return 2;
+    return 1;
   }
 
   /// Return the number of cell domains
@@ -2017,47 +2017,7 @@ public:
 
 };
 
-class Form_0_FunctionSpace_1: public dolfin::FunctionSpace
-{
-public:
-
-  Form_0_FunctionSpace_1(const dolfin::Mesh& mesh):
-    dolfin::FunctionSpace(dolfin::reference_to_no_delete_pointer(mesh),
-                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
-                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), mesh)))
-  {
-    // Do nothing
-  }
-
-  Form_0_FunctionSpace_1(dolfin::Mesh& mesh):
-    dolfin::FunctionSpace(dolfin::reference_to_no_delete_pointer(mesh),
-                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
-                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), mesh)))
-  {
-    // Do nothing
-  }
-
-  Form_0_FunctionSpace_1(boost::shared_ptr<dolfin::Mesh> mesh):
-    dolfin::FunctionSpace(mesh,
-                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
-                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), *mesh)))
-  {
-      // Do nothing
-  }
-
-  Form_0_FunctionSpace_1(boost::shared_ptr<const dolfin::Mesh> mesh):
-    dolfin::FunctionSpace(mesh,
-                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
-                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), *mesh)))
-  {
-      // Do nothing
-  }
-
-  ~Form_0_FunctionSpace_1()
-  {
-  }
-
-};
+typedef CoefficientSpace_f Form_0_FunctionSpace_1;
 
 typedef CoefficientSpace_u Form_0_FunctionSpace_2;
 
@@ -2066,68 +2026,66 @@ class Form_0: public dolfin::Form
 public:
 
   // Constructor
-  Form_0(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(const dolfin::FunctionSpace& V0):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
-    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
   }
 
   // Constructor
-  Form_0(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0, const dolfin::GenericFunction& u):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(const dolfin::FunctionSpace& V0, const dolfin::GenericFunction& f, const dolfin::GenericFunction& u):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
-    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
+    this->f = f;
     this->u = u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
   }
 
   // Constructor
-  Form_0(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0, boost::shared_ptr<const dolfin::GenericFunction> u):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(const dolfin::FunctionSpace& V0, boost::shared_ptr<const dolfin::GenericFunction> f, boost::shared_ptr<const dolfin::GenericFunction> u):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
-    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
+    this->f = *f;
     this->u = *u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
   }
 
   // Constructor
-  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V0):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = V0;
-    _function_spaces[1] = V1;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
   }
 
   // Constructor
-  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0, const dolfin::GenericFunction& u):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V0, const dolfin::GenericFunction& f, const dolfin::GenericFunction& u):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = V0;
-    _function_spaces[1] = V1;
 
+    this->f = f;
     this->u = u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
   }
 
   // Constructor
-  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0, boost::shared_ptr<const dolfin::GenericFunction> u):
-    dolfin::Form(2, 1), u(*this, 0)
+  Form_0(boost::shared_ptr<const dolfin::FunctionSpace> V0, boost::shared_ptr<const dolfin::GenericFunction> f, boost::shared_ptr<const dolfin::GenericFunction> u):
+    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
   {
     _function_spaces[0] = V0;
-    _function_spaces[1] = V1;
 
+    this->f = *f;
     this->u = *u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_0());
@@ -2140,8 +2098,10 @@ public:
   /// Return the number of the coefficient with this name
   virtual dolfin::uint coefficient_number(const std::string& name) const
   {
-    if (name == "u")
+    if (name == "f")
       return 0;
+    else if (name == "u")
+      return 1;
 
     dolfin::error("Invalid coefficient.");
     return 0;
@@ -2153,6 +2113,8 @@ public:
     switch (i)
     {
     case 0:
+      return "f";
+    case 1:
       return "u";
     }
 
@@ -2162,10 +2124,11 @@ public:
 
   // Typedefs
   typedef Form_0_FunctionSpace_0 TestSpace;
-  typedef Form_0_FunctionSpace_1 TrialSpace;
+  typedef Form_0_FunctionSpace_1 CoefficientSpace_f;
   typedef Form_0_FunctionSpace_2 CoefficientSpace_u;
 
   // Coefficients
+  dolfin::CoefficientAssigner f;
   dolfin::CoefficientAssigner u;
 };
 
@@ -2211,7 +2174,47 @@ public:
 
 };
 
-typedef CoefficientSpace_f Form_1_FunctionSpace_1;
+class Form_1_FunctionSpace_1: public dolfin::FunctionSpace
+{
+public:
+
+  Form_1_FunctionSpace_1(const dolfin::Mesh& mesh):
+    dolfin::FunctionSpace(dolfin::reference_to_no_delete_pointer(mesh),
+                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
+                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), mesh)))
+  {
+    // Do nothing
+  }
+
+  Form_1_FunctionSpace_1(dolfin::Mesh& mesh):
+    dolfin::FunctionSpace(dolfin::reference_to_no_delete_pointer(mesh),
+                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
+                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), mesh)))
+  {
+    // Do nothing
+  }
+
+  Form_1_FunctionSpace_1(boost::shared_ptr<dolfin::Mesh> mesh):
+    dolfin::FunctionSpace(mesh,
+                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
+                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), *mesh)))
+  {
+      // Do nothing
+  }
+
+  Form_1_FunctionSpace_1(boost::shared_ptr<const dolfin::Mesh> mesh):
+    dolfin::FunctionSpace(mesh,
+                          boost::shared_ptr<const dolfin::FiniteElement>(new dolfin::FiniteElement(boost::shared_ptr<ufc::finite_element>(new nonlinearpoisson_finite_element_0()))),
+                          boost::shared_ptr<const dolfin::DofMap>(new dolfin::DofMap(boost::shared_ptr<ufc::dofmap>(new nonlinearpoisson_dofmap_0()), *mesh)))
+  {
+      // Do nothing
+  }
+
+  ~Form_1_FunctionSpace_1()
+  {
+  }
+
+};
 
 typedef CoefficientSpace_u Form_1_FunctionSpace_2;
 
@@ -2220,66 +2223,68 @@ class Form_1: public dolfin::Form
 public:
 
   // Constructor
-  Form_1(const dolfin::FunctionSpace& V0):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
+    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
   }
 
   // Constructor
-  Form_1(const dolfin::FunctionSpace& V0, const dolfin::GenericFunction& f, const dolfin::GenericFunction& u):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0, const dolfin::GenericFunction& u):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
+    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
-    this->f = f;
     this->u = u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
   }
 
   // Constructor
-  Form_1(const dolfin::FunctionSpace& V0, boost::shared_ptr<const dolfin::GenericFunction> f, boost::shared_ptr<const dolfin::GenericFunction> u):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(const dolfin::FunctionSpace& V1, const dolfin::FunctionSpace& V0, boost::shared_ptr<const dolfin::GenericFunction> u):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = reference_to_no_delete_pointer(V0);
+    _function_spaces[1] = reference_to_no_delete_pointer(V1);
 
-    this->f = *f;
     this->u = *u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
   }
 
   // Constructor
-  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V0):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = V0;
+    _function_spaces[1] = V1;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
   }
 
   // Constructor
-  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V0, const dolfin::GenericFunction& f, const dolfin::GenericFunction& u):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0, const dolfin::GenericFunction& u):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = V0;
+    _function_spaces[1] = V1;
 
-    this->f = f;
     this->u = u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
   }
 
   // Constructor
-  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V0, boost::shared_ptr<const dolfin::GenericFunction> f, boost::shared_ptr<const dolfin::GenericFunction> u):
-    dolfin::Form(1, 2), f(*this, 0), u(*this, 1)
+  Form_1(boost::shared_ptr<const dolfin::FunctionSpace> V1, boost::shared_ptr<const dolfin::FunctionSpace> V0, boost::shared_ptr<const dolfin::GenericFunction> u):
+    dolfin::Form(2, 1), u(*this, 0)
   {
     _function_spaces[0] = V0;
+    _function_spaces[1] = V1;
 
-    this->f = *f;
     this->u = *u;
 
     _ufc_form = boost::shared_ptr<const ufc::form>(new nonlinearpoisson_form_1());
@@ -2292,10 +2297,8 @@ public:
   /// Return the number of the coefficient with this name
   virtual dolfin::uint coefficient_number(const std::string& name) const
   {
-    if (name == "f")
+    if (name == "u")
       return 0;
-    else if (name == "u")
-      return 1;
 
     dolfin::error("Invalid coefficient.");
     return 0;
@@ -2307,8 +2310,6 @@ public:
     switch (i)
     {
     case 0:
-      return "f";
-    case 1:
       return "u";
     }
 
@@ -2318,17 +2319,18 @@ public:
 
   // Typedefs
   typedef Form_1_FunctionSpace_0 TestSpace;
-  typedef Form_1_FunctionSpace_1 CoefficientSpace_f;
+  typedef Form_1_FunctionSpace_1 TrialSpace;
   typedef Form_1_FunctionSpace_2 CoefficientSpace_u;
 
   // Coefficients
-  dolfin::CoefficientAssigner f;
   dolfin::CoefficientAssigner u;
 };
 
 // Class typedefs
-typedef Form_0 BilinearForm;
-typedef Form_1 LinearForm;
+typedef Form_1 BilinearForm;
+typedef Form_1 JacobianForm;
+typedef Form_0 LinearForm;
+typedef Form_0 ResidualForm;
 typedef Form_0::TestSpace FunctionSpace;
 
 }

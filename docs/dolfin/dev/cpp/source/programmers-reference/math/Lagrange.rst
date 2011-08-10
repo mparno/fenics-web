@@ -45,7 +45,7 @@ Lagrange.h
         Copy constructor
 
 
-    .. cpp:function:: void set(unsigned int i, real x)
+    .. cpp:function:: void set(unsigned int i, double x)
     
         Specify point
 
@@ -60,27 +60,27 @@ Lagrange.h
         Return degree
 
 
-    .. cpp:function:: real point(unsigned int i) const
+    .. cpp:function:: double point(unsigned int i) const
     
         Return point
 
 
-    .. cpp:function:: real operator() (unsigned int i, real x)
+    .. cpp:function:: double operator() (unsigned int i, double x)
     
         Return value of polynomial i at given point x
 
 
-    .. cpp:function:: real eval(unsigned int i, real x)
+    .. cpp:function:: double eval(unsigned int i, double x)
     
         Return value of polynomial i at given point x
 
 
-    .. cpp:function:: real ddx(unsigned int i, real x)
+    .. cpp:function:: double ddx(unsigned int i, double x)
     
         Return derivate of polynomial i at given point x
 
 
-    .. cpp:function:: real dqdx(unsigned int i)
+    .. cpp:function:: double dqdx(unsigned int i)
     
         Return derivative q (a constant) of polynomial
 

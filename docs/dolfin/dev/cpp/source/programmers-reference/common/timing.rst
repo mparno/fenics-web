@@ -14,20 +14,20 @@ timing.h
 
 
 
-    .. cpp:function:: void tic()
-    
-        Timing functions measure CPU time as determined by clock(),
-        the precision of which seems to be 0.01 seconds.
-        Start timing (should not be used internally in DOLFIN!)
+.. cpp:function:: void tic()
+
+    Timing functions measure CPU time as determined by clock(),
+    the precision of which seems to be 0.01 seconds.
+    Start timing (should not be used internally in DOLFIN!)
 
 
-    .. cpp:function:: double toc()
-    
-        Return elapsed CPU time (should not be used internally in DOLFIN!)
+.. cpp:function:: double toc()
+
+    Return elapsed CPU time (should not be used internally in DOLFIN!)
 
 
-    .. cpp:function:: double time()
-    
-        Return current CPU time used by process
+.. cpp:function:: double time()
+
+    Return current CPU time used by process
 
 

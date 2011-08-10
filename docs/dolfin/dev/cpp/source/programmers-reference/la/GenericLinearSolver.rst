@@ -21,19 +21,14 @@ GenericLinearSolver.h
     This class provides a general solver for linear systems Ax = b.
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A) = 0
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const GenericMatrix> A, const boost::shared_ptr<const GenericMatrix> P)
     
         Set operator (matrix) and preconditioner matrix
-
-
-    .. cpp:function:: const GenericMatrix& get_operator() const = 0
-    
-        Get operator (matrix)
 
 
     .. cpp:function:: uint solve(const GenericMatrix& A, GenericVector& x, const GenericVector& b)

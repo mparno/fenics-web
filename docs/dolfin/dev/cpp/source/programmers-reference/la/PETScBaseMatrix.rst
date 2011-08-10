@@ -48,7 +48,7 @@ PETScBaseMatrix.h
 
     .. cpp:function:: std::pair<uint, uint> local_range(uint dim) const
     
-        Return local rang along dimension dim
+        Return local range along dimension dim
 
 
     .. cpp:function:: void resize(GenericVector& y, uint dim) const

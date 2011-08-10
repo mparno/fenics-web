@@ -24,7 +24,7 @@ FacetCell.h
     original mesh.
 
 
-    .. cpp:function:: FacetCell(const Mesh& mesh, const Cell& facet)
+    .. cpp:function:: FacetCell(const BoundaryMesh& mesh, const Cell& facet)
     
         Create cell on mesh corresponding to given facet (cell) on boundary
 

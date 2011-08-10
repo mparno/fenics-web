@@ -1,1 +1,0 @@
-/home/logg/scratch/src/dolfin/work/demo/pde/navier-stokes/cpp/CMakeFiles/demo_navier-stokes.dir

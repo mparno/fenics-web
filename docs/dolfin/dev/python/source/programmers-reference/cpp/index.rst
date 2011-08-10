@@ -11,6 +11,9 @@ Classes:
     :maxdepth: 1
 
     ALE
+    AdaptiveDatum
+    AdaptiveLinearVariationalSolver
+    AdaptiveNonlinearVariationalSolver
     Assembler
     BarycenterQuadrature
     BasisFunction
@@ -35,6 +38,7 @@ Classes:
     DofMap
     DomainBoundary
     DoubleArray
+    DoubleParameter
     DynamicMeshEditor
     Edge
     EdgeFunction
@@ -48,10 +52,11 @@ Classes:
     EpetraMatrix
     EpetraSparsityPattern
     EpetraVector
-    EqualityBC
+    Equation
     ErrorControl
     Event
     Expression
+    Extrapolation
     Face
     FaceFunction
     FaceFunctionBool
@@ -74,6 +79,7 @@ Classes:
     FunctionSpace
     GaussQuadrature
     GaussianQuadrature
+    GenericAdaptiveVariationalSolver
     GenericDofMap
     GenericFunction
     GenericLUSolver
@@ -88,12 +94,13 @@ Classes:
     HierarchicalForm
     HierarchicalFunction
     HierarchicalFunctionSpace
+    HierarchicalLinearVariationalProblem
     HierarchicalMesh
     HierarchicalMeshFunctionBool
     HierarchicalMeshFunctionDouble
     HierarchicalMeshFunctionInt
     HierarchicalMeshFunctionUInt
-    HierarchicalVariationalProblem
+    HierarchicalNonlinearVariationalProblem
     ITLKrylovSolver
     IndexSet
     IntArray
@@ -106,7 +113,10 @@ Classes:
     Legendre
     LinearAlgebraFactory
     LinearSolver
+    LinearVariationalProblem
+    LinearVariationalSolver
     LobattoQuadrature
+    LocalAssembler
     LocalMeshData
     MPI
     MPICommunicator
@@ -133,6 +143,8 @@ Classes:
     MeshTopology
     NewtonSolver
     NonlinearProblem
+    NonlinearVariationalProblem
+    NonlinearVariationalSolver
     OpenMpAssembler
     PETScBaseMatrix
     PETScFactory
@@ -156,7 +168,6 @@ Classes:
     Progress
     Quadrature
     RadauQuadrature
-    RealParameter
     Rectangle
     SLEPcEigenSolver
     STLFactory
@@ -165,6 +176,7 @@ Classes:
     SingularSolver
     SparsityPattern
     SparsityPatternBuilder
+    SpecialFacetFunction
     StringParameter
     SubDomain
     SubMesh
@@ -225,7 +237,9 @@ Functions:
     DirichletBC_default_parameters
     EpetraKrylovSolver_default_parameters
     EpetraLUSolver_default_parameters
+    Extrapolation_extrapolate
     File_exists
+    GenericAdaptiveVariationalSolver_default_parameters
     GlobalParameters_default_parameters
     ITLKrylovSolver_default_parameters
     KrylovSolver_default_parameters
@@ -234,10 +248,14 @@ Functions:
     Legendre_ddx
     Legendre_eval
     LinearSolver_default_parameters
+    LinearVariationalSolver_default_parameters
+    LocalAssembler_assemble
+    LocalAssembler_assemble_cell
+    LocalAssembler_assemble_exterior_facet
+    LocalAssembler_assemble_interior_facet
     MPI_barrier
     MPI_distribute
     MPI_gather
-    MPI_global_maximum
     MPI_global_offset
     MPI_index_owner
     MPI_is_broadcaster
@@ -247,7 +265,6 @@ Functions:
     MPI_process_number
     MPI_scatter
     MPI_send_recv
-    MPI_sum
     MeshColoring_color
     MeshColoring_color_cells
     MeshColoring_compute_colors
@@ -255,6 +272,7 @@ Functions:
     MeshPartitioning_number_entities
     MeshPartitioning_partition
     NewtonSolver_default_parameters
+    NonlinearVariationalSolver_default_parameters
     OpenMpAssembler_assemble
     PETScFactory_instance
     PETScKrylovSolver_default_parameters
@@ -275,14 +293,16 @@ Functions:
     TimeSeries_filename_times
     TrilinosPreconditioner_default_parameters
     UmfpackLUSolver_default_parameters
-    VariationalProblem_default_parameters
     adapt
     adapt_markers
     assemble
     assemble_system
     begin
+    between
     check_equal
     debug
+    dolfin_error
+    dorfler_mark
     down_cast
     end
     error
@@ -296,13 +316,11 @@ Functions:
     ipow
     log
     logging
+    mark
+    near
     normalize
     not_working_in_parallel
     rand
-    real_exp
-    real_log
-    real_pi
-    real_sqrt
     refine
     residual
     seed

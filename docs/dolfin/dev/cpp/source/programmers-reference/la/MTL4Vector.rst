@@ -123,6 +123,11 @@ MTL4Vector.h
         Gather entries into local vector x
 
 
+    .. cpp:function:: void gather_on_zero(Array<double>& x) const
+    
+        Gather all entries into Array x on process 0
+
+
     .. cpp:function:: void axpy(double a, const GenericVector& x)
     
         Add multiple of given vector (AXPY operation)

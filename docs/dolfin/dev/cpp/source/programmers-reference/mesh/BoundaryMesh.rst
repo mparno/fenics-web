@@ -41,3 +41,13 @@ BoundaryMesh.h
         Initialize interior boundary of given mesh
 
 
+    .. cpp:function:: const MeshFunction<unsigned int>& cell_map() const
+    
+        Get cell mapping from the boundary mesh to the original full mesh
+
+
+    .. cpp:function:: MeshFunction<unsigned int>& vertex_map()
+    
+        Get vertex mapping from the boundary mesh to the original full mesh
+
+

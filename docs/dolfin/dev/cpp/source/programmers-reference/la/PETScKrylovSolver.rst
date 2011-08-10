@@ -45,27 +45,27 @@ PETScKrylovSolver.h
         Create solver from given PETSc KSP pointer
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operator(const PETScBaseMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const PETScBaseMatrix> A)
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const GenericMatrix> A, const boost::shared_ptr<const GenericMatrix> P)
     
         Set operator (matrix) and preconditioner matrix
 
 
-    .. cpp:function:: void set_operators(const PETScBaseMatrix& A, const PETScBaseMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const PETScBaseMatrix> A, const boost::shared_ptr<const PETScBaseMatrix> P)
     
         Set operator (matrix) and preconditioner matrix
 
 
-    .. cpp:function:: const GenericMatrix& get_operator() const
+    .. cpp:function:: const PETScBaseMatrix& get_operator() const
     
         Get operator (matrix)
 

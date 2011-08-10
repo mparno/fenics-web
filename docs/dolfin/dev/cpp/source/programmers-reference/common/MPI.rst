@@ -64,6 +64,16 @@ MPI.h
         Distribute local arrays on all processors according to given partition
 
 
+    .. cpp:function:: static void broadcast(T& value, uint broadcaster=0)
+    
+        Broadcast value from broadcaster process to all processes
+
+
+    .. cpp:function:: static void broadcast(std::vector<T>& values, uint broadcaster=0)
+    
+        Broadcast value from broadcaster process to all processes
+
+
     .. cpp:function:: static void scatter(std::vector<uint>& values, uint sending_process=0)
     
         Scatter values, one to each process
@@ -84,30 +94,24 @@ MPI.h
         Gather values, one from each process (wrapper for MPI_Allgather)
 
 
-    .. cpp:function:: static void gather(std::vector<uint>& values)
+    .. cpp:function:: static void gather(std::vector<T>& values)
     
         Gather values, one from each process (wrapper for MPI_Allgather)
 
 
-    .. cpp:function:: static void gather(std::vector<double>& values)
+    .. cpp:function:: static T max(const T& value)
     
-        Gather values, one from each process (wrapper for MPI_Allgather)
+        Return  maximum value
 
 
-    .. cpp:function:: static void gather_all(const T& in_value, std::vector<T>& out_values)
+    .. cpp:function:: static T min(const T& value)
     
-        Gather values, one from each process (wrapper for boost::mpi::all_gather)
+        Return minimum value
 
 
-    .. cpp:function:: static uint global_maximum(uint size)
+    .. cpp:function:: static T sum(const T& value)
     
-        Find global max value (wrapper for MPI_Allredue with MPI_MAX as
-        reduction op)
-
-
-    .. cpp:function:: static double sum(double value)
-    
-        Sum values and return sum
+        Return sum across all processes
 
 
     .. cpp:function:: static uint global_offset(uint range, bool exclusive)
@@ -129,7 +133,7 @@ MPI.h
     .. cpp:function:: static std::pair<uint, uint> local_range(uint N)
     
         Return local range for local process, splitting [0, N - 1] into
-         num_processes() portions of almost equal size
+        num_processes() portions of almost equal size
 
 
     .. cpp:function:: static std::pair<uint, uint> local_range(uint process, uint N)

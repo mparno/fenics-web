@@ -21,7 +21,7 @@ GenericLUSolver.h
     This a base class for LU solvers
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A) = 0
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A) = 0
     
         Set operator (matrix)
 

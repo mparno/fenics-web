@@ -10,13 +10,16 @@ Modules:
 .. toctree::
     :maxdepth: 1
 
+    adaptivesolving/index
     assembling/index
     bcs/index
+    errorcontrolgenerator/index
     form/index
     formmanipulations/index
     interpolation/index
     norms/index
     projection/index
+    solving/index
     variationalproblem/index
 
 Module docstring:

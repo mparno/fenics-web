@@ -28,12 +28,12 @@ ITLKrylovSolver.h
         Create Krylov solver for a particular method and preconditioner
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
 
 
-    .. cpp:function:: void set_operators(const GenericMatrix& A, const GenericMatrix& P)
+    .. cpp:function:: void set_operators(const boost::shared_ptr<const GenericMatrix> A, const boost::shared_ptr<const GenericMatrix> P)
     
         Set operator (matrix) and preconditioner matrix
 

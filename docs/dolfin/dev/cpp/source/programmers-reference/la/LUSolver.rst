@@ -18,19 +18,14 @@ LUSolver.h
     
         * :cpp:class:`GenericLUSolver`
         
-    .. cpp:function:: LUSolver(const GenericMatrix& A, std::string type = "lu")
+    .. cpp:function:: LUSolver(boost::shared_ptr<const GenericMatrix> A, std::string type = "lu")
     
         Constructor
 
 
-    .. cpp:function:: void set_operator(const GenericMatrix& A)
+    .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericMatrix> A)
     
         Set operator (matrix)
-
-
-    .. cpp:function:: const GenericMatrix& get_operator() const
-    
-        Return the operator (matrix)
 
 
     .. cpp:function:: uint solve(GenericVector& x, const GenericVector& b)

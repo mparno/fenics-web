@@ -21,11 +21,6 @@ GenericMatrix.h
     This class defines a common interface for matrices.
 
 
-    .. cpp:function:: void resize(uint rank, const uint* dims)
-    
-        Resize tensor with given dimensions
-
-
     .. cpp:function:: void init(const GenericSparsityPattern& sparsity_pattern) = 0
     
         Initialize zero tensor using sparsity pattern
@@ -94,7 +89,7 @@ GenericMatrix.h
     .. cpp:function:: void resize(GenericVector& y, uint dim) const = 0
     
         Resize vector y such that is it compatible with matrix for
-        multuplication Ax = b (dim = 0 -> b, dim = 1 -> x) In parallel
+        multuplication Ax = b (dim = 0 -> b, dim = 1 -> x). In parallel
         case, size and layout are important.
 
 
