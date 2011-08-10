@@ -63,25 +63,25 @@ import_doc()
 
     # Copy documentation files
     mkdir -p $DOC_TO
-    $RSYNC $DOC_FROM $DOC_TO
+    #$RSYNC $DOC_FROM $DOC_TO
 
     # Copy common FEniCS template
-    $RSYNC source/_themes/fenics/ $DOC_TO/source/_themes/fenics/
+    #$RSYNC source/_themes/fenics/ $DOC_TO/source/_themes/fenics/
 
     # Add to bzr
-    bzr add $DOC_TO/Makefile $DOC_TO/source
-    bzr commit -m "Update documentation for $PACKAGE version $PACKAGE_VERSION"
+    #bzr add $DOC_TO/Makefile $DOC_TO/source
+    #bzr commit -m "Update documentation for $PACKAGE version $PACKAGE_VERSION"
 
     # Build HTML
     pushd .
     cd $DOC_TO
-    make html
+    #make html
     popd
 
     # Copy HTML to main build tree
     HTML_DIR="build/html/doc/$package/$PACKAGE_VERSION/$SUFFIX"
     mkdir -p $HTML_DIR
-    $RSYNC $DOC_TO/build/html/ $HTML_DIR
+    #$RSYNC $DOC_TO/build/html/ $HTML_DIR
 }
 
 # Import documentation for all packages
