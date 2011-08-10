@@ -1,0 +1,454 @@
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Poisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'a'
+  Rank:                             2
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 0
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0, v_1]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v, u]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 0
+  quadrature_degree: auto --> 0
+  quadrature_rule:   auto --> default
+  
+  Name:                             'L'
+  Rank:                             1
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           2
+  Number of cell domains:           1
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0]'
+  Coefficients:                     '[w_0, w_1]'
+  Argument names:                   '[v]'
+  Coefficient names:                '[f, g]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.034761 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.00327 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00247 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00439 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00319 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00221 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0338402 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Skipping FErari optimizations as requested.
+  Skipping FErari optimizations as requested.
+  Skipping FErari optimizations as requested.
+  
+Compiler stage 3 finished in 0.000577927 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.111264 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00258017 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Poisson.h.
+  
+Compiler stage 5 finished in 0.00135803 seconds.
+
+[1;37;32mFFC finished in 0.184993 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Poisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                             'a'
+  Rank:                             2
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           0
+  Number of cell domains:           1
+  Number of exterior facet domains: 0
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0, v_1]'
+  Coefficients:                     '[]'
+  Argument names:                   '[v, u]'
+  Coefficient names:                '[]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 0
+  quadrature_degree: auto --> 0
+  quadrature_rule:   auto --> default
+  
+  Name:                             'L'
+  Rank:                             1
+  Cell:                             <triangle cell in R2>
+  Topological dimension:            2
+  Geometric dimension:              2
+  Number of facets:                 3
+  Number of coefficients:           2
+  Number of cell domains:           1
+  Number of exterior facet domains: 1
+  Number or interior facet domains: 0
+  Number of macro cell domains:     0
+  Number of surface domains:        0
+  Arguments:                        '[v_0]'
+  Coefficients:                     '[w_0, w_1]'
+  Argument names:                   '[v]'
+  Coefficient names:                '[f, g]'
+  Unique elements:                  'CG1(?)'
+  Unique sub elements:              'CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0337121 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.00298 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00245 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Reusing monomial integrand from cache
+  Transforming monomial form to reference element
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00391 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00328 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00167 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.032197 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Skipping FErari optimizations as requested.
+  Skipping FErari optimizations as requested.
+  Skipping FErari optimizations as requested.
+  
+Compiler stage 3 finished in 0.000505924 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: detJ
+  Removing unused variable: J_11
+  Removing unused variable: J_10
+  Removing unused variable: J_01
+  Removing unused variable: J_00
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.112404 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00252604 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Poisson.h.
+  
+Compiler stage 5 finished in 0.00129414 seconds.
+
+[1;37;32mFFC finished in 0.183205 seconds.[0m

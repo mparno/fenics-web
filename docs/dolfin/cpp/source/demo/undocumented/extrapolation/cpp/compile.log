@@ -1,0 +1,276 @@
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element P2
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000296831 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.028811 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000253201 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.239702 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00183082 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./P2.h.
+  
+Compiler stage 5 finished in 0.00127196 seconds.
+
+[1;37;32mFFC finished in 0.272725 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element P1
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000299931 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.017663 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000512838 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.103348 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00194287 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./P1.h.
+  
+Compiler stage 5 finished in 0.00113487 seconds.
+
+[1;37;32mFFC finished in 0.125691 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element P2
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000306129 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.032007 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000273943 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.237257 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00193596 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./P2.h.
+  
+Compiler stage 5 finished in 0.00134206 seconds.
+
+[1;37;32mFFC finished in 0.273705 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 0.9.10.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling element P1
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+Compiler stage 1 finished in 0.000300884 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.016638 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000349045 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 elements
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: K_11
+  Removing unused variable: K_10
+  Removing unused variable: K_01
+  Removing unused variable: K_00
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Generating code for 1 dofmaps
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.111243 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00211883 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./P1.h.
+  
+Compiler stage 5 finished in 0.00105786 seconds.
+
+[1;37;32mFFC finished in 0.132354 seconds.[0m

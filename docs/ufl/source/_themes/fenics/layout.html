@@ -1,0 +1,74 @@
+{% extends "basic/layout.html" %}
+
+{%- block extrahead %}
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="{{ pathto('_static/ie6.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+{%- if theme_favicon %}
+<link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}"/>
+{%- endif %}
+{% endblock %}
+
+{# override upper relbar to show our navigation menu #}
+{% block relbar1 %}
+<div class="wrapper">
+  <a href="/new/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px" alt="FEniCS Project Banner"/></a>
+  <div id="access">
+    <div class="menu">
+      <ul>
+	<li class="page_item"><a href="/new/about" title="Find out more about the FEniCS project">About</a></li>
+	<li class="page_item"><a href="/new/download" title="Obtain the FEniCS project">Download</a></li>
+	<li class="page_item"><a href="/new/documentation" title="Learn how to use the FEniCS project">Documentation</a></li>
+	<li class="page_item"><a href="/new/applications" title="Learn how others are using the FEniCS project">Applications</a></li>
+	<li class="page_item"><a href="/new/contributing" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
+	<li class="page_item"><a href="/new/citing" title="Learn how to cite the FEniCS project">Citing</a></li>
+	<li class="page_item"><a href="/new/support" title="Where to go for more help">Support</a></li>
+      </ul>
+    </div><!-- .menu -->
+  </div><!-- #access -->
+</div><!-- #wrapper -->
+{% endblock %}
+
+{% block footer %}
+<div class="wrapper">
+  <div class="footer">
+    <div class="footer-nav">
+      <div class="span-6">
+	<h4>Documentation</h4>
+	<ul>
+	  <li><a href="/new/documentation/tutorial">Tutorial</a></li>
+	  <li><a href="/new/documentation/dolfin/dev/python">Python API</a></li>
+	  <li><a href="/new/documentation/dolfin/dev/cpp">C++ API</a></li>
+	</ul>
+      </div>
+      <div class="span-6">
+	<h4>Useful links</h4>
+	<ul>
+	  <li><a href="/buildbot">Buildbot</a></li>
+	  <li><a href="/benchbot">Benchbot</a></li>
+	  <li><a href="/new/support/launchpad_pages.html">FEniCS on Launchpad</a></li>
+	</ul>
+      </div>
+      <div class="span-6 last">
+	<h4>Search this site</h4>
+	<div id="searchbox">
+	  <form class="search" action="/new/search.html" method="get">
+	    <input type="text" name="q" size="18" />
+	    <input type="submit" value="Go" />
+	    <input type="hidden" name="check_keywords" value="yes" />
+	    <input type="hidden" name="area" value="default" />
+	  </form>
+	</div>
+      </div>
+    </div>
+    &copy; Copyright 2011, <a href="/new/">The FEniCS Project</a>.
+  </div>
+</div>
+{% endblock %}
+
+{# do not display lower relbar #}
+{% block relbar2 %}{% endblock %}
+
+{# do not display sidebars #}
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
