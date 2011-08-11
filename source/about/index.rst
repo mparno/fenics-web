@@ -55,11 +55,7 @@ lanuage :ref:`UFL <about_components_ufl>` and a range of
 :ref:`additional components <about_components_additional>` and
 :ref:`applications <about_components_applications>`.
 
-.. note::
-    I think applications should be removed from here and featured as
-    part of their :ref:`own page <apps>`.
-
-An full overview of the list of FEniCS components is presented
+A full overview of the list of FEniCS components is presented
 :ref:`here <about_components>`.
 
 .. _about_license:
@@ -86,7 +82,3 @@ these terms `here <http://www.fenicsproject.org/pub/copyright>`__.
    :hidden:
 
    components
-
-.. note::
-    In which order should we list the research institutes? In order of
-    contribution, or chronological?

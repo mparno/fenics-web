@@ -43,9 +43,6 @@ Jansson, Johannes Ring, Kristian Oelgaard, Marie Rognes
 For a full list of contributors, refer to the ``AUTHORS`` file found
 in the DOLFIN source tree.
 
-.. note::
-    Is this a good way to give credit? Who is missing? Is the order correct?
-
 .. _about_components_ffc:
 
 ***
@@ -111,12 +108,14 @@ and Distutils. Instant is used by FFC and DOLFIN for just-in-time
 Maintainers (in alpabetical order)
 ==================================
 
-???
+.. note::
+   Add list of Instant maintainers.
 
 Authors (past and present in chronological order)
 =================================================
 
-???
+.. note::
+   Add list of Instant authors.
 
 .. _about_components_ufc:
 
@@ -242,50 +241,5 @@ Authors (past and present in chronological order)
 
 Ola Skavhaug
 
-.. _about_components_applications:
-
-############
-Applications
-############
-
-`FEniCS Apps <https://answers.launchpad.net/fenics-group>`__ is a
-collection of applications/solvers based on FEniCS. If you have
-developed a FEniCS-based application that you think qualifies to be on
-this list, contact the `FEniCS Apps maintainers
-<https://launchpad.net/~fenics-apps-core>`__.
-
-* CBC.RANS
-* CBC.Block
-* `CBC.Solve <https://launchpad.net/cbc.solve>`__,
-  a collection of Python-based PDE solvers
-* DOLFWAVE
-* DiffSim
-* FEniCS Plasticity
-* `GenFoo <https://launchpad.net/genfoo>`__,
-  a generalized Fokker-Planck solver
-* PUM Compiler
-* PUM solver
-* rheagen
-* TriTetMesh
-* `Unicorn <https://launchpad.net/unicorn>`__,
-  a unified continuum mechanics solver
-
 .. note::
-    Which should be included among core components? Should we include SyFi?
-    Viper? FErari? Those are strictly speaking not necessary to run an application.
-
-.. note::
-    Which applications are missing?
-
-.. note::
-    Should ASCoT be a component or an application?
-
-.. note::
-    Everyone should review the text presented for each component.
-
-.. note::
-    When we're happy with the information listed here, we should
-    update the corresponding text on Launchpad.
-
-.. note::
-    Add some pretty pictures.
+   Add links to Launchpad project page for each component.
