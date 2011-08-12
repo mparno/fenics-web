@@ -15,6 +15,26 @@ The methodology and software developed as part of the FEniCS Project
 are documented in a number of :doc:`research articles <../citing/index>`
 and a :doc:`book <../book/index>`.
 
+**********
+Components
+**********
+
+FEniCS is organized as a collection of interoperable components that
+together form the FEniCS Project. These components include the
+problem-solving environment :ref:`DOLFIN <about_components_dolfin>`,
+the form compiler :ref:`FFC <about_components_ffc>`, the finite
+element tabulator :ref:`FIAT <about_components_fiat>`, the
+just-in-time compiler :ref:`Instant <about_components_instant>`, the
+code generation interface :ref:`UFC <about_components_ufc>`, the form
+lanuage :ref:`UFL <about_components_ufl>` and a range of
+:ref:`additional components <about_components_additional>`. A deeper
+look at these various FEniCS components can be found :ref:`here
+<about_components>`.
+
+Building on these components, software specialised to solving different
+problems are organised into separate :doc:`applications
+<../applications/index>`.
+
 ************
 Contributors
 ************
@@ -36,27 +56,12 @@ Laboratory <http://www.anl.gov>`__ and many other research institutes.
 A full list of contributors is maintained as part of the source code
 of each FEniCS component.
 
+The following video aims to present this information in a visual
+manner.
+
 .. raw:: html
 
     <div style="text-align:center;margin-left:auto; margin-right:auto;"><iframe width="425" height="349" src="http://www.youtube.com/embed/0E6DGUbRrO4" frameborder="0" allowfullscreen></iframe></div>
-
-**********
-Components
-**********
-
-FEniCS is organized as a collection of interoperable components that
-together form the FEniCS Project. These components include the
-problem-solving environment :ref:`DOLFIN <about_components_dolfin>`,
-the form compiler :ref:`FFC <about_components_ffc>`, the finite
-element tabulator :ref:`FIAT <about_components_fiat>`, the
-just-in-time compiler :ref:`Instant <about_components_instant>`, the
-code generation interface :ref:`UFC <about_components_ufc>`, the form
-lanuage :ref:`UFL <about_components_ufl>` and a range of
-:ref:`additional components <about_components_additional>` and
-:ref:`applications <about_components_applications>`.
-
-A full overview of the list of FEniCS components is presented
-:ref:`here <about_components>`.
 
 .. _about_license:
 
