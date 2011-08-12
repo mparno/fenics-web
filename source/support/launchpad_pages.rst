@@ -8,58 +8,42 @@ Overview of Launchpad pages
 
 This page contains links to all FEniCS projects on Launchpad for convenience.
 
-+----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| `FEniCS Project <https://launchpad.net/fenics-project>`_ | `Get Answers <https://answers.launchpad.net/fenics-project>`_ | `Report Bugs <https://bugs.launchpad.net/fenics-project>`_ | `Email Support <fenics@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~fenics>`_ |
-+----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| `DOLFIN <https://launchpad.net/dolfin>`_                 | `Get Answers <https://answers.launchpad.net/dolfin>`_         | `Report Bugs <https://bugs.launchpad.net/dolfin>`_         | `Email Support <dolfin@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~dolfin>`_ |
-+----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| `Dorsal <https://launchpad.net/dorsal>`_                 | `Get Answers <https://answers.launchpad.net/dorsal>`_         | `Report Bugs <https://bugs.launchpad.net/dorsal>`_         | `Email Support <dorsal@lists.launchpad.net>`_ `(Join Team) <https://answers.launchpad.net/~dorsal>`_ |
-+----------------------------------------------------------+---------------------------------------------------------------+------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+.. tabularcolumns |l|l|l|l|
 
-.. note::
-   HN: I think the following is too unwieldy to be helpful. I suggest
-   using something like the preceding table, even though the syntax to
-   generate it is horrible.
+.. list-table::
+    :widths: 15, 15, 15, 30
+    :header-rows: 0
+    :class: center
 
-`FEniCS Project <https://launchpad.net/fenics-project>`_
-  * Code: `<https://code.launchpad.net/fenics-project>`_
-  * Bugs: `<https://bugs.launchpad.net/fenics-project>`_
-  * Blueprints: `<https://blueprints.launchpad.net/fenics-project>`_
-  * Answers: `<https://answers.launchpad.net/fenics-project>`_
-  * Team: `<https://answers.launchpad.net/~fenics>`_
-  * Contact: fenics@lists.launchpad.net (join team before posting)
+    * - `FEniCS Project <https://launchpad.net/fenics-project>`_
+      - `Get Answers <https://answers.launchpad.net/fenics-project>`_
+      - `Report Bugs <https://bugs.launchpad.net/fenics-project>`_
+      - `(Join Team and) <https://answers.launchpad.net/~fenics>`_
+      	`Email Support <fenics@lists.launchpad.net>`_
 
-`DOLFIN <https://launchpad.net/dolfin>`_
-  * Code: `<https://code.launchpad.net/dolfin>`_
-  * Bugs: `<https://bugs.launchpad.net/dolfin>`_
-  * Blueprints: `<https://blueprints.launchpad.net/dolfin>`_
-  * Answers: `<https://answers.launchpad.net/dolfin>`_
-  * Team: `<https://answers.launchpad.net/~dolfin>`_
-  * Contact: dolfin@lists.launchpad.net (join team before posting)
+    * - `DOLFIN <https://launchpad.net/dolfin>`_
+      - `Get Answers <https://answers.launchpad.net/dolfin>`_
+      - `Report Bugs <https://bugs.launchpad.net/dolfin>`_
+      - `(Join Team and) <https://answers.launchpad.net/~dolfin>`_
+      	`Email Support <dolfin@lists.launchpad.net>`_
 
-`Dorsal <https://launchpad.net/dorsal>`_
-  * Code: `<https://code.launchpad.net/dorsal>`_
-  * Bugs: `<https://bugs.launchpad.net/dorsal>`_
-  * Blueprints: `<https://blueprints.launchpad.net/dorsal>`_
-  * Answers: `<https://answers.launchpad.net/dorsal>`_
-  * Team: `<https://answers.launchpad.net/~dorsal>`_
-  * Contact: dorsal@lists.launchpad.net (join team before posting)
+    * - `Dorsal <https://launchpad.net/dorsal>`_
+      - `Get Answers <https://answers.launchpad.net/dorsal>`_
+      - `Report Bugs <https://bugs.launchpad.net/dorsal>`_
+      - `(Join Team and) <https://answers.launchpad.net/~dorsal>`_
+      	`Email Support <dorsal@lists.launchpad.net>`_
 
-`Exterior <https://launchpad.net/exterior>`_
-  * Code: `<https://code.launchpad.net/exterior>`_
-  * Bugs: `<https://bugs.launchpad.net/exterior>`_
-  * Blueprints: `<https://blueprints.launchpad.net/exterior>`_
-  * Answers: `<https://answers.launchpad.net/exterior>`_
-  * Team: `<https://answers.launchpad.net/~exterior>`_
-  * Contact: exterior@lists.launchpad.net (join team before posting)
+    * - `Exterior <https://launchpad.net/exterior>`_
+      - `Get Answers <https://answers.launchpad.net/exterior>`_
+      - `Report Bugs <https://bugs.launchpad.net/exterior>`_
+      - `(Join Team and) <https://answers.launchpad.net/~exterior>`_
+      	`Email Support <exterior@lists.launchpad.net>`_
 
-`FEniCS Book Project <https://launchpad.net/fenics-book>`_
-  * Code: `<https://code.launchpad.net/fenics-book>`_
-  * Bugs: `<https://bugs.launchpad.net/fenics-book>`_
-  * Blueprints: `<https://blueprints.launchpad.net/fenics-book>`_
-  * Answers: `<https://answers.launchpad.net/fenics-book>`_
-  * Team: `<https://answers.launchpad.net/~fenics-authors>`_
-  * Contact: fenics-authors@lists.launchpad.net (join team before posting)
+    * - `FEniCS Book <https://launchpad.net/fenics-book>`_
+      - `Get Answers <https://answers.launchpad.net/fenics-book>`_
+      - `Report Bugs <https://bugs.launchpad.net/fenics-book>`_
+      - `(Join Team and) <https://answers.launchpad.net/~fenics-authors>`_
+      	`Email Support <fenics-authors@lists.launchpad.net>`_
 
 `FEniCS Documentation <https://launchpad.net/fenics-doc>`_
   * Code: `<https://code.launchpad.net/fenics-doc>`_
