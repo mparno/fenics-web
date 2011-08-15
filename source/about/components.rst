@@ -14,9 +14,9 @@ Core components
 
 .. _about_components_dolfin:
 
-******
-DOLFIN
-******
+*****************************************
+`DOLFIN <https://launchpad.net/dolfin>`__
+*****************************************
 
 DOLFIN is a C++/Python library that functions as the main user
 interface of FEniCS. A large part of the functionality of FEniCS is
@@ -45,9 +45,9 @@ in the DOLFIN source tree.
 
 .. _about_components_ffc:
 
-***
-FFC
-***
+***********************************
+`FFC <https://launchpad.net/ffc>`__
+***********************************
 
 One of the key features of FEniCS is automated code generation for the
 general and efficient solution of finite element variational
@@ -69,11 +69,14 @@ Authors (past and present in chronological order)
 
 Anders Logg, Marie Rognes, Kristian Oelgaard, Garth N. Wells
 
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the FFC source tree.
+
 .. _about_components_fiat:
 
-****
-FIAT
-****
+*************************************
+`FIAT <https://launchpad.net/fiat>`__
+*************************************
 
 FIAT (FInite element Automatic Tabulator) supports generation of
 arbitrary order instances of the Lagrange elements on lines,
@@ -94,11 +97,14 @@ Authors (past and present in chronological order)
 
 Robert C. Kirby, Anders Logg, Marie Rognes
 
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the FIAT source tree.
+
 .. _about_components_instant:
 
-*******
-Instant
-*******
+*******************************************
+`Instant <https://launchpad.net/instant>`__
+*******************************************
 
 Instant is a Python module that allows for instant inlining of C and
 C++ code in Python. It is a small Python module built on top of SWIG
@@ -117,11 +123,14 @@ Authors (past and present in chronological order)
 .. note::
    Add list of Instant authors.
 
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the Instant source tree.
+
 .. _about_components_ufc:
 
-***
-UFC
-***
+**********************************
+`UFC <https://launchpad.net/ufc>`__
+**********************************
 
 UFC (Unified Form-assembly Code) is a unified framework for finite
 element assembly. More precisely, it defines a fixed interface for
@@ -142,11 +151,14 @@ Authors (past and present in chronological order)
 Anders Logg, Martin Sandve Alnes, Kent-Andre Mardal, Ola Skavhaug,
 Hans Petter Langtangen, Garth N. Wells
 
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the UFC source tree.
+
 .. _about_components_ufl:
 
-***
-UFL
-***
+***********************************
+`UFL <https://launchpad.net/ufl>`__
+***********************************
 
 UFL (Unified Form Language) is a domain specific language for
 declaration of finite element discretizations of variational
@@ -164,6 +176,9 @@ Authors (past and present in chronological order)
 
 Martin Sandve Alnes, Anders Logg, Garth N. Wells
 
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the UFL source tree.
+
 .. _about_components_additional:
 
 #####################
@@ -172,9 +187,9 @@ Additional components
 
 .. _about_components_ascot:
 
-*****
-ASCoT
-*****
+*************************************
+`ASCoT <https://launchpad.net/ascot>`__
+*************************************
 
 .. _about_components_dorsal:
 
@@ -188,28 +203,34 @@ Authors (past and present in chronological order)
 
 Marie Rognes
 
-******
-Dorsal
-******
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the ASCoT source tree.
+
+*****************************************
+`Dorsal <https://launchpad.net/dorsal>`__
+*****************************************
 
 Dorsal is a set of simple scripts to build components of the FEniCS
 Project (as well as their dependencies) for various platforms.
 
+Maintainers (in alpabetical order)
+==================================
+
+Harish Narayanan
+
+Authors (past and present in chronological order)
+=================================================
+
+Harish Narayanan
+
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the Dorsal source tree.
+
 .. _about_components_syfi:
 
-Maintainers (in alpabetical order)
-==================================
-
-Harish Narayanan
-
-Authors (past and present in chronological order)
-=================================================
-
-Harish Narayanan
-
-********
-SyFi/SFC
-********
+************************************************
+`SyFi/SFC <https://launchpad.net/fenics-syfi>`__
+************************************************
 
 Maintainers (in alpabetical order)
 ==================================
@@ -220,16 +241,19 @@ Authors (past and present in chronological order)
 =================================================
 
 Kent-Andre Mardal, Martin Sandve Alnes
+
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the SyFi source tree.
 
 .. _about_components_viper:
 
-*****
-Viper
-*****
+**********************************************
+`Viper <https://launchpad.net/fenics-viper>`__
+**********************************************
 
 Viper is a minimalistic scientific plotter and run-time visualization
 module based on VTK. If installed, Viper provides built-in plotting
-for DOLFIN. [`read more <https://launchpad.net/fenics-viper>`__]
+for DOLFIN.
 
 Maintainers (in alpabetical order)
 ==================================
@@ -241,5 +265,5 @@ Authors (past and present in chronological order)
 
 Ola Skavhaug
 
-.. note::
-   Add links to Launchpad project page for each component.
+For a full list of contributors, refer to the ``AUTHORS`` file found
+in the Viper source tree.
