@@ -6,7 +6,7 @@
       <a href="http://www.fenicsproject.org/new/featured/2011/fenics_1beta"><img src="/new/_static/images/featured_item_fenics_1beta.png" alt="FEniCS 1.0 beta"/></a>
 
       <div id="feature-info">
-        <h2 style="margin-top:0;">Mathematical physics can be fun!</h2>
+        <!--<h2 style="margin-top:0;">Mathematical physics can be fun!</h2>-->
 
         <p>The FEniCS Project is a collection of
           <a href="http://www.gnu.org/philosophy/free-sw.html">free
