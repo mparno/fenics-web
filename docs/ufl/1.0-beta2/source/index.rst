@@ -1,7 +1,7 @@
 
 
 #############################################
-Documentation for UFL v1.0-beta2
+Documentation for UFL v0.9.1+
 #############################################
 
 UFL User Manual
