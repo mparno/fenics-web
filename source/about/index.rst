@@ -26,13 +26,13 @@ the form compiler :ref:`FFC <about_components_ffc>`, the finite
 element tabulator :ref:`FIAT <about_components_fiat>`, the
 just-in-time compiler :ref:`Instant <about_components_instant>`, the
 code generation interface :ref:`UFC <about_components_ufc>`, the form
-lanuage :ref:`UFL <about_components_ufl>` and a range of
+language :ref:`UFL <about_components_ufl>` and a range of
 :ref:`additional components <about_components_additional>`. A deeper
 look at these various FEniCS components can be found :ref:`here
 <about_components>`.
 
-Building on these components, software specialised to solving different
-problems are organised into separate :doc:`applications
+Building on these components, software specialized to solving
+different problems are organised into separate :doc:`applications
 <../applications/index>`.
 
 ************
@@ -56,8 +56,8 @@ Laboratory <http://www.anl.gov>`__ and many other research institutes.
 A full list of contributors is maintained as part of the source code
 of each FEniCS component.
 
-The following video aims to present this information in a visual
-manner.
+The following video illustrates the development of the FEniCS Project
+since its inception in 2003.
 
 .. raw:: html
 
@@ -70,7 +70,7 @@ License
 *******
 
 All FEniCS :ref:`core components <about_components_core>` are licensed
-on the `GNU LGPL <http://www.gnu.org/licenses/lgpl.html>`__ as
+under the `GNU LGPL <http://www.gnu.org/licenses/lgpl.html>`__ as
 published by the `Free Software Foundation <http://www.fsf.org>`__,
 either version 3 of the license, or (at your option) any later
 version.
