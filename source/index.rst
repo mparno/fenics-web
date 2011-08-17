@@ -8,10 +8,11 @@
     :hidden:
 
     about/index
-    applications/index
     download/index
     documentation/index
+    applications/index
     contributing/index
     citing/index
-    book/index
     support/index
+    book/index
+    featured/2011/fenics_1beta

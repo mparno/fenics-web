@@ -54,6 +54,8 @@ components.
 .. note::
     Make page title more verbose for each link, like "DOLFIN C++ API version x.y.z"
 
+.. _demos:
+
 *****
 Demos
 *****
