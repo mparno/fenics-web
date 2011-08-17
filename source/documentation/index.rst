@@ -52,12 +52,6 @@ components.
    tutorial/index
 
 .. note::
-    Figure out how to set relative paths rather than absolute paths as above.
-
-.. note::
-    Replace index.html by genindex.html in above links
-
-.. note::
     Make page title more verbose for each link, like "DOLFIN C++ API version x.y.z"
 
 *****
