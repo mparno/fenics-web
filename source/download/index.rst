@@ -8,6 +8,8 @@
 Download
 ########
 
+.. _binary_packages:
+
 ***************
 Binary packages
 ***************
