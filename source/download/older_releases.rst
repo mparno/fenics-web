@@ -9,6 +9,40 @@ Older releases
 Older FEniCS releases for Mac OS X and Windows are made available here.
 
 ************
+FEniCS 11.05
+************
+
+This release includes DOLFIN 0.9.11, FFC 0.9.10, FIAT 0.9.9, Instant
+0.9.10, UFC 2.0.1, UFL 0.9.1, and Viper 0.4.7.
+
+.. tabularcolumns:: |c|c|
+
+.. list-table::
+    :widths: 50, 50
+    :header-rows: 0
+    :class: center
+
+    * - |mac-icon| Mac OS X binary
+
+      - `fenics-11.05-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-osx10.6.dmg>`__
+
+    * - |windows-icon| Windows binary
+
+      - `fenics-11.05-mingw32.exe
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-mingw32.exe>`__
+
+    * - |archive-icon| Sources for Mac OS X
+
+      - `fenics-source-11.05-osx.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-11.05-osx.tar.gz>`__
+
+    * - |archive-icon| Sources for Windows
+
+      - `fenics-source-11.05-win.zip
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-11.05-win.zip>`__
+
+************
 FEniCS 11.02
 ************
 

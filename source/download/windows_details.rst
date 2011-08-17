@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 0.9.11, FFC 0.9.10, FIAT 0.9.9, Instant
-0.9.10, UFC 2.0.1, UFL 0.9.1, and Viper 0.4.7.
+This release includes DOLFIN 1.0-beta, FFC 1.0-beta, FIAT 1.0-beta,
+Instant 1.0-beta, UFC 2.0.2, UFL 1.0-beta2, and Viper 1.0-beta.
 
 .. include:: icons.rst
 
@@ -16,15 +16,15 @@ This release includes DOLFIN 0.9.11, FFC 0.9.10, FIAT 0.9.9, Instant
     :header-rows: 0
     :class: center
 
-    * - |windows-icon| FEniCS 11.05 (Windows installer)
+    * - |windows-icon| FEniCS 1.0-beta (Windows installer)
 
-      - `fenics-11.05-mingw32.exe
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-mingw32.exe>`__
+      - `fenics-1.0-beta-mingw32.exe
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-mingw32.exe>`__
 
-    * - |archive-icon| FEniCS 11.05 (Sources for Windows)
+    * - |archive-icon| FEniCS 1.0-beta (Sources for Windows)
 
-      - `fenics-source-11.05-win.zip
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-11.05-win.zip>`__
+      - `fenics-source-1.0-beta-win.zip
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta-win.zip>`__
 
 #########################
 Installation instructions
@@ -45,5 +45,5 @@ command shell from the start menu and you are ready to start working.
 Older releases
 **************
 
-Older versions of the installer and sources are available :ref:`here
-<older_releases>`. 
+Older versions of the Windows installer are available :ref:`here
+<older_releases>`.

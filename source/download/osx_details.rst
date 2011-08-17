@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 0.9.11, FFC 0.9.10, FIAT 0.9.9, Instant
-0.9.10, UFC 2.0.1, UFL 0.9.1, and Viper 0.4.7.
+This release includes DOLFIN 1.0-beta, FFC 1.0-beta, FIAT 1.0-beta,
+Instant 1.0-beta, UFC 2.0.2, UFL 1.0-beta2, and Viper 1.0-beta.
 
 .. include:: icons.rst
 
@@ -16,15 +16,15 @@ This release includes DOLFIN 0.9.11, FFC 0.9.10, FIAT 0.9.9, Instant
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 11.05 (Mac OS X binary)
+    * - |mac-icon| FEniCS 1.0-beta (Mac OS X binary)
 
-      - `fenics-11.05-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-osx10.6.dmg>`__
+      - `fenics-1.0-beta-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-osx10.6.dmg>`__
 
-    * - |archive-icon| FEniCS 11.05 (Sources for Mac OS X)
+    * - |archive-icon| FEniCS 1.0-beta (Sources for Mac OS X)
 
-      - `fenics-source-11.05-osx.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-11.05-osx.tar.gz>`__
+      - `fenics-source-1.0-beta-osx.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta-osx.tar.gz>`__
 
 #########################
 Installation instructions

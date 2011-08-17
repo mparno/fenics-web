@@ -37,14 +37,14 @@ everything needed to get you started with FEniCS.
     * - |mac-icon| For Mac OS X
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-osx10.6.dmg>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-osx10.6.dmg>`__
 
       - For detailed instructions, click :ref:`here <osx_details>`
 
     * - |windows-icon| For Windows
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-11.05-mingw32.exe>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-mingw32.exe>`__
 
       - For detailed instructions, click :ref:`here <windows_details>`
 
