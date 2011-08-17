@@ -2,12 +2,11 @@
 
 .. This is a front page for Hans Petter Langtangen's tutorial
 
-
 ########################
 FEniCS tutorial (Python)
 ########################
 
-:Author: Hans Petter Langtangen
+*Written by Hans Petter Langtangen*
 
 This document presents a FEniCS tutorial to get new users quickly up
 and going with solving differential equations. FEniCS can be
