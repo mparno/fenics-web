@@ -16,7 +16,7 @@
 	<p>Through this web site, you can <a href="/new/about">learn
 	more about the project</a> and
 	learn <a href="/new/download">how to obtain</a>
-	and <a href="/new/documentation">how to use</a> our
+	and <a href="/new/doc">how to use</a> our
 	software. We'd be delighted to offer support in case you need
 	it, and encourage contributions from our users.</p>
 
