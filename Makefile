@@ -13,22 +13,22 @@ ALLSPHINXOPTS   = -d build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo ""
-	@echo "  all       to build all targets: html, doc, publish"
-	@echo "  web       to build web pages"
-	@echo "  doc       to build (import) documentation for projects"
-	@echo "  publish   to publish everything on www.fenicsproject.org"
-	@echo "  clean     to clean out everything (build directory)"
+	@echo "  all          to build all targets: html, doc, publish"
+	@echo "  web          to build web pages"
+	@echo "  import_docs  to import documentation for projects"
+	@echo "  publish      to publish everything on www.fenicsproject.org"
+	@echo "  clean        to clean out everything (build directory)"
 	@echo ""
 	@echo "In addition, the targets 'latex' and 'pdf' exist but are not used."
 
-all:	web doc publish
+all:	web import_docs publish
 
 web:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
 	@echo
 	@echo "Build finished. HTML generated in build/html."
 
-doc:
+import_docs:
 	scripts/import_docs
 
 publish:

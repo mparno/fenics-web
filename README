@@ -1,4 +1,4 @@
-# Last changed: 2011-08-10
+# Last changed: 2011-08-17
 
 FEniCS documentation and webpage
 --------------------------------
@@ -12,7 +12,7 @@ FEniCS documentation and webpage
 
 * How to: import documentation
 
-    make doc
+    make import_docs
 
   This will import documentation input files (.rst) from all projects,
   build .html files and add those to 'build/html'. Running this
