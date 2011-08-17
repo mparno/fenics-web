@@ -69,6 +69,9 @@ import_doc()
     # Copy common FEniCS template
     $RSYNC source/_themes/fenics/ $DOC_TO/source/_themes/fenics/
 
+    # Set 'fenics' theme in conf.py
+    sed -i "s/^html_theme = .*/html_theme = 'fenics'/" $DOC_TO/source/conf.py
+
     # Add to bzr
     bzr add $DOC_TO/Makefile $DOC_TO/source
     bzr commit -m "Update documentation for $PACKAGE version $PACKAGE_VERSION" $DOC_TO
