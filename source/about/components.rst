@@ -28,8 +28,8 @@ assembly. To provide a simple and consistent user interface, DOLFIN
 wraps the functionality of other FEniCS components and external
 software, and handles the communication between these components.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Johan Hake, Anders Logg, Garth N. Wells
 
@@ -59,8 +59,8 @@ variational problem.
 .. image:: images/ufl-ffc-ufc.png
     :align: center
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Anders Logg, Kristian Oelgaard, Marie Rognes, Garth N. Wells
 
@@ -87,8 +87,8 @@ such as the families of Raviart-Thomas, Brezzi-Douglas-Marini and
 Nedelec are supported on triangles and tetrahedra. Upcoming versions
 will also support Hermite and nonconforming elements.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Robert C. Kirby
 
@@ -111,8 +111,8 @@ C++ code in Python. It is a small Python module built on top of SWIG
 and Distutils. Instant is used by FFC and DOLFIN for just-in-time
 (JIT) compilation of variational forms and expressions.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 .. note::
    Add list of Instant maintainers.
@@ -128,9 +128,9 @@ in the Instant source tree.
 
 .. _about_components_ufc:
 
-**********************************
+***********************************
 `UFC <https://launchpad.net/ufc>`__
-**********************************
+***********************************
 
 UFC (Unified Form-assembly Code) is a unified framework for finite
 element assembly. More precisely, it defines a fixed interface for
@@ -140,8 +140,8 @@ consists of a single header file ufc.h that specifies a C++ interface
 that must be implemented by code that complies with the UFC
 specification.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Anders Logg, Martin Sandve Alnes, Garth N. Wells
 
@@ -166,8 +166,8 @@ forms. More precisely, it defines a flexible interface for choosing
 finite element spaces and defining expressions for weak forms in a
 notation close to mathematical notation.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Martin Sandve Alnes
 
@@ -187,14 +187,12 @@ Additional components
 
 .. _about_components_ascot:
 
-*************************************
+***************************************
 `ASCoT <https://launchpad.net/ascot>`__
-*************************************
+***************************************
 
-.. _about_components_dorsal:
-
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Marie Rognes
 
@@ -206,6 +204,8 @@ Marie Rognes
 For a full list of contributors, refer to the ``AUTHORS`` file found
 in the ASCoT source tree.
 
+.. _about_components_dorsal:
+
 *****************************************
 `Dorsal <https://launchpad.net/dorsal>`__
 *****************************************
@@ -213,8 +213,8 @@ in the ASCoT source tree.
 Dorsal is a set of simple scripts to build components of the FEniCS
 Project (as well as their dependencies) for various platforms.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Harish Narayanan
 
@@ -232,8 +232,8 @@ in the Dorsal source tree.
 `SyFi/SFC <https://launchpad.net/fenics-syfi>`__
 ************************************************
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Kent-Andre Mardal, Martin Sandve Alnes
 
@@ -255,8 +255,8 @@ Viper is a minimalistic scientific plotter and run-time visualization
 module based on VTK. If installed, Viper provides built-in plotting
 for DOLFIN.
 
-Maintainers (in alpabetical order)
-==================================
+Maintainers (in alphabetical order)
+===================================
 
 Ola Skavhaug
 
