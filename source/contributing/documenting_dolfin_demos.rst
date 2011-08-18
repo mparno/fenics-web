@@ -112,11 +112,10 @@ The C++ and Python documentation reST source files should
    the full module path is required (for instance
    ``py:class:dolfin.cpp.NewtonSolver``)
 
-  .. todo::
-      MER: Add better links above
-
 #. Include the complete set of files needed to run the demo using the
    ``include`` directive.
+
+.. todo:      MER: Add better links above
 
 .. Additional information
 .. ^^^^^^^^^^^^^^^^^^^^^^
