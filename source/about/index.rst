@@ -87,7 +87,7 @@ these terms `here <http://www.fenicsproject.org/pub/copyright>`__.
 About these pages
 *****************
 
-This pages have been created by the `FEniCS Web Team
+These pages have been created by the `FEniCS Web Team
 <https://launchpad.net/~fenics-web-core/+mugshots>`__ with the help of
 `Mattias Schläger <http://www.sch-form.com>`__ who designed the
 `graphical profile <http://www.fenicsproject.org/pub/graphics>`__. The
