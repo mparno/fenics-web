@@ -92,6 +92,6 @@ import_doc()
 }
 
 # Import documentation for all packages
-import_doc dolfin doc/sphinx-cpp    cpp
-import_doc dolfin doc/sphinx-python python
+import_doc dolfin build/doc/sphinx-cpp    cpp
+import_doc dolfin build/doc/sphinx-python python
 import_doc ufl    doc/sphinx

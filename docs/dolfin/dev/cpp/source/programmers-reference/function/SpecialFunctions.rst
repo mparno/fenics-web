@@ -31,25 +31,6 @@ SpecialFunctions.h
         Evaluate function
 
 
-.. cpp:class:: CellSize
-
-    *Parent class(es)*
-    
-        * :cpp:class:`Expression`
-        
-    This Function represents the local cell size on a given mesh.
-
-
-    .. cpp:function:: CellSize(const Mesh& mesh)
-    
-        Constructor
-
-
-    .. cpp:function:: void eval(Array<double>& values, const Data& data) const
-    
-        Evaluate function
-
-
 .. cpp:class:: FacetArea
 
     *Parent class(es)*
