@@ -27,7 +27,7 @@
 	learn <a href="/new/download">how to obtain</a>
 	and <a href="/new/doc">how to use</a> our
 	software. We'd be delighted to <a href="/new/support">offer support</a>
-        in case you need, and <a href="/new/contributing">encourage contributions</a>
+        in case you need it, and <a href="/new/contributing">encourage contributions</a>
         from our users.</p>
 
 	<a href="/new/download/"><img style="width: 300px; margin-left:40px; margin-top:10px;" src="/new/_static/download-button.png" alt="Download button" /></a>
