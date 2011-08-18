@@ -9,7 +9,7 @@
 # Licensed under the GNU GPL version 3 or any later version.
 #
 # First added:  2011-06-14
-# Last changed: 2011-08-10
+# Last changed: 2011-08-18
 #
 # Modified by Anders Logg, 2011.
 
@@ -71,6 +71,9 @@ import_doc()
 
     # Set 'fenics' theme in conf.py
     sed -i "s/^html_theme = .*/html_theme = 'fenics'/" $DOC_TO/source/conf.py
+
+    # Display toc
+    sed -i "s/^{% block sidebar2 %}{% endblock %}//" $DOC_TO/source/_themes/fenics/layout.html
 
     # Add to bzr
     bzr add $DOC_TO/Makefile $DOC_TO/source
