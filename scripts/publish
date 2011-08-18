@@ -1,5 +1,4 @@
 #!/bin/sh
 
 chmod +x build/html/index.html
-echo 'XBitHack on' > build/html/.htaccess
 rsync -avz build/html/ fenics@fenicsproject.org:/home/fenics/www.fenicsproject.org/

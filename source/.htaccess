@@ -1,0 +1,4 @@
+XBitHack On
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.fenicsproject.org [NC]
+RewriteRule ^(.*)$ http://fenicsproject.org/$1 [L,R=301]

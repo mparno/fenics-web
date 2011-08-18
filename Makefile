@@ -25,6 +25,7 @@ all:	web import_docs publish
 
 web:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) build/html
+	cp source/.htaccess build/html/
 	@echo
 	@echo "Build finished. HTML generated in build/html."
 
