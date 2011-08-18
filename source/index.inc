@@ -6,10 +6,10 @@
   <div id="products_example">
     <div id="products">
       <div class="slides_container">
-	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
       </div>
     </div>
   </div>
@@ -22,15 +22,15 @@
         software</a> aimed at automated, efficient solution of
         differential equations.</p>
 
-	<p>Through this web site, you can <a href="/new/about">learn
+	<p>Through this web site, you can <a href="/about">learn
 	more about the project</a> and
-	learn <a href="/new/download">how to obtain</a>
-	and <a href="/new/doc">how to use</a> our
-	software. We'd be delighted to <a href="/new/support">offer support</a>
-        in case you need it, and <a href="/new/contributing">encourage contributions</a>
+	learn <a href="/download">how to obtain</a>
+	and <a href="/doc">how to use</a> our
+	software. We'd be delighted to <a href="/support">offer support</a>
+        in case you need it, and <a href="/contributing">encourage contributions</a>
         from our users.</p>
 
-	<a href="/new/download/"><img style="width: 300px; margin-left:40px; margin-top:10px;" src="/new/_static/download-button.png" alt="Download button" /></a>
+	<a href="/download/"><img style="width: 300px; margin-left:40px; margin-top:10px;" src="/_static/download-button.png" alt="Download button" /></a>
 
       </div><!-- #feature-info -->
       <div class="clear-block"></div>
@@ -45,7 +45,7 @@
 	<div id="front-block-1" class="front-block block">
 
           <h3>FEniCS book about to be released!</h3>
-          <img alt='' src='/new/_static/images/genericbook.png' class='avatar avatar-84 photo' width='84'/>
+          <img alt='' src='/_static/images/genericbook.png' class='avatar avatar-84 photo' width='84'/>
 
 	  <p>The FEniCS book project is nearing completion. The book,
             titled <i>Automated Solution of Differential Equations by
@@ -54,11 +54,11 @@
             Engineering in the fall of 2011.
           </p>
 
-          <p><a href="/new/book" rel="nofollow">Find out more about
+          <p><a href="/book" rel="nofollow">Find out more about
           the book project &raquo;</a></p>
 
           <h3>Who's behind the FEniCS Project?</h3>
-          <img alt='' src='/new/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
+          <img alt='' src='/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p>The FEniCS Project is a collaborative effort between
 	  research groups from Simula Research Laboratory, University
@@ -66,13 +66,13 @@
 	  and KTH Royal Institute of Technology.
             </p>
 
-          <p><a href="/new/about/" rel="nofollow">Find out more about
+          <p><a href="/about/" rel="nofollow">Find out more about
           our project &raquo;</a></p>
 
         </div><!-- #front-block-1 .front-block .block-->
 
         <div id="front-block-2" class="front-block block">
-          <h3>Recent project news <a href="/new/_static/news/feed.xml" title="The FEniCS Project News RSS feed" rel="alternate nofollow" type="application/rss+xml"><img src="/new/_static/feed-icon-14x14.gif" alt="RSS"/></a></h3>
+          <h3>Recent project news <a href="/_static/news/feed.xml" title="The FEniCS Project News RSS feed" rel="alternate nofollow" type="application/rss+xml"><img src="/_static/feed-icon-14x14.gif" alt="RSS"/></a></h3>
 	  <!--#include virtual="_static/news/include.html"-->
         </div><!-- #front-block-2 .front-block .block-->
 
