@@ -87,3 +87,11 @@ UFL
 - Alnaes, M.S., Logg A., Ølgaard, K.B., Rognes, M.E. and Wells, G.N. (2011).
   UFL: Unified Form Language,
   https://launchpad.net/ufl.
+
+SyFi
+----
+- Alnaes, M. S. and Mardal, K.-A. (2010).
+  On the Efficiency of Symbolic Computations Combined with Code
+  Generation for Finite Element Methods, ACM Transactions on
+  Mathematical Software 37(1).
+  [`dx.doi.org/10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_]
