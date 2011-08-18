@@ -4,6 +4,27 @@
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="{{ pathto('_static/ie6.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
 <![endif]-->
+
+<link rel="stylesheet" href="{{ pathto('_static/featured.css', 1) }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="{{ pathto('_static/slides.min.jquery.js', 1) }}"></script>
+  <script>
+	$(function(){
+		$('#products').slides({
+			preload: true,
+			preloadImage: 'img/loading.gif',
+			effect: 'slide, fade',
+			crossfade: true,
+			slideSpeed: 350,
+			fadeSpeed: 500,
+			generateNextPrev: false,
+			generatePagination: false,
+	                play: 5000,
+                        hoverPause: true
+		});
+	});
+  </script>
+
 {%- if theme_favicon %}
 <link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}"/>
 {%- endif %}

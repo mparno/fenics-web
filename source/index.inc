@@ -3,7 +3,19 @@
     <div id="feature">
 
       <!--- Featured item --->
-      <a href="http://www.fenicsproject.org/new/featured/2011/fenics_1beta.html"><img src="/new/_static/images/featured_item_fenics_1beta.png" alt="FEniCS 1.0 beta"/></a>
+  <div id="products_example">
+    <div id="products">
+      <div class="slides_container">
+	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/new/featured/2011/fenics_1beta.html" target="_blank"><img src="/new/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+      </div>
+    </div>
+  </div>
+
+
+<!--      <a href="/new/featured/2011/fenics_1beta.html"><img src="/new/_static/images/featured_item_fenics_1beta.png" alt="FEniCS 1.0 beta"/></a>-->
 
       <div id="feature-info">
         <!--<h2 style="margin-top:0;">Mathematical physics can be fun!</h2>-->
