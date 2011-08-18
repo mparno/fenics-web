@@ -8,6 +8,48 @@
 	<description>FEniCS News - http://www.fenicsproject.org/</description>
 
 <item>
+	<title>viper: Viper 1.0-beta</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8783</guid>
+	<link>https://launchpad.net/fenics-viper/+announcement/8783</link>
+	<description><p>A new version of Viper has been released, fixing a minor bug.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:18:41 +0000</pubDate>
+</item>
+<item>
+	<title>ufl: UFL 1.0-beta2</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8782</guid>
+	<link>https://launchpad.net/ufl/+announcement/8782</link>
+	<description><p>A new version of UFL has been released. This version fixes a minor bug for handling constants in forms.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:18:12 +0000</pubDate>
+</item>
+<item>
+	<title>ufc: UFC 2.0.2</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8781</guid>
+	<link>https://launchpad.net/ufc/+announcement/8781</link>
+	<description><p>A new version of UFC has been released. This version adds some minor tweaks for the installatioin of UFC.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:17:18 +0000</pubDate>
+</item>
+<item>
+	<title>instant: Instant 1.0--beta</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8780</guid>
+	<link>https://launchpad.net/instant/+announcement/8780</link>
+	<description><p>A new version of Instant has been released.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:16:32 +0000</pubDate>
+</item>
+<item>
+	<title>ffc: FFC 1.0-beta</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8778</guid>
+	<link>https://launchpad.net/ffc/+announcement/8778</link>
+	<description><p>A new version of FFC has been released, fixing a number of minor bugs.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:15:57 +0000</pubDate>
+</item>
+<item>
+	<title>dolfin: DOLFIN 1.0-beta</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8777</guid>
+	<link>https://launchpad.net/dolfin/+announcement/8777</link>
+	<description><p>A new version of DOLFIN has been released, fixing a large number of bugs and bringing many improvements. The most notable changes are improved support for parallel computing and a redesigned and simplified interface for solving variational problems.</p></description>
+	<pubDate>Thu, 11 Aug 2011 21:15:17 +0000</pubDate>
+</item>
+<item>
 	<title>ufl: UFL 1.0-beta released</title>
 	<guid isPermaLink="false">tag:launchpad.net,2011-07-08:/+announcement/8638</guid>
 	<link>https://launchpad.net/ufl/+announcement/8638</link>
@@ -44,48 +86,6 @@
 	<link>https://launchpad.net/ufl/+announcement/8363</link>
 	<description><p>A new version of UFL has been released.  The release provides some new features, and a range of behind-the-scenes improvements. A list of changes can be found the in ChangeLog.</p></description>
 	<pubDate>Mon, 16 May 2011 16:40:00 +0000</pubDate>
-</item>
-<item>
-	<title>dolfin: DOLFIN 0.9.11</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8362</guid>
-	<link>https://launchpad.net/dolfin/+announcement/8362</link>
-	<description><p>A new version of DOLFIN has been released with a number of improvements and a significant number of bug fixes.  A comprehensive list of new features and bug fixes can be found in the ChangeLog.</p></description>
-	<pubDate>Mon, 16 May 2011 16:38:45 +0000</pubDate>
-</item>
-<item>
-	<title>ffc: FFC 0.9.10</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8361</guid>
-	<link>https://launchpad.net/ffc/+announcement/8361</link>
-	<description><p>A new version of FFC has been released. This release makes optimised quadrature schemes for simplices available, and includes a number of behind-the-scenes improvements.</p></description>
-	<pubDate>Mon, 16 May 2011 16:37:26 +0000</pubDate>
-</item>
-<item>
-	<title>ufc: UFC 2.0.1</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8360</guid>
-	<link>https://launchpad.net/ufc/+announcement/8360</link>
-	<description><p>A new version of UFC has been released.  With this release, UFC moves to SWIG version &gt;= 2.0. This release also fixes a const bug in the interface.</p></description>
-	<pubDate>Mon, 16 May 2011 16:35:51 +0000</pubDate>
-</item>
-<item>
-	<title>ffc: Simplex quadrature improvements</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8357</guid>
-	<link>https://launchpad.net/ffc/+announcement/8357</link>
-	<description><p>The development version of FFC now provides optimised rules for quadrature on triangles and tetrahedra. The provides a performance boost when using the quadrature representation, especially for lower order forms.</p></description>
-	<pubDate>Mon, 16 May 2011 10:18:07 +0000</pubDate>
-</item>
-<item>
-	<title>apps: Unicorn HPC 0.1.2</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-04-29:/+announcement/8253</guid>
-	<link>https://launchpad.net/unicorn/+announcement/8253</link>
-	<description><p>A new version of Unicorn has been released. This release fixes various bugs and portability issues.</p></description>
-	<pubDate>Fri, 29 Apr 2011 22:07:41 +0000</pubDate>
-</item>
-<item>
-	<title>dorsal: Dorsal 0.8.2 Released!</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-02-28:/+announcement/7870</guid>
-	<link>https://launchpad.net/dorsal/+announcement/7870</link>
-	<description><p>This is a bug-fix release that makes sure all the packages are up-to-date.</p></description>
-	<pubDate>Mon, 28 Feb 2011 14:48:51 +0000</pubDate>
 </item>
 
 </channel>
