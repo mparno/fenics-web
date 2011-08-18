@@ -1,0 +1,35 @@
+all pages:
+- add more relevant links to the footer
+- reduce occurrences of "click here"-style links
+
+home:
+- add major features of the project (e.g. mathjax.org)
+- add more featured articles
+- fix platform-sniffing download button
+- start cron job for fetching news
+- prettify image for "fenics world"
+- fix featured content slider to work on more browsers
+
+about/components:
+- add big component block diagram
+- can link to AUTHORS page in lp or the mugshot pages for authors/maintainers of different projects.
+
+download:
+- add more descriptive text
+- clean up 'detailed instructions' links
+
+documentation:
+- add/refer to information about installation here
+
+applications:
+- add a gallery of cool looking results right on top
+- add third-party/peripheral applications below the blessed list
+
+contributing:
+- fold in more content from the sub-pages into the main page to reduce clicking
+
+citing:
+- check and unify formatting
+
+support/launchpad_pages:
+- clean up remaining list of links into the table
