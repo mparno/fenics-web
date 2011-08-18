@@ -189,6 +189,8 @@ If you think a comment is required, use the ``note`` directive:
 
         Figure out how to present this in a better way
 
+or the ``todo`` directive:
+
 .. code-block:: rest
 
     .. todo::
