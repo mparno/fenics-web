@@ -16,3 +16,4 @@
     support/index
     book/index
     featured/2011/fenics_1beta
+    disclaimer
