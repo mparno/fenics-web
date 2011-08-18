@@ -72,8 +72,9 @@ import_doc()
     # Set 'fenics' theme in conf.py
     sed -i "s/^html_theme = .*/html_theme = 'fenics'/" $DOC_TO/source/conf.py
 
+    # FIXME: Commented out until Harish fixes the styling
     # Display toc
-    sed -i "s/^{% block sidebar2 %}{% endblock %}//" $DOC_TO/source/_themes/fenics/layout.html
+    #sed -i "s/^{% block sidebar2 %}{% endblock %}//" $DOC_TO/source/_themes/fenics/layout.html
 
     # Add to bzr
     bzr add $DOC_TO/Makefile $DOC_TO/source
