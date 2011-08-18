@@ -5,7 +5,7 @@
 
       	<div id="front-block-1" class="front-block block">
 
-          <h3>CBC.Block - block linear algebra in Python</h3>
+	  <h3>CBC.Block &mdash; Block linear algebra in Python</h3>
           <img alt='' src='/new/_static/images/cbc_block.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
@@ -26,7 +26,7 @@
 
         <div id="front-block-2" class="front-block block">
 
-          <h3>CBC.Solve - a collection of Python solvers</h3>
+          <h3>CBC.Solve &mdash; A collection of Python solvers</h3>
           <img alt='' src='/new/_static/images/cbc_solve.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
