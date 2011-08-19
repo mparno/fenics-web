@@ -17,19 +17,10 @@ about/components:
 download:
 - add more descriptive text
 - clean up 'detailed instructions' links
+- make it look like the fenics beta news article
 
 documentation:
 - add/refer to information about installation here
 
-applications:
-- add a gallery of cool looking results right on top
-- add third-party/peripheral applications below the blessed list
-
 contributing:
 - fold in more content from the sub-pages into the main page to reduce clicking
-
-citing:
-- check and unify formatting
-
-support/launchpad_pages:
-- clean up remaining list of links into the table
