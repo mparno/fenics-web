@@ -14,11 +14,6 @@ about/components:
 - add big component block diagram
 - can link to AUTHORS page in lp or the mugshot pages for authors/maintainers of different projects.
 
-download:
-- add more descriptive text
-- clean up 'detailed instructions' links
-- make it look like the fenics beta news article
-
 documentation:
 - add/refer to information about installation here
 
