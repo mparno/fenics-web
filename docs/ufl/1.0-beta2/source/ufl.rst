@@ -90,6 +90,14 @@ ufl Package
     :undoc-members:
     :show-inheritance:
 
+:mod:`equation` Module
+----------------------
+
+.. automodule:: ufl.equation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 :mod:`expr` Module
 ------------------
 
