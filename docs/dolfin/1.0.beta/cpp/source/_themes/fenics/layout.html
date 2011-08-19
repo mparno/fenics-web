@@ -4,6 +4,27 @@
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="{{ pathto('_static/ie6.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
 <![endif]-->
+
+<link rel="stylesheet" href="{{ pathto('_static/featured.css', 1) }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script src="{{ pathto('_static/slides.min.jquery.js', 1) }}"></script>
+  <script>
+	$(function(){
+		$('#products').slides({
+			preload: true,
+			preloadImage: 'img/loading.gif',
+			effect: 'slide, fade',
+			crossfade: true,
+			slideSpeed: 350,
+			fadeSpeed: 500,
+			generateNextPrev: false,
+			generatePagination: false,
+	                play: 5000,
+                        hoverPause: false
+		});
+	});
+  </script>
+
 {%- if theme_favicon %}
 <link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}"/>
 {%- endif %}
@@ -12,17 +33,17 @@
 {# override upper relbar to show our navigation menu #}
 {% block relbar1 %}
 <div class="wrapper">
-  <a href="/new/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px" alt="FEniCS Project Banner"/></a>
+  <a href="/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px" alt="FEniCS Project Banner"/></a>
   <div id="access">
     <div class="menu">
       <ul>
-	<li class="page_item"><a href="/new/about" title="Find out more about the FEniCS project">About</a></li>
-	<li class="page_item"><a href="/new/download" title="Obtain the FEniCS project">Download</a></li>
-	<li class="page_item"><a href="/new/doc" title="Learn how to use the FEniCS project">Documentation</a></li>
-	<li class="page_item"><a href="/new/applications" title="Learn how others are using the FEniCS project">Applications</a></li>
-	<li class="page_item"><a href="/new/contributing" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
-	<li class="page_item"><a href="/new/citing" title="Learn how to cite the FEniCS project">Citing</a></li>
-	<li class="page_item"><a href="/new/support" title="Where to go for more help">Support</a></li>
+	<li class="page_item"><a href="/about" title="Find out more about the FEniCS project">About</a></li>
+	<li class="page_item"><a href="/download" title="Obtain the FEniCS project">Download</a></li>
+	<li class="page_item"><a href="/doc" title="Learn how to use the FEniCS project">Documentation</a></li>
+	<li class="page_item"><a href="/applications" title="Learn how others are using the FEniCS project">Applications</a></li>
+	<li class="page_item"><a href="/contributing" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
+	<li class="page_item"><a href="/citing" title="Learn how to cite the FEniCS project">Citing</a></li>
+	<li class="page_item"><a href="/support" title="Where to go for more help">Support</a></li>
       </ul>
     </div><!-- .menu -->
   </div><!-- #access -->
@@ -36,9 +57,9 @@
       <div class="span-6">
 	<h4>Documentation</h4>
 	<ul>
-	  <li><a href="/new/doc/tutorial">Tutorial</a></li>
-	  <li><a href="/new/doc/dolfin/dev/python">Python API</a></li>
-	  <li><a href="/new/doc/dolfin/dev/cpp">C++ API</a></li>
+	  <li><a href="/doc/tutorial">Tutorial</a></li>
+	  <li><a href="/doc/dolfin/dev/python">Python API</a></li>
+	  <li><a href="/doc/dolfin/dev/cpp">C++ API</a></li>
 	</ul>
       </div>
       <div class="span-6">
@@ -46,13 +67,13 @@
 	<ul>
 	  <li><a href="/buildbot">Buildbot</a></li>
 	  <li><a href="/benchbot">Benchbot</a></li>
-	  <li><a href="/new/support/launchpad_pages.html">FEniCS on Launchpad</a></li>
+	  <li><a href="/support/launchpad_pages.html">FEniCS on Launchpad</a></li>
 	</ul>
       </div>
       <div class="span-6 last">
 	<h4>Search this site</h4>
 	<div id="searchbox">
-	  <form class="search" action="/new/search.html" method="get">
+	  <form class="search" action="/search.html" method="get">
 	    <input type="text" name="q" size="18" />
 	    <input type="submit" value="Go" />
 	    <input type="hidden" name="check_keywords" value="yes" />
@@ -61,7 +82,7 @@
 	</div>
       </div>
     </div>
-    &copy; Copyright 2011, <a href="/new/">The FEniCS Project</a>.
+    &copy; Copyright 2011, <a href="/">The FEniCS Project</a>. (<a href="/disclaimer.html">Disclaimer</a>)
   </div>
 </div>
 {% endblock %}
@@ -71,4 +92,4 @@
 
 {# do not display sidebars #}
 {% block sidebar1 %}{% endblock %}
-
+{% block sidebar2 %}{% endblock %}
