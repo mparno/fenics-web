@@ -8,6 +8,10 @@ Overview of Launchpad pages
 
 This page contains links to all FEniCS projects on Launchpad for convenience.
 
+***************
+Meta components
+***************
+
 .. tabularcolumns |l|l|l|l|
 
 .. list-table::
@@ -15,59 +19,34 @@ This page contains links to all FEniCS projects on Launchpad for convenience.
     :header-rows: 0
     :class: center
 
+    * - `FEniCS Apps <https://launchpad.net/fenics-group>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-group>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-group>`__
+      - `(Join Team and) <https://launchpad.net/~fenics-group>`__
+      	`Email Support <fenics-apps@lists.launchpad.net>`__
+
     * - `FEniCS Project <https://launchpad.net/fenics-project>`__
       - `Get Answers <https://answers.launchpad.net/fenics-project>`__
       - `Report Bugs <https://bugs.launchpad.net/fenics-project>`__
       - `(Join Team and) <https://launchpad.net/~fenics>`__
       	`Email Support <fenics@lists.launchpad.net>`__
 
+***************
+Core components
+***************
+
+.. tabularcolumns |l|l|l|l|
+
+.. list-table::
+    :widths: 25, 15, 15, 30
+    :header-rows: 0
+    :class: center
+
     * - `DOLFIN <https://launchpad.net/dolfin>`__
       - `Get Answers <https://answers.launchpad.net/dolfin>`__
       - `Report Bugs <https://bugs.launchpad.net/dolfin>`__
       - `(Join Team and) <https://launchpad.net/~dolfin>`__
       	`Email Support <dolfin@lists.launchpad.net>`__
-
-    * - `Dorsal <https://launchpad.net/dorsal>`__
-      - `Get Answers <https://answers.launchpad.net/dorsal>`__
-      - `Report Bugs <https://bugs.launchpad.net/dorsal>`__
-      - `(Join Team and) <https://launchpad.net/~dorsal>`__
-      	`Email Support <dorsal@lists.launchpad.net>`__
-
-    * - `Exterior <https://launchpad.net/exterior>`__
-      - `Get Answers <https://answers.launchpad.net/exterior>`__
-      - `Report Bugs <https://bugs.launchpad.net/exterior>`__
-      - `(Join Team and) <https://launchpad.net/~exterior>`__
-      	`Email Support <exterior@lists.launchpad.net>`__
-
-    * - `FEniCS Book <https://launchpad.net/fenics-book>`__
-      - `Get Answers <https://answers.launchpad.net/fenics-book>`__
-      - `Report Bugs <https://bugs.launchpad.net/fenics-book>`__
-      - `(Join Team and) <https://launchpad.net/~fenics-authors>`__
-      	`Email Support <fenics-authors@lists.launchpad.net>`__
-
-    * - `FEniCS Documentation <https://launchpad.net/fenics-doc>`__
-      - `Get Answers <https://answers.launchpad.net/fenics-doc>`__
-      - `Report Bugs <https://bugs.launchpad.net/fenics-doc>`__
-      - `(Join Team and) <https://launchpad.net/~fenics>`__
-      	`Email Support <fenics@lists.launchpad.net>`__
-
-    * - `fenics-packages <https://launchpad.net/fenics-packages>`__
-      - `Get Answers <https://answers.launchpad.net/fenics-packages>`__
-      - `Report Bugs <https://bugs.launchpad.net/fenics-packages>`__
-      - `(Join Team and) <https://launchpad.net/~fenics-packages>`__
-      	`Email Support <fenics-packages@lists.launchpad.net>`__
-
-    * - `Viper <https://launchpad.net/fenics-viper>`__
-      - `Get Answers <https://answers.launchpad.net/fenics-viper>`__
-      - `Report Bugs <https://bugs.launchpad.net/fenics-viper>`__
-      - `(Join Team and) <https://launchpad.net/~fenics-viper>`__
-      	`Email Support <fenics-viper@lists.launchpad.net>`__
-
-    * - `FErari <https://launchpad.net/ferari>`__
-      - `Get Answers <https://answers.launchpad.net/ferari>`__
-      - `Report Bugs <https://bugs.launchpad.net/ferari>`__
-      - `(Join Team and) <https://launchpad.net/~ferari>`__
-      	`Email Support <ferari@lists.launchpad.net>`__
 
     * - `FFC <https://launchpad.net/ffc>`__
       - `Get Answers <https://answers.launchpad.net/ffc>`__
@@ -99,14 +78,73 @@ This page contains links to all FEniCS projects on Launchpad for convenience.
       - `(Join Team and) <https://launchpad.net/~ufl>`__
       	`Email Support <ufl@lists.launchpad.net>`__
 
-    * - `FEniCS Apps <https://launchpad.net/fenics-group>`__
-      - `Get Answers <https://answers.launchpad.net/fenics-group>`__
-      - `Report Bugs <https://bugs.launchpad.net/fenics-group>`__
-      - `(Join Team and) <https://launchpad.net/~fenics-group>`__
-      	`Email Support <fenics-apps@lists.launchpad.net>`__
+*********************
+Additional components
+*********************
+
+.. tabularcolumns |l|l|l|l|
+
+.. list-table::
+    :widths: 25, 15, 15, 30
+    :header-rows: 0
+    :class: center
+
+    * - `AScoT <https://launchpad.net/ascot>`__
+      - `Get Answers <https://answers.launchpad.net/ascot>`__
+      - `Report Bugs <https://bugs.launchpad.net/ascot>`__
+      - `(Join Team and) <https://launchpad.net/~ascot>`__
+      	`Email Support <ascot@lists.launchpad.net>`__
+
+    * - `Dorsal <https://launchpad.net/dorsal>`__
+      - `Get Answers <https://answers.launchpad.net/dorsal>`__
+      - `Report Bugs <https://bugs.launchpad.net/dorsal>`__
+      - `(Join Team and) <https://launchpad.net/~dorsal>`__
+      	`Email Support <dorsal@lists.launchpad.net>`__
+
+    * - `Exterior <https://launchpad.net/exterior>`__
+      - `Get Answers <https://answers.launchpad.net/exterior>`__
+      - `Report Bugs <https://bugs.launchpad.net/exterior>`__
+      - `(Join Team and) <https://launchpad.net/~exterior>`__
+      	`Email Support <exterior@lists.launchpad.net>`__
+
+    * - `FEniCS Book <https://launchpad.net/fenics-book>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-book>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-book>`__
+      - `(Join Team and) <https://launchpad.net/~fenics-authors>`__
+      	`Email Support <fenics-authors@lists.launchpad.net>`__
+
+    * - `FEniCS Documentation <https://launchpad.net/fenics-doc>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-doc>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-doc>`__
+      - `(Join Team and) <https://launchpad.net/~fenics>`__
+      	`Email Support <fenics@lists.launchpad.net>`__
+
+    * - `FEniCS Packages <https://launchpad.net/fenics-packages>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-packages>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-packages>`__
+      - `(Join Team and) <https://launchpad.net/~fenics-packages>`__
+      	`Email Support <fenics-packages@lists.launchpad.net>`__
+
+    * - `FEniCS Web <https://launchpad.net/fenics-web>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-web>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-web>`__
+      - `(Join Team and) <https://launchpad.net/~fenics-web>`__
+      	`Email Support <fenics-web@lists.launchpad.net>`__
+
+    * - `FErari <https://launchpad.net/ferari>`__
+      - `Get Answers <https://answers.launchpad.net/ferari>`__
+      - `Report Bugs <https://bugs.launchpad.net/ferari>`__
+      - `(Join Team and) <https://launchpad.net/~ferari>`__
+      	`Email Support <ferari@lists.launchpad.net>`__
 
     * - `SyFi <https://launchpad.net/fencis-syfi>`__
       - `Get Answers <https://answers.launchpad.net/fenics-syfi>`__
       - `Report Bugs <https://bugs.launchpad.net/fenics-syfi>`__
       - `(Join Team and) <https://launchpad.net/~syfi>`__
       	`Email Support <syfi@lists.launchpad.net>`__
+
+    * - `Viper <https://launchpad.net/fenics-viper>`__
+      - `Get Answers <https://answers.launchpad.net/fenics-viper>`__
+      - `Report Bugs <https://bugs.launchpad.net/fenics-viper>`__
+      - `(Join Team and) <https://launchpad.net/~fenics-viper>`__
+      	`Email Support <fenics-viper@lists.launchpad.net>`__
