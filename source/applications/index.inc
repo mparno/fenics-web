@@ -45,6 +45,24 @@
 
         </div><!-- #front-block-2 .front-block .block-->
 
+      	<div id="front-block-3" class="front-block block">
+
+	  <h3>FEniCS Plasticity &mdash; A plasticity library for FEniCS</h3>
+          <img alt='' src='/_static/images/fenics_plasticity.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>FEniCS Plasticity is a library that implements the Von Mises and
+       Drucker-Prager plasticity models using FEniCS software.
+       However, the structure of the library should be general enough to also
+       allow other models to be implemented with little effort.
+    </p>
+
+          <p><a href="https://launchpad.net/fenics-plasticity"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div><!-- #front-block-3 .front-block .block-->
+
       </div><!-- #sub-feature -->
     </div><!-- #content -->
   </div><!-- #container .feature -->
