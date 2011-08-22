@@ -6,10 +6,10 @@
   <div id="products_example">
     <div id="products">
       <div class="slides_container">
-	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html" target="_blank"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
       </div>
     </div>
   </div>
