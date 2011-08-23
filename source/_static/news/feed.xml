@@ -8,6 +8,21 @@
 	<description>FEniCS News - http://www.fenicsproject.org/</description>
 
 <item>
+	<title>dorsal: Dorsal 1.0-beta Released!</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-23:/+announcement/8830</guid>
+	<link>https://launchpad.net/dorsal/+announcement/8830</link>
+	<description><p>This is the first release in a long while, and so contains numerous updates for all the projects that have evolved in this period. It is also the first release that is under the LGPL.</p>
+<p>Please check it out and help us polish it toward the imminent release of FEniCS 1.0.</p></description>
+	<pubDate>Tue, 23 Aug 2011 08:39:16 +0000</pubDate>
+</item>
+<item>
+	<title>fenics-web: The new web pages have been released!</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-08-19:/+announcement/8810</guid>
+	<link>https://launchpad.net/fenics-web/+announcement/8810</link>
+	<description><p>The most recent reincarnation of the FEniCS web site has now been unleashed onto the world. Please check it out and report bugs so we can squash them all before the upcoming release of FEniCS 1.0.</p></description>
+	<pubDate>Fri, 19 Aug 2011 10:53:15 +0000</pubDate>
+</item>
+<item>
 	<title>viper: Viper 1.0-beta</title>
 	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8783</guid>
 	<link>https://launchpad.net/fenics-viper/+announcement/8783</link>
@@ -72,20 +87,6 @@
 	<link>https://launchpad.net/fenics/+announcement/8369</link>
 	<description><p>The Mac OS X and Windows binaries have been updated and now features DOLFIN 0.9.11, FFC 0.9.10, Instant 0.9.10, UFC 2.0.1 and UFL 0.9.1. They are available from the installation page at <a href="http://www.fenicsproject.org" rel="nofollow">http://&lt;wbr&gt;&lt;/wbr&gt;www.fenicsproje&lt;wbr&gt;&lt;/wbr&gt;ct.org</a>.</p></description>
 	<pubDate>Wed, 18 May 2011 15:17:42 +0000</pubDate>
-</item>
-<item>
-	<title>instant: Instant 0.9.10</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8364</guid>
-	<link>https://launchpad.net/instant/+announcement/8364</link>
-	<description><p>A new version of Instant has been released. This version permits the SWIG executable to be set.</p></description>
-	<pubDate>Mon, 16 May 2011 16:41:11 +0000</pubDate>
-</item>
-<item>
-	<title>ufl: UFL 0.9.1</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-16:/+announcement/8363</guid>
-	<link>https://launchpad.net/ufl/+announcement/8363</link>
-	<description><p>A new version of UFL has been released.  The release provides some new features, and a range of behind-the-scenes improvements. A list of changes can be found the in ChangeLog.</p></description>
-	<pubDate>Mon, 16 May 2011 16:40:00 +0000</pubDate>
 </item>
 
 </channel>
