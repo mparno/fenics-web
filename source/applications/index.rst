@@ -17,6 +17,7 @@ qualifies to be on this list, contact the `FEniCS Apps maintainers
    This page is awaiting submission of content (picture + a short text
    as above) for all FEniCS Apps. Application maintainers, please
    submit the missing information for your application. List of
-   applications that we might want to include on this page: CBC.RANS,
-   CBC.Block, CBC.Solve, DOLFWAVE, DiffSim, FEniCS Plasticity, GenFoo,
-   PUM Compiler, PUM solver, rheagen, TriTetMesh, Unicorn.
+   applications that we might want to include on this page: Ascot
+   (moved here from components), CBC.RANS, CBC.Block, CBC.Solve,
+   DOLFWAVE, DiffSim, GenFoo, PUM Compiler, PUM solver, rheagen,
+   TriTetMesh, Unicorn.
