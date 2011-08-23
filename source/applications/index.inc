@@ -63,6 +63,26 @@
 
         </div><!-- #front-block-3 .front-block .block-->
 
+      	<div id="front-block-4" class="front-block block">
+
+	  <h3>DOLFWAVE &mdash; A library for surface water waves</h3>
+          <img alt='' src='/_static/images/dolfwave_tsunami.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	   <p>DOLFWAVE is a FEniCS based  library for solving surface water waves
+          problems such as Tsunami generation and propagation.
+          It is developed at <a href="http://ptmat.fc.ul.pt/lab_analise_num.html">
+          LAN </a> hosted by <a href="http://ptmat.fc.ul.pt"> CMAF </a> in Lisbon.
+          The main goal of DOLFWAVE is to provide a framework for the analysis,
+          development and computation of Boussinesq-type models.
+    </p>
+
+          <p><a href="https://launchpad.net/dolfwave"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div><!-- #front-block-4 .front-block .block-->
+
       </div><!-- #sub-feature -->
     </div><!-- #content -->
   </div><!-- #container .feature -->
