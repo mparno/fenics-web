@@ -15,7 +15,7 @@ Meta components
 .. tabularcolumns |l|l|l|l|
 
 .. list-table::
-    :widths: 25, 15, 15, 30
+    :widths: 25, 15, 15, 40
     :header-rows: 0
     :class: center
 
@@ -38,7 +38,7 @@ Core components
 .. tabularcolumns |l|l|l|l|
 
 .. list-table::
-    :widths: 25, 15, 15, 30
+    :widths: 25, 15, 15, 40
     :header-rows: 0
     :class: center
 
@@ -85,7 +85,7 @@ Additional components
 .. tabularcolumns |l|l|l|l|
 
 .. list-table::
-    :widths: 25, 15, 15, 30
+    :widths: 25, 15, 15, 40
     :header-rows: 0
     :class: center
 
