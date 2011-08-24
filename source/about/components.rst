@@ -210,20 +210,25 @@ in the ASCoT source tree.
 `Dorsal <https://launchpad.net/dorsal>`__
 *****************************************
 
-Dorsal is a set of simple scripts to build components of the FEniCS
-Project (as well as their dependencies) for various platforms.
+Dorsal is a shell script that simplifies the installation of FEniCS on
+operating platforms that we do not support with prebuilt binaries. It
+does this by automating the process of fetching, compiling, and
+installing the various FEniCS sub-projects and their requisite
+dependencies on many different platforms.
 
-Maintainers (in alphabetical order)
-===================================
+Primary author and maintainer
+=============================
 
 Harish Narayanan
 
-Authors (past and present in chronological order)
+Major contributors (ordered by number of commits)
 =================================================
 
-Harish Narayanan
+Garth N. Wells, Anders Logg, Joachim B. Haga, Johannes Ring, Roman
+Putanowicz and Ilmar Wilbers.
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~dorsal-core/dorsal/main/view/head:/AUTHORS>`__
 in the Dorsal source tree.
 
 .. _about_components_syfi:
