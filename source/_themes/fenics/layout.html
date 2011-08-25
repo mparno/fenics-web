@@ -26,24 +26,24 @@
   </script>
 
 {% if theme_favicon %}
-<link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}"/>
+<link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}" />
 {% endif %}
 {% endblock %}
 
 {# override upper relbar to show our navigation menu #}
 {% block relbar1 %}
 <div class="wrapper">
-  <a href="/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px" alt="FEniCS Project Banner"/></a>
+  <a href="/"><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" width="900px" alt="FEniCS Project Banner" /></a>
   <div id="access">
     <div class="menu">
       <ul>
-	<li class="page_item"><a href="/about" title="Find out more about the FEniCS project">About</a></li>
-	<li class="page_item"><a href="/download" title="Obtain the FEniCS project">Download</a></li>
-	<li class="page_item"><a href="/doc" title="Learn how to use the FEniCS project">Documentation</a></li>
-	<li class="page_item"><a href="/applications" title="Learn how others are using the FEniCS project">Applications</a></li>
-	<li class="page_item"><a href="/contributing" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
-	<li class="page_item"><a href="/citing" title="Learn how to cite the FEniCS project">Citing</a></li>
-	<li class="page_item"><a href="/support" title="Where to go for more help">Support</a></li>
+	<li class="page_item"><a href="/about/" title="Find out more about the FEniCS project">About</a></li>
+	<li class="page_item"><a href="/download/" title="Obtain the FEniCS project">Download</a></li>
+	<li class="page_item"><a href="/doc/" title="Learn how to use the FEniCS project">Documentation</a></li>
+	<li class="page_item"><a href="/applications/" title="Learn how others are using the FEniCS project">Applications</a></li>
+	<li class="page_item"><a href="/contributing/" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
+	<li class="page_item"><a href="/citing/" title="Learn how to cite the FEniCS project">Citing</a></li>
+	<li class="page_item"><a href="/support/" title="Where to go for more help">Support</a></li>
       </ul>
     </div><!-- .menu -->
   </div><!-- #access -->
@@ -57,16 +57,16 @@
       <div class="span-6">
 	<h4>Documentation</h4>
 	<ul>
-	  <li><a href="/doc/tutorial">Tutorial</a></li>
-	  <li><a href="/doc/dolfin/dev/python">Python API</a></li>
-	  <li><a href="/doc/dolfin/dev/cpp">C++ API</a></li>
+	  <li><a href="/doc/tutorial/">Tutorial</a></li>
+	  <li><a href="/doc/dolfin/dev/python/">Python API</a></li>
+	  <li><a href="/doc/dolfin/dev/cpp/">C++ API</a></li>
 	</ul>
       </div>
       <div class="span-6">
 	<h4>Resources</h4>
 	<ul>
-	  <li><a href="/buildbot">Buildbot</a></li>
-	  <li><a href="/benchbot">Benchbot</a></li>
+	  <li><a href="/buildbot/">Buildbot</a></li>
+	  <li><a href="/benchbot/">Benchbot</a></li>
 	  <li><a href="/support/launchpad_pages.html">FEniCS on Launchpad</a></li>
 	</ul>
       </div>
