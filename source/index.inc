@@ -3,34 +3,37 @@
     <div id="feature">
 
       <!--- Featured item --->
-  <div id="products_example">
-    <div id="products">
-      <div class="slides_container">
-	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
-	<a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+      <div id="products_example">
+        <div id="products">
+          <div class="slides_container">
+	    <a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	    <a href="/featured/2011/fenics_11_texas_tech.html"><img src="/_static/images/featured_item_fenics_11_texas_tech.png" width="366" alt="FEniCS'11 at Texas Tech"></a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
       <div id="feature-info">
         <!--<h2 style="margin-top:0;">Mathematical physics can be fun!</h2>-->
 
         <p>The FEniCS Project is a collection of
           <a href="http://www.gnu.org/philosophy/free-sw.html">free
-        software</a> aimed at automated, efficient solution of
-        differential equations.</p>
+            software</a> aimed at automated, efficient solution of
+            differential equations
+        </p>
 
-	<p>Through this web site, you can <a href="/about">learn
-	more about the project</a> and
-	learn <a href="/download">how to obtain</a>
-	and <a href="/doc">how to use</a> our
-	software. We'd be delighted to <a href="/support">offer support</a>
-        in case you need it, and <a href="/contributing">encourage contributions</a>
-        from our users.</p>
+	<p>Through this web site, you can <a href="/about">learn more
+	    about the project</a> and learn <a href="/download">how to
+	    obtain</a> and <a href="/doc">how to use</a> our
+	    software. We'd be delighted to <a href="/support">offer
+	    support</a> in case you need it,
+	    and <a href="/contributing">encourage contributions</a>
+	    from our users
+        </p>
 
-	<a href="/download/"><img style="width: 300px; margin-left:40px; margin-top:10px;" src="/_static/download-button.png" alt="Download button" /></a>
+	<a href="/download/"><img style="width: 300px;
+	margin-left:40px; margin-top:10px;"
+	src="/_static/download-button.png" alt="Download button"
+	/></a>
 
       </div><!-- #feature-info -->
       <div class="clear-block"></div>
