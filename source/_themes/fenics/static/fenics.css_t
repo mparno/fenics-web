@@ -425,20 +425,6 @@ div.menu li {
     left:690px;
 }
 
-#feature {
-		float:left;
-}
-#feature img {
-float:left;
-margin:-10px 10 0 -10px;
-width: 400px;
-}
-#feature-info {
-    float:right;
-    margin:0 0 0 30px;
-    width:420px;
-}
-
 #container,
 #content  {
     margin:0;
