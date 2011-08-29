@@ -15,6 +15,6 @@
     citing/index
     support/index
     book/index
-    featured/2011/fenics_1beta
+    featured/index
     disclaimer
     buildbot/index
