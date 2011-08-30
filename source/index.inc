@@ -8,6 +8,7 @@
           <div class="slides_container">
 	    <a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
 	    <a href="/featured/2011/fenics_11_texas_tech.html"><img src="/_static/images/featured_item_fenics_11_texas_tech.png" width="366" alt="FEniCS'11 at Texas Tech"></a>
+	    <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured_item_automated_error_control.png" width="366" alt="Automated adaptivity and error control"></a>
           </div>
         </div>
       </div>
