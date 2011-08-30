@@ -31,10 +31,12 @@
 	    from our users
         </p>
 
-	<a href="/download/"><img style="width: 300px;
-	margin-left:40px; margin-top:10px;"
-	src="/_static/download-button.png" alt="Download button"
-	/></a>
+	<p style="text-align:center;">
+	  <a href="/download/">
+	    <img style="margin-left:auto; margin-right:auto; margin-top:10px;"
+		 src="/_static/download-button.png" alt="Download button" />
+	  </a>
+	</p>
 
       </div><!-- #feature-info -->
       <div class="clear-block"></div>
