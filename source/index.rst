@@ -16,5 +16,6 @@
     support/index
     book/index
     featured/index
+    releases/index
     disclaimer
     buildbot/index

@@ -14,6 +14,15 @@ with solving differential equations in FEniCS. The tutorial focuses
 exclusively on the FEniCS Python interface, since this is the simplest
 approach to exploring FEniCS for beginners.
 
+
+*************
+Release notes
+*************
+
+If you are updating your application code to a new FEniCS release,
+make sure to check the :ref:`release notes <releases>` where you will
+find detailed information about new features and interface changes.
+
 .. _demos:
 
 *****
