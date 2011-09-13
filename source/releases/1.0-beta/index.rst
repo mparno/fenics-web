@@ -32,7 +32,7 @@ follows:
 .. code-block:: python
 
     problem = VariationalProblem(a, L, bcs)
-    problem.parameters["foo"] = bar
+    problem.parameters["linear_solver"] = "lu"
     u = problem.solve()
 
 Using FEniCS 1.0-beta, the above syntax has changed to:
@@ -42,7 +42,7 @@ Using FEniCS 1.0-beta, the above syntax has changed to:
     u = Function(V)
     problem = LinearVariationalProblem(a, L, u, bcs=bcs)
     solver = LinearVariationalSolver(problem)
-    solver.parameters["foo"] = bar
+    solver.parameters["linear_solver"] = "lu"
     solver.solve()
 
 Similarly, the syntax for a nonlinear variational problem now reads:
@@ -52,7 +52,7 @@ Similarly, the syntax for a nonlinear variational problem now reads:
     u = Function(V)
     problem = NonlinearVariationalProblem(F, u, bcs=bcs, J=J)
     solver = NonlinearVariationalSolver(problem)
-    solver.parameters["foo"] = bar
+    solver.parameters["linear_solver"] = "lu"
     solver.solve()
 
 Here, ``J`` is an optional argument that specifies the Jacobian of the
@@ -85,6 +85,75 @@ Similarly, a nonlinear variational problem can be solved as follows:
 
     u = Function(V)
     solve(F == 0, u, bcs=bcs)
+
+Solver and preconditioner arguments
+===================================
+
+The solver and preconditioner parameters to the ``solve()`` function
+for linear systems have undergone a cleanup. For example, to solve a
+linear system using GMRES with an algebraic multigrid preconditioner,
+use
+
+.. code-block:: python
+
+    solve(A, x, b, "gmres", "amg")
+
+The following tables list possible values for the solver and
+preconditioner parameters:
+
+Solver parameters
+-----------------
+
++------------------+----------------------------------------------+
+| Usage            | Method                                       |
++==================+==============================================+
+| ``"lu"``         | LU factorization                             |
++------------------+----------------------------------------------+
+| ``"cholesky"``   | Cholesky factorization                       |
++------------------+----------------------------------------------+
+| ``"cg"``         | Conjugate gradient method                    |
++------------------+----------------------------------------------+
+| ``"gmres"``      | Generalized minimal residual method          |
++------------------+----------------------------------------------+
+| ``"bicgstab"``   | Biconjugate gradient stabilized method       |
++------------------+----------------------------------------------+
+| ``"minres"``     | Minimal residual method                      |
++------------------+----------------------------------------------+
+| ``"tfqmr"``      | Transpose-free quasi-minimal residual method |
++------------------+----------------------------------------------+
+| ``"richardson"`` | Richardson method                            |
++------------------+----------------------------------------------+
+
+Preconditioner parameters
+-------------------------
+
++------------------------+----------------------------------------------+
+| Usage                  | Preconditioner                               |
++========================+==============================================+
+| ``"none"``             | No preconditioner                            |
++------------------------+----------------------------------------------+
+| ``"ilu"``              | Incomplete LU factorization                  |
++------------------------+----------------------------------------------+
+| ``"icc"``              | Incomplete Cholesky factorization            |
++------------------------+----------------------------------------------+
+| ``"jacobi"``           | Jacobi iteration                             |
++------------------------+----------------------------------------------+
+| ``"bjacobi"``          | Block Jacobi iteration                       |
++------------------------+----------------------------------------------+
+| ``"sor"``              | Successive over-relaxation                   |
++------------------------+----------------------------------------------+
+| ``"amg"``              | Algebraic multigrid (BoomerAMG or ML)        |
++------------------------+----------------------------------------------+
+| ``"additive_schwarz"`` | Additive Schwarz                             |
++------------------------+----------------------------------------------+
+| ``"hypre_amg"``        | Hypre algebraic multigrid (BoomerAMG)        |
++------------------------+----------------------------------------------+
+| ``"hypre_euclid"``     | Hypre parallel incomplete LU factorization   |
++------------------------+----------------------------------------------+
+| ``"hypre_parasails"``  | Hypre parallel sparse approximate inverse    |
++------------------------+----------------------------------------------+
+| ``"ml_amg"``           | ML algebraic multigrid                       |
++------------------------+----------------------------------------------+
 
 Default arguments required for Expressions
 ==========================================
