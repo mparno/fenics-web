@@ -32,7 +32,8 @@ follows:
 .. code-block:: python
 
     problem = VariationalProblem(a, L, bcs)
-    problem.parameters["linear_solver"] = "lu"
+    solver.parameters["linear_solver"] = "gmres"
+    solver.parameters["preconditioner"] = "ilu"
     u = problem.solve()
 
 Using FEniCS 1.0-beta, the above syntax has changed to:
@@ -42,7 +43,8 @@ Using FEniCS 1.0-beta, the above syntax has changed to:
     u = Function(V)
     problem = LinearVariationalProblem(a, L, u, bcs=bcs)
     solver = LinearVariationalSolver(problem)
-    solver.parameters["linear_solver"] = "lu"
+    solver.parameters["linear_solver"] = "gmres"
+    solver.parameters["preconditioner"] = "ilu"
     solver.solve()
 
 Similarly, the syntax for a nonlinear variational problem now reads:
@@ -52,7 +54,8 @@ Similarly, the syntax for a nonlinear variational problem now reads:
     u = Function(V)
     problem = NonlinearVariationalProblem(F, u, bcs=bcs, J=J)
     solver = NonlinearVariationalSolver(problem)
-    solver.parameters["linear_solver"] = "lu"
+    solver.parameters["linear_solver"] = "gmres"
+    solver.parameters["preconditioner"] = "ilu"
     solver.solve()
 
 Here, ``J`` is an optional argument that specifies the Jacobian of the
