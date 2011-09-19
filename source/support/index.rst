@@ -13,16 +13,15 @@ developers and other FEniCS users.
 Getting answers
 ===============
 
-Questions and answers are handled by the `Launchpad Answers
-<https://help.launchpad.net/Answers>`_ system.
-
-`FEniCS answers <https://answers.launchpad.net/fenics>`_ is the place
-for general FEniCS questions and `DOLFIN answers
+Do you wonder about how something works, whether some feature is
+supported or why you are getting an error? Feel free to ask through
+the Launchpad Answers system: `FEniCS answers
+<https://answers.launchpad.net/fenics>`_ is the place for general
+FEniCS questions and `DOLFIN answers
 <https://answers.launchpad.net/dolfin>`_ is the place for questions
-regarding the FEniCS user interface DOLFIN.
-
-`Launchpad pages <launchpad_pages.html>`_ contains a collection of
-links to the answer pages for all FEniCS components.
+regarding the FEniCS user interface DOLFIN. :ref:`launchpad_pages`
+contains a collection of links to the answer pages for all FEniCS
+components.
 
 Naturally, the FEniCS developers are in a good position to answer
 these questions, but as the developers often are busy writing code (or
@@ -32,6 +31,7 @@ To be notified of new questions, join the `FEniCS
 <https://launchpad.net/~fenics>`_ and the `DOLFIN
 <https://launchpad.net/~dolfin>`_ teams on Launchpad.
 
+
 .. _getting_answers_checklist:
 
 Checklist when asking a question
@@ -39,24 +39,26 @@ Checklist when asking a question
 
 We want to help you; by making sure that you provide us with enough
 information, you are more likely to get the answer you are looking
-for. So, please make sure that
+for. So, first
 
-#. Check whether someone has asked the same question before by
-   searching the questions/answers.
+    please check whether someone has asked the same question before by
+    searching the questions/answers.
 
-#. If you encounter problems when running a program, always include a
-   *minimal* running code example that demonstrates the problem (so that
-   we can reproduce it).
+If you have encountered an error or a problem that you can't figure
+out, please make sure to include the following in your description of
+the problem:
 
-   (With *minimal*, we mean *minimal*. This typically means that you
-   have to simplify your program by stripping away specific parameters
-   and/or simplifying the equations.)
+#. A *minimal, running code example* that reproduces the error.
 
-#. If you encounter an error, always include the error message.
+#. The error message.
 
-#. Always provide information about which *version* of a certain
-   component you are using.
+#. The *version* of the FEniCS component you are using.
 
+By a minimal, running code example, we really mean **minimal** and we
+really mean **running**. Try to simplify your program as much as you
+can. (Surprisingly often, 10-20 lines of code will suffice.) The
+simpler the example, the more likely someone will have the time to
+identify and/or help fix the problem.
 
 .. _help_bugs:
 
@@ -65,19 +67,15 @@ Reporting bugs
 
 FEniCS software is under active development. As a consequence, bugs
 are likely to occur from time to time. In the event that you encounter
-a bug, please file a bug report using the Launchpad system for
-tracking `Bugs <https://help.launchpad.net/Bugs>`_.  Please include
-the most simple code example that exposes the bug. Let's say that
-again: *please include the most simple code example that exposes the
-bug*. Typically, 10-20 lines of code should suffice. The simpler the
-example, the more likely someone will have the time to identify and
-fix the bug.
+a bug, please file a bug report using the Launchpad bug tracking
+system. In particular, for reporting bugs in DOLFIN, use `DOLFIN bugs
+<https://bugs.launchpad.net/dolfin>`_. :ref:`launchpad_pages` contains
+a collection of links to the bug tracking pages for all FEniCS
+components.
 
-For reporting bugs in the FEniCS user interface DOLFIN, use `DOLFIN
-bugs <https://bugs.launchpad.net/dolfin>`_.
+When reporting a bug, the same :ref:`guidelines as for asking
+questions <getting_answers_checklist>` apply.
 
-`Launchpad pages <launchpad_pages.html>`_ contains a collection of
-links to the bug tracking pages for all FEniCS components.
 
 Mailing lists
 =============
@@ -87,7 +85,7 @@ Mailing lists
 Users are also welcome to take part in discussions on the FEniCS
 mailing lists, but specific questions are better directed to the
 relevant `Answer page <https://help.launchpad.net/Answers>`_ as
-explained above.
+:ref:`explained above <help_answers>`.
 
 We try to keep a friendly tone on our mailing lists, but sometimes
 questions can only be settled by a heated debate. Don't be afraid to
@@ -98,8 +96,8 @@ place for general discussions regarding the FEniCS Project and the
 `DOLFIN mailing list <mailto:dolfin@lists.launchpad.net>`_ is the
 place for discussions regarding the FEniCS user interface DOLFIN.
 
-`Launchpad pages <launchpad_pages.html>`_ contains a collection of
-links to the mailing lists for all FEniCS components.
+:ref:`launchpad_pages` contains a collection of links to the mailing
+lists for all FEniCS components.
 
 Contributing
 ============
