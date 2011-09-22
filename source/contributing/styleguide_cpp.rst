@@ -203,7 +203,7 @@ Header files should follow the below template:
     // You should have received a copy of the GNU Lesser General Public License
     // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
     //
-    // Modified by Bar Foo, 2008
+    // Modified by Bar Foo 2008
     //
     // First added:  2008-01-01
     // Last changed: 2008-02-01
@@ -258,7 +258,7 @@ Implementation files should follow the below template:
     // You should have received a copy of the GNU Lesser General Public License
     // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
     //
-    // Modified by Bar Foo, 2008
+    // Modified by Bar Foo 2008
     //
     // First added:  2008-01-01
     // Last changed: 2008-02-01
