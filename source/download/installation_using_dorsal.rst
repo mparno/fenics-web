@@ -15,12 +15,12 @@ operating systems.
 The following platforms are officially supported by Dorsal:
 
 * Debian GNU/Linux 6.0, Unstable
-* Fedora 13, 14
+* Fedora 13, 14, 15
 * Gentoo Linux
-* Mac OS X 10.6 (with MacPorts)
-* openSUSE 11.3
+* Mac OS X 10.6, 10.7 (with MacPorts)
+* openSUSE 11.3, 11.4
 * Red Hat Enterprise Linux 6
-* Ubuntu 10.04 LTS, 10.10, 11.04
+* Ubuntu 10.04 LTS, 10.10, 11.04, 11.10
 
 A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
