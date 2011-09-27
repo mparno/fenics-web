@@ -7,7 +7,7 @@
         <div id="products">
           <div class="slides_container">
 	    <div class="slide">
-	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured_item_automated_error_control.png" width="366" alt="Automated adaptivity and error control"></a>
+	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured_item_automated_error_control.png" width="400" height="282" alt="Automated adaptivity and error control"></a>
 	      <div class="caption">
 		<p>Automated adaptivity and error control</p>
 	      </div>
