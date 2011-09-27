@@ -7,19 +7,19 @@
         <div id="products">
           <div class="slides_container">
 	    <div class="slide">
-	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured_item_automated_error_control.png" width="400" height="282" alt="Automated adaptivity and error control"></a>
+	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured_item_automated_error_control.png" width="366" height="282" alt="Automated adaptivity and error control"></a>
 	      <div class="caption">
 		<p>Automated adaptivity and error control</p>
 	      </div>
 	    </div>
 	    <div class="slide">
-	      <a href="/featured/2011/fenics_11_texas_tech.html"><img src="/_static/images/featured_item_fenics_11_texas_tech.png" width="366" alt="FEniCS'11 at Texas Tech"></a>
+	      <a href="/featured/2011/fenics_11_texas_tech.html"><img src="/_static/images/featured_item_fenics_11_texas_tech.png" width="366" height="282" alt="FEniCS'11 at Texas Tech"></a>
 	      <div class="caption">
 		<p>FEniCS'11 at Texas Tech</p>
 	      </div>
 	    </div>
 	    <div class="slide">
-	      <a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" alt="FEniCS 1.0 Coming Soon!"></a>
+	      <a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured_item_fenics_1beta.png" width="366" height="282" alt="FEniCS 1.0 Coming Soon!"></a>
 	      <div class="caption">
 		<p>FEniCS 1.0 coming soon!</p>
 	      </div>
