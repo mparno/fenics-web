@@ -64,7 +64,7 @@
 	<div id="front-block-1" class="front-block block">
 
           <h3>FEniCS book about to be released!</h3>
-          <img alt='' src='/_static/images/genericbook.png' class='avatar avatar-84 photo' width='84'/>
+          <img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/>
 
 	  <p>The FEniCS book project is nearing completion. The book,
             titled <i>Automated Solution of Differential Equations by
