@@ -128,7 +128,7 @@ functions for :math:`R_{ij}\equiv \overline{u'_i u'_j}` and :math:`f_{ij}`,
 respectively. The most recently computed approximations to ``Rij`` and
 ``Fij`` are recognized by an underscore: ``Rij_`` and ``Fij_``. More details
 of the implementation and some results for turbulent flow in an axial
-diffusor is provided in `<cbc.rans-MekIT11.pdf>`_. The contours of
+diffusor is provided in `cbc.rans-MekIT11.pdf <http://bazaar.launchpad.net/~cbc.rans/cbc.rans/mikael/view/head:/doc/overview/cbc.rans-MekIT11.pdf>`_. The contours of
 :math:`f_{12}` (left) and :math:`\overline{u'_1 u'_2}` (right) in the diffusior
 are shown below:
 
@@ -534,7 +534,7 @@ the following turbulence models in ``cbc.rans``:
     * Elliptic relaxation
 
 
-The tutorial `<cbc.rans-MekIT11.pdf>`_ on using ``cbc.rans`` to implement
+The tutorial `cbc.rans-MekIT11.pdf <http://bazaar.launchpad.net/~cbc.rans/cbc.rans/mikael/view/head:/doc/overview/cbc.rans-MekIT11.pdf>`_ on using ``cbc.rans`` to implement
 advanced turbulence models was published in the 
 proceedings of the 6th National Conference on Computational
 Mechanics, 2011 (MekIT'11).
