@@ -20,13 +20,13 @@ About solving large systems of nonlinear PDEs
    :align: right
    :width: 400
 
-   #
+
 
 
 Computational Fluid Dynamics (CFD) presents many tough challenges for
 a scientific computing software. The Navier-Stokes equations that are used to
 model Newtonian fluid flows are represented by a nonlinear
-system of PDEs, where velocity is nontrivially coupled with pressure --
+system of PDEs, where velocity is non trivially coupled with pressure --
 and that is just the beginning. The fluid may also interact with solid objects,
 flames, particles or simply another fluid with a different density. 
 Most applications we investigate today are built by adding more and 
@@ -54,14 +54,14 @@ package is to offer the computational scientist an efficient way of
  * linearizing nonlinear PDEs in a flexible way (Picard or Newton strategies),
 
 The package targets any system of PDEs, but the applications so
-far have been restricted to CFD. The flow past the dolphin is computed in 
-the tutorial given below.
+far have been restricted to CFD. The stream-functions above illustrating 
+flow past a dolphin are computed in the tutorial given below.
 
 Proof of concept -- The elliptic relaxation model
 -------------------------------------------------
 
 Reynolds Averaged Navier-Stokes (RANS) models are widely used in
-industry for modelling statistical properties of turbulent flows. One
+industry for modeling statistical properties of turbulent flows. One
 of the most advanced RANS models around is the elliptic relaxation
 model. This model consists of the RANS equations and two coupled
 second rank tensor equations for modeling the Reynolds stress
@@ -87,10 +87,15 @@ equations of the model look something like
         
 
 Here :math:`\overline{u_i}` is a component of the Reynolds averaged
-velocity. Note that we have two PDEs for the two second rank tensors
+velocity. The first two equations are basically the incompressible
+Navier-Stokes equations for :math:`\overline{u_i}` (with variable viscosity),
+while the rest of the equations define the turbulence model.
+Note that we have two PDEs for the two second rank tensors
 :math:`\overline{u'_i u'_j}` and :math:`f_{ij}`.  All in all the model requires
+solving for 
 two second rank PDEs, one vector PDE and 3 scalar PDEs plus a number
-of derived quantities.
+of derived quantities. That is, we need to solve 18 coupled, highly
+nonlinear PDEs.
 
 FEniCS has support for working with PDEs of second rank tensors and as
 such we have been able to implement the elliptic relaxation model
@@ -132,14 +137,15 @@ are shown below:
    :align: left
    :width: 400
 
-   #
+
+
 
 
 .. figure:: images/diffusor_R12.png
    :align: right
    :width: 400
 
-   #
+
 
 
 
@@ -156,7 +162,7 @@ according to Newton's method will normally fail.
 
 A feasible linearization, leading to a
 convergent iteration to solve the highly nonlinear equations, is not
-neccessarily obvious for the turbulence model in question and usually
+necessarily obvious for the turbulence model in question and usually
 calls for extensive trial and error. Using ``cbc.pdesys``, the placement
 of a term in a variational form - explicitly on the right hand side
 of the equation system or implicitly in the coefficient matrix - is
@@ -211,7 +217,7 @@ finite element formulation for velocity and pressure. A segregated NS
 solver, on the other hand, contains two ``PDESubSystem`` objects, one
 for the velocity (vector field, governed by a vector PDE) and one for
 the pressure (scalar field, governed by a Poisson equation).  The
-``PDESystem`` object is responsible for creating all neccessary
+``PDESystem`` object is responsible for creating all necessary
 ``FunctionSpace``, ``TestFunction``, and ``TrialFunction`` objects, as well
 as solution (``Function``) objects required to solve a certain system of
 PDEs.
@@ -266,8 +272,7 @@ where such objects are created automatically by ``PDESystem``:
         mesh = UnitSquare(10, 10)           
         # Change desired items in the problem_parameters dict from cbc.pdesys
         problem = Problem(mesh, problem_parameters)
-        poisson = PDESystem([['u']], problem, solver_parameters)
-        poisson.setup() # Creates FunctionSpace, Functions etc.
+        poisson = PDESystem([['u']], problem, solver_parameters) # Creates FunctionSpace, Functions etc.
         poisson.f = Constant(1.)
         
         class Poisson(PDESubSystem):
@@ -280,7 +285,7 @@ where such objects are created automatically by ``PDESystem``:
 
 
 Here the namespace ``vars(poisson)`` contains ``u``, ``u_``, ``v_u`` (automatically 
-created by ``poisson.setup()``) and ``f``. The namespace is futher 
+created by initializing the ``poisson`` class) and ``f``. The namespace is futher 
 provided as argument to the form method of the ``Poisson`` class.
 
 Flow past a dolphin
@@ -288,10 +293,12 @@ Flow past a dolphin
 
 We will now show a slightly more complicating example of how two
 ``PDESystem`` objects can be created and solved through the use of a
-``Problem`` object. The physical problems regards the low Reynolds number 
-flow past a hot dolfin, where temperature is modelled as a passive scalar 
-with a nonlinear diffusion coefficient. The complete PDE system reads
-as follows in an appropriately scaled form,
+``Problem`` object. The physical problem regards the low Reynolds number 
+flow past a hot two-dimensional dolphin (where of course the simplification to
+2D eliminates any physical resemblance to an actual flow past an actual dolphin).
+Temperature (:math:`c`) is modeled as a passive scalar with a nonlinear 
+diffusion coefficient. The complete PDE system reads as follows in an 
+appropriately scaled form,
 
 .. math::
         
@@ -301,7 +308,7 @@ as follows in an appropriately scaled form,
         
 
 Discretizing these equations with a Crank-Nicolson type of scheme in time,
-and redefining :math:`{\mbox{\boldmath $u$}}` to be the the velocity at the new time level and :math:`{\mbox{\boldmath $u$}}_1`
+and redefining :math:`{\mbox{\boldmath $u$}}` to be the velocity at the new time level and :math:`{\mbox{\boldmath $u$}}_1`
 the velocity at the previous time level, we arrive at these
 spatial problems:
 
@@ -324,7 +331,7 @@ The corresponding variational formulation involves the integrals
 .. math::
         
         \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} + (\nabla {\mbox{\boldmath $u$}}_1 \cdot {\mbox{\boldmath $u$}}_1) \cdot v_{u} + 
-        \nu \nabla{\mbox{\boldmath $U$}}\cdot\nabla v_{u} + p \nabla\cdot v_{u} + {{\mbox{\boldmath $f$}}}v_{u} + 
+        \nu \nabla{\mbox{\boldmath $U$}}\cdot\nabla v_{u} - p \nabla\cdot v_{u} - {{\mbox{\boldmath $f$}}}v_{u} + 
         v_p\nabla\cdot {\mbox{\boldmath $U$}}\right)dx &= 0,\\
         \int_\Omega\left( \frac{c - c_1}{\Delta t}v_c + {\mbox{\boldmath $U$}} \cdot \nabla C + \nu (1+c^2)\nabla C\cdot\nabla v_c\right)dx &= 0,
         
@@ -350,7 +357,6 @@ The implementation of this model for the flow past a dolphin can be done as foll
         solver_parameters['space']['u'] = VectorFunctionSpace   # default=FunctionSpace
         solver_parameters['degree']['u'] = 2                    # default=1
         NStokes = PDESystem([['u', 'p']], problem, solver_parameters)
-        NStokes.setup()    
         
         # Use a constant forcing field to drive the flow from right to left
         NStokes.f = Constant((-1., 0.))
@@ -362,7 +368,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
         bc = [DirichletBC(NStokes.V['up'].sub(0), Constant((0.0, 0.0)), dolfin)]           
                 
         # Set up variational form. 
-        # u_, u_1, u_2 are the solution Functions at time steps N, N-1 and N-2.
+        # u_, u_1 are the solution Functions at time steps N and N-1.
         # v_u/v_p are the TestFunctions for velocity/pressure in the MixedFunctionSpace for u and p
         
         class NavierStokes(PDESubSystem):
@@ -383,7 +389,6 @@ The implementation of this model for the flow past a dolphin can be done as foll
         
         # Define a new nonlinear PDESystem for a scalar c
         scalar = PDESystem([['c']], problem, solver_parameters)
-        scalar.setup()    
         
         class Scalar(PDESubSystem):
             def form(self, c, v_c, c_, c_1, U_, dt, nu, **kwargs):
@@ -420,7 +425,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
    :align: right
    :width: 400
 
-   #
+
 
 
 The temporal evolution of the temperature is illustrated on the
@@ -445,8 +450,9 @@ class and overloading the ``form`` method that returns the variational
 form. The ``PDESubSystem`` class contains numerous methods and switches
 for optimization of finite element assembly and solving linear or nonlinear
 system arising from the form.
-Since the Stokes equations being solved here are linear, the left hand
-side coefficient matrix will not change in time. When we provide this
+Since the Navier-Stokes equations being solved here are discretized with 
+explicit convection, 
+the left hand side coefficient matrix will not change in time. When we provide this
 information (through ``reassemble_lhs=False``), the coefficient matrix will
 only be assembled on the first time step.
 
@@ -462,7 +468,14 @@ above. For turbulent flow models, we would like to set up our problem
 and then select the appropriate turbulence model and numerics from a
 predefined library. Each turbulence model will then have a main
 ``PDESystem`` class and a library of possible transient and steady
-schemes that can be picked at runtime.
+schemes that can be picked at runtime. 
+
+Note that implementing a new problem through ``cbc.pdesys`` generally 
+will not require redefining the variational
+forms as done above (``Scalar`` and ``NavierStokes``). Instead the user will 
+be required to set up a mesh and its boundaries, pick ``PDESystem's``
+from modules, initialize and solve. In the end this leads to very compact, 
+flexible and, most importantly, reusable code.
 
 RANS models
 -----------
