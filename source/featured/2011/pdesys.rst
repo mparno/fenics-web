@@ -18,7 +18,7 @@ About solving large systems of nonlinear PDEs
 
 .. figure:: images/dolfin.gif
    :align: right
-   :width: 400
+   :width: 360
 
 
 
@@ -423,7 +423,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
 
 .. figure:: images/dolfin_temp.gif
    :align: right
-   :width: 400
+   :width: 360
 
 
 
