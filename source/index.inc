@@ -7,6 +7,12 @@
         <div id="products">
           <div class="slides_container">
 	    <div class="slide">
+	      <a href="/featured/2011/pdesys.html"><img src="/_static/images/featured/featured_item_pdesys.png" width="366" height="282" alt="Specifying large systems of PDEs with ease"></a>
+	      <div class="caption">
+		<p>Specifying large systems of PDEs with ease</p>
+	      </div>
+	    </div>
+	    <div class="slide">
 	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured/featured_item_automated_error_control.png" width="366" height="282" alt="Automated adaptivity and error control"></a>
 	      <div class="caption">
 		<p>Automated adaptivity and error control</p>
