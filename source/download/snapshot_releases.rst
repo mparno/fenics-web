@@ -20,7 +20,11 @@ X, and Windows. They are made available here.
       - `PPA for FEniCS development builds
         <https://launchpad.net/~fenics-packages/+archive/fenics-dev>`_
 
-    * - |mac-icon| Mac OS X binary snapshot
+    * - |mac-icon| Mac OS X 10.7 binary snapshot
+      - `fenics-snapshot-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.7.dmg>`_
+
+    * - |mac-icon| Mac OS X 10.6 binary snapshot
       - `fenics-snapshot-osx10.6.dmg
         <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.6.dmg>`_
 
@@ -28,9 +32,13 @@ X, and Windows. They are made available here.
       - `fenics-snapshot-mingw32.exe
         <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-mingw32.exe>`_
 
-    * - |archive-icon| Source snapshot for Mac OS X
-      - `fenics-source-snapshot-osx.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx.tar.gz>`_
+    * - |archive-icon| Source snapshot for Mac OS X 10.7
+      - `fenics-source-snapshot-osx10.7.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.7.tar.gz>`_
+
+    * - |archive-icon| Source snapshot for Mac OS X 10.6
+      - `fenics-source-snapshot-osx10.6.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.6.tar.gz>`_
 
     * - |archive-icon| Source snapshot for Windows
       - `fenics-source-snapshot-win.zip
