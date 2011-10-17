@@ -375,7 +375,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
             def form(self, u, v_u, u_, u_1, p, v_p, nu, dt, f, **kwargs):
                 U = 0.5*(u + u_1)
                 return (1./dt)*inner(u - u_1, v_u)*dx + \
-                       inner(grad(u_1)*u_1, v_u) + \
+                       inner(u_1*nabla_grad(u_1), v_u) + \
                        nu*inner(grad(U), grad(v_u))*dx - \
                        inner(div(v_u), p)*dx + v_p*div(U)*dx - \
                        inner(f, v_u)*dx
