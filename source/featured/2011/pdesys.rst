@@ -302,7 +302,7 @@ appropriately scaled form,
 
 .. math::
         
-        \frac{\partial {\mbox{\boldmath $u$}}}{\partial t} + \nabla {\mbox{\boldmath $u$}} \cdot {\mbox{\boldmath $u$}} &= \nu \nabla^2 {\mbox{\boldmath $u$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
+        \frac{\partial {\mbox{\boldmath $u$}}}{\partial t} + ({\mbox{\boldmath $u$}} \cdot \nabla) {\mbox{\boldmath $u$}} &= \nu \nabla^2 {\mbox{\boldmath $u$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
         \nabla\cdot {\mbox{\boldmath $u$}} &= 0\\
         \frac{\partial c}{\partial t} + {\mbox{\boldmath $u$}} \cdot \nabla c &= \nabla\cdot\left(\nu(1+c^2)\nabla c\right)
         
@@ -314,7 +314,7 @@ spatial problems:
 
 .. math::
         
-        \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} + \nabla {\mbox{\boldmath $u$}}_1 \cdot {\mbox{\boldmath $u$}}_1  &= \nu\nabla^2 {\mbox{\boldmath $U$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
+        \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} + ({\mbox{\boldmath $u$}}_1 \cdot \nabla) {\mbox{\boldmath $u$}}_1  &= \nu\nabla^2 {\mbox{\boldmath $U$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
         \nabla\cdot {\mbox{\boldmath $U$}} &= 0\\
         \frac{c - c_1}{\Delta t} + {\mbox{\boldmath $U$}} \cdot \nabla C &= \nabla\cdot\left(\nu(1+c^2)\nabla C\right),
         
@@ -330,7 +330,7 @@ The corresponding variational formulation involves the integrals
 
 .. math::
         
-        \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} + (\nabla {\mbox{\boldmath $u$}}_1 \cdot {\mbox{\boldmath $u$}}_1) \cdot v_{u} + 
+        \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} +  ({\mbox{\boldmath $u$}}_1 \cdot \nabla) {\mbox{\boldmath $u$}}_1 \cdot v_{u} + 
         \nu \nabla{\mbox{\boldmath $U$}}\cdot\nabla v_{u} - p \nabla\cdot v_{u} - {{\mbox{\boldmath $f$}}}v_{u} + 
         v_p\nabla\cdot {\mbox{\boldmath $U$}}\right)dx &= 0,\\
         \int_\Omega\left( \frac{c - c_1}{\Delta t}v_c + {\mbox{\boldmath $U$}} \cdot \nabla C + \nu (1+c^2)\nabla C\cdot\nabla v_c\right)dx &= 0,
@@ -375,7 +375,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
             def form(self, u, v_u, u_, u_1, p, v_p, nu, dt, f, **kwargs):
                 U = 0.5*(u + u_1)
                 return (1./dt)*inner(u - u_1, v_u)*dx + \
-                       inner(grad(u_1)*u_1, v_u) + \
+                       inner(u_1*nabla_grad(u_1), v_u) + \
                        nu*inner(grad(U), grad(v_u))*dx - \
                        inner(div(v_u), p)*dx + v_p*div(U)*dx - \
                        inner(f, v_u)*dx
