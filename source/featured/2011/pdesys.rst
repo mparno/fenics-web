@@ -6,10 +6,9 @@ Specifying large systems of PDEs with ease
 | *Created by Mikael Mortensen and Hans Petter Langtangen*
 
 
-This article describes the `cbc.pdesys <http://bazaar.launchpad.net/~cbc.rans/cbc.rans/mikael/files/head:/cbc/pdesys/>`_
-Python package, built on top of
-FEniCS, for specifying and solving systems of nonlinear PDEs with very
-compact and flexible code.
+This article describes the `CBC.PDESys <https://launchpad.net/cbcpdesys>`_
+Python package, built on top of FEniCS, for specifying and solving large
+systems of nonlinear PDEs with very compact and flexible code.
 
 
 About solving large systems of nonlinear PDEs
@@ -43,7 +42,7 @@ of PDEs.
 In fact, the needs of CFD is simply a very flexible software
 environment for systems of nonlinear PDEs. To meet these needs, we 
 created the completely general
-``cbc.pdesys`` Python package on top of FEniCS.  The purpose of the
+CBC.PDESys Python package on top of FEniCS.  The purpose of the
 package is to offer the computational scientist an efficient way of
 
  * specifying possibly large, complicated systems of PDEs,
@@ -163,7 +162,7 @@ according to Newton's method will normally fail.
 A feasible linearization, leading to a
 convergent iteration to solve the highly nonlinear equations, is not
 necessarily obvious for the turbulence model in question and usually
-calls for extensive trial and error. Using ``cbc.pdesys``, the placement
+calls for extensive trial and error. Using CBC.PDESys, the placement
 of a term in a variational form - explicitly on the right hand side
 of the equation system or implicitly in the coefficient matrix - is
 reduced to the inclusion or not of an underscore: ``k`` means an unknown
@@ -177,7 +176,7 @@ automatically computed.
 
 As opposed to most other software packages for CFD, which require
 *user defined* PDEs to be solved in a segregated manner, the coupling
-or splitting of a system of PDEs is in ``cbc.pdesys`` a matter of
+or splitting of a system of PDEs is in CBC.PDESys a matter of
 inserting a few brackets in a little list.  As a result, experimenting
 with numerics for complicated systems of nonlinear PDEs has never been
 easier!
@@ -187,7 +186,7 @@ Implementation details
 ----------------------
 
 There are basically three building blocks for setting up a problem 
-with ``cbc.pdesys``:
+with CBC.PDESys:
 
  * ``Problem`` (defines the physical problem)
 
@@ -204,7 +203,7 @@ the ``Linear/NonlinearVariationalProblem/Solver`` classes provided with
 the regular Python ``dolfin`` package in FEniCS. In fact, all problems
 composed of one single variational form can equally well be set up
 with either approach, as demonstrated below. 
-The ``cbc.pdesys`` package first shows its
+The CBC.PDESys package first shows its
 advantages when you need many variational forms to build your complete
 mathematical model of a physical phenomenon.
 
@@ -231,7 +230,7 @@ functionality used to advance any number of ``PDESystem``
 objects simultaneously in time (or iterate over them in stationary problems).
 
 Here is an example of how the Poisson equation
-can be solved, using either standard ``dolfin`` or ``cbc.pdesys``: 
+can be solved, using either standard ``dolfin`` or CBC.PDESys: 
 
 .. code-block:: py
 
@@ -302,7 +301,7 @@ appropriately scaled form,
 
 .. math::
         
-        \frac{\partial {\mbox{\boldmath $u$}}}{\partial t} + ({\mbox{\boldmath $u$}} \cdot \nabla) {\mbox{\boldmath $u$}} &= \nu \nabla^2 {\mbox{\boldmath $u$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
+        \frac{\partial {\mbox{\boldmath $u$}}}{\partial t} + {\mbox{\boldmath $u$}} \cdot \nabla {\mbox{\boldmath $u$}} &= \nu \nabla^2 {\mbox{\boldmath $u$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
         \nabla\cdot {\mbox{\boldmath $u$}} &= 0\\
         \frac{\partial c}{\partial t} + {\mbox{\boldmath $u$}} \cdot \nabla c &= \nabla\cdot\left(\nu(1+c^2)\nabla c\right)
         
@@ -314,7 +313,7 @@ spatial problems:
 
 .. math::
         
-        \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} + ({\mbox{\boldmath $u$}}_1 \cdot \nabla) {\mbox{\boldmath $u$}}_1  &= \nu\nabla^2 {\mbox{\boldmath $U$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
+        \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} + {\mbox{\boldmath $u$}}_1 \cdot \nabla {\mbox{\boldmath $u$}}_1  &= \nu\nabla^2 {\mbox{\boldmath $U$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
         \nabla\cdot {\mbox{\boldmath $U$}} &= 0\\
         \frac{c - c_1}{\Delta t} + {\mbox{\boldmath $U$}} \cdot \nabla C &= \nabla\cdot\left(\nu(1+c^2)\nabla C\right),
         
@@ -330,8 +329,8 @@ The corresponding variational formulation involves the integrals
 
 .. math::
         
-        \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} +  ({\mbox{\boldmath $u$}}_1 \cdot \nabla) {\mbox{\boldmath $u$}}_1 \cdot v_{u} + 
-        \nu \nabla{\mbox{\boldmath $U$}}\cdot\nabla v_{u} - p \nabla\cdot v_{u} - {{\mbox{\boldmath $f$}}}v_{u} + 
+        \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} +  ({\mbox{\boldmath $u$}}_1 \cdot \nabla {\mbox{\boldmath $u$}}_1) \cdot v_{u} + 
+        \nu \nabla{\mbox{\boldmath $U$}} : \nabla v_{u} - p \nabla\cdot v_{u} - {{\mbox{\boldmath $f$}}}v_{u} + 
         v_p\nabla\cdot {\mbox{\boldmath $U$}}\right)dx &= 0,\\
         \int_\Omega\left( \frac{c - c_1}{\Delta t}v_c + {\mbox{\boldmath $U$}} \cdot \nabla C + \nu (1+c^2)\nabla C\cdot\nabla v_c\right)dx &= 0,
         
@@ -347,7 +346,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
         from cbc.pdesys import *
         
         # Set up problem by loading mesh from file
-        mesh = Mesh('dolfin-outside.xml.gz')
+        mesh = Mesh('dolfin-2.xml.gz')
         
         # problem_parameters are defined in Problem.py
         problem_parameters['time_integration'] = "Transient"    # default='Steady'
@@ -377,7 +376,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
                 return (1./dt)*inner(u - u_1, v_u)*dx + \
                        inner(u_1*nabla_grad(u_1), v_u) + \
                        nu*inner(grad(U), grad(v_u))*dx - \
-                       inner(div(v_u), p)*dx + v_p*div(U)*dx - \
+                       inner(p, div(v_u))*dx + inner(div(U), v_p)*dx - \
                        inner(f, v_u)*dx
         
         NStokes.pdesubsystems['up'] = NavierStokes(vars(NStokes), ['u', 'p'], bcs=bc,
@@ -394,8 +393,8 @@ The implementation of this model for the flow past a dolphin can be done as foll
             def form(self, c, v_c, c_, c_1, U_, dt, nu, **kwargs):
                 C = 0.5*(c + c_1)
                 return (1./dt)*inner(c - c_1, v_c)*dx + \
-                        inner(v_c, dot(grad(C), U_))*dx + \
-                        nu*(1.+c_**2)*inner(grad(C), grad(v_c))*dx   
+                        inner(dot(U_*grad(C)), v_c)*dx + \
+                        nu*(1. + c_**2)*inner(grad(C), grad(v_c))*dx   
                         # Note nonlinearity in c_ (above)
          
         bcc = [DirichletBC(scalar.V['c'], Constant(1.0), dolfin)]
@@ -431,7 +430,7 @@ The implementation of this model for the flow past a dolphin can be done as foll
 The temporal evolution of the temperature is illustrated on the
 figure to the right.
 
-There are a few interesting features of ``cbc.pdesys`` at display
+There are a few interesting features of CBC.PDESys at display
 here. First, in the creation of ``NStokes`` (``PDESystem`` object), we
 request a coupled system of PDEs (using ``MixedFunctionSpace``)
 consisting of the vector ``u`` and the scalar ``p`` (scalar is default
@@ -470,7 +469,7 @@ predefined library. Each turbulence model will then have a main
 ``PDESystem`` class and a library of possible transient and steady
 schemes that can be picked at runtime. 
 
-Note that implementing a new problem through ``cbc.pdesys`` generally 
+Note that implementing a new problem through CBC.PDESys generally 
 will not require redefining the variational
 forms as done above (``Scalar`` and ``NavierStokes``). Instead the user will 
 be required to set up a mesh and its boundaries, pick ``PDESystem's``
@@ -505,7 +504,7 @@ Eddy-viscosity models are usually classified by the number of additional
 PDEs that are required to close an expression for the turbulent viscosity :math:`\nu_T`. 
 Reynolds stress models, like the elliptic relaxation model outlined above, solves 
 a PDE for the second rank tensor :math:`\overline{u'_i u'_j}` and do not make
-use of the eddy-viscosity model. Using ``cbc.pdesys`` we have currently implemented 
+use of the eddy-viscosity model. Using CBC.PDESys we have currently implemented 
 the following turbulence models in ``cbc.rans``:
 
 1. One-equation EV models
