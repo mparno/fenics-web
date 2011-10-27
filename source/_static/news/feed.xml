@@ -8,6 +8,48 @@
 	<description>FEniCS News - http://www.fenicsproject.org/</description>
 
 <item>
+	<title>ufl: UFL 1.0-beta3 released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9110</guid>
+	<link>https://launchpad.net/ufl/+announcement/9110</link>
+	<description><p>This release brings UFL up to date with the beta2 versions of dolfin and ffc. A few new operators have been added and several bugs have been fixed.</p></description>
+	<pubDate>Wed, 26 Oct 2011 18:15:00 +0000</pubDate>
+</item>
+<item>
+	<title>dolfin: DOLFIN 1.0-beta2 released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9109</guid>
+	<link>https://launchpad.net/dolfin/+announcement/9109</link>
+	<description><p>This release contains many bug fixes and implements some long outstanding features in preparation for the 1.0 release.</p></description>
+	<pubDate>Wed, 26 Oct 2011 15:33:14 +0000</pubDate>
+</item>
+<item>
+	<title>ffc: FFC 1.0-beta2 released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9108</guid>
+	<link>https://launchpad.net/ffc/+announcement/9108</link>
+	<description><p>This release includes some performance improvements for evaluating basis functions. It also adds support for  Bessel functions and error functions.</p></description>
+	<pubDate>Wed, 26 Oct 2011 15:26:10 +0000</pubDate>
+</item>
+<item>
+	<title>ufc: Maintainence update of UFC released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9107</guid>
+	<link>https://launchpad.net/ufc/+announcement/9107</link>
+	<description><p>This maintenance update of UFC provides improved CMake support.</p></description>
+	<pubDate>Wed, 26 Oct 2011 15:12:12 +0000</pubDate>
+</item>
+<item>
+	<title>apps: Unicorn HPC 0.1.3</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-25:/+announcement/9104</guid>
+	<link>https://launchpad.net/unicorn/+announcement/9104</link>
+	<description><p>A new version of Unicorn has been released. This release adds support for MPI I/O and Cray's Libsci and includes various bugs and portability fixes. It is also synchronized with the chapters in the FEniCS book.</p></description>
+	<pubDate>Tue, 25 Oct 2011 21:36:29 +0000</pubDate>
+</item>
+<item>
+	<title>syfi: SyFi-1.0-beta released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-09-02:/+announcement/8872</guid>
+	<link>https://launchpad.net/fenics-syfi/+announcement/8872</link>
+	<description><p>SyFi has been updated to Dolfin/UFL 1.0-beta. Build system changed to cmake.</p></description>
+	<pubDate>Fri, 02 Sep 2011 10:10:10 +0000</pubDate>
+</item>
+<item>
 	<title>dorsal: Dorsal 1.0-beta Released!</title>
 	<guid isPermaLink="false">tag:launchpad.net,2011-08-23:/+announcement/8830</guid>
 	<link>https://launchpad.net/dorsal/+announcement/8830</link>
@@ -35,58 +77,6 @@
 	<link>https://launchpad.net/ufl/+announcement/8782</link>
 	<description><p>A new version of UFL has been released. This version fixes a minor bug for handling constants in forms.</p></description>
 	<pubDate>Thu, 11 Aug 2011 21:18:12 +0000</pubDate>
-</item>
-<item>
-	<title>ufc: UFC 2.0.2</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8781</guid>
-	<link>https://launchpad.net/ufc/+announcement/8781</link>
-	<description><p>A new version of UFC has been released. This version adds some minor tweaks for the installatioin of UFC.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:17:18 +0000</pubDate>
-</item>
-<item>
-	<title>instant: Instant 1.0--beta</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8780</guid>
-	<link>https://launchpad.net/instant/+announcement/8780</link>
-	<description><p>A new version of Instant has been released.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:16:32 +0000</pubDate>
-</item>
-<item>
-	<title>ffc: FFC 1.0-beta</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8778</guid>
-	<link>https://launchpad.net/ffc/+announcement/8778</link>
-	<description><p>A new version of FFC has been released, fixing a number of minor bugs.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:15:57 +0000</pubDate>
-</item>
-<item>
-	<title>dolfin: DOLFIN 1.0-beta</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8777</guid>
-	<link>https://launchpad.net/dolfin/+announcement/8777</link>
-	<description><p>A new version of DOLFIN has been released, fixing a large number of bugs and bringing many improvements. The most notable changes are improved support for parallel computing and a redesigned and simplified interface for solving variational problems.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:15:17 +0000</pubDate>
-</item>
-<item>
-	<title>ufl: UFL 1.0-beta released</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-07-08:/+announcement/8638</guid>
-	<link>https://launchpad.net/ufl/+announcement/8638</link>
-	<description><p>UFL 1.0-beta is now released. Together with the rest of FEniCS, UFL is approaching the milestone 1.0 release.</p>
-<p>The changelog for this version is:</p>
-<p>1.0-beta [2011-07-08]<br />
- - Add script ufl-version<br />
- - Added syntax for associating an arbitrary domain data object with a measure:<br />
- dss = ds[boundaries]; M = f*dss(1) + g*dss(2)<br />
- - Added new operators elem_mult, elem_div, elem_pow and elem_op for<br />
-   elementwise application of scalar operators to tensors of equal shape<br />
- - Added condition operators And(lhs,rhs) and Or(lhs,rhs) and Not(cond)<br />
- - Fixed support for symmetries in subelements of a mixed element<br />
- - Add support for specifying derivatives of coefficients to derivative()</p></description>
-	<pubDate>Fri, 08 Jul 2011 09:14:52 +0000</pubDate>
-</item>
-<item>
-	<title>fenics: Mac OS X and Windows binaries updated</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-05-18:/+announcement/8369</guid>
-	<link>https://launchpad.net/fenics/+announcement/8369</link>
-	<description><p>The Mac OS X and Windows binaries have been updated and now features DOLFIN 0.9.11, FFC 0.9.10, Instant 0.9.10, UFC 2.0.1 and UFL 0.9.1. They are available from the installation page at <a href="http://www.fenicsproject.org" rel="nofollow">http://&lt;wbr&gt;&lt;/wbr&gt;www.fenicsproje&lt;wbr&gt;&lt;/wbr&gt;ct.org</a>.</p></description>
-	<pubDate>Wed, 18 May 2011 15:17:42 +0000</pubDate>
 </item>
 
 </channel>
