@@ -34,16 +34,18 @@ modify one of the existing demos from DOLFIN. The table below provides
 links to demo documentation for different DOLFIN versions.
 
 .. list-table::
-    :widths: 100 50 50 175
+    :widths: 100 50 50 50 175
     :header-rows: 0
     :class: center
 
     * - DOLFIN (Python demos)
       - 1.0.0
+      - `1.0.beta2 <../doc/dolfin/1.0.beta2/python/demo/index.html>`__
       - `1.0.beta <../doc/dolfin/1.0.beta/python/demo/index.html>`__
       - `development version <../doc/dolfin/dev/python/demo/index.html>`__
     * - DOLFIN (C++ demos)
       - 1.0.0
+      - `1.0.beta2 <../doc/dolfin/1.0.beta2/cpp/demo/index.html>`__
       - `1.0.beta <../doc/dolfin/1.0.beta/cpp/demo/index.html>`__
       - `development version <../doc/dolfin/dev/cpp/demo/index.html>`__
 
@@ -69,20 +71,23 @@ documentation for different versions of DOLFIN, UFL and other FEniCS
 components.
 
 .. list-table::
-    :widths: 100 50 50 175
+    :widths: 100 50 50 50 175
     :header-rows: 0
     :class: center
 
     * - DOLFIN (Python API)
       - 1.0.0
+      - `1.0.beta2 <../doc/dolfin/1.0.beta2/python/genindex.html>`__
       - `1.0.beta <../doc/dolfin/1.0.beta/python/genindex.html>`__
       - `development version <../doc/dolfin/dev/python/genindex.html>`__
     * - DOLFIN (C++ API)
       - 1.0.0
+      - `1.0.beta2 <../doc/dolfin/1.0.beta2/cpp/genindex.html>`__
       - `1.0.beta <../doc/dolfin/1.0.beta/cpp/genindex.html>`__
       - `development version <../doc/dolfin/dev/cpp/genindex.html>`__
     * - UFL (API)
       - 1.0.0
+      - `1.0-beta3 <../doc/ufl/1.0-beta3/genindex.html>`__
       - `1.0-beta2 <../doc/ufl/1.0-beta2/genindex.html>`__
       - `development version <../doc/ufl/dev/genindex.html>`__
 
