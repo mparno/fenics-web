@@ -8,6 +8,40 @@ Older releases
 
 Older FEniCS releases for Mac OS X and Windows are made available here.
 
+***************
+FEniCS 1.0-beta
+***************
+
+This release includes DOLFIN 1.0-beta, FFC 1.0-beta, FIAT 1.0-beta,
+Instant 1.0-beta, UFC 2.0.2, UFL 1.0-beta2, and Viper 1.0-beta.
+
+.. tabularcolumns:: |c|c|
+
+.. list-table::
+    :widths: 50, 50
+    :header-rows: 0
+    :class: center
+
+    * - |mac-icon| Mac OS X binary
+
+      - `fenics-1.0-beta-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-osx10.6.dmg>`__
+
+    * - |windows-icon| Windows binary
+
+      - `fenics-1.0-beta-mingw32.exe
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta-mingw32.exe>`__
+
+    * - |archive-icon| Sources for Mac OS X
+
+      - `fenics-source-1.0-beta-osx.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta-osx.tar.gz>`__
+
+    * - |archive-icon| Sources for Windows
+
+      - `fenics-source-1.0-beta-win.zip
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta-win.zip>`__
+
 ************
 FEniCS 11.05
 ************

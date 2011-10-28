@@ -37,8 +37,35 @@ system. You can do this by running the following commands in a terminal:
     sudo apt-get update
     sudo apt-get install fenics
 
-If you experience problems with the FEniCS packages after adding the
-FEniCS PPA, make sure that all packages are up-to-date by running the
-following command in a terminal::
+Ubuntu 10.04 LTS and Ubuntu 10.10 users will also need to add the
+`FEniCS experimental builds PPA
+<https://launchpad.net/~fenics-packages/+archive/fenics-exp>`__ to get
+the latest FEniCS releases. Use the following set of commands instead of
+the above:
 
-    sudo apt-get dist-upgrade
+.. code-block:: sh
+
+    sudo add-apt-repository ppa:fenics/ppa
+    sudo add-apt-repository ppa:fenics-packages/fenics-exp
+    sudo apt-get update
+    sudo apt-get install fenics
+
+.. warning::
+
+    Adding the `FEniCS experimental builds PPA
+    <https://launchpad.net/~fenics-packages/+archive/fenics-exp>`__ will
+    also upgrade the Boost packages on your system to version 1.42. In
+    most cases this is unproblematic since only the Boost `development`
+    packages (as in ``libboost-foo-dev``) will be replaced. However, if
+    you want to keep the default Boost packages, then do not add this
+    PPA.
+
+    If you accidentally added this PPA and want to go back to the
+    default Boost packages, running ``sudo ppa-purge
+    ppa:fenics-packages/fenics-exp`` should do the trick.
+
+.. note::
+
+    If you experience problems with the FEniCS packages after adding the
+    FEniCS PPA, make sure that all packages are up-to-date by running
+    ``sudo apt-get dist-upgrade`` in a terminal.
