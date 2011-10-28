@@ -43,3 +43,4 @@ The following pages list important instructions for FEniCS developers.
    Obtaining the source code <obtaining_code>
    Writing code <writing_code>
    contributing_code
+   development_model
