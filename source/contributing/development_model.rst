@@ -18,7 +18,7 @@ FEniCS development follows the model illustrated below.
 We note the following important points:
 
 * Development happens in the **trunk**.
-* At any time, there may exist one ore more **stable branches**.
+* At any time, there may exist one or more **stable branches**.
 * **Stable releases** are made from stable branches.
 * **Snapshot releases** are made from trunk.
 * Blueprints may be targeted to a future **series** (for which there
