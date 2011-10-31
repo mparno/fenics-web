@@ -4,9 +4,9 @@
 Documentation
 #############
 
-********
-Tutorial
-********
+*******************
+The FEniCS Tutorial
+*******************
 
 A good starting point for new users is the :doc:`FEniCS tutorial
 <tutorial/index>`. The tutorial will help you get quickly up and running
@@ -14,6 +14,25 @@ with solving differential equations in FEniCS. The tutorial focuses
 exclusively on the FEniCS Python interface, since this is the simplest
 approach to exploring FEniCS for beginners.
 
+***************
+The FEniCS Book
+***************
+
+:ref:`The FEniCS Book <book>`, *Automated Solution of Differential
+Equations by the Finite Element Method*, is a comprehensive (700
+pages) book documenting the mathematical methodology behind the FEniCS
+Project and the software developed as part of the FEniCS Project. The
+FEniCS Tutorial is included as the opening chapter of the FEniCS Book.
+
+*****************
+The FEniCS Manual
+*****************
+
+`The FEniCS Manual
+<http://launchpad.net/fenics-book/trunk/final/+download/fenics-manual-2011-10-31.pdf>`__
+is a 200-page excerpt from the FEniCS Book, including the FEniCS
+Tutorial, an introduction to the finite element method and
+documentation of DOLFIN and UFL.
 
 *************
 Release notes
