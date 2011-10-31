@@ -9,7 +9,7 @@
 
     about/index
     download/index
-    doc/index
+    documentation/index
     applications/index
     contributing/index
     citing/index
