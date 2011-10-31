@@ -4,25 +4,43 @@
 The FEniCS Book
 ###############
 
-Together with `Springer <http://www.springer.com>`__, we are preparing
-a book to document the methodology and software developed as part of
-the FEniCS Project. The title of the book is `Automated Solution of
-Differential Equations by the Finite Element Method
-<http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__. The
-book will appear as volume 84 of the Springer `Lecture Notes in
-Computational Science and Engineering
-<http://www.springer.com/series/3527>`__.
+***************************************************************************
+*Automated Solution of Differential Equations by the Finite Element Method*
+***************************************************************************
 
-The book manuscript has been submitted to the publisher and is
-currently in production. We expect the book to be available in the
-fall of 2011. A preliminary version of the book can be found `here
-<http://www.fenicsproject.org/pub/book/book>`__.
+This book is written by researchers and developers behind the FEniCS
+Project and explores an advanced, expressive approach to the
+development of mathematical software. The presentation spans
+mathematical background, software design and the use of FEniCS in
+applications. Theoretical aspects are complemented with computer code
+which is available as free/open source software. The book begins with
+a tutorial for readers who are new to the topic. Following the
+tutorial, chapters in Part I address fundamental aspects of the
+approach to automating the creation of finite element
+solvers. Chapters in Part II address the design and implementation of
+the FEnicS software. Chapters in Part III present the application of
+FEniCS to a wide range of applications, including fluid flow, solid
+mechanics, electromagnetics and geophysics.
+
+1st Edition., 720 p., 359 illus.
 
 ******************
 Obtaining the book
 ******************
 
-Information will be added here about how to obtain the book.
+The book will appear as `Volume 84
+<http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
+of the Springer `Lecture Notes in Computational Science and
+Engineering <http://www.springer.com/series/3527>`__. The final book
+manuscript has been submitted to the publisher and is currently in
+production. We expect the book to be available in stores in November
+2011.
+
+* `Order directly from Springer <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
+* `Order from Amazon <http://www.amazon.com/Automated-Solution-Differential-Equations-Element/dp/3642230989/>`__
+* `Order from Bokus <http://www.bokus.com/bok/9783642230981/automated-solution-of-differential-equations-by-the-finite-element-method/>`__
+* `Order from Adlibris <http://www.adlibris.com/se/product.aspx?isbn=3642230989>`__
+* `Download from Launchpad <http://launchpad.net/fenics-book/trunk/final/+download/fenics-book-2011-10-27-final.pdf>`__
 
 **********************
 Supplementary material
@@ -33,16 +51,16 @@ material in the form of code examples. Follow the links below to find
 the supplementary material.
 
 .. list-table::
-    :widths: 10 100
+    :widths: 20 80
     :header-rows: 0
     :class: center
 
     * - Chapter 1
-      - `A FEniCS Tutorial
-        <http://www.fenicsproject.org/pub/book/chapters/chapter-01>`__
+      - `A FEniCS tutorial
+        <http://www.fenicsproject.org/pub/book/chapters/01>`__
     * - Chapter 20
       - `Finite elements for incompressible fluids
-        <http://www.fenicsproject.org/pub/book/chapters/chapter-20>`__
+        <http://www.fenicsproject.org/pub/book/chapters/20>`__
 
 .. note::
     The above directories are currently empty. The above list will be
