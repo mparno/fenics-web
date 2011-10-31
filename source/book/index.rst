@@ -38,6 +38,8 @@ production. We expect the book to be available in stores in November
 
 * `Order directly from Springer <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
 * `Order from Amazon <http://www.amazon.com/Automated-Solution-Differential-Equations-Element/dp/3642230989/>`__
+* `Order from Akademika <http://www.akademika.no/automated-solution-of-differential-equations-by-the-finite-element-method/garth-wells-redaktoer/anders-logg-redaktoer/kent-andre>`__
+* `Order from Tanum <http://www.tanum.no/product.aspx?isbn=3642230989>`__
 * `Order from Bokus <http://www.bokus.com/bok/9783642230981/automated-solution-of-differential-equations-by-the-finite-element-method/>`__
 * `Order from Adlibris <http://www.adlibris.com/se/product.aspx?isbn=3642230989>`__
 * `Download from Launchpad <http://launchpad.net/fenics-book/trunk/final/+download/fenics-book-2011-10-27-final.pdf>`__
