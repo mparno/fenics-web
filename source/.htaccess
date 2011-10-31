@@ -1,6 +1,6 @@
 XBitHack On
 RewriteEngine On
 RewriteBase /
-RewriteRule ^doc/?$ http://fenicsproject.org/documentation/ [NC,QSA,L,R=301]
+RewriteRule ^doc/(.*) http://fenicsproject.org/documentation/$1 [NC,QSA,L,R=301]
 RewriteCond %{HTTP_HOST} ^www.fenicsproject.org [NC]
 RewriteRule ^(.*)$ http://fenicsproject.org/$1 [L,R=301]
