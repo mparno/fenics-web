@@ -8,6 +8,36 @@
 	<description>FEniCS News - http://www.fenicsproject.org/</description>
 
 <item>
+	<title>dorsal: Dorsal 1.0-beta2 Released!</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-30:/+announcement/9123</guid>
+	<link>https://launchpad.net/dorsal/+announcement/9123</link>
+	<description><p>This release continues to polish Dorsal toward the imminent release of FEniCS 1.0. Please check it out and report bugs.</p></description>
+	<pubDate>Sun, 30 Oct 2011 19:52:20 +0000</pubDate>
+</item>
+<item>
+	<title>instant: UFC 1.0-beta2 released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-28:/+announcement/9118</guid>
+	<link>https://launchpad.net/instant/+announcement/9118</link>
+	<description><p>This release contains an improvement for file locking on NFS.</p></description>
+	<pubDate>Fri, 28 Oct 2011 17:10:59 +0000</pubDate>
+</item>
+<item>
+	<title>fenics: FEniCS 1.0-beta2 binaries released</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-28:/+announcement/9116</guid>
+	<link>https://launchpad.net/fenics/+announcement/9116</link>
+	<description><p>The binaries for FEniCS 1.0-beta2 are now available for download!</p>
+<p>New this time is support for OS X Lion and DOLFIN is now built with Trilinos support in the OS X binaries.</p>
+<p>Users of Ubuntu 10.04 and 10.10 should note that  an additional PPA is needed to get the latest release. See the web page for details.</p></description>
+	<pubDate>Fri, 28 Oct 2011 16:03:18 +0000</pubDate>
+</item>
+<item>
+	<title>fenics-book: FEniCS book finished</title>
+	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9111</guid>
+	<link>https://launchpad.net/fenics-book/+announcement/9111</link>
+	<description><p>The final version of the FEniCS book has now been submitted to Springer. If all goes well, the book should be in stores in the middle of November.</p></description>
+	<pubDate>Wed, 26 Oct 2011 22:51:44 +0000</pubDate>
+</item>
+<item>
 	<title>ufl: UFL 1.0-beta3 released</title>
 	<guid isPermaLink="false">tag:launchpad.net,2011-10-26:/+announcement/9110</guid>
 	<link>https://launchpad.net/ufl/+announcement/9110</link>
@@ -48,35 +78,6 @@
 	<link>https://launchpad.net/fenics-syfi/+announcement/8872</link>
 	<description><p>SyFi has been updated to Dolfin/UFL 1.0-beta. Build system changed to cmake.</p></description>
 	<pubDate>Fri, 02 Sep 2011 10:10:10 +0000</pubDate>
-</item>
-<item>
-	<title>dorsal: Dorsal 1.0-beta Released!</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-23:/+announcement/8830</guid>
-	<link>https://launchpad.net/dorsal/+announcement/8830</link>
-	<description><p>This is the first release in a long while, and so contains numerous updates for all the projects that have evolved in this period. It is also the first release that is under the LGPL.</p>
-<p>Please check it out and help us polish it toward the imminent release of FEniCS 1.0.</p></description>
-	<pubDate>Tue, 23 Aug 2011 08:39:16 +0000</pubDate>
-</item>
-<item>
-	<title>fenics-web: The new web pages have been released!</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-19:/+announcement/8810</guid>
-	<link>https://launchpad.net/fenics-web/+announcement/8810</link>
-	<description><p>The most recent reincarnation of the FEniCS web site has now been unleashed onto the world. Please check it out and report bugs so we can squash them all before the upcoming release of FEniCS 1.0.</p></description>
-	<pubDate>Fri, 19 Aug 2011 10:53:15 +0000</pubDate>
-</item>
-<item>
-	<title>viper: Viper 1.0-beta</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8783</guid>
-	<link>https://launchpad.net/fenics-viper/+announcement/8783</link>
-	<description><p>A new version of Viper has been released, fixing a minor bug.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:18:41 +0000</pubDate>
-</item>
-<item>
-	<title>ufl: UFL 1.0-beta2</title>
-	<guid isPermaLink="false">tag:launchpad.net,2011-08-11:/+announcement/8782</guid>
-	<link>https://launchpad.net/ufl/+announcement/8782</link>
-	<description><p>A new version of UFL has been released. This version fixes a minor bug for handling constants in forms.</p></description>
-	<pubDate>Thu, 11 Aug 2011 21:18:12 +0000</pubDate>
 </item>
 
 </channel>
