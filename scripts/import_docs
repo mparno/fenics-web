@@ -87,7 +87,7 @@ import_doc()
     popd > /dev/null
 
     # Copy HTML to main build tree
-    HTML_DIR="build/html/doc/$package/$PACKAGE_VERSION/$SUFFIX"
+    HTML_DIR="build/html/documentation/$package/$PACKAGE_VERSION/$SUFFIX"
     mkdir -p $HTML_DIR
     $RSYNC $DOC_TO/build/html/ $HTML_DIR
 }
