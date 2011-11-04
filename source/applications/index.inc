@@ -83,6 +83,27 @@
 
         </div><!-- #front-block-4 .front-block .block-->
 
+      	<div id="front-block-5" class="front-block block">
+
+	  <h3>Unicorn &mdash; A massively parallel adaptive continuum solver</h3>
+          <img alt='' src='/_static/images/unicorn_mixer.gif'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+          <p> Unicorn is a massively parallel adaptive finite element
+          solver for fluid and structure mechanics, including fluid-structure
+          interaction problems. Unicorn aims at developing one unified continuum
+          mechanics solver for a wide range of applications, based on the suite
+          DOLFIN/FFC/FIAT. We have been able to show strong linear scaling up to
+          6000 cores. It is primarily developed by <a href="http://www.csc.kth.se/ctl">CTL</a>
+          hosted at <a href="http://www.kth.se">KTH</a> in Stockholm.
+          </p>
+
+          <p><a href="https://launchpad.net/unicorn"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div><!-- #front-block-5 .front-block .block-->
+
       </div><!-- #sub-feature -->
     </div><!-- #content -->
   </div><!-- #container .feature -->
