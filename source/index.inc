@@ -30,6 +30,12 @@
 		<p>FEniCS 1.0 coming soon!</p>
 	      </div>
 	    </div>
+	    <div class="slide">
+	      <a href="https://launchpad.net/unicorn"><img src="/_static/images/featured/featured_item_unicorn.png" width="366" height="282" alt="Unicorn: Massively parallel adaptive continuum solver"></a>
+	      <div class="caption">
+		<p>Unicorn: Massively parallel adaptive continuum solver</p>
+	      </div>
+	    </div>
           </div>
         </div>
       </div>

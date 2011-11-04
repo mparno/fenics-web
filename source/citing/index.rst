@@ -95,3 +95,23 @@ SyFi
   Generation for Finite Element Methods, ACM Transactions on
   Mathematical Software 37(1).
   [`dx.doi.org/10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_]
+
+Unicorn
+-------
+- Hoffman, J., Jansson, J., de Abreu, R. V., Degirmenci, N. C., Jansson, N. Muller, K., Nazarov, M. and Spuhler, J. H. (2011).
+  Unicorn: Parallel adaptive finite element simulation of turbulent flow and
+  fluid-structure interaction for deforming domains and complex
+  geometry. Tech. Rep. KTH-CTL-4024, Computational Technology
+  Laboratory, http://www.publ.kth.se/trita/ctl-4/024/
+
+- Hoffman, J., Jansson, J., Degirmenci, C., Jansson, N., Nazarov, M. (2011)
+  Unicorn: A Unified Continuum Mechanics Solver, in: Automated
+  Scientific Computing, Springer
+
+- Hoffman, J., Jansson, J., Jansson, N., Johnson, C. and Vilela De Abreu, R. V. (2011)
+  Turbulent flow and fluid–structure interaction, in: Automated
+  Scientific Computing, Springer
+
+- Hoffman, J., Jansson, J, Jansson, N., Nazarov, M. (2011).
+  Unicorn,
+  https://launchpad.net/unicorn.
