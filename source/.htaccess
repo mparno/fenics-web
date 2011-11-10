@@ -3,9 +3,6 @@ RewriteEngine On
 Options +FollowSymlinks
 RewriteBase /
 RewriteRule ^doc/(.*) http://fenicsproject.org/documentation/$1 [NC,QSA,L,R=301]
+RewriteCond %{HTTP_HOST} ^(www\.)?fenicsproject\.(com|net|eu|se) [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.fenicsproject\.org [NC]
-RewriteCond %{HTTP_HOST} ^(www\.)?fenicsproject\.com [OR,NC]
-RewriteCond %{HTTP_HOST} ^(www\.)?fenicsproject\.net [OR,NC]
-RewriteCond %{HTTP_HOST} ^(www\.)?fenicsproject\.eu [OR,NC]
-RewriteCond %{HTTP_HOST} ^(www\.)?fenicsproject\.se [OR,NC]
 RewriteRule ^(.*)$ http://fenicsproject.org/$1 [L,R=301]
