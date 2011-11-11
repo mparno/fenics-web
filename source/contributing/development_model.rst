@@ -34,14 +34,15 @@ release (version X.Y.0):
 1. A **suggestion** is made on the FEniCS mailing list to create a new stable release.
 2. Concensus is reached that the timing is good.
 3. A **release manager** is appointed.
-4. The X.Y **branch** is created and X.Y-beta1 is released.
-5. A number of **X.Y-betaN** releases may follow.
-6. One or more release candidates **X.Y-rcN** are released.
-7. The stable version **X.Y.0** is released.
+4. Trunk is **tagged** with **branch-X.Y.x**
+5. The X.Y.x **branch** is created and X.Y-beta1 is released.
+6. A number of **X.Y-betaN** releases may follow.
+7. One or more release candidates **X.Y-rcN** are released.
+8. The stable version **X.Y.0** is released.
 
 A reasonable schedule for the release process is one week from the
-time the suggestion is made (1) to the time when the X.Y branch is
-created (2), and one month from the creation of the X.Y branch (2) to
+time the suggestion is made (1) to the time when the X.Y.x branch is
+created (2), and one month from the creation of the X.Y.x branch (2) to
 the release of X.Y.0 (7).
 
 At the time of branching, the following conditions should be met:
