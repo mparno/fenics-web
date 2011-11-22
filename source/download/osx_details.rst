@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.0-beta2, FFC 1.0-beta2, FIAT 1.0-beta,
-Instant 1.0-beta, UFC 2.0.3, UFL 1.0-beta3, and Viper 1.0-beta.
+This release includes DOLFIN 1.0-rc1, FFC 1.0-beta2, FIAT 1.0-beta,
+Instant 1.0-beta, UFC 2.0.3, UFL 1.0-rc1, and Viper 1.0-beta.
 
 .. include:: icons.rst
 
@@ -16,25 +16,25 @@ Instant 1.0-beta, UFC 2.0.3, UFL 1.0-beta3, and Viper 1.0-beta.
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 1.0-beta2 (Mac OS X 10.6 binary)
+    * - |mac-icon| FEniCS 1.0-rc1 (Mac OS X 10.6 binary)
 
-      - `fenics-1.0-beta2-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta2-osx10.6.dmg>`__
+      - `fenics-1.0-rc1-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc1-osx10.6.dmg>`__
 
-    * - |mac-icon| FEniCS 1.0-beta2 (Mac OS X 10.7 binary)
+    * - |mac-icon| FEniCS 1.0-rc1 (Mac OS X 10.7 binary)
 
-      - `fenics-1.0-beta2-osx10.7.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-beta2-osx10.7.dmg>`__
+      - `fenics-1.0-rc1-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc1-osx10.7.dmg>`__
 
-    * - |archive-icon| FEniCS 1.0-beta2 (Sources for Mac OS X 10.6)
+    * - |archive-icon| FEniCS 1.0-rc1 (Sources for Mac OS X 10.6)
 
-      - `fenics-source-1.0-beta2-osx10.6.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta2-osx10.6.tar.gz>`__
+      - `fenics-source-1.0-rc1-osx10.6.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-rc1-osx10.6.tar.gz>`__
 
-    * - |archive-icon| FEniCS 1.0-beta2 (Sources for Mac OS X 10.7)
+    * - |archive-icon| FEniCS 1.0-rc1 (Sources for Mac OS X 10.7)
 
-      - `fenics-source-1.0-beta2-osx10.7.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-beta2-osx10.7.tar.gz>`__
+      - `fenics-source-1.0-rc1-osx10.7.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-rc1-osx10.7.tar.gz>`__
 
 #########################
 Installation instructions
