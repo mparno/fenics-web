@@ -554,6 +554,7 @@ display: none;
 {
   padding-right: 1em;
   height: 19em;
+  padding-left: 1em;
 }
 
 .mugshot img
