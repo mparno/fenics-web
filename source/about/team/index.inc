@@ -17,9 +17,10 @@
 
           <p>He has been working on the FEniCS project since
           2003. Apart from being the developer and maintainer of
-          several projects (including DOLFIN, FFC, UFC, UFL, CBC.Solve
-          and FEniCS Project web page), Anders has coordinated several
-          FEniCS related activities over the years.</p>
+          several projects (including DOLFIN, FFC, UFC, UFL,
+          CBC.Solve, Exterior and the FEniCS Project web page), Anders
+          has coordinated several FEniCS related activities over the
+          years.</p>
 
           <p>You can view all Anders' contributions on <a
           href="https://launchpad.net/~logg">his Launchpad
@@ -61,7 +62,7 @@
 
 	  <p>She has been working on the FEniCS project since
 	  2007. She is one of the developers of FIAT, FFC, UFL, DOLFIN
-	  and the lead developer of ASCoT</p>
+	  and the lead developer of ASCoT.</p>
 
 	  <p>You can view all Marie's contributions on <a
           href="https://launchpad.net/~meg-simula">her Launchpad
