@@ -549,3 +549,16 @@ div.wrapper {
 display: none;
 }
 }
+
+.mugshot
+{
+  padding-right: 1em;
+  height: 19em;
+}
+
+.mugshot img
+{
+  width: 100px;
+  height: 150px;
+  border: solid 1px #666;
+}
