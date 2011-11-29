@@ -1,5 +1,4 @@
-.. Automatically generated reST file from Doconce source
-   (http://code.google.com/p/doconce/)
+
 
 .. _tut:timedep:
 
@@ -33,15 +32,14 @@ extension of the Poisson problem into the time domain, i.e.,
 the diffusion problem
 
 .. math::
-
-
-        {\partial u\over\partial t} &= \Delta u + f \mbox{ in } \Omega, \hbox{ for } t>0,
+        
+        {\partial u\over\partial t} &= \nabla^2 u + f \mbox{ in } \Omega, \hbox{ for } t>0,
         \\
             u &= u_0 \mbox{ on } \partial \Omega,\hbox{ for } t>0,
         \\
-            u &= I   \mbox{ at } t=0\thinspace .
-
-
+            u &= I   \mbox{ at } t=0\thinspace . 
+        
+        
 
 Here, :math:`u` varies with space and time, e.g., :math:`u=u(x,y,t)` if the spatial
 domain :math:`\Omega` is two-dimensional. The source function :math:`f` and the
@@ -62,30 +60,30 @@ A finite difference discretization in time first consists in
 sampling the PDE at some time level, say :math:`k`:
 
 .. math::
-
-         {\partial \over\partial t}u^k = \Delta u^k + f^k\thinspace .
-
-
+   :label: tut:diffusion:pde1:tk
+         {\partial \over\partial t}u^k = \nabla^2 u^k + f^k\thinspace . 
+        
+        
 
 The time-derivative can be approximated by a finite difference.
 For simplicity and stability reasons we choose a
 simple backward difference:
 
 .. math::
-
+   :label: tut:diffusion:BE
          {\partial \over\partial t}u^k\approx {u^k - u^{k-1}\over{\Delta t}},
-
-
+        
+        
 
 where :math:`{\Delta t}` is the time discretization parameter.
 Inserting this approximation in the PDE yields
 
 .. math::
-
-
-        {u^k - u^{k-1}\over{\Delta t}} = \Delta u^k + f^k\thinspace .
-
-
+   :label: tut:diffusion:pde1:BE
+        
+        {u^k - u^{k-1}\over{\Delta t}} = \nabla^2 u^k + f^k\thinspace . 
+        
+        
 
 This is our time-discrete version of the diffusion PDE
 problem. Reordering the last equation
@@ -97,12 +95,11 @@ spatial (stationary) problems for :math:`u^k` (assuming :math:`u^{k-1}` is known
 computations at the previous time level):
 
 .. math::
-
-
-        u^0  &=  I, \\
-        u^k - {\Delta t}\Delta u^k  &=   u^{k-1} + {\Delta t} f^k,\quad k=1,2,\ldots
-
-
+        
+        u^0 &= I, \\
+        u^k - {\Delta t}\nabla^2 u^k &=  u^{k-1} + {\Delta t} f^k,\quad k=1,2,\ldots
+        
+        
 
 Given :math:`I`, we can solve for :math:`u^0`, :math:`u^1`, :math:`u^2`, and so on.
 
@@ -118,15 +115,14 @@ form can be conveniently written in the standard notation:
 and :math:`a(u,v)=L(v)` for a general step, where
 
 .. math::
-
-
-        a_0(u,v) &= \int_\Omega uv dx, \\
-        L_0(v) &= \int_\Omega Iv dx, \\
+        
+        a_0(u,v) &= \int_\Omega uv \, \mathrm{d}x, \\
+        L_0(v) &= \int_\Omega Iv \, \mathrm{d}x, \\
         a(u,v) &= \int_\Omega\left( uv + {\Delta t}
-        \nabla u\cdot \nabla v\right) dx, \\
-        L(v) &= \int_\Omega \left(u^{k-1} + {\Delta t}  f^k\right)v dx\thinspace .
-
-
+        \nabla u\cdot \nabla v\right) \, \mathrm{d}x, \\
+        L(v) &= \int_\Omega \left(u^{k-1} + {\Delta t}  f^k\right)v \, \mathrm{d}x\thinspace . 
+        
+        
 
 The continuous variational problem is to find
 :math:`u^0\in V` such that :math:`a_0(u^0,v)=L_0(v)` holds for all :math:`v\in\hat V`,
@@ -149,7 +145,7 @@ of the solution at time :math:`t_{k-1}`.
 Note that the forms :math:`a_0` and :math:`L_0` are identical to the forms
 met in the section :ref:`tut:poisson:gradu`, except that the test and trial
 functions are now
-scalar fields and not a vector fields.
+scalar fields and not vector fields.
 Instead of solving
 an equation for :math:`u^0`
 by a finite
@@ -165,7 +161,7 @@ the ``project`` or ``interpolate`` function.
 
 .. _tut:timedep:diffusion1:impl:
 
-Implementation (1)
+Implementation (2)
 ------------------
 
 Our program needs to perform the time stepping explicitly, but can
@@ -177,26 +173,27 @@ and vectors as in the section :ref:`tut:poisson1:linalg`.  The matrix :math:`A`
 arising from :math:`a` can be computed prior to the time stepping, so that
 we only need to compute the right-hand side :math:`b`, corresponding to :math:`L`,
 in each pass in the time loop. Let us express the solution procedure
-in algorithmic form, writing :math:`u` for :math:`u^k` and :math:`u_{\rm prev}` for the
-previous solution :math:`u^{k-1}`:
+in algorithmic form, writing :math:`u` for the unknown spatial function at
+the new time level (:math:`u^k`) and :math:`u_1` for the spatial solution at one
+earlier time level (:math:`u^{k-1}`):
 
  * define Dirichlet boundary condition (:math:`u_0`, Dirichlet boundary, etc.)
 
- * if :math:`u_{\rm prev}` is to be computed by projecting :math:`I`:
+ * if :math:`u_1` is to be computed by projecting :math:`I`:
 
    * define :math:`a_0` and :math:`L_0`
 
    * assemble matrix :math:`M` from :math:`a_0` and vector :math:`b` from :math:`L_0`
 
-   * solve :math:`MU=b` and store :math:`U` in :math:`u_{\rm prev}`
+   * solve :math:`MU=b` and store :math:`U` in :math:`u_1`
 
 
  * else:  (interpolation)
 
-   * let :math:`u_{\rm prev}` interpolate :math:`I`
+   * let :math:`u_1` interpolate :math:`I`
 
 
- * define :math:`a` and $L$\\
+ * define :math:`a` and :math:`L`
 
  * assemble matrix :math:`A` from :math:`a`
 
@@ -206,20 +203,15 @@ previous solution :math:`u^{k-1}`:
 
  * while :math:`t\leq T`
 
-   %s
-    assemble vector :math:`b` from :math:`L`
+   * assemble vector :math:`b` from :math:`L`
 
-   %s
-    apply essential boundary conditions
+   * apply essential boundary conditions
 
-   %s
-    solve :math:`AU=b` for :math:`U` and store in :math:`u`
+   * solve :math:`AU=b` for :math:`U` and store in :math:`u`
 
-   %s
-    :math:`t\leftarrow t + {\Delta t}`
+   * :math:`t\leftarrow t + {\Delta t}`
 
-   %s
-    :math:`u_{\rm prev} \leftarrow u` (be ready for next step)
+   * :math:`u_1 \leftarrow u` (be ready for next step)
 
 
 Before starting the coding, we shall construct a problem where it is
@@ -229,27 +221,40 @@ a linear variation in time. Combining a second-degree polynomial in space
 with a linear term in time,
 
 .. math::
-
+   :label: tut:diffusion:pde1:u0test
          u = 1 + x^2 + \alpha y^2 + \beta t,
-
-
+        
+        
 
 yields a function whose computed values at the nodes may be exact,
 regardless of the size of the elements and :math:`{\Delta t}`, as long as the
 mesh is uniformly partitioned.
 We realize by inserting the simple solution in the PDE problem
 that :math:`u_0` must be given as
-Equation (tut:diffusion:pde1:u0test) and that :math:`f(x,y,t)=\beta - 2 - 2\alpha`
+:eq:`tut:diffusion:pde1:u0test` and that :math:`f(x,y,t)=\beta - 2 - 2\alpha`
 and :math:`I(x,y)=1+x^2+\alpha y^2`.
 
 
+.. index:: d1_d2D.py
 
-.. index:: Expression
 
+A new programming issue is how to deal with functions that vary in
+space *and time*, such as the the boundary condition
+:math:`u_0`.
+A natural solution is
+to apply an ``Expression`` object with time :math:`t` as a parameter,
+in addition to the parameters :math:`\alpha` and :math:`\beta` (see
+the section :ref:`tut:poisson:membrane` for ``Expression``
+objects with parameters):
 
-A new programming issue is
-how to deal with functions that vary in space *and time*, such as
-the boundary condition :math:`u_0`.
+.. code-block:: python
+
+        alpha = 3; beta = 1.2
+        u0 = Expression('1 + x[0]*x[0] + alpha*x[1]*x[1] + beta*t',
+                        alpha=alpha, beta=beta, t=0)
+
+The time parameter can later be updated by assigning values to ``u0.t``.
+
 Given a ``mesh`` and an associated function space ``V``, we
 can specify the :math:`u_0` function as
 
@@ -274,30 +279,33 @@ are set in the usual way,
 
         def boundary(x, on_boundary):  # define the Dirichlet boundary
             return on_boundary
-
+        
         bc = DirichletBC(V, u0, boundary)
 
 
-The initial condition can be computed by either projecting or interpolating
-:math:`I`. The :math:`I(x,y)` function is available in the program through
+We shall use ``u`` for the unknown :math:`u` at the new time level and
+``u_1`` for :math:`u` at the previous time level.  The initial value of
+``u_1``, implied by the initial condition on :math:`u`, can be computed
+by either projecting or interpolating :math:`I`.
+The :math:`I(x,y)` function is available in the program through
 ``u0``,
 as long as ``u0.t`` is zero.
 We can then do
 
 .. code-block:: python
 
-        u_prev = interpolate(u0, V)
+        u_1 = interpolate(u0, V)
         # or
-        u_prev = project(u0, V)
+        u_1 = project(u0, V)
 
 Note that we could, as an equivalent alternative to using ``project``, define
 :math:`a_0` and :math:`L_0` as we did in the section :ref:`tut:poisson:gradu` and form
-a ``VariationalProblem`` object.
+the associated variational problem.
 To actually recover the exact solution
 to machine precision,
 it is important not to compute the discrete initial condition by
 projecting :math:`I`, but by interpolating :math:`I` so that the nodal values are
-exact at :math:`t=0` (projection will imply approximative values at the nodes).
+exact at :math:`t=0` (projection results in approximative values at the nodes).
 
 
 The definition of :math:`a` and :math:`L` goes as follows:
@@ -305,14 +313,14 @@ The definition of :math:`a` and :math:`L` goes as follows:
 .. code-block:: python
 
         dt = 0.3      # time step
-
-        v = TestFunction(V)
+        
         u = TrialFunction(V)
+        v = TestFunction(V)
         f = Constant(beta - 2 - 2*alpha)
-
-        a = u*v*dx + dt*inner(grad(u), grad(v))*dx
-        L = (u_prev + dt*f)*v*dx
-
+        
+        a = u*v*dx + dt*inner(nabla_grad(u), nabla_grad(v))*dx
+        L = (u_1 + dt*f)*v*dx
+        
         A = assemble(a)   # assemble only once, before the time stepping
 
 
@@ -323,32 +331,32 @@ Finally, we perform the time stepping in a loop:
         u = Function(V)   # the unknown at a new time level
         T = 2             # total simulation time
         t = dt
-
+        
         while t <= T:
             b = assemble(L)
             u0.t = t
             bc.apply(A, b)
             solve(A, u.vector(), b)
-
+        
             t += dt
-            u_prev.assign(u)
+            u_1.assign(u)
 
-Observe that ``u0.t`` must be updated before ``bc`` applies
-it to enforce the Dirichlet conditions at the current time level.
+Observe that ``u0.t`` must be updated before the ``bc.apply``
+statement, to enforce computation of Dirichlet conditions at the
+current time level.
 
-The time loop above does not contain any examination of the numerical
-solution, which we must include in order to verify the implementation.
-As in many previous examples, we compute the difference between
-the array of nodal
-values of ``u`` and the array of the interpolated exact solution.
-The following code is to be included inside the loop, after ``u``
-is found:
+The time loop above does not contain any comparison of the numerical
+and the exact solution, which we must include in order to verify the
+implementation.  As in many previous examples, we compute the
+difference between the array of nodal values of ``u`` and the array of
+the interpolated exact solution.  The following code is to be included
+inside the loop, after ``u`` is found:
 
 .. code-block:: python
 
-            u_e = interpolate(u0, V)
-            maxdiff = (u_e.vector().array() - u.vector().array()).max()
-            print 'Max error, t=%.2f: %-10.3f' % (t, maxdiff)
+        u_e = interpolate(u0, V)
+        maxdiff = numpy.abs(u_e.vector().array()-u.vector().array()).max()
+        print 'Max error, t=%.2f: %-10.3f' % (t, maxdiff)
 
 
 
@@ -373,8 +381,8 @@ memory allocation of the right-hand side vector. Before the time loop
 we set ``b = None`` such that ``b`` is defined in the first call to
 ``assemble``.
 
-The complete program code for this time-dependent case is stored in
-the file ``diffusion2D_D1.py``.
+The complete program code for this time-dependent case is stored in the
+file ``d1_d2D.py`` in the directory ``transient/diffusion``.
 
 .. _tut:timedep:diffusion1:noassemble:
 
@@ -415,60 +423,54 @@ and using
 :math:`v=\hat\phi_i` result in
 
 .. math::
+        
+        \int_\Omega \left(u^{k-1} + {\Delta t}f^k\right)v \, \mathrm{d}x &=
+        \int_\Omega \left(\sum_{j=1}^N U^{k-1}_j\phi_j + {\Delta t}\sum_{j=1}^N F^{k}_j\phi_j\right)\hat\phi_i \, \mathrm{d}x,\\
+        &=\sum_{j=1}^N\left(\int_\Omega \hat\phi_i\phi_j \, \mathrm{d}x\right)U^{k-1}_j
+         + {\Delta t}\sum_{j=1}^N\left(\int_\Omega \hat\phi_i\phi_j \, \mathrm{d}x\right)F^{k}_j\thinspace . 
+        
 
-
-        \int_\Omega \left(u^{k-1} + {\Delta t}f^k\right)v dx &=
-        \int_\Omega \left(\sum_{j=1}^N U^{k-1}_j\phi_j + {\Delta t}\sum_{j=1}^N F^{k}_j\phi_j\right)\hat\phi_i dx,\\
-        &=\sum_{j=1}^N\left(\int_\Omega \hat\phi_i\phi_j dx\right)U^{k-1}_j
-         + {\Delta t}\sum_{j=1}^N\left(\int_\Omega \hat\phi_i\phi_j dx\right)F^{k}_j\thinspace .
-
-
-Introducing :math:`M_{ij} = \int_\Omega \hat\phi_i\phi_j dx`, we see that
+Introducing :math:`M_{ij} = \int_\Omega \hat\phi_i\phi_j \, \mathrm{d}x`, we see that
 the last expression can be written
 
 .. math::
-
-
+        
         \sum_{j=1}^NM_{ij}U^{k-1}_j + {\Delta t} \sum_{j=1}^NM_{ij}F^{k}_j,
-
+        
 
 which is nothing but two matrix-vector products,
 
 .. math::
-
-
+        
         MU^{k-1} + {\Delta t} MF^k,
-
+        
 
 if :math:`M` is the matrix with entries :math:`M_{ij}` and
 
 .. math::
-
-
+        
         U^{k-1}=(U^{k-1}_1,\ldots,U^{k-1}_N)^T,
-
+        
 
 and
 
 .. math::
-
-
-        F^k=(F^{k}_1,\ldots,F^{k}_N)^T\thinspace .
-
+        
+        F^k=(F^{k}_1,\ldots,F^{k}_N)^T\thinspace . 
+        
 
 
 We have immediate access to :math:`U^{k-1}`
 in the program since that is the vector
-in the ``u_prev`` function. The :math:`F^k` vector can easily be
+in the ``u_1`` function. The :math:`F^k` vector can easily be
 computed by interpolating the prescribed :math:`f` function (at each time level if
 :math:`f` varies with time). Given :math:`M`, :math:`U^{k-1}`, and :math:`F^k`, the right-hand side
 :math:`b` can be calculated as
 
 .. math::
-
-
-        b = MU^{k-1} + {\Delta t} MF^k \thinspace .
-
+        
+        b = MU^{k-1} + {\Delta t} MF^k \thinspace . 
+        
 
 That is, no assembly is necessary to compute :math:`b`.
 
@@ -477,27 +479,24 @@ We insert :math:`v=\hat\phi_i` and :math:`u^k = \sum_{j=1}^N U^k_j\phi_j` in
 the relevant equations to get
 
 .. math::
-
-
-        \sum_{j=1}^N \left(\int_\Omega \hat\phi_i\phi_j dx\right)U^k_j + {\Delta t}
-        \sum_{j=1}^N \left(\int_\Omega \nabla\hat\phi_i\cdot\nabla\phi_j dx\right)U^k_j,
-
+        
+        \sum_{j=1}^N \left(\int_\Omega \hat\phi_i\phi_j \, \mathrm{d}x\right)U^k_j + {\Delta t}
+        \sum_{j=1}^N \left(\int_\Omega \nabla\hat\phi_i\cdot\nabla\phi_j \, \mathrm{d}x\right)U^k_j,
+        
 
 which can be written as a sum of matrix-vector products,
 
 .. math::
-
-
+        
         MU^k + {\Delta t} KU^k = (M + {\Delta t} K)U^k,
-
+        
 
 if we identify the matrix :math:`M` with entries :math:`M_{ij}` as above and
 the matrix :math:`K` with entries
 
 .. math::
-
-         K_{ij} = \int_\Omega \nabla\hat\phi_i\cdot\nabla\phi_j dx\thinspace .
-
+         K_{ij} = \int_\Omega \nabla\hat\phi_i\cdot\nabla\phi_j \, \mathrm{d}x\thinspace . 
+        
 
 The matrix :math:`M` is often called the "mass matrix" while "stiffness matrix"
 is a common nickname for :math:`K`. The associated bilinear forms for these
@@ -505,12 +504,11 @@ matrices, as we need them for the assembly process in a FEniCS
 program, become
 
 .. math::
-
-
-        a_K(u,v) &= \int_\Omega\nabla u\cdot\nabla v dx,
+        
+        a_K(u,v) &= \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x,
         \\
-        a_M(u,v) &= \int_\Omega uv dx \thinspace .
-
+        a_M(u,v) &= \int_\Omega uv \, \mathrm{d}x \thinspace . 
+        
 
 
 The linear system at each time level, written as :math:`AU^k=b`,
@@ -518,7 +516,11 @@ can now be computed by first computing :math:`M` and :math:`K`, and then forming
 :math:`A=M+{\Delta t} K` at :math:`t=0`, while :math:`b` is computed as
 :math:`b=MU^{k-1} + {\Delta t}MF^k` at each time level.
 
-The following modifications are needed in the ``diffusion2D_D1.py``
+
+.. index:: d2_d2D.py
+
+
+The following modifications are needed in the ``d1_d2D.py``
 program from the previous section in order to implement the new
 strategy of avoiding assembly at each time level:
 
@@ -539,30 +541,34 @@ The relevant code segments become
 .. code-block:: python
 
         # 1.
-        a_K = inner(grad(u), grad(v))*dx
+        a_K = inner(nabla_grad(u), nabla_grad(v))*dx
         a_M = u*v*dx
-
+        
         # 2. and 3.
         M = assemble(a_M)
         K = assemble(a_K)
         A = M + dt*K
-
+        
         # 4.
-        f = Expression('beta - 2 - 2*alpha', {'beta': beta, 'alpha': alpha})
-
+        f = Expression('beta - 2 - 2*alpha', beta=beta, alpha=alpha)
+        
         # 5. and 6.
         while t <= T:
-            fk = interpolate(f, V)
-            Fk = fk.vector()
-            b = M*u_prev.vector() + dt*M*Fk
+            f_k = interpolate(f, V)
+            F_k = f_k.vector()
+            b = M*u_1.vector() + dt*M*F_k
 
-The complete program appears in the file ``diffusion2D_D2.py``.
+The complete program appears in the file ``d2_d2D.py``.
 
 
 .. _tut:timedep:diffusion2:sin:
 
 A Physical Example
 ------------------
+
+
+.. index:: sin_daD.py
+
 
 With the basic programming techniques for time-dependent problems from
 the sections :ref:`tut:timedep:diffusion1:noassemble`-:ref:`tut:timedep:diffusion1:impl`
@@ -575,10 +581,9 @@ At the top of the domain, :math:`x_{d-1}=0`, we have an oscillating
 temperature
 
 .. math::
-
-
+        
         T_0(t) = T_R + T_A\sin (\omega t),
-
+        
 
 where :math:`T_R` is some reference temperature, :math:`T_A` is the amplitude of
 the temperature variations at the surface, and :math:`\omega` is the frequency
@@ -596,22 +601,21 @@ problem, with a small region where the heat conductivity is much lower.
 
 .. _tut:timedep:diffusion2:sin:fig1:
 
-.. figure:: eps/daynight.png
-   :width: 400
+.. figure:: figs/daynight.png
+   :width: 480
 
-   Sketch of a (2D) problem involving heating and cooling of the ground due to an oscillating surface temperature
+   Sketch of a (2D) problem involving heating and cooling of the ground due to an oscillating surface temperature  
 
 
 The initial-boundary value problem for this problem reads
 
 .. math::
-
-
+        
         \varrho c{\partial T\over\partial t} &= \nabla\cdot\left( \kappa\nabla T\right)\hbox{ in }\Omega\times (0,t_{\hbox{stop}}],\\
         T &= T_0(t)\hbox{ on }\Gamma_0,\\
         {\partial T\over\partial n} &= 0\hbox{ on }\partial\Omega\backslash\Gamma_0,\\
-        T &= T_R\hbox{ at }t =0\thinspace .
-
+        T &= T_R\hbox{ at }t =0\thinspace . 
+        
 
 Here, :math:`\varrho` is the density of the soil, :math:`c` is the
 heat capacity, :math:`\kappa` is the thermal conductivity
@@ -622,10 +626,9 @@ We use a $\theta$-scheme in time, i.e., the evolution equation
 :math:`\partial P/\partial t=Q(t)` is discretized as
 
 .. math::
-
-
+        
         {P^k - P^{k-1}\over{\Delta t}} = \theta Q^k + (1-\theta )Q^{k-1},
-
+        
 
 where :math:`\theta\in[0,1]` is a weighting factor: :math:`\theta =1` corresponds
 to the backward difference scheme, :math:`\theta =1/2` to the Crank-Nicolson
@@ -633,31 +636,29 @@ scheme, and :math:`\theta =0` to a forward difference scheme.
 The $\theta$-scheme applied to our PDE results in
 
 .. math::
-
-
+        
         \varrho c{T^k-T^{k-1}\over{\Delta t}} =
         \theta \nabla\cdot\left( \kappa\nabla T^k\right)
-        + (1-\theta) \nabla\cdot\left( k\nabla T^{k-1}\right)\thinspace .
-
+        + (1-\theta) \nabla\cdot\left( k\nabla T^{k-1}\right)\thinspace . 
+        
 
 Bringing this time-discrete PDE into weak form follows the technique shown
 many times earlier in this tutorial. In the standard notation
 :math:`a(T,v)=L(v)` the weak form has
 
 .. math::
-
-
+        
         a(T,v) &= \int_\Omega
-        \left( \varrho c Tv + \theta{\Delta t} \kappa\nabla T\cdot \nabla v\right) dx,\\
+        \left( \varrho c Tv + \theta{\Delta t} \kappa\nabla T\cdot \nabla v\right) \, \mathrm{d}x,\\
         L(v) &= \int_\Omega \left( \varrho c T^{k-1}v - (1-\theta){\Delta t}
-        \kappa\nabla T^{k-1}\cdot \nabla v\right) dx\thinspace .
-
+        \kappa\nabla T^{k-1}\cdot \nabla v\right) \, \mathrm{d}x\thinspace . 
+        
 
 Observe that boundary integrals vanish because of the Neumann boundary
 conditions.
 
 
-.. index:: heterogeneous media
+.. index:: heterogeneous medium
 
 
 .. index:: multi-material domain
@@ -686,7 +687,7 @@ can be created by the following code:
         elif d == 3:
             mesh = Box(-W/2, -W/2, -D, W/2, W/2, 0,
                        divisions[0], divisions[1], divisions[2])
-        V = FunctionSpace(mesh, 'CG', degree)
+        V = FunctionSpace(mesh, 'Lagrange', degree)
 
 The ``Rectangle`` and ``Box`` objects are defined by the coordinates
 of the "minimum" and "maximum" corners.
@@ -696,16 +697,15 @@ Setting Dirichlet conditions at the upper boundary can be done by
 .. code-block:: python
 
         T_R = 0; T_A = 1.0; omega = 2*pi
+        
         T_0 = Expression('T_R + T_A*sin(omega*t)',
-                         {'T_R': T_R, 'T_A': T_A, 'omega': omega, 't': 0.0})
-
+                         T_R=T_R, T_A=T_A, omega=omega, t=0.0)
+        
         def surface(x, on_boundary):
             return on_boundary and abs(x[d-1]) < 1E-14
-
+        
         bc = DirichletBC(V, T_0, surface)
 
-Quite simple values (non-physical for soil and real temperature variations)
-are chosen for the initial testing.
 
 The :math:`\kappa` function can be defined as a constant :math:`\kappa_1` inside
 the particular rectangular area with a special soil composition, as
@@ -714,10 +714,9 @@ this area :math:`\kappa` is a constant :math:`\kappa_0`.
 The domain of the rectangular area is taken as
 
 .. math::
-
-
+        
         [-W/4, W/4]\times [-W/4, W/4]\times [-D/2, -D/2 + D/4]
-
+        
 
 in 3D, with :math:`[-W/4, W/4]\times [-D/2, -D/2 + D/4]` in 2D and
 :math:`[-D/2, -D/2 + D/4]` in 1D.
@@ -755,64 +754,54 @@ Function expressions in terms of strings are compiled to efficient
 C++ functions, being called from C++, so we should try to express functions
 as string expressions if possible. (The ``eval`` method can also be
 defined through C++ code, but this is much
-more involved and not covered here.)
+more complicated and not covered here.)
 Using inline if-tests in C++, we can make string expressions for
 :math:`\kappa`:
 
 .. code-block:: python
 
-        kappa_0 = 0.2
-        kappa_1 = 0.001
         kappa_str = {}
-        kappa_str[1] = 'x[0] > -%s/2 && x[0] < -%s/2 + %s/4 ? %g : %g' % \
-                       (D, D, D, kappa_1, kappa_0)
-        kappa_str[2] = 'x[0] > -%s/4 && x[0] < %s/4 '\
-                    '&& x[1] > -%s/2 && x[1] < -%s/2 + %s/4 ? %g : %g' % \
-                       (W, W, D, D, D, kappa_1, kappa_0)
-        kappa_str[3] = 'x[0] > -%s/4 && x[0] < %s/4 '\
-                       'x[1] > -%s/4 && x[1] < %s/4 '\
-                    '&& x[2] > -%s/2 && x[2] < -%s/2 + %s/4 ? %g : %g' % \
-                       (W, W, W, W, D, D, D, kappa_1, kappa_0)
-
-        kappa = Expression(kappa_str[d])
-
-For example, in 2D ``kappa_str[1]`` becomes
-
-.. code-block:: py
+        kappa_str[1] = 'x[0] > -D/2 && x[0] < -D/2 + D/4 ? kappa_1 : kappa_0'
+        kappa_str[2] = 'x[0] > -W/4 && x[0] < W/4 '\
+                       '&& x[1] > -D/2 && x[1] < -D/2 + D/4 ? '\
+                       'kappa_1 : kappa_0'
+        kappa_str[3] = 'x[0] > -W/4 && x[0] < W/4 '\
+                       'x[1] > -W/4 && x[1] < W/4 '\
+                       '&& x[2] > -D/2 && x[2] < -D/2 + D/4 ?'\
+                       'kappa_1 : kappa_0'
+        
+        kappa = Expression(kappa_str[d],
+                           D=D, W=W, kappa_0=kappa_0, kappa_1=kappa_1)
 
 
-        x[0] > -0.5/4 && x[0] < 0.5/4 && x[1] > -1.0/2 &&
-        x[1] < -1.0/2 + 1.0/4 ? 1e-03 : 0.2
-
-for :math:`D=1` and :math:`W=D/2` (the string is one line, but
-broken into two here to fit the page width). It is very important to have
-a ``D`` that is ``float`` and not ``int``, otherwise one gets
-integer divisions in the C++ expression and a completely wrong :math:`\kappa`
-function.
-
+Let ``T`` denote the unknown spatial temperature function at the
+current time level, and let ``T_1`` be the corresponding function
+at one earlier time level.
 We are now ready to define the initial condition and the
 ``a`` and ``L`` forms of our problem:
 
 .. code-block:: python
 
         T_prev = interpolate(Constant(T_R), V)
-
+        
         rho = 1
         c = 1
         period = 2*pi/omega
         t_stop = 5*period
         dt = period/20  # 20 time steps per period
         theta = 1
-
-        v = TestFunction(V)
+        
         T = TrialFunction(V)
+        v = TestFunction(V)
         f = Constant(0)
-        a = rho*c*T*v*dx + theta*dt*kappa*inner(grad(T), grad(v))*dx
+        a = rho*c*T*v*dx + theta*dt*kappa*\
+            inner(nabla_grad(T), nabla_grad(v))*dx
         L = (rho*c*T_prev*v + dt*f*v -
-             (1-theta)*dt*kappa*inner(grad(T), grad(v)))*dx
-
+             (1-theta)*dt*kappa*inner(nabla_grad(T), nabla_grad(v)))*dx
+        
         A = assemble(a)
         b = None  # variable used for memory savings in assemble calls
+        T = Function(V)   # unknown at the current time level
 
 We could, alternatively, break ``a`` and ``L`` up in subexpressions
 and assemble a mass matrix and stiffness matrix, as exemplified in
@@ -837,36 +826,86 @@ the section :ref:`tut:timedep:diffusion1:impl`:
             t += dt
             T_prev.assign(T)
 
-The complete code in ``diffusion123D_sin.py`` contains several
-statements related to visualization of the solution, both as a
+The complete code in ``sin_daD.py`` contains several
+statements related to visualization and animation of the solution, both as a
 finite element field (``plot`` calls) and as a curve in the
 vertical direction. The code also plots the exact analytical solution,
 
 .. math::
+        
+        T(x,t) = T_R + T_Ae^{ax}\sin (\omega t + ax),\quad a =\sqrt{\omega\varrho c\over 2\kappa},
+        
+
+which is valid when :math:`\kappa = \kappa_0=\kappa_1`.
+
+Implementing this analytical solution as a Python function
+taking scalars and numpy arrays as arguments requires a word of caution.
+A straightforward function like
+
+.. code-block:: python
+
+        def T_exact(x):
+            a = sqrt(omega*rho*c/(2*kappa_0))
+            return T_R + T_A*exp(a*x)*sin(omega*t + a*x)
+
+will not work and result in an error message from UFL. The reason is that
+the names ``exp`` and ``sin`` are those imported
+by the ``from dolfin import *`` statement, and these names
+come from UFL and are aimed at being used in variational forms.
+In the ``T_exact`` function where ``x`` may be a scalar or a
+``numpy`` array, we therefore need to explicitly specify
+``numpy.exp`` and ``numpy.sin``:
+
+.. code-block:: python
+
+        def T_exact(x):
+            a = sqrt(omega*rho*c/(2*kappa_0))
+            return T_R + T_A*numpy.exp(a*x)*numpy.sin(omega*t + a*x)
 
 
-        T(x,t) = T_R + T_Ae^{ax}\sin (\omega t + ax),\quad a
-        =\sqrt{\omega\varrho c\over 2\kappa},
+.. In general, all pure Python functions in FEniCS code that are
+
+.. supposed to apply mathematical functions like \emp{exp}, \emp{log},
+
+.. \emp{sin}, \emp{cos}, etc., to \emp{numpy} arrays must
+
+.. explicitly have the \emp{numpy} prefix (or be imported after
+
+.. \emp{from dolfin import *}, but then the UFL versions of
+
+.. \emp{exp}, \emp{log}, etc., are gone).
 
 
-which is valid when :math:`\kappa` is constant throughout :math:`\Omega`.
-The reader is encouraged
-to play around with the code and test out various parameter sets:
+The reader
+is encouraged to play around with the code and test out various parameter
+sets:
 
-  * :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0 = \kappa_1=0.2`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
+ 1. :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0 = \kappa_1=0.2`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
 
-  * :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0=0.2`, :math:`\kappa_1=0.01`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
+ 2. :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0=0.2`, :math:`\kappa_1=0.01`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
 
-  * :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0=0.2`, :math:`\kappa_1=0.001`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
+ 3. :math:`T_R=0`, :math:`T_A=1`, :math:`\kappa_0=0.2`, :math:`\kappa_1=0.001`, :math:`\varrho = c = 1`, :math:`\omega = 2\pi`
 
-  * :math:`T_R=10` C, :math:`T_A=10` C, :math:`\kappa_0= 1.1 \hbox{ K}^{-1}\hbox{Ns}^{-1}`,
+ 4. :math:`T_R=10` C, :math:`T_A=10` C, :math:`\kappa_0= 2.3 \hbox{ K}^{-1}\hbox{Ns}^{-1}`,
+    :math:`\kappa_1= 100 \hbox{ K}^{-1}\hbox{Ns}^{-1}`,
+    :math:`\varrho = 1500\hbox{ kg/m}^3`,
+    :math:`c = 1480\hbox{ Nm\,kg}^{-1}\hbox{K}^{-1}`,
+    :math:`\omega = 2\pi/24` 1/h  :math:`= 7.27\cdot 10^{-5}` 1/s, :math:`D=1.5` m
 
-:math:`\kappa_0= 2.3 \hbox{ K}^{-1}\hbox{Ns}^{-1}`,
-:math:`\varrho = 1500\hbox{ kg/m}^3`,
-:math:`c = 1600\hbox{ Nm\,kg}^{-1}\hbox{K}^{-1}`,
-:math:`\omega = 2\pi/24` 1/h  :math:`= 7.27\cdot 10^{-5}` 1/s, :math:`D=1.5` m
+ 5. As above, but :math:`\kappa_0= 12.3 \hbox{ K}^{-1}\hbox{Ns}^{-1}` and
+    :math:`\kappa_1= 10^4 \hbox{ K}^{-1}\hbox{Ns}^{-1}`
+
+Data set number 4 is relevant for real temperature variations in
+the ground (not necessarily the large value of :math:`\kappa_1`),
+while data set number 5
+exaggerates the effect of a large heat conduction contrast so that
+it becomes clearly visible in an animation.
+
 .. kappa_1 = 1.1, varrho_1 = 1200, c_1 = 1000 => 9.17E-7
+
 .. kappa_0 = 2.3, varrho_0 = 1800, c_0 = 1500 => 8.52E-7
 
-The latter set of data is relevant for real temperature variations in the
-ground.
+
+
+
+

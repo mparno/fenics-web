@@ -1,5 +1,3 @@
-.. Automatically generated reST file from Doconce source
-   (http://code.google.com/p/doconce/)
 
 
 Handling Domains with Different Materials
@@ -12,7 +10,7 @@ Handling Domains with Different Materials
 
 
 Solving PDEs in domains made up of different materials is a frequently
-encountered task. In FEniCS, this kind of problems are handled by
+encountered task. In FEniCS, these kind of problems are handled by
 defining subdomains inside the domain. The subdomains may represent the
 various materials. We can thereafter define material properties through
 functions, known in FEniCS as *mesh functions*,
@@ -21,7 +19,9 @@ A simple example with
 two materials (subdomains) in 2D will
 demonstrate the basic steps in the process.
 .. Later, a multi-material
+
 .. problem in :math:`d` space dimensions is addressed.
+
 
 .. _tut:possion:2D:2mat:problem:
 
@@ -32,10 +32,10 @@ Working with Two Subdomains
 Suppose we want to solve
 
 .. math::
-
-
+   :label: tut:poisson:2D:2mat:varcoeff2
+         
             \nabla\cdot \left\lbrack k(x,y)\nabla u(x,y)\right\rbrack = 0,
-
+        
 
 in a domain :math:`\Omega` consisting of two subdomains where :math:`k` takes on
 a different value in each subdomain.
@@ -45,11 +45,10 @@ the domain :math:`\Omega = [0,1]\times [0,1]` and divide it into two equal
 subdomains,
 
 .. math::
-
-
+        
         \Omega_0 = [0, 1]\times [0,1/2],\quad
-        \Omega_1 = [0, 1]\times (1/2,1]\thinspace .
-
+        \Omega_1 = [0, 1]\times (1/2,1]\thinspace . 
+        
 
 We define :math:`k(x,y)=k_0` in :math:`\Omega_0` and :math:`k(x,y)=k_1` in :math:`\Omega_1`,
 where :math:`k_0>0` and :math:`k_1>0` are given constants.
@@ -58,13 +57,12 @@ and :math:`\partial u/\partial n=0` at :math:`x=0` and :math:`x=1`.
 One can show that the exact solution is now given by
 
 .. math::
-
-
+        
         u(x, y) = \left\lbrace\begin{array}{ll}
         {2yk_1\over k_0+k_1}, & y \leq 1/2\\
         {(2y-1)k_0 + k_1\over k_0+k_1}, & y \geq 1/2
         \end{array}\right.
-
+        
 
 As long as the element boundaries coincide with the internal boundary
 :math:`y=1/2`, this piecewise linear solution should be exactly recovered
@@ -80,15 +78,18 @@ the fluid differs by a factor of 10.
 
 .. _tut:possion:2D:2mat:impl:
 
-Implementation (2)
+Implementation (3)
 ------------------
 
 
 .. index:: boundary specification (class)
 
 
+.. index:: mat2_p2D.py
+
+
 The new functionality in this subsection regards how to
-to define the subdomains
+define the subdomains
 :math:`\Omega_0` and :math:`\Omega_1`. For this purpose we need to
 use subclasses of class ``SubDomain``,
 not only plain functions as we have used so far
@@ -109,10 +110,10 @@ which implements the ``inside`` method as an alternative to the
 .. code-block:: python
 
         class Boundary(SubDomain):
-            def inside(x, on_boundary):
+            def inside(self, x, on_boundary):
                 tol = 1E-14
                 return on_boundary and abs(x[0]) < tol
-
+        
         boundary = Boundary()
         bc = DirichletBC(V, Constant(0), boundary)
 
@@ -126,8 +127,8 @@ as interchangeable terms. In other computer programming languages one may
 also use the term *variable* for the same thing.
 We mostly use the well-known  term *object* in this text.
 
-A subclass of ``SubDomain`` with an ``inside`` method gives
-access to more functionality for marking parts of the domain or
+A subclass of ``SubDomain`` with an ``inside`` method offers
+functionality for marking parts of the domain or
 the boundary. Now we need to define one class for the
 subdomain :math:`\Omega_0`
 where :math:`y\leq 1/2` and another for the subdomain :math:`\Omega_1` where :math:`y\geq 1/2`:
@@ -137,7 +138,7 @@ where :math:`y\leq 1/2` and another for the subdomain :math:`\Omega_1` where :ma
         class Omega0(SubDomain):
             def inside(self, x, on_boundary):
                 return True if x[1] <= 0.5 else False
-
+        
         class Omega1(SubDomain):
             def inside(self, x, on_boundary):
                 return True if x[1] >= 0.5 else False
@@ -154,7 +155,7 @@ with the subdomain number 1.
 Our convention is to number subdomains as :math:`0,1,2,\ldots`.
 
 A ``MeshFunction`` is a discrete function that can be evaluated at a set
-of so-called *mesh entities*. Three mesh entities are
+of so-called *mesh entities*. Examples of mesh entities are
 cells, facets, and vertices. A ``MeshFunction`` over cells is suitable to
 represent subdomains (materials), while a ``MeshFunction`` over
 facets is used to represent pieces of external or internal boundaries.
@@ -190,8 +191,8 @@ defining the ``MeshFunction`` for two subdomains then reads
         subdomain1.mark(subdomains, 1)
 
 
-Calling ``subdomains.values()`` returns a ``numpy`` array of the
-subdomain values. That is, ``subdomain.values()[i]`` is
+Calling ``subdomains.array()`` returns a ``numpy`` array of the
+subdomain values. That is, ``subdomain.array()[i]`` is
 the subdomain value of cell number ``i``. This array is used to
 look up the subdomain or material number of a specific element.
 
@@ -210,15 +211,15 @@ the degree parameter is zero:
         k  = Function(V0)
 
 To fill ``k`` with the right values in each element, we loop over
-all cells (i.e., indices in ``subdomain.values()``),
+all cells (i.e., indices in ``subdomain.array()``),
 extract the corresponding subdomain number of a cell,
 and assign the corresponding :math:`k` value to the ``k.vector()`` array:
 
 .. code-block:: python
 
         k_values = [1.5, 50]  # values of k in the two subdomains
-        for cell_no in range(len(subdomains.values())):
-            subdomain_no = subdomains.values()[cell_no]
+        for cell_no in range(len(subdomains.array())):
+            subdomain_no = subdomains.array()[cell_no]
             k.vector()[cell_no] = k_values[subdomain_no]
 
 
@@ -228,17 +229,17 @@ Normally this implies that the loop must be replaced by
 calls to functions from the ``numpy`` library that operate on complete
 arrays (in efficient C code). The functionality we want in the present
 case is to compute an array of the same size as
-``subdomain.values()``, but where the value ``i`` of an entry
-in ``subdomain.values()`` is replaced by ``k_values[i]``.
+``subdomain.array()``, but where the value ``i`` of an entry
+in ``subdomain.array()`` is replaced by ``k_values[i]``.
 Such an operation is carried out by the ``numpy`` function ``choose``:
 
 .. code-block:: python
 
-        help = numpy.asarray(subdomains.values(), dtype=numpy.int32)
+        help = numpy.asarray(subdomains.array(), dtype=numpy.int32)
         k.vector()[:] = numpy.choose(help, k_values)
 
 The ``help`` array is required since ``choose`` cannot work with
-``subdomain.values()`` because this array has elements of
+``subdomain.array()`` because this array has elements of
 type ``uint32``. We must therefore transform this array to an array
 ``help`` with standard ``int32`` integers.
 
@@ -247,7 +248,7 @@ can proceed in the normal manner with defining essential boundary
 conditions, as in the section :ref:`tut:poisson:multiple:Dirichlet`,
 and the :math:`a(u,v)` and :math:`L(v)` forms, as in
 the section :ref:`tut:possion:2D:varcoeff`.
-All the details can be found in the file ``Poisson2D_2mat.py``.
+All the details can be found in the file ``mat2_p2D.py``.
 
 
 .. _tut:poisson:mat:neumann:
@@ -272,7 +273,7 @@ the section :ref:`tut:poisson:multiple:Dirichlet`
 where we had both Dirichlet and Neumann conditions.
 The term ``v*g*ds`` in the expression for ``L`` implies a
 boundary integral over the complete boundary, or in FEniCS terms,
-an integral over all exterior cell facets.
+an integral over all exterior facets.
 However, the contributions from the parts of the boundary where we have
 Dirichlet conditions are erased when the linear system is modified by
 the Dirichlet conditions.
@@ -291,10 +292,9 @@ the section :ref:`tut:poisson:multiple:Dirichlet`, but replace the
 Neumann condition at :math:`y=0` by a *Robin condition*:
 
 .. math::
-
-
+        
         -{\partial u\over\partial n} = p(u-q),
-
+        
 
 where :math:`p` and :math:`q` are specified functions.
 The Robin condition is
@@ -313,58 +313,51 @@ the upper side :math:`y=1`, :math:`\Gamma_R` which corresponds to the lower part
 complete boundary-value problem reads
 
 .. math::
-
-
-            - \Delta u &= -6 \mbox{ in } \Omega, \\
+        
+            - \nabla^2 u &= -6 \mbox{ in } \Omega, \\
             u &= u_L \mbox{ on } \Gamma_0, \\
             u &= u_R \mbox{ on } \Gamma_1, \\
             - {\partial u\over\partial n} &= p(u-q) \mbox{ on } \Gamma_R,
             \\
-            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N\thinspace .
-
-
+            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N\thinspace . 
+            
+        
 
 The involved prescribed functions are :math:`u_L= 1 + 2y^2`,
 :math:`u_R = 2 + 2y^2`, :math:`q=1+x^2+2y^2`, :math:`p` is arbitrary, and :math:`g=-4y`.
 
-Integration by parts of :math:`-\int_\Omega v\Delta u dx` becomes
+Integration by parts of :math:`-\int_\Omega v\nabla^2 u \, \mathrm{d}x` becomes
 as usual
 
 .. math::
-
-
-         -\int_\Omega v\Delta u dx
-        = \int_\Omega\nabla u\cdot \nabla v dx - \int_{\partial\Omega}{\partial u\over
-        \partial n}v ds\thinspace .
-
+        
+         -\int_\Omega v\nabla^2 u \, \mathrm{d}x
+        = \int_\Omega\nabla u\cdot \nabla v \, \mathrm{d}x - \int_{\partial\Omega}{\partial u\over
+        \partial n}v \, \mathrm{d}s\thinspace . 
+        
 
 The boundary integral vanishes on :math:`\Gamma_0\cup\Gamma_1`, and
 we split the parts over :math:`\Gamma_N` and :math:`\Gamma_R` since we have
 different conditions at those parts:
 
 .. math::
-
-
-        - \int_{\partial\Omega}v{\partial u\over
-        \partial n} ds
+        
+        - \int_{\partial\Omega}v{\partial u\over\partial n} \, \mathrm{d}s
         =
-        -\int_{\Gamma_N}v{\partial u\over
-        \partial n} ds -
-        \int_{\Gamma_R}v{\partial u\over
-        \partial n} ds
-        = \int_{\Gamma_N}vg ds +
-        \int_{\Gamma_R}vp(u-q) ds\thinspace .
-
+        -\int_{\Gamma_N}v{\partial u\over\partial n} \, \mathrm{d}s -
+        \int_{\Gamma_R}v{\partial u\over\partial n} \, \mathrm{d}s
+        = \int_{\Gamma_N}vg \, \mathrm{d}s +
+        \int_{\Gamma_R}vp(u-q) \, \mathrm{d}s\thinspace . 
+        
 
 The weak form then becomes
 
 .. math::
-
-
-        \int_{\Omega} \nabla u\cdot \nabla v dx +
-        \int_{\Gamma_N} gv ds + \int_{\Gamma_R}p(u-q)v ds
-        = \int_{\Omega} fv dx,
-
+        
+        \int_{\Omega} \nabla u\cdot \nabla v \, \mathrm{d}x +
+        \int_{\Gamma_N} gv \, \mathrm{d}s + \int_{\Gamma_R}p(u-q)v \, \mathrm{d}s
+        = \int_{\Omega} fv \, \mathrm{d}x,
+        
 
 We want to write this weak form in the standard
 notation :math:`a(u,v)=L(v)`, which
@@ -376,29 +369,31 @@ The integral from the Robin condition must of this reason be split in two
 parts:
 
 .. math::
-
-         \int_{\Gamma_R}p(u-q)v ds
-        = \int_{\Gamma_R}puv ds - \int_{\Gamma_R}pqv ds\thinspace .
-
+         \int_{\Gamma_R}p(u-q)v \, \mathrm{d}s
+        = \int_{\Gamma_R}puv \, \mathrm{d}s - \int_{\Gamma_R}pqv \, \mathrm{d}s\thinspace . 
+        
 
 We then have
 
 .. math::
-
-
-        a(u, v) &= \int_{\Omega} \nabla u\cdot \nabla v dx
-        + \int_{\Gamma_R}puv ds,
+        
+        a(u, v) &= \int_{\Omega} \nabla u\cdot \nabla v \, \mathrm{d}x
+        + \int_{\Gamma_R}puv \, \mathrm{d}s,
         \\
-        L(v) &= \int_{\Omega} fv dx -
-        \int_{\Gamma_N} g v ds + \int_{\Gamma_R}pqv ds\thinspace .
+        L(v) &= \int_{\Omega} fv \, \mathrm{d}x -
+        \int_{\Gamma_N} g v \, \mathrm{d}s + \int_{\Gamma_R}pqv \, \mathrm{d}s\thinspace . 
+        
+        
 
 
 
+.. index:: dnr_p2D.py
 
-A natural starting point for implementation is
-the ``Poisson2D_DN2.py`` program, which we now copy to
-``Poisson2D_DNR.py``.
-The new aspects are
+
+A natural starting point for implementation is the
+``dn2_p2D.py``
+program in the directory ``stationary/poisson``. The new aspects
+are
 
   * definition of a mesh function over the boundary,
 
@@ -435,12 +430,12 @@ In our case, the :math:`y=0` boundary can be marked by
             def inside(self, x, on_boundary):
                 tol = 1E-14   # tolerance for coordinate comparisons
                 return on_boundary and abs(x[1]) < tol
-
+        
         Gamma_R = LowerRobinBoundary()
         Gamma_R.mark(boundary_parts, 0)
 
 The code for the :math:`y=1` boundary is similar and is seen in
-``Poisson2D_DNR.py``.
+``dnr_p2D.py``.
 
 The Dirichlet boundaries are marked similarly, using subdomain number 2 for :math:`\Gamma_0` and 3 for :math:`\Gamma_1`:
 
@@ -450,15 +445,15 @@ The Dirichlet boundaries are marked similarly, using subdomain number 2 for :mat
             def inside(self, x, on_boundary):
                 tol = 1E-14   # tolerance for coordinate comparisons
                 return on_boundary and abs(x[0]) < tol
-
+        
         Gamma_0 = LeftBoundary()
         Gamma_0.mark(boundary_parts, 2)
-
+        
         class RightBoundary(SubDomain):
             def inside(self, x, on_boundary):
                 tol = 1E-14   # tolerance for coordinate comparisons
                 return on_boundary and abs(x[0] - 1) < tol
-
+        
         Gamma_1 = RightBoundary()
         Gamma_1.mark(boundary_parts, 3)
 
@@ -471,8 +466,8 @@ should be applied to:
 
         u_L = Expression('1 + 2*x[1]*x[1]')
         u_R = Expression('2 + 2*x[1]*x[1]')
-        bc = [DirichletBC(V, u_L, boundary_parts, 2),
-              DirichletBC(V, u_R, boundary_parts, 3)]
+        bcs = [DirichletBC(V, u_L, boundary_parts, 2),
+               DirichletBC(V, u_R, boundary_parts, 3)]
 
 
 Some functions need to be defined before we can go on with the
@@ -483,14 +478,14 @@ Some functions need to be defined before we can go on with the
         g = Expression('-4*x[1]')
         q = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]')
         p = Constant(100)  # arbitrary function can go here
-        v = TestFunction(V)
         u = TrialFunction(V)
+        v = TestFunction(V)
         f = Constant(-6.0)
 
 
 The new aspect of the variational problem is the two distinct
 boundary integrals.
-Having a mesh function over exterior cell facets (i.e., our
+Having a mesh function over exterior cell facets (our
 ``boundary_parts`` object), where subdomains (boundary parts) are
 numbered as :math:`0,1,2,\ldots`, the special symbol ``ds(0)``
 implies integration over subdomain (part) 0, ``ds(1)`` denotes
@@ -503,7 +498,7 @@ The variational problem can be defined as
 
 .. code-block:: python
 
-        a = inner(grad(u), grad(v))*dx + p*u*v*ds(0)
+        a = inner(nabla_grad(u), nabla_grad(v))*dx + p*u*v*ds(0)
         L = f*v*dx - g*v*ds(1) + p*q*v*ds(0)
 
 For the ``ds(0)`` and ``ds(1)`` symbols to work we must obviously
@@ -521,12 +516,13 @@ be solved in the usual way:
 
 .. code-block:: python
 
-        for condition in bc: condition.apply(A, b)
+        for bc in bcs:
+            bc.apply(A, b)
         u = Function(V)
-        solve(A, u.vector(), b)
+        U = u.vector()
+        solve(A, U, b)
+
+The complete code is in the ``dnr_p2D.py`` file in the
+``stationary/poisson`` directory.
 
 
-At the time of this writing, it is not possible to perform integrals over
-different parts of the domain or boundary using the
-``assemble_system`` function or the
-``VariationalProblem`` object.
