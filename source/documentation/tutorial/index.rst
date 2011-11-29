@@ -25,7 +25,7 @@ and suggestions for improvements.
 
 `A LaTeX/PDF version <fenics_tutorial_1.0.pdf>`_ is also available, in
 addition to a `tarball with all programs referred to
-fenics_tutorial_examples.tar.gz>`_ in this tutorial (pack out with the
+<fenics_tutorial_examples.tar.gz>`_ in this tutorial (pack out with the
 Unix command ``tar xvzf fenics_tutorial_examples.tar.gz``).
 
 .. toctree::
