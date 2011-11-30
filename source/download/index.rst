@@ -53,7 +53,7 @@ everything needed to get you started with FEniCS.
     * - |windows-icon| For Windows
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc1-mingw32.exe>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-mingw32.exe>`__
 
       - For detailed instructions, click :ref:`here <windows_details>`
 

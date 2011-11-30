@@ -32,6 +32,11 @@ Instant 1.0-beta, UFC 2.0.3, UFL 1.0-rc1, and Viper 1.0-beta.
       - `fenics-1.0-rc1-osx10.7.dmg
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc1-osx10.7.dmg>`__
 
+    * - |windows-icon| Windows binary
+
+      - `fenics-1.0-rc1-mingw32.exe
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc1-mingw32.exe>`__
+
     * - |archive-icon| Sources for Mac OS X 10.6
 
       - `fenics-source-1.0-rc1-osx10.6.tar.gz
@@ -41,6 +46,11 @@ Instant 1.0-beta, UFC 2.0.3, UFL 1.0-rc1, and Viper 1.0-beta.
 
       - `fenics-source-1.0-rc1-osx10.7.tar.gz
         <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-rc1-osx10.7.tar.gz>`__
+
+    * - |archive-icon| Sources for Windows
+
+      - `fenics-source-1.0-rc1-win.zip
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-rc1-win.zip>`__
 
 ****************
 FEniCS 1.0-beta2
