@@ -21,10 +21,6 @@ FEniCS
   Archives of Computational Methods in Engineering 14(2):93-138.
   [`doi:10.1007/s11831-007-9003-9 <http://dx.doi.org/10.1007/s11831-007-9003-9>`_]
 
-* T. Dupont, J. Hoffman, C. Johnson, R.C. Kirby, M.G. Larson, A. Logg, L.R. Scott (2003),
-  *The FEniCS Project*,
-  Chalmers Finite Element Center Preprint Series 2003-21.
-
 DOLFIN
 ------
 
