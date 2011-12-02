@@ -8,6 +8,23 @@ If you use FEniCS, the developers would be grateful if you would cite
 the relevant publications. As a rule of thumb, cite at least the top
 publications (underlined) for each relevant component.
 
+FEniCS
+------
+
+* **A. Logg, K.-A. Mardal, G.N. Wells et al. (2011)**.
+  *Automated Solution of Differential Equations by the Finite Element Method*,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
+  [ISBN:978-3-642-23098-1]
+
+* A. Logg (2006).
+  *Automating the finite element method*,
+  Archives of Computational Methods in Engineering 14(2):93-138.
+  [`doi:10.1007/s11831-007-9003-9 <http://dx.doi.org/10.1007/s11831-007-9003-9>`_]
+
+* T. Dupont, J. Hoffman, C. Johnson, R.C. Kirby, M.G. Larson, A. Logg, L.R. Scott (2003),
+  *The FEniCS Project*,
+  Chalmers Finite Element Center Preprint Series 2003-21.
+
 DOLFIN
 ------
 
