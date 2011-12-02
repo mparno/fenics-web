@@ -12,31 +12,32 @@ would cite the relevant publications.
 DOLFIN
 ------
 
-* Logg, A. and Wells, G.N. (2010). DOLFIN: Automated finite element
-  computing, ACM Transactions on Mathematical Software, 37(2):417--444.
+* A. Logg and G.N. Wells (2010).
+  DOLFIN: Automated finite element computing,
+  ACM Transactions on Mathematical Software 37(2):417-444.
   [`doi:10.1145/1731022.1731030 <http://dx.doi.org/10.1145/1731022.1731030>`_]
   [`arXiv:1103.6248 <http://arxiv.org/abs/1103.6248>`_]
 
 FFC
 ---
 
-* Kirby, R.C. and Logg, A. (2006).
+* R.C. Kirby and A. Logg (2006).
   A compiler for variational forms,
-  ACM Transactions on Mathematical Software 32(3), Article 20, 28 pages.
+  ACM Transactions on Mathematical Software 32(3):417-444.
   [`doi:10.1145/1163641.1163644 <http://dx.doi.org/10.1145/1163641.1163644>`_]
 
-* Ølgaard, K.B., Logg, A., and Wells, G.N. (2008).
+* K.B. Ølgaard, A. Logg and G.N. Wells (2008).
   Automated code generation for discontinuous Galerkin methods,
   SIAM Journal on Scientific Computing 31(2):849-864.
   [`doi:10.1137/070710032 <http://dx.doi.org/10.1137/070710032>`_]
   [`arXiv:1104.0628 <http://arxiv.org/abs/1104.0628>`_]
 
-* Rognes, M.E., Kirby, R.C. and Logg, A. (2009),
-  Efficient Assembly of H(div) and H(curl) Conforming Finite Elements,
-  SIAM Journal on Scientific Computing 31(6):4130--4151.
+* M.E. Rognes, R.C. Kirby and A. Logg (2009).
+  Efficient assembly of H(div) and H(curl) conforming finite elements,
+  SIAM Journal on Scientific Computing 31(6):4130-4151.
   [`doi:10.1137/08073901X <http://dx.doi.org/10.1137/08073901X>`_]
 
-* Ølgaard, K.B. and Wells, G.N. (2010).
+* K.B. Ølgaard and G.N. Wells (2010).
   Optimisations for quadrature representations of finite element tensors
   through automated code generation,
   ACM Transactions on Mathematical Software 37(1), Article 8, 23 pages.
@@ -46,48 +47,52 @@ FFC
 FIAT
 ----
 
-* Kirby, R.C. (2004).
-  Algorithm 839: FIAT, a new paradigm for computing finite element
-  basis functions,
-  ACM Transactions on Mathematical Software 30(4):502--516.
+* R.C. Kirby (2004).
+  Algorithm 839: FIAT, a new paradigm for computing finite element basis functions,
+  ACM Transactions on Mathematical Software 30(4):502-516.
   [`doi:10.1145/1039813.1039820 <http://dx.doi.org/10.1145/1039813.1039820>`_]
 
 UFC
 ---
 
-* Alnaes, M.S. and Logg, A. and Mardal, K.A. and Skavhaug, O. (2009).
+* M.S. Alnaes, A. Logg, K.-A. Mardal, O. Skavhaug and H.P. Langtangen (2009).
   Unified framework for finite element assembly,
-  International Journal of Computational Science and Engineering 4(4):231--244,
-  http://inderscience.metapress.com/link.asp?id=228167811g716470.
+  International Journal of Computational Science and Engineering 4(4):231-244.
+  [`doi:10.1504/IJCSE.2009.029160 <http://dx.doi.org/10.1504/IJCSE.2009.029160>`_]
 
 UFL
 ---
 
-* Alnaes, M.S., Logg A., Ølgaard, K.B., Rognes, M.E. and Wells, G.N. (2011).
+* M.S. Alnaes, A. Logg, K.B. Ølgaard, M.E. Rognes and G.N. Wells (2011).
   UFL: Unified Form Language,
   https://launchpad.net/ufl.
 
 SyFi
 ----
-* Alnaes, M. S. and Mardal, K.-A. (2010).
-  On the Efficiency of Symbolic Computations Combined with Code
-  Generation for Finite Element Methods, ACM Transactions on
-  Mathematical Software 37(1).
+* M.S. Alnaes and K.-A. Mardal (2010).
+  On the efficiency of symbolic computations combined with code
+  generation for finite element methods,
+  ACM Transactions on Mathematical Software 37(1), Article 6, 26 pages.
   [`dx.doi.org/10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_]
 
 Unicorn
 -------
 
-* Hoffman, J., Jansson, J., de Abreu, R. V., Degirmenci, N. C., Jansson, N. Muller, K., Nazarov, M. and Spuhler, J. H. (2011).
+* J. Hoffman, J. Jansson, R.V. de Abreu, N.C. Degirmenci, N. Jansson, K. Muller, M. Nazarov and J.H. Spuhler (2011).
   Unicorn: Parallel adaptive finite element simulation of turbulent flow and
   fluid-structure interaction for deforming domains and complex
-  geometry. Tech. Rep. KTH-CTL-4024, Computational Technology
-  Laboratory, http://www.publ.kth.se/trita/ctl-4/024/
+  geometry,
+  Tech. Rep. KTH-CTL-4024, Computational Technology Laboratory,
+  http://www.publ.kth.se/trita/ctl-4/024/
 
-* Hoffman, J., Jansson, J., Degirmenci, C., Jansson, N., Nazarov, M. (2011)
-  Unicorn: A Unified Continuum Mechanics Solver, in: Automated
-  Scientific Computing, Springer
+* J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2011).
+  Unicorn: A unified continuum mechanics solver,
+  Automated Solution of Differential Equations by the Finite Element Method,
+  Chapter 18,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
 
-* Hoffman, J., Jansson, J., Jansson, N., Johnson, C. and Vilela De Abreu, R. V. (2011)
-  Turbulent flow and fluid–structure interaction, in: Automated
-  Scientific Computing, Springer
+* J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R.V de Abreu (2011)
+  Turbulent flow and fluid–structure interaction,
+  Automated Solution of Differential Equations by the Finite Element Method,
+  Chapter 28,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
