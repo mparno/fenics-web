@@ -7,7 +7,7 @@ Download
 .. image:: images/ubuntu.png
     :align: left
 
-`Click to install FEniCS <apt://fenics>`__
+`Install FEniCS <apt://fenics>`__
 
 #########################
 Installation instructions

@@ -20,42 +20,42 @@ everything needed to get you started with FEniCS.
 .. tabularcolumns:: |c|c|c|
 
 .. list-table::
-    :widths: 15, 10, 30
+    :widths: 15, 10, 15
     :header-rows: 0
     :class: center
 
-    * - |ubuntu-icon| For Ubuntu
+    * - |ubuntu-icon| Ubuntu
 
       - `Download <apt://fenics>`__
 
-      - For detailed instructions, click :ref:`here <ubuntu_details>`
+      - :ref:`Learn more <ubuntu_details>`
 
-    * - |debian-icon| For Debian
+    * - |debian-icon| Debian
 
       - `Download <apt://fenics>`__
 
-      - For detailed instructions, click :ref:`here <debian_details>`
+      - :ref:`Learn more <debian_details>`
 
-    * - |mac-icon| For Mac OS X 10.6
+    * - |mac-icon| OS X 10.6
 
       - `Download
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-osx10.6.dmg>`__
 
-      - For detailed instructions, click :ref:`here <osx_details>`
+      - :ref:`Learn more <osx_details>`
 
-    * - |mac-icon| For Mac OS X 10.7
+    * - |mac-icon| OS X 10.7
 
       - `Download
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-osx10.7.dmg>`__
 
-      - For detailed instructions, click :ref:`here <osx_details>`
+      - :ref:`Learn more <osx_details>`
 
-    * - |windows-icon| For Windows
+    * - |windows-icon| Windows
 
       - `Download
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-mingw32.exe>`__
 
-      - For detailed instructions, click :ref:`here <windows_details>`
+      - :ref:`Learn more <windows_details>`
 
 ****************************************************
 Other operating systems and installation from source
