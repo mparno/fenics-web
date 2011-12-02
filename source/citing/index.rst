@@ -5,8 +5,8 @@ How to cite us
 ##############
 
 If you use FEniCS, the developers would be grateful if you would cite
-the relevant publications. As a rule of thumb, cite at least the top
-publications (underlined) for each relevant component.
+the relevant publications. As a rule of thumb, cite the top
+publication (underlined) for each relevant component.
 
 FEniCS
 ------
