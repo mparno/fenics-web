@@ -6,7 +6,7 @@ How to cite us
 
 If you use FEniCS, the developers would be grateful if you would cite
 the relevant publications. As a rule of thumb, cite the top
-publication (underlined) for each relevant component.
+publication (marked in bold) **for each relevant component**.
 
 FEniCS
 ------
@@ -76,6 +76,11 @@ FIAT
   *Algorithm 839: FIAT, a new paradigm for computing finite element basis functions*,
   ACM Transactions on Mathematical Software 30(4):502-516.
   [`doi:10.1145/1039813.1039820 <http://dx.doi.org/10.1145/1039813.1039820>`_]
+
+* R.C. Kirby (2011).
+  FIAT: numerical construction of finite element basis functions,
+  Chapter 11,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
 
 UFC
 ---
