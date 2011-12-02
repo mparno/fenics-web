@@ -90,19 +90,34 @@ UFC
   International Journal of Computational Science and Engineering 4(4):231-244.
   [`doi:10.1504/IJCSE.2009.029160 <http://dx.doi.org/10.1504/IJCSE.2009.029160>`_]
 
+* M.S. Alnæs, A. Logg and K.-A. Mardal (2011).
+  *UFC: a finite element code generation interface*,
+  Automated Solution of Differential Equations by the Finite Element Method,
+  Chapter 16,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
+
 UFL
 ---
 
-* **M.S. Alnaes, A. Logg, K.B. Ølgaard, M.E. Rognes and G.N. Wells (2011)**.
-  *UFL: Unified Form Language*,
-  https://launchpad.net/ufl.
+* **M.S. Alnæs (2011)**.
+  *UFL: a finite element form language*,
+  Automated Solution of Differential Equations by the Finite Element Method,
+  Chapter 17,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
 
 SyFi
 ----
+
 * **M.S. Alnaes and K.-A. Mardal (2010)**.
   *On the efficiency of symbolic computations combined with code generation for finite element methods*,
   ACM Transactions on Mathematical Software 37(1), Article 6, 26 pages.
   [`dx.doi.org/10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_]
+
+* M.S. Alnaes and K.-A. Mardal (2010).
+  *SyFi and SFC: symbolic finite elements and form compilation*,
+  Automated Solution of Differential Equations by the Finite Element Method,
+  Chapter 15,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
 
 Unicorn
 -------
