@@ -34,6 +34,11 @@ DOLFIN
   [`doi:10.1145/1731022.1731030 <http://dx.doi.org/10.1145/1731022.1731030>`_]
   [`arXiv:1103.6248 <http://arxiv.org/abs/1103.6248>`_]
 
+* A. Logg, G.N. Wells and J. Hake (2011).
+  *DOLFIN: A C++/Python finite element library*,
+  Chapter 18,
+  Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
+
 FFC
 ---
 
