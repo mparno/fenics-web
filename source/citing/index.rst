@@ -47,7 +47,7 @@ FFC
   ACM Transactions on Mathematical Software 32(3):417-444.
   [`doi:10.1145/1163641.1163644 <http://dx.doi.org/10.1145/1163641.1163644>`_]
 
-* **A. Logg, K.B. Ølgaard, M.E. Rognes and G.N. Wells**.
+* A. Logg, K.B. Ølgaard, M.E. Rognes and G.N. Wells.
   *FFC: the FEniCS form compiler*,
   Chapter 11,
   Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
