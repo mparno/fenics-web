@@ -23,5 +23,5 @@ mailing list.
 
 If you have suggestions for improving the information found on this page
 with respect to the installation procedure of FEniCS, you are more than
-welcome to file a bug report or register a blueprint on `FEniCS Documentation
-<https://launchpad.net/fenics-doc>`_.
+welcome to file a bug report or register a blueprint on `FEniCS Web
+<https://launchpad.net/fenics-web>`_.
