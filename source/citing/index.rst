@@ -16,7 +16,7 @@ FEniCS
   Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
   [ISBN:978-3-642-23098-1]
 
-* A. Logg (2006).
+* A. Logg (2007).
   *Automating the finite element method*,
   Archives of Computational Methods in Engineering 14(2):93-138.
   [`doi:10.1007/s11831-007-9003-9 <http://dx.doi.org/10.1007/s11831-007-9003-9>`_]
