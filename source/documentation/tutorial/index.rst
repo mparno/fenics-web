@@ -23,10 +23,11 @@ The tutorial is still in an initial state so the reader is encouraged
 to send email to the author on ``hpl@simula.no`` about typos, errors,
 and suggestions for improvements.
 
-`A LaTeX/PDF version <fenics_tutorial_1.0.pdf>`_ is also available, in
-addition to a `tarball with all programs referred to
-<fenics_tutorial_examples.tar.gz>`_ in this tutorial (pack out with the
-Unix command ``tar xvzf fenics_tutorial_examples.tar.gz``).
+`A LaTeX/PDF version </_static/tutorial/fenics_tutorial_1.0.pdf>`_ is
+also available, in addition to a `tarball with all programs referred
+to </_static/tutorial/fenics_tutorial_examples.tar.gz>`_ in this
+tutorial (pack out with the Unix command ``tar xvzf
+fenics_tutorial_examples.tar.gz``).
 
 .. toctree::
    :maxdepth: 3
