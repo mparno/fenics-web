@@ -5,56 +5,72 @@ Articles in International Journals
   *Algorithm 839: FIAT, a New Paradigm for Computing Finite Element Basis Functions*,
   ACM Transactions on Mathematical Software,
   30(4),
-  pp. 502-516.
+  pp. 502-516,
+  [`doi:10.1145/1039813.1039820 <http://dx.doi.org/10.1145/1039813.1039820>`_].
 
 * **K. B. Ølgaard and G. N. Wells (2010)**.
   *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
   ACM Transactions on Mathematical Software,
-  37.
+  37,
+  [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_],
+  [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_].
 
 * **R. C. Kirby and A. Logg (2006)**.
   *A Compiler for Variational Forms*,
   ACM Transactions on Mathematical Software,
-  32(3).
+  32(3),
+  [`doi:10.1145/1163641.1163644 <http://dx.doi.org/10.1145/1163641.1163644>`_],
+  [`arXiv:1112.0402 <http://arxiv.org/abs/1112.0402>`_].
 
 * **A. Logg (2007)**.
   *Automating the Finite Element Method*,
   Archives of Computational Methods in Engineering,
   14(2),
-  pp. 93-138.
+  pp. 93-138,
+  [`doi:10.1007/s11831-007-9003-9 <http://dx.doi.org/10.1007/s11831-007-9003-9>`_],
+  [`arXiv:1112.0433 <http://arxiv.org/abs/1112.0433>`_].
 
 * **K. B. Ølgaard, A. Logg and G. N. Wells (2008)**.
   *Automated Code Generation for Discontinuous Galerkin Methods*,
   SIAM Journal on Scientific Computing,
   31(2),
-  pp. 849-864.
+  pp. 849-864,
+  [`doi:10.1137/070710032 <http://dx.doi.org/10.1137/070710032>`_],
+  [`arXiv:1104.0628 <http://arxiv.org/abs/1104.0628>`_].
 
 * **M. E. Rognes, R. C. Kirby and A. Logg (2009)**.
   *Efficient Assembly of H(div) and H(curl) Conforming Finite Elements*,
   SIAM Journal on Scientific Computing,
   31(6),
-  pp. 4130-4151.
+  pp. 4130-4151,
+  [`doi:10.1137/08073901X <http://dx.doi.org/10.1137/08073901X>`_].
 
 * **M. S. Alnaes, A. Logg, K.-A. Mardal, O. Skavhaug and H. P. Langtangen (2009)**.
   *Unified Framework for Finite Element Assembly*,
   International Journal of Computational Science and Engineering,
   4(4),
-  pp. 231-244.
+  pp. 231-244,
+  [`doi:10.1504/IJCSE.2009.029160 <http://dx.doi.org/10.1504/IJCSE.2009.029160>`_].
 
 * **M. S. Alnaes and K.-A. Mardal (2010)**.
   *On the Efficiency of Symbolic Computations Combined With Code Generation for Finite Element Methods*,
   ACM Transactions on Mathematical Software,
-  37(1).
+  37(1),
+  [`doi:10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_].
 
 * **A. Logg and G. N. Wells (2010)**.
   *DOLFIN: Automated Finite Element Computing*,
   ACM Transactions on Mathematical Software,
-  37(2).
+  37(2),
+  [`doi:10.1145/1731022.1731030 <http://dx.doi.org/10.1145/1731022.1731030>`_],
+  [`arXiv:1103.6248 <http://arxiv.org/abs/1103.6248>`_].
 
 * **K. B. Ølgaard and G. N. Wells (2010)**.
   *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
   ACM Transactions on Mathematical Software,
-  37.
+  37,
+  [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_],
+  [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_].
 
 Books
 =====

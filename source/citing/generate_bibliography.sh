@@ -17,5 +17,5 @@ if [ "x$PUBLISH" = "x" ]; then
 fi
 
 # Export the two files
-publish export fenics.bib database_filename=fenics.pub
-publish export fenics.rst database_filename=fenics.pub
+publish export fenics.bib database_filename=fenics.pub debug=1
+publish export fenics.rst database_filename=fenics.pub debug=1
