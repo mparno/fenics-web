@@ -10,17 +10,6 @@
    doi:     10.1145/1039813.1039820
    pdf:     missing
    status:  published
-** Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation
-   key:       ØlgaardWells2010a
-   author:    Kristian B. Ølgaard, Garth N. Wells
-   year:      2010
-   journal:   ACM Transactions on Mathematical Software
-   volume:    37
-   num_pages: 23
-   doi:       10.1145/1644001.1644009
-   arxiv:     1104.0199
-   pdf:       missing
-   status:    published
 ** A Compiler for Variational Forms
    key:     KirbyLogg2006a
    author:  Robert C. Kirby, Anders Logg

@@ -8,13 +8,6 @@ Articles in International Journals
   pp. 502-516,
   [`doi:10.1145/1039813.1039820 <http://dx.doi.org/10.1145/1039813.1039820>`_].
 
-* **K. B. Ølgaard and G. N. Wells (2010)**.
-  *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
-  ACM Transactions on Mathematical Software,
-  37,
-  [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_],
-  [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_].
-
 * **R. C. Kirby and A. Logg (2006)**.
   *A Compiler for Variational Forms*,
   ACM Transactions on Mathematical Software,
@@ -136,5 +129,4 @@ Technical Reports
 * **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Muller, M. Nazarov and J. H. Spuhler (2011)**.
   *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*,
   Computational Technology Laboratory, KTH,
-  2011.
-
+  KTH-CTL-4024.
