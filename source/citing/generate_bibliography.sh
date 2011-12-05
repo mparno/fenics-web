@@ -19,3 +19,6 @@ fi
 # Export the two files
 publish export fenics.bib database_filename=fenics.pub debug=1
 publish export fenics.rst database_filename=fenics.pub debug=1
+
+# Copy bib file to _static directory
+cp fenics.bib ../_static/bibliography/

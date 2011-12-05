@@ -12,7 +12,7 @@ component**.
 
 A more :ref:`extensive bibliography <bibliography>` can be found at
 the bottom of this page. The bibliography is also available in
-`BibTeX format <fenics.bib>`_.
+`BibTeX format </_static/bibliography/fenics.bib>`_.
 
 FEniCS
 ------
