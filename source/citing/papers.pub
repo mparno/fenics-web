@@ -1,0 +1,213 @@
+* articles
+** Algorithm 839: FIAT, a New Paradigm for Computing Finite Element Basis Functions
+   key:     Kirby2004a
+   author:  Robert C. Kirby
+   year:    2004
+   journal: ACM Transactions on Mathematical Software
+   volume:  30
+   number:  4
+   pages:   502--516.
+   doi:     10.1145/1039813.1039820
+   pdf:     missing
+   status:  published
+** Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation
+   key:       ØlgaardWells2010a
+   author:    Kristian B. Ølgaard, Garth N. Wells
+   year:      2010
+   journal:   ACM Transactions on Mathematical Software
+   volume:    37
+   num_pages: 23
+   doi:       10.1145/1644001.1644009
+   arxiv:     1104.0199
+   pdf:       missing
+   status:    published
+** A Compiler for Variational Forms
+   key:     KirbyLogg2006a
+   author:  Robert C. Kirby, Anders Logg
+   year:    2006
+   journal: ACM Transactions on Mathematical Software
+   volume:  32
+   number:  3
+   doi:     10.1145/1163641.1163644
+   arxiv:   1112.0402
+   pdf:     missing
+   status:  published
+** Automating the Finite Element Method
+   key:     Logg2007a
+   author:  Anders Logg
+   year:    2007
+   journal: Archives of Computational Methods in Engineering
+   volume:  14
+   number:  2
+   pages:   93--138
+   doi:     10.1007/s11831-007-9003-9
+   arxiv:   1112.0433
+   pdf:     missing
+   status:  published
+** Automated Code Generation for Discontinuous Galerkin Methods
+   key:     ØlgaardLoggEtAl2008a
+   author:  Kristian B. Ølgaard, Anders Logg, Garth N. Wells
+   year:    2008
+   journal: SIAM Journal on Scientific Computing
+   volume:  31
+   number:  2
+   pages:   849--864
+   doi:     10.1137/070710032
+   arxiv:   1104.0628
+   pdf:     missing
+   status:  published
+** Efficient Assembly of H(div) and H(curl) Conforming Finite Elements
+   key:     RognesKirbyEtAl2009a
+   author:  Marie E. Rognes, Robert C. Kirby, Anders Logg
+   year:    2009
+   journal: SIAM Journal on Scientific Computing
+   volume:  31
+   number:  6
+   pages:   4130--4151
+   doi:     10.1137/08073901X
+   pdf:     missing
+   status:  published
+** Unified Framework for Finite Element Assembly
+   key:     AlnaesLoggEtAl2009a
+   author:  Martin S. Alnaes, Anders Logg, Kent-Andre Mardal, Ola Skavhaug, Hans Petter Langtangen
+   year:    2009
+   journal: International Journal of Computational Science and Engineering
+   volume:  4
+   number:  4
+   pages:   231--244
+   doi:     10.1504/IJCSE.2009.029160
+   pdf:     missing
+   status:  published
+** On the Efficiency of Symbolic Computations Combined With Code Generation for Finite Element Methods
+   key:       AlnaesMardal2010a
+   author:    Martin S. Alnaes, Kent-Andre Mardal
+   year:      2010
+   journal:   ACM Transactions on Mathematical Software
+   volume:    37
+   number:    1
+   num_pages: 26 pages
+   doi:       10.1145/1644001.1644007
+   pdf:       missing
+   status:    published
+** DOLFIN: Automated Finite Element Computing
+   key:     LoggWells2010a
+   author:  Anders Logg, Garth N. Wells
+   year:    2010
+   journal: ACM Transactions on Mathematical Software
+   volume:  37
+   number:  2
+   doi:     10.1145/1731022.1731030
+   arxiv:   1103.6248
+   pdf:     missing
+   status:  published
+** Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation
+   key:       ØlgaardWells2010b
+   author:    Kristian B. Ølgaard, Garth N. Wells
+   year:      2010
+   journal:   ACM Transactions on Mathematical Software
+   volume:    37
+   num_pages: 23
+   doi:       10.1145/1644001.1644009
+   arxiv:     1104.0199
+   pdf:       missing
+   status:    published
+* books
+** Automated Solution of Differential Equations By the Finite Element Method
+   key:       LoggMardalEtAl2011a
+   author:    Anders Logg, Kent-Andre Mardal, Garth N. Wells, others
+   year:      2011
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   isbn:      978-3-642-23098-1
+* chapters
+** DOLFIN: a C++/Python Finite Element Library
+   key:       LoggWellsEtAl2011a
+   author:    Anders Logg, Garth N. Wells, Johan Hake
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   10
+** FFC: the FEniCS Form Compiler
+   key:       LoggØlgaardEtAl2011a
+   author:    Anders Logg, Kristian B. Ølgaard, Marie E. Rognes, Garth N. Wells
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   11
+** FIAT: Numerical Construction of Finite Element Basis Functions,
+   key:       Kirby2011a
+   author:    Robert C. Kirby
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   13
+** SyFi and SFC: Symbolic Finite Elements and Form Compilation
+   key:       AlnaesMardal2010b
+   author:    Martin S. Alnaes, Kent-Andre Mardal
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2010
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   15
+** UFC: a Finite Element Code Generation Interface
+   key:       AlnæsLoggEtAl2011a
+   author:    Martin S. Alnæs, Anders Logg, Kent-Andre Mardal
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   16
+** UFL: a Finite Element Form Language
+   key:       Alnæs2011a
+   author:    Martin S. Alnæs
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   17
+** Unicorn: a Unified Continuum Mechanics Solver
+   key:       HoffmanJanssonEtAl2011a
+   author:    Johan Hoffman, Johan Jansson, Cem Degirmenci, Niclas Jansson, Murtazo Nazarov
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   18
+** Turbulent Flow and Fluid–structure Interaction
+   key:       HoffmanJanssonEtAl2011b
+   author:    Johan Hoffman, Johan Jansson, Niclas Jansson, C. Johnson, Rodrigo V. de Abreu
+   editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
+   year:      2011
+   booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
+   publisher: Springer
+   pdf:       missing
+   status:    published
+   chapter:   28
+* reports
+** Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry
+   key:         HoffmanJanssonEtAl2011c
+   author:      Johan Hoffman, Johan Jansson, Rodrigo V. de Abreu, Cem Degirmenci, Niclas Jansson, Kaspar Muller, Murtazo Nazarov, Jeanette H. Spuhler
+   year:        2011
+   institution: Computational Technology Laboratory, KTH
+   number:      KTH-CTL-4024
+   pdf:         missing
+   url:         http://www.publ.kth.se/trita/ctl-4/024/
+   status:      published
