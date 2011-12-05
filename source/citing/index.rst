@@ -5,8 +5,11 @@ How to cite us
 ##############
 
 If you use FEniCS, the developers would be grateful if you would cite
-the relevant publications. As a rule of thumb, cite the top
+the relevant publications. WeAs a rule of thumb, cite the top
 publication (marked in bold) **for each relevant component**.
+
+A more extensive bibliography can be found at the bottom of this page.
+
 
 FEniCS
 ------
@@ -134,3 +137,8 @@ Unicorn
   Automated Solution of Differential Equations by the Finite Element Method,
   Chapter 28,
   Volume 84 of Lecture Notes in Computational Science and Engineering, Springer.
+
+Bibliography
+------------
+
+.. include:: fenics.rst

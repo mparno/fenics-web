@@ -5,7 +5,7 @@ Articles in International Journals
   *Algorithm 839: FIAT, a New Paradigm for Computing Finite Element Basis Functions*,
   ACM Transactions on Mathematical Software,
   30(4),
-  pp. 502-516..
+  pp. 502-516.
 
 * **K. B. Ølgaard and G. N. Wells (2010)**.
   *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
@@ -59,83 +59,66 @@ Articles in International Journals
 Books
 =====
 
-* *Automated Solution of Differential Equations By the Finite Element Method*.
-  **A. Logg, K.-A. Mardal, G. N. Wells et al. (2011)**,
-  Springer,
-  2011.
+* **A. Logg, K.-A. Mardal, G. N. Wells et al. (2011)**.
+  *Automated Solution of Differential Equations By the Finite Element Method*,
+  Springer.
 
 Chapters in Books
 =================
 
-* *DOLFIN: a C++/Python Finite Element Library*.
-  **A. Logg, G. N. Wells and J. Hake (2011)**,
+* **A. Logg, G. N. Wells and J. Hake (2011)**.
+  *DOLFIN: a C++/Python Finite Element Library*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **A. Logg, G. N. Wells and J. Hake (2011)**,
   Springer,
-  chapter 10,
-  2011.
+  Chapter 10.
 
-* *FFC: the FEniCS Form Compiler*.
-  **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2011)**,
+* **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2011)**.
+  *FFC: the FEniCS Form Compiler*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2011)**,
   Springer,
-  chapter 11,
-  2011.
+  Chapter 11.
 
-* *FIAT: Numerical Construction of Finite Element Basis Functions,*.
-  **R. C. Kirby (2011)**,
+* **R. C. Kirby (2011)**.
+  *FIAT: Numerical Construction of Finite Element Basis Functions,*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **R. C. Kirby (2011)**,
   Springer,
-  chapter 13,
-  2011.
+  Chapter 13.
 
-* *SyFi and SFC: Symbolic Finite Elements and Form Compilation*.
-  **M. S. Alnaes and K.-A. Mardal (2010)**,
+* **M. S. Alnaes and K.-A. Mardal (2010)**.
+  *SyFi and SFC: Symbolic Finite Elements and Form Compilation*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **M. S. Alnaes and K.-A. Mardal (2010)**,
   Springer,
-  chapter 15,
-  2010.
+  Chapter 15.
 
-* *UFC: a Finite Element Code Generation Interface*.
-  **M. S. Alnæs, A. Logg and K.-A. Mardal (2011)**,
+* **M. S. Alnæs, A. Logg and K.-A. Mardal (2011)**.
+  *UFC: a Finite Element Code Generation Interface*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **M. S. Alnæs, A. Logg and K.-A. Mardal (2011)**,
   Springer,
-  chapter 16,
-  2011.
+  Chapter 16.
 
-* *UFL: a Finite Element Form Language*.
-  **M. S. Alnæs (2011)**,
+* **M. S. Alnæs (2011)**.
+  *UFL: a Finite Element Form Language*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **M. S. Alnæs (2011)**,
   Springer,
-  chapter 17,
-  2011.
+  Chapter 17.
 
-* *Unicorn: a Unified Continuum Mechanics Solver*.
-  **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2011)**,
+* **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2011)**.
+  *Unicorn: a Unified Continuum Mechanics Solver*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2011)**,
   Springer,
-  chapter 18,
-  2011.
+  Chapter 18.
 
-* *Turbulent Flow and Fluid–structure Interaction*.
-  **J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R. V. d. Abreu (2011)**,
+* **J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R. V. d. Abreu (2011)**.
+  *Turbulent Flow and Fluid–structure Interaction*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Edited by **J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R. V. d. Abreu (2011)**,
   Springer,
-  chapter 28,
-  2011.
+  Chapter 28.
 
 Technical Reports
 =================
 
-* *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*.
-  **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Muller, M. Nazarov and J. H. Spuhler (2011)**,
+* **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Muller, M. Nazarov and J. H. Spuhler (2011)**.
+  *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*,
   Computational Technology Laboratory, KTH,
   2011.
 
