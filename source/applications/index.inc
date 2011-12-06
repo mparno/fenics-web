@@ -104,6 +104,26 @@
 
         </div><!-- #front-block-5 .front-block .block-->
 
+      	<div id="front-block-6" class="front-block block">
+
+	  <h3>CBC.PDESys &mdash; Specify large systems of PDEs with ease</h3>
+          <img alt='' src='/_static/images/featured/featured_item_pdesys.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+          <p> CBC.PDESys is a Python package for specifying and solving 
+          large, completely general, systems of nonlinear Partial Differential 
+          Equations (PDEs) with very compact, flexible and reusable code. 
+          CBC.CFD is a subpackage of CBC.PDESys that focuses on Computational 
+          Fluid Dynamics and turbulence modeling. CBC.CFD also contains some highly 
+          optimized Navier-Stokes solvers.
+          </p>
+
+          <p><a href="https://launchpad.net/cbcpdesys"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div><!-- #front-block-6 .front-block .block-->
+
       </div><!-- #sub-feature -->
     </div><!-- #content -->
   </div><!-- #container .feature -->
