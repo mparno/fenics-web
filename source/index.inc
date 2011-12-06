@@ -41,12 +41,12 @@
             differential equations
         </p>
 
-	<p>Through this web site, you can <a href="/about">learn more
-	    about the project</a> and learn <a href="/download">how to
-	    obtain</a> and <a href="/doc">how to use</a> our
-	    software. We'd be delighted to <a href="/support">offer
+	<p>Through this web site, you can <a href="/about/">learn more
+	    about the project</a> and learn <a href="/download/">how to
+	    obtain</a> and <a href="/documentation/">how to use</a> our
+	    software. We'd be delighted to <a href="/support/">offer
 	    support</a> in case you need it,
-	    and <a href="/contributing">encourage contributions</a>
+	    and <a href="/contributing/">encourage contributions</a>
 	    from our users
         </p>
 
@@ -70,7 +70,7 @@
 	<div id="front-block-1" class="front-block block">
 
           <h3>FEniCS book about to be released!</h3>
-          <img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/>
+          <a href="/book/"><img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/></a>
 
 	  <p>The FEniCS book project is nearing completion. The book,
             titled <i>Automated Solution of Differential Equations by
@@ -79,7 +79,7 @@
             Engineering in the fall of 2011.
           </p>
 
-          <p><a href="/book" rel="nofollow">Find out more about
+          <p><a href="/book/" rel="nofollow">Find out more about
           the book project &raquo;</a></p>
 
           <h3>Who's behind the FEniCS Project?</h3>
