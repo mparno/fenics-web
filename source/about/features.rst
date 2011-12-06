@@ -16,7 +16,7 @@ Automated solution of variational problems
 ******************************************
 
 Finite element variational problems may be specified in
-near-mathematical notation directly as part of your program.
+near-mathematical notation **directly as part of your program**.
 For example, the variational problem for the Poisson equation,
 
 .. math::
@@ -35,7 +35,7 @@ can be directly translated to the following FEniCS program:
     a = dot(grad(u), grad(v))*dx
     L = f*v*dx
 
-Variational problems like the one above may be solved automatically in
+Variational problems like the one above may be **solved automatically** in
 FEniCS by calling the ``solve()`` function:
 
 .. code-block:: python
@@ -44,13 +44,13 @@ FEniCS by calling the ``solve()`` function:
     solve(a == L, u, bc)
 
 Automated solution of variational problems is not limited to linear
-problems. FEniCS also supports general nonlinear variational problems:
+problems. FEniCS also supports **general nonlinear variational problems**:
 
 .. math::
    F(u; v) = 0 \quad \forall v \in V.
 
 The solution is automatically computed by Newton's method through
-automatic differentiation:
+**automatic differentiation**:
 
 .. code-block:: python
 
@@ -60,8 +60,8 @@ automatic differentiation:
 Automated error control and adaptivity
 **************************************
 
-Say you want to solve the above problem adaptively with automated
-control of the error in the computed solution... No problem, just
+Say you want to solve the above problem adaptively with **automated
+control of the error** in the computed solution... No problem, just
 specify a *goal functional* :math:`\mathcal{M} : V \rightarrow
 \mathbb{R}` (a global scalar functional of your computed solution) and
 a tolerance :math:`\epsilon > 0`:
@@ -87,7 +87,7 @@ element.
 High performance linear algebra
 *******************************
 
-FEniCS provides unified access to a range of linear algebra libraries
+FEniCS provides unified access to **a range of linear algebra libraries**
 through a common wrapper layer. Currently supported linear algebra
 backends include `PETSc <http://www.mcs.anl.gov/petsc/>`_,
 `Trilinos/Epetra <http://trilinos.sandia.gov/packages/epetra/>`_,
@@ -117,7 +117,7 @@ Postprocessing
 **************
 
 FEniCS provides built-in plotting for quick and easy inspection of
-solutions and meshes. Just call the ``plot()`` command for live plotting
+solutions and meshes. Just call the ``plot()`` command for **live plotting**
 of your data:
 
 .. code-block:: python
@@ -131,7 +131,7 @@ You can even plot derived quantities like the gradient of a function:
 
     plot(grad(u))
 
-For more advanced postprocessing, FEniCS provides easy output in VTK
+For more **advanced postprocessing**, FEniCS provides easy output in VTK
 format for visualization in `ParaView <http://www.paraview.org/>`_ or
 `MayaVi <http://mayavi.sourceforge.net/>`_.
 
@@ -149,7 +149,7 @@ seasoned C++ programmer.
 Extensive documentation
 ***********************
 
-FEniCS comes with extensive documentation, consisting of a
+FEniCS comes with **extensive documentation**, consisting of a
 :ref:`comprehensive tutorial <tutorial>`, detailed :ref:`API
 documentation <programmers_references>` and a range of
 :ref:`documented demos <demos>`. In addition, the :ref:`700-page
