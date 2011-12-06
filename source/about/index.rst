@@ -41,6 +41,9 @@ language :ref:`UFL <about_components_ufl>` and a range of
 look at these various FEniCS components can be found :ref:`here
 <about_components>`.
 
+.. image:: images/fenics-map.png
+   :align: center
+
 Building on these components, software specialized to solving
 different problems are organised into separate :doc:`applications
 <../applications/index>`.
