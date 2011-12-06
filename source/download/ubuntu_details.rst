@@ -37,6 +37,7 @@ a terminal:
     sudo add-apt-repository ppa:fenics-packages/fenics
     sudo apt-get update
     sudo apt-get install fenics
+    sudo apt-get dist-upgrade
 
 .. warning::
 
@@ -46,12 +47,6 @@ a terminal:
     fine since only the Boost `development` packages (as in
     ``libboost-foo-dev``) will be replaced. However, if you want to keep
     the default Boost packages, then you should not add this PPA.
-
-.. note::
-
-    If you experience problems with the FEniCS packages after adding the
-    FEniCS PPA, make sure that all packages are up-to-date by running
-    ``sudo apt-get dist-upgrade`` in a terminal.
 
 ================
 Removing the PPA
