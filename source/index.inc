@@ -37,8 +37,10 @@
       <div id="feature-info">
         <p>The FEniCS Project is a collection of
           <a href="http://www.gnu.org/philosophy/free-sw.html">free
-            software</a> aimed at automated, efficient solution of
-            differential equations
+            software</a> with an
+            <a href="/about/features.html">extensive list of features</a>
+            for automated, efficient solution of differential equations.
+
         </p>
 
 	<p>Through this web site, you can <a href="/about/">learn more
@@ -47,7 +49,7 @@
 	    software. We'd be delighted to <a href="/support/">offer
 	    support</a> in case you need it,
 	    and <a href="/contributing/">encourage contributions</a>
-	    from our users
+	    from our users.
         </p>
 
 	<p style="text-align:center;">

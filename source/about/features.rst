@@ -16,7 +16,7 @@ Automated solution of variational problems
 ******************************************
 
 Finite element variational problems may be specified in
-near-mathematical notation directly as part of you program.
+near-mathematical notation directly as part of your program.
 For example, the variational problem for the Poisson equation,
 
 .. math::
@@ -25,7 +25,7 @@ For example, the variational problem for the Poisson equation,
    \underbrace{\int_{\Omega} f v \, {\rm d} x}_{L(v)}
    \quad \forall v \in V,
 
-may be specified as follows in FEniCS:
+can be directly translated to the following FEniCS program:
 
 .. code-block:: python
 
@@ -35,8 +35,8 @@ may be specified as follows in FEniCS:
     a = dot(grad(u), grad(v))*dx
     L = f*v*dx
 
-Variational problems like the one above may be solve automatically in
-FEniCS by calling the ``solve`` function:
+Variational problems like the one above may be solved automatically in
+FEniCS by calling the ``solve()`` function:
 
 .. code-block:: python
 
@@ -49,7 +49,7 @@ problems. FEniCS also supports general nonlinear variational problems:
 .. math::
    F(u; v) = 0 \quad \forall v \in V.
 
-The solution is automaticall computed by Newton's method through
+The solution is automatically computed by Newton's method through
 automatic differentiation:
 
 .. code-block:: python
@@ -117,7 +117,7 @@ Postprocessing
 **************
 
 FEniCS provides built-in plotting for quick and easy inspection of
-solutions and meshes. Just call the ``plot`` command for live plotting
+solutions and meshes. Just call the ``plot()`` command for live plotting
 of your data:
 
 .. code-block:: python
