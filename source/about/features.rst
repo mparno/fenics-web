@@ -68,7 +68,7 @@ a tolerance :math:`\epsilon > 0`:
 
 .. code-block:: python
 
-    solve(F == 0, u, bc, M, epsilon)
+    solve(F == 0, u, bc, tol=epsilon, M=M)
 
 ***************************************
 An extensive library of finite elements
