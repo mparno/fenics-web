@@ -90,6 +90,9 @@ methods**, vector elements like the **BDM**, **RT** and **Nedelec**
 elements, and special element types like the **Crouzeix-Raviart**
 element.
 
+.. image:: images/elements.png
+   :align: center
+
 *******************************
 High performance linear algebra
 *******************************
