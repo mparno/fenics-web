@@ -39,9 +39,10 @@ different problems are organised into separate :doc:`applications
 Contributors
 ************
 
-The FEniCS Project is developed by researchers from a number of
-research institutes from around the world. The following research
-institutes contribute significant resources to the FEniCS Project:
+The FEniCS Project is developed by :ref:`researchers from a number of
+research institutes <team>` from around the world. The following
+research institutes contribute significant resources to the FEniCS
+Project:
 
 * `Simula Research Laboratory <http://www.simula.no>`__
 * `University of Cambridge <http://www.cam.ac.uk>`__

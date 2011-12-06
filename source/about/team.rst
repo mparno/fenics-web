@@ -1,4 +1,4 @@
-.. _apps:
+.. _team:
 
 ##################################
 The team behind the FEniCS Project

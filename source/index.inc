@@ -83,7 +83,7 @@
           the book project &raquo;</a></p>
 
           <h3>Who's behind the FEniCS Project?</h3>
-          <img alt='' src='/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' />
+          <a href="/about/team.html"><img alt='' src='/_static/images/fenicsworld.png' class='avatar avatar-84 photo' height='84' width='84' /></a>
 
 	  <p>The FEniCS Project is a collaborative effort between
 	  research groups from Simula Research Laboratory, University
