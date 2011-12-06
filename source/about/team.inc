@@ -15,12 +15,9 @@
           an adjunct associate professor at the <a
           href="http://www.uio.no/">University of Oslo</a>.</p>
 
-          <p>He has been working on the FEniCS project since
-          2003. Apart from being the developer and maintainer of
-          several projects (including DOLFIN, FFC, UFC, UFL,
-          CBC.Solve, Exterior and the FEniCS Project web page), Anders
-          has coordinated several FEniCS related activities over the
-          years.</p>
+          <p>He has been involved with the FEniCS project since 2003
+          and is developer and maintainer of DOLFIN, FFC, UFC, UFL,
+          CBC.Solve, Exterior and the FEniCS Project web page.</p>
 
           <p>You can view all Anders' contributions on <a
           href="https://launchpad.net/~logg">his Launchpad
@@ -40,8 +37,8 @@
 	  an adjunct associate professor at the <a
 	  href="http://www.uio.no/">University of Oslo</a>.</p>
 
-          <p>He has been involved with the FEniCS Project since
-	  2006, and is a developer of DOLFIN, Instant, SyFi, Exterior,
+          <p>He has been involved with the FEniCS Project since 2006
+	  and is a developer of DOLFIN, Instant, SyFi, Exterior,
 	  CBC.Block and UFC.</p>
 
           <p>You can view all Kent's contributions on <a
@@ -60,8 +57,8 @@
 	  <p>Marie is a postdoctoral fellow at <a
 	  href="http://simula.no/">Simula Research Laboratory</a>.</p>
 
-	  <p>She has been working on the FEniCS project since
-	  2007. She is one of the developers of FIAT, FFC, UFL, DOLFIN
+	  <p>She has been involed with the FEniCS Project since 2007,
+	  is a developer of FIAT, FFC, UFL, DOLFIN
 	  and the lead developer of ASCoT.</p>
 
 	  <p>You can view all Marie's contributions on <a
@@ -80,8 +77,8 @@
 	  <p>Johannes is a research engineer at <a
 	  href="http://simula.no/">Simula Research Laboratory</a>.</p>
 
-          <p>He has been involved with the FEniCS Project since
-	  2008, mostly as a build engineer.</p>
+          <p>He has been involved with the FEniCS Project since 2008,
+          mostly as a build engineer.</p>
 
 	  <p>You can view all Johannes' contributions on <a
           href="https://launchpad.net/~johannr">his Launchpad
