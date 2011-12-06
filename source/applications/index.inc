@@ -3,7 +3,7 @@
     <div id="content">
       <div id="sub-feature">
 
-      	<div id="front-block-1" class="front-block block">
+      	<div class="front-block block">
 
 	  <h3>CBC.Block &mdash; Block linear algebra in Python</h3>
           <img alt='' src='/_static/images/cbc_block.png'
@@ -22,9 +22,29 @@
           <p><a href="https://launchpad.net/cbc.block" rel="nofollow">Visit the
           project&#8217;s web site to learn more &raquo;</a></p>
 
-        </div><!-- #front-block-1 .front-block .block-->
+        </div>
 
-        <div id="front-block-2" class="front-block block">
+      	<div class="front-block block">
+
+	  <h3>CBC.PDESys &mdash; Specify large systems of PDEs with ease</h3>
+          <img alt='' src='/_static/images/featured/featured_item_pdesys.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+          <p> CBC.PDESys is a Python package for specifying and solving
+          large, completely general, systems of nonlinear Partial Differential
+          Equations (PDEs) with very compact, flexible and reusable code.
+          CBC.CFD is a subpackage of CBC.PDESys that focuses on Computational
+          Fluid Dynamics and turbulence modeling. CBC.CFD also contains some highly
+          optimized Navier-Stokes solvers.
+          </p>
+
+          <p><a href="https://launchpad.net/cbcpdesys"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
+        <div class="front-block block">
 
           <h3>CBC.Solve &mdash; A collection of Python solvers</h3>
           <img alt='' src='/_static/images/cbc_solve.png'
@@ -43,27 +63,9 @@
           <p><a href="https://launchpad.net/cbc.solve" rel="nofollow">Visit the
           project&#8217;s web site to learn more &raquo;</a></p>
 
-        </div><!-- #front-block-2 .front-block .block-->
+        </div>
 
-      	<div id="front-block-3" class="front-block block">
-
-	  <h3>FEniCS Plasticity &mdash; A plasticity library for FEniCS</h3>
-          <img alt='' src='/_static/images/fenics_plasticity.png'
-          class='avatar avatar-84 photo' height='84' width='84' />
-
-	  <p>FEniCS Plasticity is a library that implements the Von Mises and
-       Drucker-Prager plasticity models using FEniCS software.
-       However, the structure of the library should be general enough to also
-       allow other models to be implemented with little effort.
-    </p>
-
-          <p><a href="https://launchpad.net/fenics-plasticity"
-          rel="nofollow">Visit the project&#8217;s web site to learn more
-          &raquo;</a></p>
-
-        </div><!-- #front-block-3 .front-block .block-->
-
-      	<div id="front-block-4" class="front-block block">
+      	<div class="front-block block">
 
 	  <h3>DOLFWAVE &mdash; A library for surface water waves</h3>
           <img alt='' src='/_static/images/dolfwave_tsunami.png'
@@ -75,15 +77,33 @@
           LAN </a> hosted by <a href="http://ptmat.fc.ul.pt"> CMAF </a> in Lisbon.
           The main goal of DOLFWAVE is to provide a framework for the analysis,
           development and computation of Boussinesq-type models.
-    </p>
+          </p>
 
           <p><a href="https://launchpad.net/dolfwave"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
-        </div><!-- #front-block-4 .front-block .block-->
+        </div>
 
-      	<div id="front-block-5" class="front-block block">
+      	<div class="front-block block">
+
+	  <h3>FEniCS Plasticity &mdash; A plasticity library for FEniCS</h3>
+          <img alt='' src='/_static/images/fenics_plasticity.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>FEniCS Plasticity is a library that implements the Von Mises and
+          Drucker-Prager plasticity models using FEniCS software.
+          However, the structure of the library should be general enough to also
+          allow other models to be implemented with little effort.
+          </p>
+
+          <p><a href="https://launchpad.net/fenics-plasticity"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
+    	<div class="front-block block">
 
 	  <h3>Unicorn &mdash; A massively parallel adaptive continuum solver</h3>
           <img alt='' src='/_static/images/unicorn_mixer.gif'
@@ -102,27 +122,7 @@
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
-        </div><!-- #front-block-5 .front-block .block-->
-
-      	<div id="front-block-6" class="front-block block">
-
-	  <h3>CBC.PDESys &mdash; Specify large systems of PDEs with ease</h3>
-          <img alt='' src='/_static/images/featured/featured_item_pdesys.png'
-          class='avatar avatar-84 photo' height='84' width='84' />
-
-          <p> CBC.PDESys is a Python package for specifying and solving 
-          large, completely general, systems of nonlinear Partial Differential 
-          Equations (PDEs) with very compact, flexible and reusable code. 
-          CBC.CFD is a subpackage of CBC.PDESys that focuses on Computational 
-          Fluid Dynamics and turbulence modeling. CBC.CFD also contains some highly 
-          optimized Navier-Stokes solvers.
-          </p>
-
-          <p><a href="https://launchpad.net/cbcpdesys"
-          rel="nofollow">Visit the project&#8217;s web site to learn more
-          &raquo;</a></p>
-
-        </div><!-- #front-block-6 .front-block .block-->
+        </div>
 
       </div><!-- #sub-feature -->
     </div><!-- #content -->
