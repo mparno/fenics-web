@@ -132,15 +132,11 @@ of your data:
     plot(mesh)
     plot(u)
 
-FIXME: Add image here of solution
-
 You can even plot derived quantities like the gradient of a function:
 
 .. code-block:: python
 
     plot(grad(u))
-
-FIXME: Add image here of gradient
 
 For more advanced postprocessing, FEniCS provides easy output in VTK
 format for visualization in `ParaView <http://www.paraview.org/>`_ or
