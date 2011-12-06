@@ -15,6 +15,16 @@ The methodology and software developed as part of the FEniCS Project
 are documented in a number of :doc:`research articles <../citing/index>`
 and a :doc:`book <../book/index>`.
 
+********
+Features
+********
+
+FEniCS has an :ref:`extensive list of features <features>` for
+automated, efficient solution of differential equations, including
+automated solution of variational problems, automated error control
+and adaptivity, a comprehensive library of finite elements, high
+performance linear algebra and many more.
+
 **********
 Components
 **********
