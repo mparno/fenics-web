@@ -20,5 +20,8 @@ fi
 publish export fenics.bib database_filename=fenics.pub debug=1
 publish export fenics.rst database_filename=fenics.pub debug=1
 
-# Copy bib file to _static directory
-cp fenics.bib ../_static/bibliography/
+# Rename .rst file to get rid of Sphinx warning
+mv fenics.rst fenics.rst_
+
+# Copy file to citing directory
+cp fenics.rst_ ../../citing

@@ -127,4 +127,4 @@ Bibliography
 ------------
 
 .. _bibliography:
-.. include:: fenics.rst
+.. include:: fenics.rst_
