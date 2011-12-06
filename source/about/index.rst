@@ -114,6 +114,9 @@ welcome as always. If you find something is in error or missing,
 `please file a bug report
 <https://bugs.launchpad.net/fenics-web/+filebug>`__ with Launchpad.
 
-.. toctree:: :hidden:
+.. toctree::
+   :hidden:
 
    components
+   features
+   team
