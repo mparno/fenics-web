@@ -11,16 +11,6 @@ automatically**. FEniCS also provides a large library of important
 tools for the numerial analyst who wishes to explore and develop new
 methods.
 
-*****************
-Language bindings
-*****************
-
-FEniCS can be used from both **Python** and **C++**. The two interaces
-are very similar and provide the same features (with some small
-exceptions). Which interface to choose is a matter of taste, but the
-Python interface is easier to work with if you are not already a
-seasoned C++ programmer.
-
 ******************************************
 Automated solution of variational problems
 ******************************************
@@ -119,6 +109,9 @@ computing is supported through interfaces to `SCOTCH
 <http://www.labri.fr/perso/pelegrin/scotch/>`_ and `ParMETIS
 <http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview>`_.
 
+.. image:: images/meshes.png
+   :align: center
+
 **************
 Postprocessing
 **************
@@ -141,6 +134,16 @@ You can even plot derived quantities like the gradient of a function:
 For more advanced postprocessing, FEniCS provides easy output in VTK
 format for visualization in `ParaView <http://www.paraview.org/>`_ or
 `MayaVi <http://mayavi.sourceforge.net/>`_.
+
+*****************
+Language bindings
+*****************
+
+FEniCS can be used from both **Python** and **C++**. The two interaces
+are very similar and provide the same features (with some small
+exceptions). Which interface to choose is a matter of taste, but the
+Python interface is easier to work with if you are not already a
+seasoned C++ programmer.
 
 ***********************
 Extensive documentation
