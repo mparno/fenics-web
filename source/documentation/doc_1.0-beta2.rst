@@ -1,7 +1,7 @@
 
-.. title:: Documentation for 1.0-beta2
+.. This page was automatically generated.
 
-.. _overview_of_documentation_for_FEniCS_1.0-beta2:
+.. title:: Documentation for 1.0-beta2
 
 ####################################################
 Documentation for FEniCS 1.0-beta2
@@ -16,7 +16,7 @@ are those of the C++/Python problem solving environment :ref:`DOLFIN
 <about_components_ufl>`.
 
 (*This page accesses the FEniCS 1.0-beta2 documentation. Not the
-version you are looking for? See* :ref:`other_versions_1.0-beta2`.)
+version you are looking for? See* :doc:`all versions <all>`.)
 
 .. raw:: html
 
@@ -107,21 +107,4 @@ Release notes
 If you are updating your application code to a new FEniCS release,
 make sure to check the :ref:`release notes <releases>` where you will
 find detailed information about new features and interface changes.
-
-.. _other_versions_1.0-beta2:
-
-***********************************
-All versions of the documentation
-***********************************
-
-* :doc:`doc_dev`
-* :doc:`doc_1.0-rc2`
-* :doc:`doc_1.0-rc1`
-* :doc:`doc_1.0-beta2`
-* :doc:`doc_1.0-beta`
-
-.. toctree::
-   :hidden:
-
-   tutorial/index
 

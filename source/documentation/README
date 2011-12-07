@@ -1,0 +1,49 @@
+
+How to generate new overview pages for the documentation
+---------------------------------------------------------
+
+To generate a new overview page for a FEniCS release do:
+
+  ./new_release dolfin-version ufl-version
+
+For instance
+
+  ./new_release 1.0 1.0
+
+This will
+
+* generate a new overview page (doc_dolfin-version.rst),
+* update the index to point to the new page,
+* update the all versions page,
+* update the data for available versions (stored in versions.py)
+
+Notes:
+------
+
+- The corresponding documentation for UFL and DOLFIN should be
+  generated separately, and prior to this
+
+- The version numbers (1.0 and 1.0) in the above example will be used
+  when linking to the demos and the API references, and should
+  therefore match the directories in which that documentation is
+  stored.
+
+- The dolfin-version number is used as the common FEniCS version
+  number
+
+-
+
+More information:
+-----------------
+
+If you want to (re-)generate all the versions, run
+
+   python make_new_doc_python.py
+
+If you have messed things up, and want to try again:
+
+* remove *.rst
+* edit versions.py and
+* (re-)generate all the versions: python make_new_doc_python.py
+* run ./new_release with latest version.
+

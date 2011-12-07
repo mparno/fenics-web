@@ -1,7 +1,7 @@
 page = """
-.. title:: Documentation for %(version)s
+.. This page was automatically generated.
 
-.. _overview_of_documentation_for_FEniCS_%(version)s:
+.. title:: Documentation for %(version)s
 
 ####################################################
 Documentation for FEniCS %(version)s
@@ -16,7 +16,7 @@ are those of the C++/Python problem solving environment :ref:`DOLFIN
 <about_components_ufl>`.
 
 (*This page accesses the FEniCS %(version)s documentation. Not the
-version you are looking for? See* :ref:`other_versions_%(version)s`.)
+version you are looking for? See* :doc:`all versions <all>`.)
 
 .. raw:: html
 
@@ -108,19 +108,6 @@ If you are updating your application code to a new FEniCS release,
 make sure to check the :ref:`release notes <releases>` where you will
 find detailed information about new features and interface changes.
 
-.. _other_versions_%(version)s:
-
-***********************************
-All versions of the documentation
-***********************************
-
-%(all_versions)s
-
-.. toctree::
-   :hidden:
-
-   tutorial/index
-
 """
 
 def write_doc_page(options):
@@ -132,11 +119,12 @@ def write_doc_page(options):
     file.write(contents)
     file.close()
 
-def generate_doc_pages(doc_versions):
+def generate_doc_pages(versions, all_doc_versions):
 
-    all_versions = "\n".join(["* :doc:`doc_%s`" % v[0] for v in doc_versions])
+    all_versions = "\n".join(["* :doc:`doc_%s`" % v[0]
+                              for v in all_doc_versions])
 
-    for (dolfin, ufl) in doc_versions:
+    for (dolfin, ufl) in versions:
         versions = {"version": dolfin,
                     "version_dot": dolfin.replace("-", "."),
                     "ufl_version": ufl,
@@ -145,14 +133,8 @@ def generate_doc_pages(doc_versions):
 
 if __name__ == "__main__":
 
-    # Generate main documentation page(s) by list of (dolfin-version,
-    # ufl-version):
-    versions = [("dev", "dev"),
-                ("1.0-rc2", "1.0-rc1"),
-                ("1.0-rc1", "1.0-rc1"),
-                ("1.0-beta2", "1.0-beta3"),
-                ("1.0-beta", "1.0-beta2")]
+    # Get data for all (previous) versions from file
+    from versions import all_versions
 
-    # Or just the newest version(s):
-    # versions = [("1.0.0", "1.0.0")]
-    generate_doc_pages(versions)
+    # (Re)-generate doc pages for all versions
+    generate_doc_pages(all_versions, all_versions)
