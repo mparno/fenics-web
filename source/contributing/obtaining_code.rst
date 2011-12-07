@@ -32,6 +32,6 @@ Developers should subscribe to notifications of changes made to the
 source code by visiting the repository on Launchpad and clicking the
 subscribe button.
 
-Links to the Launchpad code pages for all FEniCS projects can be found
-:ref:`here <launchpad_pages>`.
+Links to the Launchpad code pages for all FEniCS projects can be found on the
+:ref:`Launchpad links page <launchpad_pages>`.
 

@@ -87,8 +87,8 @@ After the release of 1.0-beta, users can expect a release of
 1.0**. An exact release date cannot be promised as it depends on how
 long it takes for us to fix remaining bugs. Remember that we are all
 scientists who work on FEniCS in between writing papers and referee
-reports, teaching courses and supervising students.  The road towards
-1.0 can be followed `here <https://launchpad.net/dolfin/trunk>`__.
+reports, teaching courses and supervising students.
+Follow `the road <https://launchpad.net/dolfin/trunk>`__ towards 1.0.
 
 After the release of 1.0, we look forward to adding **new and exciting
 features** to FEniCS. Items of current interest include improved (and

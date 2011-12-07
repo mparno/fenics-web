@@ -45,5 +45,5 @@ command shell from the start menu and you are ready to start working.
 Older releases
 **************
 
-Older versions of the Windows installer are available :ref:`here
+Older versions of the Windows installer are also :ref:`available
 <older_releases>`.

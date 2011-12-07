@@ -29,7 +29,8 @@ performance linear algebra and many more.
 Components
 **********
 
-FEniCS is organized as a collection of interoperable components that
+FEniCS is organized as a collection of interoperable
+:ref:`components <about_components>` that
 together form the FEniCS Project. These components include the
 problem-solving environment :ref:`DOLFIN <about_components_dolfin>`,
 the form compiler :ref:`FFC <about_components_ffc>`, the finite
@@ -37,9 +38,7 @@ element tabulator :ref:`FIAT <about_components_fiat>`, the
 just-in-time compiler :ref:`Instant <about_components_instant>`, the
 code generation interface :ref:`UFC <about_components_ufc>`, the form
 language :ref:`UFL <about_components_ufl>` and a range of
-:ref:`additional components <about_components_additional>`. A deeper
-look at these various FEniCS components can be found :ref:`here
-<about_components>`.
+:ref:`additional components <about_components_additional>`.
 
 .. image:: images/fenics-map.png
    :align: center
@@ -95,7 +94,7 @@ All other FEniCS components are licensed under either the `GNU GPL
 license, or (at your option) any later version.
 
 Authors and institutions have given their consent to licensing under
-these terms `here <http://www.fenicsproject.org/pub/copyright>`__.
+`these terms <http://www.fenicsproject.org/pub/copyright>`__.
 
 *****************
 About these pages

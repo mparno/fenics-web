@@ -24,8 +24,8 @@ The development of FEniCS is discussed actively on the Launchpad
 mailing list for each component and on the `FEniCS mailing list
 <https://lists.launchpad.net/fenics/>`__ itself. To subscribe to a
 mailing list, you first need to join the relevant team. Links to
-Launchpad mailing list and team pages can be found :ref:`here
-<launchpad_pages>`.
+Launchpad mailing list and team pages can be found at the
+:ref:`Launchpad links page <launchpad_pages>`.
 
 User questions
 ==============
@@ -56,4 +56,4 @@ place for general FEniCS blueprints and `DOLFIN blueprints
 <https://blueprints.launchpad.net/dolfin>`_ is the place for
 blueprints regarding the FEniCS user interface DOLFIN. Links to
 Launchpad blueprint pages for all FEniCS projects can be found
-:ref:`here <launchpad_pages>`.
+:ref:`Launchpad links page <launchpad_pages>`.

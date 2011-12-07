@@ -24,11 +24,11 @@ coordinated releases of all components to ensure interoperability
 between the components.
 
 The FEniCS Project uses `Launchpad <http://www.launchpad.net>`_ as its
-main development platform. An overview of all FEniCS projects on
-Launchpad can be found `here
-<https://launchpad.net/fenics-project>`__.  A collection of links to
+main development platform. All FEniCS projects are collected under
+the `FEniCS Project on Launchpad
+<https://launchpad.net/fenics-project>`_.  A collection of links to
 important Launchpad pages for the various FEniCS components can be
-found :ref:`here <launchpad_pages>`.
+found on the :ref:`Launchpad links page <launchpad_pages>`.
 
 ***************************
 Instructions for developers

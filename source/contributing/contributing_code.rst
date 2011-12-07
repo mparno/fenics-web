@@ -37,9 +37,8 @@ Copyright and licensing consent
 ===============================
 
 Before your contribution can be accepted into FEniCS, you must sign a
-copyright consent form. Ideally, both you and your employer should
-sign a form. The forms can be found `here
-<http://fenicsproject.org/pub/copyright/forms/>`__. After you have
+`copyright consent form <http://fenicsproject.org/pub/copyright/forms/>`_.
+Ideally, both you and your employer should sign a form. After you have
 signed the form, send it by regular mail to
 
   | Johannes Ring
@@ -48,9 +47,9 @@ signed the form, send it by regular mail to
   | 1325 Lysaker
   | Norway
 
-Copies of signed consent forms are archived
-`here <http://fenicsproject.org/pub/copyright/authors>`__
-and `here <http://fenicsproject.org/pub/copyright/institutions>`__.
+Copies of signed consent forms are archived for 
+`authors <http://fenicsproject.org/pub/copyright/authors>`_
+and `institutions <http://fenicsproject.org/pub/copyright/institutions>`_.
 
 .. _contributing_branches:
 

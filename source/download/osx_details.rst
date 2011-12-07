@@ -65,5 +65,5 @@ this binary:
 Older releases
 **************
 
-Older versions of the Mac OS X binary are available :ref:`here
+Older versions of the Mac OS X binary are also :ref:`available
 <older_releases>`.
