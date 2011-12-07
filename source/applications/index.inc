@@ -5,6 +5,26 @@
 
       	<div class="front-block block">
 
+	  <h3>ASCoT &mdash; Automated Stability Condition Tester </h3>
+          <img alt='' src='/_static/images/ascot.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p> ASCoT is a light-weight, FEniCS-based, Python module
+          designed for examining and determining the numerical
+          stability of finite element discretizations. Its
+          functionality allows for identifying stable mixed finite
+          element spaces for variational saddle point problems, for
+          optimizing stabilization constants, and in general, for
+          computing stability constants through series of eigenvalue
+          problems.  </p>
+
+          <p><a href="https://launchpad.net/ascot" rel="nofollow">Visit the
+          project&#8217;s web site to learn more &raquo;</a></p>
+
+        </div>
+
+      	<div class="front-block block">
+
 	  <h3>CBC.Block &mdash; Block linear algebra in Python</h3>
           <img alt='' src='/_static/images/cbc_block.png'
           class='avatar avatar-84 photo' height='84' width='84' />
