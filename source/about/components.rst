@@ -38,9 +38,10 @@ Authors (past and present in chronological order)
 
 Anders Logg, Johan Hoffman, Garth N. Wells, Johan Jansson, Ola
 Skavhaug, Kent-Andre Mardal, Martin Sandve Alnes, Johan Hake, Niclas
-Jansson, Johannes Ring, Kristian Oelgaard, Marie Rognes
+Jansson, Johannes Ring, Kristian B. Ølgaard, Marie Rognes
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~dolfin-core/dolfin/trunk/view/head:/AUTHORS>`__
 in the DOLFIN source tree.
 
 .. _about_components_ffc:
@@ -62,14 +63,15 @@ variational problem.
 Maintainers (in alphabetical order)
 ===================================
 
-Anders Logg, Kristian Oelgaard, Marie Rognes, Garth N. Wells
+Anders Logg, Kristian B. Ølgaard, Marie Rognes, Garth N. Wells
 
 Authors (past and present in chronological order)
 =================================================
 
 Anders Logg, Marie Rognes, Kristian Oelgaard, Garth N. Wells
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~ffc-core/ffc/main/view/head:/AUTHORS>`__
 in the FFC source tree.
 
 .. _about_components_fiat:
@@ -97,7 +99,8 @@ Authors (past and present in chronological order)
 
 Robert C. Kirby, Anders Logg, Marie Rognes
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~fiat-core/fiat/main/view/head:/AUTHORS>`__
 in the FIAT source tree.
 
 .. _about_components_instant:
@@ -123,7 +126,8 @@ Authors (past and present in chronological order)
 .. note::
    Add list of Instant authors.
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~instant-core/instant/main/view/head:/AUTHORS>`__
 in the Instant source tree.
 
 .. _about_components_ufc:
@@ -151,7 +155,8 @@ Authors (past and present in chronological order)
 Anders Logg, Martin Sandve Alnes, Kent-Andre Mardal, Ola Skavhaug,
 Hans Petter Langtangen, Garth N. Wells
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~ufc-core/ufc/main/view/head:/AUTHORS>`__
 in the UFC source tree.
 
 .. _about_components_ufl:
@@ -174,9 +179,10 @@ Martin Sandve Alnes
 Authors (past and present in chronological order)
 =================================================
 
-Martin Sandve Alnes, Anders Logg, Garth N. Wells
+Martin Sandve Alnes, Anders Logg, Garth N. Wells, Kristian B. Ølgaard
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `README
+<https://bazaar.launchpad.net/~ufl-core/ufl/main/view/head:/README>`__
 in the UFL source tree.
 
 .. _about_components_additional:
@@ -201,7 +207,8 @@ Authors (past and present in chronological order)
 
 Marie Rognes
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~ascot-core-team/ascot/main/view/head:/AUTHORS>`__
 in the ASCoT source tree.
 
 .. _about_components_dorsal:
@@ -247,7 +254,8 @@ Authors (past and present in chronological order)
 
 Kent-Andre Mardal, Martin Sandve Alnes
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~syfi-core/fenics-syfi/main/view/head:/AUTHORS>`__
 in the SyFi source tree.
 
 .. _about_components_viper:
@@ -270,5 +278,6 @@ Authors (past and present in chronological order)
 
 Ola Skavhaug
 
-For a full list of contributors, refer to the ``AUTHORS`` file found
+For a full list of contributors, refer to the file `AUTHORS
+<https://bazaar.launchpad.net/~viper-core/fenics-viper/main/view/head:/AUTHORS>`__
 in the Viper source tree.
