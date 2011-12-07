@@ -189,6 +189,27 @@
 
         </div>
 
+      	<div class="front-block block">
+  	  <h2>Kristian Breum Ølgaard</h2>
+          <div class="avatar mugshot">
+	    <img alt='Kristian Breum Ølgaard'
+		 src='/_static/images/mugshots/oelgaard.jpg' />
+	  </div>
+
+	  <p>Kristian is a research assistant at <a
+	  href="http://en.esbjerg.aau.dk/">Aalborg University</a>.
+          </p>
+
+          <p>He has been involved with the FEniCS Project since 2006,
+          is one of the main developers of FFC and FEniCS Plasticity, and a
+          developer of UFL and DOLFIN.</p>
+
+	  <p>You can view all Kristian's contributions on <a
+          href="https://launchpad.net/~k.b.oelgaard">his Launchpad
+          page.</a></p>
+
+        </div>
+
       </div><!-- #sub-feature -->
     </div><!-- #content -->
   </div><!-- #container .feature -->
