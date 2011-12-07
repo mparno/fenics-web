@@ -73,7 +73,7 @@ vessels. The goal functional (or target quantity of interest) is the
 outflux of one of the other vessels.
 
 More standalone examples (including C++ examples) can be found in the
-:ref:`DOLFIN demo directories <demos>`.
+:ref:`DOLFIN demo directories <documentation>`.
 
 .. code-block:: python
 

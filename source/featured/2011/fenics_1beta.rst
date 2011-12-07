@@ -54,8 +54,8 @@ Extensive documentation
 Over the last couple of years, we have also worked hard to add an
 important missing piece to the FEniCS Project: **good documentation**.
 We can now provide an :ref:`extensive tutorial <tutorial>`, detailed
-:ref:`API documentation <programmers_references>` and a range of
-:ref:`documented demos <demos>`. In addition, we have recently
+:ref:`API documentation <documentation>` and a range of
+:ref:`documented demos <documentation>`. In addition, we have recently
 completed the work on a :ref:`700-page book <book>` that documents the
 methodology behind the FEniCS Project and highlights a number of
 applications in computational science based on FEniCS.

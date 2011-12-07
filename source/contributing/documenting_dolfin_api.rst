@@ -5,12 +5,12 @@
 Documenting the DOLFIN interface (Programmer's reference)
 =========================================================
 
-The DOLFIN :ref:`programmers_references` is generated for the DOLFIN
-C++ library and Python module from the source code using the
-documentation tool `Sphinx
+The DOLFIN :ref:`Programmer's Reference <documentation>` is generated
+for the DOLFIN C++ library and Python module from the source code
+using the documentation tool `Sphinx
 <http://sphinx.pocoo.org/index.html>`_. This page describes how to
 generate the DOLFIN documentation locally and how to extend the
-contents of the Programmer's reference.
+contents of the Programmer's Reference.
 
 .. _generate_dolfin_documentation_locally:
 

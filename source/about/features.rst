@@ -151,11 +151,10 @@ Extensive documentation
 
 FEniCS comes with **extensive documentation**, consisting of a
 :ref:`comprehensive tutorial <tutorial>`, detailed :ref:`API
-documentation <programmers_references>` and a range of
-:ref:`documented demos <demos>`. In addition, the :ref:`700-page
-FEniCS book <book>` documents the methodology behind the FEniCS
-Project and highlights a number of applications in computational
-science based on FEniCS.
+documentation <documentation>` and a range of :ref:`documented demos
+<documentation>`. In addition, the :ref:`700-page FEniCS book <book>`
+documents the methodology behind the FEniCS Project and highlights a
+number of applications in computational science based on FEniCS.
 
 .. image:: images/documentation.png
    :align: center
