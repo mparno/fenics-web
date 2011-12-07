@@ -18,7 +18,7 @@
           is the main developer of UFL and SFC, and one of the
           developers of UFC, Instant, SyFi and DOLFIN.</p>
 
-	  <p>You can view all Martin's contributions on <a
+	  <p>You can view all Martin&#8217;s contributions on <a
           href="https://launchpad.net/~martinal">his Launchpad
           page.</a></p>
 
@@ -39,7 +39,7 @@
           is a maintainer of the Python interface of DOLFIN, and is
           a developer of Instant, UFC and FFC.</p>
 
-	  <p>You can view all Johans's contributions on <a
+	  <p>You can view all Johans&#8217;s contributions on <a
           href="https://launchpad.net/~johan-hake">his Launchpad
           page.</a></p>
 
@@ -83,7 +83,7 @@
 	  and is a developer of DOLFIN, Instant, SyFi, Exterior,
 	  CBC.Block and UFC.</p>
 
-          <p>You can view all Kent's contributions on <a
+          <p>You can view all Kent&#8217;s contributions on <a
           href="https://launchpad.net/~kent-and">his Launchpad
           page.</a></p>
 
@@ -104,8 +104,31 @@
           has developed the mesh intersection functionality in DOLFIN
           and is the main developer of DOLFIN-OLM.</p>
 
-	  <p>You can view all Andre's contributions on <a
+	  <p>You can view all Andre&#8217;s contributions on <a
           href="https://launchpad.net/~massing">his Launchpad
+          page.</a></p>
+
+        </div>
+
+      	<div class="front-block block">
+  	  <h2>Harish Narayanan</h2>
+          <div class="avatar mugshot">
+	    <img alt='Harish Narayanan'
+		 src='/_static/images/mugshots/harish.jpg' />
+	  </div>
+
+	  <p>Harish is a postdoctoral fellow at <a
+	  href="http://simula.no/">Simula Research Laboratory</a>.
+          </p>
+
+	  <p>He has been involved with the FEniCS project since 2007
+	  and is the primary developer of Dorsal (the FEniCS build
+	  system), the FEniCS project web site and CBC.Twist (a
+	  general solid mechanics solver) distributed as part of
+	  CBC.Solve.</p>
+
+	  <p>You can view all Harish&#8217;s contributions on <a
+          href="https://launchpad.net/~hnarayanan">his Launchpad
           page.</a></p>
 
         </div>
@@ -143,7 +166,7 @@
 	  is a developer of FIAT, FFC, UFL, DOLFIN
 	  and the lead developer of ASCoT.</p>
 
-	  <p>You can view all Marie's contributions on <a
+	  <p>You can view all Marie&#8217;s contributions on <a
           href="https://launchpad.net/~meg-simula">her Launchpad
           page.</a></p>
 
@@ -164,7 +187,7 @@
           is one of the developers of the fluid-structure interaction
           solver CBC.Swing distributed as part of CBC.Solve.</p>
 
-	  <p>You can view all Kristoffer's contributions on <a
+	  <p>You can view all Kristoffer&#8217;s contributions on <a
           href="https://launchpad.net/~selim-simula">his Launchpad
           page.</a></p>
 
@@ -183,7 +206,7 @@
 
           <p>He has been involved with the FEniCS Project since 2003.</p>
 
-	  <p>You can view all Ridg's contributions on <a
+	  <p>You can view all Ridg&#8217;s contributions on <a
           href="https://launchpad.net/~ridg">his Launchpad
           page.</a></p>
 
@@ -204,7 +227,7 @@
           is one of the main developers of FFC and FEniCS Plasticity, and a
           developer of UFL and DOLFIN.</p>
 
-	  <p>You can view all Kristian's contributions on <a
+	  <p>You can view all Kristian&#8217;s contributions on <a
           href="https://launchpad.net/~k.b.oelgaard">his Launchpad
           page.</a></p>
 
