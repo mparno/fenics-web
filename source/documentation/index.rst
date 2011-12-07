@@ -12,3 +12,4 @@
    tutorial/index
    doc_*
    all
+   demos

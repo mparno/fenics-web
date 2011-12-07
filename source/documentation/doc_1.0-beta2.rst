@@ -67,12 +67,8 @@ modify one of the existing demos:
 * `Documented DOLFIN demos (Python) <../documentation/dolfin/1.0.beta2/python/demo/index.html>`__
 * `Documented DOLFIN demos (C++) <../documentation/dolfin/1.0.beta2/cpp/demo/index.html>`__
 
-More demos can be found either in the ``demo`` directory of the DOLFIN
-source tree or under one of the directories ``/usr/share/dolfin/demo``
-(GNU/Linux),
-``/Applications/FEniCS.app/Contents/Resources/share/dolfin/demo`` (Mac
-OS X) or ``C:\FEniCS\share\dolfin\demo`` (Windows) if FEniCS was
-installed from a binary package.
+The demos are :ref:`already installed on your system <finding_demos>` or can
+be found in the ``demo`` directory of the DOLFIN source tree.
 
 .. raw:: html
 
