@@ -39,6 +39,12 @@ a terminal:
     sudo apt-get install fenics
     sudo apt-get dist-upgrade
 
+.. note::
+
+    The PPA will be deactivated if you later upgrade to a newer Ubuntu
+    release, so you should run these commands again after a release
+    upgrade.
+
 .. warning::
 
     Ubuntu 10.04 LTS and 10.10 users should note that when adding the
