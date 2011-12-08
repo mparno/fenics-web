@@ -19,8 +19,12 @@ Instructions for how to install these packages are given below.
 Python packages (FFC, FIAT, Instant, Viper and UFL)
 ===================================================
 
-#. First, download the source code for FFC, FIAT, Instant, Viper and
-   UFL. Then for each of these packages, follow the instructions below.
+#. First, download the source code for `FFC
+   <http://launchpad.net/ffc>`_, `FIAT <http://launchpad.net/fiat>`_,
+   `Instant <http://launchpad.net/instant>`_, `Viper
+   <http://launchpad.net/fenics-viper>`_ and `UFL
+   <http://launchpad.net/ufl>`_. Then for each of these packages,
+   follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following command::
 
@@ -39,8 +43,10 @@ C++/Python packages (DOLFIN and UFC)
 
 Building and installing DOLFIN and UFC require CMake version >= 2.8.
 
-#. First, download the source code for UFC and DOLFIN. Then for each of
-   these packages, follow the instructions below.
+#. First, download the source code for `UFC
+   <http://launchpad.net/ufc>`_ and `DOLFIN
+   <http://launchpad.net/dolfin>`_. . Then for each of these packages,
+   follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following commands::
 
