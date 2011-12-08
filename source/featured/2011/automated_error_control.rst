@@ -14,12 +14,8 @@ control allow a further enhancement: numerical simulations targeted at
 a specific **quantity of interest**.
 
 .. image:: images/atria_whole.png
-    :align: left
-    :scale: 110%
 
 .. image:: images/atria_zoom.gif
-    :align: right
-    :scale: 80%
 
 Here you see an example: automated adaptive refinement steered towards
 the computation of the wall stresses at a part of the human atria
@@ -62,8 +58,6 @@ How to use it
 **************
 
 .. image:: images/navier_stokes_solution.png
-    :align: right
-    :scale: 100%
 
 Below is a simple code example for the automated adaptive variational
 solvers using the DOLFIN Python interface. The variational problem at
