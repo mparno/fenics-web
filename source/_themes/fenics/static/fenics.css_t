@@ -461,6 +461,7 @@ padding-left: 1em;
 #front-block-1 {
     margin-right:20px;
 }
+
 .block .avatar {
     float:left;
     margin:.55em 5px 0 0;
@@ -562,4 +563,9 @@ display: none;
   width: 100px;
   height: 150px;
   border: solid 1px #667;
+}
+
+.app {
+  height: 20em;
+  margin-right: 1em;
 }

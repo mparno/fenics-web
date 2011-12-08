@@ -3,7 +3,7 @@
     <div id="content">
       <div id="sub-feature">
 
-      	<div class="front-block block">
+      	<div class="front-block block app">
 
 	  <h3>ASCoT &mdash; Automated Stability Condition Tester </h3>
           <img alt='' src='/_static/images/ascot.png'
@@ -23,7 +23,7 @@
 
         </div>
 
-      	<div class="front-block block">
+      	<div class="front-block block app">
 
 	  <h3>CBC.Block &mdash; Block linear algebra in Python</h3>
           <img alt='' src='/_static/images/cbc_block.png'
@@ -44,7 +44,7 @@
 
         </div>
 
-      	<div class="front-block block">
+      	<div class="front-block block app">
 
 	  <h3>CBC.PDESys &mdash; Specify large systems of PDEs with ease</h3>
           <img alt='' src='/_static/images/featured/featured_item_pdesys.png'
@@ -64,7 +64,7 @@
 
         </div>
 
-        <div class="front-block block">
+        <div class="front-block block app">
 
           <h3>CBC.Solve &mdash; A collection of Python solvers</h3>
           <img alt='' src='/_static/images/cbc_solve.png'
@@ -85,7 +85,7 @@
 
         </div>
 
-      	<div class="front-block block">
+      	<div class="front-block block app">
 
 	  <h3>DOLFWAVE &mdash; A library for surface water waves</h3>
           <img alt='' src='/_static/images/dolfwave_tsunami.png'
@@ -105,7 +105,7 @@
 
         </div>
 
-      	<div class="front-block block">
+      	<div class="front-block block app">
 
 	  <h3>FEniCS Plasticity &mdash; A plasticity library for FEniCS</h3>
           <img alt='' src='/_static/images/fenics_plasticity.png'
@@ -123,7 +123,7 @@
 
         </div>
 
-    	<div class="front-block block">
+    	<div class="front-block block app">
 
 	  <h3>GenFoo &mdash; A general Fokker-Planck solver</h3>
           <img alt='' src='/_static/images/gen_foo_rf_heated_ions.png'
@@ -146,7 +146,7 @@
 
         </div>
 
-    	<div class="front-block block">
+    	<div class="front-block block app">
 
 	  <h3>Unicorn &mdash; A massively parallel adaptive continuum solver</h3>
           <img alt='' src='/_static/images/unicorn_mixer.gif'
