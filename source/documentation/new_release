@@ -17,6 +17,7 @@ index_contents = """
    tutorial/index
    doc_*
    all
+   demos
 """
 
 def all_contents(all_versions):
