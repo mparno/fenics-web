@@ -45,7 +45,7 @@ Building and installing DOLFIN and UFC require CMake version >= 2.8.
 
 #. First, download the source code for `UFC
    <http://launchpad.net/ufc>`_ and `DOLFIN
-   <http://launchpad.net/dolfin>`_. . Then for each of these packages,
+   <http://launchpad.net/dolfin>`_. Then for each of these packages,
    follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following commands::
