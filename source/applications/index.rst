@@ -17,5 +17,6 @@ qualifies to be on this list, contact the `FEniCS Apps maintainers
    This page is awaiting submission of content (picture + a short text
    as above) for all FEniCS Apps. Application maintainers, please
    submit the missing information for your application. List of
-   applications that we might want to include on this page: GenFoo,
-   PUM Compiler, PUM solver, rheagen, TriTetMesh.
+   applications that we might want to include on this page: PUM Compiler,
+   PUM solver, rheagen, TriTetMesh.
+

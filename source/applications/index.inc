@@ -125,6 +125,29 @@
 
     	<div class="front-block block">
 
+	  <h3>GenFoo &mdash; A general Fokker-Planck solver</h3>
+          <img alt='' src='/_static/images/gen_foo_rf_heated_ions.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>GenFoo is a general Fokker-Planck solver for problems of arbitrary
+          dimensionality.
+          It contains three different backend solvers, a delta-f (perturbed)
+          Monte Carlo, a standard Monte Carlo and a Finite Element solver
+          (last one based on the FEniCS project).
+          A unified application interface is provided for all methods.
+          The key property of the GenFoo package is that physics is separated
+          from numerics by runtime loading of the Fokker-Planck coefficients,
+          which enable solutions of a large class of Fokker-Planck models.
+          </p>
+
+    <p><a href="https://launchpad.net/genfoo"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
+    	<div class="front-block block">
+
 	  <h3>Unicorn &mdash; A massively parallel adaptive continuum solver</h3>
           <img alt='' src='/_static/images/unicorn_mixer.gif'
           class='avatar avatar-84 photo' height='84' width='84' />
