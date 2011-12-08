@@ -30,7 +30,10 @@ Windows
 
 On Windows, the DOLFIN demos can be found inside the following directory:
 
-.. code-block:: bash
+.. Hack: Use code block python here so that first letters after
+.. backslash do not show up in weird blue.
+
+.. code-block:: python
 
     C:\FEniCS\share\dolfin\demo
 
