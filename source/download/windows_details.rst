@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.0-rc2, FFC 1.0-rc1, FIAT 1.0-beta,
-Instant 1.0-beta, UFC 2.0.4, UFL 1.0-rc1, and Viper 1.0-beta.
+This release includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0,
+Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
 
 .. include:: icons.rst
 
@@ -16,15 +16,15 @@ Instant 1.0-beta, UFC 2.0.4, UFL 1.0-rc1, and Viper 1.0-beta.
     :header-rows: 0
     :class: center
 
-    * - |windows-icon| FEniCS 1.0-rc2 (Windows installer)
+    * - |windows-icon| FEniCS 1.0.0 (Windows installer)
 
-      - `fenics-1.0-rc2-mingw32.exe
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-mingw32.exe>`__
+      - `fenics-1.0.0-mingw32.exe
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-mingw32.exe>`__
 
-    * - |archive-icon| FEniCS 1.0-rc2 (Sources for Windows)
+    * - |archive-icon| FEniCS 1.0.0 (Sources for Windows)
 
-      - `fenics-source-1.0-rc2-win.zip
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0-rc2-win.zip>`__
+      - `fenics-source-1.0.0-win.zip
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0.0-win.zip>`__
 
 #########################
 Installation instructions

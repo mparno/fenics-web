@@ -39,21 +39,21 @@ everything needed to get you started with FEniCS.
     * - |mac-icon| OS X 10.6
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-osx10.6.dmg>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-osx10.6.dmg>`__
 
       - :ref:`Learn more <osx_details>`
 
     * - |mac-icon| OS X 10.7
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-osx10.7.dmg>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-osx10.7.dmg>`__
 
       - :ref:`Learn more <osx_details>`
 
     * - |windows-icon| Windows
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0-rc2-mingw32.exe>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-mingw32.exe>`__
 
       - :ref:`Learn more <windows_details>`
 
