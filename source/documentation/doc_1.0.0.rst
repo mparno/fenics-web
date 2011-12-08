@@ -72,19 +72,22 @@ be found in the ``demo`` directory of the DOLFIN source tree.
 
 .. raw:: html
 
+  <h2>Quick Programmer's References</h2>
+
+Some of the classes and functions in DOLFIN are more frequently used
+than others. To learn more about these, take a look at the
+
+* `Basic classes and functions in DOLFIN (Python) <../documentation/dolfin/1.0.0/python/quick_reference.html>`__
+* `Basic classes and functions in DOLFIN  (C++) <../documentation/dolfin/1.0.0/cpp/quick_reference.html>`__
+
+
+.. raw:: html
+
   <h2>Complete Programmer's References</h2>
 
 * `All classes and functions in DOLFIN (Python) <../documentation/dolfin/1.0.0/python/genindex.html>`__
 * `All classes and functions in DOLFIN (C++) <../documentation/dolfin/1.0.0/cpp/genindex.html>`__
 * `All classes and functions in UFL <../documentation/ufl/1.0.0/genindex.html>`__
-
-.. raw:: html
-
-  <h2>Quick Programmer's Reference</h2>
-
-We are working on adding a quick reference for common classes and
-functions. It will be available here *soon*.
-
 
 .. raw:: html
 
