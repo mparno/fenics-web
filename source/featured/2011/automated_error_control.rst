@@ -58,6 +58,7 @@ How to use it
 **************
 
 .. image:: images/navier_stokes_solution.png
+   :align: center
 
 Below is a simple code example for the automated adaptive variational
 solvers using the DOLFIN Python interface. The variational problem at
