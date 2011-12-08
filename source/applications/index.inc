@@ -130,11 +130,9 @@
           class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p>GenFoo is a general Fokker-Planck solver for problems of arbitrary
-          dimensionality.
-          It contains three different backend solvers, a delta-f (perturbed)
-          Monte Carlo, a standard Monte Carlo and a Finite Element solver
-          (last one based on the FEniCS project).
-          A unified application interface is provided for all methods.
+          dimensionality, developed at <a href="http://www.kth.se">KTH</a>.
+          It contains three backend solvers, a delta-f Monte Carlo, a standard
+          Monte Carlo and a Finite Element solver.
           The key property of the GenFoo package is that physics is separated
           from numerics by runtime loading of the Fokker-Planck coefficients,
           which enable solutions of a large class of Fokker-Planck models.
