@@ -179,7 +179,8 @@ Martin Sandve Alnes
 Authors (past and present in chronological order)
 =================================================
 
-Martin Sandve Alnes, Anders Logg, Garth N. Wells, Kristian B. Ølgaard
+Martin Sandve Alnes, Anders Logg, Garth N. Wells, Kristian B. Ølgaard,
+Marie E. Rognes
 
 For a full list of contributors, refer to the file `README
 <https://bazaar.launchpad.net/~ufl-core/ufl/main/view/head:/README>`__
