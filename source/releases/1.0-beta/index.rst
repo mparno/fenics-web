@@ -32,8 +32,8 @@ follows:
 .. code-block:: python
 
     problem = VariationalProblem(a, L, bcs)
-    solver.parameters["linear_solver"] = "gmres"
-    solver.parameters["preconditioner"] = "ilu"
+    problem.parameters["linear_solver"] = "gmres"
+    problem.parameters["preconditioner"] = "ilu"
     u = problem.solve()
 
 Using FEniCS 1.0-beta, the above syntax has changed to:
