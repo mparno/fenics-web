@@ -7,7 +7,7 @@ page = """
 Documentation for FEniCS %(version)s
 ####################################################
 
-Our documentation includes a book(!), a collection of documented demo
+Our documentation includes a book, a collection of documented demo
 programs, and complete references for the FEniCS application
 programming interface (API). Note that the FEniCS API is documented
 separately for each FEniCS component. The most important interfaces
