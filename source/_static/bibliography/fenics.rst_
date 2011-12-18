@@ -49,7 +49,7 @@ Articles in International Journals
   [`doi:10.1007/s11831-007-9003-9 <http://dx.doi.org/10.1007/s11831-007-9003-9>`_],
   [`arXiv:1112.0433 <http://arxiv.org/abs/1112.0433>`_].
 
-* **K. B. Ølgaard, A. Logg and G. N. Wells (2008)**.
+* **K. B. &Oslash;lgaard, A. Logg and G. N. Wells (2008)**.
   *Automated Code Generation for Discontinuous Galerkin Methods*,
   SIAM Journal on Scientific Computing,
   31(2),
@@ -98,7 +98,7 @@ Articles in International Journals
   [`doi:10.1145/1731022.1731030 <http://dx.doi.org/10.1145/1731022.1731030>`_],
   [`arXiv:1103.6248 <http://arxiv.org/abs/1103.6248>`_].
 
-* **K. B. Ølgaard and G. N. Wells (2010)**.
+* **K. B. &Oslash;lgaard and G. N. Wells (2010)**.
   *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
   ACM Transactions on Mathematical Software,
   37,
@@ -121,7 +121,7 @@ Chapters in Books
   Springer,
   Chapter 10.
 
-* **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2011)**.
+* **A. Logg, K. B. &Oslash;lgaard, M. E. Rognes and G. N. Wells (2011)**.
   *FFC: the FEniCS Form Compiler*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
@@ -139,13 +139,13 @@ Chapters in Books
   Springer,
   Chapter 15.
 
-* **M. S. Alnæs, A. Logg and K.-A. Mardal (2011)**.
+* **M. S. Alnaes, A. Logg and K.-A. Mardal (2011)**.
   *UFC: a Finite Element Code Generation Interface*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 16.
 
-* **M. S. Alnæs (2011)**.
+* **M. S. Alnaes (2011)**.
   *UFL: a Finite Element Form Language*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,

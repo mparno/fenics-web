@@ -76,8 +76,8 @@
    pdf:     missing
    status:  published
 ** Automated Code Generation for Discontinuous Galerkin Methods
-   key:     ØlgaardLoggEtAl2008a
-   author:  Kristian B. Ølgaard, Anders Logg, Garth N. Wells
+   key:     OlgaardLoggEtAl2008a
+   author:  Kristian B. \O{}lgaard, Anders Logg, Garth N. Wells
    year:    2008
    journal: SIAM Journal on Scientific Computing
    volume:  31
@@ -122,7 +122,7 @@
    status:  published
 ** Unified Framework for Finite Element Assembly
    key:     AlnaesLoggEtAl2009a
-   author:  Martin S. Alnaes, Anders Logg, Kent-Andre Mardal, Ola Skavhaug, Hans Petter Langtangen
+   author:  Martin S. Aln\ae{}s, Anders Logg, Kent-Andre Mardal, Ola Skavhaug, Hans Petter Langtangen
    year:    2009
    journal: International Journal of Computational Science and Engineering
    volume:  4
@@ -133,7 +133,7 @@
    status:  published
 ** On the Efficiency of Symbolic Computations Combined With Code Generation for Finite Element Methods
    key:       AlnaesMardal2010a
-   author:    Martin S. Alnaes, Kent-Andre Mardal
+   author:    Martin S. Aln\ae{}s, Kent-Andre Mardal
    year:      2010
    journal:   ACM Transactions on Mathematical Software
    volume:    37
@@ -154,8 +154,8 @@
    pdf:     missing
    status:  published
 ** Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation
-   key:       ØlgaardWells2010b
-   author:    Kristian B. Ølgaard, Garth N. Wells
+   key:       OlgaardWells2010b
+   author:    Kristian B. \O{}lgaard, Garth N. Wells
    year:      2010
    journal:   ACM Transactions on Mathematical Software
    volume:    37
@@ -185,8 +185,8 @@
    status:    published
    chapter:   10
 ** FFC: the FEniCS Form Compiler
-   key:       LoggØlgaardEtAl2011a
-   author:    Anders Logg, Kristian B. Ølgaard, Marie E. Rognes, Garth N. Wells
+   key:       LoggOlgaardEtAl2011a
+   author:    Anders Logg, Kristian B. \O{}lgaard, Marie E. Rognes, Garth N. Wells
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
    year:      2011
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
@@ -206,7 +206,7 @@
    chapter:   13
 ** SyFi and SFC: Symbolic Finite Elements and Form Compilation
    key:       AlnaesMardal2010b
-   author:    Martin S. Alnaes, Kent-Andre Mardal
+   author:    Martin S. Aln\ae{}s, Kent-Andre Mardal
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
    year:      2011
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
@@ -215,8 +215,8 @@
    status:    published
    chapter:   15
 ** UFC: a Finite Element Code Generation Interface
-   key:       AlnæsLoggEtAl2011a
-   author:    Martin S. Alnæs, Anders Logg, Kent-Andre Mardal
+   key:       AlnaesLoggEtAl2011a
+   author:    Martin S. Aln\ae{}s, Anders Logg, Kent-Andre Mardal
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
    year:      2011
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
@@ -225,8 +225,8 @@
    status:    published
    chapter:   16
 ** UFL: a Finite Element Form Language
-   key:       Alnæs2011a
-   author:    Martin S. Alnæs
+   key:       Alnaes2011a
+   author:    Martin S. Aln\ae{}s
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
    year:      2011
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
