@@ -80,7 +80,7 @@ FIAT
 UFC
 ---
 
-* **M. S. Alnaes, A. Logg, K.-A. Mardal, O. Skavhaug and H. P. Langtangen (2009)**.
+* **M. S. Alnæs, A. Logg, K.-A. Mardal, O. Skavhaug and H. P. Langtangen (2009)**.
   *Unified Framework for Finite Element Assembly*,
   International Journal of Computational Science and Engineering,
   4(4),
@@ -105,13 +105,13 @@ UFL
 SyFi
 ----
 
-* **M. S. Alnaes and K.-A. Mardal (2010)**.
+* **M. S. Alnæs and K.-A. Mardal (2010)**.
   *On the Efficiency of Symbolic Computations Combined With Code Generation for Finite Element Methods*,
   ACM Transactions on Mathematical Software,
   37(1),
   [`doi:10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_].
 
-* **M. S. Alnaes and K.-A. Mardal (2010)**.
+* **M. S. Alnæs and K.-A. Mardal (2010)**.
   *SyFi and SFC: Symbolic Finite Elements and Form Compilation*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
