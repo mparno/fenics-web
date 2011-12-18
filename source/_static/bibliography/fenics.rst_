@@ -8,12 +8,38 @@ Articles in International Journals
   pp. 502-516,
   [`doi:10.1145/1039813.1039820 <http://dx.doi.org/10.1145/1039813.1039820>`_].
 
+* **R. C. Kirby, M. G. Knepley, A. Logg and L. R. Scott (2005)**.
+  *Optimizing the Evaluation of Finite Element Matrices*,
+  SIAM Journal on Scientific Computing,
+  27(3),
+  pp. 741-758,
+  [`doi:10.1137/040607824 <http://dx.doi.org/10.1137/040607824>`_].
+
 * **R. C. Kirby and A. Logg (2006)**.
   *A Compiler for Variational Forms*,
   ACM Transactions on Mathematical Software,
   32(3),
   [`doi:10.1145/1163641.1163644 <http://dx.doi.org/10.1145/1163641.1163644>`_],
   [`arXiv:1112.0402 <http://arxiv.org/abs/1112.0402>`_].
+
+* **R. C. Kirby, A. Logg, L. R. Scott and A. R. Terrel (2006)**.
+  *Topological Optimization of the Evaluation of Finite Element Matrices*,
+  SIAM Journal on Scientific Computing,
+  28(1),
+  pp. 224-240,
+  [`doi:10.1137/050635547 <http://dx.doi.org/10.1137/050635547>`_].
+
+* **R. C. Kirby and L. R. Scott (2007)**.
+  *Geometric Optimization of the Evaluation of Finite Element Matrices*,
+  SIAM Journal on Scientific Computing,
+  29(2),
+  pp. 827-841.
+
+* **R. C. Kirby and A. Logg (2007)**.
+  *Efficient Compilation of a Class of Variational Forms*,
+  ACM Transactions on Mathematical Software,
+  33(3),
+  [`doi:10.1145/1268769.1268771 <http://dx.doi.org/10.1145/1268769.1268771>`_].
 
 * **A. Logg (2007)**.
   *Automating the Finite Element Method*,
@@ -30,6 +56,20 @@ Articles in International Journals
   pp. 849-864,
   [`doi:10.1137/070710032 <http://dx.doi.org/10.1137/070710032>`_],
   [`arXiv:1104.0628 <http://arxiv.org/abs/1104.0628>`_].
+
+* **R. C. Kirby and A. Logg (2008)**.
+  *Benchmarking Domain-Specific Compiler Optimizations for Variational Forms*,
+  ACM Transactions on Mathematical Software,
+  35(2),
+  pp. 1-18,
+  [`doi:10.1145/1377612.1377614 <http://dx.doi.org/10.1145/1377612.1377614>`_].
+
+* **A. Logg (2009)**.
+  *Efficient Representation of Computational Meshes*,
+  International Journal of Computational Science and Engineering,
+  4(4),
+  pp. 283-295,
+  [`doi:10.1504/IJCSE.2009.029164 <http://dx.doi.org/10.1504/IJCSE.2009.029164>`_].
 
 * **M. E. Rognes, R. C. Kirby and A. Logg (2009)**.
   *Efficient Assembly of H(div) and H(curl) Conforming Finite Elements*,
@@ -93,7 +133,7 @@ Chapters in Books
   Springer,
   Chapter 13.
 
-* **M. S. Alnaes and K.-A. Mardal (2010)**.
+* **M. S. Alnaes and K.-A. Mardal (2011)**.
   *SyFi and SFC: Symbolic Finite Elements and Form Compilation*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,

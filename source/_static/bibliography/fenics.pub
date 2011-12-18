@@ -10,6 +10,17 @@
    doi:     10.1145/1039813.1039820
    pdf:     missing
    status:  published
+** Optimizing the Evaluation of Finite Element Matrices
+   key:     KirbyKnepleyEtAl2005a
+   author:  Robert C. Kirby, Matthew G. Knepley, Anders Logg, L. Ridgway Scott
+   year:    2005
+   journal: SIAM Journal on Scientific Computing
+   volume:  27
+   number:  3
+   pages:   741--758
+   doi:     10.1137/040607824
+   pdf:     missing
+   status:  published
 ** A Compiler for Variational Forms
    key:     KirbyLogg2006a
    author:  Robert C. Kirby, Anders Logg
@@ -19,6 +30,37 @@
    number:  3
    doi:     10.1145/1163641.1163644
    arxiv:   1112.0402
+   pdf:     missing
+   status:  published
+** Topological Optimization of the Evaluation of Finite Element Matrices
+   key:     KirbyLoggEtAl2006a
+   author:  Robert C. Kirby, Anders Logg, L. Ridgway Scott, Andy R. Terrel
+   year:    2006
+   journal: SIAM Journal on Scientific Computing
+   volume:  28
+   number:  1
+   pages:   224--240
+   doi:     10.1137/050635547
+   pdf:     missing
+   status:  published
+** Geometric Optimization of the Evaluation of Finite Element Matrices
+   key:     KirbyScott2007a
+   author:  Robert C. Kirby, L. Ridgway Scott
+   year:    2007
+   journal: SIAM Journal on Scientific Computing
+   volume:  29
+   number:  2
+   pages:   827--841
+   pdf:     missing
+   status:  published
+** Efficient Compilation of a Class of Variational Forms
+   key:     KirbyLogg2007a
+   author:  Robert C. Kirby, Anders Logg
+   year:    2007
+   journal: ACM Transactions on Mathematical Software
+   volume:  33
+   number:  3
+   doi:     10.1145/1268769.1268771
    pdf:     missing
    status:  published
 ** Automating the Finite Element Method
@@ -43,6 +85,28 @@
    pages:   849--864
    doi:     10.1137/070710032
    arxiv:   1104.0628
+   pdf:     missing
+   status:  published
+** Benchmarking Domain-Specific Compiler Optimizations for Variational Forms
+   key:     KirbyLogg2008a
+   author:  Robert C. Kirby, Anders Logg
+   year:    2008
+   journal: ACM Transactions on Mathematical Software
+   volume:  35
+   number:  2
+   pages:   1--18
+   doi:     10.1145/1377612.1377614
+   pdf:     missing
+   status:  published
+** Efficient Representation of Computational Meshes
+   key:     Logg2009a
+   author:  Anders Logg
+   year:    2009
+   journal: International Journal of Computational Science and Engineering
+   volume:  4
+   number:  4
+   pages:   283--295
+   doi:     10.1504/IJCSE.2009.029164
    pdf:     missing
    status:  published
 ** Efficient Assembly of H(div) and H(curl) Conforming Finite Elements
@@ -144,7 +208,7 @@
    key:       AlnaesMardal2010b
    author:    Martin S. Alnaes, Kent-Andre Mardal
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2010
+   year:      2011
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
