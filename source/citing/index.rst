@@ -53,6 +53,14 @@ FFC
   Springer,
   Chapter 11.
 
+* **K. B. Ølgaard, A. Logg and G. N. Wells (2008)**.
+  *Automated Code Generation for Discontinuous Galerkin Methods*,
+  SIAM Journal on Scientific Computing,
+  31(2),
+  pp. 849-864,
+  [`doi:10.1137/070710032 <http://dx.doi.org/10.1137/070710032>`_],
+  [`arXiv:1104.0628 <http://arxiv.org/abs/1104.0628>`_].
+
 FIAT
 ----
 
