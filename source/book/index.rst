@@ -33,8 +33,8 @@ The book will appear as `Volume 84
 of the Springer `Lecture Notes in Computational Science and
 Engineering <http://www.springer.com/series/3527>`__. The final book
 manuscript has been submitted to the publisher and is currently in
-production. We expect the book to be available in stores in November
-2011.
+production. We expect the book to be available in stores in January
+2012.
 
 * `Order directly from Springer <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
 * `Order from Amazon <http://www.amazon.com/Automated-Solution-Differential-Equations-Element/dp/3642230989/>`__
