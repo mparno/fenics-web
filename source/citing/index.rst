@@ -53,13 +53,12 @@ FFC
   Springer,
   Chapter 11.
 
-* **K. B. Ølgaard, A. Logg and G. N. Wells (2008)**.
-  *Automated Code Generation for Discontinuous Galerkin Methods*,
-  SIAM Journal on Scientific Computing,
-  31(2),
-  pp. 849-864,
-  [`doi:10.1137/070710032 <http://dx.doi.org/10.1137/070710032>`_],
-  [`arXiv:1104.0628 <http://arxiv.org/abs/1104.0628>`_].
+* **K. B. Ølgaard and G. N. Wells (2010)**.
+  *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
+  ACM Transactions on Mathematical Software,
+  37,
+  [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_],
+  [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_].
 
 FIAT
 ----
