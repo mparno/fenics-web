@@ -24,12 +24,6 @@
 		<p>FEniCS'11 at Texas Tech</p>
 	      </div>
 	    </div>
-	    <div class="slide">
-	      <a href="/featured/2011/fenics_1beta.html"><img src="/_static/images/featured/featured_item_fenics_1beta.png" width="366" height="282" alt="FEniCS 1.0 Coming Soon!"></a>
-	      <div class="caption">
-		<p>FEniCS 1.0 coming soon!</p>
-	      </div>
-	    </div>
           </div>
         </div>
       </div>
