@@ -46,6 +46,26 @@
         </div>
 
       	<div class="front-block block">
+  	  <h2>Robert C. Kirby</h2>
+          <div class="avatar mugshot">
+	    <img alt='Robert C. Kirby'
+		 src='/_static/images/mugshots/kirby.jpg' />
+	  </div>
+
+          <p>Robert is an associate professor at
+          <a href="http://www.math.ttu.edu/">Texas Tech University</a>.
+          </p>
+
+          <p>He has been involved with the FEniCS Project since 2003
+          and is the main developer of FIAT.</p>
+
+	  <p>You can view all Robert&#8217;s contributions on <a
+          href="https://launchpad.net/~robert-c-kirby">his Launchpad
+          page.</a></p>
+
+        </div>
+
+      	<div class="front-block block">
   	  <h2>Anders Logg</h2>
           <div class="avatar mugshot">
 	    <img alt='Anders Logg'
