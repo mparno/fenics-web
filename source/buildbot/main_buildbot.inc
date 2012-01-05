@@ -1,15 +1,33 @@
 <ul class="simple">
   <li>
-    <a onclick="javascript:ShowHide('HiddenDivMain')" href="javascript:;">Show/Hide</a>
+    <a onclick="javascript:ShowHide('HiddenDivTrunk')" href="javascript:;">Show/Hide</a>
+    (<a href="http://fenicsproject.org:8090">trunk series</a>)
   </li>
-  <div class="mid" id="HiddenDivMain" style="DISPLAY: none" >
-    <iframe src="http://www.fenicsproject.org:8080"
+  <div class="mid" id="HiddenDivTrunk" style="DISPLAY: none" >
+    <iframe src="http://fenicsproject.org:8090"
 	    frameBorder="0"
 	    height="300"
 	    width="100%"
 	    align="center"
-	    name="dolfin-main">
-      <a href="http://www.fenicsproject.org:8080">http://www.fenicsproject.org:8080</a>
+	    name="dolfin-trunk">
+      <a href="http://fenicsproject.org:8090">http://fenicsproject.org:8090</a>
+    </iframe> 
+  </div>
+</ul>
+
+<ul class="simple">
+  <li>
+    <a onclick="javascript:ShowHide('HiddenDiv1.0.x')" href="javascript:;">Show/Hide</a>
+    (<a href="http://fenicsproject.org:8080">1.0.x series</a>)
+  </li>
+  <div class="mid" id="HiddenDiv1.0.x" style="DISPLAY: none" >
+    <iframe src="http://fenicsproject.org:8080"
+	    frameBorder="0"
+	    height="300"
+	    width="100%"
+	    align="center"
+	    name="dolfin-1.0.x">
+      <a href="http://fenicsproject.org:8080">http://fenicsproject.org:8080</a>
     </iframe> 
   </div>
 </ul>
