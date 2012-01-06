@@ -6,7 +6,7 @@
   <div class="mid" id="HiddenDivTrunk" style="DISPLAY: none" >
     <iframe src="http://fenicsproject.org:8090"
 	    frameBorder="0"
-	    height="300"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-trunk">
