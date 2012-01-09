@@ -23,7 +23,7 @@
   <div class="mid" id="HiddenDiv1.0.x" style="DISPLAY: none" >
     <iframe src="http://fenicsproject.org:8080"
 	    frameBorder="0"
-	    height="300"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-1.0.x">

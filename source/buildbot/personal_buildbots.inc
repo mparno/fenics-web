@@ -5,7 +5,8 @@
   </li>
   <div class="mid" id="HiddenDivWells" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8081"
-	    frameBorder="0" height="340"
+	    frameBorder="0"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-wells">
@@ -19,7 +20,7 @@
   <div class="mid" id="HiddenDivLogg" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8082"
 	    frameBorder="0"
-	    height="340"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-logg">
@@ -33,7 +34,7 @@
   <div class="mid" id="HiddenDivHake" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8083"
 	    frameBorder="0"
-	    height="340"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-hake">
@@ -47,7 +48,7 @@
   <div class="mid" id="HiddenDivRognes" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8084"
 	    frameBorder="0"
-	    height="340"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-rognes">
@@ -61,7 +62,7 @@
   <div class="mid" id="HiddenDivAlnes" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8086"
 	    frameBorder="0"
-	    height="340"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-alnes">
@@ -75,7 +76,7 @@
   <div class="mid" id="HiddenDivMassing" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8087"
 	    frameBorder="0"
-	    height="340"
+	    height="400"
 	    width="100%"
 	    align="center"
 	    name="dolfin-massing">
