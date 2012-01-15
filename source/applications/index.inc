@@ -146,6 +146,27 @@
 
     	<div class="front-block block app">
 
+	  <h3>PUM solver &mdash; Partition of unity method in FEniCS</h3>
+          <img alt='' src='/_static/images/pum_solver.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>PUM solver is a FEniCS based package to model problems whose solutions
+    are discontinuous across arbitrary surfaces using the partition of unity
+    method (extended finite element method).
+    The PUM solver consists of two components: a
+    <a href="https://launchpad.net/dolfin-pum" rel="nofollow">PUM library</a>
+    and a
+    <a href="https://launchpad.net/ffc-pum" rel="nofollow">PUM compiler</a>.
+    The PUM library, a C++ library built on top of DOLFIN, defines surfaces and
+    components specific to the partition of unity method including enriched
+    degrees of freedom.
+    The PUM compiler built on top of FFC generates the required low-level code
+    specific to the partition of unity method.
+    </p>
+        </div>
+
+    	<div class="front-block block app">
+
 	  <h3>Unicorn &mdash; A massively parallel adaptive continuum solver</h3>
           <img alt='' src='/_static/images/unicorn_mixer.gif'
           class='avatar avatar-84 photo' height='84' width='84' />
