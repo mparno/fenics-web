@@ -11,11 +11,11 @@
 	    align="center"
 	    name="dolfin-wells">
       <a href="http://www.fenicsproject.org:8081">http://www.fenicsproject.org:8081</a>
-    </iframe> 
+    </iframe>
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivLogg')" href="javascript:;">Show/Hide</a>
-    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/1.0.x-logg">lp:~dolfin-core/dolfin/1.0.x-logg</a>)
+    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/trunk-logg">lp:~dolfin-core/dolfin/trunk-logg</a>)
   </li>
   <div class="mid" id="HiddenDivLogg" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8082"
@@ -25,7 +25,7 @@
 	    align="center"
 	    name="dolfin-logg">
       <a href="http://www.fenicsproject.org:8082">http://www.fenicsproject.org:8082</a>
-    </iframe> 
+    </iframe>
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivHake')" href="javascript:;" >Show/Hide</a>
@@ -39,7 +39,7 @@
 	    align="center"
 	    name="dolfin-hake">
       <a href="http://www.fenicsproject.org:8083">http://www.fenicsproject.org:8083</a>
-    </iframe> 
+    </iframe>
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivRognes')" href="javascript:;">Show/Hide</a>
@@ -53,7 +53,7 @@
 	    align="center"
 	    name="dolfin-rognes">
       <a href="http://www.fenicsproject.org:8084">http://www.fenicsproject.org:8084</a>
-    </iframe> 
+    </iframe>
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivAlnes')" href="javascript:;">Show/Hide</a>
@@ -67,7 +67,7 @@
 	    align="center"
 	    name="dolfin-alnes">
       <a href="http://www.fenicsproject.org:8086">http://www.fenicsproject.org:8086</a>
-    </iframe> 
+    </iframe>
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivMassing')" href="javascript:;">Show/Hide</a>
@@ -81,6 +81,6 @@
 	    align="center"
 	    name="dolfin-massing">
       <a href="http://www.fenicsproject.org:8087">http://www.fenicsproject.org:8087</a>
-    </iframe> 
+    </iframe>
   </div>
 </ul>
