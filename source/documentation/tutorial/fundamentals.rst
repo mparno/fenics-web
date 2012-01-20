@@ -76,12 +76,12 @@ The Poisson equation
 Our first example regards the Poisson problem,
 
 .. math::
-        
+
         - \nabla^2 u(\pmb{x}) &= f(\pmb{x}),\quad \pmb{x}\mbox{ in } \Omega,
         \\
-        u(\pmb{x}) &= u_0(\pmb{x}),\quad \pmb{x}\mbox{ on } \partial \Omega\thinspace . 
-        
-        
+        u(\pmb{x}) &= u_0(\pmb{x}),\quad \pmb{x}\mbox{ on } \partial \Omega\thinspace .
+
+
 
 Here, :math:`u(\pmb{x})` is the unknown function, :math:`f(\pmb{x})` is a
 prescribed function, :math:`\nabla^2` is the Laplace operator (also
@@ -95,10 +95,10 @@ In two space dimensions with coordinates :math:`x` and :math:`y`, we can write o
 the Poisson equation as
 
 .. math::
-        
+
         - {\partial^2 u\over\partial x^2} -
-        {\partial^2 u\over\partial y^2} = f(x,y)\thinspace . 
-        
+        {\partial^2 u\over\partial y^2} = f(x,y)\thinspace .
+
 
 The unknown :math:`u` is now a function of two variables, :math:`u(x,y)`, defined
 over a two-dimensional domain :math:`\Omega`.
@@ -173,21 +173,21 @@ by the test function :math:`v` and integrate,
 
 .. math::
    :label: tut:poisson1:multbyv
-        
-        
-         -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace .  
+
+
+         -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace .
 
 Then we apply integration by parts to the integrand with
 second-order derivatives,
 
 .. math::
    :label: tut:poisson1:eqbyparts
-        
-        
+
+
          -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x
         = \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x - \int_{\partial\Omega}{\partial u\over
         \partial n}v \, \mathrm{d}s ,
-        
+
 
 where :math:`{\partial u\over
 \partial n}` is the derivative of :math:`u` in the outward normal direction at
@@ -200,9 +200,9 @@ vanishes. It then follows that
 
 .. math::
    :label: tut:poisson1:weak1
-         \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace . 
-        
-        
+         \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace .
+
+
 
 This equation is supposed to hold
 for all :math:`v` in some function space :math:`\hat V`. The trial function :math:`u`
@@ -217,20 +217,20 @@ Find :math:`u \in V` such that
 
 .. math::
    :label: tut:poisson1:var
-         
+
           \int_{\Omega} \nabla u \cdot \nabla v \, \mathrm{d}x =
           \int_{\Omega} fv \, \mathrm{d}x
           \quad \forall v \in \hat{V}.
-        
+
 
 The test and trial spaces :math:`\hat{V}` and :math:`V` are in the present
 problem defined as
 
 .. math::
-        
+
             \hat{V} &= \{v \in H^1(\Omega) : v = 0 \mbox{ on } \partial\Omega\}, \\
-             V      &= \{v \in H^1(\Omega) : v = u_0 \mbox{ on } \partial\Omega\}\thinspace . 
-        
+             V      &= \{v \in H^1(\Omega) : v = u_0 \mbox{ on } \partial\Omega\}\thinspace .
+
 
 In short,
 :math:`H^1(\Omega)` is the mathematically well-known Sobolev space containing
@@ -257,11 +257,11 @@ Find :math:`u_h \in V_h \subset V` such that
 
 .. math::
    :label: tut:poisson1:vard
-         
+
           \int_{\Omega} \nabla u_h \cdot \nabla v \, \mathrm{d}x =
           \int_{\Omega} fv \, \mathrm{d}x
-          \quad \forall v \in \hat{V}_h \subset \hat{V}\thinspace . 
-        
+          \quad \forall v \in \hat{V}_h \subset \hat{V}\thinspace .
+
 
 The choice of :math:`\hat{V}_h` and :math:`V_h` follows directly from the
 kind of finite elements we want to apply in our problem. For example,
@@ -295,18 +295,18 @@ It turns out to be convenient to
 introduce the following unified notation for linear weak forms:
 
 .. math::
-        
-        a(u, v) = L(v)\thinspace . 
-        
+
+        a(u, v) = L(v)\thinspace .
+
 
 In the present problem we have that
 
 .. math::
-        
+
         a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, \mathrm{d}x,
         \\
-        L(v) &= \int_{\Omega} fv \, \mathrm{d}x\thinspace .   
-        
+        L(v) &= \int_{\Omega} fv \, \mathrm{d}x\thinspace .
+
 
 From the mathematics literature,
 :math:`a(u,v)` is known as a *bilinear form* and :math:`L(v)` as a
@@ -344,10 +344,10 @@ specifying an exact solution
 
 .. math::
    :label: tut:poisson1:impl:uex
-        
-        
+
+
         u_{\rm e}(x, y) = 1 +x^2 + 2y^2
-        
+
 
 on some 2D domain.  By inserting \eq:ref:`tut:poisson1:impl:uex` in
 our Poisson problem, we find that :math:`u_{\rm e}(x,y)` is a solution if
@@ -383,46 +383,46 @@ of :math:`u_0`, :math:`f`, and :math:`\Omega` may look as follows:
         """
         FEniCS tutorial demo program: Poisson equation with Dirichlet conditions.
         Simplest example of computation and visualization with FEniCS.
-        
+
         -Laplace(u) = f on the unit square.
         u = u0 on the boundary.
         u0 = u = 1 + x^2 + 2y^2, f = -6.
         """
-        
+
         from dolfin import *
-        
+
         # Create mesh and define function space
         mesh = UnitSquare(6, 4)
         #mesh = UnitCube(6, 4, 5)
         V = FunctionSpace(mesh, 'Lagrange', 1)
-        
+
         # Define boundary conditions
         u0 = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]')
-        
+
         def u0_boundary(x, on_boundary):
             return on_boundary
-        
+
         bc = DirichletBC(V, u0, u0_boundary)
-        
+
         # Define variational problem
         u = TrialFunction(V)
         v = TestFunction(V)
         f = Constant(-6.0)
         a = inner(nabla_grad(u), nabla_grad(v))*dx
         L = f*v*dx
-        
+
         # Compute solution
         u = Function(V)
         solve(a == L, u, bc)
-        
+
         # Plot solution and mesh
         plot(u)
         plot(mesh)
-        
+
         # Dump solution to file in VTK format
         file = File('poisson.pvd')
         file << u
-        
+
         # Hold plot
         interactive()
 
@@ -781,7 +781,7 @@ VisIt.
 .. figure:: figs/ex1_u.png
    :width: 480
 
-   Plot of the solution in the first FEniCS example  
+   Plot of the solution in the first FEniCS example
 
 
 
@@ -790,7 +790,7 @@ VisIt.
 .. figure:: figs/ex1_mesh.png
    :width: 480
 
-   Plot of the mesh in the first FEniCS example  
+   Plot of the mesh in the first FEniCS example
 
 
 The next three sections deal with some technicalities about specifying
@@ -944,7 +944,7 @@ now contains the statements
         prm['relative_tolerance'] = 1E-6
         prm['maximum_iterations'] = 1000
         set_log_level(PROGRESS)
-        
+
         solve(a == L, u, bc,
               solver_parameters={'linear_solver': 'cg',
                                  'preconditioner': 'ilu'})
@@ -1039,9 +1039,9 @@ of basis functions :math:`\phi_j`, spanning the space :math:`V`:
 
 .. math::
    :label: tut:poisson1:ufem
-        
-        \sum_{j=1}^N U_j \phi_j \thinspace . 
-        
+
+        \sum_{j=1}^N U_j \phi_j \thinspace .
+
 
 By writing ``solve(a == L, u, bc)`` in the program, a linear system
 will be formed from :math:`a` and :math:`L`, and this system is solved for the
@@ -1257,19 +1257,19 @@ force, modeled as a Gaussian function.
 The appropriate PDE model is
 
 .. math::
-        
+
         -T\nabla^2 D = p(x,y)\quad\hbox{in }\Omega = \{ (x,y)\,|\, x^2+y^2\leq R\},
-        
+
 
 with
 
 .. math::
-        
+
         p(x,y) = {A\over 2\pi\sigma}\exp{\left(
         - {1\over2}\left( {x-x_0\over\sigma}\right)^2
         - {1\over2}\left( {y-y_0\over\sigma}\right)^2
         \right)}\, .
-        
+
 
 Here, :math:`T` is the tension in the membrane (constant), :math:`p` is the external
 pressure load,
@@ -1290,17 +1290,17 @@ dimensionless problem on the unit circle,
 
 .. math::
    :label: tut:poisson1:membrane:scaled:eq
-        
-        
+
+
         -\nabla^2 w = f,
-        
+
 
 with :math:`w=0` on the boundary and with
 
 .. math::
    :label: tut:poisson1:membrane:scaled:eq:rhs
-        
-        
+
+
         f(x,y) = 4\exp{\left(
         - \frac{1}{2}\left( \frac{Rx-x_0}{\sigma}\right)^2
         - \frac{1}{2}\left( \frac{Ry-y_0}{\sigma}\right)^2
@@ -1438,10 +1438,10 @@ comparison of the numerical and (approximate) analytical solution
         -Laplace(w) = p = Gaussian function, in a unit circle,
         with w = 0 on the boundary.
         """
-        
+
         from dolfin import *
         import numpy
-        
+
         # Set pressure function:
         T = 10.0  # tension
         A = 1.0   # pressure amplitude
@@ -1454,13 +1454,13 @@ comparison of the numerical and (approximate) analytical solution
         n = 40   # approx no of elements in radial direction
         mesh = UnitCircle(n)
         V = FunctionSpace(mesh, 'Lagrange', 1)
-        
+
         # Define boundary condition w=0
         def boundary(x, on_boundary):
             return on_boundary
-        
+
         bc = DirichletBC(V, Constant(0.0), boundary)
-        
+
         # Define variational problem
         w = TrialFunction(V)
         v = TestFunction(V)
@@ -1469,7 +1469,7 @@ comparison of the numerical and (approximate) analytical solution
                        '      -0.5*(pow((R*x[1] - y0)/sigma, 2)))',
                        R=R, x0=x0, y0=y0, sigma=sigma)
         L = f*v*dx
-        
+
         # Compute solution
         w = Function(V)
         problem = LinearVariationalProblem(a, L, w, bc)
@@ -1477,25 +1477,25 @@ comparison of the numerical and (approximate) analytical solution
         solver.parameters['linear_solver'] = 'cg'
         solver.parameters['preconditioner'] = 'ilu'
         solver.solve()
-        
+
         # Plot scaled solution, mesh and pressure
         plot(mesh, title='Mesh over scaled domain')
         plot(w, title='Scaled deflection')
         f = interpolate(f, V)
         plot(f, title='Scaled pressure')
-        
+
         # Find maximum real deflection
         max_w = w.vector().array().max()
         max_D = A*max_w/(8*pi*sigma*T)
         print 'Maximum real deflection is', max_D
-        
+
         # Verification for "flat" pressure (large sigma)
         if sigma >= 50:
             w_e = Expression("1 - x[0]*x[0] - x[1]*x[1]")
             w_e = interpolate(w_e, V)
             dev = numpy.abs(w_e.vector().array() - w.vector().array()).max()
             print 'sigma=%g: max deviation=%e' % (sigma, dev)
-        
+
         # Should be at the end
         interactive()
 
@@ -1593,7 +1593,7 @@ to a PNG and an EPS file. Here is the code:
                     axes=True,              # include axes
                     basename='deflection',  # default plotfile name
                     )
-        
+
         viz_w.elevate(-65) # tilt camera -65 degrees (latitude dir)
         viz_w.set_min_max(0, 0.5*max_w)  # color scale
         viz_w.update(w)    # bring settings above into action
@@ -1617,7 +1617,7 @@ Figure :ref:`tut:poisson:2D:fig1` shows the resulting scalar surface.
 .. figure:: figs/membrane_waxis.png
    :width: 480
 
-   Plot of the deflection of a membrane  
+   Plot of the deflection of a membrane
 
 
 
@@ -1633,9 +1633,9 @@ since
 :math:`u = \sum_{j=1}^N U_j \phi_j`, we have that
 
 .. math::
-        
-        \nabla u = \sum_{j=1}^N U_j \nabla \phi_j\thinspace . 
-        
+
+        \nabla u = \sum_{j=1}^N U_j \nabla \phi_j\thinspace .
+
 
 Given the solution variable ``u`` in the program, its gradient is
 obtained by ``grad(u)`` or ``nabla_grad(u)``.
@@ -1670,17 +1670,17 @@ for suitable (new) coefficients :math:`\bar U_j`.
 The variational problem for :math:`w` reads: find  :math:`w\in V^{(\mbox{g})}` such that
 
 .. math::
-        
+
         a(w, v) = L(v)\quad\forall v\in \hat{V^{(\mbox{g})}},
-        
+
 
 where
 
 .. math::
-        
+
         a(w, v) &= \int_\Omega w\cdot v \, \mathrm{d}x,\\
-        L(v) &= \int_\Omega \nabla u\cdot v \, \mathrm{d}x\thinspace . 
-        
+        L(v) &= \int_\Omega \nabla u\cdot v \, \mathrm{d}x\thinspace .
+
 
 The function spaces :math:`V^{(\mbox{g})}` and :math:`\hat{V^{(\mbox{g})}}` (with the superscript
 g denoting "gradient") are
@@ -1701,12 +1701,12 @@ The variational problem for the vector field
         V_g = VectorFunctionSpace(mesh, 'Lagrange', 1)
         w = TrialFunction(V_g)
         v = TestFunction(V_g)
-        
+
         a = inner(w, v)*dx
         L = inner(grad(u), v)*dx
         grad_u = Function(V_g)
         solve(a == L, grad_u)
-        
+
         plot(grad_u, title='grad(u)')
 
 The boundary condition argument to ``solve`` is dropped since there are
@@ -1723,7 +1723,7 @@ example of how Viper can visualize such a vector field.
 .. figure:: figs/ex1_gradu.png
    :width: 480
 
-   Example of visualizing the vector field :math:`\nabla u` by arrows at the nodes  
+   Example of visualizing the vector field :math:`\nabla u` by arrows at the nodes
 
 
 
@@ -1832,14 +1832,14 @@ as in the boundary-value problem
 
 .. math::
    :label: tut:poisson:2D:varcoeff
-         
-          
+
+
             - \nabla\cdot \left\lbrack
         p(x,y)\nabla u(x,y)\right\rbrack &= f(x,y) \quad \mbox{in } \Omega,
             \\
-            u(x,y) &= u_0(x,y) \quad \mbox{on}\  \partial\Omega\thinspace . 
-          
-        
+            u(x,y) &= u_0(x,y) \quad \mbox{on}\  \partial\Omega\thinspace .
+
+
 
 We shall quickly demonstrate that this simple extension of our model
 problem only requires an equally simple extension of the FEniCS program.
@@ -1867,11 +1867,11 @@ integrating by parts now results
 in
 
 .. math::
-        
+
         \int_\Omega p\nabla u\cdot\nabla v \, \mathrm{d}x -
         \int_{\partial\Omega} p{\partial u\over
-        \partial n}v \, \mathrm{d}s = \int_\Omega fv \, \mathrm{d}x\thinspace . 
-        
+        \partial n}v \, \mathrm{d}s = \int_\Omega fv \, \mathrm{d}x\thinspace .
+
 
 The function spaces for :math:`u` and :math:`v` are the same as in
 the section :ref:`tut:poisson1:varform`, implying that the boundary integral
@@ -1879,10 +1879,10 @@ vanishes since :math:`v=0` on :math:`\partial\Omega` where we have Dirichlet con
 The weak form :math:`a(u,v)=L(v)` then has
 
 .. math::
-        
+
         a(u,v) &= \int_\Omega p\nabla u\cdot\nabla v \, \mathrm{d}x,\\
-        L(v) &= \int_\Omega fv \, \mathrm{d}x\thinspace . 
-        
+        L(v) &= \int_\Omega fv \, \mathrm{d}x\thinspace .
+
 
 In the code from the section :ref:`tut:poisson1:impl` we must replace
 
@@ -1918,17 +1918,17 @@ solving :math:`w = -p\nabla u` by a finite element method: find :math:`w\in V^{(
 such that
 
 .. math::
-        
+
         a(w, v) = L(v)\quad\forall v\in \hat{V^{(\mbox{g})}},
-        
+
 
 where
 
 .. math::
-        
+
         a(w, v) &= \int_\Omega w\cdot v \, \mathrm{d}x,\\
-        L(v) &= \int_\Omega (-p \nabla u)\cdot v \, \mathrm{d}x\thinspace . 
-        
+        L(v) &= \int_\Omega (-p \nabla u)\cdot v \, \mathrm{d}x\thinspace .
+
 
 This problem is identical to the one in the section :ref:`tut:poisson:gradu`,
 except that :math:`p` enters the integral in :math:`L`.
@@ -1940,7 +1940,7 @@ The relevant Python statements for computing the flux field take the form
         V_g = VectorFunctionSpace(mesh, 'Lagrange', 1)
         w = TrialFunction(V_g)
         v = TestFunction(V_g)
-        
+
         a = inner(w, v)*dx
         L = inner(-p*grad(u), v)*dx
         flux = Function(V_g)
@@ -1960,7 +1960,7 @@ the gradient (see the section :ref:`tut:poisson:gradu`):
 .. code-block:: python
 
         plot(flux, title='flux field')
-        
+
         flux_x, flux_y = flux.split(deepcopy=True)  # extract components
         plot(flux_x, title='x-component of flux (-p*grad(u))')
         plot(flux_y, title='y-component of flux (-p*grad(u))')
@@ -1995,20 +1995,20 @@ functionals of :math:`u`, for example,
 
 .. math::
    :label: tut:poisson1:functionals:energy
-        
+
         {1\over2}||\nabla u||^2 \equiv {1\over2}\int_\Omega \nabla u\cdot \nabla u \, \mathrm{d}x,
-        
-        
+
+
 
 which often reflects some energy quantity.
 Another frequently occurring functional is the error
 
 .. math::
    :label: tut:poisson1:functionals:error
-        
+
         ||u_{\mbox{e}}-u|| = \left(\int_\Omega (u_{\mbox{e}}-u)^2 \, \mathrm{d}x\right)^{1/2},
-        
-        
+
+
 
 where :math:`u_{\rm e}` is the exact solution. The error
 is of particular interest when studying convergence properties.
@@ -2017,10 +2017,10 @@ the boundary :math:`\partial\Omega`,
 
 .. math::
    :label: tut:poisson1:functionals:flux
-        
+
         F = -\int_\Gamma p\nabla u\cdot\pmb{n} \, \mathrm{d}s,
-        
-        
+
+
 
 where :math:`\pmb{n}` is an outward unit normal at :math:`\Gamma` and :math:`p` is a
 coefficient (see the problem in the section :ref:`tut:possion:2D:varcoeff`
@@ -2055,10 +2055,10 @@ the elastic energy
 
 
 .. math::
-        
+
         {1\over2}||T\nabla D||^2 = {1\over2}\left({AR\over 8\pi\sigma}\right)^2
         ||\nabla w||^2
-        
+
 
 in the membrane problem from the section :ref:`tut:poisson:membrane`.
 
@@ -2071,9 +2071,9 @@ solutions, we modify the ``d5_p2D.py`` program from
 the section :ref:`tut:poisson:gradu` and specify a more complicated solution,
 
 .. math::
-        
+
         u(x,y) = \sin(\omega\pi x)\sin(\omega\pi y)
-        
+
 
 on the unit square.
 This choice implies :math:`f(x,y)=2\omega^2\pi^2 u(x,y)`.
@@ -2092,13 +2092,13 @@ in the code:
 
         def boundary(x, on_boundary):
             return on_boundary
-        
+
         bc = DirichletBC(V, Constant(0.0), boundary)
-        
+
         omega = 1.0
         u_e = Expression('sin(omega*pi*x[0])*sin(omega*pi*x[1])',
                          omega=omega)
-        
+
         f = 2*pi**2*omega**2*u_e
 
 
@@ -2204,9 +2204,9 @@ two consecutive experiments, :math:`E_i=Ch_i^r` and :math:`E_{i-1}=Ch_{i-1}^r`,
 and solve for :math:`r`:
 
 .. math::
-        
-        r = {\ln(E_i/E_{i-1})\over\ln (h_i/h_{i-1})}\thinspace . 
-        
+
+        r = {\ln(E_i/E_{i-1})\over\ln (h_i/h_{i-1})}\thinspace .
+
 
 The :math:`r` values should approach the expected convergence
 rate ``degree+1`` as :math:`i` increases.
@@ -2222,7 +2222,7 @@ The procedure above can easily be turned into Python code:
         for nx in [4, 8, 16, 32, 64, 128, 264]:
             h.append(1.0/nx)
             E.append(compute(nx, nx, degree))
-        
+
         # Convergence rates
         from math import log as ln  # (log is a dolfin name too - and logg :-)
         for i in range(1, len(E)):
@@ -2411,7 +2411,7 @@ at a grid point with indices ``i`` and ``j`` (going from 0 to
 .. code-block:: python
 
         X = 0; Y = 1; Z = 0  # convenient indices
-        
+
         i = nx; j = ny   # upper right corner
         print 'u(%g,%g)=%g' % (u_box.grid.coor[X][i],
                                u_box.grid.coor[Y][j],
@@ -2454,7 +2454,7 @@ A contour plot is made by the following ``scitools.easyviz`` command:
                    5, clabels='on')
         evtitle('Contour plot of u')
         ev.savefig('u_contours.eps')
-        
+
         # or more compact syntax:
         ev.contour(u_box.grid.coorv[X], u_box.grid.coorv[Y], u_box.values,
                    5, clabels='on',
@@ -2481,7 +2481,7 @@ Other functions for visualizing 2D scalar fields are ``surf`` and
         ev.surf(u_box.grid.coorv[X], u_box.grid.coorv[Y], u_box.values,
                 shading='interp', colorbar='on',
                 title='surf plot of u', savefig='u_surf.eps')
-        
+
         ev.figure()
         ev.mesh(u_box.grid.coorv[X], u_box.grid.coorv[Y], u_box.values,
                 title='mesh plot of u', savefig='u_mesh.eps')
@@ -2525,7 +2525,7 @@ Plotting :math:`u` versus the :math:`x` coordinate along this line, using
         ev.plot(x, uval, 'r-')  # 'r--: red solid line
         ev.title('Solution')
         ev.legend('finite element solution')
-        
+
         # or more compactly:
         ev.plot(x, uval, 'r-', title='Solution',
                 legend='finite element solution')
@@ -2570,7 +2570,7 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_contour1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: contour plot of the solution  
+   Finite element function on a structured 2D grid: contour plot of the solution
 
 
 
@@ -2579,7 +2579,7 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_flux_x.png
    :width: 480
 
-   Finite element function on a structured 2D grid: curve plot of the exact flux and the projected numerical flux  
+   Finite element function on a structured 2D grid: curve plot of the exact flux and the projected numerical flux
 
 
 
@@ -2588,7 +2588,7 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_surf1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: surface plot of the solution  
+   Finite element function on a structured 2D grid: surface plot of the solution
 
 
 
@@ -2597,7 +2597,7 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_mesh1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: lifted mesh plot of the solution  
+   Finite element function on a structured 2D grid: lifted mesh plot of the solution
 
 
 
@@ -2633,9 +2633,9 @@ the unit square, but now we set the Dirichlet condition
 :math:`x=0` and :math:`x=1`, while the Neumann condition
 
 .. math::
-        
+
         -{\partial u\over\partial n}=g
-        
+
 
 is applied to the remaining
 sides :math:`y=0` and :math:`y=1`.
@@ -2651,33 +2651,33 @@ conditions apply, respectively.
 The complete boundary-value problem can be written as
 
 .. math::
-        
+
             - \nabla^2 u &= f \mbox{ in } \Omega,  \\
             u &= u_0 \mbox{ on } \Gamma_D,       \\
-            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N  \thinspace . 
-        
+            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N  \thinspace .
+
 
 Again we choose :math:`u=1+x^2 + 2y^2` as the exact solution and adjust :math:`f`, :math:`g`, and
 :math:`u_0` accordingly:
 
 .. math::
-        
+
         f &= -6,\\
         g &= \left\lbrace\begin{array}{ll}
         -4, & y=1\\
         0,  & y=0
         \end{array}\right.\\
-        u_0 &= 1 + x^2 + 2y^2\thinspace . 
-        
+        u_0 &= 1 + x^2 + 2y^2\thinspace .
+
 
 For ease of programming we may introduce a :math:`g` function defined over the whole
 of :math:`\Omega` such that :math:`g` takes on the right values at :math:`y=0` and
 :math:`y=1`. One possible extension is
 
 .. math::
-        
-        g(x,y) = -4y\thinspace . 
-        
+
+        g(x,y) = -4y\thinspace .
+
 
 
 The first task is to derive the variational problem. This time we cannot
@@ -2685,46 +2685,46 @@ omit the boundary term arising from the integration by parts, because
 :math:`v` is only zero on :math:`\Gamma_D`. We have
 
 .. math::
-        
+
          -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x
         = \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x - \int_{\partial\Omega}{\partial u\over
         \partial n}v \, \mathrm{d}s,
-        
+
 
 and since :math:`v=0` on :math:`\Gamma_D`,
 
 .. math::
-        
+
         - \int_{\partial\Omega}{\partial u\over
         \partial n}v \, \mathrm{d}s
         =
         - \int_{\Gamma_N}{\partial u\over
         \partial n}v \, \mathrm{d}s
         = \int_{\Gamma_N}gv \, \mathrm{d}s,
-        
+
 
 by applying the boundary condition on :math:`\Gamma_N`.
 The resulting weak form reads
 
 .. math::
    :label: tut:poisson:2D:DN:weak
-        
+
         \int_{\Omega} \nabla u \cdot \nabla v \, \mathrm{d}x +
         \int_{\Gamma_N} gv \, \mathrm{d}s
-        = \int_{\Omega} fv \, \mathrm{d}x\thinspace . 
-        
-        
+        = \int_{\Omega} fv \, \mathrm{d}x\thinspace .
+
+
 
 Expressing this equation
 in the standard notation :math:`a(u,v)=L(v)` is straightforward with
 
 .. math::
-        
+
         a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \, \mathrm{d}x,
         \\
         L(v) &= \int_{\Omega} fv \, \mathrm{d}x -
-        \int_{\Gamma_N} gv \, \mathrm{d}s\thinspace .   
-        
+        \int_{\Gamma_N} gv \, \mathrm{d}s\thinspace .
+
 
 
 
@@ -2815,12 +2815,12 @@ and define two separate functions for
 the two Dirichlet conditions:
 
 .. math::
-        
+
             - \nabla^2 u &= -6 \mbox{ in } \Omega, \\
             u &= u_L \mbox{ on } \Gamma_0, \\
             u &= u_R \mbox{ on } \Gamma_1, \\
-            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N \thinspace . 
-        
+            - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N \thinspace .
+
 
 Here, :math:`\Gamma_0` is the boundary :math:`x=0`, while
 :math:`\Gamma_1` corresponds to the boundary :math:`x=1`.
@@ -2834,11 +2834,11 @@ the boundary of interest, and a ``DirichletBC`` object:
 .. code-block:: python
 
         u_L = Expression('1 + 2*x[1]*x[1]')
-        
+
         def left_boundary(x, on_boundary):
             tol = 1E-14   # tolerance for coordinate comparisons
             return on_boundary and abs(x[0]) < tol
-        
+
         Gamma_0 = DirichletBC(V, u_L, left_boundary)
 
 For the boundary :math:`x=1` we write a similar code snippet:
@@ -2846,11 +2846,11 @@ For the boundary :math:`x=1` we write a similar code snippet:
 .. code-block:: python
 
         u_R = Expression('2 + 2*x[1]*x[1]')
-        
+
         def right_boundary(x, on_boundary):
             tol = 1E-14   # tolerance for coordinate comparisons
             return on_boundary and abs(x[0] - 1) < tol
-        
+
         Gamma_1 = DirichletBC(V, u_R, right_boundary)
 
 The various essential conditions are then collected in a list
@@ -2890,24 +2890,24 @@ inserting :math:`u=\sum_{j=1}^N U_j \phi_j` into :math:`a(u,v)` and demanding
 :math:`\hat\phi_1,\ldots,\hat\phi_N`. This implies
 
 .. math::
-        
+
         \sum_{j=1}^N a(\phi_j,\hat\phi_i) U_j = L(\hat\phi_i),\quad i=1,\ldots,N,
-        
+
 
 which is nothing but a linear system,
 
 .. math::
-        
+
           AU = b,
-        
+
 
 where the entries in :math:`A` and :math:`b` are given by
 
 .. math::
-        
+
           A_{ij} &= a(\phi_j, \hat{\phi}_i), \\
-          b_i &= L(\hat\phi_i)\thinspace . 
-        
+          b_i &= L(\hat\phi_i)\thinspace .
+
 
 
 
@@ -3026,14 +3026,15 @@ print out ``A`` and ``b`` before and after the
 With access to the elements in ``A`` through a ``numpy`` array we can easily
 perform computations on this matrix, such as computing the eigenvalues
 (using the ``eig`` function in ``numpy.linalg``). We can alternatively dump
-``A`` and ``b`` to file in MATLAB format and invoke MATLAB or Octave to
+``A.array()`` and ``b.array()`` to file in MATLAB format and
+invoke MATLAB or Octave to
 analyze the linear system.
-Dumping the arrays ``A`` and ``b`` to MATLAB format is done by
+Dumping the arrays to MATLAB format is done by
 
 .. code-block:: python
 
         import scipy.io
-        scipy.io.savemat('Ab.mat', {'A': A, 'b': b})
+        scipy.io.savemat('Ab.mat', {'A': A.array(), 'b': b.array()})
 
 Writing ``load Ab.mat`` in MATLAB or Octave will then make
 the variables ``A`` and ``b`` available for computations.
@@ -3177,9 +3178,9 @@ without any modifications.
 Consider the simple model problem
 
 .. math::
-        
+
         u''(x) = 2\hbox{ in }[0,1],\quad u(0)=0,\ u(1)=1,
-        
+
 
 with exact solution :math:`u(x)=x^2`. Our aim is to formulate and solve this
 problem in a 2D and a 3D domain as well.
@@ -3194,7 +3195,7 @@ then reads
 
 .. math::
    :label: tut:poisson1:ddim
-         
+
           \begin{array}{rcll}
             \nabla^2 u  &=  2 &\mbox{in } \Omega, \\
             u  &=  0 &\mbox{on } \Gamma_0,\\
@@ -3202,7 +3203,7 @@ then reads
         {\partial u\over\partial n}  &=  0 &\mbox{on } \partial\Omega\backslash\left(
         \Gamma_0\cup\Gamma_1\right),
           \end{array}
-        
+
 
 where :math:`\Gamma_0` is the side of the hypercube where :math:`x=0`, and
 where :math:`\Gamma_1` is the side where :math:`x=1`.
@@ -3269,10 +3270,10 @@ need to take care of Dirichlet conditions at two sides:
         tol = 1E-14   # tolerance for coordinate comparisons
         def Dirichlet_boundary0(x, on_boundary):
             return on_boundary and abs(x[0]) < tol
-        
+
         def Dirichlet_boundary1(x, on_boundary):
             return on_boundary and abs(x[0] - 1) < tol
-        
+
         bc0 = DirichletBC(V, Constant(0), Dirichlet_boundary0)
         bc1 = DirichletBC(V, Constant(1), Dirichlet_boundary1)
         bcs = [bc0, bc1]
@@ -3288,7 +3289,7 @@ the variational problem:
         f = Constant(-2)
         a = inner(nabla_grad(u), nabla_grad(v))*dx
         L = f*v*dx
-        
+
         u = Function(V)
         solve(a == L, u, bcs)
 
