@@ -166,89 +166,89 @@
    status:    published
 * books
 ** Automated Solution of Differential Equations By the Finite Element Method
-   key:       LoggMardalEtAl2011a
+   key:       LoggMardalEtAl2012a
    author:    Anders Logg, Kent-Andre Mardal, Garth N. Wells, others
-   year:      2011
+   year:      2012
    publisher: Springer
    pdf:       missing
    status:    published
    isbn:      978-3-642-23098-1
 * chapters
 ** DOLFIN: a C++/Python Finite Element Library
-   key:       LoggWellsEtAl2011a
+   key:       LoggWellsEtAl2012a
    author:    Anders Logg, Garth N. Wells, Johan Hake
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   10
 ** FFC: the FEniCS Form Compiler
-   key:       LoggOlgaardEtAl2011a
+   key:       LoggOlgaardEtAl2012a
    author:    Anders Logg, Kristian B. \O{}lgaard, Marie E. Rognes, Garth N. Wells
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   11
 ** FIAT: Numerical Construction of Finite Element Basis Functions,
-   key:       Kirby2011a
+   key:       Kirby2012a
    author:    Robert C. Kirby
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   13
 ** SyFi and SFC: Symbolic Finite Elements and Form Compilation
-   key:       AlnaesMardal2010b
+   key:       AlnaesMardal2012b
    author:    Martin S. Aln\ae{}s, Kent-Andre Mardal
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   15
 ** UFC: a Finite Element Code Generation Interface
-   key:       AlnaesLoggEtAl2011a
+   key:       AlnaesLoggEtAl2012a
    author:    Martin S. Aln\ae{}s, Anders Logg, Kent-Andre Mardal
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   16
 ** UFL: a Finite Element Form Language
-   key:       Alnaes2011a
+   key:       Alnaes2012a
    author:    Martin S. Aln\ae{}s
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   17
 ** Unicorn: a Unified Continuum Mechanics Solver
-   key:       HoffmanJanssonEtAl2011a
+   key:       HoffmanJanssonEtAl2012a
    author:    Johan Hoffman, Johan Jansson, Cem Degirmenci, Niclas Jansson, Murtazo Nazarov
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing
    status:    published
    chapter:   18
 ** Turbulent Flow and Fluid–structure Interaction
-   key:       HoffmanJanssonEtAl2011b
+   key:       HoffmanJanssonEtAl2012b
    author:    Johan Hoffman, Johan Jansson, Niclas Jansson, C. Johnson, Rodrigo V. de Abreu
    editor:    Anders Logg, Kent-Andre Mardal, Garth N. Wells
-   year:      2011
+   year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
    pdf:       missing

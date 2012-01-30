@@ -108,56 +108,56 @@ Articles in International Journals
 Books
 =====
 
-* **A. Logg, K.-A. Mardal, G. N. Wells et al. (2011)**.
-  *Automated Solution of Differential Equations By the Finite Element Method*,
+* **A. Logg, K.-A. Mardal, G. N. Wells et al. (2012)**.
+  *Automated Solution of Differential Equations by the Finite Element Method*,
   Springer.
 
 Chapters in Books
 =================
 
-* **A. Logg, G. N. Wells and J. Hake (2011)**.
+* **A. Logg, G. N. Wells and J. Hake (2012)**.
   *DOLFIN: a C++/Python Finite Element Library*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 10.
 
-* **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2011)**.
+* **A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2012)**.
   *FFC: the FEniCS Form Compiler*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 11.
 
-* **R. C. Kirby (2011)**.
+* **R. C. Kirby (2012)**.
   *FIAT: Numerical Construction of Finite Element Basis Functions,*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 13.
 
-* **M. S. Alnæs and K.-A. Mardal (2011)**.
+* **M. S. Alnæs and K.-A. Mardal (2012)**.
   *SyFi and SFC: Symbolic Finite Elements and Form Compilation*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 15.
 
-* **M. S. Alnæs, A. Logg and K.-A. Mardal (2011)**.
+* **M. S. Alnæs, A. Logg and K.-A. Mardal (2012)**.
   *UFC: a Finite Element Code Generation Interface*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 16.
 
-* **M. S. Alnæs (2011)**.
+* **M. S. Alnæs (2012)**.
   *UFL: a Finite Element Form Language*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 17.
 
-* **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2011)**.
+* **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2012)**.
   *Unicorn: a Unified Continuum Mechanics Solver*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 18.
 
-* **J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R. V. d. Abreu (2011)**.
+* **J. Hoffman, J. Jansson, N. Jansson, C. Johnson and R. V. d. Abreu (2012)**.
   *Turbulent Flow and Fluid–structure Interaction*,
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
@@ -170,3 +170,4 @@ Technical Reports
   *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*,
   Computational Technology Laboratory, KTH,
   KTH-CTL-4024.
+
