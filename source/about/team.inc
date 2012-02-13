@@ -253,6 +253,27 @@
         </div>
 
       	<div class="front-block block">
+  	  <h2>Garth N. Wells</h2>
+          <div class="avatar mugshot">
+	    <img alt='Garth N. Wells'
+		 src='/_static/images/mugshots/wells.jpg' />
+	  </div>
+
+          <p>Garth is the Hibbit Lecturer in solid mechanics at the
+          <a href="http://www.eng.cam.ac.uk/">Department of Engineering</a>,
+          University of Cambridge.</p>
+
+          <p>He has been involved with the FEniCS project since 2005
+          and is a developer and maintainer of DOLFIN, FFC, UFC and
+          UFL.</p>
+
+          <p>You can view all Garth's contributions on <a
+          href="https://launchpad.net/~garth-wells">his Launchpad
+          page.</a></p>
+
+        </div>
+
+      	<div class="front-block block">
   	  <h2>Kristian Breum Ølgaard</h2>
           <div class="avatar mugshot">
 	    <img alt='Kristian Breum Ølgaard'
