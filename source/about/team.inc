@@ -66,6 +66,26 @@
         </div>
 
       	<div class="front-block block">
+  	  <h2>Johan Jansson</h2>
+          <div class="avatar mugshot">
+	    <img alt='Johan Jansson'
+		 src='/_static/images/mugshots/jansson.jpg' />
+	  </div>
+
+	  <p>Johan is a senior researcher at the <a
+	  href="http://www.kth.se/">KTH Royal Institute of
+	  Technology</a>.</p>
+
+	  <p>He has been involved with the FEniCS Project since 2004
+	    and is a developer of DOLFIN and Unicorn.</p>
+
+	  <p>You can view all Johan&#8217;s contributions
+	  on <a href="https://launchpad.net/~jjan">his Launchpad
+	  page.</a>
+
+        </div>
+
+      	<div class="front-block block">
   	  <h2>Robert C. Kirby</h2>
           <div class="avatar mugshot">
 	    <img alt='Robert C. Kirby'
