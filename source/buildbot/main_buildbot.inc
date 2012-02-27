@@ -1,7 +1,7 @@
 <ul class="simple">
   <li>
     <a onclick="javascript:ShowHide('HiddenDivTrunk')" href="javascript:;">Show/Hide</a>
-    (<a href="http://fenicsproject.org:8090">trunk series</a>)
+    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/trunk">lp:dolfin/trunk</a>)
   </li>
   <div class="mid" id="HiddenDivTrunk" style="DISPLAY: none" >
     <iframe src="http://fenicsproject.org:8090"
@@ -18,7 +18,7 @@
 <ul class="simple">
   <li>
     <a onclick="javascript:ShowHide('HiddenDiv1.0.x')" href="javascript:;">Show/Hide</a>
-    (<a href="http://fenicsproject.org:8080">1.0.x series</a>)
+    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/1.0.x">lp:dolfin/1.0.x</a>)
   </li>
   <div class="mid" id="HiddenDiv1.0.x" style="DISPLAY: none" >
     <iframe src="http://fenicsproject.org:8080"

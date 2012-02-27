@@ -43,7 +43,7 @@
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivRognes')" href="javascript:;">Show/Hide</a>
-    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/rognes-1.0.x">lp:~dolfin-core/dolfin/rognes-1.0.x</a>)
+    (<a href="https://code.launchpad.net/~dolfin-core/dolfin/rognes">lp:~dolfin-core/dolfin/rognes</a>)
   </li>
   <div class="mid" id="HiddenDivRognes" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8084"
@@ -71,7 +71,7 @@
   </div>
   <li>
     <a onclick="javascript:ShowHide('HiddenDivMassing')" href="javascript:;">Show/Hide</a>
-    (<a href="https://code.launchpad.net/~massing/dolfin/1.0.x-massing">lp:~massing/dolfin/1.0.x-massing</a>)
+    (<a href="https://code.launchpad.net/~massing/dolfin/trunk-massing">lp:~massing/dolfin/trunk-massing</a>)
   </li>
   <div class="mid" id="HiddenDivMassing" style="DISPLAY: none" >
     <iframe src="http://www.fenicsproject.org:8087"
