@@ -65,7 +65,7 @@
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
 
-          <h3>FEniCS book about to be released!</h3>
+          <h3>FEniCS book released!</h3>
           <a href="/book/"><img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/></a>
 
           <p>The FEniCS book, titled <i>Automated Solution of Differential
