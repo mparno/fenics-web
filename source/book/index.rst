@@ -9,32 +9,30 @@ The FEniCS Book
 ***************************************************************************
 
 This book is written by researchers and developers behind the FEniCS
-Project and explores an advanced, expressive approach to the
-development of mathematical software. The presentation spans
-mathematical background, software design and the use of FEniCS in
-applications. Theoretical aspects are complemented with computer code
-which is available as free/open source software. The book begins with
-a tutorial for readers who are new to the topic. Following the
-tutorial, chapters in Part I address fundamental aspects of the
-approach to automating the creation of finite element
-solvers. Chapters in Part II address the design and implementation of
-the FEnicS software. Chapters in Part III present the application of
-FEniCS to a wide range of applications, including fluid flow, solid
-mechanics, electromagnetics and geophysics.
+Project and explores an advanced, expressive approach to the development
+of mathematical software. The presentation spans mathematical background,
+software design and the use of FEniCS in applications. Theoretical aspects
+are complemented with computer code which is available as free/open source
+software. The book begins with a tutorial for readers who are new to the
+topic. Following the tutorial, chapters in Part I address fundamental
+aspects of the approach to automating the creation of finite element
+solvers. Chapters in Part II address the design and implementation of the
+FEnicS software. Chapters in Part III present the application of FEniCS
+to a wide range of applications, including fluid flow, solid mechanics,
+electromagnetics and geophysics.
 
-1st Edition., 720 p., 359 illus.
+http://dx.doi.org/10.1007/978-3-642-23099-8
 
 ******************
 Obtaining the book
 ******************
 
-The book will appear as `Volume 84
+The book is `Volume 84
 <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
-of the Springer `Lecture Notes in Computational Science and
-Engineering <http://www.springer.com/series/3527>`__. The final book
-manuscript has been submitted to the publisher and is currently in
-production. We expect the book to be available in stores in January
-2012.
+of the Springer `Lecture Notes in Computational Science and Engineering
+<http://www.springer.com/series/3527>`__. It can be viewed `online
+<http://dx.doi.org/10.1007/978-3-642-23099-8>`__ or hard copies can
+be purchased.
 
 * `Order directly from Springer <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
 * `Order from Amazon <http://www.amazon.com/Automated-Solution-Differential-Equations-Element/dp/3642230989/>`__
