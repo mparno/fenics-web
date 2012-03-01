@@ -68,11 +68,11 @@
           <h3>FEniCS book about to be released!</h3>
           <a href="/book/"><img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/></a>
 
-	  <p>The FEniCS book project is nearing completion. The book,
-            titled <i>Automated Solution of Differential Equations by
-            the Finite Element Method</i>, will be published as part
-            of the Springer Lecture Notes in Computational Science and
-            Engineering in the fall of 2011.
+          <p>The FEniCS book, titled <i>Automated Solution of Differential
+            Equations by the Finite Element Method</i>, has been published
+            in 2012 as Volume 84 of the
+            Springer Lecture Notes in Computational Science series. The book
+            can be found <a href="http://dx.doi.org/10.1007/978-3-642-23099-8">here</a>.
           </p>
 
           <p><a href="/book/" rel="nofollow">Find out more about

@@ -30,9 +30,9 @@ Obtaining the book
 The book is `Volume 84
 <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
 of the Springer `Lecture Notes in Computational Science and Engineering
-<http://www.springer.com/series/3527>`__. It can be viewed `online
-<http://dx.doi.org/10.1007/978-3-642-23099-8>`__ or hard copies can
-be purchased.
+<http://www.springer.com/series/3527>`__ series. It can be viewed
+`online <http://dx.doi.org/10.1007/978-3-642-23099-8>`__ or hard copies
+can be purchased.
 
 * `Order directly from Springer <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-23098-1>`__
 * `Order from Amazon <http://www.amazon.com/Automated-Solution-Differential-Equations-Element/dp/3642230989/>`__
