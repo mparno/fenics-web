@@ -18,12 +18,6 @@
 		<p>Specifying large systems of PDEs with ease</p>
 	      </div>
 	    </div>
-	    <div class="slide">
-	      <a href="/featured/2011/fenics_11_texas_tech.html"><img src="/_static/images/featured/featured_item_fenics_11_texas_tech.png" width="366" height="282" alt="FEniCS'11 at Texas Tech"></a>
-	      <div class="caption">
-		<p>FEniCS'11 at Texas Tech</p>
-	      </div>
-	    </div>
           </div>
         </div>
       </div>
