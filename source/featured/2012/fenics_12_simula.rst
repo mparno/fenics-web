@@ -5,6 +5,9 @@ FEniCS'12 at Simula Research Laboratory, June 5 -- 7
 | Featured article 2012-03-22
 | *Created by Marie E. Rognes*
 
+.. image:: images/oslo_montage.png
+   :align: right
+
 We are pleased to announce this year's edition of the annual FEniCS
 workshop:
 
@@ -13,11 +16,12 @@ workshop:
 taking place June 5 -- 7 2012 at `Simula Research Laboratory
 <http://www.simula.no>`__, Oslo, Norway.
 
-All FEniCS users and developers (and others!) are invited to celebrate
-the recent release of FEniCS 1.0 and the FEniCS Book, and to discuss
-future directions for FEniCS development. A half-day FEniCS tutorial
-will be offered as part of the workshop.  Participation in the
-workshop and tutorial is free of charge.
+
+All FEniCS users, developers and other interested parties are invited
+to celebrate the recent release of FEniCS 1.0 and the FEniCS Book, and
+to discuss future directions for FEniCS development. A half-day FEniCS
+tutorial will be offered as part of the workshop.  Participation in
+the workshop and tutorial is free of charge.
 
 We have open slots for contributed talks: if you are interested in
 presenting your recent work, please email a title and a short abstract
@@ -58,7 +62,6 @@ modern architectures. Topics include
 - Andy Terrell
 - Garth Wells
 
-
 *Organizing committee*
 
 -  Anders Logg
@@ -70,4 +73,10 @@ modern architectures. Topics include
   By email to Marie Rognes (meg@simula.no) by May 15.
 
 
+.. image:: images/cbc_logo_resized.png
+   :align: center
 
+\
+
+.. image:: images/simula_footer_neg_HEX.png
+   :align: center
