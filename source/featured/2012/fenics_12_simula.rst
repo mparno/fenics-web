@@ -6,6 +6,7 @@ FEniCS'12 at Simula Research Laboratory, June 5 -- 7
 | *Created by Marie E. Rognes*
 
 .. image:: images/oslo_montage.png
+   :width: 220
    :align: right
 
 We are pleased to announce this year's edition of the annual FEniCS
@@ -15,7 +16,6 @@ workshop:
 
 taking place June 5 -- 7 2012 at `Simula Research Laboratory
 <http://www.simula.no>`__, Oslo, Norway.
-
 
 All FEniCS users, developers and other interested parties are invited
 to celebrate the recent release of FEniCS 1.0 and the FEniCS Book, and
