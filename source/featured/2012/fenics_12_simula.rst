@@ -8,6 +8,7 @@ FEniCS'12 at Simula Research Laboratory, June 5 -- 7
 .. image:: images/oslo_montage.png
    :width: 220
    :align: right
+   :target: http://www.visitoslo.com/en/
 
 We are pleased to announce this year's edition of the annual FEniCS
 workshop:
