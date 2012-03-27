@@ -170,9 +170,9 @@
    author:    Anders Logg, Kent-Andre Mardal, Garth N. Wells, others
    year:      2012
    publisher: Springer
-   pdf:       missing
    status:    published
    isbn:      978-3-642-23098-1
+   doi:       10.1007/978-3-642-23099-8
 * chapters
 ** DOLFIN: a C++/Python Finite Element Library
    key:       LoggWellsEtAl2012a

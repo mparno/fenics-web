@@ -18,8 +18,9 @@ FEniCS
 ------
 
 * **A. Logg, K.-A. Mardal, G. N. Wells et al. (2012)**.
-  *Automated Solution of Differential Equations By the Finite Element Method*,
-  Springer.
+  *Automated Solution of Differential Equations by the Finite Element Method*,
+  Springer,
+  [`doi:10.1007/978-3-642-23099-8 <http://dx.doi.org/10.1007/978-3-642-23099-8>`_].
 
 DOLFIN
 ------
