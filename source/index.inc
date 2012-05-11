@@ -13,6 +13,12 @@
 	      </div>
 	    </div>
 	    <div class="slide">
+	      <a href="/featured/2012/csf.html"><img src="/_static/images/featured/featured_item_csf.png" width="366" height="282" alt="Cerebrospinal fluid flow"></a>
+	      <div class="caption">
+		<p>Simulation of cerebrospinal fluid flow</p>
+	      </div>
+	    </div>
+	    <div class="slide">
 	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured/featured_item_automated_error_control.png" width="366" height="282" alt="Automated adaptivity and error control"></a>
 	      <div class="caption">
 		<p>Automated adaptivity and error control</p>
