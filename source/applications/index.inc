@@ -87,16 +87,17 @@
 
         <div class="front-block block app">
 
-          <h3>dolfin-adjoint &mdash; A library for adjoint models</h3>
+          <h3>dolfin-adjoint &mdash; A library for adjoining models</h3>
           <img alt='dolfin-adjoint' src='/_static/images/dolfinadjoint_tmp.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p> The main aim of dolfin-adjoint is to facilitate the
-          reliable development of adjoint models. This Python library
-          fits seamlessly on top of the FEniCS core components and
-          offers easy-to-use functionality for automatically deriving
-          and efficiently solving adjoint and adjoint-like models
-          starting from DOLFIN-based forward models.  </p>
+          automated development of reliable adjoint models. This
+          Python library fits seamlessly on top of the FEniCS core
+          components and offers easy-to-use functionality for
+          automatically deriving and efficiently solving adjoint and
+          tangent linear models starting from DOLFIN-based forward
+          models.  </p>
 
           <p><a href="https://launchpad.net/dolfin-adjoint"
           rel="nofollow">Visit the project&#8217;s web site to learn
