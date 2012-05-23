@@ -82,6 +82,12 @@ Development version
 For information on accessing the development repositories, see
 :ref:`developers`.
 
+********************
+Contributed packages
+********************
+
+For information on user contributed packages, see :ref:`contributed_packages`.
+
 ***************
 Troubleshooting
 ***************
