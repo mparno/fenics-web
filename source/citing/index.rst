@@ -120,10 +120,10 @@ SyFi
 Unicorn
 -------
 
-* **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Muller, M. Nazarov and J. H. Spuhler (2012)**.
+* **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Müller, M. Nazarov and J. H. Spühler (2012)**.
   *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*,
-  Computational Technology Laboratory, KTH,
-  KTH-CTL-4024.
+  Computer and Fluids,
+  in press.
 
 * **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2012)**.
   *Unicorn: a Unified Continuum Mechanics Solver*,

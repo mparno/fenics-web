@@ -164,6 +164,11 @@
    arxiv:     1104.0199
    pdf:       missing
    status:    published
+** Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry
+   author:      Johan Hoffman, Johan Jansson, Rodrigo V. de Abreu, Cem Degirmenci, Niclas Jansson, Kaspar Müller, Murtazo Nazarov, Jeanette H. Spühler
+   year:        2012
+   journal:     Computer and Fluids
+   volume:      in press
 * books
 ** Automated Solution of Differential Equations By the Finite Element Method
    key:       LoggMardalEtAl2012a
@@ -254,13 +259,3 @@
    pdf:       missing
    status:    published
    chapter:   28
-* reports
-** Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry
-   key:         HoffmanJanssonEtAl2011c
-   author:      Johan Hoffman, Johan Jansson, Rodrigo V. de Abreu, Cem Degirmenci, Niclas Jansson, Kaspar Muller, Murtazo Nazarov, Jeanette H. Spuhler
-   year:        2011
-   institution: Computational Technology Laboratory, KTH
-   number:      KTH-CTL-4024
-   pdf:         missing
-   url:         http://www.publ.kth.se/trita/ctl-4/024/
-   status:      published
