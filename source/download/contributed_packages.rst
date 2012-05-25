@@ -20,7 +20,7 @@ Arch Linux
 
 FEniCS is available in the `Arch User Repository
 <https://wiki.archlinux.org/index.php/Arch_User_Repository>`__ (AUR),
-thanks to Myles English. The packages follows the trunk versions of the
+thanks to Myles English. The packages follow the trunk versions of the
 FEniCS projects.
 
 Start by running the following command to install the required packages
