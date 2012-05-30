@@ -13,6 +13,12 @@
 	      </div>
 	    </div>
 	    <div class="slide">
+	      <a href="/featured/2012/fenics_days_at_imperial.html"><img src="/_static/images/featured/featured_item_fenics_days_at_imperial.png" width="366" height="282" alt="FEniCS days at Imperial College London"></a>
+	      <div class="caption">
+		<p>FEniCS days at Imperial College</p>
+	      </div>
+	    </div>
+	    <div class="slide">
 	      <a href="/featured/2012/csf.html"><img src="/_static/images/featured/featured_item_csf.png" width="366" height="282" alt="Cerebrospinal fluid flow"></a>
 	      <div class="caption">
 		<p>Simulation of cerebrospinal fluid flow</p>
