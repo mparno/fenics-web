@@ -99,7 +99,7 @@
           tangent linear models starting from DOLFIN-based forward
           models.  </p>
 
-          <p><a href="https://launchpad.net/dolfin-adjoint"
+          <p><a href="http://dolfin-adjoint.org"
           rel="nofollow">Visit the project&#8217;s web site to learn
           more &raquo;</a></p>
 
