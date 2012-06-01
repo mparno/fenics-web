@@ -18,8 +18,8 @@ workshop:
 taking place June 5 -- 7 2012 at `Simula Research Laboratory
 <http://www.simula.no>`__, Oslo, Norway.
 
-**Update** (May 14 2012): the `tentative schedule
-</_static/images/featured/schedule_140512.pdf>`_ is available.
+**Update** (June 1 2012): the `schedule
+</_static/images/featured/schedule_fenics12.pdf>`_ is available.
 
 All FEniCS users, developers and other interested parties are invited
 to celebrate the recent release of FEniCS 1.0 and the FEniCS Book, and
