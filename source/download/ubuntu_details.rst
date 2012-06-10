@@ -4,10 +4,9 @@
 Download
 ########
 
-.. image:: images/ubuntu.png
-    :align: left
+.. raw:: html
 
-`Install FEniCS <apt://fenics>`__
+  <a href="https://apps.ubuntu.com/cat/applications/fenics/"><img src="http://developer.ubuntu.com/wp-content/uploads/2012/06/downloadonubuntubutton.png" title="Download for Ubuntu" alt="Download for Ubuntu button" width="122" height="49" /></a>
 
 #########################
 Installation instructions

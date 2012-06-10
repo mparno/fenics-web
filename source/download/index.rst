@@ -26,7 +26,7 @@ everything needed to get you started with FEniCS.
 
     * - |ubuntu-icon| Ubuntu
 
-      - `Download <apt://fenics>`__
+      - `Download <https://apps.ubuntu.com/cat/applications/fenics/>`__
 
       - :ref:`Learn more <ubuntu_details>`
 
