@@ -47,7 +47,7 @@ signed the form, send it by regular mail to
   | 1325 Lysaker
   | Norway
 
-Copies of signed consent forms are archived for 
+Copies of signed consent forms are archived for
 `authors <http://fenicsproject.org/pub/copyright/authors>`_
 and `institutions <http://fenicsproject.org/pub/copyright/institutions>`_.
 
@@ -66,9 +66,13 @@ following:
 
     bzr branch lp:dolfin
 
-#. Go to `DOLFIN code page on Launchpad
-   <https://code.launchpad.net/dolfin>`_, click on **Register a
-   branch**, and follow the instructions.
+#. Create your own branch, see `Code/UploadingABranch
+   <https://help.launchpad.net/Code/UploadingABranch>`_. For example:
+
+   bzr push lp:<username>/dolfin/<branchname>
+
+   Your new branch should be visible on the `DOLFIN code page on Launchpad
+   <https://code.launchpad.net/dolfin>`_.
 
 #. Start developing as usual and keep in mind that regular commits
    make it easier to follow the development. Remember to update the
@@ -77,9 +81,6 @@ following:
 #. Push changesets to the new branch::
 
     bzr push lp:<path-to-branch-location>
-
-   The first time you push to this location you should use the
-   ``--use-existing-dir`` option.
 
 #. Once you have completed your work, you should propose it for
    merging into the DOLFIN main branch (via the Launchpad system). A
