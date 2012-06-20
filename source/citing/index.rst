@@ -131,6 +131,12 @@ Unicorn
   Springer,
   Chapter 18.
 
+* **N. Jansson, J. Jansson and J. Hoffman (2012)**.
+  *Framework for Massively Parallel Adaptive Finite Element Computational Fluid Dynamics on Tetrahedral Meshes*,
+  SIAM Journal on Scientific Computing,
+  34(1),
+  pp. C24-C41.
+
 Bibliography
 ------------
 

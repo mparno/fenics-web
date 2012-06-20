@@ -165,19 +165,33 @@
    pdf:       missing
    status:    published
 ** Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry
-   author:      Johan Hoffman, Johan Jansson, Rodrigo V. de Abreu, Cem Degirmenci, Niclas Jansson, Kaspar Müller, Murtazo Nazarov, Jeanette H. Spühler
-   year:        2012
-   journal:     Computer and Fluids
-   volume:      in press
+   key:     HoffmanJanssonEtAl2012a
+   author:  Johan Hoffman, Johan Jansson, Rodrigo V. de Abreu, Cem Degirmenci, Niclas Jansson, Kaspar Müller, Murtazo Nazarov, Jeanette H. Spühler
+   year:    2012
+   journal: Computer and Fluids
+   volume:  in press
+   pdf:     missing
+   status:  published
+** Framework for Massively Parallel Adaptive Finite Element Computational Fluid Dynamics on Tetrahedral Meshes
+   key:     JanssonJanssonEtAl2012a
+   author:  Niclas Jansson, Johan Jansson, Johan Hoffman
+   year:    2012
+   journal: SIAM Journal on Scientific Computing
+   volume:  34
+   number:  1
+   pages:   C24--C41
+   pdf:     missing
+   status:  published
 * books
-** Automated Solution of Differential Equations By the Finite Element Method
+** Automated Solution of Differential Equations by the Finite Element Method
    key:       LoggMardalEtAl2012a
    author:    Anders Logg, Kent-Andre Mardal, Garth N. Wells, others
    year:      2012
    publisher: Springer
+   doi:       10.1007/978-3-642-23099-8
+   pdf:       missing
    status:    published
    isbn:      978-3-642-23098-1
-   doi:       10.1007/978-3-642-23099-8
 * chapters
 ** DOLFIN: a C++/Python Finite Element Library
    key:       LoggWellsEtAl2012a
@@ -186,9 +200,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   10
    pdf:       missing
    status:    published
-   chapter:   10
 ** FFC: the FEniCS Form Compiler
    key:       LoggOlgaardEtAl2012a
    author:    Anders Logg, Kristian B. \O{}lgaard, Marie E. Rognes, Garth N. Wells
@@ -196,9 +210,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   11
    pdf:       missing
    status:    published
-   chapter:   11
 ** FIAT: Numerical Construction of Finite Element Basis Functions,
    key:       Kirby2012a
    author:    Robert C. Kirby
@@ -206,9 +220,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   13
    pdf:       missing
    status:    published
-   chapter:   13
 ** SyFi and SFC: Symbolic Finite Elements and Form Compilation
    key:       AlnaesMardal2012b
    author:    Martin S. Aln\ae{}s, Kent-Andre Mardal
@@ -216,9 +230,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   15
    pdf:       missing
    status:    published
-   chapter:   15
 ** UFC: a Finite Element Code Generation Interface
    key:       AlnaesLoggEtAl2012a
    author:    Martin S. Aln\ae{}s, Anders Logg, Kent-Andre Mardal
@@ -226,9 +240,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   16
    pdf:       missing
    status:    published
-   chapter:   16
 ** UFL: a Finite Element Form Language
    key:       Alnaes2012a
    author:    Martin S. Aln\ae{}s
@@ -236,9 +250,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   17
    pdf:       missing
    status:    published
-   chapter:   17
 ** Unicorn: a Unified Continuum Mechanics Solver
    key:       HoffmanJanssonEtAl2012a
    author:    Johan Hoffman, Johan Jansson, Cem Degirmenci, Niclas Jansson, Murtazo Nazarov
@@ -246,9 +260,9 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   18
    pdf:       missing
    status:    published
-   chapter:   18
 ** Turbulent Flow and Fluid–structure Interaction
    key:       HoffmanJanssonEtAl2012b
    author:    Johan Hoffman, Johan Jansson, Niclas Jansson, C. Johnson, Rodrigo V. de Abreu
@@ -256,6 +270,6 @@
    year:      2012
    booktitle: Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering
    publisher: Springer
+   chapter:   28
    pdf:       missing
    status:    published
-   chapter:   28
