@@ -34,6 +34,26 @@ to Marie Rognes (meg@simula.no) by **May 1 2012**.
 To register for the workshop, please contact Marie Rognes
 (meg@simula.no) by **May 15 2012**.
 
+*****************
+Slides from talks
+*****************
+
+**Update** (July 11 2012): The slides from a subset of the talks given at FEniCS '12 are now available:
+
+- Martin S. Alnaes: `Efficient compilation of complex tensor algebra expressions <http://fenicsproject.org/pub/workshops/fenics12/slides/Alnaes.pdf>`__
+- Scott Baden: `Computing at a million laptops per second <http://fenicsproject.org/pub/workshops/fenics12/slides/Baden.pdf>`__
+- Brian Brennan: `An embedded language for vector operations in OpenCL <http://fenicsproject.org/pub/workshops/fenics12/slides/Brennan.pdf>`__
+- Andre R. Brodtkorb: `Compact stencils for the shallow water equations on graphics processing units <http://fenicsproject.org/pub/workshops/fenics12/slides/Brodtkorb.pdf>`__
+- Carsten Burstedde: `Modular forest-of-octrees AMR: algorithms and interfaces <http://fenicsproject.org/pub/workshops/fenics12/slides/Burstedde.pdf>`__
+- Simon W. Funke: `libadjoint: a new abstraction for developing adjoint models <http://fenicsproject.org/pub/workshops/fenics12/slides/Funke.pdf>`__
+- David A. Ham: `dolfin-adjoint: automating the adjoints of models written in the Python interface to DOLFIN <http://fenicsproject.org/pub/workshops/fenics12/slides/Ham.pdf>`__
+- Josef Hook: `GenFoo: a general Fokker-Planck solver with applications in fusion plasma physics <http://fenicsproject.org/pub/workshops/fenics12/slides/Hook.pdf>`__
+- David I. Ketcheson: `Design of optimal Runge-Kutta methods <http://fenicsproject.org/pub/workshops/fenics12/slides/Ketcheson.pdf>`__
+- Kent-Andre Mardal: `Will FEniCS fly? <http://fenicsproject.org/pub/workshops/fenics12/slides/Mardal.pdf>`__
+- Graham R. Markall: `Generating high-performance multiplatform finite element solvers using the Manycore Form Compiler and OP2 <http://fenicsproject.org/pub/workshops/fenics12/slides/Markall.pdf>`__
+- Ridgway Scott: `Parallelization in Time <http://fenicsproject.org/pub/workshops/fenics12/slides/Scott.pdf>`__
+- Didem Unat: `Auto-generating optimized CUDA for stencil computation: Mint programming model <http://fenicsproject.org/pub/workshops/fenics12/slides/Unat.pdf>`__
+
 
 *****************
 Workshop abstract
