@@ -40,7 +40,7 @@ Slides from talks
 
 **Update** (July 11 2012): The slides from a subset of the talks given at FEniCS '12 are now available:
 
-- Martin S. Alnaes: `Efficient compilation of complex tensor algebra expressions <http://fenicsproject.org/pub/workshops/fenics12/slides/Alnaes.pdf>`__
+- Martin S. Alnæs: `Efficient compilation of complex tensor algebra expressions <http://fenicsproject.org/pub/workshops/fenics12/slides/Alnaes.pdf>`__
 - Scott Baden: `Computing at a million laptops per second <http://fenicsproject.org/pub/workshops/fenics12/slides/Baden.pdf>`__
 - Brian Brennan: `An embedded language for vector operations in OpenCL <http://fenicsproject.org/pub/workshops/fenics12/slides/Brennan.pdf>`__
 - Andre R. Brodtkorb: `Compact stencils for the shallow water equations on graphics processing units <http://fenicsproject.org/pub/workshops/fenics12/slides/Brodtkorb.pdf>`__
