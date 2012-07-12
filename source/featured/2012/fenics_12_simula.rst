@@ -48,6 +48,7 @@ Slides from talks
 - Simon W. Funke: `libadjoint: a new abstraction for developing adjoint models <http://fenicsproject.org/pub/workshops/fenics12/slides/Funke.pdf>`__
 - David A. Ham: `dolfin-adjoint: automating the adjoints of models written in the Python interface to DOLFIN <http://fenicsproject.org/pub/workshops/fenics12/slides/Ham.pdf>`__
 - Josef Hook: `GenFoo: a general Fokker-Planck solver with applications in fusion plasma physics <http://fenicsproject.org/pub/workshops/fenics12/slides/Hook.pdf>`__
+- Paul H. J. Kelly: `Generating programs works better than transforming them, if you get the abstraction right <http://fenicsproject.org/pub/workshops/fenics12/slides/Kelly.pdf>`__
 - David I. Ketcheson: `Design of optimal Runge-Kutta methods <http://fenicsproject.org/pub/workshops/fenics12/slides/Ketcheson.pdf>`__
 - Kent-Andre Mardal: `Will FEniCS fly? <http://fenicsproject.org/pub/workshops/fenics12/slides/Mardal.pdf>`__
 - Graham R. Markall: `Generating high-performance multiplatform finite element solvers using the Manycore Form Compiler and OP2 <http://fenicsproject.org/pub/workshops/fenics12/slides/Markall.pdf>`__
