@@ -12,8 +12,10 @@ a particular focus on automated solution of differential equations by
 finite element methods.
 
 The methodology and software developed as part of the FEniCS Project
-are documented in a number of :doc:`research articles <../citing/index>`
-and a :doc:`book <../book/index>`.
+are documented in a number of :doc:`research articles
+<../citing/index>` and a :doc:`book <../book/index>`. You can also
+learn more about FEniCS from the following `presentations
+<http://fenicsproject.org/pub/presentations/>`__.
 
 ********
 Features
