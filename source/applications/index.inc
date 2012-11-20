@@ -167,7 +167,7 @@
     	<div class="front-block block app">
 
 	  <h3>PUM solver &mdash; Partition of unity method in FEniCS</h3>
-          <img alt='' src='/_static/images/pum_solver.png'
+          <img alt='' src='/_static/images/crack_dolfin.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p>PUM solver is a FEniCS based package to model problems whose solutions
