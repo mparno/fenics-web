@@ -279,7 +279,7 @@
 		 src='/_static/images/mugshots/wells.jpg' />
 	  </div>
 
-          <p>Garth is the Hibbit Lecturer in solid mechanics at the
+          <p>Garth is the Hibbit Reader in Solid Mechanics at the
           <a href="http://www.eng.cam.ac.uk/">Department of Engineering</a>,
           University of Cambridge.</p>
 
