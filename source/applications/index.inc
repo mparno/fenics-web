@@ -181,7 +181,7 @@
           time dependent problems.
           </p>
 
-          <p><a href="https://launchpad.net/gryphon"
+          <p><a href="https://launchpad.net/gryphonproject"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
