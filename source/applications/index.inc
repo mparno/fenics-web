@@ -158,7 +158,30 @@
           which enable solutions of a large class of Fokker-Planck models.
           </p>
 
-    <p><a href="https://launchpad.net/genfoo"
+          <p><a href="https://launchpad.net/genfoo"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
+    	<div class="front-block block app">
+
+	  <h3>Gryphon &mdash; A time integrator for FEniCS</h3>
+          <img alt='' src='/_static/images/gryphon.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>
+          Gryphon is a Python module for solving systems of time
+          dependent partial differential equations in FEniCS. Currently
+          supported time-stepping methods include singly
+          diagonally implicit Runge-Kutta methods with an explicit first stage
+          (ESDIRKs) of order 2, 3 and 4, developed at the
+          Norwegian University of Science and Technology. Several examples
+          are included to illustrate how to get started with solving
+          time dependent problems.
+          </p>
+
+          <p><a href="https://launchpad.net/gryphon"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
@@ -171,18 +194,13 @@
           class='avatar avatar-84 photo' height='84' width='84' />
 
 	  <p>PUM solver is a FEniCS based package to model problems whose solutions
-    are discontinuous across arbitrary surfaces using the partition of unity
-    method (extended finite element method).
-    The PUM solver consists of two components: a
-    <a href="https://launchpad.net/dolfin-pum" rel="nofollow">PUM library</a>
-    and a
-    <a href="https://launchpad.net/ffc-pum" rel="nofollow">PUM compiler</a>.
-    The PUM library, a C++ library built on top of DOLFIN, defines surfaces and
-    components specific to the partition of unity method including enriched
-    degrees of freedom.
-    The PUM compiler built on top of FFC generates the required low-level code
-    specific to the partition of unity method.
-    </p>
+          are discontinuous across arbitrary surfaces using the partition of unity
+          method (extended finite element method).
+          The PUM solver consists of two components: a
+          <a href="https://launchpad.net/dolfin-pum" rel="nofollow">PUM library</a>
+          and a
+          <a href="https://launchpad.net/ffc-pum" rel="nofollow">PUM compiler</a>.
+          </p>
         </div>
 
     	<div class="front-block block app">
@@ -192,10 +210,10 @@
           class='avatar avatar-84 photo' height='84' width='84' />
 
           <p> Unicorn is a massively parallel adaptive finite element
-          solver for fluid and structure mechanics, including fluid-structure
-          interaction problems. Unicorn aims at developing one unified continuum
-          mechanics solver for a wide range of applications, based on the suite
-          DOLFIN/FFC/FIAT. We have been able to show strong linear scaling up to
+          solver for fluid and structure mechanics, including FSI problems.
+          Unicorn aims to be a unified continuum
+          mechanics solver for a wide range of applications.
+          Strong scaling has been demonstrated up to
           6000 cores. It is primarily developed by <a href="http://www.csc.kth.se/ctl">CTL</a>
           hosted at <a href="http://www.kth.se">KTH</a> in Stockholm.
           </p>
