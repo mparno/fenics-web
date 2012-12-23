@@ -66,11 +66,13 @@
 	<div id="front-block-1" class="front-block block">
 
           <h3>FEniCS'13 at University of Cambridge</h3>
-          <a href="/book/"><img alt='' src='/_static/images/jesus_college.jpg' class='avatar avatar-84 photo' width='84'/></a>
+          <a href="/featured/2013/fenics_13_cambridge.html"><img alt='' src='/_static/images/jesus_college.jpg' class='avatar avatar-84 photo' width='84'/></a>
 
           <p>The 2013 FEniCS Workshop will be held 18-19 March 2013 at
-            Jesus College, Cambridge. Information of registering for the workshop can be found
-            <a href="http://dx.doi.org/10.1007/978-3-642-23099-8">here</a>.
+            Jesus College, Cambridge. Information of
+            registering for the workshop can be found <a
+            href="/featured/2013/fenics_13_cambridge.html">here</a>.
+            Abstracts should be sent by 1 February 2012. <br /> <br /> <br />
           </p>
 
           <h3>FEniCS book released!</h3>
