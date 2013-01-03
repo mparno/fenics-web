@@ -49,7 +49,8 @@ Blueprints
 FEniCS uses `blueprints <https://help.launchpad.net/Blueprint>`_ to
 keep track of the specifications for new features. Before adding a new
 blueprint it is a good idea to first discuss the design on the
-relevant mailing list.
+relevant mailing list. *Note that the relevant core team must be
+subscribed to the blueprint manually for anyone to notice it*.
 
 `FEniCS blueprints <https://blueprints.launchpad.net/fenics>`_ is the
 place for general FEniCS blueprints and `DOLFIN blueprints
