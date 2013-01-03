@@ -21,7 +21,12 @@ publish export fenics.bib database_filename=fenics.pub debug=1
 publish export fenics.rst database_filename=fenics.pub debug=1
 
 # Rename .rst file to get rid of Sphinx warning
-mv fenics.rst fenics.rst_
+# Also add comment on how to edit files
+rm -f fenics.rst_
+echo ".. Note! This file should not be edited manually. It should" >> fenics.rst_
+echo ".. instead be generated from within source/_static/bibliography." >> fenics.rst_
+echo "" >> fenics.rst_
+cat fenics.rst >> fenics.rst_
 
 # Copy file to citing directory
 cp fenics.rst_ ../../citing
