@@ -182,6 +182,13 @@
    pages:   C24--C41
    pdf:     missing
    status:  published
+** Unified Form Language: A domain-specific language for weak formulations of partial differential equations
+   key:     AlnaesEtAl2012
+   author:  Martin S. Aln\ae{}s, Anders Logg, Kristian B. \O{}lgaard, Marie E. Rognes, Garth N. Wells
+   year:    2012
+   arxiv:   1211.4047
+   journal:
+   status:  unpublished
 * books
 ** Automated Solution of Differential Equations by the Finite Element Method
    key:       LoggMardalEtAl2012a
