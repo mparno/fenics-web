@@ -32,3 +32,5 @@ FEniCS 1.0 and 1.1, but a few has been necessary. The key changes are
 #. The vector of a Function is now returned only as a
    boost::shared_ptr and not as a reference.
 
+#. The AdaptiveLinearVariationalSolvers now take the goal functional
+   as a constructor argument (rather than as an argument to solve).
