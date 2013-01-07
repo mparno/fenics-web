@@ -104,3 +104,15 @@ Miscellaneous issues
   personal branch).
 * X.Y-betaN releases are used to grind out bugs.
 * X.Y-rcN releases are made when we believe there are "no" bugs.
+
+********************
+How to make releases
+********************
+
+A collection of resources and utilities for FEniCS developers are
+available in the developer tools repository associated with the FEniCS
+Project in Launchpad. You can obtain this repository by the command:
+
+    bzr branch lp:fenics
+
+In particular, this repository contains a fenics-release script.
