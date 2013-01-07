@@ -4,8 +4,6 @@
 Development model
 #################
 
-*This is a draft proposal for a FEniCS development model.*
-
 ***************
 The big picture
 ***************
@@ -20,7 +18,6 @@ We note the following important points:
 * Development happens in the **trunk**.
 * At any time, there may exist one or more **stable branches**.
 * **Stable releases** are made from stable branches.
-* **Snapshot releases** are made from trunk.
 * Blueprints may be targeted to a future **series** (for which there
   is yet no branch of the source repository).
 
@@ -29,90 +26,63 @@ Stable releases
 ***************
 
 The following process should be followed for the creation of a stable
-release (version X.Y.0):
+release (a version X.Y.0). The primary requirement for making a
+release is that the buildbot is green.
 
-1. A **suggestion** is made on the FEniCS mailing list to create a new
+#. A **suggestion** is made on the FEniCS mailing list to create a new
    stable release.
-2. Concensus is reached that the timing is good.
-3. A **release manager** is appointed.
-4. Trunk is **tagged** with **branch-X.Y.x**
-5. The X.Y.x **branch** is created and X.Y-beta1 is released.
-6. A number of **X.Y-betaN** releases may follow.
-7. One or more release candidates **X.Y-rcN** are released.
-8. The stable version **X.Y.0** is released.
+#. Concensus is reached that the timing is good.
+#. A **release manager** is appointed in consensus among the
+   developers. The release manager is responsible for making sure that
+   the steps below are carried out for each FEniCS component.
+#. Create a Launchpad **series** X.Y.x and create a **milestone** for the
+   release in the series.
+#. Create a **branch** X.Y.x and associate it with the series.
+#. Ensure that the buildbots are green.
+#. For each project, run the fenics-release script and follow the
+   instructions. The fenics-release script is available from
 
-The developer tools repository associated with the FEniCS Project in
-Launchpad contains useful resources for making releases. You can
-obtain this repository by the command:
+      bzr branch lp:fenics
 
-    bzr branch lp:fenics
+   Note in particular the post-release instructions issued by the
+   script.
 
 A reasonable schedule for the release process is one week from the
-time the suggestion is made (1) to the time when the X.Y.x branch is
-created (2), and one month from the creation of the X.Y.x branch (2) to
-the release of X.Y.0 (7).
+time consensus is reached (2) to the time when the release is made
+(7).
 
-At the time of branching, the following conditions should be met:
+A release of X.Y.0 may be preceeded by X.Y-betaN and X.Y-rcN
+releases. Once X.Y.0 has been released, it may be followed by bug fix
+releases X.Y.1, X.Y.2, etc.
 
-1. There should be **no blueprints** targeted to the X.Y series.
-2. The buildbots should be green.
-3. A release manager should have been appointed.
+..
+   *****************
+   Snapshot releases
+   *****************
 
-The release manager coordinates the work towards X.Y.0 and has the
-following responsibilities:
+   The creation of a stable release involves a fair amount of
+   administration and it is also a lengthy process. Another type of
+   release is a **snapshot release** made directly from trunk in between
+   stable releases. Such an *ad hoc* release can be made at any time, as
+   long as the buildbots are green.
 
-1. Following steps (4)-(7) above.
-2. Coordinating and retargeting bugs.
-3. Setting reasonable deadlines.
-4. Following up on deadlines.
-5. Informing other developers about the release process.
+   Developers may want to create snapshot releases for many reasons:
 
-The release manager is appointed in consensus among the developers. It
-is natural but not necessary that the developer initiating the release
-process is also the release manager.
+   * to point a collaborator to a fixed snapshot of trunk;
+   * to get more testing of a new feature;
+   * if the ChangeLog is growing long;
+   * for the fun of making a release.
 
-Once X.Y.0 has been released, it may be followed by bug fix releases
-X.Y.1, X.Y.2, etc.
+   The following simple procedure should be followed for snapshot
+   releases:
 
-In practice, the following steps need to be taken on Launchpad to make
-a release (see the fenics-release script, available from lp:fenics, for
-details)
+   1. Announce the intention to make a snapshot release on the FEniCS mailing list.
+   2. Wait a day.
+   3. Make the release.
 
-1. Create a series for the release (for instance x.y.z).
-2. Create a milestone for the release in the series.
-3. Create a branch (for instance x.y.z) and associate it with the
-   series.
-4. After running the release scripts, upload the release tarball.
-5. Change status of bugs from 'fix committed' to 'fix released'.
-6. Make Launchpad announcement with title 'TheProject x.y.z'.
-
-*****************
-Snapshot releases
-*****************
-
-The creation of a stable release involves a fair amount of
-administration and it is also a lengthy process. Another type of
-release is a **snapshot release** made directly from trunk in between
-stable releases. Such an *ad hoc* release can be made at any time, as
-long as the buildbots are green.
-
-Developers may want to create snapshot releases for many reasons:
-
-* to point a collaborator to a fixed snapshot of trunk;
-* to get more testing of a new feature;
-* if the ChangeLog is growing long;
-* for the fun of making a release.
-
-The following simple procedure should be followed for snapshot
-releases:
-
-1. Announce the intention to make a snapshot release on the FEniCS mailing list.
-2. Wait a day.
-3. Make the release.
-
-Snapshot releases don't need to wait for new features to be completed
-as long as the buildbots are green. We can always make a new snapshot
-release when that feature has been implemented.
+   Snapshot releases don't need to wait for new features to be completed
+   as long as the buildbots are green. We can always make a new snapshot
+   release when that feature has been implemented.
 
 ********************
 Miscellaneous issues
