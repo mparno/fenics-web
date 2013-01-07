@@ -28,3 +28,7 @@ FEniCS 1.0 and 1.1, but a few has been necessary. The key changes are
    with the old are still present.
 
 #. dolfin::uint has been removed and size_t has been introduced
+
+#. The vector of a Function is now returned only as a
+   boost::shared_ptr and not as a reference.
+
