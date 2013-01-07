@@ -31,7 +31,8 @@ Stable releases
 The following process should be followed for the creation of a stable
 release (version X.Y.0):
 
-1. A **suggestion** is made on the FEniCS mailing list to create a new stable release.
+1. A **suggestion** is made on the FEniCS mailing list to create a new
+   stable release.
 2. Concensus is reached that the timing is good.
 3. A **release manager** is appointed.
 4. Trunk is **tagged** with **branch-X.Y.x**
@@ -39,6 +40,12 @@ release (version X.Y.0):
 6. A number of **X.Y-betaN** releases may follow.
 7. One or more release candidates **X.Y-rcN** are released.
 8. The stable version **X.Y.0** is released.
+
+The developer tools repository associated with the FEniCS Project in
+Launchpad contains useful resources for making releases. You can
+obtain this repository by the command:
+
+    bzr branch lp:fenics
 
 A reasonable schedule for the release process is one week from the
 time the suggestion is made (1) to the time when the X.Y.x branch is
@@ -66,6 +73,18 @@ process is also the release manager.
 
 Once X.Y.0 has been released, it may be followed by bug fix releases
 X.Y.1, X.Y.2, etc.
+
+In practice, the following steps need to be taken on Launchpad to make
+a release (see the fenics-release script, available from lp:fenics, for
+details)
+
+1. Create a series for the release (for instance x.y.z).
+2. Create a milestone for the release in the series.
+3. Create a branch (for instance x.y.z) and associate it with the
+   series.
+4. After running the release scripts, upload the release tarball.
+5. Change status of bugs from 'fix committed' to 'fix released'.
+6. Make Launchpad announcement with title 'TheProject x.y.z'.
 
 *****************
 Snapshot releases
@@ -105,14 +124,4 @@ Miscellaneous issues
 * X.Y-betaN releases are used to grind out bugs.
 * X.Y-rcN releases are made when we believe there are "no" bugs.
 
-********************
-How to make releases
-********************
 
-A collection of resources and utilities for FEniCS developers are
-available in the developer tools repository associated with the FEniCS
-Project in Launchpad. You can obtain this repository by the command:
-
-    bzr branch lp:fenics
-
-In particular, this repository contains a fenics-release script.
