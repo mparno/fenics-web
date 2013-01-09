@@ -10,3 +10,4 @@ List of all versions of the documentation
 * :doc:`doc_1.0-beta2`
 * :doc:`doc_1.0-beta`
 * :doc:`doc_1.0.0`
+* :doc:`doc_1.0.1`
