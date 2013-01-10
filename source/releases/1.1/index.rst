@@ -12,12 +12,12 @@ The following new features have been introduced in the release
 of FEniCS 1.1.0:
 
 * Much improved parallel scaling
-* Improve performance of finite element assembly
-* Improve performance of mesh topology computation
-* Improve performance of mesh building in parallel
+* Improved performance of finite element assembly
+* Improved performance of mesh topology computation
+* Improved performance of mesh building in parallel
 * Support for XDMF and HDF5
 * Support for restricted function spaces
-* Support for for matrix-free linear systems
+* Support for matrix-free linear systems
 * Support for GPU-accelerated linear algebra
 * Support for mesh generation from constructive solid geometry (CSG) descriptions
 * Support for mesh generation from STL
@@ -42,7 +42,7 @@ FEniCS 1.0 and 1.1, but a few changes have been necessary. The key changes are
    * Box, Interval, Rectangle, UnitCircle, UnitCube, UnitInterval,
      UnitSphere, UnitSquare, UnitTetrahedron, UnitTriangle
 
-   hav been renamed by adding the suffix 'Mesh'. The new equivalent
+   have been renamed by adding the suffix 'Mesh'. The new equivalent
    classes are
 
    * BoxMesh, IntervalMesh, RectangleMesh, UnitCircleMesh,
@@ -51,7 +51,7 @@ FEniCS 1.0 and 1.1, but a few changes have been necessary. The key changes are
 
    respectively.
 
-   This change was necessary to differentiate between mesh classes
+   This change was necessary to differentiate between mesh classes and
    the new geometry classes that have been introduced for built-in
    mesh generation.
 
@@ -63,5 +63,5 @@ FEniCS 1.0 and 1.1, but a few changes have been necessary. The key changes are
 #. The vector of a Function is now returned only as a
    boost::shared_ptr and not as a reference.
 
-#. The AdaptiveLinearVariationalSolvers now take the goal functional
-   as a constructor argument (rather than as an argument to solve).
+#. The Adaptive*VariationalSolvers now take the goal functional as a
+   constructor argument (rather than as an argument to solve).
