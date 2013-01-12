@@ -29,11 +29,10 @@ and a formal dinner at the historic Jesus College on the evening on
 Accommodation and travelling to Cambridge
 *****************************************
 
-A number of en-suite rooms at Jesus College have been
+A limited number of en-suite rooms at Jesus College have been
 reserved for workshop participants. Rooms can be booked `here
-<https://conference.jesus.cam.ac.uk/booking.html>`__.  To request
-a booking/promotional code for making the reservation, please email
-gnw20@cam.ac.uk.
+<https://conference.jesus.cam.ac.uk/booking.html>`__ using the promotional
+code GW1803.
 
 Information on reaching Jesus College can be found at
 http://www.jesus.cam.ac.uk/contacts-directions/travel-directions.
