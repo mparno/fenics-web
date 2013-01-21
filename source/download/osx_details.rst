@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0,
-Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
+This release includes DOLFIN 1.1.0, FFC 1.1.0, FIAT 1.1, Instant 1.1.0,
+UFC 2.1.0 and UFL 1.1.0.
 
 .. include:: icons.rst
 
@@ -16,40 +16,49 @@ Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 1.0.0 (Mac OS X 10.6 binary)
+    * - |mac-icon| FEniCS 1.1.0 (Mac OS X 10.6 binary)
 
-      - `fenics-1.0.0-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-osx10.6.dmg>`__
+      - `fenics-1.1.0-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.asc>`__)
 
-    * - |mac-icon| FEniCS 1.0.0 (Mac OS X 10.7 binary)
+    * - |mac-icon| FEniCS 1.1.0 (Mac OS X 10.7 / 10.8 binary)
 
-      - `fenics-1.0.0-osx10.7.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-osx10.7.dmg>`__
+      - `fenics-1.1.0-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.asc>`__)
 
-    * - |archive-icon| FEniCS 1.0.0 (Sources for Mac OS X 10.6)
+############
+Requirements
+############
 
-      - `fenics-source-1.0.0-osx10.6.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0.0-osx10.6.tar.gz>`__
+* 64-bit capable Intel processor.
+* Mac OS X 10.6 or greater.
+* An up-to-date version of Xcode. This can be installed from the OS X
+  install disc for Snow Leopard users, or from App Store for Lion or
+  Mountain Lion users.
+* The Xcode Command Line Tools must be installed from the Downloads tab
+  within the Xcode Preferences menu for Lion or Mountain Lion users.
+* The `X11 Libraries <http://xquartz.macosforge.org/trac/wiki>`__ must
+  be installed on Mountain Lion.
+* The FEniCS binary is built against system Python and will *not work*
+  with Python from `python.org <http://python.org>`__, MacPorts Python
+  or similar.
 
-    * - |archive-icon| FEniCS 1.0.0 (Sources for Mac OS X 10.7)
+############
+Installation
+############
 
-      - `fenics-source-1.0.0-osx10.7.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0.0-osx10.7.tar.gz>`__
-
-#########################
-Installation instructions
-#########################
-
-The FEniCS binary for Mac OS X runs on Intel 10.6 and 10.7 only. This
-means that OS X 10.5 and older and the PowerPC architecture *are not
-supported*. Moreover, this package is built against system Python and
-will *not work* with MacPorts Python or similar. XCode (available from
-App Store) is required to run the binary.
-
-Click on the link above to download the binary package. The installation
-should be as simple as dragging the FEniCS icon into the Applications
-folder. When the installation is complete, there are two ways to use
-this binary:
+Click on the link above to download the binary package for your version
+of OS X. The installation should be as simple as dragging the FEniCS
+icon into the Applications folder. When the installation is complete,
+there are two ways to use this binary:
 
 * Click on the FEniCS icon in the Applications folder. This will bring
   up a terminal with everything set up to work with FEniCS.
@@ -61,9 +70,9 @@ this binary:
 
   This will make FEniCS available whenever you start a new terminal.
 
-**************
+##############
 Older releases
-**************
+##############
 
 Older versions of the Mac OS X binary are also :ref:`available
 <older_releases>`.
