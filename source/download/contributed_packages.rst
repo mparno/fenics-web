@@ -33,3 +33,32 @@ order (along with any other dependencies they may need): ``parmetis``,
 ``metis``, ``petsc``, ``slepc``, ``trilinos``, ``instant-bzr``,
 ``fiat-bzr``, ``ufl-bzr``, ``ufc-bzr``, ``ffc-bzr``, ``viper-bzr``,
 ``dolfin-bzr``.
+
+********
+openSUSE
+********
+
+FEniCS is available in the `openSUSE Science Repository
+<http://download.opensuse.org/repositories/science/>`__, thanks to
+Sebastien Corot.
+
+First we need to add the Science Repository if this has not been already
+added. Start by opening YaST2 and select *Software Repositories*. Then
+click on the button labeled *Add*. This brings up a screen labeled
+*Media Type*. From there select ``HTTP`` and click on *Next*. This brings
+up a screen labeled *Repository URL*. For the Science Repository, fill
+in::
+
+  Repository Name: openSUSE Science
+  URL of the Repository: http://download.opensuse.org/repositories/science/openSUSE_12.3/
+
+Make sure to replace the version number with the correct version of
+openSUSE. Then click on *Next*. That should bring up a screen that is
+labeled *Adding New Repository*, and then return you to the list of
+configured repositories for your system. This list should now contain
+the openSUSE Science Repository.
+
+Now, to install DOLFIN, one goes into YaST2 and either searches for
+``dolfin`` or selects ``Repositories`` and then selects ``dolfin`` from
+the list of available packages. YaST2 should also take care of selecting
+any dependencies.
