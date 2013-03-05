@@ -91,6 +91,7 @@ Participants
 - Lesleis Nagy, *The University of Edinburgh*
 - Felix Ospald, *Technische Universität Chemnitz*
 - Veena Phunpeng, *Imperial College London*
+- Jagannathan Ramanujam, *Louisiana State University*
 - Florian Rathgeber, *Imperial College London*
 - Sander Rhebergen, *University of Oxford*
 - Chris Richardson, *University of Cambridge*
