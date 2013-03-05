@@ -2,7 +2,7 @@
 FEniCS'13 at University of Cambridge, 18--19 March 2013
 #######################################################
 
-| Featured article 2012-10-08
+| Featured article 2013-03-05
 
 We are pleased to announce the 2013 edition of the annual FEniCS workshop:
 
@@ -14,11 +14,15 @@ and other interested parties are invited to discuss current and future
 directions in scientific computing, approaches to scientific software
 development and FEniCS development.
 
+
 ************
 Registration
 ************
 
-Registration has now closed.
+Registration has been extended until 8 March.
+The registration page can be found `here
+<http://onlinesales.admin.cam.ac.uk/browse/extra_info.asp?compid=1&modid=2&prodid=603&deptid=150&catid=328>`__.
+Registrations after this date cannot be accepted.
 
 The registration fee includes lunch on both days of the workshop and a
 formal dinner at the historic Jesus College on the evening on 18 March.
@@ -37,12 +41,11 @@ Information on reaching Jesus College can be found at
 http://www.jesus.cam.ac.uk/contacts-directions/travel-directions.
 
 
-********************
-Submitting abstracts
-********************
+*******
+Contact
+*******
 
-If you would like to present your work, please email a title and
-a short abstract to gnw20@cam.ac.uk by 1 February 2013.
+For information on the workshop, contact `Garth N. Wells <gnw20@cam.ac.uk>`_.
 
 
 ********************
