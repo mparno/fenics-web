@@ -18,11 +18,10 @@ development and FEniCS development.
 Registration
 ************
 
-Register for the workshop `here
-<http://onlinesales.admin.cam.ac.uk/browse/product.asp?catid=328&modid=2&compid=1>`__.
-The registration fee of £150 includes lunch on both days of the workshop
-and a formal dinner at the historic Jesus College on the evening on
-18 March.
+Registration has now closed.
+
+The registration fee includes lunch on both days of the workshop and a
+formal dinner at the historic Jesus College on the evening on 18 March.
 
 
 *****************************************
