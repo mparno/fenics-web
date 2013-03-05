@@ -89,6 +89,12 @@ Contributed packages
 For information on user contributed packages, see :ref:`contributed_packages`.
 
 ***************
+Data and meshes
+***************
+
+A collection of meshes for free use with FEniCS is available :ref:`here <data>`.
+
+***************
 Troubleshooting
 ***************
 
