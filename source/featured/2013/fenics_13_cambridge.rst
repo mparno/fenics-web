@@ -61,7 +61,7 @@ Participants
 - Martin Alnæs, *Simula Research Laboratory*
 - Douglas Arnold, *University of Minnesota*
 - Gabriel Balaban, *Simula Research Laboratory*
-- Gheorghe-Teodor Bercea, *Imperial College Londonv
+- Gheorghe-Teodor Bercea, *Imperial College London*
 - David Bernstein, *Melior Technology*
 - Wolfram Bosbach, *University of Cambridge*
 - Matthew Commin, *University of Cambridge*
