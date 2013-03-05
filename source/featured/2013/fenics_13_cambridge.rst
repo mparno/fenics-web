@@ -104,5 +104,6 @@ Participants
 - Daniele Tartarini, *University of Cambridge*
 - Georgios Tzedakis, *FORTH*
 - Steven Vandekerckhove, *KU Leuven*
+- Rodrigo Vilela de Abreu, *KTH Stockholm*
 - Garth Wells, *University of Cambridge*
 - Wyn Williams, *The University of Edinburgh*
