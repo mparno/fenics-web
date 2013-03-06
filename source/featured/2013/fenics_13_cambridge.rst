@@ -92,12 +92,14 @@ Participants
 - Lawrence Mitchell, *The University of Edinburgh*
 - Derek Monahan, *University College London*
 - Lesleis Nagy, *The University of Edinburgh*
+- Kristian Ølgaard, *Aalborg University*
 - Felix Ospald, *Technische Universität Chemnitz*
 - Veena Phunpeng, *Imperial College London*
 - Jagannathan Ramanujam, *Louisiana State University*
 - Florian Rathgeber, *Imperial College London*
 - Sander Rhebergen, *University of Oxford*
 - Chris Richardson, *University of Cambridge*
+- Johannes Ring, *Simula Research Laboratory*
 - Marie Rognes, *Simula Research Laboratory*
 - John Rudge, *University of Cambridge*
 - Francis Russell, *Imperial College London*
