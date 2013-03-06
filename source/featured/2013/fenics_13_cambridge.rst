@@ -48,12 +48,12 @@ Contact
 For information on the workshop, contact `Garth N. Wells <gnw20@cam.ac.uk>`_.
 
 
-********************
-Schedule and program
-********************
+*******
+Program
+*******
 
-The workshop will run all day on 18 and 19 March. A draft program
-is available: :ref:`fenics13-program`.
+The workshop will run on 18 and 19 March. The draft program is available:
+:ref:`fenics13-program`.
 
 
 ************

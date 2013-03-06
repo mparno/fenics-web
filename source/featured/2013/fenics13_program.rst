@@ -1,12 +1,11 @@
 .. _fenics13-program:
 
-========================================
-FEniCS'13 Workshop Program (preliminary)
-========================================
-
-
+==========================
+FEniCS'13 Workshop Program
+==========================
 
 Jesus College, University of Cambridge
+
 
 Monday 18 March
 ===============
