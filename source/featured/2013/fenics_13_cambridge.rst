@@ -60,6 +60,7 @@ here closer to workshop.
 Participants
 ************
 
+- Maximilian Albert, *University of Southampton*
 - Laura Alisic, *University of Cambridge*
 - Martin Alnæs, *Simula Research Laboratory*
 - Douglas Arnold, *University of Minnesota*
@@ -69,6 +70,7 @@ Participants
 - Gheorghe-Teodor Bercea, *Imperial College London*
 - David Bernstein, *Melior Technology*
 - Wolfram Bosbach, *University of Cambridge*
+- Dmitri Chernyshenko, *University of Southampton*
 - Matthew Commin, *University of Cambridge*
 - Thomas Edwards, *Cray Centre of Excellence*
 - Hans Fangohr, *University of Southampton*
@@ -113,5 +115,6 @@ Participants
 - Georgios Tzedakis, *FORTH*
 - Steven Vandekerckhove, *KU Leuven*
 - Rodrigo Vilela de Abreu, *KTH Stockholm*
+- Weiwei Wang, *University of Southampton*
 - Garth Wells, *University of Cambridge*
 - Wyn Williams, *The University of Edinburgh*
