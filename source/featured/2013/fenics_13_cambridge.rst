@@ -64,11 +64,14 @@ Participants
 - Martin Alnæs, *Simula Research Laboratory*
 - Douglas Arnold, *University of Minnesota*
 - Gabriel Balaban, *Simula Research Laboratory*
+- Edward Banham, *University College London*
+- Marijan Beg, *University of Southampton*
 - Gheorghe-Teodor Bercea, *Imperial College London*
 - David Bernstein, *Melior Technology*
 - Wolfram Bosbach, *University of Cambridge*
 - Matthew Commin, *University of Cambridge*
 - Thomas Edwards, *Cray Centre of Excellence*
+- Hans Fangohr, *University of Southampton*
 - Patrick Farrell, *Imperial College London*
 - Georgios Grekas
 - Magnus Hagdorn, *The University of Edinburgh*
