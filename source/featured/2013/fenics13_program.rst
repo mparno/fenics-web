@@ -102,7 +102,7 @@ Workshop Dinner
 Tuesday 19 March
 ================
 
-Session 5
+Session 4
 ---------
 
 Chair: L. Ridway Scott
@@ -128,7 +128,7 @@ Break
 -----
 
 
-Session 6
+Session 5
 ---------
 
 Chair: Paul Kelly
