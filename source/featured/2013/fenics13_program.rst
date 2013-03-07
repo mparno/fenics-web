@@ -4,6 +4,8 @@
 FEniCS'13 Workshop Program
 ==========================
 
+*Provisional program*
+
 Jesus College, University of Cambridge
 
 
@@ -60,7 +62,7 @@ Chair: Garth N. Wells
 Lunch
 -----
 
-12:30 - 14:00 Prioress's Room
+13:00 - 14:30 Prioress's Room
 
 
 Session 3
@@ -68,20 +70,24 @@ Session 3
 
 Chair: David Ham
 
-- 14:30 - 14:50 Andre Massing
+- 14:30 - 14:50 Spencer Sherwin
+
+  *Nektar++: A progress report*
+
+- 14:50 - 15:10 Andre Massing
 
   *Finite element methods for cut and composite meshes using FEniCS*
 
-- 14:50 - 15:10  Gabriel Balaban
+- 15:10 - 15:30  Gabriel Balaban
 
   *Automatic differentiation of a fluid structure interaction problem*
 
-- 15:10 - 15:30 Felix Ospald
+- 15:30 - 15:50 Felix Ospald
 
   *Implementation of a geometric multigrid method for FEniCS and its
   application*
 
-- 15:30 - 15:50  Sander Rhebergen
+- 15:50 - 16:10  Sander Rhebergen
 
   *Preconditioners for computations of subduction zone modelling*
 
@@ -89,7 +95,7 @@ Chair: David Ham
 Ask the developer
 -----------------
 
-15:50 - 17:30 - Time for informal small group discussions, demonstrations,
+16:10 - 17:30 - Time for informal small group discussions, demonstrations,
 etc. Refreshments provided.
 
 
@@ -105,7 +111,7 @@ Tuesday 19 March
 Session 4
 ---------
 
-Chair: L. Ridway Scott
+Chair: L. Ridgway Scott
 
 - 9:00 - 9:20 Veena Phunpeng
 
