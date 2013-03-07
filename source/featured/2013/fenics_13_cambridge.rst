@@ -71,6 +71,7 @@ Participants
 - David Bernstein, *Melior Technology*
 - Wolfram Bosbach, *University of Cambridge*
 - Dmitri Chernyshenko, *University of Southampton*
+- Susanne Claus, *University College London*
 - Matthew Commin, *University of Cambridge*
 - Colin Cotter, *Imperial College London*
 - Thomas Edwards, *Cray Centre of Excellence*
