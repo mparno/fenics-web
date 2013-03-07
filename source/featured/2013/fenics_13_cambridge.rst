@@ -72,6 +72,7 @@ Participants
 - Wolfram Bosbach, *University of Cambridge*
 - Dmitri Chernyshenko, *University of Southampton*
 - Matthew Commin, *University of Cambridge*
+- Colin Cotter, *Imperial College London*
 - Thomas Edwards, *Cray Centre of Excellence*
 - Hans Fangohr, *University of Southampton*
 - Patrick Farrell, *Imperial College London*
