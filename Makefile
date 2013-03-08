@@ -36,6 +36,8 @@ import_docs:
 
 publish:
 	scripts/publish
+	@echo ""
+	@echo "If you didn't run 'make fetch_news', please do so and 'make publish' again"
 
 clean:
 	-rm -rf build
