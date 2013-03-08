@@ -84,6 +84,7 @@ Participants
 - David Ham, *Imperial College London*
 - Johan Hoffman, *KTH Stockholm*
 - Niclas Jansson, *KTH Stockholm*
+- Montse Farreras, *Numerical Algorithms Group*
 - Richard Katz, *University of Oxford*
 - Paul Kelly, *Imperial College London*
 - Robert Kirby, *Baylor University*
@@ -119,5 +120,6 @@ Participants
 - Steven Vandekerckhove, *KU Leuven*
 - Rodrigo Vilela de Abreu, *KTH Stockholm*
 - Weiwei Wang, *University of Southampton*
+- Phil Weir
 - Garth Wells, *University of Cambridge*
 - Wyn Williams, *The University of Edinburgh*
