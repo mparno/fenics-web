@@ -110,6 +110,7 @@ Participants
 - Marie Rognes, *Simula Research Laboratory*
 - John Rudge, *University of Cambridge*
 - Francis Russell, *Imperial College London*
+- Stephan Schmidt, *Imperial College London*
 - Ridgway Scott, *University of Chicago*
 - Spencer Sherwin, *Imperial College London*
 - Antony Siahaan, *University of Cambridge*
