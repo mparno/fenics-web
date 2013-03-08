@@ -8,9 +8,10 @@
 # Licensed under the GNU GPL version 3 or any later version.
 #
 # First added:  2011-05-04
-# Last changed: 2011-06-14
+# Last changed: 2013-03-08
 #
 # Modified by Anders Logg, 2011.
+# Modified by Johannes Ring, 2013.
 
 # Fetch the news
 cd ../utils/newsfetcher
@@ -19,3 +20,6 @@ python planet.py sources.ini
 # Clean up the resulting output
 #perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' include.html
 #perl -pi -e 's/\&lt\;wbr\&gt\;\&lt\;\/wbr\&gt\;//g' feed.xml
+
+# Copy resulting output to main build tree
+rsync -avz output/ ../../build/html/_static/news/
