@@ -40,6 +40,16 @@ meshes.
 
       -
 
+    * - |calcium-release-unit|
+
+      - Mesh of a sub-cellular calcium release unit. Size: 100,000 vertices.
+        Physical dimensions: 2μm x 1μm x 0.5μm. The mesh includes boundary markers.
+
+      - `Download
+        <http://fenicsproject.org/pub/data/meshes/calcium-release-unit.xml.gz>`__
+
+      - Contributed by Johan Hake (2013)
+
     * - |mesh_naca0018_3d|
 
       - NACA 0018 airfoil (3D)
@@ -47,7 +57,7 @@ meshes.
       - `Download
         <http://fenicsproject.org/pub/data/meshes/naca0018_3d.xml.gz>`__
 
-      - Contributed by Paul Constantine
+      - Contributed by Paul Constantine (2013)
 
     * - |mesh_aneurysm|
 

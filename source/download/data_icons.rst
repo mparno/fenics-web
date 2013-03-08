@@ -1,3 +1,6 @@
+.. |calcium-release-unit| image:: images/data/meshes/calcium-release-unit.png
+    :align: middle
+
 .. |mesh_naca0018_3d| image:: images/data/meshes/naca0018_3d.png
     :align: middle
 
