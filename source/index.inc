@@ -72,7 +72,7 @@
             Jesus College, Cambridge. Information of
             registering for the workshop can be found <a
             href="/featured/2013/fenics_13_cambridge.html">here</a>.
-            Abstracts should be sent by 1 February 2012. <br /> <br /> <br />
+            Abstracts should be sent by 1 February 2013. <br /> <br /> <br />
           </p>
 
           <h3>FEniCS book released!</h3>
