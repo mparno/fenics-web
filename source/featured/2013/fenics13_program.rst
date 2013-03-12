@@ -31,7 +31,7 @@ Chair: Anders Logg
 
   *The periodic table of finite elements*
 
-- 10.30 - 11.00 Martin Alnæs
+- 10:30 - 11:00 Martin Alnæs
 
   *Status of effective translation of complicated forms in FEniCS*
 
@@ -62,7 +62,7 @@ Chair: Garth N. Wells
 Lunch
 -----
 
-13:00 - 14:30 Prioress's Room
+13:00 - 14:30 College Bar
 
 
 Session 3
@@ -102,7 +102,9 @@ etc. Refreshments provided.
 Workshop Dinner
 ---------------
 
-19:30 - Hall, Jesus College
+19:30 - Pre-dinner drinks, Prioress's Room
+
+20:00 - Hall, Jesus College
 
 
 Tuesday 19 March
@@ -155,11 +157,14 @@ Chair: Paul Kelly
 
   *Towards effective shell modelling with the FEniCS project*
 
+- 12:20 - 12:40 Stephan Schmidt
+
+  *Gradient Based Shape Optimisation using FEniCS*
 
 Lunch
 -----
 
-12:20 - 13:40 Prioress's Room
+12:40 - 13:40 College Bar
 
 
 Session 6
