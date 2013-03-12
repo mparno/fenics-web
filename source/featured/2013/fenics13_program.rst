@@ -92,10 +92,10 @@ Chair: David Ham
   *Preconditioners for computations of subduction zone modelling*
 
 
-Ask the developer
------------------
+Session 4 - Ask the developer
+-----------------------------
 
-16:10 - 17:30 - Time for informal small group discussions, demonstrations,
+16:10 - 17:40 - Time for informal small group discussions, demonstrations,
 etc. Refreshments provided.
 
 
@@ -104,13 +104,13 @@ Workshop Dinner
 
 19:30 - Pre-dinner drinks, Prioress's Room
 
-20:00 - Hall, Jesus College
+20:00 - Hall
 
 
 Tuesday 19 March
 ================
 
-Session 4
+Session 5
 ---------
 
 Chair: L. Ridgway Scott
@@ -136,7 +136,7 @@ Break
 -----
 
 
-Session 5
+Session 6
 ---------
 
 Chair: Paul Kelly
@@ -167,7 +167,7 @@ Lunch
 12:40 - 13:40 College Bar
 
 
-Session 6
+Session 7
 ---------
 
 Chair: Marie E. Rognes
