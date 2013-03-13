@@ -42,40 +42,48 @@ interest.
     * - :ref:`All components <about_components>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x>`__
         / `1.1.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
+        / `1.2.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
+        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/console?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
         / `trunk <http://fenicsproject.org:8010/console?category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
+        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
     * - :ref:`Core components <about_components_core>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
         / `trunk <http://fenicsproject.org:8010/waterfall?category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
+        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/console?category=dolfin.1.2.x&category=ffc.1.2.x&category=fiat.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
         / `trunk <http://fenicsproject.org:8010/console?category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
+        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
 
     * - :ref:`DOLFIN <about_components_dolfin>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.trunk>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.1.2.x&category=dolfin.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.trunk>`__
+	/ `all <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.1.2.x&category=dolfin.trunk>`__
     * - :ref:`FFC <about_components_ffc>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.trunk>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.1.2.x&category=ffc.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/console?project=ffc&category=ffc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.trunk>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.1.2.x&category=ffc.trunk>`__
     * - :ref:`FIAT <about_components_fiat>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.1.1.x>`__
@@ -88,12 +96,14 @@ interest.
     * - :ref:`Instant <about_components_instant>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.trunk>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.1.2.x&category=instant.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/console?project=instant&category=instant.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.trunk>`__
+	/ `all <http://fenicsproject.org:8010/console?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.1.2.x&category=instant.trunk>`__
     * - :ref:`SyFi <about_components_syfi>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=syfi&category=syfi.1.0.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=syfi&category=syfi.trunk>`__
@@ -104,21 +114,24 @@ interest.
     * - :ref:`UFC <about_components_ufc>`
       - `2.0.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.0.x>`__
 	/ `2.1.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.1.x>`__
+	/ `2.2.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.trunk>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.2.2.x&category=ufc.trunk>`__
       - `2.0.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.0.x>`__
 	/ `2.1.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.1.x>`__
+	/ `2.2.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/console?project=ufc&category=ufc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.trunk>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.2.2.x&category=ufc.trunk>`__
     * - :ref:`UFL <about_components_ufl>`
       - `1.0.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.1.x>`__
+	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.2.x>`__
 	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.trunk>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.1.2.x&category=ufl.trunk>`__
       - `1.0.x <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.0.x>`__
 	/ `1.1.x <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.1.x>`__
 	/ `trunk <http://fenicsproject.org:8010/console?project=ufl&category=ufl.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.trunk>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.1.2.x&category=ufl.trunk>`__
 
 There are also other alternative renderings of the results:
 
