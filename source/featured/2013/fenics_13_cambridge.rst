@@ -15,14 +15,20 @@ directions in scientific computing, approaches to scientific software
 development and FEniCS development.
 
 
+*******
+Program
+*******
+
+:ref:`fenics13-program`
+
+The workshop will run on 18 and 19 March.
+
+
 ************
 Registration
 ************
 
-Registration has been extended until 8 March.
-The registration page can be found `here
-<http://onlinesales.admin.cam.ac.uk/browse/extra_info.asp?compid=1&modid=2&prodid=603&deptid=150&catid=328>`__.
-Registrations after this date cannot be accepted.
+Registration is now closed.
 
 The registration fee includes lunch on both days of the workshop and a
 formal dinner at the historic Jesus College on the evening on 18 March.
@@ -46,14 +52,6 @@ Contact
 *******
 
 For information on the workshop, contact `Garth N. Wells <gnw20@cam.ac.uk>`_.
-
-
-*******
-Program
-*******
-
-The workshop will run on 18 and 19 March. The draft program is available:
-:ref:`fenics13-program`.
 
 
 ************

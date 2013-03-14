@@ -4,8 +4,6 @@
 FEniCS'13 Workshop Program
 ==========================
 
-*Provisional program*
-
 Jesus College, University of Cambridge
 
 
@@ -102,9 +100,9 @@ etc. Refreshments provided.
 Workshop Dinner
 ---------------
 
-19:30 - Pre-dinner drinks, Prioress's Room
+19:30 Pre-dinner drinks, Prioress's Room
 
-20:00 - Hall
+20:00 Dinner, Hall
 
 
 Tuesday 19 March
@@ -115,9 +113,9 @@ Session 5
 
 Chair: L. Ridgway Scott
 
-- 9:00 - 9:20 Veena Phunpeng
+- 9:00 - 9:20 Stephan Schmidt
 
-  *Strain gradient elasticity using mixed finite element formulations*
+  *Gradient Based Shape Optimisation using FEniCS*
 
 - 9:20 - 9:40  Chris Richardson
 
@@ -157,14 +155,11 @@ Chair: Paul Kelly
 
   *Towards effective shell modelling with the FEniCS project*
 
-- 12:20 - 12:40 Stephan Schmidt
-
-  *Gradient Based Shape Optimisation using FEniCS*
 
 Lunch
 -----
 
-12:40 - 13:40 College Bar
+12:20 - 13:40 College Bar
 
 
 Session 7
