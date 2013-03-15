@@ -48,13 +48,13 @@ Chair: Garth N. Wells
   *Reformulating elementwise variational form evaluation via commuting
   diagrams and an elementary linear algebra identity*
 
-- 12:00 - 12:30 Thomas Edwards
+- 12:00 - 12:30 Stephan Schmidt
+
+  *Gradient Based Shape Optimisation using FEniCS*
+
+- 12:30 - 13:00 Thomas Edwards
 
   *Cray and the Exascale future*
-
-- 12:30 - 13:00 Johan Hoffman
-
-  *High performance scientific computing with FEniCS*
 
 
 Lunch
@@ -85,9 +85,9 @@ Chair: David Ham
   *Implementation of a geometric multigrid method for FEniCS and its
   application*
 
-- 15:50 - 16:10  Sander Rhebergen
+- 15:50 - 16:10 Johan Hoffman
 
-  *Preconditioners for computations of subduction zone modelling*
+  *High performance scientific computing with FEniCS*
 
 
 Session 4 - Ask the developer
@@ -113,9 +113,10 @@ Session 5
 
 Chair: L. Ridgway Scott
 
-- 9:00 - 9:20 Stephan Schmidt
 
-  *Gradient Based Shape Optimisation using FEniCS*
+- 9:00 - 9:20  Sander Rhebergen
+
+  *Preconditioners for computations of subduction zone modelling*
 
 - 9:20 - 9:40  Chris Richardson
 
