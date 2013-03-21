@@ -1,4 +1,4 @@
-.. |calcium-release-unit| image:: images/data/meshes/calcium-release-unit.png
+.. |calcium_release_unit| image:: images/data/meshes/calcium_release_unit.png
     :align: middle
 
 .. |mesh_naca0018_3d| image:: images/data/meshes/naca0018_3d.png
@@ -13,11 +13,11 @@
 .. |mesh_lshape| image:: images/data/meshes/lshape.png
     :align: middle
 
-.. |mesh_tetmesh_backward_facing_step_32_8_8.png| image:: images/data/meshes/tetmesh_backward_facing_step_32_8_8.png
+.. |mesh_backward_facing_step_32_8_8.png| image:: images/data/meshes/backward_facing_step_32_8_8.png
     :align: middle
 
-.. |mesh_dolfin-1| image:: images/data/meshes/dolfin-1.png
+.. |mesh_dolfin_coarse| image:: images/data/meshes/dolfin_coarse.png
     :align: middle
 
-.. |mesh_dolfin-2| image:: images/data/meshes/dolfin-2.png
+.. |mesh_dolfin_fine| image:: images/data/meshes/dolfin_fine.png
     :align: middle

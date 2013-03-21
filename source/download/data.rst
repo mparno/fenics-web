@@ -40,13 +40,13 @@ meshes.
 
       -
 
-    * - |calcium-release-unit|
+    * - |calcium_release_unit|
 
       - Mesh of a sub-cellular calcium release unit. Size: 100,000 vertices.
         Physical dimensions: 2μm x 1μm x 0.5μm. The mesh includes boundary markers.
 
       - `Download
-        <http://fenicsproject.org/pub/data/meshes/calcium-release-unit.xml.gz>`__
+        <http://fenicsproject.org/pub/data/meshes/calcium_release_unit.xml.gz>`__
 
       - Contributed by Johan Hake (2013)
 
@@ -87,29 +87,29 @@ meshes.
 
       - Contributed by Anders Logg
 
-    * - |mesh_tetmesh_backward_facing_step_32_8_8.png|
+    * - |mesh_backward_facing_step_32_8_8.png|
 
       - Mesh of backward facing step (3D)
 
       - `Download
-        <http://fenicsproject.org/pub/data/meshes/tetmesh_backward_facing_step_32_8_8.xml.gz>`__
+        <http://fenicsproject.org/pub/data/meshes/backward_facing_step_32_8_8.xml.gz>`__
 
       - Contributed by Johan Hoffman
 
-    * - |mesh_dolfin-1|
+    * - |mesh_dolfin_coarse|
 
       - DOLFIN mesh (2D, lowres)
 
       - `Download
-        <http://fenicsproject.org/pub/data/meshes/dolfin-1.xml.gz>`__
+        <http://fenicsproject.org/pub/data/meshes/dolfin_coarse.xml.gz>`__
 
       - Contributed by Anders Logg
 
-    * - |mesh_dolfin-2|
+    * - |mesh_dolfin_fine|
 
       - DOLFIN mesh (2D, hires)
 
       - `Download
-        <http://fenicsproject.org/pub/data/meshes/dolfin-2.xml.gz>`__
+        <http://fenicsproject.org/pub/data/meshes/dolfin_fine.xml.gz>`__
 
       - Contributed by Anders Logg
