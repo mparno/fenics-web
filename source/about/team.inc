@@ -93,7 +93,7 @@
 	  </div>
 
           <p>Robert is an associate professor at
-          <a href="http://www.math.ttu.edu/">Texas Tech University</a>.
+          <a href="http://www.baylor.edu/">Baylor University</a>.
           </p>
 
           <p>He has been involved with the FEniCS Project since 2003

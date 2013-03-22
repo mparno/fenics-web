@@ -61,7 +61,7 @@ Project:
 * `Simula Research Laboratory <http://www.simula.no>`__
 * `University of Cambridge <http://www.cam.ac.uk>`__
 * `University of Chicago <http://www.uchicago.edu/index.shtml>`__
-* `Texas Tech University <http://www.ttu.edu/>`__
+* `Baylor University <http://www.baylor.edu>`__
 * `KTH Royal Institute of Technology <http://www.kth.se>`__
 
 Contributions have also been made by researchers from `Chalmers

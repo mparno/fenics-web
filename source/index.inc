@@ -93,7 +93,7 @@
 
           <p>The FEniCS Project is a collaborative effort between
             research groups from Simula Research Laboratory, University
-            of Cambridge, University of Chicago, Texas Tech University
+            of Cambridge, University of Chicago, Baylor University
             and KTH Royal Institute of Technology.
           </p>
 
