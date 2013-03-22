@@ -118,6 +118,6 @@ Participants
 - Steven Vandekerckhove, *KU Leuven*
 - Rodrigo Vilela de Abreu, *KTH Stockholm*
 - Weiwei Wang, *University of Southampton*
-- Phil Weir
+- Phil Weir, *NUMA Engineering*
 - Garth Wells, *University of Cambridge*
 - Wyn Williams, *The University of Edinburgh*

@@ -31,7 +31,7 @@ Chair: Anders Logg
 
 - 10:30 - 11:00 Martin Alnæs
 
-  *Status of effective translation of complicated forms in FEniCS*
+ `Status of effective translation of complicated forms in FEniCS <http://fenicsproject.org/pub/workshops/fenics13/slides/Alnaes.pdf>`__
 
 
 Break
@@ -82,8 +82,8 @@ Chair: David Ham
 
 - 15:30 - 15:50 Felix Ospald
 
-  *Implementation of a geometric multigrid method for FEniCS and its
-  application*
+  `Implementation of a geometric multigrid method for FEniCS and its
+  application <http://fenicsproject.org/pub/workshops/fenics13/slides/Ospald.pdf>`__
 
 - 15:50 - 16:10 Johan Hoffman
 
@@ -128,8 +128,7 @@ Chair: L. Ridgway Scott
 
 - 10:00 - 10:20 Laura Alisic
 
-  *Shear banding in the Earth's mantle*
-
+  `Shear banding in the Earth's mantle <http://fenicsproject.org/pub/workshops/fenics13/slides/Alisic.pdf>`__
 
 Break
 -----
@@ -154,8 +153,8 @@ Chair: Paul Kelly
 
 - 12:00 - 12:20 Jack Hale
 
-  *Towards effective shell modelling with the FEniCS project*
-
+  `Towards effective shell modelling with the FEniCS project
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Hale.pdf>`__
 
 Lunch
 -----
@@ -174,8 +173,8 @@ Chair: Marie E. Rognes
 
 - 14:00 - 14:20 Lawrence Mitchell
 
-  *Partitioning and numbering meshes for efficient MPI-parallel execution
-  in PyOP2*
+  `Partitioning and numbering meshes for efficient MPI-parallel execution
+  in PyOP2 <http://fenicsproject.org/pub/workshops/fenics13/slides/Mitchell.pdf>`__
 
 - 14:20 - 14:40 Florian Rathgeber
 
