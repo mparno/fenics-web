@@ -128,7 +128,8 @@ Chair: L. Ridgway Scott
 
 - 10:00 - 10:20 Laura Alisic
 
-  `Shear banding in the Earth's mantle <http://fenicsproject.org/pub/workshops/fenics13/slides/Alisic.pdf>`__
+  `Shear banding in the Earth's mantle
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Alisic.pdf>`__
 
 Break
 -----
@@ -174,13 +175,14 @@ Chair: Marie E. Rognes
 
 - 14:00 - 14:20 Lawrence Mitchell
 
-  `Partitioning and numbering meshes for efficient MPI-parallel execution
-  in PyOP2 <http://fenicsproject.org/pub/workshops/fenics13/slides/Mitchell.pdf>`__
+  `Partitioning and numbering meshes for efficient MPI-parallel
+  execution in PyOP2
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Mitchell.pdf>`__
 
 - 14:20 - 14:40 Florian Rathgeber
 
-  `Performance portable finite element computations in Fluidity with UFL,
-  FFC and PyOP2* <http://kynan.github.com/fenics13>`__
+  `Performance portable finite element computations in Fluidity with
+  UFL, FFC and PyOP2 <http://kynan.github.com/fenics13>`__
 
 - 14:40 - 15:00 Rodrigo Vilela de Abreu
 
