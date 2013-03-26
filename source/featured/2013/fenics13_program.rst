@@ -169,7 +169,8 @@ Chair: Marie E. Rognes
 
 - 13:40 - 14:00 Graham Markall
 
-  *PyOP2: A performance portable unstructured mesh framework*
+  `PyOP2: A performance portable unstructured mesh framework
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Markall.pdf>`__
 
 - 14:00 - 14:20 Lawrence Mitchell
 
@@ -178,8 +179,8 @@ Chair: Marie E. Rognes
 
 - 14:20 - 14:40 Florian Rathgeber
 
-  *Performance portable finite element computations in Fluidity with UFL,
-  FFC and PyOP2*
+  `Performance portable finite element computations in Fluidity with UFL,
+  FFC and PyOP2* <http://kynan.github.com/fenics13>`__
 
 - 14:40 - 15:00 Rodrigo Vilela de Abreu
 
