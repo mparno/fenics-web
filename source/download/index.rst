@@ -39,14 +39,14 @@ everything needed to get you started with FEniCS.
     * - |mac-icon| OS X 10.6
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg>`__
 
       - :ref:`Learn more <osx_details>`
 
     * - |mac-icon| OS X 10.7 / 10.8
 
       - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg>`__
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg>`__
 
       - :ref:`Learn more <osx_details>`
 

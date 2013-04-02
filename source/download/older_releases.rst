@@ -9,6 +9,42 @@ Older releases
 Older FEniCS releases for Mac OS X and Windows are made available here.
 
 ************
+FEniCS 1.1.0
+************
+
+This release includes DOLFIN 1.1.0, FFC 1.1.0, FIAT 1.1, Instant
+1.1.0, UFC 2.1.0, and UFL 1.1.0.
+
+.. tabularcolumns:: |c|c|
+
+.. list-table::
+    :widths: 50, 50
+    :header-rows: 0
+    :class: center
+
+    * - |ubuntu-icon| Ubuntu packages
+
+      - `FEniCS 1.1.x PPA <https://launchpad.net/~fenics-packages/+archive/fenics-1.1.x>`__
+
+    * - |mac-icon| Mac OS X 10.6 binary
+
+      - `fenics-1.1.0-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.asc>`__)
+
+    * - |mac-icon| Mac OS X 10.7 / 10.8 binary
+
+      - `fenics-1.1.0-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.asc>`__)
+
+************
 FEniCS 1.0.0
 ************
 
@@ -21,6 +57,10 @@ This release includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0, Instant
     :widths: 50, 50
     :header-rows: 0
     :class: center
+
+    * - |ubuntu-icon| Ubuntu packages
+
+      - `FEniCS 1.0.x PPA <https://launchpad.net/~fenics-packages/+archive/fenics-1.0.x>`__
 
     * - |mac-icon| Mac OS X 10.6 binary
 

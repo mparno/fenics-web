@@ -64,3 +64,10 @@ command in a terminal:
 .. code-block:: sh
 
     sudo ppa-purge ppa:fenics-packages/fenics
+
+##############
+Older releases
+##############
+
+Older versions of the Ubuntu packages are also :ref:`available
+<older_releases>`.

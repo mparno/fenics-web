@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.1.0, FFC 1.1.0, FIAT 1.1, Instant 1.1.0,
-UFC 2.1.0 and UFL 1.1.0.
+This release includes DOLFIN 1.2.0, FFC 1.2.0, FIAT 1.1, Instant 1.2.0,
+UFC 2.2.0 and UFL 1.2.0.
 
 .. include:: icons.rst
 
@@ -16,23 +16,23 @@ UFC 2.1.0 and UFL 1.1.0.
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 1.1.0 (Mac OS X 10.6 binary)
+    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.6 binary)
 
-      - `fenics-1.1.0-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg>`__
+      - `fenics-1.2.0-osx10.6.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.6.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg.asc>`__)
 
-    * - |mac-icon| FEniCS 1.1.0 (Mac OS X 10.7 / 10.8 binary)
+    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.7 / 10.8 binary)
 
-      - `fenics-1.1.0-osx10.7.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg>`__
+      - `fenics-1.2.0-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.1.0-osx10.7.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.asc>`__)
 
 ############
 Requirements
