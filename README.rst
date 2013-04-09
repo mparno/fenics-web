@@ -1,9 +1,12 @@
-# Last changed: 2011-08-17
-
+================================
 FEniCS documentation and webpage
---------------------------------
+================================
+
+The repository contains the source for the pages at
+http://www.fenicsproject.org.
 
 * How to: generate web pages
+  ::
 
     make web
 
@@ -11,6 +14,7 @@ FEniCS documentation and webpage
   .html files in the 'build/html' directory.
 
 * How to: import documentation
+  ::
 
     make import_docs
 
@@ -21,6 +25,7 @@ FEniCS documentation and webpage
   have been set.
 
 * How to: publish web pages
+  ::
 
     make publish
 
@@ -30,6 +35,7 @@ FEniCS documentation and webpage
   account fenics@fenicsproject.org.
 
 * How to: do it all
+  ::
 
     make all
 
