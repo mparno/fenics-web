@@ -3,8 +3,8 @@
 FEniCS is organized as a collection of interoperable components that
 together form the FEniCS Project. A short overview of these components
 is given below. Further information can be found in the :ref:`FEniCS
-Book <book>` and on the :ref:`Bitbucket page <bitbucket_page>` for
-each individual component.
+Book <book>` and on the `Bitbucket page
+<https://bitbucket.org/fenics-project>`__.
 
 .. _about_components_core:
 
