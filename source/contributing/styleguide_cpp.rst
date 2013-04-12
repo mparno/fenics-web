@@ -148,26 +148,25 @@ even for comments that runs over multiple lines.
 Integers and reals
 ^^^^^^^^^^^^^^^^^^
 
-Use ``dolfin::uint`` instead of ``int`` (unless you really want to use
-negative integers). Use ``dolfin::real`` instead of ``double`` only if
-you are sure that you want to exploit arbitrary precision:
+Use ``std::size_t`` instead of ``int`` (unless you really want to use
+negative integers or memory usage is critical).
 
 .. code-block:: c++
 
-    uint i = 0;
+    std::size_t i = 0;
     double x = 0.0;
 
 Placement of brackets and indent style
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the `BSD/Allman <http://en.wikipedia.org/wiki/Indent_style>`_ style when
-formatting blocks of code.
-I.e., curly brackets following multiline control statements should appear
-on the next line and should not be indented:
+Use the `BSD/Allman <http://en.wikipedia.org/wiki/Indent_style>`_
+style when formatting blocks of code, i.e., curly brackets following
+multiline control statements should appear on the next line and should
+not be indented:
 
 .. code-block:: c++
 
-    for (uint i = 0; i < 10; i++)
+    for (std::size_t i = 0; i < 10; i++)
     {
       ...
     }
@@ -176,7 +175,7 @@ For one line statements, omit the brackets:
 
 .. code-block:: c++
 
-    for (uint i = 0; i < 10; i++)
+    for (std::size_t i = 0; i < 10; i++)
       foo(i);
 
 Header file layout
@@ -303,7 +302,7 @@ Make all one argument constructors (except copy constructors) explicit:
 
     class Foo
     {
-      explicit Foo(uint i);
+      explicit Foo(std::size_t i);
     };
 
 Virtual functions
@@ -332,13 +331,13 @@ Use of libraries
 Prefer C++ strings and streams over old C-style ``char*``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``std::string`` instead of ``const char*`` and use ``std::istream`` and
-``std::ostream`` instead of ``FILE``. Avoid ``printf``,
-``sprintf`` and other C functions.
+Use ``std::string`` instead of ``const char*`` and use
+``std::istream`` and ``std::ostream`` instead of ``FILE``. Avoid
+``printf``, ``sprintf`` and other C functions.
 
-There are some exceptions to this rule where we need to use old C-style
-function calls. One such exception is handling of command-line arguments
-(``char* argv[]``).
+There are some exceptions to this rule where we need to use old
+C-style function calls. One such exception is handling of command-line
+arguments (``char* argv[]``).
 
 Prefer smart pointers over plain pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
