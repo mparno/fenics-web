@@ -1,4 +1,4 @@
 #!/bin/sh
 
 chmod +x build/html/index.html
-rsync -avz build/html/ fenics@fenicsproject.org:/home/fenics/fenicsproject.org/
+rsync -avz build/html/ fenics-web@fenicsproject.org:/home/fenics/fenicsproject.org/
