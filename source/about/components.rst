@@ -3,7 +3,7 @@
 FEniCS is organized as a collection of interoperable components that
 together form the FEniCS Project. A short overview of these components
 is given below. Further information can be found in the :ref:`FEniCS
-Book <book>` and on the :ref:`Launchpad page <launchpad_pages>` for
+Book <book>` and on the :ref:`Bitbucket page <bitbucket_page>` for
 each individual component.
 
 .. _about_components_core:
@@ -14,9 +14,9 @@ Core components
 
 .. _about_components_dolfin:
 
-*****************************************
-`DOLFIN <https://launchpad.net/dolfin>`__
-*****************************************
+********************************************************
+`DOLFIN <https://bitbucket.org/fenics-project/dolfin>`__
+********************************************************
 
 DOLFIN is a C++/Python library that functions as the main user
 interface of FEniCS. A large part of the functionality of FEniCS is
@@ -41,14 +41,14 @@ Skavhaug, Kent-Andre Mardal, Martin Sandve Alnes, Johan Hake, Niclas
 Jansson, Johannes Ring, Kristian B. Ølgaard, Marie Rognes
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~dolfin-core/dolfin/trunk/view/head:/AUTHORS>`__
+<https://bitbucket.org/fenics-project/dolfin/raw/master/AUTHORS>`__
 in the DOLFIN source tree.
 
 .. _about_components_ffc:
 
-***********************************
-`FFC <https://launchpad.net/ffc>`__
-***********************************
+**************************************************
+`FFC <https://bitbucket.org/fenics-project/ffc>`__
+**************************************************
 
 One of the key features of FEniCS is automated code generation for the
 general and efficient solution of finite element variational
@@ -71,14 +71,14 @@ Authors (past and present in chronological order)
 Anders Logg, Marie Rognes, Kristian Oelgaard, Garth N. Wells
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~ffc-core/ffc/main/view/head:/AUTHORS>`__
-in the FFC source tree.
+<https://bitbucket.org/fenics-project/ffc/raw/master/AUTHORS>`__ in
+the FFC source tree.
 
 .. _about_components_fiat:
 
-*************************************
-`FIAT <https://launchpad.net/fiat>`__
-*************************************
+****************************************************
+`FIAT <https://bitbucket.org/fenics-project/fiat>`__
+****************************************************
 
 FIAT (FInite element Automatic Tabulator) supports generation of
 arbitrary order instances of the Lagrange elements on lines,
@@ -100,14 +100,14 @@ Authors (past and present in chronological order)
 Robert C. Kirby, Anders Logg, Marie Rognes
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~fiat-core/fiat/main/view/head:/AUTHORS>`__
-in the FIAT source tree.
+<https://bitbucket.org/fenics-project/fiat/raw/master/AUTHORS>`__ in
+the FIAT source tree.
 
 .. _about_components_instant:
 
-*******************************************
-`Instant <https://launchpad.net/instant>`__
-*******************************************
+**********************************************************
+`Instant <https://bitbucket.org/fenics-project/instant>`__
+**********************************************************
 
 Instant is a Python module that allows for instant inlining of C and
 C++ code in Python. It is a small Python module built on top of SWIG
@@ -127,14 +127,14 @@ Authors (past and present in chronological order)
    Add list of Instant authors.
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~instant-core/instant/main/view/head:/AUTHORS>`__
+<https://bitbucket.org/fenics-project/instant/raw/master/AUTHORS>`__
 in the Instant source tree.
 
 .. _about_components_ufc:
 
-***********************************
-`UFC <https://launchpad.net/ufc>`__
-***********************************
+**************************************************
+`UFC <https://bitbucket.org/fenics-project/ufc>`__
+**************************************************
 
 UFC (Unified Form-assembly Code) is a unified framework for finite
 element assembly. More precisely, it defines a fixed interface for
@@ -156,14 +156,14 @@ Anders Logg, Martin Sandve Alnes, Kent-Andre Mardal, Ola Skavhaug,
 Hans Petter Langtangen, Garth N. Wells
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~ufc-core/ufc/main/view/head:/AUTHORS>`__
-in the UFC source tree.
+<https://bitbucket.org/fenics-project/ufc/raw/master/AUTHORS>`__ in
+the UFC source tree.
 
 .. _about_components_ufl:
 
-***********************************
-`UFL <https://launchpad.net/ufl>`__
-***********************************
+**************************************************
+`UFL <https://bitbucket.org/fenics-project/ufl>`__
+**************************************************
 
 UFL (Unified Form Language) is a domain specific language for
 declaration of finite element discretizations of variational
@@ -182,9 +182,9 @@ Authors (past and present in chronological order)
 Martin Sandve Alnes, Anders Logg, Garth N. Wells, Kristian B. Ølgaard,
 Marie E. Rognes
 
-For a full list of contributors, refer to the file `README
-<https://bazaar.launchpad.net/~ufl-core/ufl/main/view/head:/README>`__
-in the UFL source tree.
+For a full list of contributors, refer to the file `AUTHORS
+<https://bitbucket.org/fenics-project/ufl/raw/master/AUTHORS>`__ in
+the UFL source tree.
 
 .. _about_components_additional:
 
@@ -214,9 +214,9 @@ in the ASCoT source tree.
 
 .. _about_components_dorsal:
 
-*****************************************
-`Dorsal <https://launchpad.net/dorsal>`__
-*****************************************
+********************************************************
+`Dorsal <https://bitbucket.org/fenics-project/dorsal>`__
+********************************************************
 
 Dorsal is a shell script that simplifies the installation of FEniCS on
 operating platforms that we do not support with prebuilt binaries. It
@@ -236,19 +236,18 @@ Garth N. Wells, Anders Logg, Joachim B. Haga, Johannes Ring, Roman
 Putanowicz and Ilmar Wilbers.
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~dorsal-core/dorsal/main/view/head:/AUTHORS>`__
-in the Dorsal source tree.
+<https://bitbucket.org/fenics-project/dorsal/raw/master/AUTHORS>`__ in
+the Dorsal source tree.
+
+##################
+Retired components
+##################
 
 .. _about_components_syfi:
 
 ************************************************
 `SyFi/SFC <https://launchpad.net/fenics-syfi>`__
 ************************************************
-
-Maintainers (in alphabetical order)
-===================================
-
-Kent-Andre Mardal, Martin Sandve Alnes
 
 Authors (past and present in chronological order)
 =================================================
@@ -268,11 +267,6 @@ in the SyFi source tree.
 Viper is a minimalistic scientific plotter and run-time visualization
 module based on VTK. If installed, Viper provides built-in plotting
 for DOLFIN.
-
-Maintainers (in alphabetical order)
-===================================
-
-Ola Skavhaug
 
 Authors (past and present in chronological order)
 =================================================

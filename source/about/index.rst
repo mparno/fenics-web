@@ -102,18 +102,20 @@ Authors and institutions have given their consent to licensing under
 About these pages
 *****************
 
-These pages have been created by the `FEniCS Web Team
-<https://launchpad.net/~fenics-web-core/+mugshots>`__ with the help of
-`Mattias Schläger <http://www.sch-form.com>`__ who designed the
-`graphical profile <http://www.fenicsproject.org/pub/graphics>`__. The
-pages are built using the `Sphinx documentation system
-<http://sphinx.pocoo.org>`__ in combination with some homebrew
-scripting (for extraction of C++ documentation in particular). The
-sources for these pages are maintained as a `Launchpad project
-<https://launchpad.net/fenics-web>`__. Comments and bug reports are
-welcome as always. If you find something is in error or missing,
-`please file a bug report
-<https://bugs.launchpad.net/fenics-web/+filebug>`__ with Launchpad.
+These pages have been created by the `FEniCS Team
+<https://bitbucket.org/fenics-project/profile/members>`__ with the
+help of `Mattias Schläger <http://www.sch-form.com>`__ who designed
+the `graphical profile
+<http://www.fenicsproject.org/pub/graphics>`__. The pages are built
+using the `Sphinx documentation system <http://sphinx.pocoo.org>`__ in
+combination with some homebrew scripting (for extraction of C++
+documentation in particular). The sources for these pages are
+maintained on `Bitbucket
+<https://bitbucket.org/fenics-project/fenics-web>`__. Comments and bug
+reports are welcome as always. If you find something is in error or
+missing, `please file a bug report
+<https://bitbucket.org/fenics-project/fenics-web/issues>`__ on
+Bitbucket.
 
 .. toctree::
    :hidden:
