@@ -4,20 +4,17 @@
 Contributing code
 *****************
 
-The main branch for each FEniCS component is owned by the core team of
-that component. Therefore, unless you are a member of the core team,
-you will not be able to upload any code to the main branch
-directly. Instead you will have to create your own :ref:`branch
-<contributing_branches>` or submit a :ref:`patch
-<contributing_patches>`. If the code is accepted, the patch or branch
-will be merged into the main branch by a member of the core team.
+Unless you are a core developer, you will not be able to upload any
+code to the main code repositories directly. Instead you will have to
+create your own :ref:`branch <contributing_branches>` and make a merge
+request on Bitbucket.  If the code is accepted, the patch or branch
+will be merged into the main branch by a core developer.
 
-If you are not familiar with `Bazaar <http://bazaar.canonical.com>`__,
-the distributed revision control system used for all FEniCS
-components, a good starting point is `Bazaar in five minutes
-<http://doc.bazaar.canonical.com/latest/en/mini-tutorial>`__ or the
-`Bazaar user guide
-<http://doc.bazaar.canonical.com/latest/en/user-guide/index.html>`__.
+If you are not familiar with `Git <http://git-scm.com/>`__, the
+distributed revision control system used for all FEniCS components, a
+good starting point is `Bitbucket 101
+<https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101>`__
+or the `Git user documentation <http://git-scm.com/documentationl>`__.
 
 .. _before_committing:
 
@@ -55,6 +52,11 @@ and `institutions <http://fenicsproject.org/pub/copyright/institutions>`_.
 
 Creating a branch
 =================
+
+.. note::
+
+   This section requires revision to reflect the recent transition to
+   Bitbucket and Git. The Launchpad pages are being retired.
 
 A simple way to submit your changes is to create a branch on Launchpad
 and submit a merge request. This allows the maintainers to pull the

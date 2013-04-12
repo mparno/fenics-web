@@ -4,6 +4,10 @@
 Development model
 #################
 
+.. note::
+
+   This page has not yet been updated to reflect the transition to Bitbucket and Git.
+
 ***************
 The big picture
 ***************
@@ -93,5 +97,3 @@ Miscellaneous issues
   personal branch).
 * X.Y-betaN releases are used to grind out bugs.
 * X.Y-rcN releases are made when we believe there are "no" bugs.
-
-

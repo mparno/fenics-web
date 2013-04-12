@@ -71,6 +71,7 @@ the supplementary material.
 Feedback
 ********
 
-Feedback on the book is welcome, and can be given at the `Launchpad
-page <https://launchpad.net/fenics-book>`__ for the book. Use the
-Launchpad system to file bug reports if you find errors in the text.
+Feedback on the book is welcome, and can be given at the `Bitbucket
+page <https://bitbucket.org/fenics-project/fenics-book>`__ for the
+book. Use the Bitbucket issues system to file bug reports if you find
+errors in the text.

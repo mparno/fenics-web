@@ -10,7 +10,7 @@ FEniCS is a free/open source project and everyone is invited to
 contribute. This page contains information for prospective FEniCS
 developers, including an overview of the organization of the FEniCS
 project, how to write code and documentation, and how to use tools
-like Launchpad and Bazaar.
+like Bitbucket and Git.
 
 ************
 Organization
@@ -23,12 +23,10 @@ its own pace. At the same time, we strive to make periodic and
 coordinated releases of all components to ensure interoperability
 between the components.
 
-The FEniCS Project uses `Launchpad <http://www.launchpad.net>`_ as its
+The FEniCS Project uses `Bitbucket <https://bitbucket.org>`_ as its
 main development platform. All FEniCS projects are collected under
-the `FEniCS Project on Launchpad
-<https://launchpad.net/fenics-project>`_.  A collection of links to
-important Launchpad pages for the various FEniCS components can be
-found on the :ref:`Launchpad links page <launchpad_pages>`.
+the `FEniCS Project on Bitbucket
+<https://bitbucket.org/fenics-project>`_.
 
 ***************************
 Instructions for developers

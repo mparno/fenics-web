@@ -198,9 +198,9 @@ or the ``todo`` directive:
         Figure out how to present this in a better way
 
 
-and ask on the fenics@lists.launchpad.net mailing list in order for
-the issue to be resolved as quickly as possible. This helps keeping
-the documentation in good shape.
+and ask on the fenics@fenicsproject.org mailing list in order for the
+issue to be resolved as quickly as possible. This helps keeping the
+documentation in good shape.
 
 .. _styleguides_sphinx_images:
 

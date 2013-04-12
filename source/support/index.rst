@@ -67,11 +67,9 @@ Reporting bugs
 
 FEniCS software is under active development. As a consequence, bugs
 are likely to occur from time to time. In the event that you encounter
-a bug, please file a bug report using the Launchpad bug tracking
+a bug, please file a bug report using the Bitbucket issue tracking
 system. In particular, for reporting bugs in DOLFIN, use `DOLFIN bugs
-<https://bugs.launchpad.net/dolfin>`_. :ref:`launchpad_pages` contains
-a collection of links to the bug tracking pages for all FEniCS
-components.
+<https://bitbucket.org/fenics-project/dolfin/issues>`_.
 
 When reporting a bug, the same :ref:`guidelines as for asking
 questions <getting_answers_checklist>` apply.
@@ -91,13 +89,9 @@ We try to keep a friendly tone on our mailing lists, but sometimes
 questions can only be settled by a heated debate. Don't be afraid to
 step in and state your opinion!
 
-The `FEniCS mailing list <mailto:fenics@lists.launchpad.net>`_ is the
-place for general discussions regarding the FEniCS Project and the
-`DOLFIN mailing list <mailto:dolfin@lists.launchpad.net>`_ is the
-place for discussions regarding the FEniCS user interface DOLFIN.
-
-:ref:`launchpad_pages` contains a collection of links to the mailing
-lists for all FEniCS components.
+The `FEniCS mailing list <mailto:fenics@fenicsproject.org>`_ is the
+place for general discussions regarding the FEniCS Project and FEniCS
+components.
 
 Contributing
 ============
