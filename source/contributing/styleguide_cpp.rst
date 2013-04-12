@@ -38,7 +38,7 @@ for example:
     public:
 
       /// Return size of array (number of entries)
-      uint size() const;
+      std::size_t size() const;
 
     };
 
