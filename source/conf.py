@@ -62,7 +62,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FEniCS'
-copyright = u'2011, The FEniCS Project'
+copyright = u'2013, The FEniCS Project'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
