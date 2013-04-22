@@ -17,45 +17,17 @@ Binary packages
 This is the main FEniCS download, suitable for most users. It includes
 everything needed to get you started with FEniCS.
 
-.. tabularcolumns:: |c|c|c|
+.. tabularcolumns:: |c|c|c|c|
 
 .. list-table::
-    :widths: 15, 10, 15
+    :widths: 25, 25, 25, 25
     :header-rows: 0
     :class: center
 
-    * - |ubuntu-icon| Ubuntu
-
-      - `Download <https://apps.ubuntu.com/cat/applications/fenics/>`__
-
-      - :ref:`Learn more <ubuntu_details>`
-
-    * - |debian-icon| Debian
-
-      - `Download <apt://fenics>`__
-
-      - :ref:`Learn more <debian_details>`
-
-    * - |mac-icon| OS X 10.6
-
-      - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg>`__
-
-      - :ref:`Learn more <osx_details>`
-
-    * - |mac-icon| OS X 10.7 / 10.8
-
-      - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg>`__
-
-      - :ref:`Learn more <osx_details>`
-
-    * - |windows-icon| Windows
-
-      - `Download
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.0.0-mingw32.exe>`__
-
-      - :ref:`Learn more <windows_details>`
+    * - |debian-icon-large|
+      - |ubuntu-icon-large|
+      - |mac-icon-large|
+      - |windows-icon-large|
 
 ****************************************************
 Other operating systems and installation from source

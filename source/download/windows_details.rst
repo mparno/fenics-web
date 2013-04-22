@@ -4,6 +4,14 @@
 Download
 ########
 
+.. warning::
+
+    The FEniCS Windows binary is not up-to-date. To install the latest
+    FEniCS release on Windows, we currently recommend to install `Ubuntu
+    <http://www.ubuntu.com>`__ in a virtual machine (e.g. using
+    `VirtualBox <http://www.virtualbox.org>`__) and then install FEniCS
+    from the :ref:`Ubuntu PPA <ubuntu_ppa>`.
+
 This release includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0,
 Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
 

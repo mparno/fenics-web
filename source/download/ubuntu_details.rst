@@ -19,14 +19,21 @@ following command in a terminal::
 
     sudo apt-get install fenics
 
+.. note::
+
+    Since Ubuntu has a policy of not updating the version of a shipped
+    application, the FEniCS version available in the standard Ubuntu
+    archive might be old. To keep up with the latest FEniCS releases,
+    add the Ubuntu PPA as described below.
+
+.. _ubuntu_ppa:
+
 **********
 Ubuntu PPA
 **********
 
-Since Ubuntu has a policy of not updating the version of a shipped
-application, the FEniCS version available in the standard Ubuntu archive
-might be old. To keep up with the latest FEniCS releases, add the
-`FEniCS Personal Package Archive
+To make sure you always have the latest FEniCS release, add the `FEniCS
+Personal Package Archive
 <https://launchpad.net/~fenics-packages/+archive/fenics>`__ (PPA) to
 your Ubuntu system. You can do this by running the following commands in
 a terminal:
@@ -43,15 +50,6 @@ a terminal:
     The PPA will be deactivated if you later upgrade to a newer Ubuntu
     release, so you should run these commands again after a release
     upgrade.
-
-.. warning::
-
-    Ubuntu 10.04 LTS and 10.10 users should note that when adding the
-    FEniCS PPA and installing the FEniCS packages, the Boost packages on
-    the system will be upgraded to version 1.42. In most cases this is
-    fine since only the Boost `development` packages (as in
-    ``libboost-foo-dev``) will be replaced. However, if you want to keep
-    the default Boost packages, then you should not add this PPA.
 
 ================
 Removing the PPA
