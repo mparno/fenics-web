@@ -7,10 +7,10 @@ Automated installation using Dorsal
 If you are not running one of the operating systems we provide binary
 packages for, you need to download and compile FEniCS and all its
 dependencies. Luckily, this can be handled easily using `Dorsal
-<https://launchpad.net/dorsal>`__.  Dorsal is a simple shell script that
-automates the process of fetching, compiling, and installing the various
-FEniCS sub-projects and their requisite dependencies on Unix-like
-operating systems.
+<https://bitbucket.org/fenics-project/dorsal>`__.  Dorsal is a simple
+shell script that automates the process of fetching, compiling, and
+installing the various FEniCS sub-projects and their requisite
+dependencies on Unix-like operating systems.
 
 The following platforms are officially supported by Dorsal:
 
@@ -20,7 +20,7 @@ The following platforms are officially supported by Dorsal:
 * Mac OS X 10.6, 10.7 (with MacPorts)
 * openSUSE 11.3, 11.4
 * Red Hat Enterprise Linux 6
-* Ubuntu 10.04 LTS, 10.10, 11.04, 11.10
+* Ubuntu 12.04 LTS, 12.10, 13.04
 
 A number of other platforms are supported through user contributions.
 It is easy to extend support to other similar platforms. Please let us
@@ -30,7 +30,7 @@ your platform.
 In order to install FEniCS using Dorsal, simply follow these steps:
 
 #. Fetch the most recent version of Dorsal from its
-   `download page <https://launchpad.net/dorsal/+download>`_.
+   `download page <https://bitbucket.org/fenics-project/dorsal/downloads>`_.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and tweak dorsal.cfg to your liking.
 #. Invoke the build script by running::
