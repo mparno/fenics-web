@@ -17,17 +17,8 @@ Binary packages
 This is the main FEniCS download, suitable for most users. It includes
 everything needed to get you started with FEniCS.
 
-.. tabularcolumns:: |c|c|c|c|
-
-.. list-table::
-    :widths: 25, 25, 25, 25
-    :header-rows: 0
-    :class: center
-
-    * - |debian-icon-large|
-      - |ubuntu-icon-large|
-      - |mac-icon-large|
-      - |windows-icon-large|
+.. raw:: html
+    :file: index.inc
 
 ****************************************************
 Other operating systems and installation from source
