@@ -61,6 +61,24 @@ FFC
   [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_]
   [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_]
 
+UFL
+---
+
+* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2013)**.
+  *Unified Form Language: A domain-specific language for weak formulations
+  of partial differential equations*,
+  ACM Transactions on Mathematical Software,
+  To Appear.
+  [`arXiv:1211.4047 <http://arxiv.org/abs/1211.4047>`_]
+
+* **M. S. Alnæs (2012)**.
+  *UFL: a Finite Element Form Language*,
+  Automated Solution of Differential Equations by the Finite Element
+  Method, Volume 84 of Lecture Notes in Computational Science and
+  Engineering,
+  Springer,
+  Chapter 17.
+
 FIAT
 ----
 
@@ -94,22 +112,6 @@ UFC
   Engineering,
   Springer,
   Chapter 16.
-
-UFL
----
-
-* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2012)**.
-  *Unified Form Language: A domain-specific language for weak formulations
-  of partial differential equations*.
-  [`arXiv:1211.4047 <http://arxiv.org/abs/1211.4047>`_]
-
-* **M. S. Alnæs (2012)**.
-  *UFL: a Finite Element Form Language*,
-  Automated Solution of Differential Equations by the Finite Element
-  Method, Volume 84 of Lecture Notes in Computational Science and
-  Engineering,
-  Springer,
-  Chapter 17.
 
 SyFi
 ----
