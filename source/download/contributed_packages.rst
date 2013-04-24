@@ -10,9 +10,9 @@ contact the package maintainer first.
 
 If you have packages or information about other systems, it is always
 appreciated if you let us know. Please send the information to the
-`fenics-web mailing list <fenics-web@lists.launchpad.net>`__, or even
-better, send us a patch or make a merge request against `lp:fenics-web
-<https://code.launchpad.net/~fenics-web-core/fenics-web/main>`__.
+`fenics mailing list <fenics@fenicsproject.org>`__, or even better, send
+us a patch or make a `pull request
+<https://bitbucket.org/fenics-project/fenics-web>`__.
 
 **********
 Arch Linux

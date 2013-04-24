@@ -19,12 +19,12 @@ following command in a terminal::
 
     sudo apt-get install fenics
 
-.. note::
+.. warning::
 
     Since Ubuntu has a policy of not updating the version of a shipped
     application, the FEniCS version available in the standard Ubuntu
-    archive might be old. To keep up with the latest FEniCS releases,
-    add the Ubuntu PPA as described below.
+    archive is currently out-of-date. To keep up with the latest FEniCS
+    releases, add the Ubuntu PPA as described below.
 
 .. _ubuntu_ppa:
 

@@ -20,6 +20,13 @@ everything needed to get you started with FEniCS.
 .. raw:: html
     :file: index.inc
 
+===========================
+Contributed binary packages
+===========================
+
+For information on user contributed binary packages, see
+:ref:`contributed_packages`.
+
 ****************************************************
 Other operating systems and installation from source
 ****************************************************
@@ -34,9 +41,9 @@ from source, try one of the two other possibilities:
 Nightly snapshot releases
 *************************
 
-Every night, FEniCS snapshot releases are automatically generated
-for Ubuntu, Mac OS X, and Windows. They are made available at our
-:ref:`snapshots page <snapshot_releases>`.
+Every night, FEniCS snapshot releases are automatically generated for
+Ubuntu and Mac OS X. They are made available at our :ref:`snapshots page
+<snapshot_releases>`.
 
 *******************
 Development version
@@ -44,12 +51,6 @@ Development version
 
 For information on accessing the development repositories, see
 :ref:`developers`.
-
-********************
-Contributed packages
-********************
-
-For information on user contributed packages, see :ref:`contributed_packages`.
 
 ***************
 Data and meshes
