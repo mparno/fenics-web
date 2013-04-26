@@ -6,25 +6,24 @@ Manual installation from source
 
 You can also build and install FEniCS components manually from the source code.
 You will need to install the Python packages
-`FFC <http://launchpad.net/ffc>`_,
-`FIAT <http://launchpad.net/fiat>`_,
-`Instant <http://launchpad.net/instant>`_,
-`Viper <http://launchpad.net/fenics-viper>`_, and
-`UFL <http://launchpad.net/ufl>`_.
+`FFC <https://bitbucket.org/fenics-project/ffc>`_,
+`FIAT <https://bitbucket.org/fenics-project/fiat>`_,
+`Instant <https://bitbucket.org/fenics-project/instant>`_,
+`UFL <https://bitbucket.org/fenics-project/ufl>`_.
 You will also need to install the C++/Python packages
-`UFC <http://launchpad.net/ufc>`_ and
-`DOLFIN <http://launchpad.net/dolfin>`_.
+`UFC <https://bitbucket.org/fenics-project/ufc>`_ and
+`DOLFIN <https://bitbucket.org/fenics-project/dolfin>`_.
 Instructions for how to install these packages are given below.
 
 Python packages (FFC, FIAT, Instant, Viper and UFL)
 ===================================================
 
 #. First, download the source code for `FFC
-   <http://launchpad.net/ffc>`_, `FIAT <http://launchpad.net/fiat>`_,
-   `Instant <http://launchpad.net/instant>`_, `Viper
-   <http://launchpad.net/fenics-viper>`_ and `UFL
-   <http://launchpad.net/ufl>`_. Then for each of these packages,
-   follow the instructions below.
+   <https://bitbucket.org/fenics-project/ffc>`_, `FIAT
+   <https://bitbucket.org/fenics-project/fiat>`_, `Instant
+   <https://bitbucket.org/fenics-project/instant>`_ and `UFL
+   <https://bitbucket.org/fenics-project/ufl>`_. Then for each of these
+   packages, follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following command::
 
@@ -44,9 +43,9 @@ C++/Python packages (DOLFIN and UFC)
 Building and installing DOLFIN and UFC require CMake version >= 2.8.
 
 #. First, download the source code for `UFC
-   <http://launchpad.net/ufc>`_ and `DOLFIN
-   <http://launchpad.net/dolfin>`_. Then for each of these packages,
-   follow the instructions below.
+   <https://bitbucket.org/fenics-project/ufc>`_ and `DOLFIN
+   <https://bitbucket.org/fenics-project/dolfin>`_. Then for each of
+   these packages, follow the instructions below.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following commands::
 
