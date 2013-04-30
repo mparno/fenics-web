@@ -40,98 +40,87 @@ interest.
       - Waterfall
       - Console view
     * - :ref:`All components <about_components>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x>`__
-        / `1.1.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
-        / `1.2.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/console?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
-        / `trunk <http://fenicsproject.org:8010/console?category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ferari.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=syfi.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=viper.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ferari.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=syfi.trunk&category=ufc.trunk&category=ufl.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=dolfin.master&category=ferari.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=uflacs.master>`__
+        / `next <http://fenicsproject.org:8010/waterfall?category=dolfin.next&category=ferari.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next&category=uflacs.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=dolfin.maint&category=ferari.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint&category=uflacs.maint>`__
+        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.master&category=ferari.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=uflacs.master&category=dolfin.next&category=ferari.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next&category=uflacs.next&category=dolfin.maint&category=ferari.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint&category=uflacs.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=dolfin.master&category=ferari.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=uflacs.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=dolfin.next&category=ferari.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next&category=uflacs.next>`__
+        / `maint <http://fenicsproject.org:8010/console?category=dolfin.maint&category=ferari.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint&category=uflacs.maint>`__
+        / `all <http://fenicsproject.org:8010/console?category=dolfin.master&category=ferari.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=uflacs.master&category=dolfin.next&category=ferari.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next&category=uflacs.next&category=dolfin.maint&category=ferari.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint&category=uflacs.maint>`__
     * - :ref:`Core components <about_components_core>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/waterfall?category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
-        / `trunk <http://fenicsproject.org:8010/waterfall?category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/console?category=dolfin.1.2.x&category=ffc.1.2.x&category=fiat.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x>`__
-        / `trunk <http://fenicsproject.org:8010/console?category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
-        / `all <http://fenicsproject.org:8010/console?category=dolfin.1.0.x&category=ffc.1.0.x&category=fiat.1.0.x&category=instant.1.0.x&category=ufc.2.0.x&category=ufl.1.0.x&category=dolfin.1.1.x&category=ffc.1.1.x&category=fiat.1.1.x&category=instant.1.1.x&category=ufc.2.1.x&category=ufl.1.1.x&category=dolfin.1.2.x&category=ffc.1.2.x&category=instant.1.2.x&category=ufc.2.2.x&category=ufl.1.2.x&category=dolfin.trunk&category=ffc.trunk&category=fiat.trunk&category=instant.trunk&category=ufc.trunk&category=ufl.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=dolfin.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?category=dolfin.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next>`__
+        / `maint <http://fenicsproject.org:8010/waterfall?category=dolfin.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint>`__
+        / `all <http://fenicsproject.org:8010/waterfall?category=dolfin.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=dolfin.next&category=ffc.next&category=instant.next&category=ufc.next&category=ufl.next&category=dolfin.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=dolfin.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=dolfin.next&category=ffc.next&category=fiat.next&category=instant.next&category=ufc.next&category=ufl.next>`__
+        / `maint <http://fenicsproject.org:8010/console?category=dolfin.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint>`__
+        / `all <http://fenicsproject.org:8010/console?category=dolfin.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufc.master&category=ufl.master&category=dolfin.next&category=ffc.next&category=instant.next&category=ufc.next&category=ufl.next&category=dolfin.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufc.maint&category=ufl.maint>`__
 
     * - :ref:`DOLFIN <about_components_dolfin>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.1.2.x&category=dolfin.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.1.0.x&category=dolfin.1.1.x&category=dolfin.1.2.x&category=dolfin.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
     * - :ref:`FFC <about_components_ffc>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.1.2.x&category=ffc.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=ffc&category=ffc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ffc&category=ffc.1.0.x&category=ffc.1.1.x&category=ffc.1.2.x&category=ffc.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.master&category=ffc.next&category=ffc.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=ffc&category=ffc.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=ffc&category=ffc.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=ffc&category=ffc.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ffc&category=ffc.master&category=ffc.next&category=ffc.maint>`__
     * - :ref:`FIAT <about_components_fiat>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.1.1.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.1.0.x&category=fiat.1.1.x&category=fiat.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=fiat&category=fiat.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?project=fiat&category=fiat.1.1.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=fiat&category=fiat.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=fiat&category=fiat.1.0.x&category=fiat.1.1.x&category=fiat.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.master&category=fiat.next&category=fiat.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=fiat&category=fiat.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=fiat&category=fiat.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=fiat&category=fiat.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=fiat&category=fiat.master&category=fiat.next&category=fiat.maint>`__
     * - :ref:`Instant <about_components_instant>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.1.2.x&category=instant.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/console?project=instant&category=instant.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=instant&category=instant.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=instant&category=instant.1.0.x&category=instant.1.1.x&category=instant.1.2.x&category=instant.trunk>`__
-    * - :ref:`SyFi <about_components_syfi>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=syfi&category=syfi.1.0.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=syfi&category=syfi.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=syfi&category=syfi.1.0.x&category=syfi.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=syfi&category=syfi.1.0.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=syfi&category=syfi.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=syfi&category=syfi.1.0.x&category=syfi.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.master&category=instant.next&category=instant.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=instant&category=instant.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=instant&category=instant.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=instant&category=instant.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=instant&category=instant.master&category=instant.next&category=instant.maint>`__
     * - :ref:`UFC <about_components_ufc>`
-      - `2.0.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.0.x>`__
-	/ `2.1.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.1.x>`__
-	/ `2.2.x <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.2.2.x&category=ufc.trunk>`__
-      - `2.0.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.0.x>`__
-	/ `2.1.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.1.x>`__
-	/ `2.2.x <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=ufc&category=ufc.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ufc&category=ufc.2.0.x&category=ufc.2.1.x&category=ufc.2.2.x&category=ufc.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ufc&category=ufc.master&category=ufc.next&category=ufc.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=ufc&category=ufc.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=ufc&category=ufc.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=ufc&category=ufc.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ufc&category=ufc.master&category=ufc.next&category=ufc.maint>`__
     * - :ref:`UFL <about_components_ufl>`
-      - `1.0.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.1.x>`__
-	/ `1.2.x <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.2.x>`__
-	/ `trunk <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.trunk>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.1.2.x&category=ufl.trunk>`__
-      - `1.0.x <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.0.x>`__
-	/ `1.1.x <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.1.x>`__
-	/ `trunk <http://fenicsproject.org:8010/console?project=ufl&category=ufl.trunk>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ufl&category=ufl.1.0.x&category=ufl.1.1.x&category=ufl.1.2.x&category=ufl.trunk>`__
+      - `master <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.master&category=ufl.next&category=ufl.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=ufl&category=ufl.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=ufl&category=ufl.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=ufl&category=ufl.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=ufl&category=ufl.master&category=ufl.next&category=ufl.maint>`__
+    * - uflacs
+      - `master <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
+      - `master <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.master>`__
+	/ `next <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
 
 There are also other alternative renderings of the results:
 
@@ -154,29 +143,29 @@ Try server
 The Buildbot has a facility called "try server". This allows you to run
 a build with your local changes before they are committed. To set up
 your machine to run try builds, first install a recent version of
-buildbot. Then go to your bzr-based working copy that contains changes
+buildbot. Then go to your git-based working copy that contains changes
 and run the following command::
 
-    bzr diff --old lp:<project> | buildbot --connect=pb \
-                                           --master=fenicsproject.org:8031 \
-                                           --username=<username> \
-                                           --password=<password> \
-                                           --who=<your name> \
-                                           --builder=<builder-name> \
-                                           --diff=-
+    git diff | buildbot --connect=pb \
+                        --maint=fenicsproject.org:8031 \
+                        --username=<username> \
+                        --password=<password> \
+                        --who=<your name> \
+                        --builder=<builder-name> \
+                        --diff=-
 
 To save some typing, add a file ``~/.buildbot/options`` with the following
 contents::
 
     try_connect = 'pb'
-    try_master = 'fenicsproject.org:8031'
+    try_maint = 'fenicsproject.org:8031'
     try_username = 'username'
     try_password = 'password'
     try_who = 'your name'
 
 You can then start a build simply by running::
 
-    bzr diff --old lp:<project> | buildbot try --builder=<builder-name> --diff=-
+    git diff | buildbot try --builder=<builder-name> --diff=-
 
 To see a list of available options, see ``buildbot try --help``. For
 instance, using ``--dryrun`` will gather info but not submit, while
@@ -184,7 +173,7 @@ using ``--get-builder-names`` will list the names of the available
 builders that can be used with the ``--builder`` option. The builders
 can also be set in ``~/.buildbot/options``, for instance::
 
-    try_builders = ["dolfin-trunk-full-lucid-amd64", "dolfin-trunk-full-osx-10.7"]
+    try_builders = ["dolfin-master-full-lucid-amd64", "dolfin-master-full-osx-10.7"]
 
 For more information on running try builds, see the `try section
 <http://buildbot.net/buildbot/docs/current/manual/cmdline.html#cmdline-try>`__
