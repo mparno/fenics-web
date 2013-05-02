@@ -4,24 +4,22 @@
 Taking part in the development
 ******************************
 
-Each component of FEniCS is hosted on Bitbuket.  The first thing a
-prospective developer needs to do is to register an account on
-Bitbucket.
+Each component of FEniCS is hosted on `Bitbucket
+<http://bitbucket.org>`__. The first thing a prospective developer
+needs to do is to register an account on `Bitbucket <http://bitbucket.org>`__.
 
 
 Mailing lists
 =============
 
 The development of FEniCS is discussed actively on the
-mailing list `FEniCS mailing list
+`FEniCS mailing list
 <http://fenicsproject.org/mailman/listinfo/fenics/>`__.
 
 User questions
 ==============
 
 User questions are discussed on the :ref:`help_answers` pages.
-Developers should make sure to join the relevant team for each component so
-that they will be notified about new user questions.
 
 Bug reports
 ===========
