@@ -4,7 +4,7 @@
 Obtaining the source code
 *************************
 
-FEniCS uses Bitbucket for hosting code. Each FEniCS component has a
+FEniCS uses `Bitbucket <http://bitbucket.org>`__ for hosting code. Each FEniCS component has a
 `Git <http://git-scm.com/>`_ repository on Bitbucket that contains all
 source code (including the entire development history). The
 repositories are readable for everyone, but write access is only
@@ -14,7 +14,7 @@ Accessing the development repositories
 ======================================
 
 To access the development repositories, you first need to install the
-revision control system git. Visit the `Git web page
+revision control system Git. Visit the `Git web page
 <http://git-scm.com/>`__ for instructions on how to install Git on
 your operating system.
 
@@ -33,4 +33,4 @@ source code by visiting the repository on Bitbucket and clicking the
 'follow' button.
 
 Links to the source repositories for FEniCS projects can be found on the
-`Bitbucket page <https://bitbucket.org/fenics-project>`__.
+`FEniCS Bitbucket page <https://bitbucket.org/fenics-project>`__.
