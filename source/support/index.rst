@@ -8,90 +8,78 @@ This page describes how to get in contact to solve problems you might
 encounter when using FEniCS. Help is available both from FEniCS
 developers and other FEniCS users.
 
+Depending on the type of question, comment or issue you might have,
+you will need to address it to a specific forum or mailing
+list. Please read on below to find out.
+
+
 .. _help_answers:
 
-Getting answers
-===============
+Asking questions
+================
 
-Do you wonder about how something works, whether some feature is
-supported or why you are getting an error? Feel free to ask through
-the Launchpad Answers system: `FEniCS answers
-<https://answers.launchpad.net/fenics>`_ is the place for general
-FEniCS questions and `DOLFIN answers
-<https://answers.launchpad.net/dolfin>`_ is the place for questions
-regarding the FEniCS user interface DOLFIN. :ref:`launchpad_pages`
-contains a collection of links to the answer pages for all FEniCS
-components.
+User questions should be posted on `scicomp.stackexchange
+<http://scicomp.stackexchange.com/>`__, which is a community-driven
+forum for questions and answers regarding scientific computing.
 
-Naturally, the FEniCS developers are in a good position to answer
-these questions, but as the developers often are busy writing code (or
-answering other questions), any help from you is greatly appreciated.
-Perhaps you might know the answer to a question asked by another user?
-To be notified of new questions, join the `FEniCS
-<https://launchpad.net/~fenics>`_ and the `DOLFIN
-<https://launchpad.net/~dolfin>`_ teams on Launchpad.
+Questions suitable for scicomp.stackexchange include questions like
+*"How do I set boundary conditions in FEniCS?"*, *"Is P2/P0 a stable
+element for Stokes?"* or *"What is the best way to post-process my
+solution?"*.
 
+Questions not suitable for scicomp.stackexchange include questions
+like *"Periodic boundary conditions give wrong results for BDM3
+elements in parallel"* (this should be reported as a bug/issue, see
+below) or *"Can't find Boost when configuring on Windows 3.11"* (this
+should be reported to the fenics-support mailing list, see below).
 
-.. _getting_answers_checklist:
+Before running away and posting on scicomp.stackexchange, please note
+the following:
 
-Checklist when asking a question
---------------------------------
+* Search the forum to check that your question has not been answered before.
 
-We want to help you; by making sure that you provide us with enough
-information, you are more likely to get the answer you are looking
-for. So, first
+* Formulate your question well. If we cannot understand your question,
+  we probably cannot help you.
 
-    please check whether someone has asked the same question before by
-    searching the questions/answers.
+* Post complete, but *minimal* code examples. No one wants to read
+  through your complex application code.
 
-If you have encountered an error or a problem that you can't figure
-out, please make sure to include the following in your description of
-the problem:
+* Consult the `guidelines <http://scicomp.stackexchange.com/faq>`__ for posting
+  to scicomp.stackexchange.
 
-#. A *minimal, running code example* that reproduces the error.
+* Please help out in answering questions from other users.
 
-#. The error message.
-
-#. The *version* of the FEniCS component you are using.
-
-By a minimal, running code example, we really mean **minimal** and we
-really mean **running**. Try to simplify your program as much as you
-can. (Surprisingly often, 10-20 lines of code will suffice.) The
-simpler the example, the more likely someone will have the time to
-identify and/or help fix the problem.
-
-.. _help_bugs:
+* Tag your question using the `FEniCS tag <http://scicomp.stackexchange.com/questions/tagged/fenics>`__.
 
 Reporting bugs
 ==============
 
-FEniCS software is under active development. As a consequence, bugs
-are likely to occur from time to time. In the event that you encounter
-a bug, please file a bug report using the Bitbucket issue tracking
-system. In particular, for reporting bugs in DOLFIN, use `DOLFIN bugs
-<https://bitbucket.org/fenics-project/dolfin/issues>`_.
-
-When reporting a bug, the same :ref:`guidelines as for asking
-questions <getting_answers_checklist>` apply.
-
+If you encounter something you suspect is a bug, please file a bug report
+using the Bitbucket issue tracking system. In particular, for
+reporting bugs in DOLFIN, visit the `DOLFIN issues page
+<https://bitbucket.org/fenics-project/dolfin/issues>`_. As above, post
+complete but *minimal* code examples.
 
 Mailing lists
 =============
 
 .. _help_mailinglists:
 
-Users are also welcome to take part in discussions on the FEniCS
-mailing lists, but specific questions are better directed to the
-relevant `Answer page <https://help.launchpad.net/Answers>`_ as
-:ref:`explained above <help_answers>`.
+The FEniCS mailing lists cover everything that does not fit into any of
+the above categories (user questions or bug reports).
 
-We try to keep a friendly tone on our mailing lists, but sometimes
-questions can only be settled by a heated debate. Don't be afraid to
-step in and state your opinion!
+The development of FEniCS is discussed on the `main FEniCS mailing
+list <http://fenicsproject.org/mailman/listinfo/fenics>`__. This is
+also the place for announcements of workshops, releases, tutorials,
+papers. Everyone is invited to subscribe to the mailing list and take
+part in discussions.
 
-The `FEniCS mailing list <mailto:fenics@fenicsproject.org>`_ is the
-place for general discussions regarding the FEniCS Project and FEniCS
-components.
+Questions regarding the installation of FEniCS on specific
+architectures, packaging and other practical questions can be posted
+on the `FEniCS support mailing list
+<http://fenicsproject.org/mailman/listinfo/fenics-support>`__. Users
+are encouraged to subscribe and help out other users with installation
+issues.
 
 Contributing
 ============
@@ -101,8 +89,3 @@ FEniCS. As an active developer, it is easy to influence the direction
 and focus of the project. The step from user to developer is just a
 patch away! For information about how to contribute code to the FEniCS
 Project, visit the page :ref:`developers`.
-
-.. toctree::
-    :hidden:
-
-    launchpad_pages
