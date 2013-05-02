@@ -37,8 +37,6 @@ The following pages list important instructions for FEniCS developers.
 .. toctree::
    :maxdepth: 1
 
-   Taking part in the development <taking_part>
    Obtaining the source code <obtaining_code>
    Writing code <writing_code>
-   contributing_code
-   development_model
+   Contributing code <contributing_code>
