@@ -78,7 +78,8 @@ Chair: David Ham
 
 - 15:10 - 15:30  Gabriel Balaban
 
-  *Automatic differentiation of a fluid structure interaction problem*
+  `Automatic differentiation of a fluid structure interaction problem
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Balaban.pdf>`__
 
 - 15:30 - 15:50 Felix Ospald
 
