@@ -27,7 +27,7 @@ Chair: Anders Logg
 
 - 10:00 - 10:30 Douglas Arnold
 
-  `The periodic table of finite elements*
+  `The periodic table of finite elements
   <http://fenicsproject.org/pub/workshops/fenics13/slides/Arnold.pdf>`__
 
 - 10:30 - 11:00 Martin Alnæs
