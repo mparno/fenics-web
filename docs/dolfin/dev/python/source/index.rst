@@ -1,8 +1,8 @@
 
 
-###########################################
-Documentation for DOLFIN-1.0.beta+ (Python)
-###########################################
+########################################
+Documentation for DOLFIN-1.2.0+ (Python)
+########################################
 
 
 The Demos
@@ -28,3 +28,4 @@ DOLFIN modules
 
    programmers-reference/index
    demo/index
+   quick_reference
