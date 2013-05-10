@@ -68,6 +68,12 @@
           <h3>FEniCS'13 at University of Cambridge</h3>
           <a href="/featured/2013/fenics_13_cambridge.html"><img alt='' src='/_static/images/jesus_college.jpg' class='avatar avatar-84 photo' width='84'/></a>
 
+          <p>The 2013 FEniCS Workshop was held 18-19 March 2013 at
+            Jesus College, Cambridge. Presentations from the workshop
+            can be found <a href="featured/2013/fenics13_program.html">here</a>.
+            <br /> <br /> <br />
+          </p>
+
           <p>The 2013 FEniCS Workshop will be held 18-19 March 2013 at
             Jesus College, Cambridge. Information of
             registering for the workshop can be found <a
