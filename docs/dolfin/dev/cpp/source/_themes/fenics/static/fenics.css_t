@@ -425,20 +425,6 @@ div.menu li {
     left:690px;
 }
 
-#feature {
-		float:left;
-}
-#feature img {
-float:left;
-margin:-10px 10 0 -10px;
-width: 400px;
-}
-#feature-info {
-    float:right;
-    margin:0 0 0 30px;
-    width:420px;
-}
-
 #container,
 #content  {
     margin:0;
@@ -475,6 +461,7 @@ padding-left: 1em;
 #front-block-1 {
     margin-right:20px;
 }
+
 .block .avatar {
     float:left;
     margin:.55em 5px 0 0;
@@ -493,7 +480,7 @@ padding-left: 1em;
 }
 .block ul li a {
     border-bottom:1px solid #ccc;
-    color:#666;
+    color:#667;
     display:block;
     padding:6px 0;
     text-decoration:none;
@@ -519,7 +506,7 @@ a.button {
     -webkit-border-radius: .7em;
     -moz-border-radius: .7em;
     border-radius: .7em;
-    color:#666;
+    color:#667;
     font-size:13px;
     margin:0 10px 0 0;
     padding:.75em 1.25em;
@@ -562,4 +549,23 @@ margin-top: 1em;
 div.wrapper {
 display: none;
 }
+}
+
+.mugshot
+{
+  padding-right: 1em;
+  height: 19em;
+  padding-left: 1em;
+}
+
+.mugshot img
+{
+  width: 100px;
+  height: 150px;
+  border: solid 1px #667;
+}
+
+.app {
+  height: 20em;
+  margin-right: 1em;
 }
