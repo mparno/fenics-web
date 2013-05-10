@@ -1,8 +1,8 @@
 
 
-########################################
-Documentation for DOLFIN-1.0.beta+ (C++)
-########################################
+#####################################
+Documentation for DOLFIN-1.2.0+ (C++)
+#####################################
 
 
 The Demos
@@ -22,3 +22,4 @@ The Programmer's Reference
 
    programmers-reference/index
    demo/index
+   quick_reference
