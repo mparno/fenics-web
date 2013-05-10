@@ -27,11 +27,13 @@ Chair: Anders Logg
 
 - 10:00 - 10:30 Douglas Arnold
 
-  *The periodic table of finite elements*
+  `The periodic table of finite elements*
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Arnold.pdf>`__
 
 - 10:30 - 11:00 Martin Alnæs
 
- `Status of effective translation of complicated forms in FEniCS <http://fenicsproject.org/pub/workshops/fenics13/slides/Alnaes.pdf>`__
+  `Status of effective translation of complicated forms in FEniCS
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Alnaes.pdf>`__
 
 
 Break
@@ -70,7 +72,8 @@ Chair: David Ham
 
 - 14:30 - 14:50 Spencer Sherwin
 
-  *Nektar++: A progress report*
+  `Nektar++: A progress report
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Sherwin.pdf>`__
 
 - 14:50 - 15:10 Andre Massing
 
@@ -117,15 +120,18 @@ Chair: L. Ridgway Scott
 
 - 9:00 - 9:20  Sander Rhebergen
 
-  *Preconditioners for computations of subduction zone modelling*
+  `Preconditioners for computations of subduction zone modelling
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Rhebergen.pdf>`__
 
 - 9:20 - 9:40  Chris Richardson
 
-  *Parallel IO and mesh refinement in DOLFIN*
+  `Parallel IO and mesh refinement in DOLFIN
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Richardson.pdf>`__
 
 - 9:40 - 10:00  Marie Rognes
 
-  *FEniCS on a Moebius strip*
+  `FEniCS on a Moebius strip
+  <http://fenicsproject.org/pub/workshops/fenics13/slides/Rognes.pdf>`__
 
 - 10:00 - 10:20 Laura Alisic
 
