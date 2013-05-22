@@ -56,6 +56,15 @@ documentation of DOLFIN and UFL.
 
 .. raw:: html
 
+  <h2>Additional Documentation</h2>
+
+`Mixing software with FEniCS
+<http://hplgit.github.io/fenics-mixed/doc/web/index.html>`__ is a
+tutorial on how to combine FEniCS applications in Python with software
+written in other languages.
+
+.. raw:: html
+
   </div><!-- #front-block-1 .front-block .block-->
 
   <div id="front-block-2" class="front-block block">
