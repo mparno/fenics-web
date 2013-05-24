@@ -22,10 +22,11 @@ User questions should be posted on `scicomp.stackexchange
 <http://scicomp.stackexchange.com/>`__, which is a community-driven
 forum for questions and answers regarding scientific computing.
 
-Questions suitable for scicomp.stackexchange include questions like
-*"How do I set boundary conditions in FEniCS?"*, *"Is P2/P0 a stable
-element for Stokes?"* or *"What is the best way to post-process my
-solution?"*.
+Questions suitable for scicomp.stackexchange include questions like:
+
+#. *How do I set boundary conditions in FEniCS?*
+#. *Is P2/P0 a stable element for Stokes?*
+#. *What is the best way to post-process my solution?*
 
 Questions not suitable for scicomp.stackexchange include questions
 like *"Periodic boundary conditions give wrong results for BDM3
