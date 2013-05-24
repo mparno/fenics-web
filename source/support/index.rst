@@ -28,11 +28,11 @@ Questions suitable for scicomp.stackexchange include questions like:
 #. *Is P2/P0 a stable element for Stokes?*
 #. *What is the best way to post-process my solution?*
 
-Questions not suitable for scicomp.stackexchange include questions
-like *"Periodic boundary conditions give wrong results for BDM3
-elements in parallel"* (this should be reported as a bug/issue, see
-below) or *"Can't find Boost when configuring on Windows 3.11"* (this
-should be reported to the fenics-support mailing list, see below).
+Questions **not** suitable for scicomp.stackexchange include questions
+like:
+
+#. *Periodic boundary conditions give wrong results for BDM3 elements in parallel* (this should be reported as a bug/issue, see below)
+#. *Can't find Boost when configuring on Windows 3.11* (this should be reported to the fenics-support mailing list, see below).
 
 Before running away and posting on scicomp.stackexchange, please note
 the following:
