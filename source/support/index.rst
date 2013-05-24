@@ -38,6 +38,8 @@ the following:
 
 * Search the forum to check that your question has not been answered before.
 
+* Search the `DOLFIN user questions on Launchpad <http://answers.launchpad.net/dolfin/>`__ to check that your question has not been answered before.
+
 * Formulate your question well. If we cannot understand your question,
   we probably cannot help you.
 
