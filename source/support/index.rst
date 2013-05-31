@@ -22,21 +22,24 @@ User questions should be posted on `scicomp.stackexchange
 <http://scicomp.stackexchange.com/>`__, which is a community-driven
 forum for questions and answers regarding scientific computing.
 
-Questions suitable for scicomp.stackexchange include questions like
-*"How do I set boundary conditions in FEniCS?"*, *"Is P2/P0 a stable
-element for Stokes?"* or *"What is the best way to post-process my
-solution?"*.
+Questions suitable for scicomp.stackexchange include questions like:
 
-Questions not suitable for scicomp.stackexchange include questions
-like *"Periodic boundary conditions give wrong results for BDM3
-elements in parallel"* (this should be reported as a bug/issue, see
-below) or *"Can't find Boost when configuring on Windows 3.11"* (this
-should be reported to the fenics-support mailing list, see below).
+#. *How do I set boundary conditions in FEniCS?*
+#. *Is P2/P0 a stable element for Stokes?*
+#. *What is the best way to post-process my solution?*
+
+Questions **not** suitable for scicomp.stackexchange include questions
+like:
+
+#. *Periodic boundary conditions give wrong results for BDM3 elements in parallel* (this should be reported as a bug/issue, see below)
+#. *Can't find Boost when configuring on Windows 3.11* (this should be reported to the fenics-support mailing list, see below).
 
 Before running away and posting on scicomp.stackexchange, please note
 the following:
 
 * Search the forum to check that your question has not been answered before.
+
+* Search the `FEniCS user questions on Launchpad <http://answers.launchpad.net/fenics-project/>`__ to check that your question has not been answered before.
 
 * Formulate your question well. If we cannot understand your question,
   we probably cannot help you.

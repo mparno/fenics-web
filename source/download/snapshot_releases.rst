@@ -6,8 +6,8 @@ Nightly snapshot releases
 
 .. include:: icons.rst
 
-FEniCS snapshot releases are automatically generated for Ubuntu, Mac OS
-X, and Windows. They are made available here.
+FEniCS snapshot releases are automatically generated for Ubuntu and Mac OS
+X. They are made available here.
 
 .. tabularcolumns:: |c|c|
 
@@ -28,10 +28,6 @@ X, and Windows. They are made available here.
       - `fenics-snapshot-osx10.6.dmg
         <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.6.dmg>`_
 
-    * - |windows-icon| Windows binary snapshot
-      - `fenics-snapshot-mingw32.exe
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-mingw32.exe>`_
-
     * - |archive-icon| Source snapshot for Mac OS X 10.7
       - `fenics-source-snapshot-osx10.7.tar.gz
         <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.7.tar.gz>`_
@@ -39,7 +35,3 @@ X, and Windows. They are made available here.
     * - |archive-icon| Source snapshot for Mac OS X 10.6
       - `fenics-source-snapshot-osx10.6.tar.gz
         <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.6.tar.gz>`_
-
-    * - |archive-icon| Source snapshot for Windows
-      - `fenics-source-snapshot-win.zip
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-win.zip>`_
