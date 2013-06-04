@@ -77,11 +77,11 @@ equations of the model look something like
                     - \frac{\partial \overline{u'_i u'_j}}{\partial x_j} + \overline{f_i}, \\
            \frac{\partial \overline{u_i}}{\partial x_i} &= 0, \\
          \frac{\partial \overline{u'_i u'_j}} {\partial t} + \overline{u_k} \frac{\partial \overline{u'_i u'_j}}{\partial x_k} + 
-        \frac{\partial T_{kij}}{\partial x_k}  &= \ensuremath{\mathbb{P}}_{ij} + \ensuremath{\mathbb{G}}_{ij} - \varepsilon_{ij}, \\
-         L^2 \nabla^2 f_{ij} - f_{ij} &=  -\frac{\ensuremath{\mathbb{C}}_{ij}}{k} - \frac{\overline{u'_i u'_j}/k - 2\delta_{ij}/{3}}{T}, \\
-         \ensuremath{\mathbb{P}}_{ij} &= -\overline{u'_i u'_k} \frac{\partial \overline{u_j}}{\partial x_k} - \overline{u'_j u'_k} \frac{\partial \overline{u_i}}{\partial x_k}, \\
+        \frac{\partial T_{kij}}{\partial x_k}  &= {\mathbb{P}}_{ij} + {\mathbb{G}}_{ij} - \varepsilon_{ij}, \\
+         L^2 \nabla^2 f_{ij} - f_{ij} &=  -\frac{{\mathbb{C}}_{ij}}{k} - \frac{\overline{u'_i u'_j}/k - 2\delta_{ij}/{3}}{T}, \\
+         {\mathbb{P}}_{ij} &= -\overline{u'_i u'_k} \frac{\partial \overline{u_j}}{\partial x_k} - \overline{u'_j u'_k} \frac{\partial \overline{u_i}}{\partial x_k}, \\
         \varepsilon_{ij} &= 2\nu\overline{\frac{\partial u_i}{\partial x_k} \frac{\partial u_j}{\partial x_k}}, \\
-         \ensuremath{\mathbb{G}}_{ij} &= \left(\varepsilon_{ij} - \frac{\overline{u'_i u'_j}}{k} \varepsilon \right) + k f_{ij}, \\
+         {\mathbb{G}}_{ij} &= \left(\varepsilon_{ij} - \frac{\overline{u'_i u'_j}}{k} \varepsilon \right) + k f_{ij}, \\
         ... &=
         
 
@@ -301,27 +301,27 @@ appropriately scaled form,
 
 .. math::
         
-        \frac{\partial {\mbox{\boldmath $u$}}}{\partial t} + {\mbox{\boldmath $u$}} \cdot \nabla {\mbox{\boldmath $u$}} &= \nu \nabla^2 {\mbox{\boldmath $u$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
-        \nabla\cdot {\mbox{\boldmath $u$}} &= 0\\
-        \frac{\partial c}{\partial t} + {\mbox{\boldmath $u$}} \cdot \nabla c &= \nabla\cdot\left(\nu(1+c^2)\nabla c\right)
+        \frac{\partial {\pmb{u}}}{\partial t} + {\pmb{u}} \cdot \nabla {\pmb{u}} &= \nu \nabla^2 {\pmb{u}} - \nabla p + {{\pmb{f}}}\\
+        \nabla\cdot \pmb{u} &= 0\\
+        \frac{\partial c}{\partial t} + {\pmb{u}} \cdot \nabla c &= \nabla\cdot\left(\nu(1+c^2)\nabla c\right)
         
 
 Discretizing these equations with a Crank-Nicolson type of scheme in time,
-and redefining :math:`{\mbox{\boldmath $u$}}` to be the velocity at the new time level and :math:`{\mbox{\boldmath $u$}}_1`
+and redefining :math:`{\pmb{u}}` to be the velocity at the new time level and :math:`{\pmb{u}}_1`
 the velocity at the previous time level, we arrive at these
 spatial problems:
 
 .. math::
         
-        \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} + {\mbox{\boldmath $u$}}_1 \cdot \nabla {\mbox{\boldmath $u$}}_1  &= \nu\nabla^2 {\mbox{\boldmath $U$}} - \nabla p + {{\mbox{\boldmath $f$}}}\\
-        \nabla\cdot {\mbox{\boldmath $U$}} &= 0\\
-        \frac{c - c_1}{\Delta t} + {\mbox{\boldmath $U$}} \cdot \nabla C &= \nabla\cdot\left(\nu(1+c^2)\nabla C\right),
+        \frac{{\pmb{u}} - {\pmb{u}}_1}{\Delta t} + {\pmb{u}}_1 \cdot \nabla {\pmb{u}}_1  &= \nu\nabla^2 {\pmb{U}} - \nabla p + {{\pmb{f}}}\\
+        \nabla\cdot {\pmb{U}} &= 0\\
+        \frac{c - c_1}{\Delta t} + {\pmb{U}} \cdot \nabla C &= \nabla\cdot\left(\nu(1+c^2)\nabla C\right),
         
 
 with
 
 .. math::
-         {\mbox{\boldmath $U$}} = \frac{1}{2}\left( {\mbox{\boldmath $u$}} + {\mbox{\boldmath $u$}}_1\right),\quad C = \frac{1}{2}\left( c + c_1\right) 
+         {\pmb{U}} = \frac{1}{2}\left( {\pmb{u}} + {\pmb{u}}_1\right),\quad C = \frac{1}{2}\left( c + c_1\right) 
 
 denoting the arithmetic averages needed in a Crank-Nicolson time
 integration.
@@ -329,14 +329,14 @@ The corresponding variational formulation involves the integrals
 
 .. math::
         
-        \int_\Omega \left( \frac{{\mbox{\boldmath $u$}} - {\mbox{\boldmath $u$}}_1}{\Delta t} v_{u} +  ({\mbox{\boldmath $u$}}_1 \cdot \nabla {\mbox{\boldmath $u$}}_1) \cdot v_{u} + 
-        \nu \nabla{\mbox{\boldmath $U$}} : \nabla v_{u} - p \nabla\cdot v_{u} - {{\mbox{\boldmath $f$}}}v_{u} + 
-        v_p\nabla\cdot {\mbox{\boldmath $U$}}\right)dx &= 0,\\
-        \int_\Omega\left( \frac{c - c_1}{\Delta t}v_c + {\mbox{\boldmath $U$}} \cdot \nabla C + \nu (1+c^2)\nabla C\cdot\nabla v_c\right)dx &= 0,
+        \int_\Omega \left( \frac{{\pmb{u}} - {\pmb{u}}_1}{\Delta t} v_{u} +  ({\pmb{u}}_1 \cdot \nabla {\pmb{u}}_1) \cdot v_{u} + 
+        \nu \nabla{\pmb{U}} : \nabla v_{u} - p \nabla\cdot v_{u} - {{\pmb{f}}}v_{u} + 
+        v_p\nabla\cdot {\pmb{U}}\right)dx &= 0,\\
+        \int_\Omega\left( \frac{c - c_1}{\Delta t}v_c + {\pmb{U}} \cdot \nabla C + \nu (1+c^2)\nabla C\cdot\nabla v_c\right)dx &= 0,
         
 
 where :math:`v_{u}`, :math:`v_p`, and :math:`v_c` are test functions for the test
-spaces for :math:`{\mbox{\boldmath $u$}}`, :math:`p`, and :math:`c`, respectively. 
+spaces for :math:`{\pmb{u}}`, :math:`p`, and :math:`c`, respectively. 
 
 The implementation of this model for the flow past a dolphin can be done as follows:
 
@@ -370,11 +370,12 @@ The implementation of this model for the flow past a dolphin can be done as foll
         # u_, u_1 are the solution Functions at time steps N and N-1.
         # v_u/v_p are the TestFunctions for velocity/pressure in the MixedFunctionSpace for u and p
         
+        NStokes.nu = Constant(0.01)
         class NavierStokes(PDESubSystem):
             def form(self, u, v_u, u_, u_1, p, v_p, nu, dt, f, **kwargs):
                 U = 0.5*(u + u_1)
                 return (1./dt)*inner(u - u_1, v_u)*dx + \
-                       inner(u_1*nabla_grad(u_1), v_u) + \
+                       inner(dot(u_1, nabla_grad(u_1)), v_u) + \
                        nu*inner(grad(U), grad(v_u))*dx - \
                        inner(p, div(v_u))*dx + inner(div(U), v_p)*dx - \
                        inner(f, v_u)*dx
@@ -393,13 +394,14 @@ The implementation of this model for the flow past a dolphin can be done as foll
             def form(self, c, v_c, c_, c_1, U_, dt, nu, **kwargs):
                 C = 0.5*(c + c_1)
                 return (1./dt)*inner(c - c_1, v_c)*dx + \
-                        inner(dot(U_*grad(C)), v_c)*dx + \
+                        inner(dot(U_, grad(C)), v_c)*dx + \
                         nu*(1. + c_**2)*inner(grad(C), grad(v_c))*dx   
                         # Note nonlinearity in c_ (above)
          
         bcc = [DirichletBC(scalar.V['c'], Constant(1.0), dolfin)]
         
         scalar.U_ = 0.5*(NStokes.u_ + NStokes.u_1) # The Scalar form uses the velocity
+        scalar.nu = NStokes.nu
         csub1 = Scalar(vars(scalar), ['c'], bcs=bcc, max_inner_iter=5) # Iterate on c_
         scalar.pdesubsystems['c'] = csub1
         
