@@ -29,8 +29,8 @@ your platform.
 
 In order to install FEniCS using Dorsal, simply follow these steps:
 
-#. Fetch the most recent version of Dorsal from its
-   `download page <https://bitbucket.org/fenics-project/dorsal/downloads>`_.
+#. Fetch the most recent snapshot of Dorsal from
+   `Bitbucket <https://bitbucket.org/fenics-project/dorsal>`_.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and tweak dorsal.cfg to your liking.
 #. Invoke the build script by running::
