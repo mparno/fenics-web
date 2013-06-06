@@ -4,34 +4,29 @@
 More Examples
 =============
 
-Many more topics could be treated in a FEniCS tutorial, e.g., how
-to solve systems of PDEs, how to work with mixed finite element
-methods, how to create more complicated meshes and mark boundaries,
-and how to create more advanced visualizations.  However, to limit the
-size of this tutorial, the examples end here.
-There are, fortunately, a rich set of FEniCS demos.
-The FEniCS documentation explains a collection of PDE solvers in detail:
-the Poisson equation, the mixed formulation for the Poission equation,
-the Biharmonic equation, the equations of hyperelasticity, the
-Cahn-Hilliard equation, and the incompressible Navier-Stokes equations.
-Both Python and C++ versions of these solvers are explained.
-An eigenvalue solver is also documented.
-In the ``dolfin/demo`` directory of the DOLFIN source code tree you can
-find programs for these and many other examples, including
-the advection-diffusion equation,
-the equations of elastodynamics,
-a reaction-diffusion equation,
-various finite element methods for the Stokes problem,
-discontinuous Galerkin methods for
-the Poisson and advection-diffusion equations,
-and an eigenvalue problem arising from electromagnetic waveguide
-problem with Nedelec elements.
-There are also numerous demos on how to apply various functionality in
-FEniCS, e.g., mesh refinement and error control,
-moving meshes (for ALE methods),
-computing functionals over subsets of the mesh (such as
-lift and drag on bodies in flow), and
-creating separate subdomain meshes from a parent mesh.
+Many more topics could be treated in a FEniCS tutorial, e.g., how to
+solve systems of PDEs, how to work with mixed finite element methods,
+how to create more complicated meshes and mark boundaries, and how to
+create more advanced visualizations.  However, to limit the size of
+this tutorial, the examples end here.  There are, fortunately, a rich
+set of FEniCS demos.  The FEniCS documentation explains a collection
+of PDE solvers in detail: the Poisson equation, the mixed formulation
+for the Poission equation, the Biharmonic equation, the equations of
+hyperelasticity, the Cahn-Hilliard equation, and the incompressible
+Navier-Stokes equations.  Both Python and C++ versions of these
+solvers are explained.  An eigenvalue solver is also documented.  In
+the ``dolfin/demo`` directory of the DOLFIN source code tree you can
+find programs for these and many other examples, including the
+advection-diffusion equation, the equations of elastodynamics, a
+reaction-diffusion equation, various finite element methods for the
+Stokes problem, discontinuous Galerkin methods for the Poisson and
+advection-diffusion equations, and an eigenvalue problem arising from
+electromagnetic waveguide problem with Nedelec elements.  There are
+also numerous demos on how to apply various functionality in FEniCS,
+e.g., mesh refinement and error control, moving meshes (for ALE
+methods), computing functionals over subsets of the mesh (such as lift
+and drag on bodies in flow), and creating separate subdomain meshes
+from a parent mesh.
 
 The project cbc.solve (`<https://launchpad.net/cbc.solve>`_) offers
 more complete PDE solvers for the Navier-Stokes equations, the

@@ -28,20 +28,21 @@ FEniCS through a series of simple examples that demonstrate
 
   * how to deal with time-dependent PDEs,
 
-  * how to set parameters governing solution methods for linear systems,
+  * how to set parameters governing solution methods for linear
+    systems,
 
   * how to create domains of more complex shape.
 
-The mathematics of the illustrations is kept simple to better focus
-on FEniCS functionality and syntax. This means that we mostly use
-the Poisson equation and the time-dependent diffusion equation
-as model problems, often with input data adjusted such that we get
-a very simple solution that can be exactly reproduced by any standard
-finite element method over a uniform, structured mesh. This
-latter property greatly simplifies the verification of the implementations.
-Occasionally we insert a physically more relevant example
-to remind the reader that changing the PDE and boundary
-conditions to something more real might often be a trivial task.
+The mathematics of the illustrations is kept simple to better focus on
+FEniCS functionality and syntax. This means that we mostly use the
+Poisson equation and the time-dependent diffusion equation as model
+problems, often with input data adjusted such that we get a very
+simple solution that can be exactly reproduced by any standard finite
+element method over a uniform, structured mesh. This latter property
+greatly simplifies the verification of the implementations.
+Occasionally we insert a physically more relevant example to remind
+the reader that changing the PDE and boundary conditions to something
+more real might often be a trivial task.
 
 .. With the fundamentals explained, we move on to physically more
 
@@ -59,8 +60,8 @@ tutorial. Simply keep on reading and try out the examples. You will be
 amazed of how easy it is to solve PDEs with FEniCS!
 
 Reading this tutorial obviously requires access to a machine where the
-FEniCS software is installed. The section :ref:`tut:app:install` explains
-briefly how to install the necessary tools.
+FEniCS software is installed. The section :ref:`tut:app:install`
+explains briefly how to install the necessary tools.
 
 All the examples discussed in the following are available as
 executable Python source code files in a directory tree.
@@ -83,16 +84,17 @@ Our first example regards the Poisson problem,
 
 
 
-Here, :math:`u(\pmb{x})` is the unknown function, :math:`f(\pmb{x})` is a
-prescribed function, :math:`\nabla^2` is the Laplace operator (also
-often written as :math:`\Delta`), :math:`\Omega` is the spatial domain, and
-:math:`\partial\Omega` is the boundary of :math:`\Omega`. A stationary PDE like
-this, together with a complete set of boundary conditions, constitute
-a *boundary-value problem*, which must be precisely stated before
-it makes sense to start solving it with FEniCS.
+Here, :math:`u(\pmb{x})` is the unknown function, :math:`f(\pmb{x})`
+is a prescribed function, :math:`\nabla^2` is the Laplace operator
+(also often written as :math:`\Delta`), :math:`\Omega` is the spatial
+domain, and :math:`\partial\Omega` is the boundary of
+:math:`\Omega`. A stationary PDE like this, together with a complete
+set of boundary conditions, constitute a *boundary-value problem*,
+which must be precisely stated before it makes sense to start solving
+it with FEniCS.
 
-In two space dimensions with coordinates :math:`x` and :math:`y`, we can write out
-the Poisson equation as
+In two space dimensions with coordinates :math:`x` and :math:`y`, we
+can write out the Poisson equation as
 
 .. math::
 
@@ -100,8 +102,8 @@ the Poisson equation as
         {\partial^2 u\over\partial y^2} = f(x,y)\thinspace .
 
 
-The unknown :math:`u` is now a function of two variables, :math:`u(x,y)`, defined
-over a two-dimensional domain :math:`\Omega`.
+The unknown :math:`u` is now a function of two variables,
+:math:`u(x,y)`, defined over a two-dimensional domain :math:`\Omega`.
 
 The Poisson equation arises in numerous physical contexts, including
 heat conduction, electrostatics, diffusion of substances, twisting of
@@ -110,8 +112,8 @@ equation appears in numerical splitting strategies of more complicated
 systems of PDEs, in particular the Navier-Stokes equations.
 
 
-Solving a physical problem with FEniCS consists
-of the following steps:
+Solving a physical problem with FEniCS consists of the following
+steps:
 
  1. Identify the PDE and its boundary conditions.
 
@@ -119,10 +121,11 @@ of the following steps:
 
  3. Make a Python program where the formulas in the variational
     problem are coded, along with definitions of input data such as
-    :math:`f`, :math:`u_0`, and a mesh for the spatial domain :math:`\Omega`.
+    :math:`f`, :math:`u_0`, and a mesh for the spatial domain
+    :math:`\Omega`.
 
- 4. Add statements in the program for solving the variational
-    problem, computing derived quantities such as :math:`\nabla u`, and
+ 4. Add statements in the program for solving the variational problem,
+    computing derived quantities such as :math:`\nabla u`, and
     visualizing the results.
 
 We shall now go through steps 2--4 in detail.  The key feature of
@@ -139,14 +142,12 @@ Variational Formulation
 
 
 FEniCS makes it easy to solve PDEs if finite elements are used for
-discretization in space and the problem is expressed as a
-*variational problem*. Readers who are not familiar with
-variational problems will get a brief introduction to the topic in
-this tutorial, but getting and reading
-a proper book on the finite element method in addition is encouraged. The section :ref:`tut:appendix:books` contains a list of some suitable
-books.
-
-
+discretization in space and the problem is expressed as a *variational
+problem*. Readers who are not familiar with variational problems will
+get a brief introduction to the topic in this tutorial, but getting
+and reading a proper book on the finite element method in addition is
+encouraged. The section :ref:`tut:appendix:books` contains a list of
+some suitable books.
 
 .. index:: test function
 
@@ -154,65 +155,57 @@ books.
 .. index:: trial function
 
 
-The core of the recipe for turning a PDE into a variational problem
-is to multiply the PDE by a function :math:`v`, integrate the resulting
-equation over :math:`\Omega`, and perform integration by parts of terms with
-second-order derivatives. The function :math:`v` which multiplies the PDE
-is in the mathematical finite element literature
-called a *test function*. The unknown function :math:`u` to be approximated
-is referred to
-as a *trial function*. The terms test and trial function are used
-in FEniCS programs too.
-Suitable
-function spaces must be specified for the test and trial functions.
-For standard PDEs arising in physics and mechanics such spaces are
-well known.
+The core of the recipe for turning a PDE into a variational problem is
+to multiply the PDE by a function :math:`v`, integrate the resulting
+equation over :math:`\Omega`, and perform integration by parts of
+terms with second-order derivatives. The function :math:`v` which
+multiplies the PDE is in the mathematical finite element literature
+called a *test function*. The unknown function :math:`u` to be
+approximated is referred to as a *trial function*. The terms test and
+trial function are used in FEniCS programs too.  Suitable function
+spaces must be specified for the test and trial functions.  For
+standard PDEs arising in physics and mechanics such spaces are well
+known.
 
-In the present case, we first multiply the Poisson equation
-by the test function :math:`v` and integrate,
+In the present case, we first multiply the Poisson equation by the
+test function :math:`v` and integrate,
 
 .. math::
    :label: tut:poisson1:multbyv
 
-
          -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace .
 
-Then we apply integration by parts to the integrand with
-second-order derivatives,
+Then we apply integration by parts to the integrand with second-order
+derivatives,
 
 .. math::
    :label: tut:poisson1:eqbyparts
-
 
          -\int_\Omega (\nabla^2 u)v \, \mathrm{d}x
         = \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x - \int_{\partial\Omega}{\partial u\over
         \partial n}v \, \mathrm{d}s ,
 
 
-where :math:`{\partial u\over
-\partial n}` is the derivative of :math:`u` in the outward normal direction at
-the boundary.
-The test function :math:`v` is required to vanish on the parts of the
-boundary where :math:`u` is known, which in the present problem implies that
-:math:`v=0` on the whole boundary :math:`\partial\Omega`.
-The second term on the right-hand side of the last equation therefore
+where :math:`{\partial u\over \partial n}` is the derivative of
+:math:`u` in the outward normal direction at the boundary.  The test
+function :math:`v` is required to vanish on the parts of the boundary
+where :math:`u` is known, which in the present problem implies that
+:math:`v=0` on the whole boundary :math:`\partial\Omega`.  The second
+term on the right-hand side of the last equation therefore
 vanishes. It then follows that
 
 .. math::
    :label: tut:poisson1:weak1
          \int_\Omega\nabla u\cdot\nabla v \, \mathrm{d}x = \int_\Omega fv \, \mathrm{d}x\thinspace .
 
+This equation is supposed to hold for all :math:`v` in some function
+space :math:`\hat V`. The trial function :math:`u` lies in some
+(possibly different) function space :math:`V`.  We say that the last
+equation is the *weak form* of the original boundary value problem
+consisting of the PDE :math:`-\nabla^2u=f` and the boundary condition
+:math:`u=u_0`.
 
-
-This equation is supposed to hold
-for all :math:`v` in some function space :math:`\hat V`. The trial function :math:`u`
-lies in some (possibly different) function space :math:`V`.
-We say that the last equation is the *weak form* of the original
-boundary value problem consisting of the PDE :math:`-\nabla^2u=f` and the
-boundary condition :math:`u=u_0`.
-
-The proper statement of
-our variational problem now goes as follows:
+The proper statement of our variational problem now goes as follows:
 Find :math:`u \in V` such that
 
 .. math::
@@ -223,8 +216,8 @@ Find :math:`u \in V` such that
           \quad \forall v \in \hat{V}.
 
 
-The test and trial spaces :math:`\hat{V}` and :math:`V` are in the present
-problem defined as
+The test and trial spaces :math:`\hat{V}` and :math:`V` are in the
+present problem defined as
 
 .. math::
 
@@ -232,28 +225,22 @@ problem defined as
              V      &= \{v \in H^1(\Omega) : v = u_0 \mbox{ on } \partial\Omega\}\thinspace .
 
 
-In short,
-:math:`H^1(\Omega)` is the mathematically well-known Sobolev space containing
-functions :math:`v` such that :math:`v^2` and :math:`||\nabla v||^2` have finite integrals over
-:math:`\Omega`. The solution of the underlying
-PDE
-must lie in a function space where also the derivatives are continuous,
-but the Sobolev space :math:`H^1(\Omega)` allows functions with discontinuous
-derivatives.
+In short, :math:`H^1(\Omega)` is the mathematically well-known Sobolev
+space containing functions :math:`v` such that :math:`v^2` and
+:math:`||\nabla v||^2` have finite integrals over :math:`\Omega`. The
+solution of the underlying PDE must lie in a function space where also
+the derivatives are continuous, but the Sobolev space
+:math:`H^1(\Omega)` allows functions with discontinuous derivatives.
 This weaker continuity requirement of :math:`u` in the variational
-statement,
-caused by the integration by parts, has
-great practical consequences when it comes to constructing
-finite elements.
+statement, caused by the integration by parts, has great practical
+consequences when it comes to constructing finite elements.
 
 To solve the Poisson equation numerically, we need to transform the
-continuous variational problem
-to a discrete variational
-problem. This is done by introducing *finite-dimensional* test and
-trial spaces, often denoted as
-:math:`\hat{V}_h\subset\hat{V}` and :math:`V_h\subset{V}`. The
-discrete variational problem reads:
-Find :math:`u_h \in V_h \subset V` such that
+continuous variational problem to a discrete variational problem. This
+is done by introducing *finite-dimensional* test and trial spaces,
+often denoted as :math:`\hat{V}_h\subset\hat{V}` and
+:math:`V_h\subset{V}`. The discrete variational problem reads: Find
+:math:`u_h \in V_h \subset V` such that
 
 .. math::
    :label: tut:poisson1:vard
@@ -263,36 +250,36 @@ Find :math:`u_h \in V_h \subset V` such that
           \quad \forall v \in \hat{V}_h \subset \hat{V}\thinspace .
 
 
-The choice of :math:`\hat{V}_h` and :math:`V_h` follows directly from the
-kind of finite elements we want to apply in our problem. For example,
-choosing the well-known linear triangular element with three nodes
-implies that
-:math:`\hat V_h` and :math:`V_h` are the spaces of all piecewise linear functions
-over a mesh of triangles,
-where the functions in :math:`\hat V_h`
-are zero on the boundary
-and those in :math:`V_h` equal :math:`u_0` on the boundary.
+The choice of :math:`\hat{V}_h` and :math:`V_h` follows directly from
+the kind of finite elements we want to apply in our problem. For
+example, choosing the well-known linear triangular element with three
+nodes implies that :math:`\hat V_h` and :math:`V_h` are the spaces of
+all piecewise linear functions over a mesh of triangles, where the
+functions in :math:`\hat V_h` are zero on the boundary and those in
+:math:`V_h` equal :math:`u_0` on the boundary.
 
-The mathematics literature on variational problems writes :math:`u_h` for
-the solution of the discrete problem and :math:`u` for the solution of the
-continuous problem. To obtain (almost) a one-to-one relationship
-between the mathematical formulation of a problem and the
-corresponding FEniCS program, we shall use :math:`u` for the solution of
-the discrete problem and :math:`u_{e}` for the exact solution of the
-continuous problem, *if* we need to explicitly distinguish
-between the two.  In most cases, we will introduce the PDE problem with
-:math:`u` as unknown, derive a variational equation :math:`a(u,v)=L(v)` with :math:`u\in
-V` and :math:`v\in \hat V`, and then simply discretize the problem by saying
-that we choose finite-dimensional spaces for :math:`V` and :math:`\hat V`. This
-restriction of :math:`V` implies that :math:`u` becomes a discrete finite element
-function.  In practice, this means that we turn our PDE problem into a
-continuous variational problem, create a mesh and specify an element
-type, and then let :math:`V` correspond to this mesh and element choice.
-Depending upon whether :math:`V` is infinite- or finite-dimensional, :math:`u`
-will be the exact or approximate solution.
+The mathematics literature on variational problems writes :math:`u_h`
+for the solution of the discrete problem and :math:`u` for the
+solution of the continuous problem. To obtain (almost) a one-to-one
+relationship between the mathematical formulation of a problem and the
+corresponding FEniCS program, we shall use :math:`u` for the solution
+of the discrete problem and :math:`u_{e}` for the exact solution of
+the continuous problem, *if* we need to explicitly distinguish between
+the two.  In most cases, we will introduce the PDE problem with
+:math:`u` as unknown, derive a variational equation
+:math:`a(u,v)=L(v)` with :math:`u\in V` and :math:`v\in \hat V`, and
+then simply discretize the problem by saying that we choose
+finite-dimensional spaces for :math:`V` and :math:`\hat V`. This
+restriction of :math:`V` implies that :math:`u` becomes a discrete
+finite element function.  In practice, this means that we turn our PDE
+problem into a continuous variational problem, create a mesh and
+specify an element type, and then let :math:`V` correspond to this
+mesh and element choice.  Depending upon whether :math:`V` is
+infinite- or finite-dimensional, :math:`u` will be the exact or
+approximate solution.
 
-It turns out to be convenient to
-introduce the following unified notation for linear weak forms:
+It turns out to be convenient to introduce the following unified
+notation for linear weak forms:
 
 .. math::
 
@@ -308,23 +295,22 @@ In the present problem we have that
         L(v) &= \int_{\Omega} fv \, \mathrm{d}x\thinspace .
 
 
-From the mathematics literature,
-:math:`a(u,v)` is known as a *bilinear form* and :math:`L(v)` as a
-*linear form*.
-We shall in every linear problem we solve identify the terms with the
-unknown :math:`u` and collect them in :math:`a(u,v)`, and similarly collect
-all terms with only known functions in :math:`L(v)`. The formulas for :math:`a` and
-:math:`L` are then coded directly in the program.
+From the mathematics literature, :math:`a(u,v)` is known as a
+*bilinear form* and :math:`L(v)` as a *linear form*.  We shall in
+every linear problem we solve identify the terms with the unknown
+:math:`u` and collect them in :math:`a(u,v)`, and similarly collect
+all terms with only known functions in :math:`L(v)`. The formulas for
+:math:`a` and :math:`L` are then coded directly in the program.
 
-To summarize, before making a FEniCS program for solving a PDE,
-we must first perform two steps:
+To summarize, before making a FEniCS program for solving a PDE, we
+must first perform two steps:
 
-  * Turn the PDE problem into a discrete
-    variational problem: find :math:`u\in V`
-    such that :math:`a(u,v) = L(v)\quad\forall v\in \hat{V}`.
+  * Turn the PDE problem into a discrete variational problem: find
+    :math:`u\in V` such that :math:`a(u,v) = L(v)\quad\forall v\in
+    \hat{V}`.
 
-  * Specify the choice of spaces (:math:`V` and :math:`\hat V`), which means
-    specifying the mesh and type of finite elements.
+  * Specify the choice of spaces (:math:`V` and :math:`\hat V`), which
+    means specifying the mesh and type of finite elements.
 
 .. _tut:poisson1:impl:
 
@@ -335,12 +321,12 @@ Implementation (1)
 .. index:: d1_p2D.py
 
 
-The test problem so far has a general domain :math:`\Omega` and general functions
-:math:`u_0` and :math:`f`. For our first implementation we must decide on specific
-choices of :math:`\Omega`, :math:`u_0`, and :math:`f`.
-It will be wise to construct a specific problem where we can easily
-check that the computed solution is correct. Let us start with
-specifying an exact solution
+The test problem so far has a general domain :math:`\Omega` and
+general functions :math:`u_0` and :math:`f`. For our first
+implementation we must decide on specific choices of :math:`\Omega`,
+:math:`u_0`, and :math:`f`.  It will be wise to construct a specific
+problem where we can easily check that the computed solution is
+correct. Let us start with specifying an exact solution
 
 .. math::
    :label: tut:poisson1:impl:uex
@@ -350,7 +336,8 @@ specifying an exact solution
 
 
 on some 2D domain.  By inserting \eq:ref:`tut:poisson1:impl:uex` in
-our Poisson problem, we find that :math:`u_{\rm e}(x,y)` is a solution if
+our Poisson problem, we find that :math:`u_{\rm e}(x,y)` is a solution
+if
 
 .. math::
          f(x,y) = -6,\quad u_0(x,y)=u_{\rm e}(x,y)=1 + x^2 + 2y^2,
@@ -366,16 +353,16 @@ is that the finite element method, with a rectangular domain uniformly
 partitioned into linear triangular elements, will exactly reproduce a
 second-order polynomial at the vertices of the cells, regardless of
 the size of the elements. This property allows us to verify the
-implementation by comparing the computed solution, called :math:`u` in this
-document (except when setting up the PDE problem), with the exact
+implementation by comparing the computed solution, called :math:`u` in
+this document (except when setting up the PDE problem), with the exact
 solution, denoted by :math:`u_{\rm e}`: :math:`u` should equal
-:math:`u_{\rm}` to machine precision \emph{at the nodes}.
-Test problems with this property will be frequently constructed
-throughout this tutorial.
+:math:`u_{\rm}` to machine precision \emph{at the nodes}.  Test
+problems with this property will be frequently constructed throughout
+this tutorial.
 
-A FEniCS program for solving the Poisson equation in 2D
-with the given choices
-of :math:`u_0`, :math:`f`, and :math:`\Omega` may look as follows:
+A FEniCS program for solving the Poisson equation in 2D with the given
+choices of :math:`u_0`, :math:`f`, and :math:`\Omega` may look as
+follows:
 
 
 .. code-block:: python
@@ -430,29 +417,27 @@ of :math:`u_0`, :math:`f`, and :math:`\Omega` may look as follows:
 The complete code can be found in the file ``d1_p2D.py`` in the
 directory ``stationary/poisson``.
 
-We shall now dissect this FEniCS program in detail. The program
-is written in the Python programming language.
-You may either take a quick look at the
-`official Python tutorial <http://docs.python.org/tutorial/>`_
-to pick up the basics of Python if you are unfamiliar with the language,
-or you may learn enough Python as you go along with the examples in the
-present tutorial. The latter strategy has proven to work for many newcomers
-to FEniCS. (The requirement of using Python and an abstract
-mathematical formulation of the finite element problem may seem
-difficult for those who are unfamiliar with these topics.
-However, the amount of mathematics and Python that is really demanded
-to get you productive with FEniCS is quite limited.
-And Python is an easy-to-learn language that you certainly will love
-and use far beyond FEniCS programming.)
-the section :ref:`tut:appendix:pybooks` lists some relevant Python books.
+We shall now dissect this FEniCS program in detail. The program is
+written in the Python programming language.  You may either take a
+quick look at the `official Python tutorial
+<http://docs.python.org/tutorial/>`_ to pick up the basics of Python
+if you are unfamiliar with the language, or you may learn enough
+Python as you go along with the examples in the present tutorial. The
+latter strategy has proven to work for many newcomers to FEniCS. (The
+requirement of using Python and an abstract mathematical formulation
+of the finite element problem may seem difficult for those who are
+unfamiliar with these topics.  However, the amount of mathematics and
+Python that is really demanded to get you productive with FEniCS is
+quite limited.  And Python is an easy-to-learn language that you
+certainly will love and use far beyond FEniCS programming.)  the
+section :ref:`tut:appendix:pybooks` lists some relevant Python books.
 
 The listed FEniCS program defines a finite element mesh, the discrete
-function spaces :math:`V` and :math:`\hat{V}` corresponding to this mesh and
-the element type, boundary conditions
-for :math:`u` (the function :math:`u_0`), :math:`a(u,v)`, and :math:`L(v)`.
-Thereafter, the unknown
-trial function :math:`u` is computed. Then we can investigate :math:`u` visually or
-analyze the computed values.
+function spaces :math:`V` and :math:`\hat{V}` corresponding to this
+mesh and the element type, boundary conditions for :math:`u` (the
+function :math:`u_0`), :math:`a(u,v)`, and :math:`L(v)`.  Thereafter,
+the unknown trial function :math:`u` is computed. Then we can
+investigate :math:`u` visually or analyze the computed values.
 
 The first line in the program,
 
@@ -460,18 +445,17 @@ The first line in the program,
 
         from dolfin import *
 
-imports the key classes ``UnitSquare``,
-``FunctionSpace``, ``Function``, and so forth, from the DOLFIN library.
-All FEniCS programs for solving PDEs by the finite element method
-normally start with this line. DOLFIN is a software library with efficient
-and convenient C++ classes for finite element computing, and
-``dolfin`` is a Python package providing access to this
-C++ library from Python programs.
-You can think of FEniCS as an umbrella, or project name, for a set of
-computational components, where DOLFIN is one important component for
-writing finite element programs. The ``from dolfin import *`` statement
-imports other components too, but newcomers to FEniCS
-programming do not need to care about this.
+imports the key classes ``UnitSquare``, ``FunctionSpace``,
+``Function``, and so forth, from the DOLFIN library.  All FEniCS
+programs for solving PDEs by the finite element method normally start
+with this line. DOLFIN is a software library with efficient and
+convenient C++ classes for finite element computing, and ``dolfin`` is
+a Python package providing access to this C++ library from Python
+programs.  You can think of FEniCS as an umbrella, or project name,
+for a set of computational components, where DOLFIN is one important
+component for writing finite element programs. The ``from dolfin
+import *`` statement imports other components too, but newcomers to
+FEniCS programming do not need to care about this.
 
 
 .. index:: Mesh
@@ -487,23 +471,22 @@ The statement
         mesh = UnitSquare(6, 4)
 
 defines a uniform finite element mesh over the unit square
-:math:`[0,1]\times [0,1]`. The mesh consists of *cells*,
-which are triangles with
-straight sides. The parameters 6 and 4 tell that the square is
-first divided into :math:`6\times 4` rectangles, and then each rectangle
-is divided into two triangles. The total number of triangles
-then becomes 48. The total number of vertices in this mesh is
-:math:`7\cdot 5=35`.
-DOLFIN offers some classes for creating meshes over
-very simple geometries. For domains of more complicated shape one needs
-to use a separate *preprocessor* program to create the mesh.
-The FEniCS program will then read the mesh from file.
+:math:`[0,1]\times [0,1]`. The mesh consists of *cells*, which are
+triangles with straight sides. The parameters 6 and 4 tell that the
+square is first divided into :math:`6\times 4` rectangles, and then
+each rectangle is divided into two triangles. The total number of
+triangles then becomes 48. The total number of vertices in this mesh
+is :math:`7\cdot 5=35`.  DOLFIN offers some classes for creating
+meshes over very simple geometries. For domains of more complicated
+shape one needs to use a separate *preprocessor* program to create the
+mesh.  The FEniCS program will then read the mesh from file.
 
 
 .. index:: FunctionSpace
 
 
-Having a mesh, we can define a discrete function space ``V`` over this mesh:
+Having a mesh, we can define a discrete function space ``V`` over this
+mesh:
 
 .. code-block:: python
 
@@ -520,21 +503,18 @@ argument is the degree of the basis functions on the element.
 
 .. index:: Lagrange finite element family
 
-The type of element is here "Lagrange", implying the
-standard Lagrange family of elements.
-(Some FEniCS programs use ``'CG'``, for Continuous Galerkin,
-as a synonym for ``'Lagrange'``.)
-With degree 1, we simply get the standard linear Lagrange element,
-which is a triangle
-with nodes at the three vertices.
-Some finite element practitioners refer to this element as the
-"linear triangle".
-The computed :math:`u` will be continuous and linearly varying in :math:`x` and :math:`y` over
-each cell in the mesh.
-Higher-degree polynomial approximations over each cell are
-trivially obtained by increasing the third parameter in
-``FunctionSpace``. Changing the second parameter to ``'DG'`` creates a
-function space for discontinuous Galerkin methods.
+The type of element is here "Lagrange", implying the standard Lagrange
+family of elements.  (Some FEniCS programs use ``'CG'``, for
+Continuous Galerkin, as a synonym for ``'Lagrange'``.)  With degree 1,
+we simply get the standard linear Lagrange element, which is a
+triangle with nodes at the three vertices.  Some finite element
+practitioners refer to this element as the "linear triangle".  The
+computed :math:`u` will be continuous and linearly varying in
+:math:`x` and :math:`y` over each cell in the mesh.  Higher-degree
+polynomial approximations over each cell are trivially obtained by
+increasing the third parameter in ``FunctionSpace``. Changing the
+second parameter to ``'DG'`` creates a function space for
+discontinuous Galerkin methods.
 
 
 .. index:: TestFunction
@@ -548,12 +528,12 @@ function space for discontinuous Galerkin methods.
 .. index:: Dirichlet boundary conditions
 
 
-In mathematics, we distinguish between the trial and test
-spaces :math:`V` and :math:`\hat{V}`. The only difference in the present problem
-is the boundary conditions. In FEniCS we do not specify the boundary
-conditions as part of the function space, so it is sufficient to work
-with one common space ``V`` for the and trial and test functions in the
-program:
+In mathematics, we distinguish between the trial and test spaces
+:math:`V` and :math:`\hat{V}`. The only difference in the present
+problem is the boundary conditions. In FEniCS we do not specify the
+boundary conditions as part of the function space, so it is sufficient
+to work with one common space ``V`` for the and trial and test
+functions in the program:
 
 .. code-block:: python
 
@@ -572,48 +552,45 @@ The next step is to specify the boundary condition: :math:`u=u_0` on
 
         bc = DirichletBC(V, u0, u0_boundary)
 
-where ``u0`` is an instance holding the :math:`u_0` values,
-and ``u0_boundary`` is a function (or object) describing whether a point lies
-on the boundary where :math:`u` is specified.
+where ``u0`` is an instance holding the :math:`u_0` values, and
+``u0_boundary`` is a function (or object) describing whether a point
+lies on the boundary where :math:`u` is specified.
 
-Boundary conditions
-of the type :math:`u=u_0` are known as *Dirichlet conditions*, and also
-as *essential boundary conditions* in a finite element context.
-Naturally, the name of the DOLFIN class holding the information about
-Dirichlet boundary conditions is ``DirichletBC``.
+Boundary conditions of the type :math:`u=u_0` are known as *Dirichlet
+conditions*, and also as *essential boundary conditions* in a finite
+element context.  Naturally, the name of the DOLFIN class holding the
+information about Dirichlet boundary conditions is ``DirichletBC``.
 
 
 .. index:: Expression
 
 
-The ``u0`` variable refers to an ``Expression`` object, which
-is used to represent a mathematical function. The typical construction is
+The ``u0`` variable refers to an ``Expression`` object, which is used
+to represent a mathematical function. The typical construction is
 
 .. code-block:: python
 
         u0 = Expression(formula)
 
 where ``formula`` is a string containing the mathematical expression.
-This formula is
-written with C++ syntax (the expression is
-automatically turned into an efficient, compiled
-C++ function, see the section :ref:`tut:app:cpp:functions` for
-details on the syntax). The independent variables in the function
-expression are supposed to be available
-as a point vector ``x``, where the first element ``x[0]``
+This formula is written with C++ syntax (the expression is
+automatically turned into an efficient, compiled C++ function, see the
+section :ref:`tut:app:cpp:functions` for details on the syntax). The
+independent variables in the function expression are supposed to be
+available as a point vector ``x``, where the first element ``x[0]``
 corresponds to the :math:`x` coordinate, the second element ``x[1]``
 to the :math:`y` coordinate, and (in a three-dimensional problem)
 ``x[2]`` to the :math:`z` coordinate. With our choice of
-:math:`u_0(x,y)=1 + x^2 + 2y^2`, the formula string must be written
-as ``1 + x[0]*x[0] + 2*x[1]*x[1]``:
+:math:`u_0(x,y)=1 + x^2 + 2y^2`, the formula string must be written as
+``1 + x[0]*x[0] + 2*x[1]*x[1]``:
 
 .. code-block:: python
 
         u0 = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]')
 
 
-The information about where to apply the ``u0`` function as
-boundary condition is coded in a function ``u0_boundary``:
+The information about where to apply the ``u0`` function as boundary
+condition is coded in a function ``u0_boundary``:
 
 .. index:: boundary specification (function)
 
@@ -623,23 +600,18 @@ boundary condition is coded in a function ``u0_boundary``:
         def u0_boundary(x, on_boundary):
             return on_boundary
 
-A function like ``u0_boundary`` for marking the boundary must
-return
-a boolean value: ``True`` if the given point
-``x`` lies on the Dirichlet boundary and
-``False`` otherwise.
-The argument ``on_boundary`` is ``True`` if ``x`` is on
-the physical boundary of the mesh, so in the present case, where
-we are supposed to return ``True`` for all points on
-the boundary, we can just return the supplied value of
-``on_boundary``.
-The ``u0_boundary`` function will be called
-for every discrete point in the mesh, which allows us to have boundaries
+A function like ``u0_boundary`` for marking the boundary must return a
+boolean value: ``True`` if the given point ``x`` lies on the Dirichlet
+boundary and ``False`` otherwise.  The argument ``on_boundary`` is
+``True`` if ``x`` is on the physical boundary of the mesh, so in the
+present case, where we are supposed to return ``True`` for all points
+on the boundary, we can just return the supplied value of
+``on_boundary``.  The ``u0_boundary`` function will be called for
+every discrete point in the mesh, which allows us to have boundaries
 where :math:`u` are known also inside the domain, if desired.
 
-One can also omit the ``on_boundary`` argument,
-but in that case we need to test on the value of the coordinates
-in ``x``:
+One can also omit the ``on_boundary`` argument, but in that case we
+need to test on the value of the coordinates in ``x``:
 
 .. code-block:: python
 
@@ -647,13 +619,12 @@ in ``x``:
             return x[0] == 0 or x[1] == 0 or x[0] == 1 or x[1] == 1
 
 As for the formula in ``Expression`` objects, ``x`` in the
-``u0_boundary`` function represents a point in space with
-coordinates ``x[0]``, ``x[1]``, etc. Comparing floating-point
-values using an exact match test with ``==``
-is not good programming practice, because small round-off errors in
-the computations of the ``x`` values could make a test
-``x[0] == 1`` become false even though ``x`` lies on the boundary.
-A better test is to check for equality with a tolerance:
+``u0_boundary`` function represents a point in space with coordinates
+``x[0]``, ``x[1]``, etc. Comparing floating-point values using an
+exact match test with ``==`` is not good programming practice, because
+small round-off errors in the computations of the ``x`` values could
+make a test ``x[0] == 1`` become false even though ``x`` lies on the
+boundary.  A better test is to check for equality with a tolerance:
 
 .. code-block:: python
 
@@ -669,14 +640,15 @@ A better test is to check for equality with a tolerance:
 .. index:: UFL
 
 
-Before defining :math:`a(u,v)` and :math:`L(v)` we have to specify the :math:`f` function:
+Before defining :math:`a(u,v)` and :math:`L(v)` we have to specify the
+:math:`f` function:
 
 .. code-block:: python
 
         f = Expression('-6')
 
-When :math:`f` is constant over the domain, ``f`` can be
-more efficiently represented as a ``Constant`` object:
+When :math:`f` is constant over the domain, ``f`` can be more
+efficiently represented as a ``Constant`` object:
 
 .. code-block:: python
 
@@ -690,24 +662,22 @@ Now we have all the objects we need in order to specify this problem's
         a = inner(nabla_grad(u), nabla_grad(v))*dx
         L = f*v*dx
 
-In essence, these two lines specify the PDE to be solved.
-Note the very close correspondence between the Python syntax
-and the mathematical formulas :math:`\nabla u\cdot\nabla v \, \mathrm{d}x` and
-:math:`fv \, \mathrm{d}x`.
-This is a key strength of FEniCS: the formulas in the variational
-formulation translate directly to very similar Python code, a feature
-that makes it easy to specify PDE problems with lots of PDEs and
-complicated terms in the equations.
-The language used to express weak forms is called UFL (Unified Form Language)
-and is an integral part of FEniCS.
+In essence, these two lines specify the PDE to be solved.  Note the
+very close correspondence between the Python syntax and the
+mathematical formulas :math:`\nabla u\cdot\nabla v \, \mathrm{d}x` and
+:math:`fv \, \mathrm{d}x`.  This is a key strength of FEniCS: the
+formulas in the variational formulation translate directly to very
+similar Python code, a feature that makes it easy to specify PDE
+problems with lots of PDEs and complicated terms in the equations.
+The language used to express weak forms is called UFL (Unified Form
+Language) and is an integral part of FEniCS.
 
-Instead of ``nabla_grad`` we could also just have written
-``grad`` in the examples in this tutorial. However, when taking
-gradients of vector fields, ``grad`` and ``nabla_grad``
-differ. The latter is consistent with the tensor algebra commonly
-used to derive vector and tensor PDEs, where the "nabla" acts as a
-vector operator, and therefore this author prefers to always use
-``nabla_grad``.
+Instead of ``nabla_grad`` we could also just have written ``grad`` in
+the examples in this tutorial. However, when taking gradients of
+vector fields, ``grad`` and ``nabla_grad`` differ. The latter is
+consistent with the tensor algebra commonly used to derive vector and
+tensor PDEs, where the "nabla" acts as a vector operator, and
+therefore this author prefers to always use ``nabla_grad``.
 
 
 Having ``a`` and ``L`` defined, and information about essential
@@ -729,22 +699,21 @@ variable, which is accomplished by this equivalent code:
         solve(equation, u, bc)
 
 
-Note that we first defined the variable ``u`` as a
-``TrialFunction`` and used it to represent the unknown in the form
-``a``.  Thereafter, we redefined ``u`` to be a ``Function``
-object representing the solution, i.e., the computed finite element
-function :math:`u`.  This redefinition of the variable ``u`` is possible
-in Python and often done in FEniCS applications. The two types of
-objects that ``u`` refers to are equal from a mathematical point of
-view, and hence it is natural to use the same variable name for both
-objects. In a program, however, ``TrialFunction`` objects must
-always be used for the unknowns in the problem specification (the form
-``a``), while ``Function`` objects must be used for quantities
-that are computed (known).
+Note that we first defined the variable ``u`` as a ``TrialFunction``
+and used it to represent the unknown in the form ``a``.  Thereafter,
+we redefined ``u`` to be a ``Function`` object representing the
+solution, i.e., the computed finite element function :math:`u`.  This
+redefinition of the variable ``u`` is possible in Python and often
+done in FEniCS applications. The two types of objects that ``u``
+refers to are equal from a mathematical point of view, and hence it is
+natural to use the same variable name for both objects. In a program,
+however, ``TrialFunction`` objects must always be used for the
+unknowns in the problem specification (the form ``a``), while
+``Function`` objects must be used for quantities that are computed
+(known).
 
 
-The simplest way of quickly looking at ``u`` and the mesh
-is to say
+The simplest way of quickly looking at ``u`` and the mesh is to say
 
 .. code-block:: python
 
@@ -753,26 +722,26 @@ is to say
         interactive()
 
 The ``interactive()`` call is necessary for the plot to remain on the
-screen. With the left, middle, and right
-mouse buttons you can rotate, translate, and zoom
-(respectively) the plotted surface to better examine what the solution looks
-like.
-Figures :ref:`tut:poisson:2D:fig:ex1:u` and :ref:`tut:poisson:2D:fig:ex1:mesh`
-display the resulting :math:`u` function and the finite element mesh, respectively.
+screen. With the left, middle, and right mouse buttons you can rotate,
+translate, and zoom (respectively) the plotted surface to better
+examine what the solution looks like.  Figures
+:ref:`tut:poisson:2D:fig:ex1:u` and :ref:`tut:poisson:2D:fig:ex1:mesh`
+display the resulting :math:`u` function and the finite element mesh,
+respectively.
 
-It is also possible to dump the computed solution to file, e.g., in the
-VTK format:
+It is also possible to dump the computed solution to file, e.g., in
+the VTK format:
 
 .. code-block:: python
 
         file = File('poisson.pvd')
         file << u
 
-The ``poisson.pvd`` file can now be loaded into any
-front-end to VTK, say ParaView or VisIt. The ``plot`` function
-is intended for quick examination of the solution during program development.
-More in-depth visual investigations of finite element solutions will
-normally benefit from using highly professional tools such as ParaView and
+The ``poisson.pvd`` file can now be loaded into any front-end to VTK,
+say ParaView or VisIt. The ``plot`` function is intended for quick
+examination of the solution during program development.  More in-depth
+visual investigations of finite element solutions will normally
+benefit from using highly professional tools such as ParaView and
 VisIt.
 
 
@@ -797,11 +766,12 @@ The next three sections deal with some technicalities about specifying
 the solution method for linear systems (so that you can solve large
 problems) and examining array data from the computed solution (so that
 you can check that the program is correct).  These technicalities are
-scattered around in forthcoming programs. However, the impatient reader who
-is more interested in seeing the previous program being adapted to a
-real physical problem, and play around with some interesting
-visualizations, can safely jump to the section :ref:`tut:poisson:membrane`.
-Information in the intermediate sections can be studied on demand.
+scattered around in forthcoming programs. However, the impatient
+reader who is more interested in seeing the previous program being
+adapted to a real physical problem, and play around with some
+interesting visualizations, can safely jump to the section
+:ref:`tut:poisson:membrane`.  Information in the intermediate sections
+can be studied on demand.
 
 .. _tut:poisson1:solve:prm:
 
@@ -820,12 +790,12 @@ iterative methods, which are faster and require much less memory.
 .. index:: d2_p2D.py
 
 
-Preconditioned Krylov solvers is a type of popular iterative methods that are
-easily accessible in FEniCS programs. The Poisson equation results in
-a symmetric, positive definite coefficient matrix, for which the optimal
-Krylov solver is the Conjugate Gradient (CG) method. Incomplete
-LU factorization (ILU) is a popular and
-robust all-round preconditioner, so let us try the CG--ILU pair:
+Preconditioned Krylov solvers is a type of popular iterative methods
+that are easily accessible in FEniCS programs. The Poisson equation
+results in a symmetric, positive definite coefficient matrix, for
+which the optimal Krylov solver is the Conjugate Gradient (CG)
+method. Incomplete LU factorization (ILU) is a popular and robust
+all-round preconditioner, so let us try the CG--ILU pair:
 
 .. code-block:: python
 
@@ -837,9 +807,8 @@ robust all-round preconditioner, so let us try the CG--ILU pair:
               solver_parameters=dict(linear_solver='cg',
                                      preconditioner='ilu'))
 
-the section :ref:`tut:app:solver:prec` lists the most
-popular choices of Krylov solvers and preconditioners available in
-FEniCS
+the section :ref:`tut:app:solver:prec` lists the most popular choices
+of Krylov solvers and preconditioners available in FEniCS
 
 
 .. index:: linear algebra backend
@@ -854,15 +823,13 @@ FEniCS
 .. index:: uBLAS
 
 
-The actual CG and ILU implementations that are brought into action depends on
-the choice of linear algebra package. FEniCS interfaces
-several linear algebra packages, called *linear algebra backends*
-in FEniCS terminology.
-PETSc is the default choice if DOLFIN is compiled with PETSc,
-otherwise uBLAS.  Epetra (Trilinos) and MTL4 are two other
-supported backends.
-Which backend to apply can
-be controlled by setting
+The actual CG and ILU implementations that are brought into action
+depends on the choice of linear algebra package. FEniCS interfaces
+several linear algebra packages, called *linear algebra backends* in
+FEniCS terminology.  PETSc is the default choice if DOLFIN is compiled
+with PETSc, otherwise uBLAS.  Epetra (Trilinos) and MTL4 are two other
+supported backends.  Which backend to apply can be controlled by
+setting
 
 .. code-block:: python
 
@@ -870,19 +837,19 @@ be controlled by setting
 
 where ``backendname`` is a string, either ``'PETSc'``, ``'uBLAS'``,
 ``'Epetra'``, or ``'MTL4'``.  All these backends offer high-quality
-implementations of both iterative and direct solvers for linear systems
-of equations.
+implementations of both iterative and direct solvers for linear
+systems of equations.
 
 
 .. index:: UMFPACK
 
 
 A common platform for FEniCS users is Ubuntu Linux.  The FEniCS
-distribution for Ubuntu contains PETSc, making this package the default
-linear algebra backend.  The default solver is sparse LU decomposition
-(``'lu'``), and the actual software that is called
-is then the sparse LU solver from UMFPACK (which PETSc has an
-interface to).
+distribution for Ubuntu contains PETSc, making this package the
+default linear algebra backend.  The default solver is sparse LU
+decomposition (``'lu'``), and the actual software that is called is
+then the sparse LU solver from UMFPACK (which PETSc has an interface
+to).
 
 
 .. index:: parameters database
@@ -891,12 +858,11 @@ interface to).
 .. index:: info function
 
 
-We will normally like to control
-the tolerance in the stopping criterion and the maximum number
-of iterations when running an iterative method.
-Such parameters can be set by accessing
-the *global parameter database*, which is called
-``parameters`` and which behaves as a nested dictionary. Write
+We will normally like to control the tolerance in the stopping
+criterion and the maximum number of iterations when running an
+iterative method.  Such parameters can be set by accessing the *global
+parameter database*, which is called ``parameters`` and which behaves
+as a nested dictionary. Write
 
 .. code-block:: python
 
@@ -915,13 +881,13 @@ named ``'krylov_solver'``, and the parameters are set like this:
         prm['relative_tolerance'] = 1E-6
         prm['maximum_iterations'] = 1000
 
-Stopping criteria for Krylov solvers usually involve the norm of
-the residual, which must be smaller than the absolute tolerance
-parameter and smaller than the relative tolerance parameter times
-the initial residual.
+Stopping criteria for Krylov solvers usually involve the norm of the
+residual, which must be smaller than the absolute tolerance parameter
+and smaller than the relative tolerance parameter times the initial
+residual.
 
-To see the number of actual iterations to reach the stopping criterion,
-we can insert
+To see the number of actual iterations to reach the stopping
+criterion, we can insert
 
 .. code-block:: python
 
@@ -931,8 +897,8 @@ we can insert
 
 A message with the equation system size, solver type, and number of
 iterations arises from specifying the argument ``PROGRESS``, while
-``DEBUG`` results in more information, including CPU time spent in
-the various parts of the matrix assembly and solve process.
+``DEBUG`` results in more information, including CPU time spent in the
+various parts of the matrix assembly and solve process.
 
 The complete solution process with control of the solver parameters
 now contains the statements
@@ -949,19 +915,19 @@ now contains the statements
               solver_parameters={'linear_solver': 'cg',
                                  'preconditioner': 'ilu'})
 
-The demo program ``d2_p2D.py`` in the
-``stationary/poisson`` directory incorporates the above shown control
-of the linear solver and precnditioner, but
-is otherwise similar to the previous ``d1_p2D.py`` program.
+The demo program ``d2_p2D.py`` in the ``stationary/poisson`` directory
+incorporates the above shown control of the linear solver and
+precnditioner, but is otherwise similar to the previous ``d1_p2D.py``
+program.
 
 We remark that default values for the global parameter database can be
-defined in an XML file, see the example file ``dolfin_parameters.xml`` in the
-directory ``stationary/poisson``.  If such a file is
-found in the directory where a FEniCS program is run, this file is
-read and used to initialize the ``parameters`` object. Otherwise,
-the file ``.config/fenics/dolfin_parameters.xml`` in the user's home
-directory is read, if it exists.  The XML file can also be in gzip'ed form
-with the extension ``.xml.gz``.
+defined in an XML file, see the example file ``dolfin_parameters.xml``
+in the directory ``stationary/poisson``.  If such a file is found in
+the directory where a FEniCS program is run, this file is read and
+used to initialize the ``parameters`` object. Otherwise, the file
+``.config/fenics/dolfin_parameters.xml`` in the user's home directory
+is read, if it exists.  The XML file can also be in gzip'ed form with
+the extension ``.xml.gz``.
 
 
 .. _tut:poisson1:solver:problem:
@@ -979,11 +945,11 @@ Linear Variational Problem and Solver Objects
 .. index:: d3_p2D.py
 
 
-The ``solve(a == L, u, bc)`` call is just a compact syntax alternative to a
-slightly more comprehensive specification of the variational equation
-and the solution of the associated linear system.  This alternative
-syntax is used in a lot of FEniCS applications and will also be
-used later in this tutorial, so we show it already now:
+The ``solve(a == L, u, bc)`` call is just a compact syntax alternative
+to a slightly more comprehensive specification of the variational
+equation and the solution of the associated linear system.  This
+alternative syntax is used in a lot of FEniCS applications and will
+also be used later in this tutorial, so we show it already now:
 
 .. code-block:: python
 
@@ -993,12 +959,11 @@ used later in this tutorial, so we show it already now:
         solver.solve()
 
 
-Many objects have an attribute ``parameters`` corresponding to
-a parameter set in the global ``parameters`` database,
-but local to the object. Here, ``solver.parameters`` play that
-role. Setting the CG method with ILU preconditiong as solution
-method and specifying solver-specific parameters can be done
-like this:
+Many objects have an attribute ``parameters`` corresponding to a
+parameter set in the global ``parameters`` database, but local to the
+object. Here, ``solver.parameters`` play that role. Setting the CG
+method with ILU preconditiong as solution method and specifying
+solver-specific parameters can be done like this:
 
 .. code-block:: python
 
@@ -1010,13 +975,13 @@ like this:
         cg_prm['maximum_iterations'] = 1000
 
 Calling ``info(solver.parameters, True)`` lists all the available
-parameter sets with default values for each parameter.
-Settings in the global ``parameters`` database are
-propagated to parameter sets in individual objects, with the
-possibility of being overwritten as done above.
+parameter sets with default values for each parameter.  Settings in
+the global ``parameters`` database are propagated to parameter sets in
+individual objects, with the possibility of being overwritten as done
+above.
 
-The ``d3_p2D.py`` program modifies the ``d2_p2D.py`` file
-to incorporate objects for the variational problem and solver.
+The ``d3_p2D.py`` program modifies the ``d2_p2D.py`` file to
+incorporate objects for the variational problem and solver.
 
 
 
@@ -1029,13 +994,15 @@ Examining the Discrete Solution
 .. index:: d4_p2D.py
 
 
-We know that, in the particular boundary-value problem of the section :ref:`tut:poisson1:impl`, the computed solution :math:`u` should equal the
-exact solution at the vertices of the cells.  An important extension
-of our first program is therefore to examine the computed values of
-the solution, which is the focus of the present section.
+We know that, in the particular boundary-value problem of the section
+:ref:`tut:poisson1:impl`, the computed solution :math:`u` should equal
+the exact solution at the vertices of the cells.  An important
+extension of our first program is therefore to examine the computed
+values of the solution, which is the focus of the present section.
 
-A finite element function like :math:`u` is expressed as a linear combination
-of basis functions :math:`\phi_j`, spanning the space :math:`V`:
+A finite element function like :math:`u` is expressed as a linear
+combination of basis functions :math:`\phi_j`, spanning the space
+:math:`V`:
 
 .. math::
    :label: tut:poisson1:ufem
@@ -1044,22 +1011,22 @@ of basis functions :math:`\phi_j`, spanning the space :math:`V`:
 
 
 By writing ``solve(a == L, u, bc)`` in the program, a linear system
-will be formed from :math:`a` and :math:`L`, and this system is solved for the
-:math:`U_1,\ldots,U_N` values. The :math:`U_1,\ldots,U_N` values are known
+will be formed from :math:`a` and :math:`L`, and this system is solved
+for the :math:`U_1,\ldots,U_N` values. The :math:`U_1,\ldots,U_N`
+values are known
 
 .. index:: degree of freedom
 
-as *degrees of freedom* of :math:`u`. For Lagrange elements (and many other
-element types) :math:`U_k` is simply the value of :math:`u` at the node
-with global number :math:`k`.
-(The nodes and cell vertices coincide for linear Lagrange elements, while
-for higher-order elements there may be additional nodes at
-the facets and in the interior of cells.)
+as *degrees of freedom* of :math:`u`. For Lagrange elements (and many
+other element types) :math:`U_k` is simply the value of :math:`u` at
+the node with global number :math:`k`.  (The nodes and cell vertices
+coincide for linear Lagrange elements, while for higher-order elements
+there may be additional nodes at the facets and in the interior of
+cells.)
 
-Having ``u`` represented as a ``Function`` object,
-we can either evaluate ``u(x)`` at any vertex ``x`` in the mesh,
-or we can grab all the values
-:math:`U_j` directly by
+Having ``u`` represented as a ``Function`` object, we can either
+evaluate ``u(x)`` at any vertex ``x`` in the mesh, or we can grab all
+the values :math:`U_j` directly by
 
 .. code-block:: python
 
@@ -1067,9 +1034,8 @@ or we can grab all the values
 
 The result is a DOLFIN ``Vector`` object, which is basically an
 encapsulation of the vector object used in the linear algebra package
-that is used to solve the linear system arising from the
-variational problem.
-Since we program in Python it is convenient to convert the
+that is used to solve the linear system arising from the variational
+problem.  Since we program in Python it is convenient to convert the
 ``Vector`` object to a standard ``numpy`` array for further
 processing:
 
@@ -1083,25 +1049,25 @@ processing:
 
         u_array = u_nodal_values.array()
 
-With ``numpy`` arrays we can write "MATLAB-like" code to analyze
-the data. Indexing is done with square brackets: ``u_array[i]``,
-where the index ``i`` always starts at ``0``.
+With ``numpy`` arrays we can write "MATLAB-like" code to analyze the
+data. Indexing is done with square brackets: ``u_array[i]``, where the
+index ``i`` always starts at ``0``.
 
 Mesh information can be gathered from the \emp{mesh} object, e.g.,
-  * ``mesh.coordinates()`` returns the coordinates of the
-    vertices as an :math:`M\times d` ``numpy`` array,
-    :math:`M` being the number of vertices in the mesh and :math:`d` being
-    the number of space dimensions,
+  * ``mesh.coordinates()`` returns the coordinates of the vertices as
+    an :math:`M\times d` ``numpy`` array, :math:`M` being the number
+    of vertices in the mesh and :math:`d` being the number of space
+    dimensions,
 
-  * ``mesh.num_cells()`` returns the number of cells (triangles)
-    in the mesh,
+  * ``mesh.num_cells()`` returns the number of cells (triangles) in
+    the mesh,
 
-  * ``mesh.num_vertices()`` returns the number of vertices in
-    the mesh (with our choice of linear Lagrange elements this equals the
+  * ``mesh.num_vertices()`` returns the number of vertices in the mesh
+    (with our choice of linear Lagrange elements this equals the
     number of nodes),
 
-Writing ``print mesh`` dumps a short, "pretty print" description
-of the mesh (``print mesh`` actually displays the result of str(mesh)`,
+Writing ``print mesh`` dumps a short, "pretty print" description of
+the mesh (``print mesh`` actually displays the result of str(mesh)`,
 which defines the pretty print):
 
 .. code-block:: python
@@ -1112,13 +1078,14 @@ which defines the pretty print):
 
 .. index:: pydoc
 
-All mesh objects are of type ``Mesh`` so typing the command
-``pydoc dolfin.Mesh`` in a terminal window will give a list
-of methods (that is, functions in a class)
-that can be called through any ``Mesh`` object. In fact,
-``pydoc dolfin.X`` shows the documentation of any DOLFIN name ``X``.
+All mesh objects are of type ``Mesh`` so typing the command ``pydoc
+dolfin.Mesh`` in a terminal window will give a list of methods (that
+is, functions in a class) that can be called through any ``Mesh``
+object. In fact, ``pydoc dolfin.X`` shows the documentation of any
+DOLFIN name ``X``.
 
-Writing out the solution on the screen can now be done by a simple loop:
+Writing out the solution on the screen can now be done by a simple
+loop:
 
 .. code-block:: python
 
@@ -1146,10 +1113,10 @@ For verification purposes we want to compare the values of the
 computed ``u`` at the nodes (given by ``u_array``) with the exact
 solution ``u0`` evaluated at the nodes.  The difference between the
 computed and exact solution should be less than a small tolerance at
-all the nodes. The ``Expression`` object ``u0`` can be evaluated
-at any point ``x`` by calling ``u0(x)``. Specifically,
-``u0(coor[i])`` returns the value of ``u0`` at the vertex or node
-with global number ``i``.
+all the nodes. The ``Expression`` object ``u0`` can be evaluated at
+any point ``x`` by calling ``u0(x)``. Specifically, ``u0(coor[i])``
+returns the value of ``u0`` at the vertex or node with global number
+``i``.
 
 
 .. index:: interpolation
@@ -1157,12 +1124,13 @@ with global number ``i``.
 .. index:: interpolate
 
 
-Alternatively, we can make a finite element field ``u_e``, representing
-the exact solution, whose values at the nodes are given by the
-``u0`` function. With mathematics, :math:`u_{\mbox{e}} = \sum_{j=1}^N  E_j\phi_j`, where
-:math:`E_j=u_0(x_j,y_j)`, :math:`(x_j,y_j)` being the coordinates of node number :math:`j`.
-This process is known as interpolation.
-FEniCS has a function for performing the operation:
+Alternatively, we can make a finite element field ``u_e``,
+representing the exact solution, whose values at the nodes are given
+by the ``u0`` function. With mathematics, :math:`u_{\mbox{e}} =
+\sum_{j=1}^N E_j\phi_j`, where :math:`E_j=u_0(x_j,y_j)`,
+:math:`(x_j,y_j)` being the coordinates of node number :math:`j`.
+This process is known as interpolation.  FEniCS has a function for
+performing the operation:
 
 .. code-block:: python
 
@@ -1179,8 +1147,8 @@ The value of the error should be at the level of the machine precision
 (:math:`10^{-16}`).
 
 To demonstrate the use of point evaluations of ``Function`` objects,
-we write out the computed ``u`` at the center point
-of the domain and compare it with the exact solution:
+we write out the computed ``u`` at the center point of the domain and
+compare it with the exact solution:
 
 .. code-block:: python
 
@@ -1188,8 +1156,8 @@ of the domain and compare it with the exact solution:
         print 'numerical u at the center point:',  u(center)
         print 'exact     u at the center point:', u0(center)
 
-Trying a :math:`3\times 3` mesh, the output from the
-previous snippet becomes
+Trying a :math:`3\times 3` mesh, the output from the previous snippet
+becomes
 
 .. code-block:: python
 
@@ -1197,15 +1165,15 @@ previous snippet becomes
         exact     u at the center point: [ 1.75]
 
 The discrepancy is due to the fact that the center point is not a node
-in this particular mesh, but a point in the interior of a cell,
-and ``u`` varies linearly over the cell while
-``u0`` is a quadratic function.
+in this particular mesh, but a point in the interior of a cell, and
+``u`` varies linearly over the cell while ``u0`` is a quadratic
+function.
 
-We have seen how to extract the nodal values in a ``numpy`` array.
-If desired, we can adjust the nodal values too. Say we want to
-normalize the solution such that :math:`\max_j U_j = 1`. Then we
-must divide all :math:`U_j` values
-by :math:`\max_j U_j`. The following snippet performs the task:
+We have seen how to extract the nodal values in a ``numpy`` array.  If
+desired, we can adjust the nodal values too. Say we want to normalize
+the solution such that :math:`\max_j U_j = 1`. Then we must divide all
+:math:`U_j` values by :math:`\max_j U_j`. The following snippet
+performs the task:
 
 .. code-block:: python
 
@@ -1215,27 +1183,25 @@ by :math:`\max_j U_j`. The following snippet performs the task:
         u.vector().set_local(u_array)  # alternative
         print u.vector().array()
 
-That is, we manipulate ``u_array`` as desired, and then
-we insert this array into `u`'s ``Vector`` object.
-The ``/=`` operator implies an
+That is, we manipulate ``u_array`` as desired, and then we insert this
+array into `u`'s ``Vector`` object.  The ``/=`` operator implies an
 in-place modification of the object on the left-hand side: all
 elements of the ``u_array`` are divided by the value ``max_u``.
-Alternatively, one could write
-``u_array = u_array/max_u``, which implies creating a new
-array on the right-hand side and assigning this array to the
-name ``u_array``.
+Alternatively, one could write ``u_array = u_array/max_u``, which
+implies creating a new array on the right-hand side and assigning this
+array to the name ``u_array``.
 
 A call like ``u.vector().array()`` returns a copy of the data in
 ``u.vector()``. One must therefore never perform assignments like
-``u.vector.array()[:] = ...``, but instead extract the
-``numpy`` array (i.e., a copy), manipulate it, and insert
-it back with ``u.vector()[:] = `` or ``u.set_local(...)``.
+``u.vector.array()[:] = ...``, but instead extract the ``numpy`` array
+(i.e., a copy), manipulate it, and insert it back with ``u.vector()[:]
+= `` or ``u.set_local(...)``.
 
-All the code in this subsection can be found in the file
-``d4_p2D.py`` in the ``stationary/poisson`` directory.
-We have commented out the plotting statements in
-this version of the program, but if you want plotting to happen, make
-sure that ``interactive`` is called at the very end of the program.
+All the code in this subsection can be found in the file ``d4_p2D.py``
+in the ``stationary/poisson`` directory.  We have commented out the
+plotting statements in this version of the program, but if you want
+plotting to happen, make sure that ``interactive`` is called at the
+very end of the program.
 
 
 .. _tut:poisson:membrane:
@@ -1244,17 +1210,16 @@ Solving a Real Physical Problem
 -------------------------------
 
 Perhaps you are not particularly amazed by viewing the simple surface
-of :math:`u` in the test problem from the section :ref:`tut:poisson1:impl`.
-However, solving a real physical problem
+of :math:`u` in the test problem from the section
+:ref:`tut:poisson1:impl`.  However, solving a real physical problem
 with a more interesting and amazing solution on the screen is only a
 matter of specifying a more exciting domain, boundary condition,
 and/or right-hand side :math:`f`.
 
-One possible physical problem regards the deflection
-:math:`D(x,y)` of an elastic circular membrane
-with radius :math:`R`, subject to a localized perpendicular pressure
-force, modeled as a Gaussian function.
-The appropriate PDE model is
+One possible physical problem regards the deflection :math:`D(x,y)` of
+an elastic circular membrane with radius :math:`R`, subject to a
+localized perpendicular pressure force, modeled as a Gaussian
+function.  The appropriate PDE model is
 
 .. math::
 
@@ -1271,22 +1236,23 @@ with
         \right)}\, .
 
 
-Here, :math:`T` is the tension in the membrane (constant), :math:`p` is the external
-pressure load,
-:math:`A` the amplitude of the pressure, :math:`(x_0,y_0)` the localization of
-the Gaussian pressure function, and :math:`\sigma` the "width" of this
-function. The boundary of the membrane has no
-deflection, implying :math:`D=0` as boundary condition.
+Here, :math:`T` is the tension in the membrane (constant), :math:`p`
+is the external pressure load, :math:`A` the amplitude of the
+pressure, :math:`(x_0,y_0)` the localization of the Gaussian pressure
+function, and :math:`\sigma` the "width" of this function. The
+boundary of the membrane has no deflection, implying :math:`D=0` as
+boundary condition.
 
 For scaling and verification it is convenient to simplify the problem
-to find an analytical solution. In the limit :math:`\sigma\rightarrow\infty`,
-:math:`p\rightarrow A/(2\pi\sigma)`, which allows us to integrate an axi--symmetric
-version of the equation in the radial coordinate :math:`r\in [0,R]` and
-obtain :math:`D(r)=(r^2-R^2)A/(8\pi\sigma T)`. This result gives
-a rough estimate of the characteristic size of the deflection:
-:math:`|D(0)|=AR^2/(8\pi\sigma T)`, which can be used to scale the deflecton.
-With :math:`R` as characteristic length scale, we can derive the equivalent
-dimensionless problem on the unit circle,
+to find an analytical solution. In the limit
+:math:`\sigma\rightarrow\infty`, :math:`p\rightarrow A/(2\pi\sigma)`,
+which allows us to integrate an axi--symmetric version of the equation
+in the radial coordinate :math:`r\in [0,R]` and obtain
+:math:`D(r)=(r^2-R^2)A/(8\pi\sigma T)`. This result gives a rough
+estimate of the characteristic size of the deflection:
+:math:`|D(0)|=AR^2/(8\pi\sigma T)`, which can be used to scale the
+deflecton.  With :math:`R` as characteristic length scale, we can
+derive the equivalent dimensionless problem on the unit circle,
 
 .. math::
    :label: tut:poisson1:membrane:scaled:eq
@@ -1307,29 +1273,32 @@ with :math:`w=0` on the boundary and with
         \right)}.
 
 \end{equation}
-For notational convenience we have dropped introducing new symbols
-for the scaled
-coordinates in :eq:`tut:poisson1:membrane:scaled:eq:rhs`.
-Now :math:`D` is related to :math:`w` through :math:`D = AR^2w/(8\pi\sigma T)`.
+For notational convenience we have dropped introducing
+new symbols for the scaled coordinates in
+:eq:`tut:poisson1:membrane:scaled:eq:rhs`.  Now :math:`D` is related
+to :math:`w` through :math:`D = AR^2w/(8\pi\sigma T)`.
 
 
-Let us list the modifications of the
-``d1_p2D.py`` program that are needed to solve this membrane problem:
+Let us list the modifications of the ``d1_p2D.py`` program that are
+needed to solve this membrane problem:
 
-  * Initialize :math:`T`, :math:`A`, :math:`R`, :math:`x_0`, :math:`y_0`, and :math:`\sigma`,
+  * Initialize :math:`T`, :math:`A`, :math:`R`, :math:`x_0`,
+    :math:`y_0`, and :math:`\sigma`,
 
   * create a mesh over the unit circle,
 
-  * make an expression object for the scaled pressure function :math:`f`,
+  * make an expression object for the scaled pressure function
+    :math:`f`,
 
-  * define the ``a`` and ``L`` formulas in the variational
-    problem for :math:`w` and compute the solution,
+  * define the ``a`` and ``L`` formulas in the variational problem for
+    :math:`w` and compute the solution,
 
   * plot the mesh, :math:`w`, and :math:`f`,
 
   * write out the maximum real deflection :math:`D`.
 
-Some suitable values of :math:`T`, :math:`A`, :math:`R`, :math:`x_0`, :math:`y_0`, and :math:`\sigma` are
+Some suitable values of :math:`T`, :math:`A`, :math:`R`, :math:`x_0`,
+:math:`y_0`, and :math:`\sigma` are
 
 .. code-block:: python
 
@@ -1357,10 +1326,10 @@ where ``n`` is the typical number of elements in the radial direction.
 .. index:: Expression with parameters
 
 
-The function :math:`f` is represented by an ``Expression`` object. There
-are many physical parameters in the formula for :math:`f` that enter the
-expression string and these parameters must have their values set
-by keyword arguments:
+The function :math:`f` is represented by an ``Expression``
+object. There are many physical parameters in the formula for
+:math:`f` that enter the expression string and these parameters must
+have their values set by keyword arguments:
 
 .. code-block:: python
 
@@ -1368,12 +1337,12 @@ by keyword arguments:
                        '     - 0.5*(pow((R*x[1] - y0)/sigma, 2)))',
                        R=R, x0=x0, y0=y0, sigma=sigma)
 
-The coordinates in ``Expression`` objects *must* be a vector
-with indices 0, 1, and 2, and with the name ``x``. Otherwise
-we are free to introduce names of parameters as long as these are
-given default values by keyword arguments. All the parameters
-initialized by keyword arguments can at any time have their
-values modified. For example, we may set
+The coordinates in ``Expression`` objects *must* be a vector with
+indices 0, 1, and 2, and with the name ``x``. Otherwise we are free to
+introduce names of parameters as long as these are given default
+values by keyword arguments. All the parameters initialized by keyword
+arguments can at any time have their values modified. For example, we
+may set
 
 .. code-block:: python
 
@@ -1385,33 +1354,35 @@ values modified. For example, we may set
 .. index:: interpolation
 
 
-It would be of interest to visualize :math:`f` along with :math:`w` so that we can
-examine the pressure force and its response.  We must then transform
-the formula (``Expression``) to a finite element function
+It would be of interest to visualize :math:`f` along with :math:`w` so
+that we can examine the pressure force and its response.  We must then
+transform the formula (``Expression``) to a finite element function
 (``Function``).  The most natural approach is to construct a finite
-element function whose degrees of freedom (values at the nodes in this case) are
-calculated from :math:`f`. That is, we interpolate :math:`f` (see
-the section :ref:`tut:poisson1:verify1`):
+element function whose degrees of freedom (values at the nodes in this
+case) are calculated from :math:`f`. That is, we interpolate :math:`f`
+(see the section :ref:`tut:poisson1:verify1`):
 
 .. code-block:: python
 
         f = interpolate(f, V)
 
-Calling ``plot(f)`` will produce a plot of :math:`f`. Note that the assignment
-to ``f`` destroys the previous ``Expression`` object ``f``, so if
-it is of interest to still have access to this object, another name must be used
-for the ``Function`` object returned by ``interpolate``.
+Calling ``plot(f)`` will produce a plot of :math:`f`. Note that the
+assignment to ``f`` destroys the previous ``Expression`` object ``f``,
+so if it is of interest to still have access to this object, another
+name must be used for the ``Function`` object returned by
+``interpolate``.
 
 We need some evidence that the program works, and to this end we may
 use the analytical solution listed above for the case
-:math:`\sigma\rightarrow\infty`. In scaled coordinates the solution reads
+:math:`\sigma\rightarrow\infty`. In scaled coordinates the solution
+reads
 
 .. math::
          w_{\rm}(x,y) = 1-x^2-y^2 .
 
-Practical values for an infinite :math:`\sigma`
-may be 50 or larger, and in such cases the program will report the
-maximum deviation between the computed :math:`w` and the (approximate) exact
+Practical values for an infinite :math:`\sigma` may be 50 or larger,
+and in such cases the program will report the maximum deviation
+between the computed :math:`w` and the (approximate) exact
 :math:`w_{\rm e}`.
 
 
@@ -1419,16 +1390,16 @@ maximum deviation between the computed :math:`w` and the (approximate) exact
 
 
 Note that the variational formulation remains the same as in the
-program from the section :ref:`tut:poisson1:impl`, except that :math:`u` is
-replaced by :math:`w` and :math:`u_0=0`.
-The final program is found in the file ``membrane1.py``, located
-in the ``stationary/poisson`` directory, and also listed below.
-We have inserted capabilities for iterative solution methods and
-hence large meshes (the section :ref:`tut:poisson1:solve:prm`),
-used objects for the variational problem and solver
-(the section :ref:`tut:poisson1:solver:problem`), and made numerical
-comparison of the numerical and (approximate) analytical solution
-(the section :ref:`tut:poisson1:verify1`).
+program from the section :ref:`tut:poisson1:impl`, except that
+:math:`u` is replaced by :math:`w` and :math:`u_0=0`.  The final
+program is found in the file ``membrane1.py``, located in the
+``stationary/poisson`` directory, and also listed below.  We have
+inserted capabilities for iterative solution methods and hence large
+meshes (the section :ref:`tut:poisson1:solve:prm`), used objects for
+the variational problem and solver (the section
+:ref:`tut:poisson1:solver:problem`), and made numerical comparison of
+the numerical and (approximate) analytical solution (the section
+:ref:`tut:poisson1:verify1`).
 
 
 .. code-block:: python
@@ -1500,15 +1471,16 @@ comparison of the numerical and (approximate) analytical solution
         interactive()
 
 
-Choosing a small width :math:`\sigma` (say 0.01) and a location :math:`(x_0,y_0)`
-toward the circular boundary (say :math:`(0.6R\cos\theta, 0.6R\sin\theta)`
-for any :math:`\theta\in [0,2\pi]`), may produce an exciting visual
-comparison of :math:`w` and :math:`f` that demonstrates the very smoothed elastic
-response to a peak force (or mathematically, the smoothing properties
-of the inverse of the Laplace operator).  One needs to experiment with
-the mesh resolution to get a smooth visual representation of~$f$.  You
-are strongly encouraged to play around with the plots and different
-mesh resolutions.
+Choosing a small width :math:`\sigma` (say 0.01) and a location
+:math:`(x_0,y_0)` toward the circular boundary (say
+:math:`(0.6R\cos\theta, 0.6R\sin\theta)` for any :math:`\theta\in
+[0,2\pi]`), may produce an exciting visual comparison of :math:`w` and
+:math:`f` that demonstrates the very smoothed elastic response to a
+peak force (or mathematically, the smoothing properties of the inverse
+of the Laplace operator).  One needs to experiment with the mesh
+resolution to get a smooth visual representation of~$f$.  You are
+strongly encouraged to play around with the plots and different mesh
+resolutions.
 
 
 .. _tut:quickviz:
@@ -1523,21 +1495,21 @@ Quick Visualization with VTK
 .. index:: VTK
 
 
-As we go along with examples it is fun to play around with
-``plot`` commands and visualize what is computed. This section explains
-some useful visualization features.
+As we go along with examples it is fun to play around with ``plot``
+commands and visualize what is computed. This section explains some
+useful visualization features.
 
-The ``plot(u)`` command launches a FEniCS component called Viper, which
-applies the VTK package to visualize finite element functions.  Viper
-is not a full-fledged, easy-to-use front-end to VTK (like Mayavi2,
-ParaView or, VisIt), but rather a thin layer on top of VTK's Python
-interface, allowing us to quickly visualize a DOLFIN function or mesh,
-or data in plain Numerical Python arrays, within a Python program.
-Viper is ideal for debugging, teaching, and initial scientific
-investigations.  The visualization can be interactive, or you can
-steer and automate it through program statements.  More advanced and
-professional visualizations are usually better done with advanced
-tools like Mayavi2, ParaView, or VisIt.
+The ``plot(u)`` command launches a FEniCS component called Viper,
+which applies the VTK package to visualize finite element functions.
+Viper is not a full-fledged, easy-to-use front-end to VTK (like
+Mayavi2, ParaView or, VisIt), but rather a thin layer on top of VTK's
+Python interface, allowing us to quickly visualize a DOLFIN function
+or mesh, or data in plain Numerical Python arrays, within a Python
+program.  Viper is ideal for debugging, teaching, and initial
+scientific investigations.  The visualization can be interactive, or
+you can steer and automate it through program statements.  More
+advanced and professional visualizations are usually better done with
+advanced tools like Mayavi2, ParaView, or VisIt.
 
 
 .. index:: membrane1v.p
@@ -1545,15 +1517,16 @@ tools like Mayavi2, ParaView, or VisIt.
 
 We have made a program ``membrane1v.py`` for the membrane deflection
 problem in the section :ref:`tut:poisson:membrane` and added various
-demonstrations of Viper capabilities. You are encouraged to play around with
-``membrane1v.py`` and modify the code as you read about various features.
+demonstrations of Viper capabilities. You are encouraged to play
+around with ``membrane1v.py`` and modify the code as you read about
+various features.
 
 
 .. index:: plot
 
 
-The ``plot`` function can take additional arguments, such as
-a title of the plot, or a specification of a wireframe plot (elevated mesh)
+The ``plot`` function can take additional arguments, such as a title
+of the plot, or a specification of a wireframe plot (elevated mesh)
 instead of a colored surface plot:
 
 .. code-block:: python
@@ -1562,25 +1535,24 @@ instead of a colored surface plot:
         plot(w, wireframe=True, title='solution')
 
 
-The three mouse buttons can be used to rotate, translate, and zoom
-the surface.
-Pressing ``h`` in the plot window makes a printout of several
-key bindings that are available in such windows. For example,
-pressing ``m`` in the mesh plot window
-dumps the plot of the mesh to an Encapsulated PostScript (``.eps``)
-file, while pressing ``i`` saves the plot in PNG format.
-All plotfile names are automatically generated as ``simulationX.eps``,
-where ``X`` is a counter ``0000``, ``0001``, ``0002``, etc.,
-being increased every time a new plot file in that format
-is generated (the extension
-of PNG files is ``.png`` instead of ``.eps``).
-Pressing ``o`` adds a red outline of a bounding box around the domain.
+The three mouse buttons can be used to rotate, translate, and zoom the
+surface.  Pressing ``h`` in the plot window makes a printout of
+several key bindings that are available in such windows. For example,
+pressing ``m`` in the mesh plot window dumps the plot of the mesh to
+an Encapsulated PostScript (``.eps``) file, while pressing ``i`` saves
+the plot in PNG format.  All plotfile names are automatically
+generated as ``simulationX.eps``, where ``X`` is a counter ``0000``,
+``0001``, ``0002``, etc., being increased every time a new plot file
+in that format is generated (the extension of PNG files is ``.png``
+instead of ``.eps``).  Pressing ``o`` adds a red outline of a bounding
+box around the domain.
 
 One can alternatively control the visualization from the program code
-directly. This is done through a ``Viper`` object returned from
-the ``plot`` command. Let us grab this object and use it to
-1) tilt the camera :math:`-65` degrees in the latitude direction, 2) add
-:math:`x` and :math:`y` axes, 3) change the default name of the plot files,
+directly. This is done through a ``Viper`` object returned from the
+``plot`` command. Let us grab this object and use it to
+1) tilt the camera :math:`-65` degrees in the latitude direction, 2)
+add :math:`x` and :math:`y` axes, 3) change the default name of the
+plot files,
 4) change the color scale, and 5) write the plot
 to a PNG and an EPS file. Here is the code:
 
@@ -1601,16 +1573,13 @@ to a PNG and an EPS file. Here is the code:
         viz_w.write_ps('deflection', format='eps')
 
 The ``format`` argument in the latter line can also take the values
-``'ps'`` for a standard PostScript file and ``'pdf'`` for
-a PDF file.
-Note the necessity of the ``viz_w.update(w)`` call -- without it we will
-not see the effects of tilting the camera and changing the color scale.
-Figure :ref:`tut:poisson:2D:fig1` shows the resulting scalar surface.
+``'ps'`` for a standard PostScript file and ``'pdf'`` for a PDF file.
+Note the necessity of the ``viz_w.update(w)`` call -- without it we
+will not see the effects of tilting the camera and changing the color
+scale.  Figure :ref:`tut:poisson:2D:fig1` shows the resulting scalar
+surface.
 
 .. parameters['plot_filename_prefix'] = 'hello' # does not work
-
-
-
 
 .. _tut:poisson:2D:fig1:
 
@@ -1619,18 +1588,14 @@ Figure :ref:`tut:poisson:2D:fig1` shows the resulting scalar surface.
 
    Plot of the deflection of a membrane
 
-
-
-
 .. _tut:poisson:gradu:
 
 Computing Derivatives
 ---------------------
 
-In Poisson and many other problems the gradient of the solution is
-of interest. The computation is in principle simple:
-since
-:math:`u = \sum_{j=1}^N U_j \phi_j`, we have that
+In Poisson and many other problems the gradient of the solution is of
+interest. The computation is in principle simple: since :math:`u =
+\sum_{j=1}^N U_j \phi_j`, we have that
 
 .. math::
 
@@ -1638,36 +1603,34 @@ since
 
 
 Given the solution variable ``u`` in the program, its gradient is
-obtained by ``grad(u)`` or ``nabla_grad(u)``.
-However, the gradient of a piecewise continuous
-finite element scalar field
-is a discontinuous vector field
-since the :math:`\phi_j` has discontinuous derivatives at the boundaries of
-the cells. For example, using Lagrange elements of degree 1, :math:`u` is
-linear over each cell, and the numerical :math:`\nabla u` becomes a piecewise
-constant vector field. On the contrary,
-the exact gradient is continuous.
-For visualization and data analysis purposes
-we often want the computed
-gradient to be a continuous vector field. Typically,
-we want each component of :math:`\nabla u` to be represented in the same
-way as :math:`u` itself. To this end, we can project the components
-of :math:`\nabla u` onto the
-same function space as we used for :math:`u`.
-This means that we solve :math:`w = \nabla u` approximately by a finite element
-method, using the same elements for the components of
-:math:`w` as we used for :math:`u`. This process is known as *projection*.
+obtained by ``grad(u)`` or ``nabla_grad(u)``.  However, the gradient
+of a piecewise continuous finite element scalar field is a
+discontinuous vector field since the :math:`\phi_j` has discontinuous
+derivatives at the boundaries of the cells. For example, using
+Lagrange elements of degree 1, :math:`u` is linear over each cell, and
+the numerical :math:`\nabla u` becomes a piecewise constant vector
+field. On the contrary, the exact gradient is continuous.  For
+visualization and data analysis purposes we often want the computed
+gradient to be a continuous vector field. Typically, we want each
+component of :math:`\nabla u` to be represented in the same way as
+:math:`u` itself. To this end, we can project the components of
+:math:`\nabla u` onto the same function space as we used for
+:math:`u`.  This means that we solve :math:`w = \nabla u`
+approximately by a finite element method, using the same elements for
+the components of :math:`w` as we used for :math:`u`. This process is
+known as *projection*.
 
 .. index:: projection
 
-Looking at the component :math:`\partial
-u/\partial x` of the gradient, we project the (discrete) derivative
+Looking at the component :math:`\partial u/\partial x` of the
+gradient, we project the (discrete) derivative
 :math:`\sum_jU_j{\partial \phi_j/\partial x}` onto a function space
 with basis :math:`\phi_1,\phi_2,\ldots` such that the derivative in
-this space is expressed by the standard sum :math:`\sum_j\bar U_j \phi_j`,
-for suitable (new) coefficients :math:`\bar U_j`.
+this space is expressed by the standard sum :math:`\sum_j\bar U_j
+\phi_j`, for suitable (new) coefficients :math:`\bar U_j`.
 
-The variational problem for :math:`w` reads: find  :math:`w\in V^{(\mbox{g})}` such that
+The variational problem for :math:`w` reads: find :math:`w\in
+V^{(\mbox{g})}` such that
 
 .. math::
 
@@ -1682,19 +1645,19 @@ where
         L(v) &= \int_\Omega \nabla u\cdot v \, \mathrm{d}x\thinspace .
 
 
-The function spaces :math:`V^{(\mbox{g})}` and :math:`\hat{V^{(\mbox{g})}}` (with the superscript
-g denoting "gradient") are
-vector versions of the function space for :math:`u`, with
-boundary conditions removed (if :math:`V` is the
-space we used for :math:`u`, with no restrictions
-on boundary values, :math:`V^{(\mbox{g})} = \hat{V^{(\mbox{g})}} = [V]^d`, where
-:math:`d` is the number of space dimensions).
-For example, if we used piecewise linear functions on the mesh to
-approximate :math:`u`, the variational problem for :math:`w` corresponds to
-approximating each component field of :math:`w` by piecewise linear functions.
+The function spaces :math:`V^{(\mbox{g})}` and
+:math:`\hat{V^{(\mbox{g})}}` (with the superscript g denoting
+"gradient") are vector versions of the function space for :math:`u`,
+with boundary conditions removed (if :math:`V` is the space we used
+for :math:`u`, with no restrictions on boundary values,
+:math:`V^{(\mbox{g})} = \hat{V^{(\mbox{g})}} = [V]^d`, where :math:`d`
+is the number of space dimensions).  For example, if we used piecewise
+linear functions on the mesh to approximate :math:`u`, the variational
+problem for :math:`w` corresponds to approximating each component
+field of :math:`w` by piecewise linear functions.
 
-The variational problem for the vector field
-:math:`w`, called ``grad_u`` in the code, is easy to solve in FEniCS:
+The variational problem for the vector field :math:`w`, called
+``grad_u`` in the code, is easy to solve in FEniCS:
 
 .. code-block:: python
 
@@ -1709,12 +1672,11 @@ The variational problem for the vector field
 
         plot(grad_u, title='grad(u)')
 
-The boundary condition argument to ``solve`` is dropped since there are
-no essential boundary conditions in this problem.
-The new thing is basically that we work with a ``VectorFunctionSpace``,
-since the unknown is now a vector field, instead of the
-``FunctionSpace`` object for scalar fields.
-Figure :ref:`tut:poisson:2D:fig:ex1:gradu` shows
+The boundary condition argument to ``solve`` is dropped since there
+are no essential boundary conditions in this problem.  The new thing
+is basically that we work with a ``VectorFunctionSpace``, since the
+unknown is now a vector field, instead of the ``FunctionSpace`` object
+for scalar fields.  Figure :ref:`tut:poisson:2D:fig:ex1:gradu` shows
 example of how Viper can visualize such a vector field.
 
 
@@ -1723,12 +1685,11 @@ example of how Viper can visualize such a vector field.
 .. figure:: figs/ex1_gradu.png
    :width: 480
 
-   Example of visualizing the vector field :math:`\nabla u` by arrows at the nodes
+   Example of visualizing the vector field :math:`\nabla u` by arrows
+   at the nodes
 
-
-
-The scalar component fields of the gradient
-can be extracted as separate fields and, e.g., visualized:
+The scalar component fields of the gradient can be extracted as
+separate fields and, e.g., visualized:
 
 .. code-block:: python
 
@@ -1736,11 +1697,10 @@ can be extracted as separate fields and, e.g., visualized:
         plot(grad_u_x, title='x-component of grad(u)')
         plot(grad_u_y, title='y-component of grad(u)')
 
-The ``deepcopy=True`` argument signifies a *deep copy*, which is
-a general term in computer science implying that a copy of the data is
-returned. (The opposite, ``deepcopy=False``,
-means a *shallow copy*, where
-the returned objects are just pointers to the original data.)
+The ``deepcopy=True`` argument signifies a *deep copy*, which is a
+general term in computer science implying that a copy of the data is
+returned. (The opposite, ``deepcopy=False``, means a *shallow copy*,
+where the returned objects are just pointers to the original data.)
 
 
 .. index:: degrees of freedom array
@@ -1752,9 +1712,9 @@ the returned objects are just pointers to the original data.)
 .. index:: degrees of freedom array (vector field)
 
 
-The ``grad_u_x`` and ``grad_u_y`` variables behave as
-``Function`` objects. In particular, we can extract the underlying
-arrays of nodal values by
+The ``grad_u_x`` and ``grad_u_y`` variables behave as ``Function``
+objects. In particular, we can extract the underlying arrays of nodal
+values by
 
 .. code-block:: python
 
@@ -1768,30 +1728,27 @@ reached by
 
         grad_u_array = grad_u.vector().array()
 
-but this is a flat ``numpy`` array where the degrees of freedom
-for the :math:`x` component of the gradient is stored in the first part, then the
-degrees of freedom of the :math:`y` component, and so on.
+but this is a flat ``numpy`` array where the degrees of freedom for
+the :math:`x` component of the gradient is stored in the first part,
+then the degrees of freedom of the :math:`y` component, and so on.
 
 
 .. index:: d5_p2D.py
 
 
-The program ``d5_p2D.py`` extends the
-code ``d5_p2D.py`` from the section :ref:`tut:poisson1:verify1`
-with computations and visualizations of the gradient.
-Examining the arrays ``grad_u_x_array``
-and ``grad_u_y_array``, or looking at the plots of
-``grad_u_x`` and
-``grad_u_y``, quickly reveals that
-the computed ``grad_u`` field does not equal the exact
-gradient :math:`(2x, 4y)` in this particular test problem where :math:`u=1+x^2+2y^2`.
-There are inaccuracies at the boundaries, arising from the
-approximation problem for :math:`w`. Increasing the mesh resolution shows,
-however, that the components of the gradient vary linearly as
-:math:`2x` and :math:`4y` in
-the interior of the mesh (i.e., as soon as we are one element away from
-the boundary). See the section :ref:`tut:quickviz` for illustrations of
-this phenomenon.
+The program ``d5_p2D.py`` extends the code ``d5_p2D.py`` from the
+section :ref:`tut:poisson1:verify1` with computations and
+visualizations of the gradient.  Examining the arrays
+``grad_u_x_array`` and ``grad_u_y_array``, or looking at the plots of
+``grad_u_x`` and ``grad_u_y``, quickly reveals that the computed
+``grad_u`` field does not equal the exact gradient :math:`(2x, 4y)` in
+this particular test problem where :math:`u=1+x^2+2y^2`.  There are
+inaccuracies at the boundaries, arising from the approximation problem
+for :math:`w`. Increasing the mesh resolution shows, however, that the
+components of the gradient vary linearly as :math:`2x` and :math:`4y`
+in the interior of the mesh (i.e., as soon as we are one element away
+from the boundary). See the section :ref:`tut:quickviz` for
+illustrations of this phenomenon.
 
 
 .. index:: project
@@ -1799,24 +1756,24 @@ this phenomenon.
 .. index:: projection
 
 
-Projecting some function onto some space is a very common
-operation in finite element programs. The manual steps in this process
-have therefore been collected in a utility function ``project(q, W)``,
-which returns the projection of some ``Function`` or ``Expression`` object
-named ``q`` onto the ``FunctionSpace`` or ``VectorFunctionSpace`` named ``W``.
-Specifically, the previous code for
-projecting each component of ``grad(u)`` onto
-the same space that we use for ``u``, can now be done by a one-line call
+Projecting some function onto some space is a very common operation in
+finite element programs. The manual steps in this process have
+therefore been collected in a utility function ``project(q, W)``,
+which returns the projection of some ``Function`` or ``Expression``
+object named ``q`` onto the ``FunctionSpace`` or
+``VectorFunctionSpace`` named ``W``.  Specifically, the previous code
+for projecting each component of ``grad(u)`` onto the same space that
+we use for ``u``, can now be done by a one-line call
 
 .. code-block:: python
 
         grad_u = project(grad(u), VectorFunctionSpace(mesh, 'Lagrange', 1))
 
-The applications of projection are many, including turning discontinuous
-gradient fields into continuous ones, comparing higher- and lower-order
-function approximations, and transforming a higher-order finite element
-solution down to a piecewise linear field, which is required by many
-visualization packages.
+The applications of projection are many, including turning
+discontinuous gradient fields into continuous ones, comparing higher-
+and lower-order function approximations, and transforming a
+higher-order finite element solution down to a piecewise linear field,
+which is required by many visualization packages.
 
 
 .. _tut:possion:2D:varcoeff:
@@ -1827,8 +1784,8 @@ A Variable-Coefficient Poisson Problem
 .. index:: Poisson's equation with variable coefficient
 
 
-Suppose we have a variable coefficient :math:`p(x,y)` in the Laplace operator,
-as in the boundary-value problem
+Suppose we have a variable coefficient :math:`p(x,y)` in the Laplace
+operator, as in the boundary-value problem
 
 .. math::
    :label: tut:poisson:2D:varcoeff
@@ -1840,31 +1797,28 @@ as in the boundary-value problem
             u(x,y) &= u_0(x,y) \quad \mbox{on}\  \partial\Omega\thinspace .
 
 
-
 We shall quickly demonstrate that this simple extension of our model
-problem only requires an equally simple extension of the FEniCS program.
+problem only requires an equally simple extension of the FEniCS
+program.
 
-Let us continue to use our favorite solution :math:`u(x,y)=1+x^2+2y^2` and
-then prescribe :math:`p(x,y)=x+y`. It follows that
-:math:`u_0(x,y) = 1 + x^2 + 2y^2` and :math:`f(x,y)=-8x-10y`.
-
+Let us continue to use our favorite solution :math:`u(x,y)=1+x^2+2y^2`
+and then prescribe :math:`p(x,y)=x+y`. It follows that :math:`u_0(x,y)
+= 1 + x^2 + 2y^2` and :math:`f(x,y)=-8x-10y`.
 
 .. index:: vcp2D.py
-
 
 What are the modifications we need to do in the ``d4_p2D.py`` program
 from the section :ref:`tut:poisson1:verify1`?
 
   * ``f`` must be an ``Expression`` since it is no longer a constant,
 
-  * a new ``Expression`` `p` must be defined for the variable coefficient,
+  * a new ``Expression`` `p` must be defined for the variable
+    coefficient,
 
   * the variational problem is slightly changed.
 
-First we address the modified variational problem. Multiplying
-the PDE by a test function :math:`v` and
-integrating by parts now results
-in
+First we address the modified variational problem. Multiplying the PDE
+by a test function :math:`v` and integrating by parts now results in
 
 .. math::
 
@@ -1873,10 +1827,10 @@ in
         \partial n}v \, \mathrm{d}s = \int_\Omega fv \, \mathrm{d}x\thinspace .
 
 
-The function spaces for :math:`u` and :math:`v` are the same as in
-the section :ref:`tut:poisson1:varform`, implying that the boundary integral
-vanishes since :math:`v=0` on :math:`\partial\Omega` where we have Dirichlet conditions.
-The weak form :math:`a(u,v)=L(v)` then has
+The function spaces for :math:`u` and :math:`v` are the same as in the
+section :ref:`tut:poisson1:varform`, implying that the boundary
+integral vanishes since :math:`v=0` on :math:`\partial\Omega` where we
+have Dirichlet conditions.  The weak form :math:`a(u,v)=L(v)` then has
 
 .. math::
 
@@ -1904,23 +1858,23 @@ The definitions of ``p`` and ``f`` read
         f = Expression('-8*x[0] - 10*x[1]')
 
 No additional modifications are necessary. The complete code can be
-found in in the file ``vcp2D.py`` (variable-coefficient Poisson problem in 2D).
-You can run it and confirm
-that it recovers the exact :math:`u` at the nodes.
+found in in the file ``vcp2D.py`` (variable-coefficient Poisson
+problem in 2D).  You can run it and confirm that it recovers the exact
+:math:`u` at the nodes.
 
 The flux :math:`-p\nabla u` may be of particular interest in
 variable-coefficient Poisson problems as it often has an interesting
-physical significance. As explained in the section :ref:`tut:poisson:gradu`,
-we normally want the piecewise discontinuous flux or gradient to be
-approximated by a continuous vector field, using the same elements as
-used for the numerical solution :math:`u`. The approximation now consists of
-solving :math:`w = -p\nabla u` by a finite element method: find :math:`w\in V^{(\mbox{g})}`
-such that
+physical significance. As explained in the section
+:ref:`tut:poisson:gradu`, we normally want the piecewise discontinuous
+flux or gradient to be approximated by a continuous vector field,
+using the same elements as used for the numerical solution
+:math:`u`. The approximation now consists of solving :math:`w =
+-p\nabla u` by a finite element method: find :math:`w\in
+V^{(\mbox{g})}` such that
 
 .. math::
 
         a(w, v) = L(v)\quad\forall v\in \hat{V^{(\mbox{g})}},
-
 
 where
 
@@ -1930,10 +1884,12 @@ where
         L(v) &= \int_\Omega (-p \nabla u)\cdot v \, \mathrm{d}x\thinspace .
 
 
-This problem is identical to the one in the section :ref:`tut:poisson:gradu`,
-except that :math:`p` enters the integral in :math:`L`.
+This problem is identical to the one in the section
+:ref:`tut:poisson:gradu`, except that :math:`p` enters the integral in
+:math:`L`.
 
-The relevant Python statements for computing the flux field take the form
+The relevant Python statements for computing the flux field take the
+form
 
 .. code-block:: python
 
@@ -1946,7 +1902,8 @@ The relevant Python statements for computing the flux field take the form
         flux = Function(V_g)
         solve(a == L, flux)
 
-The following call to ``project`` is equivalent to the above statements:
+The following call to ``project`` is equivalent to the above
+statements:
 
 .. code-block:: python
 
@@ -1954,8 +1911,8 @@ The following call to ``project`` is equivalent to the above statements:
                        VectorFunctionSpace(mesh, 'Lagrange', 1))
 
 
-Plotting the flux vector field is naturally as easy as plotting
-the gradient (see the section :ref:`tut:poisson:gradu`):
+Plotting the flux vector field is naturally as easy as plotting the
+gradient (see the section :ref:`tut:poisson:gradu`):
 
 .. code-block:: python
 
@@ -1966,8 +1923,8 @@ the gradient (see the section :ref:`tut:poisson:gradu`):
         plot(flux_y, title='y-component of flux (-p*grad(u))')
 
 
-For data analysis of the nodal values of the flux field we can
-grab the underlying ``numpy`` arrays:
+For data analysis of the nodal values of the flux field we can grab
+the underlying ``numpy`` arrays:
 
 .. code-block:: python
 
@@ -1975,11 +1932,10 @@ grab the underlying ``numpy`` arrays:
         flux_y_array = flux_y.vector().array()
 
 
-The program ``vcp2D.py`` contains in addition some plots,
-including a curve plot
-comparing ``flux_x`` and the exact counterpart along the line :math:`y=1/2`.
-The associated programming details related to this visualization
-are explained in the section :ref:`tut:structviz`.
+The program ``vcp2D.py`` contains in addition some plots, including a
+curve plot comparing ``flux_x`` and the exact counterpart along the
+line :math:`y=1/2`.  The associated programming details related to
+this visualization are explained in the section :ref:`tut:structviz`.
 
 
 .. _tut:poisson1:functionals:
@@ -1990,8 +1946,8 @@ Computing Functionals
 .. index:: functionals
 
 
-After the solution :math:`u` of a PDE is computed, we occasionally want to compute
-functionals of :math:`u`, for example,
+After the solution :math:`u` of a PDE is computed, we occasionally
+want to compute functionals of :math:`u`, for example,
 
 .. math::
    :label: tut:poisson1:functionals:energy
@@ -2000,65 +1956,56 @@ functionals of :math:`u`, for example,
 
 
 
-which often reflects some energy quantity.
-Another frequently occurring functional is the error
+which often reflects some energy quantity.  Another frequently
+occurring functional is the error
 
 .. math::
    :label: tut:poisson1:functionals:error
 
         ||u_{\mbox{e}}-u|| = \left(\int_\Omega (u_{\mbox{e}}-u)^2 \, \mathrm{d}x\right)^{1/2},
 
-
-
-where :math:`u_{\rm e}` is the exact solution. The error
-is of particular interest when studying convergence properties.
-Sometimes the interest concerns the flux out of a part :math:`\Gamma` of
-the boundary :math:`\partial\Omega`,
+where :math:`u_{\rm e}` is the exact solution. The error is of
+particular interest when studying convergence properties.  Sometimes
+the interest concerns the flux out of a part :math:`\Gamma` of the
+boundary :math:`\partial\Omega`,
 
 .. math::
    :label: tut:poisson1:functionals:flux
 
         F = -\int_\Gamma p\nabla u\cdot\pmb{n} \, \mathrm{d}s,
 
-
-
-where :math:`\pmb{n}` is an outward unit normal at :math:`\Gamma` and :math:`p` is a
-coefficient (see the problem in the section :ref:`tut:possion:2D:varcoeff`
-for a specific example).
-All these functionals are easy to compute with FEniCS, and this section
+where :math:`\pmb{n}` is an outward unit normal at :math:`\Gamma` and
+:math:`p` is a coefficient (see the problem in the section
+:ref:`tut:possion:2D:varcoeff` for a specific example).  All these
+functionals are easy to compute with FEniCS, and this section
 describes how it can be done.
 
 
 .. index:: energy functional
 
 
-*Energy Functional.* The integrand of the
-energy functional
-:math:`{1\over2}\int_\Omega \nabla u\cdot \nabla u \, \mathrm{d}x`
-is described in the UFL language in the same manner as we describe
-weak forms:
+*Energy Functional.* The integrand of the energy functional
+:math:`{1\over2}\int_\Omega \nabla u\cdot \nabla u \, \mathrm{d}x` is
+described in the UFL language in the same manner as we describe weak
+forms:
 
 .. code-block:: python
 
         energy = 0.5*inner(grad(u), grad(u))*dx
         E = assemble(energy)
 
-The ``assemble`` call performs the integration.
-It is possible to restrict the integration to subdomains, or parts
-of the boundary, by using
-a mesh function to mark the subdomains as explained in
-the section :ref:`tut:poisson:mat:neumann`.
-The program ``membrane2.py`` carries out the computation of
-the elastic energy
+The ``assemble`` call performs the integration.  It is possible to
+restrict the integration to subdomains, or parts of the boundary, by
+using a mesh function to mark the subdomains as explained in the
+section :ref:`tut:poisson:mat:neumann`.  The program ``membrane2.py``
+carries out the computation of the elastic energy
 
 .. index:: membrane2.py
-
 
 .. math::
 
         {1\over2}||T\nabla D||^2 = {1\over2}\left({AR\over 8\pi\sigma}\right)^2
         ||\nabla w||^2
-
 
 in the membrane problem from the section :ref:`tut:poisson:membrane`.
 
@@ -2066,27 +2013,24 @@ in the membrane problem from the section :ref:`tut:poisson:membrane`.
 .. index:: error functional
 
 
-*Convergence Estimation.* To illustrate error computations and convergence of finite element
-solutions, we modify the ``d5_p2D.py`` program from
-the section :ref:`tut:poisson:gradu` and specify a more complicated solution,
+*Convergence Estimation.* To illustrate error computations and
+convergence of finite element solutions, we modify the ``d5_p2D.py``
+program from the section :ref:`tut:poisson:gradu` and specify a more
+complicated solution,
 
 .. math::
 
         u(x,y) = \sin(\omega\pi x)\sin(\omega\pi y)
 
-
-on the unit square.
-This choice implies :math:`f(x,y)=2\omega^2\pi^2 u(x,y)`.
-With :math:`\omega` restricted to an integer
-it follows that :math:`u_0=0`.
-
+on the unit square.  This choice implies :math:`f(x,y)=2\omega^2\pi^2
+u(x,y)`.  With :math:`\omega` restricted to an integer it follows that
+:math:`u_0=0`.
 
 .. index:: d6_p2D.py
 
 
-We need to define the
-appropriate boundary conditions, the exact solution, and the :math:`f` function
-in the code:
+We need to define the appropriate boundary conditions, the exact
+solution, and the :math:`f` function in the code:
 
 .. code-block:: python
 
@@ -2102,25 +2046,23 @@ in the code:
         f = 2*pi**2*omega**2*u_e
 
 
-The computation of
-:math:`\left(\int_\Omega (u_e-u)^2 \, \mathrm{d}x\right)^{1/2}`
-can be done by
+The computation of :math:`\left(\int_\Omega (u_e-u)^2 \,
+\mathrm{d}x\right)^{1/2}` can be done by
 
 .. code-block:: python
 
         error = (u - u_e)**2*dx
         E = sqrt(assemble(error))
 
-Here, ``u_e`` will be interpolated onto
-the function space ``V``. This implies that the exact solution used in
-the integral will vary linearly over
-the cells, and not as a sine function,
-if ``V`` corresponds to linear Lagrange elements.
-This situation may yield a smaller error ``u - u_e`` than what is actually true.
+Here, ``u_e`` will be interpolated onto the function space ``V``. This
+implies that the exact solution used in the integral will vary
+linearly over the cells, and not as a sine function, if ``V``
+corresponds to linear Lagrange elements.  This situation may yield a
+smaller error ``u - u_e`` than what is actually true.
 
 More accurate representation of the exact solution is easily achieved
-by interpolating the formula onto a space defined by
-higher-order elements, say of third degree:
+by interpolating the formula onto a space defined by higher-order
+elements, say of third degree:
 
 .. code-block:: python
 
@@ -2129,9 +2071,9 @@ higher-order elements, say of third degree:
         error = (u - u_e_Ve)**2*dx
         E = sqrt(assemble(error))
 
-To achieve complete mathematical
-control of which function space the computations are carried out in,
-we can explicitly interpolate ``u`` to the same space:
+To achieve complete mathematical control of which function space the
+computations are carried out in, we can explicitly interpolate ``u``
+to the same space:
 
 .. code-block:: python
 
@@ -2141,17 +2083,18 @@ we can explicitly interpolate ``u`` to the same space:
 
 The square in the expression for ``error`` will be expanded and lead
 to a lot of terms that almost cancel when the error is small, with the
-potential of introducing significant round-off errors.
-The function ``errornorm`` is available for avoiding this effect
-by first interpolating ``u`` and ``u_e`` to a space with
-higher-order elements, then subtracting the degrees of freedom, and
-then performing the integration of the error field. The usage is simple:
+potential of introducing significant round-off errors.  The function
+``errornorm`` is available for avoiding this effect by first
+interpolating ``u`` and ``u_e`` to a space with higher-order elements,
+then subtracting the degrees of freedom, and then performing the
+integration of the error field. The usage is simple:
 
 .. code-block:: python
 
         E = errornorm(u_e, u, normtype='L2', degree=3)
 
-It is illustrative to look at the short implementation of ``errornorm``:
+It is illustrative to look at the short implementation of
+``errornorm``:
 
 .. code-block:: python
 
@@ -2165,23 +2108,22 @@ It is illustrative to look at the short implementation of ``errornorm``:
             error = e_Ve**2*dx
             return sqrt(assemble(error))
 
-The ``errornorm`` procedure turns out to be identical to computing
-the expression ``(u_e - u)**2*dx`` directly in
-the present test case.
+The ``errornorm`` procedure turns out to be identical to computing the
+expression ``(u_e - u)**2*dx`` directly in the present test case.
 
-Sometimes it is of interest to compute the error of the
-gradient field: :math:`||\nabla (u-u_{\mbox{e}})||`
-(often referred to as the :math:`H^1` seminorm of the error).
-Given the error field ``e_Ve`` above, we simply write
+Sometimes it is of interest to compute the error of the gradient
+field: :math:`||\nabla (u-u_{\mbox{e}})||` (often referred to as the
+:math:`H^1` seminorm of the error).  Given the error field ``e_Ve``
+above, we simply write
 
 .. code-block:: python
 
         H1seminorm = sqrt(assemble(inner(grad(e_Ve), grad(e_Ve))*dx))
 
 
-Finally, we remove all ``plot`` calls and printouts of :math:`u` values
-in the original program, and
-collect the computations in a function:
+Finally, we remove all ``plot`` calls and printouts of :math:`u`
+values in the original program, and collect the computations in a
+function:
 
 .. code-block:: python
 
@@ -2194,22 +2136,23 @@ collect the computations in a function:
             return E
 
 
-Calling ``compute`` for finer and finer meshes enables us to
-study the convergence rate. Define the element size
-:math:`h=1/n`, where :math:`n` is the number of divisions in :math:`x` and :math:`y` direction
-(``nx=ny`` in the code). We perform experiments with :math:`h_0>h_1>h_2\cdots`
-and compute the corresponding errors :math:`E_0, E_1, E_3` and so forth.
-Assuming :math:`E_i=Ch_i^r` for unknown constants :math:`C` and :math:`r`, we can compare
-two consecutive experiments, :math:`E_i=Ch_i^r` and :math:`E_{i-1}=Ch_{i-1}^r`,
-and solve for :math:`r`:
+Calling ``compute`` for finer and finer meshes enables us to study the
+convergence rate. Define the element size :math:`h=1/n`, where
+:math:`n` is the number of divisions in :math:`x` and :math:`y`
+direction (``nx=ny`` in the code). We perform experiments with
+:math:`h_0>h_1>h_2\cdots` and compute the corresponding errors
+:math:`E_0, E_1, E_3` and so forth.  Assuming :math:`E_i=Ch_i^r` for
+unknown constants :math:`C` and :math:`r`, we can compare two
+consecutive experiments, :math:`E_i=Ch_i^r` and
+:math:`E_{i-1}=Ch_{i-1}^r`, and solve for :math:`r`:
 
 .. math::
 
         r = {\ln(E_i/E_{i-1})\over\ln (h_i/h_{i-1})}\thinspace .
 
 
-The :math:`r` values should approach the expected convergence
-rate ``degree+1`` as :math:`i` increases.
+The :math:`r` values should approach the expected convergence rate
+``degree+1`` as :math:`i` increases.
 
 The procedure above can easily be turned into Python code:
 
@@ -2229,9 +2172,9 @@ The procedure above can easily be turned into Python code:
             r = ln(E[i]/E[i-1])/ln(h[i]/h[i-1])
             print 'h=%10.2E r=.2f'  (h[i], r)
 
-The resulting program has the name ``d6_p2D.py``
-and computes error norms in various ways. Running this
-program for elements of first degree and :math:`\omega=1` yields the output
+The resulting program has the name ``d6_p2D.py`` and computes error
+norms in various ways. Running this program for elements of first
+degree and :math:`\omega=1` yields the output
 
 .. code-block:: python
 
@@ -2258,11 +2201,11 @@ value :math:`r=3`,
         h=3.79E-03 E=1.53E-08 r=3.00
 
 However, using ``(u - u_e)**2`` for the error computation, which
-implies interpolating ``u_e`` onto the same space as ``u``,
-results in :math:`r=4` (!). This is an example where it is important to
-interpolate ``u_e`` to a higher-order space (polynomials of
-degree 3 are sufficient here) to avoid computing a too optimistic
-convergence rate.
+implies interpolating ``u_e`` onto the same space as ``u``, results in
+:math:`r=4` (!). This is an example where it is important to
+interpolate ``u_e`` to a higher-order space (polynomials of degree 3
+are sufficient here) to avoid computing a too optimistic convergence
+rate.
 
 .. #Dropped these comments in the FEniCS book due to confusion#
 
@@ -2279,9 +2222,8 @@ convergence rate.
 .. ``Ve`` with polynomials of degree 3 or 5.
 
 
-
-Running the program for third-degree elements results in the
-expected value :math:`r=4`:
+Running the program for third-degree elements results in the expected
+value :math:`r=4`:
 
 .. code-block:: python
 
@@ -2291,18 +2233,19 @@ expected value :math:`r=4`:
         h=  1.56E-02 r=4.00
         h=  7.81E-03 r=4.00
 
-Checking convergence rates is the next best method for verifying PDE codes
-(the best being exact recovery of a solution as in the section :ref:`tut:poisson1:verify1` and many other places in this tutorial).
+Checking convergence rates is the next best method for verifying PDE
+codes (the best being exact recovery of a solution as in the section
+:ref:`tut:poisson1:verify1` and many other places in this tutorial).
 
 
 .. index:: flux functional
 
 
-*Flux Functionals.* To compute flux integrals like
-:math:`\int_\Gamma p\nabla u\cdot\pmb{n} \, \mathrm{d}s`
-we need to define the :math:`\pmb{n}` vector, referred to as *facet normal*
-in FEniCS. If :math:`\Gamma` is the complete boundary we can perform
-the flux computation by
+*Flux Functionals.* To compute flux integrals like :math:`\int_\Gamma
+p\nabla u\cdot\pmb{n} \, \mathrm{d}s` we need to define the
+:math:`\pmb{n}` vector, referred to as *facet normal* in FEniCS. If
+:math:`\Gamma` is the complete boundary we can perform the flux
+computation by
 
 .. code-block:: python
 
@@ -2310,18 +2253,17 @@ the flux computation by
         flux = -p*dot(nabla_grad(u), n)*ds
         total_flux = assemble(flux)
 
-Although ``nabla_grad(u)`` and ``grad(u)`` are interchangeable
-in the above expression when ``u`` is a scalar function, we have
-chosen to write ``nabla_grad(u)`` because this is
-the right expression if we generalize the underlying equation
-to a vector Laplace/Poisson PDE. With ``grad(u)`` we must in that
-case write ``dot(n, grad(u))``.
+Although ``nabla_grad(u)`` and ``grad(u)`` are interchangeable in the
+above expression when ``u`` is a scalar function, we have chosen to
+write ``nabla_grad(u)`` because this is the right expression if we
+generalize the underlying equation to a vector Laplace/Poisson
+PDE. With ``grad(u)`` we must in that case write ``dot(n, grad(u))``.
 
 It is possible to restrict the integration to a part of the boundary
-using a mesh function to mark the relevant part, as
-explained in the section :ref:`tut:poisson:mat:neumann`. Assuming that the
-part corresponds to subdomain number ``i``, the relevant form for the
-flux is ``-p*inner(grad(u), n)*ds(i)``.
+using a mesh function to mark the relevant part, as explained in the
+section :ref:`tut:poisson:mat:neumann`. Assuming that the part
+corresponds to subdomain number ``i``, the relevant form for the flux
+is ``-p*inner(grad(u), n)*ds(i)``.
 
 .. _tut:structviz:
 
@@ -2340,9 +2282,9 @@ Visualization of Structured Mesh Data
 When finite element computations are done on a structured rectangular
 mesh, maybe with uniform partitioning, VTK-based tools for completely
 unstructured 2D/3D meshes are not required.  Instead we can use
-visualization and data analysis tools for *structured data*.
-Such data typically appear in finite difference simulations and
-image analysis.  Analysis and visualization of structured data are faster
+visualization and data analysis tools for *structured data*.  Such
+data typically appear in finite difference simulations and image
+analysis.  Analysis and visualization of structured data are faster
 and easier than doing the same with data on unstructured meshes, and
 the collection of tools to choose among is much larger.  We shall
 demonstrate the potential of such tools and how they allow for
@@ -2354,25 +2296,27 @@ tailored and flexible visualization and data analysis.
 .. index:: BoxField
 
 
-A necessary first step is to transform our ``mesh`` object to an object
-representing a rectangle with equally-shaped *rectangular* cells.  The
-Python package ``scitools`` (`<code.google.com/p/scitools>`_) has this
-type of structure, called a ``UniformBoxGrid``. The second step is to
-transform the one-dimensional array of nodal values to a
-two-dimensional array holding the values at the corners of the cells
-in the structured grid. In such grids, we want to access a value by
-its :math:`i` and :math:`j` indices, :math:`i` counting cells in the :math:`x` direction, and
-:math:`j` counting cells in the :math:`y` direction.  This transformation is in
-principle straightforward, yet it frequently leads to obscure indexing
-errors. The ``BoxField`` object in ``scitools`` takes conveniently care of
-the details of the transformation.  With a ``BoxField`` defined on a
-``UniformBoxGrid`` it is very easy to call up more standard plotting
-packages to visualize the solution along lines in the domain or as 2D
-contours or lifted surfaces.
+A necessary first step is to transform our ``mesh`` object to an
+object representing a rectangle with equally-shaped *rectangular*
+cells.  The Python package ``scitools``
+(`<code.google.com/p/scitools>`_) has this type of structure, called a
+``UniformBoxGrid``. The second step is to transform the
+one-dimensional array of nodal values to a two-dimensional array
+holding the values at the corners of the cells in the structured
+grid. In such grids, we want to access a value by its :math:`i` and
+:math:`j` indices, :math:`i` counting cells in the :math:`x`
+direction, and :math:`j` counting cells in the :math:`y` direction.
+This transformation is in principle straightforward, yet it frequently
+leads to obscure indexing errors. The ``BoxField`` object in
+``scitools`` takes conveniently care of the details of the
+transformation.  With a ``BoxField`` defined on a ``UniformBoxGrid``
+it is very easy to call up more standard plotting packages to
+visualize the solution along lines in the domain or as 2D contours or
+lifted surfaces.
 
-Let us go back to the ``vcp2D.py`` code from
-the section :ref:`tut:possion:2D:varcoeff` and map ``u`` onto a
-``BoxField`` object:
+Let us go back to the ``vcp2D.py`` code from the section
+:ref:`tut:possion:2D:varcoeff` and map ``u`` onto a ``BoxField``
+object:
 
 .. code-block:: python
 
@@ -2382,31 +2326,28 @@ the section :ref:`tut:possion:2D:varcoeff` and map ``u`` onto a
         u_box = scitools.BoxField.dolfin_function2BoxField(
                 u2, mesh, (nx,ny), uniform_mesh=True)
 
-The function ``dolfin_function2BoxField`` can only work with
-finite element fields with *linear* (degree 1) elements, so for
-higher-degree elements we here simply interpolate the solution onto
-a mesh with linear elements. We could also
-interpolate/project onto a finer mesh in the higher-degree case.
-Such transformations to linear finite element fields
-are very often needed when calling up plotting packages or data analysis tools.
-The ``u.ufl_element()`` method returns an object holding the element
-type, and this object has a method ``degree()`` for returning the
-element degree as an integer.
-The parameters ``nx`` and ``ny`` are the number of divisions in each space
+The function ``dolfin_function2BoxField`` can only work with finite
+element fields with *linear* (degree 1) elements, so for higher-degree
+elements we here simply interpolate the solution onto a mesh with
+linear elements. We could also interpolate/project onto a finer mesh
+in the higher-degree case.  Such transformations to linear finite
+element fields are very often needed when calling up plotting packages
+or data analysis tools.  The ``u.ufl_element()`` method returns an
+object holding the element type, and this object has a method
+``degree()`` for returning the element degree as an integer.  The
+parameters ``nx`` and ``ny`` are the number of divisions in each space
 direction that were used when calling ``UnitSquare`` to make the
-``mesh`` object.
-The result ``u_box`` is a ``BoxField``
-object that supports "finite difference" indexing and an underlying
-grid suitable for ``numpy`` operations on 2D data.
-Also 1D and 3D meshes (with linear elements) can be turned
-into ``BoxField`` objects.
+``mesh`` object.  The result ``u_box`` is a ``BoxField`` object that
+supports "finite difference" indexing and an underlying grid suitable
+for ``numpy`` operations on 2D data.  Also 1D and 3D meshes (with
+linear elements) can be turned into ``BoxField`` objects.
 
 The ability to access a finite element field in the way one can access
-a finite difference-type of field is handy in many occasions, including
-visualization and data analysis.
-Here is an example of writing out the coordinates and the field value
-at a grid point with indices ``i`` and ``j`` (going from 0 to
-``nx`` and ``ny``, respectively, from lower left to upper right corner):
+a finite difference-type of field is handy in many occasions,
+including visualization and data analysis.  Here is an example of
+writing out the coordinates and the field value at a grid point with
+indices ``i`` and ``j`` (going from 0 to ``nx`` and ``ny``,
+respectively, from lower left to upper right corner):
 
 .. code-block:: python
 
@@ -2417,9 +2358,9 @@ at a grid point with indices ``i`` and ``j`` (going from 0 to
                                u_box.grid.coor[Y][j],
                                u_box.values[i,j])
 
-For instance,
-the :math:`x` coordinates are reached by ``u_box.grid.coor[X]``.
-The ``grid`` attribute is an instance of class ``UniformBoxGrid``.
+For instance, the :math:`x` coordinates are reached by
+``u_box.grid.coor[X]``.  The ``grid`` attribute is an instance of
+class ``UniformBoxGrid``.
 
 Many plotting programs can be used to visualize the data in ``u_box``.
 Matplotlib is now a very popular plotting program in the Python world
@@ -2460,14 +2401,12 @@ A contour plot is made by the following ``scitools.easyviz`` command:
                    5, clabels='on',
                    savefig='u_contours.eps', title='Contour plot of u')
 
-The resulting plot can be viewed in
-Figure :ref:`tut:poisson:2D:fig2a`.
-The ``contour`` function needs arrays with the :math:`x` and :math:`y` coordinates
-expanded to 2D arrays (in the same way as demanded when
-making vectorized
-``numpy`` calculations of arithmetic expressions over all grid points).
-The correctly expanded arrays are stored in ``grid.coorv``.
-The above call to
+The resulting plot can be viewed in Figure
+:ref:`tut:poisson:2D:fig2a`.  The ``contour`` function needs arrays
+with the :math:`x` and :math:`y` coordinates expanded to 2D arrays (in
+the same way as demanded when making vectorized ``numpy`` calculations
+of arithmetic expressions over all grid points).  The correctly
+expanded arrays are stored in ``grid.coorv``.  The above call to
 ``contour`` creates 5 equally spaced contour lines, and with
 ``clabels='on'`` the contour values can be seen in the plot.
 
@@ -2486,27 +2425,20 @@ Other functions for visualizing 2D scalar fields are ``surf`` and
         ev.mesh(u_box.grid.coorv[X], u_box.grid.coorv[Y], u_box.values,
                 title='mesh plot of u', savefig='u_mesh.eps')
 
-Figure :ref:`tut:poisson:2D:fig3a` and :ref:`tut:poisson:2D:fig3b` exemplify
-the surfaces arising from
-the two plotting commands above.
-You can type
-``pydoc scitools.easyviz`` in a terminal window
-to get a full tutorial.
-Note that ``scitools.easyviz`` offers function names like
-``plot`` and ``mesh``, which clash with ``plot`` from ``dolfin``
+Figure :ref:`tut:poisson:2D:fig3a` and :ref:`tut:poisson:2D:fig3b`
+exemplify the surfaces arising from the two plotting commands above.
+You can type ``pydoc scitools.easyviz`` in a terminal window to get a
+full tutorial.  Note that ``scitools.easyviz`` offers function names
+like ``plot`` and ``mesh``, which clash with ``plot`` from ``dolfin``
 and the ``mesh`` variable in our programs. Therefore, we recommend the
 ``ev`` prefix.
 
-
 A handy feature of ``BoxField`` is the ability to give a start point
-in the grid and a direction, and then extract the field and corresponding
-coordinates along the nearest grid
-line. In 3D fields
-one can also extract data in a plane.
-Say we
-want to plot :math:`u` along the line :math:`y=1/2` in the grid. The grid points,
-``x``, and the
-:math:`u` values along this line, ``uval``, are extracted by
+in the grid and a direction, and then extract the field and
+corresponding coordinates along the nearest grid line. In 3D fields
+one can also extract data in a plane.  Say we want to plot :math:`u`
+along the line :math:`y=1/2` in the grid. The grid points, ``x``, and
+the :math:`u` values along this line, ``uval``, are extracted by
 
 .. code-block:: python
 
@@ -2514,10 +2446,9 @@ want to plot :math:`u` along the line :math:`y=1/2` in the grid. The grid points
         x, uval, y_fixed, snapped = u_box.gridline(start, direction=X)
 
 The variable ``snapped`` is true if the line had to be snapped onto a
-gridline and in that case ``y_fixed`` holds the snapped
-(altered) :math:`y` value.
-Plotting :math:`u` versus the :math:`x` coordinate along this line, using
-``scitools.easyviz``, is now a matter of
+gridline and in that case ``y_fixed`` holds the snapped (altered)
+:math:`y` value.  Plotting :math:`u` versus the :math:`x` coordinate
+along this line, using ``scitools.easyviz``, is now a matter of
 
 .. code-block:: python
 
@@ -2532,8 +2463,7 @@ Plotting :math:`u` versus the :math:`x` coordinate along this line, using
 
 
 A more exciting plot compares the projected numerical flux in
-:math:`x` direction along the
-line :math:`y=1/2` with the exact flux:
+:math:`x` direction along the line :math:`y=1/2` with the exact flux:
 
 .. code-block:: python
 
@@ -2552,25 +2482,20 @@ line :math:`y=1/2` with the exact flux:
                 title='Flux in x-direction (at y=%g)' % y_fixed,
                 savefig='flux.eps')
 
-As seen from
-Figure :ref:`tut:poisson:2D:fig2b`,
-the numerical flux
-is accurate except in the boundary elements.
+As seen from Figure :ref:`tut:poisson:2D:fig2b`, the numerical flux is
+accurate except in the boundary elements.
 
 The visualization constructions shown above and used to generate the
 figures are found in the program ``vcp2D.py`` in the
 ``stationary/poisson`` directory.
-
-
-
-
 
 .. _tut:poisson:2D:fig2a:
 
 .. figure:: figs/Poisson2D_Dvc_contour1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: contour plot of the solution
+   Finite element function on a structured 2D grid: contour plot of
+   the solution
 
 
 
@@ -2579,7 +2504,8 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_flux_x.png
    :width: 480
 
-   Finite element function on a structured 2D grid: curve plot of the exact flux and the projected numerical flux
+   Finite element function on a structured 2D grid: curve plot of the
+   exact flux and the projected numerical flux
 
 
 
@@ -2588,7 +2514,8 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_surf1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: surface plot of the solution
+   Finite element function on a structured 2D grid: surface plot of
+   the solution
 
 
 
@@ -2597,10 +2524,8 @@ figures are found in the program ``vcp2D.py`` in the
 .. figure:: figs/Poisson2D_Dvc_mesh1.png
    :width: 480
 
-   Finite element function on a structured 2D grid: lifted mesh plot of the solution
-
-
-
+   Finite element function on a structured 2D grid: lifted mesh plot
+   of the solution
 
 It should be easy with the information above to transform a finite
 element field over a uniform rectangular or box-shaped mesh to the
@@ -2626,10 +2551,9 @@ Combining Dirichlet and Neumann Conditions
 ------------------------------------------
 
 Let us make a slight extension of our two-dimensional Poisson problem
-from the section :ref:`tut:poisson1:bvp`
-and add a Neumann boundary condition. The domain is still
-the unit square, but now we set the Dirichlet condition
-:math:`u=u_0` at the left and right sides,
+from the section :ref:`tut:poisson1:bvp` and add a Neumann boundary
+condition. The domain is still the unit square, but now we set the
+Dirichlet condition :math:`u=u_0` at the left and right sides,
 :math:`x=0` and :math:`x=1`, while the Neumann condition
 
 .. math::
@@ -2637,18 +2561,17 @@ the unit square, but now we set the Dirichlet condition
         -{\partial u\over\partial n}=g
 
 
-is applied to the remaining
-sides :math:`y=0` and :math:`y=1`.
-The Neumann condition is also known as a *natural boundary condition*
-(in contrast to an essential boundary condition).
+is applied to the remaining sides :math:`y=0` and :math:`y=1`.  The
+Neumann condition is also known as a *natural boundary condition* (in
+contrast to an essential boundary condition).
 
 .. index:: Neumann boundary conditions
 
 
-Let :math:`\Gamma_D` and :math:`\Gamma_N`
-denote the parts of :math:`\partial\Omega` where the Dirichlet and Neumann
-conditions apply, respectively.
-The complete boundary-value problem can be written as
+Let :math:`\Gamma_D` and :math:`\Gamma_N` denote the parts of
+:math:`\partial\Omega` where the Dirichlet and Neumann conditions
+apply, respectively.  The complete boundary-value problem can be
+written as
 
 .. math::
 
@@ -2657,8 +2580,8 @@ The complete boundary-value problem can be written as
             - {\partial u\over\partial n} &= g \mbox{ on } \Gamma_N  \thinspace .
 
 
-Again we choose :math:`u=1+x^2 + 2y^2` as the exact solution and adjust :math:`f`, :math:`g`, and
-:math:`u_0` accordingly:
+Again we choose :math:`u=1+x^2 + 2y^2` as the exact solution and
+adjust :math:`f`, :math:`g`, and :math:`u_0` accordingly:
 
 .. math::
 
@@ -2670,19 +2593,18 @@ Again we choose :math:`u=1+x^2 + 2y^2` as the exact solution and adjust :math:`f
         u_0 &= 1 + x^2 + 2y^2\thinspace .
 
 
-For ease of programming we may introduce a :math:`g` function defined over the whole
-of :math:`\Omega` such that :math:`g` takes on the right values at :math:`y=0` and
-:math:`y=1`. One possible extension is
+For ease of programming we may introduce a :math:`g` function defined
+over the whole of :math:`\Omega` such that :math:`g` takes on the
+right values at :math:`y=0` and :math:`y=1`. One possible extension is
 
 .. math::
 
         g(x,y) = -4y\thinspace .
 
 
-
-The first task is to derive the variational problem. This time we cannot
-omit the boundary term arising from the integration by parts, because
-:math:`v` is only zero on :math:`\Gamma_D`. We have
+The first task is to derive the variational problem. This time we
+cannot omit the boundary term arising from the integration by parts,
+because :math:`v` is only zero on :math:`\Gamma_D`. We have
 
 .. math::
 
@@ -2703,8 +2625,8 @@ and since :math:`v=0` on :math:`\Gamma_D`,
         = \int_{\Gamma_N}gv \, \mathrm{d}s,
 
 
-by applying the boundary condition on :math:`\Gamma_N`.
-The resulting weak form reads
+by applying the boundary condition on :math:`\Gamma_N`.  The resulting
+weak form reads
 
 .. math::
    :label: tut:poisson:2D:DN:weak
@@ -2715,8 +2637,8 @@ The resulting weak form reads
 
 
 
-Expressing this equation
-in the standard notation :math:`a(u,v)=L(v)` is straightforward with
+Expressing this equation in the standard notation :math:`a(u,v)=L(v)`
+is straightforward with
 
 .. math::
 
@@ -2725,16 +2647,13 @@ in the standard notation :math:`a(u,v)=L(v)` is straightforward with
         L(v) &= \int_{\Omega} fv \, \mathrm{d}x -
         \int_{\Gamma_N} gv \, \mathrm{d}s\thinspace .
 
-
-
-
 .. index:: dn1_p2D.py
 
 
-How does the Neumann condition impact the implementation?
-Starting with any of the previous files ``d*_p2D.py``, say
-``d4_p2D.py``, we realize that the statements remain almost the same.
-Only two adjustments are necessary:
+How does the Neumann condition impact the implementation?  Starting
+with any of the previous files ``d*_p2D.py``, say ``d4_p2D.py``, we
+realize that the statements remain almost the same.  Only two
+adjustments are necessary:
 
   * The function describing the boundary where Dirichlet conditions
     apply must be modified.
@@ -2762,8 +2681,8 @@ A more compact implementation reads
             return on_boundary and (x[0] == 0 or x[0] == 1)
 
 As pointed out already in the section :ref:`tut:poisson1:impl`,
-testing for an exact match of real numbers is
-not good programming practice so we introduce a tolerance in the test:
+testing for an exact match of real numbers is not good programming
+practice so we introduce a tolerance in the test:
 
 .. code-block:: python
 
@@ -2774,21 +2693,21 @@ not good programming practice so we introduce a tolerance in the test:
 
 
 The second adjustment of our program concerns the definition of ``L``,
-where we have to add a boundary integral and a definition of the :math:`g`
-function to be integrated:
+where we have to add a boundary integral and a definition of the
+:math:`g` function to be integrated:
 
 .. code-block:: python
 
         g = Expression('-4*x[1]')
         L = f*v*dx - g*v*ds
 
-The ``ds`` variable implies a boundary integral, while ``dx``
-implies an integral over the domain :math:`\Omega`.
-No more modifications are necessary.
+The ``ds`` variable implies a boundary integral, while ``dx`` implies
+an integral over the domain :math:`\Omega`.  No more modifications are
+necessary.
 
 The file ``dn1_p2D.py`` in the ``stationary/poisson`` directory
-implements this problem. Running the program verifies the implementation:
-:math:`u` equals the exact solution at all the nodes,
+implements this problem. Running the program verifies the
+implementation: :math:`u` equals the exact solution at all the nodes,
 regardless of how many elements we use.
 
 
@@ -2797,22 +2716,20 @@ regardless of how many elements we use.
 Multiple Dirichlet Conditions
 -----------------------------
 
-The PDE problem from the previous section applies a function :math:`u_0(x,y)`
-for setting Dirichlet conditions at two parts of the boundary.
-Having a single function to set multiple Dirichlet conditions is
-seldom possible. The more general case is to have :math:`m` functions for
-setting Dirichlet conditions on :math:`m` parts of the boundary.
-The purpose of this section is to explain how such multiple conditions
-are treated in FEniCS programs.
+The PDE problem from the previous section applies a function
+:math:`u_0(x,y)` for setting Dirichlet conditions at two parts of the
+boundary.  Having a single function to set multiple Dirichlet
+conditions is seldom possible. The more general case is to have
+:math:`m` functions for setting Dirichlet conditions on :math:`m`
+parts of the boundary.  The purpose of this section is to explain how
+such multiple conditions are treated in FEniCS programs.
 
 
 .. index:: dn2_p2D.py
 
 
-Let us
-return to the case from the section :ref:`tut:poisson1:DN`
-and define two separate functions for
-the two Dirichlet conditions:
+Let us return to the case from the section :ref:`tut:poisson1:DN` and
+define two separate functions for the two Dirichlet conditions:
 
 .. math::
 
@@ -2823,13 +2740,11 @@ the two Dirichlet conditions:
 
 
 Here, :math:`\Gamma_0` is the boundary :math:`x=0`, while
-:math:`\Gamma_1` corresponds to the boundary :math:`x=1`.
-We have that :math:`u_L = 1 + 2y^2`, :math:`u_R = 2 + 2y^2`, and :math:`g=-4y`.
-For the left boundary :math:`\Gamma_0` we
-define
-the usual triple of a function for the boundary value,
-a function for defining
-the boundary of interest, and a ``DirichletBC`` object:
+:math:`\Gamma_1` corresponds to the boundary :math:`x=1`.  We have
+that :math:`u_L = 1 + 2y^2`, :math:`u_R = 2 + 2y^2`, and
+:math:`g=-4y`.  For the left boundary :math:`\Gamma_0` we define the
+usual triple of a function for the boundary value, a function for
+defining the boundary of interest, and a ``DirichletBC`` object:
 
 .. code-block:: python
 
@@ -2853,8 +2768,8 @@ For the boundary :math:`x=1` we write a similar code snippet:
 
         Gamma_1 = DirichletBC(V, u_R, right_boundary)
 
-The various essential conditions are then collected in a list
-and used in the solution process:
+The various essential conditions are then collected in a list and used
+in the solution process:
 
 .. code-block:: python
 
@@ -2867,16 +2782,15 @@ and used in the solution process:
         solver.solve()
 
 
-In other problems, where the :math:`u` values are constant at a part of the
-boundary, we may use a simple ``Constant`` object instead of an
+In other problems, where the :math:`u` values are constant at a part
+of the boundary, we may use a simple ``Constant`` object instead of an
 ``Expression`` object.
 
-The file ``dn2_p2D.py`` contains a complete program which
-demonstrates the constructions above.
-An extended example with multiple Neumann conditions would have
-been quite natural now, but this requires marking various parts
-of the boundary using the mesh function concept and is therefore
-left to the section :ref:`tut:poisson:mat:neumann`.
+The file ``dn2_p2D.py`` contains a complete program which demonstrates
+the constructions above.  An extended example with multiple Neumann
+conditions would have been quite natural now, but this requires
+marking various parts of the boundary using the mesh function concept
+and is therefore left to the section :ref:`tut:poisson:mat:neumann`.
 
 
 .. _tut:poisson1:linalg:
@@ -2884,10 +2798,10 @@ left to the section :ref:`tut:poisson:mat:neumann`.
 A Linear Algebra Formulation
 ----------------------------
 
-Given :math:`a(u,v)=L(v)`, the discrete solution :math:`u` is computed by
-inserting :math:`u=\sum_{j=1}^N U_j \phi_j` into :math:`a(u,v)` and demanding
-:math:`a(u,v)=L(v)` to be fulfilled for :math:`N` test functions
-:math:`\hat\phi_1,\ldots,\hat\phi_N`. This implies
+Given :math:`a(u,v)=L(v)`, the discrete solution :math:`u` is computed
+by inserting :math:`u=\sum_{j=1}^N U_j \phi_j` into :math:`a(u,v)` and
+demanding :math:`a(u,v)=L(v)` to be fulfilled for :math:`N` test
+functions :math:`\hat\phi_1,\ldots,\hat\phi_N`. This implies
 
 .. math::
 
@@ -2920,13 +2834,13 @@ where the entries in :math:`A` and :math:`b` are given by
 .. index:: assembly of linear systems
 
 
-The examples so far have specified the left- and right-hand side
-of the variational formulation and then asked FEniCS to
-assemble the linear system and solve it.
-An alternative to is explicitly call functions for assembling the
-coefficient matrix :math:`A` and the right-side vector :math:`b`, and then solve
-the linear system :math:`AU=b` with respect to the :math:`U` vector.
-Instead of ``solve(a == L, u, b)`` we now write
+The examples so far have specified the left- and right-hand side of
+the variational formulation and then asked FEniCS to assemble the
+linear system and solve it.  An alternative to is explicitly call
+functions for assembling the coefficient matrix :math:`A` and the
+right-side vector :math:`b`, and then solve the linear system
+:math:`AU=b` with respect to the :math:`U` vector.  Instead of
+``solve(a == L, u, b)`` we now write
 
 .. code-block:: python
 
@@ -2937,21 +2851,20 @@ Instead of ``solve(a == L, u, b)`` we now write
         U = u.vector()
         solve(A, U, b)
 
-The variables ``a`` and ``L`` are as before. That is, ``a`` refers to the
-bilinear form involving a ``TrialFunction`` object (say ``u``)
-and a ``TestFunction`` object (``v``), and ``L`` involves a
-``TestFunction`` object (``v``). From ``a`` and ``L``,
-the ``assemble`` function can
-compute :math:`A` and :math:`b`.
+The variables ``a`` and ``L`` are as before. That is, ``a`` refers to
+the bilinear form involving a ``TrialFunction`` object (say ``u``) and
+a ``TestFunction`` object (``v``), and ``L`` involves a
+``TestFunction`` object (``v``). From ``a`` and ``L``, the
+``assemble`` function can compute :math:`A` and :math:`b`.
 
-The matrix :math:`A` and vector :math:`b` are first assembled without incorporating
-essential (Dirichlet) boundary conditions. Thereafter, the
-call ``bc.apply(A, b)`` performs the necessary modifications of
-the linear system such that ``u`` is guaranteed to equal the prescribed
-boundary values.
-When we have multiple Dirichlet conditions stored in a list ``bcs``,
-as explained in the section :ref:`tut:poisson:multiple:Dirichlet`, we must apply
-each condition in ``bcs`` to the system:
+The matrix :math:`A` and vector :math:`b` are first assembled without
+incorporating essential (Dirichlet) boundary conditions. Thereafter,
+the call ``bc.apply(A, b)`` performs the necessary modifications of
+the linear system such that ``u`` is guaranteed to equal the
+prescribed boundary values.  When we have multiple Dirichlet
+conditions stored in a list ``bcs``, as explained in the section
+:ref:`tut:poisson:multiple:Dirichlet`, we must apply each condition in
+``bcs`` to the system:
 
 .. code-block:: python
 
@@ -2965,15 +2878,16 @@ each condition in ``bcs`` to the system:
 
 
 There is an alternative function ``assemble_system``, which can
-assemble the system and take boundary conditions into account in one call:
+assemble the system and take boundary conditions into account in one
+call:
 
 .. code-block:: python
 
         A, b = assemble_system(a, L, bcs)
 
 The ``assemble_system`` function incorporates the boundary conditions
-in the element matrices and vectors, prior to assembly.
-The conditions are also incorporated in a symmetric way to preserve
+in the element matrices and vectors, prior to assembly.  The
+conditions are also incorporated in a symmetric way to preserve
 eventual symmetry of the coefficient matrix.
 .. That is, for each degree of freedom
 
@@ -2987,8 +2901,8 @@ eventual symmetry of the coefficient matrix.
 
 .. known value of the degree of freedom.
 
-With ``bc.apply(A, b)`` the
-matrix ``A`` is modified in an unsymmetric way.
+With ``bc.apply(A, b)`` the matrix ``A`` is modified in an unsymmetric
+way.
 .. : The row is zero'ed out
 
 .. and 1 is placed on the main diagonal, and the degree of freedom value
@@ -2997,16 +2911,14 @@ matrix ``A`` is modified in an unsymmetric way.
 
 
 Note that the solution ``u`` is, as before, a ``Function`` object.
-The degrees of freedom, :math:`U=A^{-1}b`, are filled
-into `u`'s ``Vector`` object (``u.vector()``)
-by the ``solve`` function.
+The degrees of freedom, :math:`U=A^{-1}b`, are filled into `u`'s
+``Vector`` object (``u.vector()``) by the ``solve`` function.
 
-The object ``A`` is of type ``Matrix``, while ``b`` and
-``u.vector()`` are of type ``Vector``. We may convert the
-matrix and vector data to ``numpy`` arrays by calling the
-``array()`` method as shown before. If you wonder how essential
-boundary conditions are incorporated in the linear system, you can
-print out ``A`` and ``b`` before and after the
+The object ``A`` is of type ``Matrix``, while ``b`` and ``u.vector()``
+are of type ``Vector``. We may convert the matrix and vector data to
+``numpy`` arrays by calling the ``array()`` method as shown before. If
+you wonder how essential boundary conditions are incorporated in the
+linear system, you can print out ``A`` and ``b`` before and after the
 ``bc.apply(A, b)`` call:
 
 .. code-block:: python
@@ -3023,12 +2935,11 @@ print out ``A`` and ``b`` before and after the
 
 
 
-With access to the elements in ``A`` through a ``numpy`` array we can easily
-perform computations on this matrix, such as computing the eigenvalues
-(using the ``eig`` function in ``numpy.linalg``). We can alternatively dump
-``A.array()`` and ``b.array()`` to file in MATLAB format and
-invoke MATLAB or Octave to
-analyze the linear system.
+With access to the elements in ``A`` through a ``numpy`` array we can
+easily perform computations on this matrix, such as computing the
+eigenvalues (using the ``eig`` function in ``numpy.linalg``). We can
+alternatively dump ``A.array()`` and ``b.array()`` to file in MATLAB
+format and invoke MATLAB or Octave to analyze the linear system.
 Dumping the arrays to MATLAB format is done by
 
 .. code-block:: python
@@ -3036,8 +2947,8 @@ Dumping the arrays to MATLAB format is done by
         import scipy.io
         scipy.io.savemat('Ab.mat', {'A': A.array(), 'b': b.array()})
 
-Writing ``load Ab.mat`` in MATLAB or Octave will then make
-the variables ``A`` and ``b`` available for computations.
+Writing ``load Ab.mat`` in MATLAB or Octave will then make the
+variables ``A`` and ``b`` available for computations.
 
 
 .. index:: SLEPc
@@ -3055,27 +2966,27 @@ for a demo).
 .. index:: dn3_p2D.py
 
 
-A complete code where the linear system :math:`AU=b` is explicitly assembled and
-solved is found in the file ``dn3_p2D.py`` in the directory
-``stationary/poisson``. This code solves the same problem as in
-``dn2_p2D.py``
-(the section :ref:`tut:poisson:multiple:Dirichlet`).  For small
-linear systems, the program writes out ``A`` and ``b`` before and
-after incorporation of essential boundary conditions and illustrates
-the difference between ``assemble`` and ``assemble_system``.
-The reader is encouraged to run the code for a :math:`2\times 1`
-mesh (``UnitSquare(2, 1)`` and study the output of ``A``.
+A complete code where the linear system :math:`AU=b` is explicitly
+assembled and solved is found in the file ``dn3_p2D.py`` in the
+directory ``stationary/poisson``. This code solves the same problem as
+in ``dn2_p2D.py`` (the section :ref:`tut:poisson:multiple:Dirichlet`).
+For small linear systems, the program writes out ``A`` and ``b``
+before and after incorporation of essential boundary conditions and
+illustrates the difference between ``assemble`` and
+``assemble_system``.  The reader is encouraged to run the code for a
+:math:`2\times 1` mesh (``UnitSquare(2, 1)`` and study the output of
+``A``.
 
-By default, ``solve(A, U, b)`` applies sparse LU decomposition
-as solver. Specification of an iterative solver and preconditioner
-is done through two optional arguments:
+By default, ``solve(A, U, b)`` applies sparse LU decomposition as
+solver. Specification of an iterative solver and preconditioner is
+done through two optional arguments:
 
 .. code-block:: python
 
         solve(A, U, b, 'cg', 'ilu')
 
-Appropriate names of solvers and preconditioners are found in
-the section :ref:`tut:app:solver:prec`.
+Appropriate names of solvers and preconditioners are found in the
+section :ref:`tut:app:solver:prec`.
 
 
 .. index:: KrylovSolver
@@ -3084,10 +2995,10 @@ the section :ref:`tut:app:solver:prec`.
 .. index:: d4_p2D.py
 
 
-To control tolerances in the stopping criterion and the maximum
-number of iterations, one can explicitly form a ``KrylovSolver`` object
-and set items in its ``parameters`` attribute
-(see also the section :ref:`tut:poisson1:solver:problem`):
+To control tolerances in the stopping criterion and the maximum number
+of iterations, one can explicitly form a ``KrylovSolver`` object and
+set items in its ``parameters`` attribute (see also the section
+:ref:`tut:poisson1:solver:problem`):
 
 .. code-block:: python
 
@@ -3107,10 +3018,10 @@ illustrating this latter approach.
 .. index:: random start vector (linear systems)
 
 
-The choice of start vector for the iterations in a linear solver is often
-important. With the ``solver.solve(A, U, b)`` call the default start vector
-is the zero vector. A start vector
-with random numbers in the interval :math:`[-100,100]` can be computed as
+The choice of start vector for the iterations in a linear solver is
+often important. With the ``solver.solve(A, U, b)`` call the default
+start vector is the zero vector. A start vector with random numbers in
+the interval :math:`[-100,100]` can be computed as
 
 .. code-block:: python
 
@@ -3121,16 +3032,17 @@ with random numbers in the interval :math:`[-100,100]` can be computed as
         solver.solve(A, U, b)
 
 Note that we must turn off the default behavior of setting the start
-vector ("initial guess") to zero.
-A random start vector is included in the ``dn4_p2D.py`` code.
+vector ("initial guess") to zero.  A random start vector is included
+in the ``dn4_p2D.py`` code.
 
 Creating the linear system explicitly in a program can have some
-advantages in more advanced problem settings. For example, :math:`A` may
-be constant throughout a time-dependent simulation, so we can avoid
-recalculating :math:`A` at every time level and save a significant amount
-of simulation time. The sections :ref:`tut:timedep:diffusion1:impl`
-and :ref:`tut:timedep:diffusion1:noassemble` deal with this topic
-in detail.
+advantages in more advanced problem settings. For example, :math:`A`
+may be constant throughout a time-dependent simulation, so we can
+avoid recalculating :math:`A` at every time level and save a
+significant amount of simulation time. The sections
+:ref:`tut:timedep:diffusion1:impl` and
+:ref:`tut:timedep:diffusion1:noassemble` deal with this topic in
+detail.
 
 
 .. In other problems, we may divide the variational
@@ -3163,10 +3075,10 @@ Parameterizing the Number of Space Dimensions
 FEniCS makes it is easy to write a unified simulation code that can
 operate in 1D, 2D, and 3D. We will conveniently make use of this
 feature in forthcoming examples.  As an appetizer, go back to the
-introductory program ``d1_p2D.py`` in the ``stationary/poisson`` directory
-and change the mesh construction from ``UnitSquare(6, 4)`` to
-``UnitCube(6, 4, 5)``. Now the domain is the unit cube partitioned into
-:math:`6\times 4\times 5` boxes, and each box is divided into six
+introductory program ``d1_p2D.py`` in the ``stationary/poisson``
+directory and change the mesh construction from ``UnitSquare(6, 4)``
+to ``UnitCube(6, 4, 5)``. Now the domain is the unit cube partitioned
+into :math:`6\times 4\times 5` boxes, and each box is divided into six
 tetrahedra-shaped finite elements for computations.  Run the program
 and observe that we can solve a 3D problem without any other
 modifications (!). The visualization allows you to rotate the cube and
@@ -3182,16 +3094,16 @@ Consider the simple model problem
         u''(x) = 2\hbox{ in }[0,1],\quad u(0)=0,\ u(1)=1,
 
 
-with exact solution :math:`u(x)=x^2`. Our aim is to formulate and solve this
-problem in a 2D and a 3D domain as well.
-We may generalize the domain :math:`[0,1]` to a rectangle or box of any size
-in the :math:`y` and :math:`z` directions and pose homogeneous Neumann
-conditions :math:`\partial u/\partial n = 0` at all additional boundaries
-:math:`y=\mbox{const}` and :math:`z=\mbox{const}` to ensure that :math:`u` only varies with
-:math:`x`. For example, let us choose
-a unit hypercube as domain: :math:`\Omega = [0,1]^d`, where :math:`d` is the number
-of space dimensions. The generalized $d$-dimensional Poisson problem
-then reads
+with exact solution :math:`u(x)=x^2`. Our aim is to formulate and
+solve this problem in a 2D and a 3D domain as well.  We may generalize
+the domain :math:`[0,1]` to a rectangle or box of any size in the
+:math:`y` and :math:`z` directions and pose homogeneous Neumann
+conditions :math:`\partial u/\partial n = 0` at all additional
+boundaries :math:`y=\mbox{const}` and :math:`z=\mbox{const}` to ensure
+that :math:`u` only varies with :math:`x`. For example, let us choose
+a unit hypercube as domain: :math:`\Omega = [0,1]^d`, where :math:`d`
+is the number of space dimensions. The generalized $d$-dimensional
+Poisson problem then reads
 
 .. math::
    :label: tut:poisson1:ddim
@@ -3212,18 +3124,18 @@ where :math:`\Gamma_1` is the side where :math:`x=1`.
 .. index:: paD.py
 
 
-Implementing a PDE for any :math:`d` is no more
-complicated than solving a problem with a specific number of dimensions.
-The only non-trivial part of the code is actually to define the mesh.
-We use the command line for the user-input to the program. The first argument
-can be the degree of the polynomial in the finite element basis functions.
-Thereafter, we supply the
-cell divisions in the various spatial directions. The number of
-command-line arguments will then imply the number of space dimensions.
-For example, writing ``3 10 3 4`` on the command line means that
-we want to approximate :math:`u` by piecewise polynomials of degree 3,
-and that the domain is a three-dimensional cube with :math:`10\times 3\times 4`
-divisions in the :math:`x`, :math:`y`, and :math:`z` directions, respectively.
+Implementing a PDE for any :math:`d` is no more complicated than
+solving a problem with a specific number of dimensions.  The only
+non-trivial part of the code is actually to define the mesh.  We use
+the command line for the user-input to the program. The first argument
+can be the degree of the polynomial in the finite element basis
+functions.  Thereafter, we supply the cell divisions in the various
+spatial directions. The number of command-line arguments will then
+imply the number of space dimensions.  For example, writing ``3 10 3
+4`` on the command line means that we want to approximate :math:`u` by
+piecewise polynomials of degree 3, and that the domain is a
+three-dimensional cube with :math:`10\times 3\times 4` divisions in
+the :math:`x`, :math:`y`, and :math:`z` directions, respectively.
 .. Each of the :math:`10\times 3\times 4 = 120` boxes will
 
 .. be divided into six tetrahedra.
@@ -3239,15 +3151,14 @@ The Python code can be quite compact:
         mesh = domain_type[d-1](*divisions)
         V = FunctionSpace(mesh, 'Lagrange', degree)
 
-First note that although ``sys.argv[2:]`` holds the divisions of
-the mesh, all elements of the list ``sys.argv[2:]`` are string objects,
-so we need to explicitly convert each element to an integer.
-The construction ``domain_type[d-1]`` will pick the right name of the
-object used to define the domain and generate the mesh.
-Moreover, the argument ``*divisions``
-sends all the component of the list ``divisions`` as separate
-arguments. For example, in a 2D problem where ``divisions`` has
-two elements, the statement
+First note that although ``sys.argv[2:]`` holds the divisions of the
+mesh, all elements of the list ``sys.argv[2:]`` are string objects, so
+we need to explicitly convert each element to an integer.  The
+construction ``domain_type[d-1]`` will pick the right name of the
+object used to define the domain and generate the mesh.  Moreover, the
+argument ``*divisions`` sends all the component of the list
+``divisions`` as separate arguments. For example, in a 2D problem
+where ``divisions`` has two elements, the statement
 
 .. code-block:: python
 
@@ -3261,9 +3172,9 @@ is equivalent to
 
 
 The next part of the program is to set up the boundary conditions.
-Since the Neumann conditions have :math:`\partial u/\partial n=0` we can
-omit the boundary integral from the weak form. We then only
-need to take care of Dirichlet conditions at two sides:
+Since the Neumann conditions have :math:`\partial u/\partial n=0` we
+can omit the boundary integral from the weak form. We then only need
+to take care of Dirichlet conditions at two sides:
 
 .. code-block:: python
 
@@ -3279,8 +3190,7 @@ need to take care of Dirichlet conditions at two sides:
         bcs = [bc0, bc1]
 
 Note that this code is independent of the number of space dimensions.
-So are the statements defining and solving
-the variational problem:
+So are the statements defining and solving the variational problem:
 
 .. code-block:: python
 
@@ -3293,14 +3203,15 @@ the variational problem:
         u = Function(V)
         solve(a == L, u, bcs)
 
-The complete code is found in the file ``paD.py`` (Poisson problem in "anyD").
+The complete code is found in the file ``paD.py`` (Poisson problem in
+"anyD").
 
 
-If we want to parameterize the direction in which :math:`u` varies, say by
-the space direction number ``e``, we only need to replace ``x[0]`` in the
-code by ``x[e]``. The parameter ``e`` could be given as a second
-command-line argument.  The reader is encouraged to perform this
-modification.
+If we want to parameterize the direction in which :math:`u` varies,
+say by the space direction number ``e``, we only need to replace
+``x[0]`` in the code by ``x[e]``. The parameter ``e`` could be given
+as a second command-line argument.  The reader is encouraged to
+perform this modification.
 
 
 
