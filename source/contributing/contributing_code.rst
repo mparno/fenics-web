@@ -59,3 +59,6 @@ and 'topic branches'. The same workflow is used by the developers
 of `PETSc <http://www.mcs.anl.gov/petsc/>`__. The `PETSc Wiki
 <https://bitbucket.org/petsc/petsc/wiki/Home>`__ has some good
 information on both Git usage and the gitworkflows model.
+
+A summary of useful Git commands for some common use cases can be found in
+the `Git cookbook for FEniCS developers <https://bitbucket.org/fenics-project/dolfin/wiki/Git%20cookbook%20for%20FEniCS%20developers>`__.
