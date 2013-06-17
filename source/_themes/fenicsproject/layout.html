@@ -1,0 +1,98 @@
+{% extends "basic/layout.html" %}
+
+  {% set script_files = script_files + [
+    '_static/js/jquery-1.9.1.min.js',
+    '_static/js/jquery-fix.js',
+    '_static/bootstrap-3.0.0/js/bootstrap.js',
+    '_static/bootstrap-sphinx.js'
+  ]
+%}
+{% set css_files = [
+    '_static/bootstrap-3.0.0/css/bootstrap.css'
+  ] + css_files
+%}
+{% set css_files = css_files + [
+    '_static/bootstrap-sphinx.css',
+  ]
+%}
+
+{%- block doctype -%}
+<!DOCTYPE html>
+{%- endblock %}
+
+{# Sidebar: Rework into our Boostrap nav section. #}
+{% macro navBar() %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">The FEniCS Project</a>
+    <div class="nav-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+	<li><a href="/about/" title="Find out more about the FEniCS project">About</a></li>
+	<li><a href="/download/" title="Obtain the FEniCS project">Download</a></li>
+	<li><a href="/documentation/" title="Learn how to use the FEniCS project">Documentation</a></li>
+	<li><a href="/applications/" title="Learn how others are using the FEniCS project">Applications</a></li>
+	<li><a href="/contributing/" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
+	<li><a href="/citing/" title="Learn how to cite the FEniCS project">Citing</a></li>
+	<li><a href="/support/" title="Where to go for more help">Support</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+{% endmacro %}
+
+{%- block extrahead %}
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+{% endblock %}
+
+{# Silence the sidebar's, relbar's #}
+{% block header %}{% endblock %}
+{% block sidebar1 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarsourcelink %}{% endblock %}
+
+{%- block content %}
+{{ navBar() }}
+<div class="container">
+  {% block body %}{% endblock %}
+</div>
+{%- endblock %}
+
+{%- block footer %}
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      {% if theme_source_link_position == "footer" %}
+        <br/>
+        {% include "sourcelink.html" %}
+      {% endif %}
+    </p>
+    <p>
+    {%- if show_copyright %}
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
+      {%- else %}
+        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
+      {%- endif %}
+    {%- endif %}
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
+    {%- endif %}
+    {%- if show_sphinx %}
+      {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
+    {%- endif %}
+    </p>
+  </div>
+</footer>
+{%- endblock %}
