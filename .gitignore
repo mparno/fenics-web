@@ -3,4 +3,5 @@ utils/newsfetcher/cache/*
 utils/newsfetcher/output/*
 *.tmplc
 .DS_Store
+*~
 *.pyc
