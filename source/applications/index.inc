@@ -127,7 +127,7 @@
 
       	<div class="front-block block app">
 
-	  <h3>FEniCS Plasticity &mdash; A plasticity library for FEniCS</h3>
+	  <h3>FEniCS Solid Mechanics &mdash; A solid mechanics library for FEniCS</h3>
           <img alt='' src='/_static/images/fenics_plasticity.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
