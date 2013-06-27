@@ -131,12 +131,12 @@
           <img alt='' src='/_static/images/fenics_plasticity.png'
           class='avatar avatar-84 photo' height='84' width='84' />
 
-	  <p>FEniCS Solid Mechanics aims at providing functionality to makes it
-        simpler for application developers to create solvers for complex solid
+	  <p>FEniCS Solid Mechanics aims at providing functionality to make it
+      simpler for application developers to create solvers for complex solid
         mechanics problems such as plasticity. The library currently implements
         the Von Mises and Drucker-Prager plasticity models using FEniCS software.
         However, the structure of the library should be general enough to allow
-        other models to be implemented with little effort.
+        other models to be added with little effort.
         </p>
 
           <p><a href="https://bitbucket.org/fenics-apps/fenics-solid-mechanics"
