@@ -104,6 +104,12 @@
         <div id="front-block-2" class="front-block block">
           <h3>Recent project news <a href="/_static/news/feed.xml" title="The FEniCS Project News RSS feed" rel="alternate nofollow" type="application/rss+xml"><img src="/_static/feed-icon-14x14.gif" alt="RSS"/></a></h3>
 	  <!--#include virtual="_static/news/include.html"-->
+
+          <!-- New news fetcher. When uncommented it breaks the slideshow.
+            <script src="/_static/js/jquery-2.0.0.min.js"></script>
+            <script src="/_static/js/fetch-news.js"></script>
+          -->
+
         </div><!-- #front-block-2 .front-block .block-->
 
       </div><!-- #sub-feature -->
