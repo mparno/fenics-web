@@ -102,10 +102,8 @@
         </div><!-- #front-block-1 .front-block .block-->
 
         <div id="front-block-2" class="front-block block">
-          <h3>Recent project news <a href="/_static/news/feed.xml" title="The FEniCS Project News RSS feed" rel="alternate nofollow" type="application/rss+xml"><img src="/_static/feed-icon-14x14.gif" alt="RSS"/></a></h3>
-	  <!-- <div id="news">
-	       </div>-->
-	  <!--#include virtual="_static/news/include.html"-->
+          <h3>Recent project news (<a href="https://plus.google.com/communities/105550716956576029273">FEniCS Google+ group</a>)</h3>
+	  <div id="news"></div>
         </div><!-- #front-block-2 .front-block .block-->
 
       </div><!-- #sub-feature -->
