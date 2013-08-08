@@ -9,7 +9,7 @@ window.onload = function() {
 	        $('#news').append(news.items[i].title);
 		var pubdate = new Date(news.items[i].published);
 	        $('#news').append('<small><br>' +
-                                  '<a href="">Read more</a> &mdash; Posted by <a href="' + news.items[i].actor.url + '">' + news.items[i].actor.displayName + '</a>' +
+                                  '<a href="' + news.items[i].url + '">Read more</a> &mdash; Posted by <a href="' + news.items[i].actor.url + '">' + news.items[i].actor.displayName + '</a>' +
                                   ' on ' + pubdate.getFullYear() + '-' + pubdate.getMonth() + '-' + pubdate.getDate() +
                                   '</small>');
 	        $('#news').append('</p>');
