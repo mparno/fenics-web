@@ -6,12 +6,11 @@ window.onload = function() {
             {
 	        $('#news').append('<p>');
 		$('#news').append('<a href="' + news.items[i].url + '"><img class="avatar" src="' + news.items[i].actor.image.url + '"></a>');
-	        $('#news').append(news.items[i].title +
-                                  ' ' +
-                                  '<a href="' + news.items[i].url + '"><br>Read more &raquo;</a>');
+	        $('#news').append(news.items[i].title);
+		var pubdate = new Date(news.items[i].published);
 	        $('#news').append('<small><br>' +
-                                  'Posted by <a href="' + news.items[i].actor.url + '">' + news.items[i].actor.displayName + '</a>' +
-                                  '&mdash;' + news.items[i].published +
+                                  '<a href="">Read more</a> &mdash; Posted by <a href="' + news.items[i].actor.url + '">' + news.items[i].actor.displayName + '</a>' +
+                                  ' on ' + pubdate.getFullYear() + '-' + pubdate.getMonth() + '-' + pubdate.getDate() +
                                   '</small>');
 	        $('#news').append('</p>');
             }
