@@ -106,23 +106,22 @@
         </div>
 
       	<div class="front-block block">
-  	  <h2>Anders Logg</h2>
+  	  <h2><a href="https://www.chalmers.se/en/staff/Pages/logg.aspx">Anders Logg</a></h2>
           <div class="avatar mugshot">
 	    <img alt='Anders Logg'
 		 src='/_static/images/mugshots/logg.jpg' />
 	  </div>
 
-          <p>Anders is a senior research scientist at <a
-          href="http://simula.no/">Simula Research Laboratory</a> and
-          an adjunct associate professor at the <a
-          href="http://www.uio.no/">University of Oslo</a>.</p>
+          <p>Anders is a professor at the
+          <a href="http://www.chalmers.se/en/departments/math/Pages/default.aspx">Department of Mathematical Sciences</a> at
+          <a href="http://www.chalmers.se/en/Pages/default.aspx">Chalmers University of Technology</a>.
 
           <p>He has been involved with the FEniCS project since 2003
           and is a developer and maintainer of DOLFIN, FFC, UFC, UFL,
           CBC.Solve, Exterior and the FEniCS Project web page.</p>
 
           <p>You can view all Anders' contributions on <a
-          href="https://launchpad.net/~logg">his Launchpad
+          href="https://bitbucket.org/logg">his Bitbucket
           page.</a></p>
 
         </div>
@@ -260,7 +259,7 @@
 		 src='/_static/images/mugshots/scott.jpg' />
 	  </div>
 
-	  <p>Ridgway is a Professor at the <a
+	  <p>Ridgway is a professor at the <a
 	  href="http://cs.uchicago.edu/">University of Chicago</a>.
           </p>
 
