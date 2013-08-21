@@ -16,6 +16,11 @@ If you need help with anything related to FEniCS, ranging from
 installation issues to how to best solve a PDE, ask your question
 in the `FEniCS Q&A forum <http://fenicsproject.org/qa/>`__.
 
+If you have a specific question related to obtaining, building, or
+installing a FEniCS component, please send a message to the `FEniCS
+support mailing list
+<http://fenicsproject.org/mailman/listinfo/fenics-support>`_.
+
 Before running away and posting your question, please take a minute
 to consider the follow points:
 
@@ -42,18 +47,23 @@ reporting bugs in DOLFIN, visit the `DOLFIN issues page
 <https://bitbucket.org/fenics-project/dolfin/issues>`_. As above, post
 complete but *minimal* code examples.
 
-Mailing list
-============
+Mailing lists
+=============
 
 .. _help_mailinglist:
 
-The `FEniCS mailing list
+The main `FEniCS mailing list
 <http://fenicsproject.org/mailman/listinfo/fenics>`__ is where
 discussions take place. It covers everything that does not fit into
-any of the above categories (user questions or bug reports). This is
-also the place for announcements of workshops, releases, tutorials,
-papers. Everyone is invited to subscribe to the mailing list and take
-part in discussions.
+any of the above categories (user questions, bug reports or
+installation or compilation issues). This is also the place for
+announcements of workshops, releases, tutorials, papers. Everyone is
+invited to subscribe to the mailing list and take part in discussions.
+
+The `FEniCS support mailing list
+<http://fenicsproject.org/mailman/listinfo/fenics-support>`_ is a
+place to ask specific questions related to obtaining, building, or
+installing FEniCS components.
 
 Contributing
 ============
