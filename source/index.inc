@@ -102,8 +102,9 @@
         </div><!-- #front-block-1 .front-block .block-->
 
         <div id="front-block-2" class="front-block block">
-          <h3>Recent project news (<a href="https://plus.google.com/communities/105550716956576029273">FEniCS Google+ group</a>)</h3>
-	  <div id="news"></div>
+          <h3>Recent project news</h3>
+	  <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%23fenicsnews+from%3Aanderslogg" data-widget-id="373500001374056448" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "#fenicsnews from:anderslogg"</a>
+	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- #front-block-2 .front-block .block-->
 
       </div><!-- #sub-feature -->
