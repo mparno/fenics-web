@@ -103,8 +103,8 @@
 
         <div id="front-block-2" class="front-block block">
           <h3>Recent project news</h3>
-	  <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=%23fenicsnews+from%3Aanderslogg" data-widget-id="373500001374056448" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "#fenicsnews from:anderslogg"</a>
-	  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <a class="twitter-timeline" href="https://twitter.com/search?q=%28from%3Afenicsnews+OR+from%3Aanderslogg+OR+from%3Awisdemy%29+AND+%23fenicsnews" data-widget-id="375237425598959616" data-widget-id="373500001374056448" data-chrome="noheader nofooter transparent noborder noscrollbar" data-link-color="#d81e28">Tweets om "(from:fenicsnews OR from:anderslogg OR from:wisdemy) AND #fenicsnews"</a> -->
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div><!-- #front-block-2 .front-block .block-->
 
       </div><!-- #sub-feature -->
