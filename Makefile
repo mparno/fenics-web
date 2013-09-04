@@ -18,7 +18,6 @@ help:
 	@echo "  import_docs  to import documentation for projects"
 	@echo "  publish      to publish everything on www.fenicsproject.org"
 	@echo "  clean        to clean out everything (build directory)"
-	@echo "  fetch_news   to fetch the news"
 	@echo ""
 	@echo "In addition, the targets 'latex' and 'pdf' exist but are not used."
 
@@ -37,13 +36,9 @@ import_docs:
 publish:
 	scripts/publish
 	@echo ""
-	@echo "If you didn't run 'make fetch_news', please do so and 'make publish' again"
 
 clean:
 	-rm -rf build
-
-fetch_news:
-	cd scripts && ./fetch_news
 
 latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) build/latex
