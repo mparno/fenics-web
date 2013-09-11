@@ -9,7 +9,7 @@
 # Licensed under the GNU GPL version 3 or any later version.
 #
 # First added:  2011-06-14
-# Last changed: 2011-08-18
+# Last changed: 2013-09-11
 #
 # Modified by Anders Logg, 2011.
 
@@ -23,6 +23,18 @@ if [ x$UFL_DIR == x ]; then
     exit 1
 fi
 
+# Get version numbers. We do this manually rather than by calling
+# $PATH/bin/$PACKAGE-version so we don't need to require that packages
+# are installed and the $PACKAGE-version script is in $PATH to test
+# the documentation. (Only $DOLFIN_DIR and $UFL_DIR need to be set.)
+UFL_VERSION=`grep __version__ $UFL_DIR/ufl/__init__.py | cut -d'"' -f2`
+DOLFIN_VERSION_MAJOR=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MAJOR | cut -d'"' -f2`
+DOLFIN_VERSION_MINOR=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MINOR | cut -d'"' -f2`
+DOLFIN_VERSION_MICRO=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MICRO | cut -d'"' -f2`
+DOLFIN_VERSION=$DOLFIN_VERSION_MAJOR.$DOLFIN_VERSION_MINOR.$DOLFIN_VERSION_MICRO
+echo "UFL version:    $UFL_VERSION"
+echo "DOLFIN version: $DOLFIN_VERSION"
+
 # Rsync command
 RSYNC="rsync -a --delete --exclude build --exclude scripts"
 
@@ -34,6 +46,7 @@ import_doc()
     PACKAGE=`echo $package | tr 'a-z' 'A-Z'`
     DOCDIR=$2
     SUFFIX=$3
+    PACKAGE_VERSION=$4
 
     # Get package directory
     PACKAGE_DIR_VARIABLE="${PACKAGE}_DIR"
@@ -44,9 +57,6 @@ import_doc()
         echo "* Error: $PACKAGE_DIR_VARIABLE has not been set"
         exit 1
     fi
-
-    # Get package version
-    PACKAGE_VERSION=`$package-version` || exit 1
 
     # Modify version number if necessary (+ --> dev)
     if [[ $PACKAGE_VERSION == *+ ]]; then
@@ -94,6 +104,6 @@ import_doc()
 }
 
 # Import documentation for all packages
-import_doc dolfin build/doc/sphinx-cpp    cpp
-import_doc dolfin build/doc/sphinx-python python
-import_doc ufl    doc/sphinx
+import_doc dolfin build/doc/sphinx-cpp    cpp    $DOLFIN_VERSION
+import_doc dolfin build/doc/sphinx-python python $DOLFIN_VERSION
+import_doc ufl    doc/sphinx                     $UFL_VERSION
