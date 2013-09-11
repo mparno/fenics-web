@@ -465,6 +465,7 @@ padding-left: 1em;
 .block .avatar {
     float:left;
     margin:.55em 5px 0 0;
+    padding-right: 10px;
 }
 .block .avatar-84 {
     margin:.25em 10px 0 0;
