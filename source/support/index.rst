@@ -12,23 +12,21 @@ encounter when using FEniCS.
 Asking questions
 ================
 
-If you need help with anything related to FEniCS, ranging from
-installation issues to how to best solve a PDE, ask your question
-in the `FEniCS Q&A forum <http://fenicsproject.org/qa/>`__.
+If you need help with using FEniCS, ask your question in the `FEniCS
+Q&A Forum <http://fenicsproject.org/qa/>`__.  If you have a specific
+question related to obtaining, building or installing a FEniCS
+component, please send a message to the `FEniCS support mailing list
+<http://fenicsproject.org/mailman/listinfo/fenics-support>`_.  If you
+would like to discuss FEniCS development or propose a new feature,
+please send a message to the `FEniCS mailing list
+<http://fenicsproject.org/mailman/listinfo/fenics>`_
 
-If you have a specific question related to obtaining, building, or
-installing a FEniCS component, please send a message to the `FEniCS
-support mailing list
-<http://fenicsproject.org/mailman/listinfo/fenics-support>`_.
+Before posting your question, please consider the following points:
 
-Before running away and posting your question, please take a minute
-to consider the follow points:
+* Search the forum to check that your question has not been answered
+  before.
 
-* Search the forum to check that your question has not been answered before.
-
-* Search the `FEniCS user questions on Launchpad <http://answers.launchpad.net/fenics-project/>`__ to check that your question has not been answered before.
-
-* Formulate your question well. If we cannot understand your question,
+* Formulate your question carefully. If we cannot understand your question,
   we probably cannot help you.
 
 * Post complete, but *minimal* code examples. No one wants to read
@@ -38,11 +36,12 @@ to consider the follow points:
 
 * Tag your question appropriately.
 
+
 Reporting bugs
 ==============
 
-If you encounter something you suspect is a bug, please file a bug report
-using the Bitbucket issue tracking system. In particular, for
+If you encounter something you suspect is a bug, please file a bug
+report using the Bitbucket issue tracking system. In particular, for
 reporting bugs in DOLFIN, visit the `DOLFIN issues page
 <https://bitbucket.org/fenics-project/dolfin/issues>`_. As above, post
 complete but *minimal* code examples.
@@ -64,6 +63,7 @@ The `FEniCS support mailing list
 <http://fenicsproject.org/mailman/listinfo/fenics-support>`_ is a
 place to ask specific questions related to obtaining, building, or
 installing FEniCS components.
+
 
 Contributing
 ============
