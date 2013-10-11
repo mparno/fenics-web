@@ -1,5 +1,5 @@
 ###########################################################################
-FEniCS'14 at The Center in Paris, University of Chicago, 16 -- 18 June 2014
+FEniCS'14 at The Center in Paris, University of Chicago, 16 -- 17 June 2014
 ###########################################################################
 
 | Featured article 2014-10-11
