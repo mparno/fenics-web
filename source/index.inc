@@ -65,6 +65,15 @@
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
 
+          <h3>FEniCS'14 at Center in Paris, University of Chicago</h3>
+          <a href="/featured/2014/fenics14_paris.html"><img alt='' src='/_static/images/center_in_paris_uofc.jpg' class='avatar avatar-84 photo' width='84'/></a>
+
+          <p>The 2014 FEniCS Workshop will be held 16-17 June 2014 at
+            Center in Paris, University of Chicago, Paris, France. Forthcoming 
+	    details can be found <a href="featured/2014/fenics14_paris.html">here</a>.
+            <br /> <br /> <br /> <br /> <br />
+          </p>
+
           <h3>FEniCS'13 at University of Cambridge</h3>
           <a href="/featured/2013/fenics_13_cambridge.html"><img alt='' src='/_static/images/jesus_college.jpg' class='avatar avatar-84 photo' width='84'/></a>
 
