@@ -65,45 +65,53 @@
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
 
-          <h3>FEniCS'14 at Center in Paris, University of Chicago</h3>
-          <a href="/featured/2014/fenics14_paris.html"><img alt='' src='/_static/images/center_in_paris_uofc.jpg' class='avatar avatar-84 photo' width='84'/></a>
+          <h3>FEniCS'14 at The Center in Paris, University of
+          Chicago</h3> <a
+          href="/featured/2014/fenics14_paris.html"><img alt=''
+          src='/_static/images/center_in_paris_uofc.jpg' class='avatar
+          avatar-84 photo' width='84'/></a>
 
           <p>The 2014 FEniCS Workshop will be held 16-17 June 2014 at
-            Center in Paris, University of Chicago, Paris, France. Forthcoming 
-	    details can be found <a href="featured/2014/fenics14_paris.html">here</a>.
-            <br /> <br /> <br /> <br /> <br />
-          </p>
+            The Center in Paris, University of Chicago, Paris,
+            France. Forthcoming details can be found <a
+            href="featured/2014/fenics14_paris.html">here</a>.
+            <br /> <br /> <br /> <br /> </p>
 
-          <h3>FEniCS'13 at University of Cambridge</h3>
-          <a href="/featured/2013/fenics_13_cambridge.html"><img alt='' src='/_static/images/jesus_college.jpg' class='avatar avatar-84 photo' width='84'/></a>
+          <h3>FEniCS'13 at University of Cambridge</h3> <a
+          href="/featured/2013/fenics_13_cambridge.html"><img alt=''
+          src='/_static/images/jesus_college.jpg' class='avatar
+          avatar-84 photo' width='84'/></a>
 
           <p>The 2013 FEniCS Workshop was held 18-19 March 2013 at
             Jesus College, Cambridge. Presentations from the workshop
-            can be found <a href="featured/2013/fenics13_program.html">here</a>.
-            <br /> <br /> <br /> <br /> <br />
-          </p>
+            can be found <a
+            href="featured/2013/fenics13_program.html">here</a>.  <br
+            /> <br /> <br /> <br /> <br /> </p>
 
-          <h3>FEniCS book released!</h3>
-          <a href="/book/"><img alt='' src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/></a>
+          <h3>FEniCS book released!</h3> <a href="/book/"><img alt=''
+          src='/_static/images/fenics_book_cover.png' class='avatar
+          avatar-84 photo' width='84'/></a>
 
-          <p>The FEniCS book, titled <i>Automated Solution of Differential
-            Equations by the Finite Element Method</i>, has been published
-            in 2012 as Volume 84 of the
-            Springer Lecture Notes in Computational Science series. The book
-            can be found <a href="http://dx.doi.org/10.1007/978-3-642-23099-8">here</a>.
-          </p>
+          <p>The FEniCS book, titled <i>Automated Solution of
+            Differential Equations by the Finite Element Method</i>,
+            has been published in 2012 as Volume 84 of the Springer
+            Lecture Notes in Computational Science series. The book
+            can be found <a
+            href="http://dx.doi.org/10.1007/978-3-642-23099-8">here</a>.
+            </p>
 
           <p><a href="/book/" rel="nofollow">Find out more about the
           book project &raquo;</a></p>
 
-          <h3>Who's behind the FEniCS Project?</h3>
-          <a href="/about/team.html"><img alt='' src='/_static/images/fenics_developers_in_lubbock_2011.png' class='avatar avatar-84 photo' width='84' /></a>
+          <h3>Who's behind the FEniCS Project?</h3> <a
+          href="/about/team.html"><img alt=''
+          src='/_static/images/fenics_developers_in_lubbock_2011.png'
+          class='avatar avatar-84 photo' width='84' /></a>
 
           <p>The FEniCS Project is a collaborative effort between
-            research groups from Simula Research Laboratory, University
-            of Cambridge, University of Chicago, Baylor University
-            and KTH Royal Institute of Technology.
-          </p>
+            research groups from Simula Research Laboratory,
+            University of Cambridge, University of Chicago, Baylor
+            University and KTH Royal Institute of Technology.  </p>
 
           <p><a href="/about/" rel="nofollow">Find out more about
           our project &raquo;</a></p>
