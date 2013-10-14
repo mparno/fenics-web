@@ -25,7 +25,7 @@ UFC 2.2.0 and UFL 1.2.0.
         `sig
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg.asc>`__)
 
-    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.7 / 10.8 binary)
+    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.7 binary)
 
       - `fenics-1.2.0-osx10.7.dmg
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg>`__
@@ -33,6 +33,15 @@ UFC 2.2.0 and UFL 1.2.0.
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.md5>`__,
         `sig
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.asc>`__)
+
+    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.8 binary)
+
+      - `fenics-1.2.0-osx10.8.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg.asc>`__)
 
 ############
 Requirements
