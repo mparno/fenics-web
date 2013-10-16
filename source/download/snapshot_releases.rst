@@ -24,14 +24,14 @@ X. They are made available here.
       - `fenics-snapshot-osx10.7.dmg
         <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.7.dmg>`_
 
-    * - |mac-icon| Mac OS X 10.6 binary snapshot
-      - `fenics-snapshot-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.6.dmg>`_
+    * - |mac-icon| Mac OS X 10.8 binary snapshot
+      - `fenics-snapshot-osx10.8.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-snapshot-osx10.8.dmg>`_
 
     * - |archive-icon| Source snapshot for Mac OS X 10.7
       - `fenics-source-snapshot-osx10.7.tar.gz
         <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.7.tar.gz>`_
 
-    * - |archive-icon| Source snapshot for Mac OS X 10.6
-      - `fenics-source-snapshot-osx10.6.tar.gz
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.6.tar.gz>`_
+    * - |archive-icon| Source snapshot for Mac OS X 10.8
+      - `fenics-source-snapshot-osx10.8.tar.gz
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-source-snapshot-osx10.8.tar.gz>`_
