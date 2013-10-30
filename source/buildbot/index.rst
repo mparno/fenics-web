@@ -147,7 +147,7 @@ buildbot. Then go to your git-based working copy that contains changes
 and run the following command::
 
     git diff | buildbot --connect=pb \
-                        --maint=fenicsproject.org:8031 \
+                        --master=fenicsproject.org:8031 \
                         --username=<username> \
                         --password=<password> \
                         --who=<your name> \
@@ -158,7 +158,7 @@ To save some typing, add a file ``~/.buildbot/options`` with the following
 contents::
 
     try_connect = 'pb'
-    try_maint = 'fenicsproject.org:8031'
+    try_master = 'fenicsproject.org:8031'
     try_username = 'username'
     try_password = 'password'
     try_who = 'your name'
