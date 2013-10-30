@@ -146,13 +146,14 @@ your machine to run try builds, first install a recent version of
 buildbot. Then go to your git-based working copy that contains changes
 and run the following command::
 
-    git diff | buildbot --connect=pb \
-                        --master=fenicsproject.org:8031 \
-                        --username=<username> \
-                        --password=<password> \
-                        --who=<your name> \
-                        --builder=<builder-name> \
-                        --diff=-
+    git diff -p1 | buildbot --patchlevel=1 \
+                            --connect=pb \
+                            --master=fenicsproject.org:8031 \
+                            --username=<username> \
+                            --password=<password> \
+                            --who=<your name> \
+                            --builder=<builder-name> \
+                            --diff=-
 
 To save some typing, add a file ``~/.buildbot/options`` with the following
 contents::
@@ -165,7 +166,7 @@ contents::
 
 You can then start a build simply by running::
 
-    git diff | buildbot try --builder=<builder-name> --diff=-
+    git diff | buildbot try --patchlevel=1 --builder=<builder-name> --diff=-
 
 To see a list of available options, see ``buildbot try --help``. For
 instance, using ``--dryrun`` will gather info but not submit, while
