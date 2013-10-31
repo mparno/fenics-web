@@ -27,9 +27,9 @@ Contributed binary packages
 For information on user contributed binary packages, see
 :ref:`contributed_packages`.
 
-****************************************************
-Other operating systems and installation from source
-****************************************************
+************************
+Installation from source
+************************
 
 If the binaries do not apply to you, or you want to install directly
 from source, try one of the two other possibilities:
@@ -56,7 +56,8 @@ For information on accessing the development repositories, see
 Data and meshes
 ***************
 
-A collection of meshes for free use with FEniCS is available :ref:`here <data>`.
+A collection of meshes for free use with FEniCS is available
+:ref:`here <data>`.
 
 ***************
 Troubleshooting
