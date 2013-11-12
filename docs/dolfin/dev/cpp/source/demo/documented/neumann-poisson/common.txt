@@ -44,7 +44,7 @@ satisfies
 
 	\int_{\Omega} f \, {\rm d} x = - \int_{\partial\Omega} g \, {\rm d} s.
 
-This can be seen by multiplication by :math:`1` and integrating by
+This can be seen by multiplying by :math:`1` and integrating by
 parts:
 
 .. math::
@@ -86,6 +86,10 @@ that
 
 The expression :math:`a(\cdot, \cdot)` is the bilinear form and
 :math:`L(\cdot)` is the linear form.
+
+Note that the above variational problem may alternatively be expressed
+in terms of the modified (and consistent) right-hand side
+:math:`\tilde{f} = f - c`.
 
 In this demo we shall consider the following definitions of the domain
 and input functions:
