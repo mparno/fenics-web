@@ -32,11 +32,6 @@ CSGOperators.h
         Create union of two geometries
 
 
-    .. cpp:function:: std::size_t dim() const
-    
-        Return dimension of geometry
-
-
     .. cpp:function:: std::string str(bool verbose) const
     
         Informal string representation
@@ -56,11 +51,6 @@ CSGOperators.h
         Create union of two geometries
 
 
-    .. cpp:function:: std::size_t dim() const
-    
-        Return dimension of geometry
-
-
     .. cpp:function:: std::string str(bool verbose) const
     
         Informal string representation
@@ -78,11 +68,6 @@ CSGOperators.h
     .. cpp:function:: CSGIntersection(boost::shared_ptr<CSGGeometry> g0, boost::shared_ptr<CSGGeometry> g1)
     
         Create intersection of two geometries
-
-
-    .. cpp:function:: std::size_t dim() const
-    
-        Return dimension of geometry
 
 
     .. cpp:function:: std::string str(bool verbose) const

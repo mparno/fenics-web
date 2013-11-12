@@ -149,6 +149,9 @@ Function.h
         *Arguments*
             i (std::size_t)
                 Index of subfunction.
+        *Returns*
+            :cpp:class:`Function`
+                The subfunction.
 
 
     .. cpp:function:: FunctionAXPY operator+(const Function& other) const

@@ -30,7 +30,8 @@ EpetraKrylovSolver.h
 
     .. cpp:function:: EpetraKrylovSolver(std::string method, TrilinosPreconditioner& preconditioner)
     
-        Create Krylov solver for a particular method and TrilinosPreconditioner
+        Create Krylov solver for a particular method and
+        TrilinosPreconditioner
 
 
     .. cpp:function:: void set_operator(const boost::shared_ptr<const GenericLinearOperator> A)

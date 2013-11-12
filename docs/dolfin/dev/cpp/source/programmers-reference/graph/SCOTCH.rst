@@ -17,3 +17,9 @@ SCOTCH.h
     This class proivdes an interface to SCOTCH-PT (parallel version)
 
 
+    .. cpp:function:: static std::vector<std::size_t> compute_gps(const Graph& graph, std::size_t num_passes=5)
+    
+        Compute reordering (map[old] -> new) using
+        Gibbs-Poole-Stockmeyer re-ordering
+
+

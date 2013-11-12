@@ -35,60 +35,70 @@ GenericBoundingBoxTree.h
 
     .. cpp:function:: std::vector<unsigned int> compute_collisions(const Point& point) const
     
-        Compute all collisions between bounding boxes and given :cpp:class:`Point`
+        Compute all collisions between bounding boxes and :cpp:class:`Point`
+
+
+    .. cpp:function:: std::pair<std::vector<unsigned int>, std::vector<unsigned int> > compute_collisions(const GenericBoundingBoxTree& tree) const
+    
+        Compute all collisions between bounding boxes and :cpp:class:`BoundingBoxTree`
 
 
     .. cpp:function:: std::vector<unsigned int> compute_entity_collisions(const Point& point, const Mesh& mesh) const
     
-        Compute all collisions between entities and given :cpp:class:`Point`
+        Compute all collisions between entities and :cpp:class:`Point`
+
+
+    .. cpp:function:: std::pair<std::vector<unsigned int>, std::vector<unsigned int> > compute_entity_collisions(const GenericBoundingBoxTree& tree, const Mesh& mesh_A, const Mesh& mesh_B) const
+    
+        Compute all collisions between entities and :cpp:class:`BoundingBoxTree`
 
 
     .. cpp:function:: unsigned int compute_first_collision(const Point& point) const
     
-        Compute first collision between bounding boxes and given :cpp:class:`Point`
+        Compute first collision between bounding boxes and :cpp:class:`Point`
 
 
     .. cpp:function:: unsigned int compute_first_entity_collision(const Point& point, const Mesh& mesh) const
     
-        Compute first collision between entities and given :cpp:class:`Point`
+        Compute first collision between entities and :cpp:class:`Point`
 
 
     .. cpp:function:: std::pair<unsigned int, double> compute_closest_entity(const Point& point, const Mesh& mesh) const
     
-        Compute closest entity and distance to given :cpp:class:`Point`
+        Compute closest entity and distance to :cpp:class:`Point`
 
 
     .. cpp:function:: std::pair<unsigned int, double> compute_closest_point(const Point& point) const
     
-        Compute closest point and distance to given :cpp:class:`Point`
+        Compute closest point and distance to :cpp:class:`Point`
 
 
-    .. cpp:function:: void compute_collisions(const Point& point, unsigned int node, std::vector<unsigned int>& entities) const
+    .. cpp:function:: static void _compute_collisions(const GenericBoundingBoxTree& tree, const Point& point, unsigned int node, std::vector<unsigned int>& entities, const Mesh* mesh)
     
-        Compute collisions (recursive)
+        Compute collisions with point (recursive)
 
 
-    .. cpp:function:: void compute_entity_collisions(const Point& point, unsigned int node, std::vector<unsigned int>& entities, const Mesh& mesh) const
+    .. cpp:function:: static void _compute_collisions(const GenericBoundingBoxTree& A, const GenericBoundingBoxTree& B, unsigned int node_A, unsigned int node_B, std::set<unsigned int>& entities_A, std::set<unsigned int>& entities_B, const Mesh* mesh_A, const Mesh* mesh_B)
     
-        Compute entity collisions (recursive)
+        Compute collisions with tree (recursive)
 
 
-    .. cpp:function:: unsigned int compute_first_collision(const Point& point, unsigned int node) const
+    .. cpp:function:: static unsigned int _compute_first_collision(const GenericBoundingBoxTree& tree, const Point& point, unsigned int node)
     
         Compute first collision (recursive)
 
 
-    .. cpp:function:: unsigned int compute_first_entity_collision(const Point& point, unsigned int node, const Mesh& mesh) const
+    .. cpp:function:: static unsigned int _compute_first_entity_collision(const GenericBoundingBoxTree& tree, const Point& point, unsigned int node, const Mesh& mesh)
     
         Compute first entity collision (recursive)
 
 
-    .. cpp:function:: void compute_closest_entity(const Point& point, unsigned int node, const Mesh& mesh, unsigned int& closest_entity, double& R2) const
+    .. cpp:function:: static void _compute_closest_entity(const GenericBoundingBoxTree& tree, const Point& point, unsigned int node, const Mesh& mesh, unsigned int& closest_entity, double& R2)
     
         Compute closest entity (recursive)
 
 
-    .. cpp:function:: void compute_closest_point(const Point& point, unsigned int node, unsigned int& closest_point, double& R2) const
+    .. cpp:function:: static void _compute_closest_point(const GenericBoundingBoxTree& tree, const Point& point, unsigned int node, unsigned int& closest_point, double& R2)
     
         Compute closest point (recursive)
 

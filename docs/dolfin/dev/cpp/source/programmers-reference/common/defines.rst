@@ -13,3 +13,90 @@ defines.h
     
 
 
+
+.. cpp:function:: std::string dolfin_version()
+
+    Return DOLFIN version string
+
+
+.. cpp:function:: std::string git_commit_hash()
+
+    Return git changeset hash (returns "unknown" if changeset is
+    not known)
+
+
+.. cpp:function:: bool has_openmp()
+
+    Return true if DOLFIN is compiled with OpenMP
+
+
+.. cpp:function:: bool has_mpi()
+
+    Return true if DOLFIN is compiled with MPI
+
+
+.. cpp:function:: bool has_petsc()
+
+    Return true if DOLFIN is compiled with PETSc
+
+
+.. cpp:function:: bool has_slepc()
+
+    Return true if DOLFIN is compiled with SLEPc
+
+
+.. cpp:function:: bool has_tao()
+
+    Return true if DOLFIN is compiled with TAO
+
+
+.. cpp:function:: bool has_petsc4py()
+
+    Return true if DOLFIN is compiled with petsc4py
+
+
+.. cpp:function:: bool has_trilinos()
+
+    Return true if DOLFIN is compiled with Trilinos
+
+
+.. cpp:function:: bool has_scotch()
+
+    Return true if DOLFIN is compiled with Scotch
+
+
+.. cpp:function:: bool has_cgal()
+
+    Return true if DOLFIN is compiled with CGAL
+
+
+.. cpp:function:: bool has_umfpack()
+
+    Return true if DOLFIN is compiled with Umfpack
+
+
+.. cpp:function:: bool has_cholmod()
+
+    Return true if DOLFIN is compiled with Cholmod
+
+
+.. cpp:function:: bool has_parmetis()
+
+    Return true if DOLFIN is compiled with ParMETIS
+
+
+.. cpp:function:: bool has_zlib()
+
+    Return true if DOLFIN is compiled with ZLIB
+
+
+.. cpp:function:: bool has_hdf5()
+
+    Return true if DOLFIN is compiled with HDF5
+
+
+.. cpp:function:: bool has_exodus()
+
+    Return true if DOLFIN is compiled with Exodus
+
+

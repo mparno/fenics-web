@@ -41,7 +41,8 @@ solve.h
 
 .. cpp:function:: void list_krylov_solver_preconditioners()
 
-    List available preconditioners for current linear algebra backend
+    List available preconditioners for current linear algebra
+    backend
 
 
 .. cpp:function:: bool has_lu_solver_method(std::string method)
@@ -52,14 +53,14 @@ solve.h
 
 .. cpp:function:: bool has_krylov_solver_method(std::string method)
 
-    Return true if Krylov method for the current linear algebra backend is
-    available
+    Return true if Krylov method for the current linear algebra
+    backend is available
 
 
 .. cpp:function:: bool has_krylov_solver_preconditioner(std::string preconditioner)
 
-    Return true if Preconditioner for the current linear algebra backend is
-    available
+    Return true if Preconditioner for the current linear algebra
+    backend is available
 
 
 .. cpp:function:: std::vector<std::pair<std::string, std::string> > linear_algebra_backends()
@@ -69,22 +70,26 @@ solve.h
 
 .. cpp:function:: std::vector<std::pair<std::string, std::string> > linear_solver_methods()
 
-    Return a list of available solver methods for current linear algebra backend
+    Return a list of available solver methods for current linear
+    algebra backend
 
 
 .. cpp:function:: std::vector<std::pair<std::string, std::string> > lu_solver_methods()
 
-    Return a list of available LU methods for current linear algebra backend
+    Return a list of available LU methods for current linear algebra
+    backend
 
 
 .. cpp:function:: std::vector<std::pair<std::string, std::string> > krylov_solver_methods()
 
-    Return a list of available Krylov methods for current linear algebra backend
+    Return a list of available Krylov methods for current linear
+    algebra backend
 
 
 .. cpp:function:: std::vector<std::pair<std::string, std::string> > krylov_solver_preconditioners()
 
-    Return a list of available preconditioners for current linear algebra backend
+    Return a list of available preconditioners for current linear
+    algebra backend
 
 
 .. cpp:function:: double residual(const GenericLinearOperator& A, const GenericVector& x, const GenericVector& b)
@@ -94,7 +99,8 @@ solve.h
 
 .. cpp:function:: double norm(const GenericVector& x, std::string norm_type="l2")
 
-    Compute norm of vector. Valid norm types are "l2", "l1" and "linf".
+    Compute norm of vector. Valid norm types are "l2", "l1" and
+    "linf".
 
 
 .. cpp:function:: double normalize(GenericVector& x, std::string normalization_type = "average")

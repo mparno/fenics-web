@@ -72,7 +72,7 @@ Vector.h
         Resize vector with given ownership range
 
 
-    .. cpp:function:: void resize(std::pair<std::size_t, std::size_t> range, const std::vector<std::size_t>& ghost_indices)
+    .. cpp:function:: void resize(std::pair<std::size_t, std::size_t> range, const std::vector<la_index>& ghost_indices)
     
         Resize vector with given ownership range and with ghost values
 

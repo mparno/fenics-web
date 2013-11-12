@@ -246,7 +246,8 @@ Cell.h
 
     .. cpp:function:: bool contains(const Point& point) const
     
-        Check whether given point is contained in cell
+        Check whether given point is contained in cell. This function is
+        identical to the function collides(point).
         
         *Arguments*
             point (:cpp:class:`Point`)
@@ -255,6 +256,32 @@ Cell.h
         *Returns*
             bool
                 True iff point is contained in cell.
+
+
+    .. cpp:function:: bool collides(const Point& point) const
+    
+        Check whether given point collides with cell.
+        
+        *Arguments*
+            point (:cpp:class:`Point`)
+                The point to be checked.
+        
+        *Returns*
+            bool
+                True iff point collides with cell.
+
+
+    .. cpp:function:: bool collides(const MeshEntity& entity) const
+    
+        Check whether given entity collides with cell.
+        
+        *Arguments*
+            entity (:cpp:class:`MeshEntity`)
+                The cell to be checked.
+        
+        *Returns*
+            bool
+                True iff entity collides with cell.
 
 
 .. cpp:class:: CellFunction

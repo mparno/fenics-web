@@ -39,8 +39,9 @@ Facet.h
     .. cpp:function:: bool exterior() const
     
         Return true if facet is an exterior facet (relative to global mesh,
-        so this function will return false for facets on partition boundaries)
-        Facet connectivity must be initialized before calling this function.
+        so this function will return false for facets on partition
+        boundaries). Facet connectivity must be initialized before
+        calling this function.
 
 
     .. cpp:function:: std::pair<const Cell, const Cell> adjacent_cells(const std::vector<std::size_t>* facet_orientation) const

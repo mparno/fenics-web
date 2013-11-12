@@ -18,8 +18,6 @@ PETScLinearOperator.h
     
         * :cpp:class:`PETScBaseMatrix`
         
-        * :cpp:class:`GenericLinearOperator`
-        
     .. cpp:function:: PETScLinearOperator()
     
         Constructor

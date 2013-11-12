@@ -416,6 +416,15 @@ Mesh.h
                 The return values is true iff the mesh is ordered.
 
 
+    .. cpp:function:: void translate(const Point& point)
+    
+        Translate mesh according to a given vector.
+        
+        *Arguments*
+            point (Point)
+                The vector defining the translation.
+
+
     .. cpp:function:: void rotate(double angle, std::size_t axis=2)
     
         Rotate mesh around a coordinate axis through center of mass
@@ -423,22 +432,22 @@ Mesh.h
         
         *Arguments*
             angle (double)
-                The number of degrees (0-360) of rotation
+                The number of degrees (0-360) of rotation.
             axis (std::size_t)
-                The coordinate axis around which to rotate the mesh
+                The coordinate axis around which to rotate the mesh.
 
 
-    .. cpp:function:: void rotate(double angle, std::size_t axis, const Point& p)
+    .. cpp:function:: void rotate(double angle, std::size_t axis, const Point& point)
     
         Rotate mesh around a coordinate axis through a given point
         
         *Arguments*
             angle (double)
-                The number of degrees (0-360) of rotation
+                The number of degrees (0-360) of rotation.
             axis (std::size_t)
-                The coordinate axis around which to rotate the mesh
+                The coordinate axis around which to rotate the mesh.
             point (:cpp:class:`Point`)
-                The point around which to rotate the mesh
+                The point around which to rotate the mesh.
 
 
     .. cpp:function:: boost::shared_ptr<MeshDisplacement> move(BoundaryMesh& boundary)
@@ -452,7 +461,7 @@ Mesh.h
         *Returns*
             MeshDisplacement
                 Displacement encapsulated in Expression subclass
-                MeshDisplacement
+                MeshDisplacement.
 
 
     .. cpp:function:: boost::shared_ptr<MeshDisplacement> move(Mesh& mesh)
@@ -467,7 +476,7 @@ Mesh.h
         *Returns*
             MeshDisplacement
                 Displacement encapsulated in Expression subclass
-                MeshDisplacement
+                MeshDisplacement.
 
 
     .. cpp:function:: void move(const GenericFunction& displacement)
@@ -604,40 +613,6 @@ Mesh.h
         *Returns*
             double
                 The maximum of cells' inscribed sphere radii
-        
-        *Example*
-            .. note::
-        
-                No example code available for this function.
-
-
-    .. cpp:function:: double radius_ratio_min() const
-    
-        Compute minimum normalized radius ratio of cells.
-        
-        *Returns*
-            double
-                The minimum over cells of normalized cell
-                radius ratio (which is = cell_dimension *
-                * inradius / circumradius; cell_dimension
-                is normalization factor).
-        
-        *Example*
-            .. note::
-        
-                No example code available for this function.
-
-
-    .. cpp:function:: double radius_ratio_max() const
-    
-        Compute maximum normalized radius ratio of cells.
-        
-        *Returns*
-            double
-                The maximum over cells of normalized cell
-                radius ratio (which is = cell_dimension *
-                * inradius / circumradius; cell_dimension
-                is normalization factor).
         
         *Example*
             .. note::

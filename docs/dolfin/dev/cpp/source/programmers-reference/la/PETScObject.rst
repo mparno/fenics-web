@@ -19,3 +19,13 @@ PETScObject.h
     All PETSc objects must be derived from this class.
 
 
+    .. cpp:function:: PETScObject()
+    
+        Constructor. Ensures that PETSc has been initialised.
+
+
+    .. cpp:function:: static void petsc_error(int error_code, std::string filename, std::string petsc_function)
+    
+        Print error message for PETSc calls that return an error
+
+

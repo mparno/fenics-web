@@ -33,6 +33,11 @@ Assembler.h
            form.dS = interior_facet_domains
 
 
+    .. cpp:function:: Assembler()
+    
+        Constructor
+
+
     .. cpp:function:: void assemble(GenericTensor& A, const Form& a)
     
         Assemble tensor from given form

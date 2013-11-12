@@ -101,7 +101,7 @@ GenericVector.h
         Resize vector with given ownership range
 
 
-    .. cpp:function:: void resize(std::pair<std::size_t, std::size_t> range, const std::vector<std::size_t>& ghost_indices) = 0
+    .. cpp:function:: void resize(std::pair<std::size_t, std::size_t> range, const std::vector<la_index>& ghost_indices) = 0
     
         Resize vector with given ownership range and with ghost values
 
@@ -218,7 +218,8 @@ GenericVector.h
 
     .. cpp:function:: double sum(const Array<std::size_t>& rows) const = 0
     
-        Return sum of selected rows in vector. Repeated entries are only summed once.
+        Return sum of selected rows in vector. Repeated entries are
+        only summed once.
 
 
     .. cpp:function:: const GenericVector& operator*= (double a) = 0
@@ -293,7 +294,7 @@ GenericVector.h
 
     .. cpp:function:: void setitem(dolfin::la_index i, double value)
     
-        Set given entry to value. apply("insert") should be called before using
-        using the object.
+        Set given entry to value. apply("insert") should be called
+        before using using the object.
 
 

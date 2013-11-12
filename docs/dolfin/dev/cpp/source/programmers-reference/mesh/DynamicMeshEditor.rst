@@ -65,7 +65,7 @@ DynamicMeshEditor.h
         Add cell (interval) with given vertices
 
 
-    .. cpp:function:: void add_cell(std::size_t c, std::size_t v0, std::size_t v1, std::size_t v2)
+    .. cpp:function:: void add_cell(std::size_t c,  std::size_t v0, std::size_t v1, std::size_t v2)
     
         Add cell (triangle) with given vertices
 

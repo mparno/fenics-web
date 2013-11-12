@@ -102,7 +102,7 @@ NewtonSolver.h
                 Parameter values.
 
 
-    .. cpp:function:: bool converged(const GenericVector& r, const NonlinearProblem& nonlinear_problem)
+    .. cpp:function:: bool converged(const GenericVector& r, const NonlinearProblem& nonlinear_problem, std::size_t iteration)
     
         Convergence test
 

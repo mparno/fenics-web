@@ -58,7 +58,7 @@ BoundingBoxTree.h
 
     .. cpp:function:: std::vector<unsigned int> compute_collisions(const Point& point) const
     
-        Compute all collisions between bounding boxes and given :cpp:class:`Point`.
+        Compute all collisions between bounding boxes and :cpp:class:`Point`.
         
         *Returns*
             std::vector<unsigned int>
@@ -71,9 +71,26 @@ BoundingBoxTree.h
                 The point.
 
 
-    .. cpp:function:: std::vector<unsigned int> compute_entity_collisions(const Point& point, const Mesh& mesh) const
+    .. cpp:function:: std::pair<std::vector<unsigned int>, std::vector<unsigned int> > compute_collisions(const BoundingBoxTree& tree) const
     
-        Compute all collisions between entities and given :cpp:class:`Point`.
+        Compute all collisions between bounding boxes and :cpp:class:`BoundingBoxTree`.
+        
+        *Returns* std::pair<std::vector<unsigned int>, std::vector<unsigned int> >
+            Two lists of local indices for entities contained in
+            (leaf) bounding boxes that collide with (intersect) the
+            given bounding box tree. The first list contains entity
+            indices for the first tree (this tree) and the second
+            contains entity indices for the second tree (the input
+            argument).
+        
+        *Arguments*
+            tree (:cpp:class:`BoundingBoxTree`)
+                The bounding box tree.
+
+
+    .. cpp:function:: std::vector<unsigned int> compute_entity_collisions(const Point& point) const
+    
+        Compute all collisions between entities and :cpp:class:`Point`.
         
         *Returns*
             std::vector<unsigned int>
@@ -83,13 +100,28 @@ BoundingBoxTree.h
         *Arguments*
             point (:cpp:class:`Point`)
                 The point.
-            mesh (:cpp:class:`Mesh`)
-                The mesh.
+
+
+    .. cpp:function:: std::pair<std::vector<unsigned int>, std::vector<unsigned int> > compute_entity_collisions(const BoundingBoxTree& tree) const
+    
+        Compute all collisions between entities and :cpp:class:`BoundingBoxTree`.
+        
+        *Returns*
+            std::pair<std::vector<unsigned int>, std::vector<unsigned int> >
+                A list of local indices for entities that collide with
+                (intersect) the given bounding box tree. The first
+                list contains entity indices for the first tree (this
+                tree) and the second contains entity indices for the
+                second tree (the input argument).
+        
+        *Arguments*
+            tree (:cpp:class:`BoundingBoxTree`)
+                The bounding box tree.
 
 
     .. cpp:function:: unsigned int compute_first_collision(const Point& point) const
     
-        Compute first collision between bounding boxes and given :cpp:class:`Point`.
+        Compute first collision between bounding boxes and :cpp:class:`Point`.
         
         *Returns*
             unsigned int
@@ -103,9 +135,9 @@ BoundingBoxTree.h
                 The point.
 
 
-    .. cpp:function:: unsigned int compute_first_entity_collision(const Point& point, const Mesh& mesh) const
+    .. cpp:function:: unsigned int compute_first_entity_collision(const Point& point) const
     
-        Compute first collision between entities and given :cpp:class:`Point`.
+        Compute first collision between entities and :cpp:class:`Point`.
         
         *Returns*
             unsigned int
@@ -117,13 +149,11 @@ BoundingBoxTree.h
         *Arguments*
             point (:cpp:class:`Point`)
                 The point.
-            mesh (:cpp:class:`Mesh`)
-                The mesh.
 
 
-    .. cpp:function:: std::pair<unsigned int, double> compute_closest_entity(const Point& point, const Mesh& mesh) const
+    .. cpp:function:: std::pair<unsigned int, double> compute_closest_entity(const Point& point) const
     
-        Compute closest entity to given :cpp:class:`Point`.
+        Compute closest entity to :cpp:class:`Point`.
         
         *Returns*
             unsigned int
@@ -137,13 +167,11 @@ BoundingBoxTree.h
         *Arguments*
             point (:cpp:class:`Point`)
                 The point.
-            mesh (:cpp:class:`Mesh`)
-                The mesh.
 
 
     .. cpp:function:: std::pair<unsigned int, double> compute_closest_point(const Point& point) const
     
-        Compute closest point to given :cpp:class:`Point`. This function assumes
+        Compute closest point to :cpp:class:`Point`. This function assumes
         that the tree has been built for a point cloud.
         
         Developer note: This function should not be confused with

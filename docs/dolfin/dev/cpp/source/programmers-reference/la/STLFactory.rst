@@ -58,8 +58,3 @@ STLFactory.h
         Return singleton instance
 
 
-    .. cpp:function:: STLFactory()
-    
-        Private Constructor
-
-

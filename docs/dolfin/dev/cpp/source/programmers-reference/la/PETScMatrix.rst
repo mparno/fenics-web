@@ -69,9 +69,9 @@ PETScMatrix.h
         Finalize assembly of tensor. The following values are recognized
         for the mode parameter:
         
-          add    - corresponding to PETSc MatAssemblyBegin+End(MAT_FINAL_ASSEMBLY)
-          insert - corresponding to PETSc MatAssemblyBegin+End(MAT_FINAL_ASSEMBLY)
-          flush  - corresponding to PETSc MatAssemblyBegin+End(MAT_FLUSH_ASSEMBLY)
+          add    - corresponds to PETSc MatAssemblyBegin+End(MAT_FINAL_ASSEMBLY)
+          insert - corresponds to PETSc MatAssemblyBegin+End(MAT_FINAL_ASSEMBLY)
+          flush  - corresponds to PETSc MatAssemblyBegin+End(MAT_FLUSH_ASSEMBLY)
 
 
     .. cpp:function:: std::string str(bool verbose) const

@@ -144,6 +144,11 @@ Point.h
         Subtract given point
 
 
+    .. cpp:function:: Point operator- ()
+    
+        Unary minus
+
+
     .. cpp:function:: Point operator* (double a) const
     
         Multiplication with scalar

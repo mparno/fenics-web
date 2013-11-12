@@ -33,13 +33,14 @@ GenericDofMap.h
 
     .. cpp:function:: std::size_t global_dimension() const = 0
     
-        Return the dimension of the global finite element function space
+        Return the dimension of the global finite element function
+        space
 
 
     .. cpp:function:: std::size_t cell_dimension(std::size_t index) const = 0
     
-        Return the dimension of the local finite element function space
-        on a cell
+        Return the dimension of the local finite element function
+        space on a cell
 
 
     .. cpp:function:: std::size_t max_cell_dimension() const = 0
@@ -88,15 +89,16 @@ GenericDofMap.h
 
     .. cpp:function:: void tabulate_entity_dofs(std::vector<std::size_t>& dofs, std::size_t dim, std::size_t local_entity) const = 0
     
-        Tabulate the local-to-local mapping of dofs on entity (dim, local_entity)
+        Tabulate the local-to-local mapping of dofs on entity
+        (dim, local_entity)
 
 
-    .. cpp:function:: std::vector<dolfin::la_index> dof_to_vertex_map(Mesh& mesh) const = 0
+    .. cpp:function:: std::vector<dolfin::la_index> dof_to_vertex_map(const Mesh& mesh) const = 0
     
         Return a map between vertices and dofs
 
 
-    .. cpp:function:: std::vector<std::size_t> vertex_to_dof_map(Mesh& mesh) const = 0
+    .. cpp:function:: std::vector<std::size_t> vertex_to_dof_map(const Mesh& mesh) const = 0
     
         Return a map between vertices and dofs
 
@@ -108,7 +110,11 @@ GenericDofMap.h
 
     .. cpp:function:: std::vector<double> tabulate_all_coordinates(const Mesh& mesh) const = 0
     
-        Tabulate the coordinates of all dofs owned by this process
+        Tabulate the coordinates of all dofs owned by this
+        process. This function is typically used by preconditioners
+        that require the spatial coordinates of dofs, for example
+        for re-partitioning or nullspace computations. The format for
+        the return vector is [x0, y0, z0, x1, y1, z1, . . .].
 
 
     .. cpp:function:: boost::shared_ptr<GenericDofMap> copy() const = 0
@@ -131,23 +137,32 @@ GenericDofMap.h
         Create a "collapsed" a dofmap (collapses from a sub-dofmap view)
 
 
+    .. cpp:function:: std::vector<dolfin::la_index> dofs(std::size_t r0, std::size_t r1) const = 0
+    
+        Return list of global dof indices on this process
+
+
     .. cpp:function:: void set(GenericVector& x, double value) const = 0
     
-        Set dof entries in vector to a specified value. Parallel layout
-        of vector must be consistent with dof map range.
+        Set dof entries in vector to a specified value. Parallel
+        layout of vector must be consistent with dof map range. This
+        function is typically used to construct the null space of a
+        matrix operator
 
 
     .. cpp:function:: void set_x(GenericVector& x, double value, std::size_t component, const Mesh& mesh) const = 0
     
         Set dof entries in vector to the value*x[i], where x[i] is the
         spatial coordinate of the dof. Parallel layout of vector must
-        be consistent with dof map range.
+        be consistent with dof map range. This function is typically
+        used to construct the null space of a matrix operator, e.g. rigid
+        body rotations.
 
 
     .. cpp:function:: const boost::unordered_map<std::size_t, std::vector<unsigned int> >& shared_dofs() const = 0
     
-        Return map from shared dofs to the processes (not including the current
-        process) that share it.
+        Return map from shared dofs to the processes (not including
+        the current process) that share it.
 
 
     .. cpp:function:: const std::set<std::size_t>& neighbours() const = 0

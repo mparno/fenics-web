@@ -54,7 +54,7 @@ BoxMesh.h
         
                 // Mesh with 6 cells in each direction on the
                 // set [-1,2] x [-1,2] x [-1,2].
-                Box mesh(-1, -1, -1, 2, 2, 2, 6, 6, 6);
+                BoxMesh mesh(-1, -1, -1, 2, 2, 2, 6, 6, 6);
         
 
 

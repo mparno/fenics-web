@@ -45,7 +45,8 @@ UmfpackLUSolver.h
 
     .. cpp:function:: std::size_t solve(GenericVector& x, const GenericVector& b)
     
-        Solve linear system Ax = b for a sparse matrix using UMFPACK if installed
+        Solve linear system Ax = b for a sparse matrix using UMFPACK
+        if installed
 
 
     .. cpp:function:: std::size_t solve(const GenericLinearOperator& A, GenericVector& x, const GenericVector& b)

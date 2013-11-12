@@ -55,10 +55,17 @@ ImplicitSurface.h
                 Isosurface function value.
 
 
-    .. cpp:function:: bool on_surface(const Point& point) const
+    .. cpp:function:: double f0(const Point& point) const
     
-        Test whether a point for which f \approx 0 is on the
-        surface. Used for creating open surfaces by discarding with
-        any artificial closure.
+        Signed distance function surface. If f0(p) = 0, the point p is
+        possibly on the surface, which case ImplicitSurface::f1 can be
+        called to check.
+
+
+    .. cpp:function:: double f1(const Point& point) const
+    
+        For a point for which f0 \approx 0, return <= is point is on
+        is on the surface.  Can be used for creating open surfaces by
+        discarding with any artificial closure.
 
 

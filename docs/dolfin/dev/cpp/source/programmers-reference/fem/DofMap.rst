@@ -235,7 +235,10 @@ DofMap.h
 
     .. cpp:function:: std::vector<double> tabulate_all_coordinates(const Mesh& mesh) const
     
-        Tabulate the coordinates of all dofs on this process
+        Tabulate the coordinates of all dofs on this process. This
+        function is typically used by preconditioners that require the
+        spatial coordinates of dofs, for example for re-partitioning or
+        nullspace computations.
         
         *Arguments*
             mesh (:cpp:class:`Mesh`)
@@ -246,7 +249,7 @@ DofMap.h
                 The dof coordinates (x0, y0, x1, y1, . . .)
 
 
-    .. cpp:function:: std::vector<dolfin::la_index> dof_to_vertex_map(Mesh& mesh) const
+    .. cpp:function:: std::vector<dolfin::la_index> dof_to_vertex_map(const Mesh& mesh) const
     
         Return a map between vertices and dofs
         (dof_ind = dof_to_vertex_map[vert_ind*dofs_per_vertex + local_dof],
@@ -263,7 +266,7 @@ DofMap.h
                 The dof to vertex map
 
 
-    .. cpp:function:: std::vector<std::size_t> vertex_to_dof_map(Mesh& mesh) const
+    .. cpp:function:: std::vector<std::size_t> vertex_to_dof_map(const Mesh& mesh) const
     
         Return a map between vertices and dofs
         (vert_ind*dofs_per_vertex + local_dof = vertex_to_dof_map[dof_ind],
@@ -335,7 +338,9 @@ DofMap.h
     .. cpp:function:: void set(GenericVector& x, double value) const
     
         Set dof entries in vector to a specified value. Parallel layout
-        of vector must be consistent with dof map range.
+        of vector must be consistent with dof map range. This
+        function is typically used to construct the null space of a
+        matrix operator.
         
         *Arguments*
             vector (:cpp:class:`GenericVector`)
@@ -348,7 +353,9 @@ DofMap.h
     
         Set dof entries in vector to the x[i] coordinate of the dof
         spatial coordinate. Parallel layout of vector must be consistent
-        with dof map range.
+        with dof map range This function is typically used to
+        construct the null space of a matrix operator, e.g. rigid
+        body rotations.
         
         *Arguments*
             vector (:cpp:class:`GenericVector`)

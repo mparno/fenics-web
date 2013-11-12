@@ -144,9 +144,14 @@ CellType.h
         Check if entities are ordered
 
 
-    .. cpp:function:: bool contains(const Cell& cell, const Point& point) const = 0
+    .. cpp:function:: bool collides(const Cell& cell, const Point& point) const = 0
     
-        Check whether given point is contained in cell
+        Check whether given point collides with cell
+
+
+    .. cpp:function:: bool collides(const Cell& cell, const MeshEntity& entity) const = 0
+    
+        Check whether given entity collides with cell
 
 
     .. cpp:function:: std::string description(bool plural) const = 0

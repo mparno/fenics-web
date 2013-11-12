@@ -34,7 +34,7 @@ PointIntegralSolver.h
         Step solver an interval using dt as time step
 
 
-    .. cpp:function:: boost::shared_ptr<MultiStageScheme> scheme()const
+    .. cpp:function:: boost::shared_ptr<MultiStageScheme> scheme() const
     
         Return the MultiStageScheme
 

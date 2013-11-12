@@ -35,7 +35,7 @@ MeshTopology.h
         Copy constructor
 
 
-    .. cpp:function:: const MeshTopology& operator= (const MeshTopology& topology)
+    .. cpp:function:: MeshTopology& operator= (const MeshTopology& topology)
     
         Assignment
 

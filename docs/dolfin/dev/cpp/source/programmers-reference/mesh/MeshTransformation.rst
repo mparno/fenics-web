@@ -14,6 +14,21 @@ MeshTransformation.h
 
 .. cpp:class:: MeshTransformation
 
+    This class implements various transformations of the coordinates
+    of a mesh.
+
+
+    .. cpp:function:: static void translate(Mesh& mesh, const Point& point)
+    
+        Translate mesh according to a given vector.
+        
+        *Arguments*
+            mesh (:cpp:class:`Mesh`)
+                The mesh
+            point (Point)
+                The vector defining the translation.
+
+
     .. cpp:function:: static void rotate(Mesh& mesh, double angle, std::size_t axis)
     
         Rotate mesh around a coordinate axis through center of mass
@@ -21,11 +36,11 @@ MeshTransformation.h
         
         *Arguments*
             mesh (:cpp:class:`Mesh`)
-                The mesh
+                The mesh.
             angle (double)
-                The number of degrees (0-360) of rotation
+                The number of degrees (0-360) of rotation.
             axis (std::size_t)
-                The coordinate axis around which to rotate the mesh
+                The coordinate axis around which to rotate the mesh.
 
 
     .. cpp:function:: static void rotate(Mesh& mesh, double angle, std::size_t axis, const Point& p)
@@ -34,12 +49,12 @@ MeshTransformation.h
         
         *Arguments*
             mesh (:cpp:class:`Mesh`)
-                The mesh
+                The mesh.
             angle (double)
-                The number of degrees (0-360) of rotation
+                The number of degrees (0-360) of rotation.
             axis (std::size_t)
-                The coordinate axis around which to rotate the mesh
+                The coordinate axis around which to rotate the mesh.
             point (:cpp:class:`Point`)
-                The point around which to rotate the mesh
+                The point around which to rotate the mesh.
 
 
