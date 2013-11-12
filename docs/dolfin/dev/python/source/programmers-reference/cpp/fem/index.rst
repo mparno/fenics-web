@@ -14,8 +14,10 @@ Classes:
     AdaptiveNonlinearVariationalSolver
     Assembler
     AssemblerBase
-    BarycenterQuadrature
     BasisFunction
+    CCFEMAssembler
+    CCFEMDofMap
+    CCFEMForm
     DirichletBC
     DofMap
     Equation
@@ -72,6 +74,7 @@ Functions:
     NonlinearVariationalSolver_default_parameters
     PointIntegralSolver_default_parameters
     SparsityPatternBuilder_build
+    SparsityPatternBuilder_build_ccfem
     TimeSeriesHDF5_default_parameters
     TimeSeries_default_parameters
     TimeSeries_filename_data
@@ -80,9 +83,11 @@ Functions:
     adapt_markers
     assemble
     assemble_system
+    dof_to_vertex_map
     dorfler_mark
     fem_solve
     mark
+    vertex_to_dof_map
 
 Module docstring:
 

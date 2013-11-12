@@ -10,6 +10,7 @@ Functions:
 .. toctree::
     :maxdepth: 1
 
+    CompiledSubDomain
     compile_subdomains
 
 Module docstring:

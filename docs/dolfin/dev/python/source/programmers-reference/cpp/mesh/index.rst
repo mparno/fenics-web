@@ -37,6 +37,7 @@ Classes:
     CellFunctionSizet
     CellType
     Circle
+    CircleMesh
     Cone
     Cylinder
     DomainBoundary
@@ -48,6 +49,8 @@ Classes:
     EdgeFunctionInt
     EdgeFunctionSizet
     Ellipse
+    EllipseMesh
+    EllipsoidMesh
     Face
     FaceFunction
     FaceFunctionBool
@@ -92,6 +95,7 @@ Classes:
     MeshGeometry
     MeshPartitioning
     MeshPointIntersection
+    MeshQuality
     MeshRenumbering
     MeshTopology
     MeshTransformation
@@ -110,6 +114,7 @@ Classes:
     Restriction
     SCOTCH
     Sphere
+    SphereMesh
     SubDomain
     SubMesh
     SubsetIterator
@@ -162,12 +167,18 @@ Functions:
     MeshColoring_compute_colors
     MeshColoring_type_to_dim
     MeshPartitioning_build_distributed_mesh
+    MeshQuality_radius_ratio_histogram_data
+    MeshQuality_radius_ratio_matplolib_histogram
+    MeshQuality_radius_ratio_min_max
+    MeshQuality_radius_ratios
     MeshTransformation_rotate
+    MeshTransformation_translate
     PeriodicBoundaryComputation_compute_periodic_pairs
     PeriodicBoundaryComputation_masters_slaves
     PolygonalMeshGenerator_generate
     PolyhedralMeshGenerator_generate
     PolyhedralMeshGenerator_generate_surface_mesh
+    SCOTCH_compute_gps
     Triangulate_triangulate
     intersect
     refine

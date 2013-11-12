@@ -10,6 +10,8 @@ Classes:
 .. toctree::
     :maxdepth: 1
 
+    CCFEMFunction
+    CCFEMFunctionSpace
     Constant
     Expression
     FacetArea

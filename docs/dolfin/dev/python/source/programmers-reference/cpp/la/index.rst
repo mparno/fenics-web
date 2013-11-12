@@ -45,6 +45,7 @@ Classes:
     PETScMatrix
     PETScMatrixDeleter
     PETScObject
+    PETScOptions
     PETScPreconditioner
     PETScSNESSolver
     PETScUserPreconditioner
@@ -92,6 +93,9 @@ Functions:
     PETScKrylovSolver_preconditioners
     PETScLUSolver_default_parameters
     PETScLUSolver_methods
+    PETScObject_petsc_error
+    PETScOptions_clear
+    PETScOptions_set
     PETScPreconditioner_default_parameters
     PETScPreconditioner_preconditioners
     PETScSNESSolver_default_parameters

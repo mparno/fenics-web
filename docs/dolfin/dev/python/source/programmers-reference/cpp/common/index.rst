@@ -61,9 +61,26 @@ Functions:
     debug
     deprecation
     dolfin_error
+    dolfin_version
     end
     error
     get_log_level
+    git_commit_hash
+    has_cgal
+    has_cholmod
+    has_exodus
+    has_hdf5
+    has_mpi
+    has_openmp
+    has_parmetis
+    has_petsc
+    has_petsc4py
+    has_scotch
+    has_slepc
+    has_tao
+    has_trilinos
+    has_umfpack
+    has_zlib
     info
     info_stream
     info_underline
