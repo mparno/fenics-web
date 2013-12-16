@@ -106,7 +106,7 @@
         </div>
 
       	<div class="front-block block">
-  	  <h2><a href="https://www.chalmers.se/en/staff/Pages/logg.aspx">Anders Logg</a></h2>
+  	  <h2><a href="http://www.math.chalmers.se/~logg/">Anders Logg</a></h2>
           <div class="avatar mugshot">
 	    <img alt='Anders Logg'
 		 src='/_static/images/mugshots/logg.jpg' />
@@ -114,7 +114,7 @@
 
           <p>Anders is a professor at the
           <a href="http://www.chalmers.se/en/departments/math/Pages/default.aspx">Department of Mathematical Sciences</a> at
-          <a href="http://www.chalmers.se/en/Pages/default.aspx">Chalmers University of Technology</a>.
+          <a href="http://www.chalmers.se/en/">Chalmers University of Technology</a>.
 
           <p>He has been involved with the FEniCS project since 2003
           and is a developer and maintainer of DOLFIN, FFC, UFC, UFL,
