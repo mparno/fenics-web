@@ -1,0 +1,2625 @@
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form PressureUpdate
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'a'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 0
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[]'
+  Argument names:         '[q, p]'
+  Coefficient names:      '[]'
+  Unique elements:        'CG1(?)'
+  Unique sub elements:    'CG1(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 0
+  quadrature_degree: auto --> 0
+  quadrature_rule:   auto --> default
+  
+  Name:                   'L'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 2
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[c_0, w_1]'
+  Argument names:         '[q]'
+  Coefficient names:      '[k, u1]'
+  Unique elements:        'CG1(?), R0(?), Vector<2 x CG2(?)>'
+  Unique sub elements:    'CG1(?), R0(?), Vector<2 x CG2(?)>, CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for expression Division.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0150771 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 4 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 4 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.000713 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {FiniteElement('Real', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 0, None): {None: {None: {(0, 0): array([[1.0, 0.99999999999999989, 0.99999999999999989]], dtype=object)}}}, VectorElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 2, 2, None): {None: {None: {(0, 1): array([[[ -1.66666667e+00,   3.33333333e-01,   3.33333333e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,  -5.55111512e-17,  -5.55111512e-17],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -3.33333333e-01,   1.66666667e+00,  -3.33333333e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  6.66666667e-01,   6.66666667e-01,   2.66666667e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  2.00000000e+00,  -2.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -6.66666667e-01,  -6.66666667e-01,  -2.66666667e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.66666667e+00,   3.33333333e-01,   3.33333333e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,  -5.55111512e-17,  -5.55111512e-17]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -3.33333333e-01,   1.66666667e+00,  -3.33333333e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  6.66666667e-01,   6.66666667e-01,   2.66666667e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  2.00000000e+00,  -2.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -6.66666667e-01,  -6.66666667e-01,  -2.66666667e+00]]]), (1, 0): array([[[ -1.66666667e+00,   3.33333333e-01,   3.33333333e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -3.33333333e-01,  -3.33333333e-01,   1.66666667e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  6.66666667e-01,   2.66666667e+00,   6.66666667e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -6.66666667e-01,  -2.66666667e+00,  -6.66666667e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  2.00000000e+00,  -1.59906312e-16,  -2.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.66666667e+00,   3.33333333e-01,   3.33333333e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -3.33333333e-01,  -3.33333333e-01,   1.66666667e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  6.66666667e-01,   2.66666667e+00,   6.66666667e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -6.66666667e-01,  -2.66666667e+00,  -6.66666667e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  2.00000000e+00,  -1.59906312e-16,  -2.00000000e+00]]]), (0, 0): array([[[ 0.22222222, -0.11111111, -0.11111111],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[-0.11111111, -0.11111111,  0.22222222],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[-0.11111111,  0.22222222, -0.11111111],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.11111111,  0.44444444,  0.44444444],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.44444444,  0.44444444,  0.11111111],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.44444444,  0.11111111,  0.44444444],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.22222222, -0.11111111, -0.11111111]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [-0.11111111, -0.11111111,  0.22222222]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [-0.11111111,  0.22222222, -0.11111111]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.11111111,  0.44444444,  0.44444444]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.44444444,  0.44444444,  0.11111111]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.44444444,  0.11111111,  0.44444444]]])}}}, FiniteElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 1, None): {None: {None: {(0, 0): array([[0.66666666666666685, 0.16666666666666674, 0.16666666666666669],
+         [0.16666666666666663, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666666, 0.66666666666666652, 0.16666666666666663]], dtype=object)}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE1_C0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.22222222, -0.11111111, -0.11111111,  0.11111111,
+           0.44444444,  0.44444444],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111, -0.11111111,  0.22222222,  0.44444444,
+           0.44444444,  0.11111111],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111,  0.22222222, -0.11111111,  0.44444444,
+           0.11111111,  0.44444444]]), 'FE1_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.66666667e+00,  -3.33333333e-01,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,   2.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -3.33333333e-01,   0.00000000e+00,
+            2.66666667e+00,  -2.66666667e+00,  -1.59906312e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,   1.66666667e+00,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,  -2.00000000e+00]]), 'FE2': array([[1.0],
+         [0.99999999999999989],
+         [0.99999999999999989]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.66666667e+00,   0.00000000e+00,  -3.33333333e-01,
+            6.66666667e-01,   2.00000000e+00,  -6.66666667e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -5.55111512e-17,   1.66666667e+00,
+            6.66666667e-01,  -2.00000000e+00,  -6.66666667e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -5.55111512e-17,  -3.33333333e-01,
+            2.66666667e+00,   0.00000000e+00,  -2.66666667e+00]]), 'FE1_C0_D01': array([[ -1.66666667e+00,   0.00000000e+00,  -3.33333333e-01,
+            6.66666667e-01,   2.00000000e+00,  -6.66666667e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -5.55111512e-17,   1.66666667e+00,
+            6.66666667e-01,  -2.00000000e+00,  -6.66666667e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -5.55111512e-17,  -3.33333333e-01,
+            2.66666667e+00,   0.00000000e+00,  -2.66666667e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[ -1.66666667e+00,  -3.33333333e-01,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,   2.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -3.33333333e-01,   0.00000000e+00,
+            2.66666667e+00,  -2.66666667e+00,  -1.59906312e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,   1.66666667e+00,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,  -2.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]])}
+  
+  tables: {'FE1_C0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.22222222, -0.11111111, -0.11111111,  0.11111111,
+           0.44444444,  0.44444444],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111, -0.11111111,  0.22222222,  0.44444444,
+           0.44444444,  0.11111111],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111,  0.22222222, -0.11111111,  0.44444444,
+           0.11111111,  0.44444444]]), 'FE1_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.66666667e+00,  -3.33333333e-01,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,   2.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -3.33333333e-01,   0.00000000e+00,
+            2.66666667e+00,  -2.66666667e+00,  -1.59906312e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,   1.66666667e+00,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,  -2.00000000e+00]]), 'FE2': array([[1.0],
+         [0.99999999999999989],
+         [0.99999999999999989]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.66666667e+00,   0.00000000e+00,  -3.33333333e-01,
+            6.66666667e-01,   2.00000000e+00,  -6.66666667e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -5.55111512e-17,   1.66666667e+00,
+            6.66666667e-01,  -2.00000000e+00,  -6.66666667e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            3.33333333e-01,  -5.55111512e-17,  -3.33333333e-01,
+            2.66666667e+00,   0.00000000e+00,  -2.66666667e+00]]), 'FE1_C0_D01': array([[ -1.66666667e+00,   0.00000000e+00,  -3.33333333e-01,
+            6.66666667e-01,   2.00000000e+00,  -6.66666667e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -5.55111512e-17,   1.66666667e+00,
+            6.66666667e-01,  -2.00000000e+00,  -6.66666667e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -5.55111512e-17,  -3.33333333e-01,
+            2.66666667e+00,   0.00000000e+00,  -2.66666667e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[ -1.66666667e+00,  -3.33333333e-01,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,   2.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,  -3.33333333e-01,   0.00000000e+00,
+            2.66666667e+00,  -2.66666667e+00,  -1.59906312e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.33333333e-01,   1.66666667e+00,   0.00000000e+00,
+            6.66666667e-01,  -6.66666667e-01,  -2.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C1_D10': 'FE1_C1_D10', 'FE2': 'FE2', 'FE0': 'FE0', 'FE1_C1_D01': 'FE1_C1_D01', 'FE1_C0_D01': 'FE1_C0_D01', 'FE1_C0_D10': 'FE1_C0_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE1_C0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444]]), 'FE2': array([[1.0],
+         [0.99999999999999989],
+         [0.99999999999999989]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object), 'FE1_C0_D01': array([[-1.66666667, -0.33333333,  0.66666667,  2.        , -0.66666667],
+         [ 0.33333333,  1.66666667,  0.66666667, -2.        , -0.66666667],
+         [ 0.33333333, -0.33333333,  2.66666667,  0.        , -2.66666667]]), 'FE1_C0_D10': array([[-1.66666667, -0.33333333,  0.66666667, -0.66666667,  2.        ],
+         [ 0.33333333, -0.33333333,  2.66666667, -2.66666667,  0.        ],
+         [ 0.33333333,  1.66666667,  0.66666667, -0.66666667, -2.        ]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE1_C0': ('FE1_C0', (0, [0, 1, 2, 3, 4, 5]), False, False), 'FE1_C1': ('FE1_C0', (3, [6, 7, 8, 9, 10, 11]), False, False), 'FE1_C1_D10': ('FE1_C0_D10', (5, [6, 7, 9, 10, 11]), False, False), 'FE2': ('FE2', (), False, True), 'FE0': ('FE0', (), False, False), 'FE1_C1_D01': ('FE1_C0_D01', (4, [6, 8, 9, 10, 11]), False, False), 'FE1_C0_D01': ('FE1_C0_D01', (1, [0, 2, 3, 4, 5]), False, False), 'FE1_C0_D10': ('FE1_C0_D10', (2, [0, 1, 3, 4, 5]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.059804 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  FErari not installed, skipping tensor optimizations
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.00107718 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 4 element(s)
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 4 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 170
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.204509 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000510931 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./PressureUpdate.h.
+  
+Compiler stage 5 finished in 0.000869989 seconds.
+
+[1;37;32mFFC finished in 0.282128 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form TentativeVelocity
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'a'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 1
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[c_0]'
+  Argument names:         '[v, u]'
+  Coefficient names:      '[k]'
+  Unique elements:        'Vector<2 x CG2(?)>, R0(?)'
+  Unique sub elements:    'Vector<2 x CG2(?)>, R0(?), CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for expression Division.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 4
+  quadrature_degree: auto --> 4
+  quadrature_rule:   auto --> default
+  
+  Name:                   'L'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 3
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[c_0, w_1, w_2]'
+  Argument names:         '[v]'
+  Coefficient names:      '[k, u0, f]'
+  Unique elements:        'Vector<2 x CG2(?)>, R0(?)'
+  Unique sub elements:    'Vector<2 x CG2(?)>, R0(?), CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for expression Division.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 5
+  quadrature_degree: auto --> 5
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.00980496 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 3 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 3 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {6: {FiniteElement('Real', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 0, None): {None: {None: {(0, 0): array([[1.0, 1.0, 1.0, 1.0, 1.0, 1.0]], dtype=object)}}}, VectorElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 2, 2, None): {None: {None: {(0, 1): array([[[  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+            -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  2.77555756e-16,  -2.22044605e-16,  -5.55111512e-17,
+             4.85722573e-17,  -1.11022302e-16,   1.31838984e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -6.33695146e-01,   2.26739029e+00,  -6.33695146e-01,
+             7.83793964e-01,  -5.67587927e-01,   7.83793964e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  3.26739029e+00,   3.66304854e-01,   3.66304854e-01,
+             4.32412073e-01,   1.78379396e+00,   1.78379396e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -3.77475828e-15,  -2.90108544e+00,   2.90108544e+00,
+            -2.49800181e-16,   1.35138189e+00,  -1.35138189e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -3.26739029e+00,  -3.66304854e-01,  -3.66304854e-01,
+            -4.32412073e-01,  -1.78379396e+00,  -1.78379396e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+            -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  2.77555756e-16,  -2.22044605e-16,  -5.55111512e-17,
+             4.85722573e-17,  -1.11022302e-16,   1.31838984e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -6.33695146e-01,   2.26739029e+00,  -6.33695146e-01,
+             7.83793964e-01,  -5.67587927e-01,   7.83793964e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  3.26739029e+00,   3.66304854e-01,   3.66304854e-01,
+             4.32412073e-01,   1.78379396e+00,   1.78379396e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -3.77475828e-15,  -2.90108544e+00,   2.90108544e+00,
+            -2.49800181e-16,   1.35138189e+00,  -1.35138189e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -3.26739029e+00,  -3.66304854e-01,  -3.66304854e-01,
+            -4.32412073e-01,  -1.78379396e+00,  -1.78379396e+00]]]), (1, 0): array([[[  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+            -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  2.26739029e+00,  -6.33695146e-01,  -6.33695146e-01,
+            -5.67587927e-01,   7.83793964e-01,   7.83793964e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  3.66304854e-01,   3.26739029e+00,   3.66304854e-01,
+             1.78379396e+00,   4.32412073e-01,   1.78379396e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -3.66304854e-01,  -3.26739029e+00,  -3.66304854e-01,
+            -1.78379396e+00,  -4.32412073e-01,  -1.78379396e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[ -2.90108544e+00,  -4.92966998e-15,   2.90108544e+00,
+             1.35138189e+00,  -7.64507824e-16,  -1.35138189e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+            -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  2.26739029e+00,  -6.33695146e-01,  -6.33695146e-01,
+            -5.67587927e-01,   7.83793964e-01,   7.83793964e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  3.66304854e-01,   3.26739029e+00,   3.66304854e-01,
+             1.78379396e+00,   4.32412073e-01,   1.78379396e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -3.66304854e-01,  -3.26739029e+00,  -3.66304854e-01,
+            -1.78379396e+00,  -4.32412073e-01,  -1.78379396e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -2.90108544e+00,  -4.92966998e-15,   2.90108544e+00,
+             1.35138189e+00,  -7.64507824e-16,  -1.35138189e+00]]]), (0, 0): array([[[-0.07480381, -0.07480381,  0.51763234, -0.04820838, -0.04820838,
+           -0.08473049],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.51763234, -0.07480381, -0.07480381, -0.08473049, -0.04820838,
+           -0.04820838],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[-0.07480381,  0.51763234, -0.07480381, -0.04820838, -0.08473049,
+           -0.04820838],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.29921523,  0.29921523,  0.03354481,  0.19283351,  0.19283351,
+            0.79548023],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.03354481,  0.29921523,  0.29921523,  0.79548023,  0.19283351,
+            0.19283351],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.29921523,  0.03354481,  0.29921523,  0.19283351,  0.79548023,
+            0.19283351],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [-0.07480381, -0.07480381,  0.51763234, -0.04820838, -0.04820838,
+           -0.08473049]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.51763234, -0.07480381, -0.07480381, -0.08473049, -0.04820838,
+           -0.04820838]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [-0.07480381,  0.51763234, -0.07480381, -0.04820838, -0.08473049,
+           -0.04820838]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.29921523,  0.29921523,  0.03354481,  0.19283351,  0.19283351,
+            0.79548023]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.03354481,  0.29921523,  0.29921523,  0.79548023,  0.19283351,
+            0.19283351]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.29921523,  0.03354481,  0.29921523,  0.19283351,  0.79548023,
+            0.19283351]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,   2.77555756e-16,  -6.33695146e-01,
+            3.26739029e+00,  -3.77475828e-15,  -3.26739029e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,  -2.22044605e-16,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.26739029e+00,  -5.55111512e-17,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,   4.85722573e-17,   7.83793964e-01,
+            4.32412073e-01,  -2.49800181e-16,  -4.32412073e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,  -1.11022302e-16,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.67587927e-01,   1.31838984e-16,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00]]), 'FE0_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -4.92966998e-15],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -7.64507824e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00]]), 'FE0_C0_D10': array([[  6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -4.92966998e-15,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -7.64507824e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C0_D01': array([[  6.33695146e-01,   2.77555756e-16,  -6.33695146e-01,
+            3.26739029e+00,  -3.77475828e-15,  -3.26739029e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  6.33695146e-01,  -2.22044605e-16,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.26739029e+00,  -5.55111512e-17,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,   4.85722573e-17,   7.83793964e-01,
+            4.32412073e-01,  -2.49800181e-16,  -4.32412073e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,  -1.11022302e-16,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.67587927e-01,   1.31838984e-16,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.07480381,  0.51763234, -0.07480381,  0.29921523,
+           0.03354481,  0.29921523],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.07480381, -0.07480381,  0.51763234,  0.29921523,
+           0.29921523,  0.03354481],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.51763234, -0.07480381, -0.07480381,  0.03354481,
+           0.29921523,  0.29921523],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.04820838, -0.08473049, -0.04820838,  0.19283351,
+           0.79548023,  0.19283351],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.04820838, -0.04820838, -0.08473049,  0.19283351,
+           0.19283351,  0.79548023],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08473049, -0.04820838, -0.04820838,  0.79548023,
+           0.19283351,  0.19283351]]), 'FE0_C0': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]])}
+  
+  tables: {'FE0_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,   2.77555756e-16,  -6.33695146e-01,
+            3.26739029e+00,  -3.77475828e-15,  -3.26739029e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,  -2.22044605e-16,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.26739029e+00,  -5.55111512e-17,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,   4.85722573e-17,   7.83793964e-01,
+            4.32412073e-01,  -2.49800181e-16,  -4.32412073e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,  -1.11022302e-16,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.67587927e-01,   1.31838984e-16,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00]]), 'FE0_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -4.92966998e-15],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -7.64507824e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00]]), 'FE0_C0_D10': array([[  6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -4.92966998e-15,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -7.64507824e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C0_D01': array([[  6.33695146e-01,   2.77555756e-16,  -6.33695146e-01,
+            3.26739029e+00,  -3.77475828e-15,  -3.26739029e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  6.33695146e-01,  -2.22044605e-16,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.26739029e+00,  -5.55111512e-17,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,   4.85722573e-17,   7.83793964e-01,
+            4.32412073e-01,  -2.49800181e-16,  -4.32412073e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -7.83793964e-01,  -1.11022302e-16,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.67587927e-01,   1.31838984e-16,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.07480381,  0.51763234, -0.07480381,  0.29921523,
+           0.03354481,  0.29921523],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.07480381, -0.07480381,  0.51763234,  0.29921523,
+           0.29921523,  0.03354481],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.51763234, -0.07480381, -0.07480381,  0.03354481,
+           0.29921523,  0.29921523],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.04820838, -0.08473049, -0.04820838,  0.19283351,
+           0.79548023,  0.19283351],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.04820838, -0.04820838, -0.08473049,  0.19283351,
+           0.19283351,  0.79548023],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08473049, -0.04820838, -0.04820838,  0.79548023,
+           0.19283351,  0.19283351]]), 'FE0_C0': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_C1_D01': 'FE0_C1_D01', 'FE0_C1_D10': 'FE0_C1_D10', 'FE0_C0_D10': 'FE0_C0_D10', 'FE0_C0_D01': 'FE0_C0_D01', 'FE1': 'FE1', 'FE0_C1': 'FE0_C1', 'FE0_C0': 'FE0_C0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_C0_D10': array([[ 0.63369515,  2.26739029,  0.36630485, -0.36630485, -2.90108544],
+         [ 0.63369515, -0.63369515,  3.26739029, -3.26739029,  0.        ],
+         [-2.26739029, -0.63369515,  0.36630485, -0.36630485,  2.90108544],
+         [-0.78379396, -0.56758793,  1.78379396, -1.78379396,  1.35138189],
+         [-0.78379396,  0.78379396,  0.43241207, -0.43241207,  0.        ],
+         [ 0.56758793,  0.78379396,  1.78379396, -1.78379396, -1.35138189]]), 'FE0_C0_D01': array([[ 0.63369515, -0.63369515,  3.26739029,  0.        , -3.26739029],
+         [ 0.63369515,  2.26739029,  0.36630485, -2.90108544, -0.36630485],
+         [-2.26739029, -0.63369515,  0.36630485,  2.90108544, -0.36630485],
+         [-0.78379396,  0.78379396,  0.43241207,  0.        , -0.43241207],
+         [-0.78379396, -0.56758793,  1.78379396,  1.35138189, -1.78379396],
+         [ 0.56758793,  0.78379396,  1.78379396, -1.35138189, -1.78379396]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C0': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_C1_D01': ('FE0_C0_D01', (4, [6, 8, 9, 10, 11]), False, False), 'FE0_C1_D10': ('FE0_C0_D10', (5, [6, 7, 9, 10, 11]), False, False), 'FE0_C0_D10': ('FE0_C0_D10', (2, [0, 1, 3, 4, 5]), False, False), 'FE0_C0_D01': ('FE0_C0_D01', (1, [0, 2, 3, 4, 5]), False, False), 'FE1': ('FE1', (), False, True), 'FE0_C1': ('FE0_C0', (3, [6, 7, 8, 9, 10, 11]), False, False), 'FE0_C0': ('FE0_C0', (0, [0, 1, 2, 3, 4, 5]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {7: {FiniteElement('Real', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 0, None): {None: {None: {(0, 0): array([[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]], dtype=object)}}}, VectorElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 2, 2, None): {None: {None: {(0, 1): array([[[ -3.33333333e-01,   5.94853971e-01,   5.94853971e-01,
+            -2.18970794e+00,  -8.80568256e-01,  -8.80568256e-01,
+             7.61136513e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  8.32667268e-17,   2.22044605e-16,  -2.22044605e-16,
+             5.55111512e-17,   1.52655666e-16,  -2.77555756e-16,
+             9.71445147e-17],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  3.33333333e-01,  -5.94853971e-01,   2.18970794e+00,
+            -5.94853971e-01,   8.80568256e-01,  -7.61136513e-01,
+             8.80568256e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  1.33333333e+00,   3.18970794e+00,   4.05146029e-01,
+             4.05146029e-01,   2.38863487e-01,   1.88056826e+00,
+             1.88056826e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[ -1.66533454e-16,   4.44089210e-16,  -2.78456191e+00,
+             2.78456191e+00,   3.33066907e-16,   1.64170477e+00,
+            -1.64170477e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[ -1.33333333e+00,  -3.18970794e+00,  -4.05146029e-01,
+            -4.05146029e-01,  -2.38863487e-01,  -1.88056826e+00,
+            -1.88056826e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -3.33333333e-01,   5.94853971e-01,   5.94853971e-01,
+            -2.18970794e+00,  -8.80568256e-01,  -8.80568256e-01,
+             7.61136513e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  8.32667268e-17,   2.22044605e-16,  -2.22044605e-16,
+             5.55111512e-17,   1.52655666e-16,  -2.77555756e-16,
+             9.71445147e-17]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  3.33333333e-01,  -5.94853971e-01,   2.18970794e+00,
+            -5.94853971e-01,   8.80568256e-01,  -7.61136513e-01,
+             8.80568256e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  1.33333333e+00,   3.18970794e+00,   4.05146029e-01,
+             4.05146029e-01,   2.38863487e-01,   1.88056826e+00,
+             1.88056826e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -1.66533454e-16,   4.44089210e-16,  -2.78456191e+00,
+             2.78456191e+00,   3.33066907e-16,   1.64170477e+00,
+            -1.64170477e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -1.33333333e+00,  -3.18970794e+00,  -4.05146029e-01,
+            -4.05146029e-01,  -2.38863487e-01,  -1.88056826e+00,
+            -1.88056826e+00]]]), (1, 0): array([[[ -3.33333333e-01,   5.94853971e-01,   5.94853971e-01,
+            -2.18970794e+00,  -8.80568256e-01,  -8.80568256e-01,
+             7.61136513e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  3.33333333e-01,   2.18970794e+00,  -5.94853971e-01,
+            -5.94853971e-01,  -7.61136513e-01,   8.80568256e-01,
+             8.80568256e-01],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  1.33333333e+00,   4.05146029e-01,   3.18970794e+00,
+             4.05146029e-01,   1.88056826e+00,   2.38863487e-01,
+             1.88056826e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[ -1.33333333e+00,  -4.05146029e-01,  -3.18970794e+00,
+            -4.05146029e-01,  -1.88056826e+00,  -2.38863487e-01,
+            -1.88056826e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[ -2.15331488e-16,  -2.78456191e+00,  -4.37374128e-16,
+             2.78456191e+00,   1.64170477e+00,  -4.36972564e-16,
+            -1.64170477e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -3.33333333e-01,   5.94853971e-01,   5.94853971e-01,
+            -2.18970794e+00,  -8.80568256e-01,  -8.80568256e-01,
+             7.61136513e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  3.33333333e-01,   2.18970794e+00,  -5.94853971e-01,
+            -5.94853971e-01,  -7.61136513e-01,   8.80568256e-01,
+             8.80568256e-01]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  1.33333333e+00,   4.05146029e-01,   3.18970794e+00,
+             4.05146029e-01,   1.88056826e+00,   2.38863487e-01,
+             1.88056826e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -1.33333333e+00,  -4.05146029e-01,  -3.18970794e+00,
+            -4.05146029e-01,  -1.88056826e+00,  -2.38863487e-01,
+            -1.88056826e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -2.15331488e-16,  -2.78456191e+00,  -4.37374128e-16,
+             2.78456191e+00,   1.64170477e+00,  -4.36972564e-16,
+            -1.64170477e+00]]]), (0, 0): array([[[-0.11111111, -0.08076859, -0.08076859,  0.47435261, -0.02807494,
+           -0.02807494, -0.0525839 ],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[-0.11111111,  0.47435261, -0.08076859, -0.08076859, -0.0525839 ,
+           -0.02807494, -0.02807494],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[-0.11111111, -0.08076859,  0.47435261, -0.08076859, -0.02807494,
+           -0.0525839 , -0.02807494],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.44444444,  0.32307438,  0.32307438,  0.04103583,  0.11229977,
+            0.11229977,  0.88413424],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.44444444,  0.04103583,  0.32307438,  0.32307438,  0.88413424,
+            0.11229977,  0.11229977],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.44444444,  0.32307438,  0.04103583,  0.32307438,  0.11229977,
+            0.88413424,  0.11229977],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [-0.11111111, -0.08076859, -0.08076859,  0.47435261, -0.02807494,
+           -0.02807494, -0.0525839 ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [-0.11111111,  0.47435261, -0.08076859, -0.08076859, -0.0525839 ,
+           -0.02807494, -0.02807494]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [-0.11111111, -0.08076859,  0.47435261, -0.08076859, -0.02807494,
+           -0.0525839 , -0.02807494]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.44444444,  0.32307438,  0.32307438,  0.04103583,  0.11229977,
+            0.11229977,  0.88413424]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.44444444,  0.04103583,  0.32307438,  0.32307438,  0.88413424,
+            0.11229977,  0.11229977]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.44444444,  0.32307438,  0.04103583,  0.32307438,  0.11229977,
+            0.88413424,  0.11229977]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -3.33333333e-01,   8.32667268e-17,   3.33333333e-01,
+            1.33333333e+00,  -1.66533454e-16,  -1.33333333e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,   2.22044605e-16,  -5.94853971e-01,
+            3.18970794e+00,   4.44089210e-16,  -3.18970794e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,  -2.22044605e-16,   2.18970794e+00,
+            4.05146029e-01,  -2.78456191e+00,  -4.05146029e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.18970794e+00,   5.55111512e-17,  -5.94853971e-01,
+            4.05146029e-01,   2.78456191e+00,  -4.05146029e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,   1.52655666e-16,   8.80568256e-01,
+            2.38863487e-01,   3.33066907e-16,  -2.38863487e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,  -2.77555756e-16,  -7.61136513e-01,
+            1.88056826e+00,   1.64170477e+00,  -1.88056826e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            7.61136513e-01,   9.71445147e-17,   8.80568256e-01,
+            1.88056826e+00,  -1.64170477e+00,  -1.88056826e+00]]), 'FE0_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -3.33333333e-01,   3.33333333e-01,   0.00000000e+00,
+            1.33333333e+00,  -1.33333333e+00,  -2.15331488e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,   2.18970794e+00,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,  -2.78456191e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,  -5.94853971e-01,   0.00000000e+00,
+            3.18970794e+00,  -3.18970794e+00,  -4.37374128e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.18970794e+00,  -5.94853971e-01,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,   2.78456191e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,  -7.61136513e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,   1.64170477e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,   8.80568256e-01,   0.00000000e+00,
+            2.38863487e-01,  -2.38863487e-01,  -4.36972564e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            7.61136513e-01,   8.80568256e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,  -1.64170477e+00]]), 'FE0_C0_D10': array([[ -3.33333333e-01,   3.33333333e-01,   0.00000000e+00,
+            1.33333333e+00,  -1.33333333e+00,  -2.15331488e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,   2.18970794e+00,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,  -2.78456191e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,  -5.94853971e-01,   0.00000000e+00,
+            3.18970794e+00,  -3.18970794e+00,  -4.37374128e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.18970794e+00,  -5.94853971e-01,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,   2.78456191e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,  -7.61136513e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,   1.64170477e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,   8.80568256e-01,   0.00000000e+00,
+            2.38863487e-01,  -2.38863487e-01,  -4.36972564e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  7.61136513e-01,   8.80568256e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,  -1.64170477e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C0_D01': array([[ -3.33333333e-01,   8.32667268e-17,   3.33333333e-01,
+            1.33333333e+00,  -1.66533454e-16,  -1.33333333e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,   2.22044605e-16,  -5.94853971e-01,
+            3.18970794e+00,   4.44089210e-16,  -3.18970794e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,  -2.22044605e-16,   2.18970794e+00,
+            4.05146029e-01,  -2.78456191e+00,  -4.05146029e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.18970794e+00,   5.55111512e-17,  -5.94853971e-01,
+            4.05146029e-01,   2.78456191e+00,  -4.05146029e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,   1.52655666e-16,   8.80568256e-01,
+            2.38863487e-01,   3.33066907e-16,  -2.38863487e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,  -2.77555756e-16,  -7.61136513e-01,
+            1.88056826e+00,   1.64170477e+00,  -1.88056826e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  7.61136513e-01,   9.71445147e-17,   8.80568256e-01,
+            1.88056826e+00,  -1.64170477e+00,  -1.88056826e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111, -0.11111111, -0.11111111,  0.44444444,
+           0.44444444,  0.44444444],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08076859,  0.47435261, -0.08076859,  0.32307438,
+           0.04103583,  0.32307438],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08076859, -0.08076859,  0.47435261,  0.32307438,
+           0.32307438,  0.04103583],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.47435261, -0.08076859, -0.08076859,  0.04103583,
+           0.32307438,  0.32307438],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.02807494, -0.0525839 , -0.02807494,  0.11229977,
+           0.88413424,  0.11229977],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.02807494, -0.02807494, -0.0525839 ,  0.11229977,
+           0.11229977,  0.88413424],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.0525839 , -0.02807494, -0.02807494,  0.88413424,
+           0.11229977,  0.11229977]]), 'FE0_C0': array([[-0.11111111, -0.11111111, -0.11111111,  0.44444444,  0.44444444,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08076859,  0.47435261, -0.08076859,  0.32307438,  0.04103583,
+           0.32307438,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08076859, -0.08076859,  0.47435261,  0.32307438,  0.32307438,
+           0.04103583,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [ 0.47435261, -0.08076859, -0.08076859,  0.04103583,  0.32307438,
+           0.32307438,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.02807494, -0.0525839 , -0.02807494,  0.11229977,  0.88413424,
+           0.11229977,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.02807494, -0.02807494, -0.0525839 ,  0.11229977,  0.11229977,
+           0.88413424,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.0525839 , -0.02807494, -0.02807494,  0.88413424,  0.11229977,
+           0.11229977,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]])}
+  
+  tables: {'FE0_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -3.33333333e-01,   8.32667268e-17,   3.33333333e-01,
+            1.33333333e+00,  -1.66533454e-16,  -1.33333333e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,   2.22044605e-16,  -5.94853971e-01,
+            3.18970794e+00,   4.44089210e-16,  -3.18970794e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,  -2.22044605e-16,   2.18970794e+00,
+            4.05146029e-01,  -2.78456191e+00,  -4.05146029e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.18970794e+00,   5.55111512e-17,  -5.94853971e-01,
+            4.05146029e-01,   2.78456191e+00,  -4.05146029e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,   1.52655666e-16,   8.80568256e-01,
+            2.38863487e-01,   3.33066907e-16,  -2.38863487e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,  -2.77555756e-16,  -7.61136513e-01,
+            1.88056826e+00,   1.64170477e+00,  -1.88056826e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            7.61136513e-01,   9.71445147e-17,   8.80568256e-01,
+            1.88056826e+00,  -1.64170477e+00,  -1.88056826e+00]]), 'FE0_C1_D10': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -3.33333333e-01,   3.33333333e-01,   0.00000000e+00,
+            1.33333333e+00,  -1.33333333e+00,  -2.15331488e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,   2.18970794e+00,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,  -2.78456191e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            5.94853971e-01,  -5.94853971e-01,   0.00000000e+00,
+            3.18970794e+00,  -3.18970794e+00,  -4.37374128e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -2.18970794e+00,  -5.94853971e-01,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,   2.78456191e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,  -7.61136513e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,   1.64170477e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -8.80568256e-01,   8.80568256e-01,   0.00000000e+00,
+            2.38863487e-01,  -2.38863487e-01,  -4.36972564e-16],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            7.61136513e-01,   8.80568256e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,  -1.64170477e+00]]), 'FE0_C0_D10': array([[ -3.33333333e-01,   3.33333333e-01,   0.00000000e+00,
+            1.33333333e+00,  -1.33333333e+00,  -2.15331488e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,   2.18970794e+00,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,  -2.78456191e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,  -5.94853971e-01,   0.00000000e+00,
+            3.18970794e+00,  -3.18970794e+00,  -4.37374128e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.18970794e+00,  -5.94853971e-01,   0.00000000e+00,
+            4.05146029e-01,  -4.05146029e-01,   2.78456191e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,  -7.61136513e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,   1.64170477e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,   8.80568256e-01,   0.00000000e+00,
+            2.38863487e-01,  -2.38863487e-01,  -4.36972564e-16,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  7.61136513e-01,   8.80568256e-01,   0.00000000e+00,
+            1.88056826e+00,  -1.88056826e+00,  -1.64170477e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C0_D01': array([[ -3.33333333e-01,   8.32667268e-17,   3.33333333e-01,
+            1.33333333e+00,  -1.66533454e-16,  -1.33333333e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,   2.22044605e-16,  -5.94853971e-01,
+            3.18970794e+00,   4.44089210e-16,  -3.18970794e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  5.94853971e-01,  -2.22044605e-16,   2.18970794e+00,
+            4.05146029e-01,  -2.78456191e+00,  -4.05146029e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -2.18970794e+00,   5.55111512e-17,  -5.94853971e-01,
+            4.05146029e-01,   2.78456191e+00,  -4.05146029e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,   1.52655666e-16,   8.80568256e-01,
+            2.38863487e-01,   3.33066907e-16,  -2.38863487e-01,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -8.80568256e-01,  -2.77555756e-16,  -7.61136513e-01,
+            1.88056826e+00,   1.64170477e+00,  -1.88056826e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  7.61136513e-01,   9.71445147e-17,   8.80568256e-01,
+            1.88056826e+00,  -1.64170477e+00,  -1.88056826e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.11111111, -0.11111111, -0.11111111,  0.44444444,
+           0.44444444,  0.44444444],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08076859,  0.47435261, -0.08076859,  0.32307438,
+           0.04103583,  0.32307438],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.08076859, -0.08076859,  0.47435261,  0.32307438,
+           0.32307438,  0.04103583],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.47435261, -0.08076859, -0.08076859,  0.04103583,
+           0.32307438,  0.32307438],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.02807494, -0.0525839 , -0.02807494,  0.11229977,
+           0.88413424,  0.11229977],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.02807494, -0.02807494, -0.0525839 ,  0.11229977,
+           0.11229977,  0.88413424],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        , -0.0525839 , -0.02807494, -0.02807494,  0.88413424,
+           0.11229977,  0.11229977]]), 'FE0_C0': array([[-0.11111111, -0.11111111, -0.11111111,  0.44444444,  0.44444444,
+           0.44444444,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08076859,  0.47435261, -0.08076859,  0.32307438,  0.04103583,
+           0.32307438,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.08076859, -0.08076859,  0.47435261,  0.32307438,  0.32307438,
+           0.04103583,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [ 0.47435261, -0.08076859, -0.08076859,  0.04103583,  0.32307438,
+           0.32307438,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.02807494, -0.0525839 , -0.02807494,  0.11229977,  0.88413424,
+           0.11229977,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.02807494, -0.02807494, -0.0525839 ,  0.11229977,  0.11229977,
+           0.88413424,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ],
+         [-0.0525839 , -0.02807494, -0.02807494,  0.88413424,  0.11229977,
+           0.11229977,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ,  0.        ]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_C1_D01': 'FE0_C1_D01', 'FE0_C1_D10': 'FE0_C1_D10', 'FE0_C0_D10': 'FE0_C0_D10', 'FE0_C0_D01': 'FE0_C0_D01', 'FE1': 'FE1', 'FE0_C1': 'FE0_C1', 'FE0_C0': 'FE0_C0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_C0_D10': array([[-0.33333333,  0.33333333,  1.33333333, -1.33333333,  0.        ],
+         [ 0.59485397,  2.18970794,  0.40514603, -0.40514603, -2.78456191],
+         [ 0.59485397, -0.59485397,  3.18970794, -3.18970794,  0.        ],
+         [-2.18970794, -0.59485397,  0.40514603, -0.40514603,  2.78456191],
+         [-0.88056826, -0.76113651,  1.88056826, -1.88056826,  1.64170477],
+         [-0.88056826,  0.88056826,  0.23886349, -0.23886349,  0.        ],
+         [ 0.76113651,  0.88056826,  1.88056826, -1.88056826, -1.64170477]]), 'FE0_C0_D01': array([[-0.33333333,  0.33333333,  1.33333333,  0.        , -1.33333333],
+         [ 0.59485397, -0.59485397,  3.18970794,  0.        , -3.18970794],
+         [ 0.59485397,  2.18970794,  0.40514603, -2.78456191, -0.40514603],
+         [-2.18970794, -0.59485397,  0.40514603,  2.78456191, -0.40514603],
+         [-0.88056826,  0.88056826,  0.23886349,  0.        , -0.23886349],
+         [-0.88056826, -0.76113651,  1.88056826,  1.64170477, -1.88056826],
+         [ 0.76113651,  0.88056826,  1.88056826, -1.64170477, -1.88056826]]), 'FE1': array([[1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0],
+         [1.0]], dtype=object), 'FE0_C0': array([[-0.11111111, -0.11111111, -0.11111111,  0.44444444,  0.44444444,
+           0.44444444],
+         [-0.08076859,  0.47435261, -0.08076859,  0.32307438,  0.04103583,
+           0.32307438],
+         [-0.08076859, -0.08076859,  0.47435261,  0.32307438,  0.32307438,
+           0.04103583],
+         [ 0.47435261, -0.08076859, -0.08076859,  0.04103583,  0.32307438,
+           0.32307438],
+         [-0.02807494, -0.0525839 , -0.02807494,  0.11229977,  0.88413424,
+           0.11229977],
+         [-0.02807494, -0.02807494, -0.0525839 ,  0.11229977,  0.11229977,
+           0.88413424],
+         [-0.0525839 , -0.02807494, -0.02807494,  0.88413424,  0.11229977,
+           0.11229977]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_C1_D01': ('FE0_C0_D01', (4, [6, 8, 9, 10, 11]), False, False), 'FE0_C1_D10': ('FE0_C0_D10', (5, [6, 7, 9, 10, 11]), False, False), 'FE0_C0_D10': ('FE0_C0_D10', (2, [0, 1, 3, 4, 5]), False, False), 'FE0_C0_D01': ('FE0_C0_D01', (1, [0, 2, 3, 4, 5]), False, False), 'FE1': ('FE1', (), False, True), 'FE0_C1': ('FE0_C0', (3, [6, 7, 8, 9, 10, 11]), False, False), 'FE0_C0': ('FE0_C0', (0, [0, 1, 2, 3, 4, 5]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.171063 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.00344801 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 3 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 3 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 4936
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 971
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.228912 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00110292 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./TentativeVelocity.h.
+  
+Compiler stage 5 finished in 0.00133491 seconds.
+
+[1;37;32mFFC finished in 0.416042 seconds.[0m
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form VelocityUpdate
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'a'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 0
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[]'
+  Argument names:         '[v, u]'
+  Coefficient names:      '[]'
+  Unique elements:        'Vector<2 x CG2(?)>'
+  Unique sub elements:    'Vector<2 x CG2(?)>, CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 0
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 4
+  quadrature_degree: auto --> 4
+  quadrature_rule:   auto --> default
+  
+  Name:                   'L'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 3
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[c_0, w_1, w_2]'
+  Argument names:         '[v]'
+  Coefficient names:      '[k, u1, p1]'
+  Unique elements:        'Vector<2 x CG2(?)>, R0(?), CG1(?)'
+  Unique sub elements:    'Vector<2 x CG2(?)>, R0(?), CG1(?), CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 3
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 4
+  quadrature_degree: auto --> 4
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0282331 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 4 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 4 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00276 seconds
+  Shape of reference tensor: (12, 12)
+  Primary multi index:   rank = 2 dims = [12, 12] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [0, 9], [0, 10], [0, 11], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [1, 8], [1, 9], [1, 10], [1, 11], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [2, 8], [2, 9], [2, 10], [2, 11], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [3, 6], [3, 7], [3, 8], [3, 9], [3, 10], [3, 11], [4, 0], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [4, 6], [4, 7], [4, 8], [4, 9], [4, 10], [4, 11], [5, 0], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [5, 7], [5, 8], [5, 9], [5, 10], [5, 11], [6, 0], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [6, 7], [6, 8], [6, 9], [6, 10], [6, 11], [7, 0], [7, 1], [7, 2], [7, 3], [7, 4], [7, 5], [7, 6], [7, 7], [7, 8], [7, 9], [7, 10], [7, 11], [8, 0], [8, 1], [8, 2], [8, 3], [8, 4], [8, 5], [8, 6], [8, 7], [8, 8], [8, 9], [8, 10], [8, 11], [9, 0], [9, 1], [9, 2], [9, 3], [9, 4], [9, 5], [9, 6], [9, 7], [9, 8], [9, 9], [9, 10], [9, 11], [10, 0], [10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [10, 7], [10, 8], [10, 9], [10, 10], [10, 11], [11, 0], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6], [11, 7], [11, 8], [11, 9], [11, 10], [11, 11]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  Internal multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00206 seconds
+  Shape of reference tensor: (12, 12)
+  Primary multi index:   rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  Secondary multi index: rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  Internal multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Secondary multi index: rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  144 entries computed in 0.00451 seconds
+  Shape of reference tensor: (12, 1, 2, 3, 2)
+  Primary multi index:   rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  Secondary multi index: rank = 4 dims = [1, 2, 3, 2] indices = [[0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 2, 0], [0, 0, 2, 1], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 2, 0], [0, 1, 2, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 4 dims = [1, 2, 3, 2] indices = [[0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0], [0, 0, 1, 1], [0, 0, 2, 0], [0, 0, 2, 1], [0, 1, 0, 0], [0, 1, 0, 1], [0, 1, 1, 0], [0, 1, 1, 1], [0, 1, 2, 0], [0, 1, 2, 1]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0223949 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  FErari not installed, skipping tensor optimizations
+  FErari not installed, skipping tensor optimizations
+  
+Compiler stage 3 finished in 0.000314951 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 4 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 4 dofmap(s)
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.265796 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000617027 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./VelocityUpdate.h.
+  
+Compiler stage 5 finished in 0.000959873 seconds.
+
+[1;37;32mFFC finished in 0.318647 seconds.[0m
