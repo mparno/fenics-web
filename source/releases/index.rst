@@ -8,4 +8,5 @@ Release notes for FEniCS
     :glob:
 
     1.0-beta/*
+    1.0/*
     1.1/*
