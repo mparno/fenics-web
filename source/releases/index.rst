@@ -1,4 +1,4 @@
-.. _releases:
+.. _release_notes:
 
 ########################
 Release notes for FEniCS
