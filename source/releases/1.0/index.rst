@@ -1,8 +1,8 @@
 .. _release_1_0:
 
-############################
-Release notes for FEniCS 1.0
-############################
+#########################################
+Release notes for FEniCS 1.0 (2011-12-07)
+#########################################
 
 We are pleased to announce the release of FEniCS 1.0. This is the
 first stable and supported release of FEniCS.

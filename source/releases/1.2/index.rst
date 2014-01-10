@@ -15,7 +15,7 @@ of FEniCS 1.2.0:
 * New and improved implementation of periodic boundary conditions
 
 For a full list of new features and bug fixes, read the
-`ChangeLog <http://fenicsproject.org/pub/software/dolfin/ChangeLog>`__
+`ChangeLog <http://fenicsproject.org/pub/software/dolfin/ChangeLog>`__.
 
 *****************
 Interface changes
