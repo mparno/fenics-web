@@ -10,3 +10,4 @@ Release notes for FEniCS
     1.0-beta/*
     1.0/*
     1.1/*
+    1.2/*
