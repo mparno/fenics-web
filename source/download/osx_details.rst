@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.2.0, FFC 1.2.0, FIAT 1.1, Instant 1.2.0,
-UFC 2.2.0 and UFL 1.2.0.
+This release includes DOLFIN 1.3.0, FFC 1.3.0, FIAT 1.3.0, Instant 1.3.0,
+UFC 2.3.0 and UFL 1.3.0.
 
 .. include:: icons.rst
 
@@ -16,44 +16,33 @@ UFC 2.2.0 and UFL 1.2.0.
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.6 binary)
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.7 binary)
 
-      - `fenics-1.2.0-osx10.6.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg>`__
+      - `fenics-1.3.0-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.6.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg.asc>`__)
 
-    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.7 binary)
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.8 binary)
 
-      - `fenics-1.2.0-osx10.7.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg>`__
+      - `fenics-1.3.0-osx10.8.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.7.dmg.asc>`__)
-
-    * - |mac-icon| FEniCS 1.2.0 (Mac OS X 10.8 binary)
-
-      - `fenics-1.2.0-osx10.8.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg>`__
-        (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg.md5>`__,
-        `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.2.0-osx10.8.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg.asc>`__)
 
 ############
 Requirements
 ############
 
 * 64-bit capable Intel processor.
-* Mac OS X 10.6 or greater.
-* An up-to-date version of Xcode. This can be installed from the OS X
-  install disc for Snow Leopard users, or from App Store for Lion or
-  Mountain Lion users.
+* Mac OS X 10.7 or 10.8 (OS X 10.9 is currently not supported).
+* An up-to-date version of Xcode. This can be installed from App Store.
 * The Xcode Command Line Tools must be installed from the Downloads tab
-  within the Xcode Preferences menu for Lion or Mountain Lion users.
+  within the Xcode Preferences menu.
 * The `X11 Libraries <http://xquartz.macosforge.org/trac/wiki>`__ must
   be installed on Mountain Lion.
 * The FEniCS binary is built against system Python and will *not work*
