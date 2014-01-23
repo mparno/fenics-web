@@ -64,7 +64,7 @@ FFC
 UFL
 ---
 
-* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2013)**.
+* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2014)**.
   *Unified Form Language: A domain-specific language for weak formulations
   of partial differential equations*,
   ACM Transactions on Mathematical Software,
