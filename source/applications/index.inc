@@ -39,7 +39,7 @@
              preconditioners, and solving them.
           </p>
 
-          <p><a href="https://launchpad.net/cbc.block" rel="nofollow">Visit the
+          <p><a href="https://bitbucket.org/fenics-apps/cbc.block" rel="nofollow">Visit the
           project&#8217;s web site to learn more &raquo;</a></p>
 
         </div>
