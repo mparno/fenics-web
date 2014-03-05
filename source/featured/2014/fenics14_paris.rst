@@ -4,7 +4,8 @@ FEniCS'14 at The Center in Paris, University of Chicago, 16 -- 17 June 2014
 
 | Featured article 2014-02-21
 
-We are pleased to announce the 2014 edition of the annual FEniCS Workshop:
+We are pleased to announce the 2014 edition of the annual FEniCS
+Workshop:
 
   *FEniCS'14: Expressive and high performance scientific computing*
 
@@ -15,12 +16,29 @@ invited to discuss current and future directions in scientific
 computing, approaches to scientific software development and FEniCS
 development. The workshop will run all day on 16 and 17 June.
 
+Please mark your calendars and see `our Lanyrd page
+<http://lanyrd.com/2014/fenics14>`__ as more details become available.
+
+
+Presentations
+-------------
+
+If you would like to deliver a presentation at the workshop, please
+send an abstract to fenicsproject14@cs.uchicago.edu for consideration.
+
+
+Registration
+------------
+
+Registration information will be posted shortly.
+
+
+Reaching the workshop
+---------------------
+
 Information on reaching The Center in Paris can be found `here
 <http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/gettingthere.html>`__,
 and help on accommodation `here
 <http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/fehousing.html>`__.
 Information on registration and abstract submission will appear
 shortly.
-
-Please mark your calendars and see `our Lanyrd page
-<http://lanyrd.com/2014/fenics14>`__ as more details become available.
