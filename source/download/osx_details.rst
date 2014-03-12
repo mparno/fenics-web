@@ -34,20 +34,31 @@ UFC 2.3.0 and UFL 1.3.0.
         `sig
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg.asc>`__)
 
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.9 binary)
+
+      - `fenics-1.3.0-osx10.9.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg.asc>`__)
+
 ############
 Requirements
 ############
 
 * 64-bit capable Intel processor.
-* Mac OS X 10.7 or 10.8 (OS X 10.9 is currently not supported).
-* An up-to-date version of Xcode. This can be installed from App Store.
-* The Xcode Command Line Tools must be installed from the Downloads tab
-  within the Xcode Preferences menu.
+* Mac OS X 10.7 Lion, 10.8 Mountain Lion or 10.9 Mavericks.
+* An up-to-date version of the Xcode Command Line Developer Tools. On OS
+  X 10.7 and 10.8, install Xcode from App Store and select the Xcode
+  Command Line Tools from the Downloads tab within the Xcode Preferences
+  menu. On OS X 10.9, simply run ``xcode-select --install`` and click on
+  the Install button.
 * The `X11 Libraries <http://xquartz.macosforge.org/trac/wiki>`__ must
-  be installed on Mountain Lion.
+  be installed on OS X 10.8.
 * The FEniCS binary is built against system Python and will *not work*
-  with Python from `python.org <http://python.org>`__, MacPorts Python
-  or similar.
+  with Python from `python.org <http://python.org>`__, Python from
+  MacPorts or similar.
 
 ############
 Installation
