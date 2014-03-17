@@ -31,7 +31,7 @@ Registration
 ------------
 
 The registration fee for the workshop is €185 and can be paid via the
-Paypal link below.
+PayPal link below.
 
 .. raw:: html
 
