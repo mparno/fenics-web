@@ -30,7 +30,8 @@ send an abstract to fenicsproject14@cs.uchicago.edu for consideration.
 Registration
 ------------
 
-The registration fee for the workshop is €185. The registration fee can paid via the below link.
+The registration fee for the workshop is €185 and can be paid via the
+Paypal link below.
 
 .. raw:: html
 
