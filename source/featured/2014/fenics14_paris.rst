@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 ###########################################################################
 FEniCS'14 at The Center in Paris, University of Chicago, 16 -- 17 June 2014
 ###########################################################################
@@ -17,7 +19,7 @@ computing, approaches to scientific software development and FEniCS
 development. The workshop will run all day on 16 and 17 June.
 
 Please mark your calendars and see `our Lanyrd page
-<http://lanyrd.com/2014/fenics14>`__ as more details become available.
+<http://lanyrd.com/2014/fenics14>`__.
 
 
 Presentations
@@ -51,3 +53,11 @@ Information on reaching The Center in Paris can be found `here
 <http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/gettingthere.html>`__,
 and help on accommodation `here
 <http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/fehousing.html>`__.
+
+
+Local organizing committee
+--------------------------
+
+- \L. Ridgway Scott, University of Chicago
+- Sébastien Greppo, Administrative Director, The University of Chicago
+  Center in Paris
