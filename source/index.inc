@@ -73,9 +73,10 @@
 
           <p>The 2014 FEniCS Workshop will be held 16-17 June 2014 at
             The Center in Paris, University of Chicago, Paris,
-            France. Forthcoming details can be found <a
-            href="featured/2014/fenics14_paris.html">here</a>.
-            <br /> <br /> <br /> <br /> </p>
+            France. Information on registration and on reaching the
+            workshop can be found <a
+            href="featured/2014/fenics14_paris.html">here</a>.  <br />
+            <br /> <br /> <br /> </p>
 
           <h3>FEniCS'13 at University of Cambridge</h3> <a
           href="/featured/2013/fenics_13_cambridge.html"><img alt=''
