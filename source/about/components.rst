@@ -132,9 +132,9 @@ in the Instant source tree.
 
 .. _about_components_ufc:
 
-**************************************************
-`UFC <https://bitbucket.org/fenics-project/ufc>`__
-**************************************************
+*************************************************************
+`UFC <https://bitbucket.org/fenics-project/ufc-deprecated>`__
+*************************************************************
 
 UFC (Unified Form-assembly Code) is a unified framework for finite
 element assembly. More precisely, it defines a fixed interface for
@@ -156,7 +156,7 @@ Anders Logg, Martin Sandve Alnes, Kent-Andre Mardal, Ola Skavhaug,
 Hans Petter Langtangen, Garth N. Wells
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bitbucket.org/fenics-project/ufc/raw/master/AUTHORS>`__ in
+<https://bitbucket.org/fenics-project/ufc-deprecated/raw/master/AUTHORS>`__ in
 the UFC source tree.
 
 .. _about_components_ufl:
