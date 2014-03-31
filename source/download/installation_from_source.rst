@@ -15,8 +15,8 @@ You will also need to install the C++/Python packages
 `DOLFIN <https://bitbucket.org/fenics-project/dolfin>`_.
 Instructions for how to install these packages are given below.
 
-Python packages (FFC, FIAT, Instant, Viper and UFL)
-===================================================
+Python packages (FFC, FIAT, Instant and UFL)
+============================================
 
 #. First, download the source code for `FFC
    <https://bitbucket.org/fenics-project/ffc>`_, `FIAT
