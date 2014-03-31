@@ -11,7 +11,7 @@ You will need to install the Python packages
 `Instant <https://bitbucket.org/fenics-project/instant>`_,
 `UFL <https://bitbucket.org/fenics-project/ufl>`_.
 You will also need to install the C++/Python packages
-`UFC <https://bitbucket.org/fenics-project/ufc>`_ and
+`UFC <https://bitbucket.org/fenics-project/ufc-deprecated>`_ and
 `DOLFIN <https://bitbucket.org/fenics-project/dolfin>`_.
 Instructions for how to install these packages are given below.
 
