@@ -28,6 +28,9 @@ Presentations
 If you would like to deliver a presentation at the workshop, please
 send an abstract to fenicsproject14@cs.uchicago.edu for consideration.
 
+A list of confirmed presentations so far can be found `here
+<http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/confirmedparis14.pdf>`__.
+
 
 Registration
 ------------
