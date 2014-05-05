@@ -15,6 +15,13 @@ You will also need to install the C++/Python packages
 `DOLFIN <https://bitbucket.org/fenics-project/dolfin>`_.
 Instructions for how to install these packages are given below.
 
+.. warning::
+
+    UFC has been merged into FFC and it should no longer be installed
+    separately when building the development version of FEniCS. However,
+    when building the stable version of FEniCS, i.e. version 1.3.0,
+    installing UFC separately is still required.
+
 Python packages (FFC, FIAT, Instant and UFL)
 ============================================
 
