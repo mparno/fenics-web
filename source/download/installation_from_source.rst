@@ -43,7 +43,7 @@ C++/Python packages (DOLFIN and UFC)
 Building and installing DOLFIN and UFC require CMake version >= 2.8.
 
 #. First, download the source code for `UFC
-   <https://bitbucket.org/fenics-project/ufc>`_ and `DOLFIN
+   <https://bitbucket.org/fenics-project/ufc-deprecated>`_ and `DOLFIN
    <https://bitbucket.org/fenics-project/dolfin>`_. Then for each of
    these packages, follow the instructions below.
 #. Uncompress the archive to a convenient location.
