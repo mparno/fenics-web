@@ -10,17 +10,9 @@ You will need to install the Python packages
 `FIAT <https://bitbucket.org/fenics-project/fiat>`_,
 `Instant <https://bitbucket.org/fenics-project/instant>`_,
 `UFL <https://bitbucket.org/fenics-project/ufl>`_.
-You will also need to install the C++/Python packages
-`UFC <https://bitbucket.org/fenics-project/ufc-deprecated>`_ and
+You will also need to install the C++/Python package
 `DOLFIN <https://bitbucket.org/fenics-project/dolfin>`_.
 Instructions for how to install these packages are given below.
-
-.. warning::
-
-    UFC has been merged into FFC and it should no longer be installed
-    separately when building the development version of FEniCS. However,
-    when building the stable version of FEniCS, i.e. version 1.3.0,
-    installing UFC separately is still required.
 
 Python packages (FFC, FIAT, Instant and UFL)
 ============================================
@@ -44,15 +36,13 @@ accomplished by running the following command::
 
     python setup.py install --prefix=~/local
 
-C++/Python packages (DOLFIN and UFC)
-====================================
+C++/Python package (DOLFIN)
+===========================
 
-Building and installing DOLFIN and UFC require CMake version >= 2.8.
+Building and installing DOLFIN require CMake version >= 2.8.
 
-#. First, download the source code for `UFC
-   <https://bitbucket.org/fenics-project/ufc-deprecated>`_ and `DOLFIN
-   <https://bitbucket.org/fenics-project/dolfin>`_. Then for each of
-   these packages, follow the instructions below.
+#. First, download the source code for `DOLFIN
+   <https://bitbucket.org/fenics-project/dolfin>`_.
 #. Uncompress the archive to a convenient location.
 #. Navigate to this folder and run the following commands::
 
