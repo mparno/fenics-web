@@ -14,8 +14,8 @@ Download
 FEniCS versions and release notes
 *********************************
 
-The latest stable release of **FEniCS version 1.3.0** released
-2014-01-07. For more information about FEniCS releases and changes,
+The latest stable release of **FEniCS version 1.4.0** released
+2014-06-02. For more information about FEniCS releases and changes,
 take a look at :ref:`release_notes`. Note that binary packages will
 appear a few days after the release of a new version.
 
