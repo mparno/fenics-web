@@ -9,6 +9,52 @@ Older releases
 Older FEniCS releases for Mac OS X and Windows are made available here.
 
 ************
+FEniCS 1.3.0
+************
+
+This release includes DOLFIN 1.3.0, FFC 1.3.0, FIAT 1.3.0, Instant 1.3.0,
+UFC 2.3.0 and UFL 1.3.0.
+
+.. tabularcolumns:: |c|c|
+
+.. list-table::
+    :widths: 50, 50
+    :header-rows: 0
+    :class: center
+
+    * - |ubuntu-icon| Ubuntu packages
+
+      - `FEniCS 1.3.x PPA <https://launchpad.net/~fenics-packages/+archive/fenics-1.3.x>`__
+
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.7 binary)
+
+      - `fenics-1.3.0-osx10.7.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.7.dmg.asc>`__)
+
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.8 binary)
+
+      - `fenics-1.3.0-osx10.8.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.8.dmg.asc>`__)
+
+    * - |mac-icon| FEniCS 1.3.0 (Mac OS X 10.9 binary)
+
+      - `fenics-1.3.0-osx10.9.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.3.0-osx10.9.dmg.asc>`__)
+
+
+************
 FEniCS 1.2.0
 ************
 
