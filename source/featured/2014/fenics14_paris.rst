@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
-
 ###########################################################################
 FEniCS'14 at The Center in Paris, University of Chicago, 16 -- 17 June 2014
 ###########################################################################
 
-| Featured article 2014-02-21
+| Featured article 2014-06-13
 
 We are pleased to announce the 2014 edition of the annual FEniCS
 Workshop:
