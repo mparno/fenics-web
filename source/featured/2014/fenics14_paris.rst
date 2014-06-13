@@ -22,13 +22,12 @@ Please mark your calendars and see `our Lanyrd page
 <http://lanyrd.com/2014/fenics14>`__.
 
 
-Presentations
--------------
+Program
+-------
 
-If you would like to deliver a presentation at the workshop, please
-send an abstract to fenicsproject14@cs.uchicago.edu for consideration.
-
-A list of confirmed presentations so far can be found `here
+The program for the workshop is available `here
+<http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/lascheduleparis14.pdf>`__,
+and abstracts of presentations can be found `here
 <http://people.cs.uchicago.edu/~ridg/fenicsprojectparis14/confirmedparis14.pdf>`__.
 
 
