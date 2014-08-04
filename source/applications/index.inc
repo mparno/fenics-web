@@ -183,7 +183,7 @@
           time dependent problems.
           </p>
 
-          <p><a href="https://launchpad.net/gryphonproject"
+          <p><a href="https://bitbucket.org/knutesk/gryphonproject"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
