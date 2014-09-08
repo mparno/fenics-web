@@ -122,7 +122,8 @@ Articles in International Journals
 * **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2014)**.
   *Unified Form Language: A domain-specific language for weak formulations of partial differential equations*,
   ACM Transactions on Mathematical Software,
-  To appear,
+  40(2),
+  [`doi:10.1145/2566630 <http://dx.doi.org/10.1145/2566630>`_],
   [`arXiv:1211.4047 <http://arxiv.org/abs/1211.4047>`_].
 
 Books
@@ -183,3 +184,4 @@ Chapters in Books
   Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
   Springer,
   Chapter 28.
+
