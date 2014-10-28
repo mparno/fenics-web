@@ -25,11 +25,20 @@ and UFL 1.4.0.
         `sig
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg.asc>`__)
 
+    * - |mac-icon| FEniCS 1.4.0 (Mac OS X 10.10 binary)
+
+      - `fenics-1.4.0-osx10.10.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.asc>`__)
+
 ############
 Requirements
 ############
 
-* Mac OS X 10.9 Mavericks.
+* Mac OS X 10.9 Mavericks or 10.10 Yosemite.
 * An up-to-date version of the Xcode Command Line Developer Tools. To
   install, simply run ``xcode-select --install`` in a terminal and click
   on the Install button.
