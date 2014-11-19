@@ -81,8 +81,7 @@
           <a href="http://femtable.org/"><img alt='' src='/_static/images/N1E3.jpg' class='avatar avatar-84 photo' width='84'/></a>
 
           <p>Find your favorite FEniCS elements in the
-            <a href="http://femtable.org/">Periodic Table of Finite Elements</a>.
-          <br/><br/><br/><br/><br/>
+            <a href="http://femtable.org/">Periodic Table of Finite Elements</a>. The periodic table displays and explains the properties of many of the most widely used elements, including the Lagrange, RT, BDM, Nedelec and DG elements.
           </p>
 
           <h3>FEniCS book released!</h3> <a href="/book/"><img alt=''
