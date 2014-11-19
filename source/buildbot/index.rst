@@ -133,8 +133,6 @@ There are also other alternative renderings of the results:
   <http://fenicsproject.org:8010/buildslaves>`__ and `buildbot version
   information <http://fenicsproject.org:8010/about>`__
 
-To be notified about buildbot failures, join the `FEniCS Buildbot
-<https://launchpad.net/~fenics-buildbot>`_ team on Launchpad.
 
 **********
 Try server

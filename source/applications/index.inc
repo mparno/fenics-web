@@ -39,7 +39,7 @@
              preconditioners, and solving them.
           </p>
 
-          <p><a href="https://launchpad.net/cbc.block" rel="nofollow">Visit the
+          <p><a href="https://bitbucket.org/fenics-apps/cbc.block" rel="nofollow">Visit the
           project&#8217;s web site to learn more &raquo;</a></p>
 
         </div>
@@ -183,7 +183,30 @@
           time dependent problems.
           </p>
 
-          <p><a href="https://launchpad.net/gryphonproject"
+          <p><a href="https://bitbucket.org/knutesk/gryphonproject"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
+    	<div class="front-block block app">
+
+	  <h3>magnum.fe &mdash; FEM for micromagnetics</h3>
+          <img alt='' src='/_static/images/magnumfe.png'
+          class='avatar avatar-84 photo' height='84' width='84'/>
+
+          <p>
+          magnum.fe is a finite-element package for the solution of
+          dynamical micromagnetic problems. It is written in Python
+          and C++ and largely relies on the multi purpose
+          finite-element library FEniCS. For the solution of
+          open-boundary problems a shell-transformation method and a
+          hybrid FEM/BEM method are implemented. The latter uses the
+          open-source BEM library <a href="http://www.bempp.org/">BEM++</a>.
+          magnum.fe is free software and can be extended to your needs.
+          </p>
+
+          <p><a href="http://micromagnetics.org/magnum.fe/"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 

@@ -1,0 +1,309 @@
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form NonlinearPoisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'F'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 2
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[w_0, w_1]'
+  Argument names:         '[v]'
+  Coefficient names:      '[f, u]'
+  Unique elements:        'CG1(?)'
+  Unique sub elements:    'CG1(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 5
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+  Name:                   'J'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 1
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[w_1]'
+  Argument names:         '[v, du]'
+  Coefficient names:      '[u]'
+  Unique elements:        'CG1(?)'
+  Unique sub elements:    'CG1(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.018616 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {FiniteElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 1, None): {None: {None: {(0, 1): array([[-1.0, -0.99999999999999989, -0.99999999999999989],
+         [0.0, 1.1102230246251565e-16, 1.1102230246251565e-16],
+         [1.0, 0.99999999999999978, 0.99999999999999978]], dtype=object), (1, 0): array([[-1.0, -1.0, -1.0],
+         [1.0, 1.0, 1.0],
+         [0.0, 0.0, 0.0]], dtype=object), (0, 0): array([[0.66666666666666685, 0.16666666666666674, 0.16666666666666669],
+         [0.16666666666666663, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666666, 0.66666666666666652, 0.16666666666666663]], dtype=object)}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0]], dtype=object), 'FE0_D01': array([[-1.0, 0.0, 1.0],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  tables: {'FE0_D10': array([[-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0]], dtype=object), 'FE0_D01': array([[-1.0, 0.0, 1.0],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.0, 1.0],
+         [-0.99999999999999989, 0.99999999999999978],
+         [-0.99999999999999989, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {FiniteElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 1, None): {None: {None: {(0, 1): array([[-1.0, -0.99999999999999989, -0.99999999999999989],
+         [0.0, 1.1102230246251565e-16, 1.1102230246251565e-16],
+         [1.0, 0.99999999999999978, 0.99999999999999978]], dtype=object), (1, 0): array([[-1.0, -1.0, -1.0],
+         [1.0, 1.0, 1.0],
+         [0.0, 0.0, 0.0]], dtype=object), (0, 0): array([[0.66666666666666685, 0.16666666666666674, 0.16666666666666669],
+         [0.16666666666666663, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666666, 0.66666666666666652, 0.16666666666666663]], dtype=object)}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0]], dtype=object), 'FE0_D01': array([[-1.0, 0.0, 1.0],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  tables: {'FE0_D10': array([[-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0],
+         [-1.0, 1.0, 0.0]], dtype=object), 'FE0_D01': array([[-1.0, 0.0, 1.0],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978],
+         [-0.99999999999999989, 1.1102230246251565e-16, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.0, 1.0],
+         [-0.99999999999999989, 0.99999999999999978],
+         [-0.99999999999999989, 0.99999999999999978]], dtype=object), 'FE0': array([[0.66666666666666685, 0.16666666666666663, 0.16666666666666666],
+         [0.16666666666666674, 0.16666666666666663, 0.66666666666666652],
+         [0.16666666666666669, 0.66666666666666652, 0.16666666666666663]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.018214 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.00511622 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 1 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 180
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 387
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.0333521 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000557184 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./NonlinearPoisson.h.
+  
+Compiler stage 5 finished in 0.000509024 seconds.
+
+[1;37;32mFFC finished in 0.076632 seconds.[0m

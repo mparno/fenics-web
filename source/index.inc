@@ -49,7 +49,7 @@
 	<p style="text-align:center;">
 	  <a href="/download/">
 	    <img style="margin-left:auto; margin-right:auto; margin-top:10px;"
-		 src="/_static/download-button-1.2.0.png" alt="Download button" />
+		 src="/_static/download-button-1.4.0.png" alt="Download button" />
 	  </a>
 	</p>
 
@@ -71,22 +71,19 @@
           src='/_static/images/center_in_paris_uofc.jpg' class='avatar
           avatar-84 photo' width='84'/></a>
 
-          <p>The 2014 FEniCS Workshop will be held 16-17 June 2014 at
+          <p>The 2014 FEniCS Workshop was held 16-17 June 2014 at
             The Center in Paris, University of Chicago, Paris,
-            France. Forthcoming details can be found <a
-            href="featured/2014/fenics14_paris.html">here</a>.
-            <br /> <br /> <br /> <br /> </p>
+            France. More information can be found
+            <a href="featured/2014/fenics14_paris.html">here</a>.  <br />
+            <br /> <br /> <br /> </p>
 
-          <h3>FEniCS'13 at University of Cambridge</h3> <a
-          href="/featured/2013/fenics_13_cambridge.html"><img alt=''
-          src='/_static/images/jesus_college.jpg' class='avatar
-          avatar-84 photo' width='84'/></a>
+          <h3>Periodic Table of the Finite Elements</h3>
+          <a href="http://femtable.org/"><img alt='' src='/_static/images/N1E3.jpg' class='avatar avatar-84 photo' width='84'/></a>
 
-          <p>The 2013 FEniCS Workshop was held 18-19 March 2013 at
-            Jesus College, Cambridge. Presentations from the workshop
-            can be found <a
-            href="featured/2013/fenics13_program.html">here</a>.  <br
-            /> <br /> <br /> <br /> <br /> </p>
+          <p>Find your favorite FEniCS elements in the
+            <a href="http://femtable.org/">Periodic Table of Finite Elements</a>.
+          <br/><br/><br/><br/><br/>
+          </p>
 
           <h3>FEniCS book released!</h3> <a href="/book/"><img alt=''
           src='/_static/images/fenics_book_cover.png' class='avatar

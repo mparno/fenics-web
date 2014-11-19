@@ -1,4 +1,4 @@
-.. _releases:
+.. _release_notes:
 
 ########################
 Release notes for FEniCS
@@ -8,4 +8,8 @@ Release notes for FEniCS
     :glob:
 
     1.0-beta/*
+    1.0/*
     1.1/*
+    1.2/*
+    1.3/*
+    1.4/*

@@ -57,18 +57,19 @@ FFC
 * **K. B. Ølgaard and G. N. Wells (2010)**.
   *Optimisations for Quadrature Representations of Finite Element Tensors Through Automated Code Generation*,
   ACM Transactions on Mathematical Software,
-  37.
+  37(1), Article 8.
   [`doi:10.1145/1644001.1644009 <http://dx.doi.org/10.1145/1644001.1644009>`_]
   [`arXiv:1104.0199 <http://arxiv.org/abs/1104.0199>`_]
 
 UFL
 ---
 
-* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2013)**.
+* **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes, G. N. Wells (2014)**.
   *Unified Form Language: A domain-specific language for weak formulations
   of partial differential equations*,
   ACM Transactions on Mathematical Software,
-  To Appear.
+  40(2), Article 9.
+  [`doi:10.1145/2566630 <http://dx.doi.org/10.1145/2566630>`_]
   [`arXiv:1211.4047 <http://arxiv.org/abs/1211.4047>`_]
 
 * **M. S. Alnæs (2012)**.

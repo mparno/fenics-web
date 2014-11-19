@@ -1,0 +1,436 @@
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Elasticity
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'a'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 2
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[c_1, c_2]'
+  Argument names:         '[v, u]'
+  Coefficient names:      '[mu, lmbda]'
+  Unique elements:        'Vector<2 x CG1(?)>, R0(?)'
+  Unique sub elements:    'Vector<2 x CG1(?)>, R0(?), CG1(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal Identity.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 0
+  quadrature_degree: auto --> 0
+  quadrature_rule:   auto --> default
+  
+  Name:                   'L'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 1
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[w_0]'
+  Argument names:         '[v]'
+  Coefficient names:      '[f]'
+  Unique elements:        'Vector<2 x CG1(?)>'
+  Unique sub elements:    'Vector<2 x CG1(?)>, CG1(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0169539 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 3 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 3 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Real', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 0, None): {None: {None: {(0, 0): array([[1.0]], dtype=object)}}}, VectorElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 1, 2, None): {None: {None: {(0, 1): array([[[-1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.]],
+  
+         [[ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [-1.]],
+  
+         [[ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.]]]), (1, 0): array([[[-1.],
+          [ 0.]],
+  
+         [[ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [-1.]],
+  
+         [[ 0.],
+          [ 1.]],
+  
+         [[ 0.],
+          [ 0.]]]), (0, 0): array([[[ 0.33333333],
+          [ 0.        ]],
+  
+         [[ 0.33333333],
+          [ 0.        ]],
+  
+         [[ 0.33333333],
+          [ 0.        ]],
+  
+         [[ 0.        ],
+          [ 0.33333333]],
+  
+         [[ 0.        ],
+          [ 0.33333333]],
+  
+         [[ 0.        ],
+          [ 0.33333333]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_C1_D01': array([[ 0.,  0.,  0., -1.,  0.,  1.]]), 'FE0_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE0_C0_D01': array([[-1.,  0.,  1.,  0.,  0.,  0.]]), 'FE1': array([[1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.33333333,  0.33333333,
+           0.33333333]]), 'FE0_C0': array([[ 0.33333333,  0.33333333,  0.33333333,  0.        ,  0.        ,
+           0.        ]])}
+  
+  tables: {'FE0_C1_D01': array([[ 0.,  0.,  0., -1.,  0.,  1.]]), 'FE0_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE0_C0_D01': array([[-1.,  0.,  1.,  0.,  0.,  0.]]), 'FE1': array([[1.0]], dtype=object), 'FE0_C1': array([[ 0.        ,  0.        ,  0.        ,  0.33333333,  0.33333333,
+           0.33333333]]), 'FE0_C0': array([[ 0.33333333,  0.33333333,  0.33333333,  0.        ,  0.        ,
+           0.        ]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_C1_D01': 'FE0_C1_D01', 'FE0_C1_D10': 'FE0_C1_D10', 'FE0_C0_D10': 'FE0_C0_D10', 'FE0_C0_D01': 'FE0_C0_D01', 'FE1': 'FE1', 'FE0_C1': 'FE0_C1', 'FE0_C0': 'FE0_C0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_C0_D01': array([[-1.,  1.]]), 'FE1': array([[1.0]], dtype=object), 'FE0_C0': array([[ 0.33333333,  0.33333333,  0.33333333]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_C1_D01': ('FE0_C0_D01', (4, [3, 5]), False, False), 'FE0_C1_D10': ('FE0_C0_D01', (5, [3, 4]), False, False), 'FE0_C0_D10': ('FE0_C0_D01', (2, [0, 1]), False, False), 'FE0_C0_D01': ('FE0_C0_D01', (1, [0, 2]), False, False), 'FE1': ('FE1', (), False, True), 'FE0_C1': ('FE0_C0', (3, [3, 4, 5]), False, False), 'FE0_C0': ('FE0_C0', (0, [0, 1, 2]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.000873 seconds
+  Shape of reference tensor: (6, 6)
+  Primary multi index:   rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0376141 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  FErari not installed, skipping tensor optimizations
+  
+Compiler stage 3 finished in 0.00435305 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 3 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 3 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 270
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.078526 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000595808 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Elasticity.h.
+  
+Compiler stage 5 finished in 0.000628948 seconds.
+
+[1;37;32mFFC finished in 0.138922 seconds.[0m

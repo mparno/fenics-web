@@ -1,0 +1,1027 @@
+This is FFC, the FEniCS Form Compiler, version 1.3.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Biharmonic
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Name:                   'a'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   2
+  Number of coefficients: 1
+  Arguments:              '[v_{-2}, v_{-1}]'
+  Coefficients:           '[c_1]'
+  Argument names:         '[v, u]'
+  Coefficient names:      '[alpha]'
+  Unique elements:        'CG2(?), R0(?)'
+  Unique sub elements:    'CG2(?), R0(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 0
+  quadrature_degree: auto --> 0
+  quadrature_rule:   auto --> default
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal FacetNormal.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+  Name:                   'L'
+  Cell:                   <triangle cell in 2D>
+  Topological dimension:  2
+  Geometric dimension:    2
+  Rank:                   1
+  Number of coefficients: 1
+  Arguments:              '[v_{-2}]'
+  Coefficients:           '[w_0]'
+  Argument names:         '[v]'
+  Coefficient names:      '[f]'
+  Unique elements:        'CG2(?)'
+  Unique sub elements:    'CG2(?)'
+  Domains:                (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  Top level domains:      (Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2),
+                          )
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 4
+  quadrature_degree: auto --> 4
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.0335231 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 2 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 2 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 2, None): {None: {None: {(0, 1): array([[-0.33333333333333304],
+         [8.3266726846886741e-17],
+         [0.33333333333333348],
+         [1.3333333333333326],
+         [-1.6653345369377348e-16],
+         [-1.3333333333333328]], dtype=object), (0, 0): array([[-0.11111111111111108],
+         [-0.11111111111111115],
+         [-0.11111111111111106],
+         [0.44444444444444436],
+         [0.44444444444444436],
+         [0.44444444444444448]], dtype=object), (0, 2): array([[3.9999999999999982],
+         [2.2204460492503131e-16],
+         [3.9999999999999969],
+         [-4.4408920985006262e-16],
+         [-7.9999999999999964],
+         [8.8817841970012523e-16]], dtype=object), (2, 0): array([[3.9999999999999991],
+         [3.9999999999999991],
+         [0.0],
+         [-9.0719159405384027e-32],
+         [9.0719159405384027e-32],
+         [-7.9999999999999982]], dtype=object), (1, 0): array([[-0.33333333333333309],
+         [0.33333333333333315],
+         [0.0],
+         [1.3333333333333328],
+         [-1.3333333333333328],
+         [-2.1533148803874999e-16]], dtype=object), (1, 1): array([[3.9999999999999991],
+         [-4.4408920985006262e-16],
+         [0.0],
+         [3.9999999999999982],
+         [-3.9999999999999982],
+         [-3.9999999999999991]], dtype=object)}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-0.33333333333333309, 0.33333333333333315, 0.0, 1.3333333333333328,
+          -1.3333333333333328, -2.1533148803874999e-16]], dtype=object), 'FE0_D02': array([[3.9999999999999982, 2.2204460492503131e-16, 3.9999999999999969,
+          -4.4408920985006262e-16, -7.9999999999999964,
+          8.8817841970012523e-16]], dtype=object), 'FE0_D01': array([[-0.33333333333333304, 8.3266726846886741e-17, 0.33333333333333348,
+          1.3333333333333326, -1.6653345369377348e-16, -1.3333333333333328]], dtype=object), 'FE0_D11': array([[3.9999999999999991, -4.4408920985006262e-16, 0.0,
+          3.9999999999999982, -3.9999999999999982, -3.9999999999999991]], dtype=object), 'FE0_D20': array([[3.9999999999999991, 3.9999999999999991, 0.0,
+          -9.0719159405384027e-32, 9.0719159405384027e-32,
+          -7.9999999999999982]], dtype=object), 'FE0': array([[-0.11111111111111108, -0.11111111111111115, -0.11111111111111106,
+          0.44444444444444436, 0.44444444444444436, 0.44444444444444448]], dtype=object)}
+  
+  tables: {'FE0_D10': array([[-0.33333333333333309, 0.33333333333333315, 0.0, 1.3333333333333328,
+          -1.3333333333333328, -2.1533148803874999e-16]], dtype=object), 'FE0_D02': array([[3.9999999999999982, 2.2204460492503131e-16, 3.9999999999999969,
+          -4.4408920985006262e-16, -7.9999999999999964,
+          8.8817841970012523e-16]], dtype=object), 'FE0_D01': array([[-0.33333333333333304, 8.3266726846886741e-17, 0.33333333333333348,
+          1.3333333333333326, -1.6653345369377348e-16, -1.3333333333333328]], dtype=object), 'FE0_D11': array([[3.9999999999999991, -4.4408920985006262e-16, 0.0,
+          3.9999999999999982, -3.9999999999999982, -3.9999999999999991]], dtype=object), 'FE0_D20': array([[3.9999999999999991, 3.9999999999999991, 0.0,
+          -9.0719159405384027e-32, 9.0719159405384027e-32,
+          -7.9999999999999982]], dtype=object), 'FE0': array([[-0.11111111111111108, -0.11111111111111115, -0.11111111111111106,
+          0.44444444444444436, 0.44444444444444436, 0.44444444444444448]], dtype=object)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D02': 'FE0_D02', 'FE0_D01': 'FE0_D01', 'FE0_D11': 'FE0_D11', 'FE0_D20': 'FE0_D20', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D02': array([[3.9999999999999982, 3.9999999999999969, -7.9999999999999964]], dtype=object), 'FE0_D01': array([[-0.33333333333333304, 0.33333333333333348, 1.3333333333333326,
+          -1.3333333333333328]], dtype=object), 'FE0_D11': array([[3.9999999999999991, 3.9999999999999982, -3.9999999999999982,
+          -3.9999999999999991]], dtype=object), 'FE0': array([[-0.11111111111111108, -0.11111111111111115, -0.11111111111111106,
+          0.44444444444444436, 0.44444444444444436, 0.44444444444444448]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (2, [0, 1, 3, 4]), False, False), 'FE0_D02': ('FE0_D02', (1, [0, 2, 4]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2, 3, 5]), False, False), 'FE0_D11': ('FE0_D11', (3, [0, 3, 4, 5]), False, False), 'FE0_D20': ('FE0_D02', (4, [0, 1, 5]), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {2: {FiniteElement('Real', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 0, None): {None: {0: {(0, 0): array([[1.0, 1.0]], dtype=object)}, 1: {(0, 0): array([[1.0, 1.0]], dtype=object)}, 2: {(0, 0): array([[1.0, 1.0]], dtype=object)}}}, FiniteElement('Lagrange', Domain(Cell('triangle', 2), 'triangle_multiverse', 2, 2), 2, None): {None: {0: {(0, 1): array([[1.0000000000000009, 1.0000000000000007],
+         [-5.5511151231257827e-17, -3.3306690738754696e-16],
+         [-0.15470053837925146, 2.1547005383792515],
+         [3.1547005383792501, 0.84529946162074787],
+         [-0.84529946162074876, -3.1547005383792515],
+         [-3.154700538379251, -0.84529946162074832]], dtype=object), (0, 0): array([[2.7755575615628914e-17, 4.163336342344337e-17],
+         [0.4553418012614795, -0.12200846792814624],
+         [-0.12200846792814618, 0.45534180126147961],
+         [0.66666666666666674, 0.66666666666666652],
+         [-1.3877787807814457e-17, -5.5511151231257827e-17],
+         [-1.7347234759768071e-17, -4.163336342344337e-17]], dtype=object), (0, 2): array([[3.9999999999999978, 3.9999999999999982],
+         [1.1102230246251565e-15, -1.3322676295501878e-15],
+         [3.9999999999999933, 3.9999999999999969],
+         [-8.8817841970012523e-16, -1.7763568394002505e-15],
+         [-7.9999999999999938, -7.9999999999999911],
+         [2.2204460492503131e-15, -4.4408920985006262e-16]], dtype=object), (2, 0): array([[3.9999999999999964, 3.9999999999999969],
+         [3.9999999999999947, 3.999999999999996],
+         [0.0, 0.0],
+         [-1.3290753880174574e-15, -3.5612467689935939e-16],
+         [1.3290753880174574e-15, 3.5612467689935939e-16],
+         [-7.9999999999999911, -7.9999999999999929]], dtype=object), (1, 0): array([[1.0000000000000002, 1.0000000000000009],
+         [2.1547005383792506, -0.15470053837925168],
+         [0.0, 0.0],
+         [0.84529946162074754, 3.1547005383792492],
+         [-0.84529946162074754, -3.1547005383792492],
+         [-3.1547005383792515, -0.84529946162074987]], dtype=object), (1, 1): array([[3.9999999999999973, 4.0],
+         [-6.6613381477509392e-16, 2.2204460492503131e-16],
+         [0.0, 0.0],
+         [3.9999999999999978, 3.9999999999999898],
+         [-3.9999999999999978, -3.9999999999999898],
+         [-3.9999999999999973, -4.0000000000000009]], dtype=object)}, 1: {(0, 1): array([[-2.154700538379251, 0.15470053837925168],
+         [0.0, -3.3306690738754696e-16],
+         [-0.15470053837925157, 2.1547005383792515],
+         [-7.7715611723760958e-16, -6.6613381477509392e-16],
+         [2.3094010767585025, -2.3094010767585025],
+         [1.2212453270876722e-15, 8.8817841970012523e-16]], dtype=object), (0, 0): array([[0.45534180126147966, -0.12200846792814617],
+         [2.0816681711721685e-17, 9.0205620750793969e-17],
+         [-0.12200846792814618, 0.45534180126147961],
+         [-1.3877787807814457e-17, -2.7755575615628914e-17],
+         [0.66666666666666674, 0.66666666666666652],
+         [-1.7347234759768071e-17, -4.163336342344337e-17]], dtype=object), (0, 2): array([[3.9999999999999951, 3.9999999999999973],
+         [8.8817841970012523e-16, -1.7763568394002505e-15],
+         [3.9999999999999973, 3.9999999999999973],
+         [-1.3322676295501878e-15, -1.3322676295501878e-15],
+         [-7.9999999999999929, -7.9999999999999911],
+         [1.1102230246251565e-15, -8.8817841970012523e-16]], dtype=object), (2, 0): array([[4.0, 3.9999999999999978],
+         [4.0000000000000018, 3.9999999999999987],
+         [0.0, 0.0],
+         [1.3290753880174578e-15, 3.5612467689935875e-16],
+         [-1.3290753880174578e-15, -3.5612467689935875e-16],
+         [-8.0000000000000018, -7.9999999999999964]], dtype=object), (1, 0): array([[-2.1547005383792515, 0.15470053837925191],
+         [-1.0000000000000009, -1.0000000000000009],
+         [0.0, 0.0],
+         [0.84529946162074754, 3.1547005383792492],
+         [-0.84529946162074754, -3.1547005383792492],
+         [3.1547005383792524, 0.84529946162074832]], dtype=object), (1, 1): array([[3.9999999999999964, 4.0],
+         [2.2204460492503131e-16, 4.4408920985006262e-16],
+         [0.0, 0.0],
+         [3.9999999999999991, 3.9999999999999902],
+         [-3.9999999999999991, -3.9999999999999902],
+         [-3.9999999999999973, -4.0000000000000009]], dtype=object)}, 2: {(0, 1): array([[-2.1547005383792506, 0.15470053837925235],
+         [-3.3306690738754696e-16, 0.0],
+         [-0.99999999999999956, -0.99999999999999933],
+         [0.84529946162074832, 3.1547005383792497],
+         [3.1547005383792506, 0.84529946162074876],
+         [-0.84529946162074854, -3.1547005383792515]], dtype=object), (0, 0): array([[0.45534180126147955, -0.12200846792814618],
+         [-0.12200846792814621, 0.4553418012614795],
+         [0.0, 0.0],
+         [0.0, 2.7755575615628914e-17],
+         [0.0, -5.5511151231257827e-17],
+         [0.66666666666666663, 0.66666666666666663]], dtype=object), (0, 2): array([[3.9999999999999951, 3.9999999999999973],
+         [1.5543122344752192e-15, 1.5543122344752192e-15],
+         [3.9999999999999991, 3.9999999999999964],
+         [-3.1086244689504383e-15, -2.2204460492503131e-15],
+         [-7.9999999999999982, -7.9999999999999982],
+         [4.8849813083506888e-15, 5.3290705182007514e-15]], dtype=object), (2, 0): array([[3.9999999999999964, 3.9999999999999947],
+         [3.9999999999999982, 3.9999999999999929],
+         [0.0, 0.0],
+         [9.7295071111809815e-16, -9.7295071111809894e-16],
+         [-9.7295071111809815e-16, 9.7295071111809894e-16],
+         [-7.9999999999999947, -7.9999999999999876]], dtype=object), (1, 0): array([[-2.1547005383792506, 0.15470053837925191],
+         [-0.15470053837925096, 2.1547005383792515],
+         [0.0, 0.0],
+         [-1.5543122344752192e-15, -1.5543122344752192e-15],
+         [1.5543122344752192e-15, 1.5543122344752192e-15],
+         [2.3094010767585016, -2.3094010767585034]], dtype=object), (1, 1): array([[3.9999999999999964, 3.9999999999999973],
+         [-3.1086244689504383e-15, -3.7747582837255322e-15],
+         [0.0, 0.0],
+         [4.0000000000000053, 4.0000000000000044],
+         [-4.0000000000000053, -4.0000000000000044],
+         [-3.9999999999999938, -3.9999999999999938]], dtype=object)}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE1_f0': array([[1.0],
+         [1.0]], dtype=object), 'FE0_f0': array([[2.7755575615628914e-17, 0.4553418012614795, -0.12200846792814618,
+          0.66666666666666674, -1.3877787807814457e-17,
+          -1.7347234759768071e-17],
+         [4.163336342344337e-17, -0.12200846792814624, 0.45534180126147961,
+          0.66666666666666652, -5.5511151231257827e-17,
+          -4.163336342344337e-17]], dtype=object), 'FE0_f1': array([[0.45534180126147966, 2.0816681711721685e-17, -0.12200846792814618,
+          -1.3877787807814457e-17, 0.66666666666666674,
+          -1.7347234759768071e-17],
+         [-0.12200846792814617, 9.0205620750793969e-17, 0.45534180126147961,
+          -2.7755575615628914e-17, 0.66666666666666652,
+          -4.163336342344337e-17]], dtype=object), 'FE0_f2': array([[0.45534180126147955, -0.12200846792814621, 0.0, 0.0, 0.0,
+          0.66666666666666663],
+         [-0.12200846792814618, 0.4553418012614795, 0.0,
+          2.7755575615628914e-17, -5.5511151231257827e-17,
+          0.66666666666666663]], dtype=object), 'FE0_f0_D20': array([[3.9999999999999964, 3.9999999999999947, 0.0,
+          -1.3290753880174574e-15, 1.3290753880174574e-15,
+          -7.9999999999999911],
+         [3.9999999999999969, 3.999999999999996, 0.0,
+          -3.5612467689935939e-16, 3.5612467689935939e-16,
+          -7.9999999999999929]], dtype=object), 'FE0_f2_D02': array([[3.9999999999999951, 1.5543122344752192e-15, 3.9999999999999991,
+          -3.1086244689504383e-15, -7.9999999999999982,
+          4.8849813083506888e-15],
+         [3.9999999999999973, 1.5543122344752192e-15, 3.9999999999999964,
+          -2.2204460492503131e-15, -7.9999999999999982,
+          5.3290705182007514e-15]], dtype=object), 'FE0_f2_D01': array([[-2.1547005383792506, -3.3306690738754696e-16, -0.99999999999999956,
+          0.84529946162074832, 3.1547005383792506, -0.84529946162074854],
+         [0.15470053837925235, 0.0, -0.99999999999999933, 3.1547005383792497,
+          0.84529946162074876, -3.1547005383792515]], dtype=object), 'FE0_f0_D01': array([[1.0000000000000009, -5.5511151231257827e-17, -0.15470053837925146,
+          3.1547005383792501, -0.84529946162074876, -3.154700538379251],
+         [1.0000000000000007, -3.3306690738754696e-16, 2.1547005383792515,
+          0.84529946162074787, -3.1547005383792515, -0.84529946162074832]], dtype=object), 'FE0_f0_D10': array([[1.0000000000000002, 2.1547005383792506, 0.0, 0.84529946162074754,
+          -0.84529946162074754, -3.1547005383792515],
+         [1.0000000000000009, -0.15470053837925168, 0.0, 3.1547005383792492,
+          -3.1547005383792492, -0.84529946162074987]], dtype=object), 'FE0_f0_D11': array([[3.9999999999999973, -6.6613381477509392e-16, 0.0,
+          3.9999999999999978, -3.9999999999999978, -3.9999999999999973],
+         [4.0, 2.2204460492503131e-16, 0.0, 3.9999999999999898,
+          -3.9999999999999898, -4.0000000000000009]], dtype=object), 'FE0_f2_D20': array([[3.9999999999999964, 3.9999999999999982, 0.0,
+          9.7295071111809815e-16, -9.7295071111809815e-16,
+          -7.9999999999999947],
+         [3.9999999999999947, 3.9999999999999929, 0.0,
+          -9.7295071111809894e-16, 9.7295071111809894e-16,
+          -7.9999999999999876]], dtype=object), 'FE0_f1_D11': array([[3.9999999999999964, 2.2204460492503131e-16, 0.0,
+          3.9999999999999991, -3.9999999999999991, -3.9999999999999973],
+         [4.0, 4.4408920985006262e-16, 0.0, 3.9999999999999902,
+          -3.9999999999999902, -4.0000000000000009]], dtype=object), 'FE0_f1_D10': array([[-2.1547005383792515, -1.0000000000000009, 0.0, 0.84529946162074754,
+          -0.84529946162074754, 3.1547005383792524],
+         [0.15470053837925191, -1.0000000000000009, 0.0, 3.1547005383792492,
+          -3.1547005383792492, 0.84529946162074832]], dtype=object), 'FE0_f2_D10': array([[-2.1547005383792506, -0.15470053837925096, 0.0,
+          -1.5543122344752192e-15, 1.5543122344752192e-15, 2.3094010767585016],
+         [0.15470053837925191, 2.1547005383792515, 0.0,
+          -1.5543122344752192e-15, 1.5543122344752192e-15,
+          -2.3094010767585034]], dtype=object), 'FE0_f2_D11': array([[3.9999999999999964, -3.1086244689504383e-15, 0.0,
+          4.0000000000000053, -4.0000000000000053, -3.9999999999999938],
+         [3.9999999999999973, -3.7747582837255322e-15, 0.0,
+          4.0000000000000044, -4.0000000000000044, -3.9999999999999938]], dtype=object), 'FE1_f2': array([[1.0],
+         [1.0]], dtype=object), 'FE0_f1_D20': array([[4.0, 4.0000000000000018, 0.0, 1.3290753880174578e-15,
+          -1.3290753880174578e-15, -8.0000000000000018],
+         [3.9999999999999978, 3.9999999999999987, 0.0,
+          3.5612467689935875e-16, -3.5612467689935875e-16,
+          -7.9999999999999964]], dtype=object), 'FE0_f0_D02': array([[3.9999999999999978, 1.1102230246251565e-15, 3.9999999999999933,
+          -8.8817841970012523e-16, -7.9999999999999938,
+          2.2204460492503131e-15],
+         [3.9999999999999982, -1.3322676295501878e-15, 3.9999999999999969,
+          -1.7763568394002505e-15, -7.9999999999999911,
+          -4.4408920985006262e-16]], dtype=object), 'FE0_f1_D01': array([[-2.154700538379251, 0.0, -0.15470053837925157,
+          -7.7715611723760958e-16, 2.3094010767585025, 1.2212453270876722e-15],
+         [0.15470053837925168, -3.3306690738754696e-16, 2.1547005383792515,
+          -6.6613381477509392e-16, -2.3094010767585025,
+          8.8817841970012523e-16]], dtype=object), 'FE0_f1_D02': array([[3.9999999999999951, 8.8817841970012523e-16, 3.9999999999999973,
+          -1.3322676295501878e-15, -7.9999999999999929,
+          1.1102230246251565e-15],
+         [3.9999999999999973, -1.7763568394002505e-15, 3.9999999999999973,
+          -1.3322676295501878e-15, -7.9999999999999911,
+          -8.8817841970012523e-16]], dtype=object), 'FE1_f1': array([[1.0],
+         [1.0]], dtype=object)}
+  
+  tables: {'FE1_f0': array([[1.0],
+         [1.0]], dtype=object), 'FE0_f0': array([[2.7755575615628914e-17, 0.4553418012614795, -0.12200846792814618,
+          0.66666666666666674, -1.3877787807814457e-17,
+          -1.7347234759768071e-17],
+         [4.163336342344337e-17, -0.12200846792814624, 0.45534180126147961,
+          0.66666666666666652, -5.5511151231257827e-17,
+          -4.163336342344337e-17]], dtype=object), 'FE0_f1': array([[0.45534180126147966, 2.0816681711721685e-17, -0.12200846792814618,
+          -1.3877787807814457e-17, 0.66666666666666674,
+          -1.7347234759768071e-17],
+         [-0.12200846792814617, 9.0205620750793969e-17, 0.45534180126147961,
+          -2.7755575615628914e-17, 0.66666666666666652,
+          -4.163336342344337e-17]], dtype=object), 'FE0_f2': array([[0.45534180126147955, -0.12200846792814621, 0.0, 0.0, 0.0,
+          0.66666666666666663],
+         [-0.12200846792814618, 0.4553418012614795, 0.0,
+          2.7755575615628914e-17, -5.5511151231257827e-17,
+          0.66666666666666663]], dtype=object), 'FE0_f0_D20': array([[3.9999999999999964, 3.9999999999999947, 0.0,
+          -1.3290753880174574e-15, 1.3290753880174574e-15,
+          -7.9999999999999911],
+         [3.9999999999999969, 3.999999999999996, 0.0,
+          -3.5612467689935939e-16, 3.5612467689935939e-16,
+          -7.9999999999999929]], dtype=object), 'FE0_f2_D01': array([[-2.1547005383792506, -3.3306690738754696e-16, -0.99999999999999956,
+          0.84529946162074832, 3.1547005383792506, -0.84529946162074854],
+         [0.15470053837925235, 0.0, -0.99999999999999933, 3.1547005383792497,
+          0.84529946162074876, -3.1547005383792515]], dtype=object), 'FE0_f0_D01': array([[1.0000000000000009, -5.5511151231257827e-17, -0.15470053837925146,
+          3.1547005383792501, -0.84529946162074876, -3.154700538379251],
+         [1.0000000000000007, -3.3306690738754696e-16, 2.1547005383792515,
+          0.84529946162074787, -3.1547005383792515, -0.84529946162074832]], dtype=object), 'FE0_f0_D10': array([[1.0000000000000002, 2.1547005383792506, 0.0, 0.84529946162074754,
+          -0.84529946162074754, -3.1547005383792515],
+         [1.0000000000000009, -0.15470053837925168, 0.0, 3.1547005383792492,
+          -3.1547005383792492, -0.84529946162074987]], dtype=object), 'FE0_f0_D11': array([[3.9999999999999973, -6.6613381477509392e-16, 0.0,
+          3.9999999999999978, -3.9999999999999978, -3.9999999999999973],
+         [4.0, 2.2204460492503131e-16, 0.0, 3.9999999999999898,
+          -3.9999999999999898, -4.0000000000000009]], dtype=object), 'FE0_f1_D10': array([[-2.1547005383792515, -1.0000000000000009, 0.0, 0.84529946162074754,
+          -0.84529946162074754, 3.1547005383792524],
+         [0.15470053837925191, -1.0000000000000009, 0.0, 3.1547005383792492,
+          -3.1547005383792492, 0.84529946162074832]], dtype=object), 'FE0_f2_D10': array([[-2.1547005383792506, -0.15470053837925096, 0.0,
+          -1.5543122344752192e-15, 1.5543122344752192e-15, 2.3094010767585016],
+         [0.15470053837925191, 2.1547005383792515, 0.0,
+          -1.5543122344752192e-15, 1.5543122344752192e-15,
+          -2.3094010767585034]], dtype=object), 'FE0_f2_D11': array([[3.9999999999999964, -3.1086244689504383e-15, 0.0,
+          4.0000000000000053, -4.0000000000000053, -3.9999999999999938],
+         [3.9999999999999973, -3.7747582837255322e-15, 0.0,
+          4.0000000000000044, -4.0000000000000044, -3.9999999999999938]], dtype=object), 'FE0_f1_D20': array([[4.0, 4.0000000000000018, 0.0, 1.3290753880174578e-15,
+          -1.3290753880174578e-15, -8.0000000000000018],
+         [3.9999999999999978, 3.9999999999999987, 0.0,
+          3.5612467689935875e-16, -3.5612467689935875e-16,
+          -7.9999999999999964]], dtype=object), 'FE0_f0_D02': array([[3.9999999999999978, 1.1102230246251565e-15, 3.9999999999999933,
+          -8.8817841970012523e-16, -7.9999999999999938,
+          2.2204460492503131e-15],
+         [3.9999999999999982, -1.3322676295501878e-15, 3.9999999999999969,
+          -1.7763568394002505e-15, -7.9999999999999911,
+          -4.4408920985006262e-16]], dtype=object), 'FE0_f1_D01': array([[-2.154700538379251, 0.0, -0.15470053837925157,
+          -7.7715611723760958e-16, 2.3094010767585025, 1.2212453270876722e-15],
+         [0.15470053837925168, -3.3306690738754696e-16, 2.1547005383792515,
+          -6.6613381477509392e-16, -2.3094010767585025,
+          8.8817841970012523e-16]], dtype=object)}
+  
+  name_map: {'FE1_f0': ['FE1_f1', 'FE1_f2'], 'FE0_f0_D20': ['FE0_f2_D20'], 'FE0_f0_D11': ['FE0_f1_D11'], 'FE0_f0_D02': ['FE0_f1_D02', 'FE0_f2_D02']}
+  
+  inv_name_map: {'FE0_f0': 'FE0_f0', 'FE0_f1': 'FE0_f1', 'FE0_f2': 'FE0_f2', 'FE0_f0_D20': 'FE0_f0_D20', 'FE0_f2_D02': 'FE0_f0_D02', 'FE0_f2_D01': 'FE0_f2_D01', 'FE0_f0_D02': 'FE0_f0_D02', 'FE0_f0_D01': 'FE0_f0_D01', 'FE0_f0_D10': 'FE0_f0_D10', 'FE0_f0_D11': 'FE0_f0_D11', 'FE0_f2_D20': 'FE0_f0_D20', 'FE0_f1_D11': 'FE0_f0_D11', 'FE0_f1_D10': 'FE0_f1_D10', 'FE0_f2_D10': 'FE0_f2_D10', 'FE0_f2_D11': 'FE0_f2_D11', 'FE0_f1_D01': 'FE0_f1_D01', 'FE1_f2': 'FE1_f0', 'FE1_f1': 'FE1_f0', 'FE1_f0': 'FE1_f0', 'FE0_f1_D20': 'FE0_f1_D20', 'FE0_f1_D02': 'FE0_f0_D02'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE1_f0': array([[1.0],
+         [1.0]], dtype=object), 'FE0_f0': array([[0.4553418012614795, -0.12200846792814618, 0.66666666666666674],
+         [-0.12200846792814624, 0.45534180126147961, 0.66666666666666652]], dtype=object), 'FE0_f2_D01': array([[-2.1547005383792506, -0.99999999999999956, 0.84529946162074832,
+          3.1547005383792506, -0.84529946162074854],
+         [0.15470053837925235, -0.99999999999999933, 3.1547005383792497,
+          0.84529946162074876, -3.1547005383792515]], dtype=object), 'FE0_f0_D01': array([[1.0000000000000009, -0.15470053837925146, 3.1547005383792501,
+          -0.84529946162074876, -3.154700538379251],
+         [1.0000000000000007, 2.1547005383792515, 0.84529946162074787,
+          -3.1547005383792515, -0.84529946162074832]], dtype=object), 'FE0_f0_D10': array([[1.0000000000000002, 2.1547005383792506, 0.84529946162074754,
+          -0.84529946162074754, -3.1547005383792515],
+         [1.0000000000000009, -0.15470053837925168, 3.1547005383792492,
+          -3.1547005383792492, -0.84529946162074987]], dtype=object), 'FE0_f0_D11': array([[3.9999999999999973, 3.9999999999999978, -3.9999999999999978,
+          -3.9999999999999973],
+         [4.0, 3.9999999999999898, -3.9999999999999898, -4.0000000000000009]], dtype=object), 'FE0_f1_D10': array([[-2.1547005383792515, -1.0000000000000009, 0.84529946162074754,
+          -0.84529946162074754, 3.1547005383792524],
+         [0.15470053837925191, -1.0000000000000009, 3.1547005383792492,
+          -3.1547005383792492, 0.84529946162074832]], dtype=object), 'FE0_f2_D11': array([[3.9999999999999964, 4.0000000000000053, -4.0000000000000053,
+          -3.9999999999999938],
+         [3.9999999999999973, 4.0000000000000044, -4.0000000000000044,
+          -3.9999999999999938]], dtype=object), 'FE0_f0_D02': array([[3.9999999999999978, 3.9999999999999933, -7.9999999999999938],
+         [3.9999999999999982, 3.9999999999999969, -7.9999999999999911]], dtype=object), 'FE0_f1_D01': array([[-2.154700538379251, -0.15470053837925157, 2.3094010767585025],
+         [0.15470053837925168, 2.1547005383792515, -2.3094010767585025]], dtype=object)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_f0': ('FE0_f0', (0, [1, 2, 3]), False, False), 'FE0_f1': ('FE0_f0', (6, [0, 2, 4]), False, False), 'FE0_f2': ('FE0_f0', (10, [0, 1, 5]), False, False), 'FE0_f0_D20': ('FE0_f0_D02', (5, [0, 1, 5]), False, False), 'FE0_f2_D02': ('FE0_f0_D02', (2, [0, 2, 4]), False, False), 'FE0_f2_D01': ('FE0_f2_D01', (11, [0, 2, 3, 4, 5]), False, False), 'FE0_f0_D02': ('FE0_f0_D02', (2, [0, 2, 4]), False, False), 'FE0_f0_D01': ('FE0_f0_D01', (1, [0, 2, 3, 4, 5]), False, False), 'FE0_f0_D10': ('FE0_f0_D10', (3, [0, 1, 3, 4, 5]), False, False), 'FE0_f0_D11': ('FE0_f0_D11', (4, [0, 3, 4, 5]), False, False), 'FE0_f2_D20': ('FE0_f0_D02', (5, [0, 1, 5]), False, False), 'FE0_f1_D11': ('FE0_f0_D11', (4, [0, 3, 4, 5]), False, False), 'FE0_f1_D10': ('FE0_f1_D10', (8, [0, 1, 3, 4, 5]), False, False), 'FE0_f2_D10': ('FE0_f1_D01', (12, [0, 1, 5]), False, False), 'FE0_f2_D11': ('FE0_f2_D11', (13, [0, 3, 4, 5]), False, False), 'FE0_f1_D01': ('FE0_f1_D01', (7, [0, 2, 4]), False, False), 'FE1_f2': ('FE1_f0', (), False, True), 'FE1_f1': ('FE1_f0', (), False, True), 'FE1_f0': ('FE1_f0', (), False, True), 'FE0_f1_D20': ('FE0_f0_D02', (9, [0, 1, 5]), False, False), 'FE0_f1_D02': ('FE0_f0_D02', (2, [0, 2, 4]), False, False)}
+  Transforming interior facet integral (0, 0)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (0, 1)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (0, 2)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (1, 0)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (1, 1)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (1, 2)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (2, 0)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (2, 1)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Transforming interior facet integral (2, 2)
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.00113 seconds
+  Shape of reference tensor: (6, 6)
+  Primary multi index:   rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.212706 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for facet integral (0, 0)
+  Optimising expressions for facet integral (0, 1)
+  Optimising expressions for facet integral (0, 2)
+  Optimising expressions for facet integral (1, 0)
+  Optimising expressions for facet integral (1, 1)
+  Optimising expressions for facet integral (1, 2)
+  Optimising expressions for facet integral (2, 0)
+  Optimising expressions for facet integral (2, 1)
+  Optimising expressions for facet integral (2, 2)
+  FErari not installed, skipping tensor optimizations
+  
+Compiler stage 3 finished in 0.181508 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 2 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 2 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Cell, number of operations to compute tensor: 381
+  Removing unused variable: facet_area
+  Interior facets (0, 0), number of operations to compute tensor: 7728
+  Interior facets (0, 1), number of operations to compute tensor: 6792
+  Interior facets (0, 2), number of operations to compute tensor: 6792
+  Interior facets (1, 0), number of operations to compute tensor: 6792
+  Interior facets (1, 1), number of operations to compute tensor: 5904
+  Interior facets (1, 2), number of operations to compute tensor: 5904
+  Interior facets (2, 0), number of operations to compute tensor: 6792
+  Interior facets (2, 1), number of operations to compute tensor: 5904
+  Interior facets (2, 2), number of operations to compute tensor: 5904
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.110067 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000555992 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Biharmonic.h.
+  
+Compiler stage 5 finished in 0.000791073 seconds.
+
+[1;37;32mFFC finished in 0.539421 seconds.[0m
