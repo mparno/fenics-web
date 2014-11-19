@@ -55,19 +55,20 @@ Contributors
 
 The FEniCS Project is developed by :ref:`researchers from a number of
 research institutes <team>` from around the world. The following
-research institutes contribute significant resources to the FEniCS
-Project:
+research institutes (in alphabetical order) contribute
+to the FEniCS Project:
 
+* `Baylor University <http://www.baylor.edu>`__
+* `Chalmers University of Technology <http://www.chalmers.se>`__
+* `KTH Royal Institute of Technology <http://www.kth.se>`__
 * `Simula Research Laboratory <http://www.simula.no>`__
 * `University of Cambridge <http://www.cam.ac.uk>`__
 * `University of Chicago <http://www.uchicago.edu/index.shtml>`__
-* `Baylor University <http://www.baylor.edu>`__
-* `KTH Royal Institute of Technology <http://www.kth.se>`__
 
-Contributions have also been made by researchers from `Chalmers
-University of Technology <http://www.chalmers.se>`__, `Delft
-University of Technology <http://www.tudelft.nl>`__, `Argonne National
-Laboratory <http://www.anl.gov>`__ and many other research institutes.
+Contributions have also been made by researchers from
+`Delft University of Technology <http://www.tudelft.nl>`__,
+`Argonne National Laboratory <http://www.anl.gov>`__
+and many other research institutes.
 A full list of contributors is maintained as part of the source code
 of each FEniCS component.
 
