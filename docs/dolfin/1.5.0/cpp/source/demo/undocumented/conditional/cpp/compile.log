@@ -1,0 +1,325 @@
+This is FFC, the FEniCS Form Compiler, version 1.5.0.
+For further information, visit http://www.fenics.org/ffc/.
+
+Compiling form Conditional
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG2(?)'
+  Unique sub elements:       'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG2(?)'
+  Unique sub elements:       'CG2(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal SpatialCoordinate.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  Selecting quadrature degree based on total polynomial degree of integrand: 2
+  quadrature_degree: auto --> 2
+  quadrature_rule:   auto --> default
+  
+Compiler stage 1 finished in 0.08533 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00114 seconds
+  Shape of reference tensor: (6, 6, 2, 2)
+  Primary multi index:   rank = 2 dims = [6, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5], [4, 0], [4, 1], [4, 2], [4, 3], [4, 4], [4, 5], [5, 0], [5, 1], [5, 2], [5, 3], [5, 4], [5, 5]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {VectorElement('Lagrange', Domain(Cell('triangle', 2), label=None, data=None), 1, dim=2, quad_scheme=None): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [-1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]]]), (0, 0): array([[[ 0.66666667,  0.16666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.16666667,  0.66666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.66666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.66666667,  0.16666667,  0.16666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.16666667,  0.66666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.66666667,  0.16666667]]])}}}, FiniteElement('Lagrange', Domain(Cell('triangle', 2), label=None, data=None), 2, quad_scheme=None): {None: {None: {(0, 0): array([[ 0.22222222, -0.11111111, -0.11111111],
+         [-0.11111111, -0.11111111,  0.22222222],
+         [-0.11111111,  0.22222222, -0.11111111],
+         [ 0.11111111,  0.44444444,  0.44444444],
+         [ 0.44444444,  0.44444444,  0.11111111],
+         [ 0.44444444,  0.11111111,  0.44444444]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  tables: {'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C1_D10': 'FE1_C1_D10', 'FE0': 'FE0', 'FE1_C1_D01': 'FE1_C1_D01', 'FE1_C0_D01': 'FE1_C0_D01', 'FE1_C0_D10': 'FE1_C0_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]]), 'FE0': array([[ 0.22222222, -0.11111111, -0.11111111,  0.11111111,  0.44444444,
+           0.44444444],
+         [-0.11111111, -0.11111111,  0.22222222,  0.44444444,  0.44444444,
+           0.11111111],
+         [-0.11111111,  0.22222222, -0.11111111,  0.44444444,  0.11111111,
+           0.44444444]]), 'FE1_C0_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE1_C0': ('FE1_C0', (0, [0, 1, 2]), False, False), 'FE1_C1': ('FE1_C0', (3, [3, 4, 5]), False, False), 'FE1_C1_D10': ('FE1_C0_D01', (5, [3, 4]), False, False), 'FE0': ('FE0', (), False, False), 'FE1_C1_D01': ('FE1_C0_D01', (4, [3, 5]), False, False), 'FE1_C0_D01': ('FE1_C0_D01', (1, [0, 2]), False, False), 'FE1_C0_D10': ('FE1_C0_D01', (2, [0, 1]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.032882 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.000449181 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 element(s)
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Removing unused variable: tmp7
+  Removing unused variable: tmp6
+  Removing unused variable: tmp5
+  Removing unused variable: tt
+  Removing unused variable: ss
+  Removing unused variable: rr
+  Generating code for 1 dofmap(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.061821 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000347137 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  Output written to ./Conditional.h.
+  
+Compiler stage 5 finished in 0.000524998 seconds.
+
+[1;37;32mFFC finished in 0.181619 seconds.[0m
