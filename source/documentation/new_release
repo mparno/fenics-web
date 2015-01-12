@@ -70,10 +70,10 @@ def main(versions, filename):
     file.write(all_contents(all_versions))
     file.close()
 
-    # Remember to add file to bazaar
+    # Remember to add file to git
     print "\n" + "*"*80
     print "*** Finished generating .rst for %s." % versions[0]
-    print "*** Remember do to 'bzr add doc_%s.rst'" % versions[0]
+    print "*** Remember do to 'git add doc_%s.rst'" % versions[0]
     print "*"*80
 
 
