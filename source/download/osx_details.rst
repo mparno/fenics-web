@@ -4,8 +4,8 @@
 Download
 ########
 
-This release includes DOLFIN 1.4.0, FFC 1.4.0, FIAT 1.4.0, Instant 1.4.0
-and UFL 1.4.0.
+This release includes DOLFIN 1.5.0, FFC 1.5.0, FIAT 1.5.0, Instant 1.5.0
+and UFL 1.5.0.
 
 .. include:: icons.rst
 
@@ -16,23 +16,23 @@ and UFL 1.4.0.
     :header-rows: 0
     :class: center
 
-    * - |mac-icon| FEniCS 1.4.0 (Mac OS X 10.9 binary)
+    * - |mac-icon| FEniCS 1.5.0 (Mac OS X 10.10 binary)
 
-      - `fenics-1.4.0-osx10.9.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg>`__
+      - `fenics-1.5.0-osx10.10.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg.asc>`__)
 
-    * - |mac-icon| FEniCS 1.4.0 (Mac OS X 10.10 binary)
+    * - |mac-icon| FEniCS 1.5.0 (Mac OS X 10.9 binary)
 
-      - `fenics-1.4.0-osx10.10.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg>`__
+      - `fenics-1.5.0-osx10.9.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg.asc>`__)
 
 ############
 Requirements

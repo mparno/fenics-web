@@ -9,6 +9,42 @@ Older releases
 Older FEniCS releases for Mac OS X and Windows are made available here.
 
 ************
+FEniCS 1.4.0
+************
+
+This release includes DOLFIN 1.4.0, FFC 1.4.0, FIAT 1.4.0, Instant 1.4.0
+and UFL 1.4.0.
+
+.. tabularcolumns:: |c|c|
+
+.. list-table::
+    :widths: 50, 50
+    :header-rows: 0
+    :class: center
+
+    * - |ubuntu-icon| Ubuntu packages
+
+      - `FEniCS 1.4.x PPA <https://launchpad.net/~fenics-packages/+archive/fenics-1.4.x>`__
+
+    * - |mac-icon| FEniCS 1.4.0 (Mac OS X 10.9 binary)
+
+      - `fenics-1.4.0-osx10.9.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.9.dmg.asc>`__)
+
+    * - |mac-icon| FEniCS 1.4.0 (Mac OS X 10.10 binary)
+
+      - `fenics-1.4.0-osx10.10.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.4.0-osx10.10.dmg.asc>`__)
+
+************
 FEniCS 1.3.0
 ************
 
