@@ -1,6 +1,7 @@
 {% extends "basic/layout.html" %}
 
 {% block extrahead %}
+{% if pagename == 'index' %}
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="{{ pathto('_static/ie6.css', 1) }}" type="text/css" media="screen" charset="utf-8" />
 <![endif]-->
@@ -47,7 +48,7 @@
 		});
 	});
   </script>
-
+{% endif %}
 {% if theme_favicon %}
 <link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}" />
 {% endif %}
