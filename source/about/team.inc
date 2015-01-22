@@ -19,7 +19,7 @@
           developers of UFC, Instant, SyFi and DOLFIN.</p>
 
 	  <p>You can view all Martin&#8217;s contributions on <a
-          href="https://launchpad.net/~martinal">his Launchpad
+          href="https://bitbucket.org/martinal">his Bitbucket
           page.</a></p>
 
         </div>
@@ -30,10 +30,6 @@
 	    <img alt='Jan Blechta'
 		 src='/_static/images/mugshots/blechta.jpg' />
 	  </div>
-
-	  <p>Martin is a postdoctoral fellow at <a
-	  href="http://simula.no/">Simula Research Laboratory</a>.
-          </p>
 
           <p>
           Jan is a PhD. student of
@@ -48,7 +44,7 @@
           </p>
 
 	  <p>You can view all Jan&#8217;s contributions on <a
-          href="https://launchpad.net/~martinal">his Bitbucket
+          href="https://bitbucket.org/blechta">his Bitbucket
           page.</a></p>
 
         </div>
@@ -69,7 +65,7 @@
           a developer of Instant, UFC and FFC.</p>
 
 	  <p>You can view all Johans&#8217;s contributions on <a
-          href="https://launchpad.net/~johan-hake">his Launchpad
+          href="https://bitbucket.org/johanhake">his Bitbucket
           page.</a></p>
 
         </div>
@@ -88,10 +84,6 @@
           <p>He has been involved with the FEniCS Project since 2003
           and is a developer of DOLFIN and Unicorn.</p>
 
-	  <p>You can view all Johans&#8217;s contributions on <a
-          href="https://launchpad.net/~jhoffman">his Launchpad
-          page.</a></p>
-
         </div>
 
       	<div class="front-block block">
@@ -108,9 +100,27 @@
 	  <p>He has been involved with the FEniCS Project since 2004
 	    and is a developer of DOLFIN and Unicorn.</p>
 
-	  <p>You can view all Johan&#8217;s contributions
-	  on <a href="https://launchpad.net/~jjan">his Launchpad
-	  page.</a>
+        </div>
+
+      	<div class="front-block block">
+  	  <h2>Benjamin Kehlet</h2>
+          <div class="avatar mugshot">
+	    <img alt='Benjamin Kehlet'
+		 src='/_static/images/mugshots/kehlet.jpg' />
+	  </div>
+
+	  <p>Benjamin is a Ph.D. student at
+          <a href="http://www.simula.no/">Simula Research Laboratory</a> and the
+          <a href="http://www.uio.no/">University of Oslo</a>.
+          </p>
+
+          <p>He has been involved with the FEniCS Project since 2011
+          and is the primary developer of msrh, the FEniCS meshing component.
+          </p>
+
+	  <p>You can view all Benjamin&#8217;s contributions on <a
+          href="https://bitbucket.org/kehlet">his Bitbucket
+          page.</a></p>
 
         </div>
 
@@ -127,10 +137,6 @@
 
           <p>He has been involved with the FEniCS Project since 2003
           and is the main developer of FIAT.</p>
-
-	  <p>You can view all Robert&#8217;s contributions on <a
-          href="https://launchpad.net/~robert-c-kirby">his Launchpad
-          page.</a></p>
 
         </div>
 
@@ -171,10 +177,6 @@
 	  and is a developer of DOLFIN, Instant, SyFi, Exterior,
 	  CBC.Block and UFC.</p>
 
-          <p>You can view all Kent&#8217;s contributions on <a
-          href="https://launchpad.net/~kent-and">his Launchpad
-          page.</a></p>
-
         </div>
 
       	<div class="front-block block">
@@ -193,7 +195,7 @@
           and is the main developer of DOLFIN-OLM.</p>
 
 	  <p>You can view all Andre&#8217;s contributions on <a
-          href="https://launchpad.net/~massing">his Launchpad
+          href="https://bitbucket.org/massing">his Bitbucket
           page.</a></p>
 
         </div>
@@ -216,7 +218,7 @@
 	  CBC.Solve.</p>
 
 	  <p>You can view all Harish&#8217;s contributions on <a
-          href="https://launchpad.net/~hnarayanan">his Launchpad
+          href="https://bitbucket.org/harish">his Bitbucket
           page.</a></p>
 
         </div>
@@ -235,7 +237,7 @@
           mostly as a build engineer.</p>
 
 	  <p>You can view all Johannes' contributions on <a
-          href="https://launchpad.net/~johannr">his Launchpad
+          href="https://bitbucket.org/johannes_ring">his Bitbucket
           page.</a></p>
 
         </div>
@@ -255,7 +257,7 @@
 	  and the lead developer of ASCoT.</p>
 
 	  <p>You can view all Marie&#8217;s contributions on <a
-          href="https://launchpad.net/~meg-simula">her Launchpad
+          href="https://bitbucket.org/meg">her Bitbucket
           page.</a></p>
 
         </div>
@@ -275,10 +277,6 @@
           is one of the developers of the fluid-structure interaction
           solver CBC.Swing distributed as part of CBC.Solve.</p>
 
-	  <p>You can view all Kristoffer&#8217;s contributions on <a
-          href="https://launchpad.net/~selim-simula">his Launchpad
-          page.</a></p>
-
         </div>
 
       	<div class="front-block block">
@@ -293,10 +291,6 @@
           </p>
 
           <p>He has been involved with the FEniCS Project since 2003.</p>
-
-	  <p>You can view all Ridg&#8217;s contributions on <a
-          href="https://launchpad.net/~ridg">his Launchpad
-          page.</a></p>
 
         </div>
 
@@ -316,7 +310,7 @@
           UFL.</p>
 
           <p>You can view all Garth's contributions on <a
-          href="https://launchpad.net/~garth-wells">his Launchpad
+          href="https://bitbucket.org/garth-wells">his Bitbucket
           page.</a></p>
 
         </div>
@@ -337,7 +331,7 @@
           developer of UFL and DOLFIN.</p>
 
 	  <p>You can view all Kristian&#8217;s contributions on <a
-          href="https://launchpad.net/~k.b.oelgaard">his Launchpad
+          href="https://bitbucket.org/k-b-oelgaard">his Bitbucket
           page.</a></p>
 
         </div>
