@@ -113,6 +113,5 @@ Release notes
 *************
 
 If you are updating your application code to a new FEniCS release, make
-sure to check the :ref:`release notes <releases_notes>` where you will
+sure to check the :ref:`release notes <release_notes>` where you will
 find detailed information about new features and interface changes.
-

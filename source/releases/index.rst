@@ -13,3 +13,4 @@ Release notes for FEniCS
     1.2/*
     1.3/*
     1.4/*
+    1.5/*
