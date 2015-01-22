@@ -24,6 +24,35 @@
 
         </div>
 
+	<div class="front-block block">
+  	  <h2>Jan Blechta</h2>
+          <div class="avatar mugshot">
+	    <img alt='Jan Blechta'
+		 src='/_static/images/mugshots/blechta.jpg' />
+	  </div>
+
+	  <p>Martin is a postdoctoral fellow at <a
+	  href="http://simula.no/">Simula Research Laboratory</a>.
+          </p>
+
+          <p>
+          Jan is a PhD. student of
+          <a href="http://mod.karlin.mff.cuni.cz/en/">Mathematical Modelling</a>
+          at the
+          <a href="http://www.mff.cuni.cz/to.en/">Charles University in Prague</a>.
+          </p>
+
+          <p>
+          He has been involved with the FEniCS project since 2013 and is a
+          developer and maintainer of DOLFIN and Instant.
+          </p>
+
+	  <p>You can view all Jan&#8217;s contributions on <a
+          href="https://launchpad.net/~martinal">his Bitbucket
+          page.</a></p>
+
+        </div>
+
       	<div class="front-block block">
   	  <h2>Johan Hake</h2>
           <div class="avatar mugshot">
