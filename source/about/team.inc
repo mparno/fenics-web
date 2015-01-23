@@ -224,6 +224,25 @@
         </div>
 
       	<div class="front-block block">
+  	  <h2>Chris Richardson</h2>
+          <div class="avatar mugshot">
+	    <img alt='Chris Richardson'
+		 src='/_static/images/mugshots/chris_richardson.jpg' />
+	  </div>
+
+	  <p>Chris is a Computer Officer at <a
+	  href="http://www.bpi.cam.ac.uk/">BPI, University of Cambridge</a>.</p>
+
+          <p>He has been involved with the FEniCS Project since 2012,
+             working mostly on Mesh and I/O improvements in parallel for HPC.</p>
+
+	  <p>You can view all Chris' contributions on <a
+          href="https://bitbucket.org/chris_richardson">his Bitbucket
+          page.</a></p>
+
+        </div>
+
+      	<div class="front-block block">
   	  <h2>Johannes Ring</h2>
           <div class="avatar mugshot">
 	    <img alt='Johannes Ring'
