@@ -1,8 +1,8 @@
 .. _windows_details:
 
-########
-Download
-########
+#####################################
+Installation instructions for Windows
+#####################################
 
 .. warning::
 
@@ -12,7 +12,7 @@ Download
     `VirtualBox <http://www.virtualbox.org>`__) and then install FEniCS
     from the :ref:`Ubuntu PPA <ubuntu_ppa>`.
 
-This release includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0,
+The latest (and outdated) release for Windows includes DOLFIN 1.0.0, FFC 1.0.0, FIAT 1.0.0,
 Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
 
 .. include:: icons.rst
@@ -33,10 +33,6 @@ Instant 1.0.0, UFC 2.0.5, UFL 1.0.0, and Viper 1.0.0.
 
       - `fenics-source-1.0.0-win.zip
         <http://www.fenicsproject.org/pub/software/fenics/fenics-source-1.0.0-win.zip>`__
-
-#########################
-Installation instructions
-#########################
 
 The Windows installer will install everything needed to run FEniCS on
 Windows, including MinGW compilers, Python, CMake, SWIG, and others. It

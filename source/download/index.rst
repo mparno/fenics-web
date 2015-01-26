@@ -29,22 +29,22 @@ everything needed to get you started with FEniCS.
 .. raw:: html
     :file: index.inc
 
-===========================
-Contributed binary packages
-===========================
-
 For information on user contributed binary packages, see
 :ref:`contributed_packages`.
 
-************************
-Installation from source
-************************
+**********************************************
+Installation from source (`fenics-install.sh`)
+**********************************************
 
-If the binaries do not apply to you, or you want to install directly
-from source, try one of the two other possibilities:
+You may also choose to install FEniCS directly from source. This may be
+done by running the following command:
 
-* :ref:`Automated installation using Dorsal <installation_using_dorsal>`
-* :ref:`Manual installation from source <installation_from_source>`
+    curl -s http://fenicsproject.org/fenics-install.sh | bash
+
+Running this command will build a local installation of FEniCS, including
+essential dependencies such as PETSc. The installation relies on
+`HashDist <http://hashdist.github.io/>`__. Before running the script,
+you may wish to download and expect its contents.
 
 *************************
 Nightly snapshot releases

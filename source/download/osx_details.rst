@@ -1,8 +1,8 @@
 .. _osx_details:
 
-########
-Download
-########
+######################################
+Installation instructions for Mac OS X
+######################################
 
 This release includes DOLFIN 1.5.0, FFC 1.5.0, FIAT 1.5.0, Instant 1.5.0
 and UFL 1.5.0.
@@ -34,9 +34,9 @@ and UFL 1.5.0.
         `sig
         <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg.asc>`__)
 
-############
+************
 Requirements
-############
+************
 
 * Mac OS X 10.9 Mavericks or 10.10 Yosemite.
 * An up-to-date version of the Xcode Command Line Developer Tools. To
@@ -46,9 +46,9 @@ Requirements
   with Python from `python.org <http://python.org>`__, Python from
   MacPorts or similar.
 
-############
+************
 Installation
-############
+************
 
 The installation should be as simple as dragging the FEniCS icon into
 the Applications folder. When the installation is complete, there are
@@ -64,9 +64,9 @@ two ways to use this binary:
 
   This will make FEniCS available whenever you start a new terminal.
 
-##############
+**************
 Older releases
-##############
+**************
 
 Older versions of the Mac OS X binary are also :ref:`available
 <older_releases>`.
