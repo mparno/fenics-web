@@ -1,21 +1,16 @@
 .. _ubuntu_details:
 
-########
-Download
-########
+####################################
+Installation instructions for Ubuntu
+####################################
 
-.. raw:: html
+.. image:: images/debian.png
+    :align: left
 
-  <a href="https://apps.ubuntu.com/cat/applications/fenics/"><img src="http://developer.ubuntu.com/wp-content/uploads/2012/06/downloadonubuntubutton.png" title="Download for Ubuntu" alt="Download for Ubuntu button" width="122" height="49" /></a>
+`Install FEniCS <apt://fenics>`__
 
-#########################
-Installation instructions
-#########################
-
-FEniCS is included as part of Ubuntu GNU/Linux (starting with
-10.04/Lucid). To install, simply click on the link above or install from
-the Ubuntu Software Center. FEniCS can also be installed by running the
-following command in a terminal::
+FEniCS is included as part of Ubuntu GNU/Linux. To install, simply click
+on the link above or run the following command in a terminal::
 
     sudo apt-get install fenics
 

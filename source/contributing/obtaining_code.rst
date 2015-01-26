@@ -34,3 +34,12 @@ source code by visiting the repository on Bitbucket and clicking the
 
 Links to the source repositories for FEniCS projects can be found on the
 `FEniCS Bitbucket page <https://bitbucket.org/fenics-project>`__.
+
+FEniCS Developer Tools
+======================
+
+Developers should take a look at the
+`FEniCS Developer Tools <https://bitbucket.org/fenics-project/fenics-developer-tools>`__
+repository. This contains scripts that are very useful for developers in setting
+up a good development environment for FEniCS. In particular, consider using the scripts
+``fenics-install-all.sh`` and ``fenics-install-component.sh``.
