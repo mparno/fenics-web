@@ -18,21 +18,21 @@ and UFL 1.5.0.
 
     * - |mac-icon| FEniCS 1.5.0 (Mac OS X 10.10 binary)
 
-      - `fenics-1.5.0-osx10.10.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg>`__
+      - `fenics-1.5.0-p2-osx10.10.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.10.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.10.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.10.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.10.dmg.asc>`__)
 
     * - |mac-icon| FEniCS 1.5.0 (Mac OS X 10.9 binary)
 
-      - `fenics-1.5.0-osx10.9.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg>`__
+      - `fenics-1.5.0-p2-osx10.9.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.9.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.9.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-osx10.9.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.5.0-p2-osx10.9.dmg.asc>`__)
 
 ************
 Requirements
