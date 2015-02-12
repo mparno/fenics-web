@@ -46,6 +46,12 @@ essential dependencies such as PETSc. The installation relies on
 `HashDist <http://hashdist.github.io/>`__. Before running the script,
 you may wish to download and expect its contents.
 
+Requirements:
+
+* A standard Unix environment (Linux or Mac)
+* The Git version control system, available as the package ``git`` in most Linux and Mac package managers
+* Mac users will also need to install Xcode from the Mac App Store
+
 *************************
 Nightly snapshot releases
 *************************
