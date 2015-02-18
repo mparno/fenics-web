@@ -39,7 +39,7 @@ Installation from conda packages
 Wheter you are already using the Anaconda_ Python distribution from Continuum
 Analytics or just their conda_ package manager in Linux you can already install
 FEniCS precompiled binaries. They are not part of the official Anaconda
-installation but they can be downloaded from a binstar_ channel:
+installation but they can be downloaded from a binstar_ channel::
 
     conda create --name fenics27 python=2.7
     source activate fenics27
@@ -57,7 +57,7 @@ Installation from source (`fenics-install.sh`)
 **********************************************
 
 You may also choose to install FEniCS directly from source. This may be
-done by running the following command:
+done by running the following command::
 
     curl -s http://fenicsproject.org/fenics-install.sh | bash
 

@@ -4,7 +4,7 @@
 Binary installation using conda
 ###############################
 
-_Anaconda is a Python distribution focused on scientific computing from the
+Anaconda_ is a Python distribution focused on scientific computing from the
 company Continuum Analytics. It is centered around conda_, an open source,
 language-agnostic package manager. Its distinct features are:
 
@@ -14,7 +14,7 @@ language-agnostic package manager. Its distinct features are:
 
 FEniCS packages for conda are user-contributed and support any Linux 64-bit
 distribution. As they are not part of the official
-Anaconda packages, so you have to use a binstar_ channel to install them:
+Anaconda packages, so you have to use a binstar_ channel to install them::
 
     conda create --name fenics27 python=2.7
     source activate fenics27
@@ -22,18 +22,18 @@ Anaconda packages, so you have to use a binstar_ channel to install them:
 
 This will download all FEniCS dependencies and install them quickly.
 Alternatively, you can add this channel to your conda settings so it will search
-for packages there too:
+for packages there too::
 
     conda config --add channels juanlu001
     source activate fenics27
     conda install fenics  # This will work now
 
 If you happen to be using some old system, FEniCS 1.4.0 packages are provided
-compiled in CentOS 6. These can be installed from another binstar channel:
+compiled in CentOS 6. These can be installed from another binstar channel::
 
     conda install "fenics=1.4.0" mkl --channel https://conda.binstar.org/juanlu001/channel/fenics:1.4.0:centos
 
-Or alternatively:
+Or alternatively::
 
     conda config --add channels https://conda.binstar.org/juanlu001/channel/fenics:1.4.0:centos
     conda install "fenics=1.4.0"
@@ -62,7 +62,7 @@ binstar channels. A conda package is created using a *conda recipe* as explained
 in the documentation. Such recipes for FEniCS can be found in the
 `fenics-recipes repository <https://github.com/juanlu001/fenics-recipes>`_.
 As explained there, to recreate this packages in your system from source
-you can use `conda-build`:
+you can use `conda-build`::
 
     conda install conda-build
     conda build boost eigen3 petsc petsc4py instant ufl fiat ffc dolfin fenics --python 27
@@ -80,7 +80,7 @@ Troubleshooting
 You probably forgot to specify the channel, or to add them to your conda
 configuration, as explained above.
 
-"ImportError: /lib64/libc.so.6: version `GLIBC_2.14' not found"
+"ImportError: /lib64/libc.so.6: version 'GLIBC_2.14' not found"
 ---------------------------------------------------------------
 
 Maybe you installed the latest FEniCS version but your system is too old.
