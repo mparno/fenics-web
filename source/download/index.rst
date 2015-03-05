@@ -32,12 +32,32 @@ everything needed to get you started with FEniCS.
 For information on user contributed binary packages, see
 :ref:`contributed_packages`.
 
+********************************
+Installation from conda packages
+********************************
+
+Wheter you are already using the Anaconda_ Python distribution from Continuum
+Analytics or just their conda_ package manager in Linux you can already install
+FEniCS precompiled binaries. They are not part of the official Anaconda
+installation but they can be downloaded from a binstar_ channel::
+
+    conda create --name fenics27 python=2.7
+    source activate fenics27
+    conda install fenics --channel juanlu001
+
+For troubleshooting and alternative options for older systems, see
+:ref:`installation_using_conda`.
+
+.. _Anaconda: https://store.continuum.io/cshop/anaconda/
+.. _conda: http://conda.io/
+.. _binstar: https://binstar.org/
+
 **********************************************
 Installation from source (`fenics-install.sh`)
 **********************************************
 
 You may also choose to install FEniCS directly from source. This may be
-done by running the following command:
+done by running the following command::
 
     curl -s http://fenicsproject.org/fenics-install.sh | bash
 
