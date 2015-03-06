@@ -48,6 +48,11 @@ installation but they can be downloaded from a binstar_ channel::
 For troubleshooting and alternative options for older systems, see
 :ref:`installation_using_conda`.
 
+.. note::
+
+    These packages are provided by Juan Luis Cano and their sources
+    can be found at https://github.com/juanlu001/fenics-recipes.
+
 .. _Anaconda: https://store.continuum.io/cshop/anaconda/
 .. _conda: http://conda.io/
 .. _binstar: https://binstar.org/

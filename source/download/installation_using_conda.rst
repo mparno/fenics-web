@@ -13,8 +13,11 @@ language-agnostic package manager. Its distinct features are:
 * It is language-agnostic - you can use it to install things like boost or vtk too.
 
 FEniCS packages for conda are user-contributed and support any Linux 64-bit
-distribution. As they are not part of the official
-Anaconda packages, so you have to use a binstar_ channel to install them::
+distribution. The sources can be found
+`on GitHub <https://github.com/juanlu001/fenics-recipes>`_, and the binary
+packages `on Binstar <https://binstar.org/juanlu001/>`_.
+They are not part of the official
+Anaconda packages, so you have to use the binstar_ channel to install them::
 
     conda create --name fenics27 python=2.7
     source activate fenics27
