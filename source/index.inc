@@ -65,16 +65,15 @@
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
 
-          <h3>FEniCS'14 at The Center in Paris, University of
-          Chicago</h3> <a
-          href="/featured/2014/fenics14_paris.html"><img alt=''
-          src='/_static/images/center_in_paris_uofc.jpg' class='avatar
+          <h3>FEniCS'15 at Imperial College London</h3> <a
+          href="/featured/2015/fenics15_london.html"><img alt=''
+          src='/_static/images/featured/featured_item_fenics_days_at_imperial.png' class='avatar
           avatar-84 photo' width='84'/></a>
 
-          <p>The 2014 FEniCS Workshop was held 16-17 June 2014 at
-            The Center in Paris, University of Chicago, Paris,
-            France. More information can be found
-            <a href="featured/2014/fenics14_paris.html">here</a>.  <br />
+          <p> We are happy to announce that the 2015 FEniCS Workshop
+            will be held on June 29 - July 1 2015 at Imperial College
+            London, London, UK. More information can be found <a
+            href="featured/2015/fenics15_london.html">here</a>.  <br/>
             <br /> <br /> <br /> </p>
 
           <h3>Periodic Table of the Finite Elements</h3>

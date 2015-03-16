@@ -9,6 +9,8 @@ Featured articles of the FEniCS project
     :maxdepth: 1
     :glob:
 
+    2015/*
+    2014/*
     2013/*
     2012/*
     2011/*
