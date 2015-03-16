@@ -36,7 +36,7 @@ For information on user contributed binary packages, see
 Installation from conda packages
 ********************************
 
-Wheter you are already using the Anaconda_ Python distribution from Continuum
+Whether you are already using the Anaconda_ Python distribution from Continuum
 Analytics or just their conda_ package manager in Linux you can already install
 FEniCS precompiled binaries. They are not part of the official Anaconda
 installation but they can be downloaded from a binstar_ channel::
