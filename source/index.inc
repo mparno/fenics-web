@@ -72,9 +72,12 @@
 
           <p> We are happy to announce that the 2015 FEniCS Workshop
             will be held on June 29 - July 1 2015 at Imperial College
-            London, London, UK. More information can be found <a
-            href="featured/2015/fenics15_london.html">here</a>.  <br/>
-            <br /> <br /> <br /> </p>
+            London, London, UK. More information can be found at the
+            official <a
+            href="http://firedrakeproject.org/fenics_15.html">FEniCS
+            '15 webpage</a>.  <br /> <br /> <br />
+
+            </p>
 
           <h3>Periodic Table of the Finite Elements</h3>
           <a href="http://femtable.org/"><img alt='' src='/_static/images/N1E3.jpg' class='avatar avatar-84 photo' width='84'/></a>
