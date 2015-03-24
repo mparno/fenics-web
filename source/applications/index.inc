@@ -145,6 +145,25 @@
 
         </div>
 
+      	<div class="front-block block app">
+
+	  <h3>FEMorph &mdash; A FEniCS add-on for shape optimization</h3>
+          <img alt='' src='/_static/images/femorph.png'
+          class='avatar avatar-84 photo' height='84' width='84' />
+
+	  <p>FEMorph is an extensive addon for Python FEniCS for large
+          scale nodal shape optimization, morphing and deformation. It
+          features robust grid deformation algorithms, mesh repair
+          techniques, equal distant point spacing, curvature
+          computation and symmetry computations, among others.
+          </p>
+
+          <p><a href="http://www.mathematik.uni-wuerzburg.de/~schmidt/femorph"
+          rel="nofollow">Visit the project&#8217;s web site to learn more
+          &raquo;</a></p>
+
+        </div>
+
     	<div class="front-block block app">
 
 	  <h3>GenFoo &mdash; A general Fokker-Planck solver</h3>
