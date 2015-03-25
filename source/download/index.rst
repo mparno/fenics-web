@@ -4,20 +4,20 @@
 
 .. include:: icons.rst
 
-########
-Download
-########
-
-.. _binary_packages:
-
-*********************************
+#################################
 FEniCS versions and release notes
-*********************************
+#################################
 
-The latest stable release of **FEniCS version 1.5.0** released
-2015-01-12. For more information about FEniCS releases and changes,
-take a look at :ref:`release_notes`. Note that binary packages will
-appear a few days after the release of a new version.
+FEniCS can be installed from binary files or compiled from source
+code. Different installation methods are described on this page.
+Visit the :ref:`troubleshooting page <troubleshooting>` if you have
+problems installing FEniCS.
+
+The latest stable release of FEniCS is version 1.5.0, which was on
+released 2015-01-12. For more information about FEniCS releases and
+changes, take a look at :ref:`release_notes`.  For information on
+accessing the development repositories, see :ref:`developers`.
+
 
 ***************
 Binary packages
@@ -32,9 +32,10 @@ everything needed to get you started with FEniCS.
 For information on user contributed binary packages, see
 :ref:`contributed_packages`.
 
-********************************
-Installation from conda packages
-********************************
+
+**********************************
+Installation from *conda* packages
+**********************************
 
 Whether you are already using the Anaconda_ Python distribution from Continuum
 Analytics or just their conda_ package manager in Linux you can already install
@@ -57,6 +58,26 @@ For troubleshooting and alternative options for older systems, see
 .. _conda: http://conda.io/
 .. _binstar: https://binstar.org/
 
+
+**********************
+Virtual machine images
+**********************
+
+A virtual machine image that includes the most recent FEniCS release
+is available at
+http://fenicsproject.org/pub/virtual/fenics-latest.ova. The image can
+be run using a virtual machine manager, such as `VirtualBox
+<https://www.virtualbox.org/>`_. The username and password for the
+virtual machine are both ``fenics``.
+
+The virtual machine image is recommended for systems for which a
+binary installer is not available. The image is particularly suitable
+when a consistent FEniCS environment across systems is required, such
+as courses using FEniCS.
+
+The image requires a 64-bit host operating system.
+
+
 **********************************************
 Installation from source (`fenics-install.sh`)
 **********************************************
@@ -73,24 +94,20 @@ you may wish to download and expect its contents.
 
 Requirements:
 
-* A standard Unix environment (Linux or Mac)
-* The Git version control system, available as the package ``git`` in most Linux and Mac package managers
-* Mac users will also need to install Xcode from the Mac App Store
+* A standard Unix environment (Linux or OSX)
+* The Git version control system, available as the package ``git`` in
+  most Linux and Mac package managers
+* OSX users will need to install Xcode from the Mac App Store
 
-*************************
-Nightly snapshot releases
-*************************
+
+************************************
+Nightly snapshots for Ubuntu and OSX
+************************************
 
 Every night, FEniCS snapshot releases are automatically generated for
 Ubuntu and Mac OS X. They are made available at our :ref:`snapshots page
 <snapshot_releases>`.
 
-*******************
-Development version
-*******************
-
-For information on accessing the development repositories, see
-:ref:`developers`.
 
 ***************
 Data and meshes
@@ -99,12 +116,7 @@ Data and meshes
 A collection of meshes for free use with FEniCS is available
 :ref:`here <data>`.
 
-***************
-Troubleshooting
-***************
 
-Visit the :ref:`troubleshooting page <troubleshooting>` if you have
-problems installing FEniCS.
 
 .. toctree::
    :hidden:
