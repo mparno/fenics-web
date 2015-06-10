@@ -7,15 +7,15 @@
         <div id="products">
           <div class="slides_container">
 	    <div class="slide">
-	      <a href="/featured/2012/csf.html"><img src="/_static/images/featured/featured_item_csf.png" width="366" height="282" alt="Cerebrospinal fluid flow"></a>
+	      <a href="/featured/2015/manifolds_in_fenics.html"><img src="/_static/images/featured/featured_item_manifolds.png" width="366" height="282" alt="Solving PDEs over manifolds"></a>
 	      <div class="caption">
-		<p>Simulation of cerebrospinal fluid flow</p>
+		<p>Solving PDEs over manifolds</p>
 	      </div>
 	    </div>
 	    <div class="slide">
-	      <a href="/featured/2011/automated_error_control.html"><img src="/_static/images/featured/featured_item_automated_error_control.png" width="366" height="282" alt="Automated adaptivity and error control"></a>
+	      <a href="/featured/2012/csf.html"><img src="/_static/images/featured/featured_item_csf.png" width="366" height="282" alt="Cerebrospinal fluid flow"></a>
 	      <div class="caption">
-		<p>Automated adaptivity and error control</p>
+		<p>Simulation of cerebrospinal fluid flow</p>
 	      </div>
 	    </div>
 	    <div class="slide">
