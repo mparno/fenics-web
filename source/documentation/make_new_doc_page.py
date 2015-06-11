@@ -107,6 +107,13 @@ than others. To learn more about these, take a look at the
          </div><!-- #main -->
 
 
+*****************
+Featured articles
+*****************
+
+The :ref:`Featured_articles` highlight particular FEniCS features,
+scientific studies where FEniCS have been used or current and previous
+FEniCS Events.
 
 *************
 Release notes
