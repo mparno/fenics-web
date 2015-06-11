@@ -8,7 +8,7 @@ To generate a new overview page for a FEniCS release do:
 
 For instance
 
-  ./new_release 1.0 1.0
+  ./new_release 1.6.0 1.6.0
 
 This will
 
@@ -46,4 +46,3 @@ If you have messed things up, and want to try again:
 * edit versions.py and
 * (re-)generate all the versions: python make_new_doc_python.py
 * run ./new_release with latest version.
-

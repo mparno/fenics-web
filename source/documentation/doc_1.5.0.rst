@@ -107,6 +107,13 @@ than others. To learn more about these, take a look at the
          </div><!-- #main -->
 
 
+****************************
+The FEniCS Featured articles
+****************************
+
+The :ref:`Featured_articles` highlight particular FEniCS features,
+scientific studies where FEniCS have been used or current and previous
+FEniCS Events.
 
 *************
 Release notes
@@ -115,3 +122,4 @@ Release notes
 If you are updating your application code to a new FEniCS release, make
 sure to check the :ref:`release notes <release_notes>` where you will
 find detailed information about new features and interface changes.
+
