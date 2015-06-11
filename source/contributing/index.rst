@@ -143,6 +143,22 @@ A summary of useful Git commands for some common use cases can be
 found in the `Git cookbook for FEniCS developers
 <https://bitbucket.org/fenics-project/dolfin/wiki/Git%20cookbook%20for%20FEniCS%20developers>`__.
 
+*************************************
+Contributing FEniCS Featured articles
+*************************************
+
+The :ref:`Featured_articles` are short descriptions of FEniCS
+highlights: new FEniCS features, new applications of FEniCS or current
+FEniCS Events. At any given time, the slide show on the `FEniCS main
+page <http://www.fenicsproject.org>`__. highlights a selection of these
+articles.
+
+All FEniCS developers and users are encouraged to contribute Featured
+articles. Detailed instructions are given here: `How to contribute a
+FEniCS Featured article
+<https://bitbucket.org/snippets/fenics-project/LdRGq/how-to-create-a-new-fenics-featured>`__.
+
+.. _developers_writing_code:
 
 ************
 Writing code
