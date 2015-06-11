@@ -24,6 +24,13 @@
 		<p>Specifying large systems of PDEs with ease</p>
 	      </div>
 	    </div>
+      <div class="slide">
+        <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
+        <div class="caption">
+    <p>Simulation of cerebrospinal fluid flow and drug distribution</p>
+        </div>
+      </div>
+
           </div>
         </div>
       </div>
