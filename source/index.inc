@@ -30,7 +30,6 @@
     <p>Simulation of cerebrospinal fluid flow and drug distribution</p>
         </div>
       </div>
-
           </div>
         </div>
       </div>
