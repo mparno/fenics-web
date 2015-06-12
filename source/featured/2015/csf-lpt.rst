@@ -11,7 +11,7 @@ The cerebrospinal fluid (CSF) surrounds the central nervous system (CNS), and dr
 ***********************************
 Subject-specific computational mesh
 ***********************************
-A three dimensional geometry of the cervical subarachnoid space is shown in Figure 1. The geometry was provided by Dr. Bryn Martin at the Conquer Chiari Research Center at the University of Akron, and more information can be found in [2]_. The anatomical model was constructed based on manual segmentation of T2-weighted magnetic resonance (MR) image sequences of a healthy volunteer using freely available software ITK-Snap (Version 2.2, University of Pennsylvania). Idealized NRDL were separately constructed and added to the model using Autodesk Maya (Autodesk Inc., Cleveland, OH). Nonuniform unstructured computational meshes were generated using ANSYS ICEM CFD (ANSYS Inc., Canonsburg, PA). An example of the surface elements of the computational mesh is shown in Figure 1 (c). The complete geometry [Figure 1 (a)] is 18 cm from top to bottom and the two end planes are both placed in the xz-plane.
+A three dimensional geometry of the cervical subarachnoid space is shown in Figure 1. The geometry was provided by Dr. Bryn Martin at the Conquer Chiari Research Center at the University of Akron, and more information can be found in [2]_. The geometry contains idealized nerve roots and denticulate ligaments (NRDL) constructed manualy based on known anatomy from literature.
 
 .. image:: images/geometry.png
   :scale: 50 %
