@@ -34,36 +34,20 @@ where :math:`x_p` is the position of one particle, and :math:`u` is the velocity
 
 	\rho_{\kappa} = \frac{\text{number of particles in cell}}{\text{volume of cell}}.
 
-The Lagrangian Particle solving for FEniCS uses an object-oriented frame, meaning that all particles are represented by objects, as shown below.
+The Lagrangian Particle solving for FEniCS uses an object-oriented frame, meaning that all particles are represented by objects. At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function :code:`u` at time :code:`t` and :code:`u_1` at time :code:`t-dt`.
 
 .. code:: python
 
-	class Particle:
-	    'Lagrangian particle with position and some other passive properties.'
-	    def __init__(self, x):
-	        self.position = x
-	        self.properties = {}
-
-	    def send(self, dest):
-	        'Send particle to dest.'
-	        comm.Send(self.position, dest=dest)
-	        comm.send(self.properties, dest=dest)
-
-	    def recv(self, source):
-	        'Receive info of a new particle sent from source.'
-	        comm.Recv(self.position, source=source)
-	        self.properties = comm.recv(source=source)
-
-At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function "u".
-
-.. code:: python
-	
+	from dolfin import *
 	from LagrangianParticles import LagrangianParticles, ParticleSource
 
 	...
 
 	# Function space
 	V = VectorFunctionSpace(mesh, 'CG', 1)
+
+	u = Function(V)		# Velocity at t
+	u_1 = Function(V)	# Velocity at t - dt
 
 	# Initialize Lagrangian Particle Solver
 	lp = LagrangianParticles(V)
@@ -76,7 +60,7 @@ At every time-step, the particles are moved subject to the velocity field, given
 
 		# Inject particles
 		if t < injection_time:
-			source.apply(500)
+			source.apply(500)  # Injecting 500 particles every timestep
 
 		....
 
