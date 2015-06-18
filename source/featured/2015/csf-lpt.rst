@@ -22,7 +22,7 @@ A three dimensional geometry of the cervical subarachnoid space is shown in Figu
 ****************************
 Lagrangian Particle Tracking
 ****************************
-Due to very low diffusivity of the drugs, numerical issues may arise when using the Finite Element Method on the advection-diffusion equation. Lagrangian Particle Tracking is a method where such issues are not present. This method uses discrete particles and utilizes the velocity field to compute the position of the particles. In other words, for every particle, we solve the equation
+Due to very low diffusivity of the drugs, numerical issues may arise when using the Finite Element Method on the advection-diffusion equation. The Streamline Upwind/Petrov-Galerkin and Discontinuous Galerkin methods would be natural methods to implement in such convection-dominated scenario. However, because of the extremely high Schmidt number (>2500), some level of Gibbs phenomenon was experienced in simplified test-cases. The Lagrangian Particle Tracking is a method where such issues are not present. This method uses discrete particles and utilizes the velocity field to compute the position of the particles. In other words, for every particle, we solve the equation
 
 .. math::
 
