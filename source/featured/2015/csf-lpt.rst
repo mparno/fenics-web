@@ -26,9 +26,9 @@ Due to very low diffusivity of the drugs, numerical issues may arise when using 
 
 .. math::
 
-  	\frac{\partial x_p}{\partial t} = u(x_p,t),
+  	\frac{\mathrm{d} x_p}{\mathrm{d} t} = u(x_p,t),
 
-where :math:`x_p` is the position of particle :math:`p`, and :math:`u` is the velocity field. The particle density in one cell is computed simply by using the formula
+where :math:`x_p` is the position of a particle :math:`p`, and :math:`u` is the velocity field. The particle density in one cell is computed simply by using the formula
 
 .. math::
 
