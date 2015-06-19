@@ -6,7 +6,7 @@ Subject-specific simulations of cerebrospinal fluid flow and drug delivery
 | Featured article 2015-06-12
 | *Created by P.T Haga, M. Mortensen, K.-A. Mardal and M. Kuchta*
 
-The cerebrospinal fluid (CSF) surrounds the central nervous system (CNS), and drugs infused into the CSF can thus quickly be absorbed. However, because of large subject-specific variations and a complex oscillating flow, it has been proven difficult to predict and control the addition of drugs [1]_. A study has been done to simulate the flow and drug transport of the CSF in a subject-specific model of the cranial region of the spine using FEniCS. This article briefly describes the results of the study.
+The cerebrospinal fluid (CSF) surrounds the central nervous system (CNS), and drugs infused into the CSF can thus quickly be absorbed. However, because of large subject-specific variations and a complex oscillating flow, it has been proven difficult to predict and control the addition of drugs [1]_. The master thesis of P.T Haga aimed to simulate the flow and drug transport in the CSF in a subject-specific model of the cranial region of the spine using FEniCS. This article briefly describes the results of the study.
 
 ***********************************
 Subject-specific computational mesh
@@ -22,19 +22,19 @@ A three dimensional geometry of the cervical subarachnoid space is shown in Figu
 ****************************
 Lagrangian Particle Tracking
 ****************************
-Due to very low diffusivity of the drugs, numerical issues may arise when using the Finite Element Method on the advection-diffusion equation. The Streamline Upwind/Petrov-Galerkin and Discontinuous Galerkin methods would be natural methods to implement in such convection-dominated scenario. However, because of the extremely high Schmidt number (>2500), some level of Gibbs phenomenon was experienced in simplified test-cases. The Lagrangian Particle Tracking is a method where such issues are not present. This method uses discrete particles and utilizes the velocity field to compute the position of the particles. In other words, for every particle, we solve the equation
+Due to very low diffusivity of the drugs, numerical issues may arise when using the Finite Element Method on the advection-diffusion equation. The Streamline Upwind/Petrov-Galerkin and Discontinuous Galerkin methods would be natural methods to implement in such convection-dominated scenario. However, because the drug diffusivity is reported 2500 times smaller than the kinematic viscosity :math:`\nu`, some level of Gibbs phenomenon was experienced in simplified test-cases. The Lagrangian Particle Tracking is a method where such issues are not present. This method uses discrete particles and utilizes the velocity field to compute the position of the particles. In other words, for every particle, we solve the equation
 
 .. math::
 
   	\frac{\partial x_p}{\partial t} = u(x_p,t),
 
-where :math:`x_p` is the position of one particle, and :math:`u` is the velocity field. The particle density in one cell is computed simply by using the formula
+where :math:`x_p` is the position of particle :math:`p`, and :math:`u` is the velocity field. The particle density in one cell is computed simply by using the formula
 
 .. math::
 
 	\rho_{\kappa} = \frac{\text{number of particles in cell}}{\text{volume of cell}}.
 
-The Lagrangian Particle solving for FEniCS uses an object-oriented frame, meaning that all particles are represented by objects. At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function :code:`u` at time :code:`t` and :code:`u_1` at time :code:`t-dt`.
+The Lagrangian Particle Tracking solver implemented for FEniCS [4]_ made by M. Kuchta and M. Mortensen, uses an object-oriented frame, meaning that all particles are represented by objects. At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function :code:`u` at time :code:`t` and :code:`u_1` at time :code:`t-dt`.
 
 .. code:: python
 
@@ -72,7 +72,7 @@ The Lagrangian Particle solving for FEniCS uses an object-oriented frame, meanin
 ***************
 CFD simulations
 ***************
-The simulations were done using the Open Source high-performance Navier-Stokes solver Oasis [3]_ coupled with the Lagrangian Particle Tracking for FEniCS [4]_ made by M. Kuchta and M. Mortensen. The solver was run on Abel supercomputer using 96 cores. The resulting velocity field revealed the formation of vortical structures in conjuction with the nerve roots and denticulate ligaments, as shown in Figure 2.
+The simulations were performed using the Open Source high-performance Navier-Stokes solver Oasis [3]_ coupled with the Lagrangian Particle Tracking solver. The solver was run on the Abel supercomputer using 96 cores. The resulting velocity field revealed the formation of vortical structures in conjuction with the nerve roots and denticulate ligaments, as shown in Figure 2.
 
 .. image:: images/streamlines_csf.png
 	:align: center
