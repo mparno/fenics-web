@@ -6,12 +6,12 @@ Subject-specific simulations of cerebrospinal fluid flow and drug delivery
 | Featured article 2015-06-12
 | *Created by P.T Haga, M. Mortensen, K.-A. Mardal and M. Kuchta*
 
-The cerebrospinal fluid (CSF) surrounds the central nervous system (CNS), and drugs infused into the CSF can thus quickly be absorbed. However, because of large subject-specific variations and a complex oscillating flow, it has been proven difficult to predict and control the addition of drugs [1]_. The master thesis of P.T Haga aimed to simulate the flow and drug transport in the CSF in a subject-specific model of the cranial region of the spine using FEniCS. This article briefly describes the results of the study.
+The cerebrospinal fluid (CSF) surrounds the central nervous system (CNS). For this reason, drugs are often administered through the CSF for distribution to desired regions of the CNS. However, because of large subject-specific variations and a complex oscillating flow, it has been proven difficult to predict and control the addition of drugs [1]_. The master thesis of P.T Haga [2]_ aimed to simulate the flow and drug transport in the CSF in a subject-specific model of the cranial region of the spine using FEniCS. This article briefly describes the results of the study.
 
 ***********************************
 Subject-specific computational mesh
 ***********************************
-A three dimensional geometry of the cervical subarachnoid space is shown in Figure 1. The geometry was provided by Dr. Bryn Martin at the Conquer Chiari Research Center at the University of Akron, and more information can be found in [2]_. The geometry contains idealized nerve roots and denticulate ligaments (NRDL) constructed manualy based on known anatomy from literature.
+A three dimensional geometry of the cervical subarachnoid space is shown in Figure 1. The geometry was provided by Dr. Bryn Martin at the Conquer Chiari Research Center at the University of Akron, and more information can be found in [3]_. The geometry contains idealized nerve roots and denticulate ligaments (NRDL) constructed manualy based on known anatomy from literature.
 
 .. image:: images/geometry.png
   :scale: 100 %
@@ -34,7 +34,7 @@ where :math:`x_p` is the position of a particle :math:`p`, and :math:`u` is the 
 
 	\rho_{\kappa} = \frac{\text{number of particles in cell}}{\text{volume of cell}}.
 
-The Lagrangian Particle Tracking solver implemented for FEniCS [4]_ made by M. Kuchta and M. Mortensen, uses an object-oriented frame, meaning that all particles are represented by objects. At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function :code:`u` at time :code:`t` and :code:`u_1` at time :code:`t-dt`.
+The Lagrangian Particle Tracking solver implemented for FEniCS [5]_ made by M. Kuchta and M. Mortensen, uses an object-oriented frame, meaning that all particles are represented by objects. At every time-step, the particles are moved subject to the velocity field, given by a dolfin-function :code:`u` at time :code:`t` and :code:`u_1` at time :code:`t-dt`.
 
 .. code:: python
 
@@ -72,7 +72,9 @@ The Lagrangian Particle Tracking solver implemented for FEniCS [4]_ made by M. K
 ***************
 CFD simulations
 ***************
-The simulations were performed using the Open Source high-performance Navier-Stokes solver Oasis [3]_ coupled with the Lagrangian Particle Tracking solver. The solver was run on the Abel supercomputer using 96 cores. The resulting velocity field revealed the formation of vortical structures in conjuction with the nerve roots and denticulate ligaments, as shown in Figure 2.
+The simulations were performed using the Open Source high-performance Navier-Stokes solver Oasis [4]_ coupled with the Lagrangian Particle Tracking solver. The solver was run on the Abel supercomputer using 96 cores. A simulation of 13 cardiac cycles, or 10.14 seconds, used approximately 7 physical hours, or 670 CPU-hours. 
+
+The resulting velocity field revealed the formation of vortical structures in conjuction with the nerve roots and denticulate ligaments, as shown in Figure 2.
 
 .. image:: images/streamlines_csf.png
 	:align: center
@@ -94,9 +96,11 @@ References
 
 .. [1] Hocking, G. and Wildsmith, J. A. W. Intrathecal drug spread. British Journal of Anaesthesia, 93(4):568–578, 2004. doi: 10.1093/bja/aeh204. URL http://bja.oxfordjournals.org/content/93/4/568.short.
 
-.. [2] Soroush Heidari Pahlavian, Theresia Yiallourou, R. Shane Tubbs, Alexander C. Bunck, Francis Loth, Mark Goodin, Mehrdad Raisee, and Bryn A. Martin. The impact of spinal cord nerve roots and denticulate ligaments on cerebrospinal fluid dynamics in the cervical spine. PLoS ONE, 9(4):e91888, 04 2014. doi: 10.1371/journal.pone.0091888. URL http://dx.doi.org/10.1371%2Fjournal.pone.0091888.
+.. [2] http://bit.ly/1K23ieZ
 
-.. [3] Mikael Mortensen and Kristian Valen-Sendstad. Oasis: A high- level/high-performance open source navier–stokes solver. Computer Physics Communications, 188(0):177 – 188, 2015. ISSN 0010-4655. doi: http://dx.doi.org/10.1016/j.cpc.2014.10.026. URL http://www.sciencedirect.com/science/article/pii/S0010465514003786.
+.. [3] Soroush Heidari Pahlavian, Theresia Yiallourou, R. Shane Tubbs, Alexander C. Bunck, Francis Loth, Mark Goodin, Mehrdad Raisee, and Bryn A. Martin. The impact of spinal cord nerve roots and denticulate ligaments on cerebrospinal fluid dynamics in the cervical spine. PLoS ONE, 9(4):e91888, 04 2014. doi: 10.1371/journal.pone.0091888. URL http://dx.doi.org/10.1371%2Fjournal.pone.0091888.
 
-.. [4] https://github.com/MiroK/lagrangian-particles
+.. [4] Mikael Mortensen and Kristian Valen-Sendstad. Oasis: A high- level/high-performance open source navier–stokes solver. Computer Physics Communications, 188(0):177 – 188, 2015. ISSN 0010-4655. doi: http://dx.doi.org/10.1016/j.cpc.2014.10.026. URL http://www.sciencedirect.com/science/article/pii/S0010465514003786.
+
+.. [5] https://github.com/MiroK/lagrangian-particles
 
