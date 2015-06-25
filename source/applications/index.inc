@@ -158,7 +158,7 @@
           computation and symmetry computations, among others.
           </p>
 
-          <p><a href="http://www.mathematik.uni-wuerzburg.de/~schmidt/femorph"
+          <p><a href="http://www.mathematik.uni-wuerzburg.de/~schmidt/femorph.php"
           rel="nofollow">Visit the project&#8217;s web site to learn more
           &raquo;</a></p>
 
