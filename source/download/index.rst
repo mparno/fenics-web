@@ -90,7 +90,7 @@ done by running the following command::
 Running this command will build a local installation of FEniCS, including
 essential dependencies such as PETSc. The installation relies on
 `HashDist <http://hashdist.github.io/>`__. Before running the script,
-you may wish to download and expect its contents.
+you may wish to download and inspect its contents.
 
 Requirements:
 
