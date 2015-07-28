@@ -3,7 +3,7 @@
 
 .. _documentation:
 
-.. include:: doc_1.5.0.rst
+.. include:: doc_1.6.0.rst
 
 .. toctree::
    :hidden:
