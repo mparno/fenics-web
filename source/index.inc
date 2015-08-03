@@ -6,18 +6,18 @@
       <div id="products_example">
         <div id="products">
           <div class="slides_container">
-          <div class="slide">
-          <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
-          <div class="caption">
-          <p>Simulating drug distribution around the spinal cord</p>
-          </div>
-          </div>
 	    <div class="slide">
 	      <a href="/featured/2015/wilkinson_prize.html"><img src="/_static/images/featured/featured_item_wilkinson_15.jpg" width="366" height="282" alt="Dolfin-adjoint wins 2015 Wilkinson Prize"></a>
 	      <div class="caption">
 		<p>Dolfin-adjoint wins 2015 Wilkinson Prize</p>
 	      </div>
 	    </div>
+          <div class="slide">
+          <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
+          <div class="caption">
+          <p>Simulating drug distribution around the spinal cord</p>
+          </div>
+          </div>
 	    <div class="slide">
 	      <a href="/featured/2015/manifolds_in_fenics.html"><img src="/_static/images/featured/featured_item_manifolds.png" width="366" height="282" alt="Solving PDEs over manifolds"></a>
 	      <div class="caption">
