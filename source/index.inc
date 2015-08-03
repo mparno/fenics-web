@@ -6,6 +6,12 @@
       <div id="products_example">
         <div id="products">
           <div class="slides_container">
+          <div class="slide">
+          <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
+          <div class="caption">
+          <p>Simulating drug distribution around the spinal cord</p>
+          </div>
+          </div>
 	    <div class="slide">
 	      <a href="/featured/2015/wilkinson_prize.html"><img src="/_static/images/featured/featured_item_wilkinson_15.jpg" width="366" height="282" alt="Dolfin-adjoint wins 2015 Wilkinson Prize"></a>
 	      <div class="caption">
@@ -18,18 +24,12 @@
 		<p>Solving PDEs over manifolds</p>
 	      </div>
 	    </div>
-	    <div class="slide">
-	      <a href="/featured/2012/csf.html"><img src="/_static/images/featured/featured_item_csf.png" width="366" height="282" alt="Cerebrospinal fluid flow"></a>
-	      <div class="caption">
-		<p>Simulation of cerebrospinal fluid flow</p>
-	      </div>
-	    </div>
-	    <div class="slide">
-	      <a href="/featured/2011/pdesys.html"><img src="/_static/images/featured/featured_item_pdesys.png" width="366" height="282" alt="Specifying large systems of PDEs with ease"></a>
-	      <div class="caption">
-		<p>Specifying large systems of PDEs with ease</p>
-	      </div>
-	    </div>
+	  <div class="slide">
+	  <a href="/featured/2011/pdesys.html"><img src="/_static/images/featured/featured_item_pdesys.png" width="366" height="282" alt="Specifying large systems of PDEs with ease"></a>
+	  <div class="caption">
+	  <p>Specifying large systems of PDEs with ease</p>
+	  </div>
+	  </div>
           </div>
         </div>
       </div>
