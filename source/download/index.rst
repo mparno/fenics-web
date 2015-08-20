@@ -13,8 +13,8 @@ code. Different installation methods are described on this page.
 Visit the :ref:`troubleshooting page <troubleshooting>` if you have
 problems installing FEniCS.
 
-The latest stable release of FEniCS is version 1.5.0, which was on
-released 2015-01-12. For more information about FEniCS releases and
+The latest stable release of FEniCS is version 1.6.0, which was on
+released 2015-07-28. For more information about FEniCS releases and
 changes, take a look at :ref:`release_notes`.  For information on
 accessing the development repositories, see :ref:`developers`.
 
