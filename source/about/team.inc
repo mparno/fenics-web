@@ -25,7 +25,7 @@
         </div>
 
 	<div class="front-block block">
-  	  <h2>Jan Blechta</h2>
+         <h2><a href="http://www.karlin.mff.cuni.cz/~blechta/">Jan Blechta</a></h2>
           <div class="avatar mugshot">
 	    <img alt='Jan Blechta'
 		 src='/_static/images/mugshots/blechta.jpg' />
