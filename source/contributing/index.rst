@@ -52,6 +52,10 @@ repository of any FEniCS project by the ``git`` command. For example,
 to check out the source code for DOLFIN, simply issue the following
 command::
 
+    git clone https://bitbucket.org/fenics-project/dolfin.git
+
+or if you have an ssh key associated with your Bitbucket account::
+
     git clone git@bitbucket.org:fenics-project/dolfin.git
 
 ========================
