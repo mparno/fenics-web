@@ -26,13 +26,13 @@ FEniCS projects.
 Start by running the following command to install the required packages
 from the official repository::
 
-    sudo pacman -S bzr cmake swig boost libxml2 lapack blas python2-numpy python2-scientificpython
+    sudo pacman -S bzr cmake swig boost libxml2 lapack blas python2-numpy
 
 Then build and install all these packages from the AUR in the following
-order (along with any other dependencies they may need): ``parmetis``,
-``metis``, ``petsc``, ``slepc``, ``trilinos``, ``instant-bzr``,
-``fiat-bzr``, ``ufl-bzr``, ``ufc-bzr``, ``ffc-bzr``, ``viper-bzr``,
-``dolfin-bzr``.
+order (along with any other dependencies they may need):
+``python2-scientificpython``, ``metis``, ``parmetis``, ``petsc``,
+``slepc``, ``trilinos``, ``instant-git``, ``fiat-git``, ``ufl-git``,
+``ffc-git``, ``dolfin-git``.
 
 ********
 openSUSE
