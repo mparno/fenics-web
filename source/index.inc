@@ -12,24 +12,30 @@
 		<p>Dolfin-adjoint wins 2015 Wilkinson Prize</p>
 	      </div>
 	    </div>
-          <div class="slide">
-          <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
-          <div class="caption">
-          <p>Simulating drug distribution around the spinal cord</p>
-          </div>
-          </div>
+            <div class="slide">
+              <a href="/featured/2015/csf-lpt.html"><img src="/_static/images/featured/featured_item_csf-lpt.png" width="366" height="282" alt="Cerebrospinal fluid flow and drug distribution"></a>
+              <div class="caption">
+		<p>Simulating drug distribution around the spinal cord</p>
+              </div>
+            </div>
 	    <div class="slide">
 	      <a href="/featured/2015/manifolds_in_fenics.html"><img src="/_static/images/featured/featured_item_manifolds.png" width="366" height="282" alt="Solving PDEs over manifolds"></a>
 	      <div class="caption">
 		<p>Solving PDEs over manifolds</p>
 	      </div>
 	    </div>
-	  <div class="slide">
-	  <a href="/featured/2011/pdesys.html"><img src="/_static/images/featured/featured_item_pdesys.png" width="366" height="282" alt="Specifying large systems of PDEs with ease"></a>
-	  <div class="caption">
-	  <p>Specifying large systems of PDEs with ease</p>
-	  </div>
-	  </div>
+	    <div class="slide">
+	      <a href="/featured/2011/pdesys.html"><img src="/_static/images/featured/featured_item_pdesys.png" width="366" height="282" alt="Specifying large systems of PDEs with ease"></a>
+	      <div class="caption">
+		<p>Specifying large systems of PDEs with ease</p>
+	      </div>
+	    </div>
+	    <div class="slide">
+	      <a href="/featured/2015/qa_maps.html"><img src="/_static/images/featured/featured_item_qa_map.png" width="366" height="282" alt="FEniCS Q&A forum visitors from 53 countries"></a>
+	      <div class="caption">
+		<p>FEniCS Q&A forum users around the world</p>
+	      </div>
+	    </div>
           </div>
         </div>
       </div>
