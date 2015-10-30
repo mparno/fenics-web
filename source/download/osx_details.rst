@@ -16,6 +16,15 @@ mshr 1.6.0, UFL 1.6.0 and uflacs 1.6.0.
     :header-rows: 0
     :class: center
 
+    * - |mac-icon| FEniCS 1.6.0 (Mac OS X 10.11 binary)
+
+      - `fenics-1.6.0-osx10.11.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-osx10.11.dmg>`__
+        (`md5
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-osx10.11.dmg.md5>`__,
+        `sig
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-osx10.11.dmg.asc>`__)
+
     * - |mac-icon| FEniCS 1.6.0 (Mac OS X 10.10 binary)
 
       - `fenics-1.6.0-osx10.10.dmg
@@ -29,7 +38,7 @@ mshr 1.6.0, UFL 1.6.0 and uflacs 1.6.0.
 Requirements
 ************
 
-* Mac OS X 10.10 Yosemite.
+* Mac OS X 10.11 El Capitan or 10.10 Yosemite.
 * An up-to-date version of the Xcode Command Line Developer Tools. To
   install, simply run ``xcode-select --install`` in a terminal and click
   on the Install button.
