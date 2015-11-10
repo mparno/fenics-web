@@ -16,10 +16,10 @@ If you need help with using FEniCS, ask your question in the `FEniCS
 Q&A Forum <http://fenicsproject.org/qa/>`__.  If you have a specific
 question related to obtaining, building or installing a FEniCS
 component, please send a message to the `FEniCS support mailing list
-<http://fenicsproject.org/mailman/listinfo/fenics-support>`_.  If you
+<https://groups.google.com/forum/#!forum/fenics-support>`_.  If you
 would like to discuss FEniCS development or propose a new feature,
 please send a message to the `FEniCS mailing list
-<http://fenicsproject.org/mailman/listinfo/fenics>`_
+<https://groups.google.com/forum/#!forum/fenics-dev>`_
 
 Before posting your question, please consider the following points:
 
@@ -52,7 +52,7 @@ Mailing lists
 .. _help_mailinglist:
 
 The main `FEniCS mailing list
-<http://fenicsproject.org/mailman/listinfo/fenics>`__ is where
+<https://groups.google.com/forum/#!forum/fenics-dev>`__ is where
 discussions take place. It covers everything that does not fit into
 any of the above categories (user questions, bug reports or
 installation or compilation issues). This is also the place for
@@ -60,7 +60,7 @@ announcements of workshops, releases, tutorials, papers. Everyone is
 invited to subscribe to the mailing list and take part in discussions.
 
 The `FEniCS support mailing list
-<http://fenicsproject.org/mailman/listinfo/fenics-support>`_ is a
+<https://groups.google.com/forum/#!forum/fenics-support>`_ is a
 place to ask specific questions related to obtaining, building, or
 installing FEniCS components.
 

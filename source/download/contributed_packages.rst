@@ -10,8 +10,8 @@ contact the package maintainer first.
 
 If you have packages or information about other systems, it is always
 appreciated if you let us know. Please send the information to the
-`fenics mailing list <fenics@fenicsproject.org>`__, or even better, send
-us a patch or make a `pull request
+`fenics mailing list <fenics-dev@googlegroups.com>`__, or even better,
+send us a patch or make a `pull request
 <https://bitbucket.org/fenics-project/fenics-web>`__.
 
 **********

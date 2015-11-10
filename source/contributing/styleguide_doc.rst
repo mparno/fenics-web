@@ -198,7 +198,7 @@ or the ``todo`` directive:
         Figure out how to present this in a better way
 
 
-and ask on the fenics@fenicsproject.org mailing list in order for the
+and ask on the fenics-dev@googlegroups.com mailing list in order for the
 issue to be resolved as quickly as possible. This helps keeping the
 documentation in good shape.
 
