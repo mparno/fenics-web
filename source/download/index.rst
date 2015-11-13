@@ -113,14 +113,6 @@ Requirements for OS X:
   
 See :ref:`installation_using_hashdist` if you need to tweak the build.
 
-************************************
-Nightly snapshots for Ubuntu and OSX
-************************************
-
-Every night, FEniCS snapshot releases are automatically generated for
-Ubuntu and Mac OS X. They are made available at our :ref:`snapshots page
-<snapshot_releases>`.
-
 
 ***************
 Data and meshes
