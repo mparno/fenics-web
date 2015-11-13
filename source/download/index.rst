@@ -92,13 +92,26 @@ essential dependencies such as PETSc. The installation relies on
 `HashDist <http://hashdist.github.io/>`__. Before running the script,
 you may wish to download and inspect its contents.
 
-Requirements:
+Requirements for Linux (Ubuntu package name in parentheses):
 
-* A standard Unix environment (Linux or OSX)
-* The Git version control system, available as the package ``git`` in
-  most Linux and Mac package managers
-* OSX users will need to install Xcode from the Mac App Store
+* The Python 2.7 development files (``python-dev``)
+* The Git version control system (``git``)
+* A C compiler and a C++ compiler with C++11 support
+  (``build-essential``)
+* A Fortran compiler (``gfortran``)
+* The OpenGL development files (``freeglut3-dev``)
 
+Requirements for OS X:
+
+* The latest version of Xcode `from the Apple developer website
+  <https://developer.apple.com/downloads/index.action>`__ or get it
+  `using the Mac App Store
+  <http://itunes.apple.com/us/app/xcode/id497799835>`__
+* The Xcode Command Line Developer Tools (run ``xcode-select --install`` in
+  a terminal after installing Xcode)
+* The Git version control system
+  
+See :ref:`installation_using_hashdist` if you need to tweak the build.
 
 ************************************
 Nightly snapshots for Ubuntu and OSX
