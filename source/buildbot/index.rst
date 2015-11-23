@@ -121,6 +121,15 @@ interest.
 	/ `next <http://fenicsproject.org:8010/console?category=uflacs.next>`__
 	/ `maint <http://fenicsproject.org:8010/console?category=uflacs.maint>`__
 	/ `all <http://fenicsproject.org:8010/console?category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
+    * - dijitso
+      - `master <http://fenicsproject.org:8010/waterfall?category=dijitso.master>`__
+	/ `next <http://fenicsproject.org:8010/waterfall?category=dijitso.next>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=dijitso.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=dijitso.master&category=dijitso.next&category=dijitso.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=dijitso.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=dijitso.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=dijitso.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=dijitso.master&category=dijitso.next&category=dijitso.maint>`__
 
 There are also other alternative renderings of the results:
 
