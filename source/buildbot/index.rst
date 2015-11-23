@@ -59,68 +59,68 @@ interest.
         / `all <http://fenicsproject.org:8010/console?category=dolfin.master&category=ffc.master&category=fiat.master&category=instant.master&category=ufl.master&category=dolfin.next&category=ffc.next&category=instant.next&category=ufl.next&category=dolfin.maint&category=ffc.maint&category=fiat.maint&category=instant.maint&category=ufl.maint>`__
 
     * - :ref:`DOLFIN <about_components_dolfin>`
-      - `master <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=dolfin.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=dolfin.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=dolfin&category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=dolfin&category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=dolfin.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=dolfin.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=dolfin.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=dolfin.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=dolfin.master&category=dolfin.next&category=dolfin.maint>`__
     * - :ref:`FFC <about_components_ffc>`
-      - `master <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=ffc.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=ffc.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ffc&category=ffc.master&category=ffc.next&category=ffc.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=ffc&category=ffc.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=ffc&category=ffc.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=ffc&category=ffc.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ffc&category=ffc.master&category=ffc.next&category=ffc.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=ffc.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=ffc.master&category=ffc.next&category=ffc.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=ffc.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=ffc.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=ffc.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=ffc.master&category=ffc.next&category=ffc.maint>`__
     * - :ref:`FIAT <about_components_fiat>`
-      - `master <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=fiat.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=fiat.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=fiat&category=fiat.master&category=fiat.next&category=fiat.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=fiat&category=fiat.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=fiat&category=fiat.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=fiat&category=fiat.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=fiat&category=fiat.master&category=fiat.next&category=fiat.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=fiat.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=fiat.master&category=fiat.next&category=fiat.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=fiat.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=fiat.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=fiat.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=fiat.master&category=fiat.next&category=fiat.maint>`__
     * - :ref:`Instant <about_components_instant>`
-      - `master <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=instant.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=instant.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=instant&category=instant.master&category=instant.next&category=instant.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=instant&category=instant.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=instant&category=instant.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=instant&category=instant.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=instant&category=instant.master&category=instant.next&category=instant.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=instant.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=instant.master&category=instant.next&category=instant.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=instant.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=instant.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=instant.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=instant.master&category=instant.next&category=instant.maint>`__
     * - mshr
-      - `master <http://fenicsproject.org:8010/waterfall?project=mshr&category=mshr.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=mshr.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=mshr.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=mshr&category=mshr.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=mshr&category=mshr.master&category=mshr.next&category=mshr.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=mshr&category=mshr.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=mshr&category=mshr.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=mshr&category=mshr.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=mshr&category=mshr.master&category=mshr.next&category=mshr.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=mshr.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=mshr.master&category=mshr.next&category=mshr.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=mshr.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=mshr.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=mshr.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=mshr.master&category=mshr.next&category=mshr.maint>`__
     * - :ref:`UFL <about_components_ufl>`
-      - `master <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=ufl.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=ufl.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=ufl&category=ufl.master&category=ufl.next&category=ufl.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=ufl&category=ufl.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=ufl&category=ufl.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=ufl&category=ufl.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=ufl&category=ufl.master&category=ufl.next&category=ufl.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=ufl.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=ufl.master&category=ufl.next&category=ufl.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=ufl.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=ufl.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=ufl.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=ufl.master&category=ufl.next&category=ufl.maint>`__
     * - uflacs
-      - `master <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.master>`__
+      - `master <http://fenicsproject.org:8010/waterfall?category=uflacs.master>`__
 	/ `next <http://fenicsproject.org:8010/waterfall?category=uflacs.next>`__
-	/ `maint <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.maint>`__
-	/ `all <http://fenicsproject.org:8010/waterfall?project=uflacs&category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
-      - `master <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.master>`__
-	/ `next <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.next>`__
-	/ `maint <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.maint>`__
-	/ `all <http://fenicsproject.org:8010/console?project=uflacs&category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
+	/ `maint <http://fenicsproject.org:8010/waterfall?category=uflacs.maint>`__
+	/ `all <http://fenicsproject.org:8010/waterfall?category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
+      - `master <http://fenicsproject.org:8010/console?category=uflacs.master>`__
+	/ `next <http://fenicsproject.org:8010/console?category=uflacs.next>`__
+	/ `maint <http://fenicsproject.org:8010/console?category=uflacs.maint>`__
+	/ `all <http://fenicsproject.org:8010/console?category=uflacs.master&category=uflacs.next&category=uflacs.maint>`__
 
 There are also other alternative renderings of the results:
 
