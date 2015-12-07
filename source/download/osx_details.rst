@@ -18,12 +18,12 @@ mshr 1.6.0, UFL 1.6.0 and uflacs 1.6.0.
 
     * - |mac-icon| FEniCS 1.6.0 (Mac OS X 10.11 binary)
 
-      - `fenics-1.6.0-p1-osx10.11.dmg
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p1-osx10.11.dmg>`__
+      - `fenics-1.6.0-p2-osx10.11.dmg
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p2-osx10.11.dmg>`__
         (`md5
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p1-osx10.11.dmg.md5>`__,
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p2-osx10.11.dmg.md5>`__,
         `sig
-        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p1-osx10.11.dmg.asc>`__)
+        <http://www.fenicsproject.org/pub/software/fenics/fenics-1.6.0-p2-osx10.11.dmg.asc>`__)
 
     * - |mac-icon| FEniCS 1.6.0 (Mac OS X 10.10 binary)
 
