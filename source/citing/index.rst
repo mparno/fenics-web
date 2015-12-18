@@ -17,6 +17,12 @@ the bottom of this page. The bibliography is also available in
 FEniCS
 ------
 
+* **M. S. Alnæs, J. Blechta, J. Hake, A. Johansson, B. Kehlet, A. Logg, C. Richardson, J. Ring, M. E. Rognes and G. N. Wells (2015)**.
+  *The FEniCS Project Version 1.5*,
+  Archive of Numerical Software,
+  3(100),
+  [`doi:10.11588/ans.2015.100.20553 <http://dx.doi.org/10.11588/ans.2015.100.20553>`_].
+
 * **A. Logg, K.-A. Mardal, G. N. Wells et al. (2012)**.
   *Automated Solution of Differential Equations by the Finite Element Method*,
   Springer.

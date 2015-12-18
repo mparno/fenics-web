@@ -201,6 +201,16 @@
    number:  2
    status:  published
    doi:     10.1145/2566630
+** The FEniCS Project Version 1.5
+   key:      AlnaesBlechta2015a
+   author:   Martin S. Aln{\ae}s, Jan Blechta, Johan Hake, August Johansson, Benjamin Kehlet, Anders Logg, Chris Richardson, Johannes Ring, Marie E. Rognes, Garth N. Wells
+   year:     2015
+   journal:  Archive of Numerical Software
+   volume:   3
+   number:   100
+   page:     9-23
+   status:   published
+   doi:      10.11588/ans.2015.100.20553
 * books
 ** Automated Solution of Differential Equations by the Finite Element Method
    key:       LoggMardalEtAl2012a

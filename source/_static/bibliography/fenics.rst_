@@ -120,18 +120,24 @@ Articles in International Journals
   pp. C24-C41.
 
 * **M. E. Rognes, D. A. Ham, C. J. Cotter and A. T. T. McRae (2013)**.
-  *Automating the Solution of PDEs on the Sphere and Other Manifolds in FEniCS 1.2*,
+  *Automating the solution of PDEs on the sphere and other manifolds in FEniCS 1.2*,
   Geoscientific Model Development,
   6,
   pp. 2099-2119,
   [`doi:10.5194/gmd-6-2099-2013 <http://dx.doi.org/10.5194/gmd-6-2099-2013>`_].
 
 * **M. S. Alnæs, A. Logg, K. B. Ølgaard, M. E. Rognes and G. N. Wells (2014)**.
-  *Unified Form Language: a Domain-Specific Language for Weak Formulations of Partial Differential Equations*,
+  *Unified Form Language: A domain-specific language for weak formulations of partial differential equations*,
   ACM Transactions on Mathematical Software,
   40(2),
   [`doi:10.1145/2566630 <http://dx.doi.org/10.1145/2566630>`_],
   [`arXiv:1211.4047 <http://arxiv.org/abs/1211.4047>`_].
+
+* **M. S. Alnæs, J. Blechta, J. Hake, A. Johansson, B. Kehlet, A. Logg, C. Richardson, J. Ring, M. E. Rognes and G. N. Wells (2015)**.
+  *The FEniCS Project Version 1.5*,
+  Archive of Numerical Software,
+  3(100),
+  [`doi:10.11588/ans.2015.100.20553 <http://dx.doi.org/10.11588/ans.2015.100.20553>`_].
 
 Books
 =====
