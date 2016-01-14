@@ -52,7 +52,7 @@ after the submission deadline.
 This year, the CBC will award the **Best Student FEniCS'16 Presentation Prize** to the student author(s) of the most outstanding presentation given at the FEniCS'16 workshop.
 
 
-Workshop Program
+Workshop program
 ****************
 
 The workshop will start after lunch (at 13:00) on May 18 and end at
