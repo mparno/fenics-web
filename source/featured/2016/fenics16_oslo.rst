@@ -1,11 +1,11 @@
-########################################################################################
+#########################################################################################
 FEniCS'16 at Center for Biomedical Computing, Simula Research Laboratory, May 18--20 2016
-########################################################################################
+#########################################################################################
 
 We are pleased to announce the 2016 edition of the FEniCS workshop
 (FEniCS'16) which will take place **May 18--20 2016** at the `Center
 for Biomedical Computing <http://cbc.simula.no>`__ (CBC) at `Simula
-Research Laboratory <http:/www.simula.no>`__ (Simula), Oslo, Norway.
+Research Laboratory <http://www.simula.no>`__ (Simula), Oslo, Norway.
 
 The FEniCS'16 workshop is an opportunity for all those interested in
 the FEniCS Project and related projects to exchange ideas, communicate
@@ -116,7 +116,7 @@ to downtown Oslo (Oslo S or Nationaltheateret) and 30 min to Lysaker
 (5-10 min by bus to/from Simula).
 
 Accommodation
-************
+*************
 
 Please book your own accommodation for the workshop. In view of the
 Norwegian National Day on May 17 (see above), we politely urge you to
