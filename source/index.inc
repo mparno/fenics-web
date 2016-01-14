@@ -77,17 +77,16 @@
       <div id="sub-feature">
 	<div id="front-block-1" class="front-block block">
 
-          <h3>FEniCS'15 at Imperial College London</h3> <a
-          href="/featured/2015/fenics15_london.html"><img alt=''
-          src='/_static/images/featured/featured_item_fenics_days_at_imperial.png' class='avatar
+          <h3>FEniCS'16 at Simula Research Laboratory</h3> <a
+          href="/featured/2016/fenics16_oslo.html"><img alt=''
+          src='/_static/images/featured/featured_item_fenics_12_simula.png' class='avatar
           avatar-84 photo' width='84'/></a>
 
-          <p> We are happy to announce that the 2015 FEniCS Workshop
-            will be held on June 29 - July 1 2015 at Imperial College
-            London, London, UK. More information can be found at the
-            official <a
-            href="http://firedrakeproject.org/fenics_15.html">FEniCS
-            '15 webpage</a>.  <br /> <br /> <br />
+          <p> We are happy to announce that the 2016 FEniCS Workshop
+            will be held on May 18 -- 20 2016 at Simula Research
+            Laboratory, Oslo, Norway. See the <a
+            href="http://fenicsproject.org/featured/2016/fenics16_oslo.html">FEniCS'16
+            webpage</a> for more information.
 
             </p>
 
