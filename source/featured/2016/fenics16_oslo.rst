@@ -46,6 +46,9 @@ after the submission deadline.
 
   https://easychair.org/conferences/?conf=fenics16
 
+  (Note that you need to create an EasyChair account if you do not
+  have one already.)
+
 * If you would like to contribute a poster (in addition to or instead
   of a talk), please just let Martin Alnæs (martinal@simula.no) know
   by April 4 2016. Please include 'FEniCS16 poster' in the subject of
