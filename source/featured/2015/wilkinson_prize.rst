@@ -25,10 +25,15 @@ solve problems in a range of application areas. Through its elegant
 use of high-level abstractions it makes performing what is usually a
 very challenging piece of computation seem extremely natural."
 
-.. image:: images/approach.png
-   :scale: 60%
+.. raw:: html
 
-Figure 1: Dolfin-adjoint derives the adjoint and tangent linear models
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/approach.png" class="img-responsive" alt="Wilkinson Prize"> 
+    </div>
+  </div>
+
+**Figure 1:** Dolfin-adjoint derives the adjoint and tangent linear models
 from the high-level problem specification in FEniCS
 
 The dolfin-adjoint project (www.dolfin-adjoint.org) is a FEniCS
@@ -44,16 +49,23 @@ theoretically optimal performance, all of which are key properties
 that are difficult to achieve with traditional algorithmic
 differentiation techniques.
 
-.. image:: images/code.png
-   :scale: 45%
+.. raw:: html
 
-.. image:: images/poisson-topology-2d.png
-   :scale: 38%
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4" style="padding-bottom: 10px;">
+      	<img src="../../_images/code.png" class="img-responsive"> 
+      </div>
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4" style="padding-bottom: 10px;">
+      	<img src="../../_images/poisson-topology-2d.png" class="img-responsive">
+      </div>
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4" style="padding-bottom: 10px;">
+      	<img src="../../_images/poisson-topology-3d.png" class="img-responsive"> 
+      </div>
+    </div>
+  </div>
 
-.. image:: images/poisson-topology-3d.png
-   :scale: 55%
-
-Figure 2: Example of a topology optimisation for the design of a heat
+**Figure 2:** Example of a topology optimisation for the design of a heat
 sink with dolfin-adjoint. The left image shows an implementation
 excerpt (the full code has 56 lines). The middle and the right images
 show the optimal sink material distribution in 2D and 3D,

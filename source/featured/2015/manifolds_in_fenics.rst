@@ -65,14 +65,22 @@ non-orientable two-dimensional surface embedded in three dimensions.
 This runs seamlessly in serial or parallel using MPI, and the results
 are plotted below:
 
-.. image:: images/klein_bottle.png
-   :scale: 60%
 
-.. image:: images/klein_solution.png
-   :scale: 60%
+.. raw:: html
 
-Left: A mesh of Gray's Klein bottle, a non-orientable two-dimensional
-surface without boundary embedded in 3D [2, 3]. Right: The solution to
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
+        <img src="../../_images/klein_bottle.png" class="img-responsive"> 
+      </div>
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
+        <img src="../../_images/klein_solution.png" class="img-responsive">
+      </div>
+    </div>
+  </div>
+
+**Left:** A mesh of Gray's Klein bottle, a non-orientable two-dimensional
+surface without boundary embedded in 3D [2, 3]. **Right:** The solution to
 the elliptic PDE example given above over this mesh.
 
 

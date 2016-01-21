@@ -27,9 +27,14 @@ information can be found in [3]_. The geometry contains idealized
 nerve roots and denticulate ligaments (NRDL) constructed manualy based
 on known anatomy from literature.
 
-.. image:: images/geometry.png
-  :scale: 100 %
-  :align: center
+
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/geometry.png" class="img-responsive"> 
+    </div>
+  </div>
 
 **Figure 1:** SSS geometry and computational surface mesh. (a)
 Complete surface model. (b) Transparent model showing nerve roots and
@@ -118,8 +123,13 @@ The resulting velocity field revealed the formation of vortical
 structures in conjuction with the nerve roots and denticulate
 ligaments, as shown in Figure 2.
 
-.. image:: images/streamlines_csf.png
-	:align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/streamlines_csf.png" class="img-responsive"> 
+    </div>
+  </div>
 
 **Figure 2:** Streamlines of the cerebrospinal fluid shows vorticity
 around the nerve roots and denticulate ligaments.
@@ -130,8 +140,14 @@ injected every time-step giving a total of approximately 130.000
 particles after 5 cardiac cycles. Figure 3 shows an animation of the
 drug concentration during the 5 first cardiac cycles.
 
-.. image:: images/scalar_anim.gif
-	:align: center
+
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/scalar_anim.gif" class="img-responsive"> 
+    </div>
+  </div>
 
 **Figure 3:** An animation of the drug concentration for the first 5
 cardiac cycles. The color represents the number of particles per

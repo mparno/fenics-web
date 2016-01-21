@@ -14,8 +14,14 @@ In September 2015, all 556 contributors with more than 100 points on the forum
 were plotted using IP geolocation. Forum visitors come from over 50 countries
 across the globe, from Argentina to Japan, from Johannesburg to Yakutsk.
 
-.. image:: images/googlemaps_small.png
-   :target: ../../_static/images/featured/googlemaps.html
+
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/googlemaps_small.png" class="img-responsive" target="../../_static/images/featured/googlemaps.html"> 
+    </div>
+  </div>
 
 The developers are always interested to see the problems that come up on the forum.
 Please ask lots of questions, and please answer them, if you know the answer.
