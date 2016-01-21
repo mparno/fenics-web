@@ -57,8 +57,13 @@ forms. It generates efficient low-level C++ code (UFC) from a
 high-level mathematical description (UFL) of a finite element
 variational problem.
 
-.. image:: images/ufl-ffc-ufc.png
-    :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/ufl-ffc-ufc.png" class="img-responsive" alt="UFL-FFC-UFC"> 
+    </div>
+  </div>
 
 Maintainers (in alphabetical order)
 ===================================

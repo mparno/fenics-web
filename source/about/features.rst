@@ -80,8 +80,13 @@ methods**, vector elements like the **BDM**, **RT** and **Nedelec**
 elements, and special element types like the **Crouzeix-Raviart**
 element.
 
-.. image:: images/elements.png
-   :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/elements.png" class="img-responsive" alt="Elements"> 
+    </div>
+  </div>
 
 *******************************
 High performance linear algebra
@@ -109,8 +114,13 @@ computing is supported through interfaces to `SCOTCH
 <http://www.labri.fr/perso/pelegrin/scotch/>`_ and `ParMETIS
 <http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview>`_.
 
-.. image:: images/meshes.png
-   :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/meshes.png" class="img-responsive" alt="Meshes"> 
+    </div>
+  </div>
 
 **************
 Postprocessing
@@ -156,8 +166,13 @@ documentation <documentation>` and a range of :ref:`documented demos
 documents the methodology behind the FEniCS Project and highlights a
 number of applications in computational science based on FEniCS.
 
-.. image:: images/documentation.png
-   :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/documentation.png" class="img-responsive" alt="Fenics Documentation"> 
+    </div>
+  </div>
 
 ********************
 Ease of installation
@@ -169,5 +184,10 @@ and Ubuntu), **Mac OS X** and **Windows**, as well as an
 :ref:`automated installation script <installation_using_dorsal>` for
 other platforms.
 
-.. image:: images/platforms.png
-   :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/platforms.png" class="img-responsive" alt="Platforms"> 
+    </div>
+  </div>

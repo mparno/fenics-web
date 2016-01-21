@@ -42,8 +42,14 @@ code generation interface :ref:`UFC <about_components_ufc>`, the form
 language :ref:`UFL <about_components_ufl>` and a range of
 :ref:`additional components <about_components_additional>`.
 
-.. image:: images/fenics-map.png
-   :align: center
+.. raw:: html
+
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../_images/fenics-map.png" class="img-responsive" alt="Fenics Map"> 
+    </div>
+  </div>
+
 
 Building on these components, software specialized to solving
 different problems are organised into separate :doc:`applications
@@ -77,7 +83,15 @@ since its inception in 2003.
 
 .. raw:: html
 
-    <div style="text-align:center;margin-left:auto; margin-right:auto;"><iframe width="425" height="349" src="http://www.youtube.com/embed/0E6DGUbRrO4" frameborder="0" allowfullscreen></iframe></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="center-block" style="max-width:500px">
+        <div class="embed-responsive embed-responsive-16by9" style=>
+          <iframe class="embed-responsive-item" width="50%" src="http://www.youtube.com/embed/0E6DGUbRrO4"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 .. _about_license:
 
@@ -124,3 +138,4 @@ Bitbucket.
    components
    features
    team
+   
