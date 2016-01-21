@@ -1,0 +1,1 @@
+$("#mycarousel").bcSwipe({ threshold: 50 });
