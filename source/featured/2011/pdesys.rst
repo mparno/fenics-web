@@ -15,12 +15,13 @@ About solving large systems of nonlinear PDEs
 ---------------------------------------------
 
 
-.. figure:: images/dolfin.gif
-   :align: right
-   :width: 360
+.. raw:: html
 
-
-
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/dolfin.gif" class="img-responsive"> 
+    </div>
+  </div>
 
 Computational Fluid Dynamics (CFD) presents many tough challenges for
 a scientific computing software. The Navier-Stokes equations that are used to
@@ -132,20 +133,18 @@ diffusor is provided in `cbc.rans-MekIT11.pdf <http://bazaar.launchpad.net/~cbc.
 are shown below:
 
 
-.. figure:: images/diffusor_F12.png
-   :align: left
-   :width: 400
+.. raw:: html
 
-
-
-
-
-.. figure:: images/diffusor_R12.png
-   :align: right
-   :width: 400
-
-
-
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
+        <img src="../../_images/diffusor_F12.png" class="img-responsive"> 
+      </div>
+      <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
+        <img src="../../_images/diffusor_R12.png" class="img-responsive">
+      </div>
+    </div>
+  </div>
 
 
 Nonlinear equations and linearization
@@ -422,11 +421,13 @@ The implementation of this model for the flow past a dolphin can be done as foll
 
 
 
-.. figure:: images/dolfin_temp.gif
-   :align: right
-   :width: 360
+.. raw:: html
 
-
+  <div class="container-fluid">
+    <div class="row">
+      <img src="../../_images/dolfin_temp.gif" class="img-responsive"> 
+    </div>
+  </div>
 
 
 The temporal evolution of the temperature is illustrated on the
