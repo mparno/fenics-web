@@ -40,16 +40,17 @@ features/results. We will notify you of abstract acceptance shortly
 after the submission deadline.
 
 * So, if you would like to contribute a talk, please think of a title
-  and some keywords, and write a short abstract in
+  and some keywords, and write a short abstract using
   [this LaTeX template](files/fenics16.tex) (think around 200 words),
-  and submit this file via the EasyChair FEniCS'16 submission site:
+  then compile with pdflatex and submit the pdf file
+  via the EasyChair FEniCS'16 submission site:
 
   https://easychair.org/conferences/?conf=fenics16
 
   Note that you need to create an EasyChair account if you do not
   have one already. Also you will need the
-  [anslistings.sty](files/anslistings.sty) file to compile the
-  template, but do not modify or submit this file.
+  [anslistings.sty](files/anslistings.sty) file to compile with
+  the template if you use source code listings.
 
 * If you would like to contribute a poster (in addition to or instead
   of a talk), please just let Martin Alnæs (martinal@simula.no) know
