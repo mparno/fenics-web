@@ -39,17 +39,27 @@ to the FEniCS community in your abstract and also to highlight new
 features/results. We will notify you of abstract acceptance shortly
 after the submission deadline.
 
-* If you would like to contribute a talk, please write a short
-  abstract (max 1 page, min 10 words) and submit your abstract in
-  pdf-format via email to Martin Alnæs (martinal@simula.no) by April
-  4 2016. **A LaTeX template for the abstracts will be made available
-  here soon**. Please include 'FEniCS16' in the subject of your email.
+* So, if you would like to contribute a talk, please think of a title
+  and some keywords, and write a short abstract using
+  :download:`this LaTeX template <files/fenics16.tex>` (think around 200 words),
+  then compile with pdflatex and submit the pdf file
+  via the EasyChair FEniCS'16 submission site:
+
+  https://easychair.org/conferences/?conf=fenics16
+
+  Note that you need to create an EasyChair account if you do not
+  have one already. Also you will need the
+  :download:`anslistings.sty <files/anslistings.sty>` file to compile with
+  the template if you use source code listings.
 
 * If you would like to contribute a poster (in addition to or instead
-  of a talk), please let Martin Alnæs (martinal@simula.no) know by
-  April 4 2016. Please include 'FEniCS16' in the subject of your email.
+  of a talk), please just let Martin AlnÃ¦s (martinal@simula.no) know
+  by April 4 2016. Please include 'FEniCS16 poster' in the subject of
+  your email.
 
-This year, the CBC will award the **Best Student FEniCS'16 Presentation Prize** to the student author(s) of the most outstanding presentation given at the FEniCS'16 workshop.
+This year, the CBC will award the **Best Student FEniCS'16
+Presentation Prize** to the student author(s) of the most outstanding
+presentation given at the FEniCS'16 workshop.
 
 
 Workshop program
@@ -132,14 +142,19 @@ Visitors to the CBC often stay at one of these options:
 Local organizing committee
 **************************
 
-- Martin Alnæs, CBC/Simula
+- Martin AlnÃ¦s, CBC/Simula
 - Tom Atkinson, CBC/Simula
 - Simon Funke, CBC/Simula
-- Marie E. Rognes, CBC/Simula
+- Marie E. Rognes, CBC/Simula (meg@simula.no)
 - Joakim Sundnes, CBC/Simula
+
+Please do not hesitate to contact us if you have further questions.
 
 Sponsors:
 *********
 
 FEniCS '16 is supported by Simula Research Laboratory and the Research
 Council of Norway via the Center for Biomedical Computing.
+
+.. image:: images/CBClogoII.png
+   :scale: 100%
