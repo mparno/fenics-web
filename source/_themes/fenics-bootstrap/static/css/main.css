@@ -59,7 +59,7 @@
   }
 
   .math {
-    overflow: auto;
+    overflow: inherit;
   }
 
   ul {
