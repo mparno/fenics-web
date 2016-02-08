@@ -34,7 +34,7 @@ Given such a mesh, finite element spaces (including all our favorite
 families of finite elements), measures and variational forms may be
 defined as usual. For instance, here is a code snippet that solves an
 elliptic equation over a mesh of a Gray's Klein bottle, a
-non-orientable two-dimensional surface embedded in three dimensions.
+non-orientable two-dimensional surface immersed in three dimensions.
 
 .. code-block:: python
 
@@ -71,7 +71,7 @@ are plotted below:
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
-        <img src="../../_images/klein_bottle.png" class="img-responsive"> 
+        <img src="../../_images/klein_bottle.png" class="img-responsive">
       </div>
       <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding-bottom: 10px;">
         <img src="../../_images/klein_solution.png" class="img-responsive">
@@ -80,7 +80,7 @@ are plotted below:
   </div>
 
 **Left:** A mesh of Gray's Klein bottle, a non-orientable two-dimensional
-surface without boundary embedded in 3D [2, 3]. **Right:** The solution to
+surface without boundary immersed in 3D [2, 3]. **Right:** The solution to
 the elliptic PDE example given above over this mesh.
 
 
