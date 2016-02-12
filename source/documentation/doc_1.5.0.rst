@@ -20,12 +20,11 @@ version you are looking for? See* :doc:`all versions <all>`.)
 
 .. raw:: html
 
-  <div id="main">
-  <div id="container" class="feature">
-    <div id="content">
-      <div id="sub-feature">
-	<div id="front-block-1" class="front-block block">
-          <h2> The FEniCS Tutorial </h2>
+  <div class="container-fuild">
+  <div class="row">
+  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 30px;">
+	  <div class="row">
+      <h4>The FEniCS Tutorial</h4>
 
 A good starting point for new users is the :doc:`FEniCS Tutorial
 <tutorial/index>`. The tutorial will help you get quickly up and
@@ -35,8 +34,10 @@ simplest approach to exploring FEniCS for beginners.
 
 .. raw:: html
 
-    <h2>The FEniCS Book</h2>
-    <a href="/book/"><img alt=''src='/_static/images/fenics_book_cover.png' class='avatar avatar-84 photo' width='84'/></a>
+      </div> <!-- tutorial -->
+      <div class="row">
+      <h4>The FEniCS Book</h4>
+        <a href="/book/"><img alt=''src='/_static/images/fenics_book_cover.png' class='pull-left' style="PADDING-LEFT: 5px; PADDING-RIGHT: 5px;" width='84'></a>
 
 :ref:`The FEniCS Book <book>`, *Automated Solution of Differential
 Equations by the Finite Element Method*, is a comprehensive (700
@@ -46,7 +47,9 @@ FEniCS Tutorial is included as the opening chapter of the FEniCS Book.
 
 .. raw:: html
 
-  <h2>The FEniCS Manual</h2>
+      </div><!-- book -->
+      <div class="row">
+     <h4>The FEniCS Manual</h4>
 
 `The FEniCS Manual
 <http://launchpad.net/fenics-book/trunk/final/+download/fenics-manual-2011-10-31.pdf>`__
@@ -56,7 +59,9 @@ documentation of DOLFIN and UFL.
 
 .. raw:: html
 
-  <h2>Additional Documentation</h2>
+  </div><!-- manual -->
+  <div class="row">
+  <h4>Additional Documentation</h4>
 
 `Mixing software with FEniCS
 <http://hplgit.github.io/fenics-mixed/doc/web/index.html>`__ is a
@@ -65,10 +70,12 @@ written in other languages.
 
 .. raw:: html
 
-  </div><!-- #front-block-1 .front-block .block-->
+  </div> <!-- additional doc-->
+  </div> <!-- right hand side-->
 
-  <div id="front-block-2" class="front-block block">
-    <h2>Demos</h2>
+  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 30px;">
+  <div class="row">
+  <h4>Demos</h4>
 
 A simple way to build your first FEniCS application is to copy and
 modify one of the existing demos:
@@ -81,7 +88,10 @@ be found in the ``demo`` directory of the DOLFIN source tree.
 
 .. raw:: html
 
-  <h2>Quick Programmer's References</h2>
+  </div> <!-- demo -->
+
+  <div class="row">
+  <h4>Quick Programmer's References</h4>
 
 Some of the classes and functions in DOLFIN are more frequently used
 than others. To learn more about these, take a look at the
@@ -92,7 +102,9 @@ than others. To learn more about these, take a look at the
 
 .. raw:: html
 
-  <h2>Complete Programmer's References</h2>
+  </div> <!--quick reference -->
+  <div class="row">
+  <h4>Complete Programmer's References</h4>
 
 * `All classes and functions in DOLFIN (Python) <../documentation/dolfin/1.5.0/python/genindex.html>`__
 * `All classes and functions in DOLFIN (C++) <../documentation/dolfin/1.5.0/cpp/genindex.html>`__
@@ -100,12 +112,10 @@ than others. To learn more about these, take a look at the
 
 .. raw:: html
 
-   </div><!-- #front-block-2 .front-block .block-->
-   </div><!-- #sub-feature -->
-     </div><!-- #content -->
-       </div><!-- #container .feature -->
-         </div><!-- #main -->
-
+  </div><!-- complete reference -->
+  </div><!-- right hand side-->
+  </div><!-- container fluid -->
+  </div><!-- row -->   
 
 ****************************
 The FEniCS Featured articles
