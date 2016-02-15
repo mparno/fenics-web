@@ -2,6 +2,10 @@
 FEniCS'16 at Center for Biomedical Computing, Simula Research Laboratory, May 18--20 2016
 #########################################################################################
 
+
+*Update: 15.02.2016: Registration is now open*
+
+
 We are pleased to announce the 2016 edition of the FEniCS workshop
 (FEniCS'16) which will take place **May 18--20 2016** at the `Center
 for Biomedical Computing <http://cbc.simula.no>`__ (CBC) at `Simula
@@ -26,6 +30,25 @@ Important dates:
 * Early-bird registration deadline: **May 1 2016**
 * Workshop: **May 18-20 2016**
 
+Registration
+************
+
+All participants must `register <http://tinyurl.com/zv8ep3z>`__ for
+the workshop.
+
+The registration fee before May 1 2016 will be **150 EUR**. After May
+1 2016, the registration fee will rise to **250 EUR**. The
+registration fee will cover lunch, dinner and other social events.
+
+.. raw:: html
+
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="VQ4YE262LF99G">
+  <input type="image" src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+
 Abstracts
 *********
 
@@ -39,27 +62,33 @@ to the FEniCS community in your abstract and also to highlight new
 features/results. We will notify you of abstract acceptance shortly
 after the submission deadline.
 
-* So, if you would like to contribute a talk, please think of a title
-  and some keywords, and write a short abstract using
-  :download:`this LaTeX template <files/fenics16.tex>` (think around 200 words),
-  then compile with pdflatex and submit the pdf file
-  via the EasyChair FEniCS'16 submission site:
+Contributing a talk
+-------------------
+
+So, if you would like to contribute a talk, please think of a title
+and some keywords, and write a short abstract using :download:`this
+LaTeX template <files/fenics16.tex>` (think around 200 words), then
+compile with pdflatex and submit the pdf file via the EasyChair
+FEniCS'16 submission site:
 
   https://easychair.org/conferences/?conf=fenics16
 
-  Note that you need to create an EasyChair account if you do not
-  have one already. Also you will need the
-  :download:`anslistings.sty <files/anslistings.sty>` file to compile with
-  the template if you use source code listings.
-
-* If you would like to contribute a poster (in addition to or instead
-  of a talk), please just let Martin AlnÃ¦s (martinal@simula.no) know
-  by April 4 2016. Please include 'FEniCS16 poster' in the subject of
-  your email.
+Note that you need to create an EasyChair account if you do not have
+one already. Also you will need the :download:`anslistings.sty
+<files/anslistings.sty>` file to compile with the template if you use
+source code listings.
 
 This year, the CBC will award the **Best Student FEniCS'16
 Presentation Prize** to the student author(s) of the most outstanding
 presentation given at the FEniCS'16 workshop.
+
+Contributing a poster
+---------------------
+
+If you would like to contribute a poster (in addition to or instead of
+a talk), please just let Martin Alnæs (martinal@simula.no) know by
+April 4 2016. Please include 'FEniCS16 poster' in the subject of your
+email.
 
 
 Workshop program
@@ -93,19 +122,6 @@ a day or two early to the experience this event.
 If you would like to stay longer for instance through weekend to visit
 more of Norway, you may consider for instance the `Norway in a
 Nutshell <http://www.norwaynutshell.com/>`__ Tours.
-
-
-Registration
-************
-
-All participants must register for the workshop. Registration is not
-yet open.
-
-The registration fee before May 1 2016 will be **150 EUR**. After May
-1 2016, the registration fee will rise to **250 EUR**. The
-registration fee will cover the social event on May 18, the workshop
-dinner on May 19 and lunch on May 19 and 20. Registration will close
-on May 18.
 
 Reaching the workshop
 *********************
@@ -142,7 +158,7 @@ Visitors to the CBC often stay at one of these options:
 Local organizing committee
 **************************
 
-- Martin AlnÃ¦s, CBC/Simula
+- Martin Alnæs, CBC/Simula
 - Tom Atkinson, CBC/Simula
 - Simon Funke, CBC/Simula
 - Marie E. Rognes, CBC/Simula (meg@simula.no)
