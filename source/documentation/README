@@ -38,11 +38,11 @@ More information:
 
 If you want to (re-)generate all the versions, run
 
-   python make_new_doc_python.py
+   python make_new_doc_page.py
 
 If you have messed things up, and want to try again:
 
 * remove *.rst
 * edit versions.py and
-* (re-)generate all the versions: python make_new_doc_python.py
+* (re-)generate all the versions: python make_new_doc_page.py
 * run ./new_release with latest version.
