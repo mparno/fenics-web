@@ -22,7 +22,7 @@ version you are looking for? See* :doc:`all versions <all>`.)
 
   <div class="container-fuild">
   <div class="row">
-  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 30px;">
+  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 20px;">
 	  <div class="row">
       <h4>The FEniCS Tutorial</h4>
 
@@ -73,7 +73,7 @@ written in other languages.
   </div> <!-- additional doc-->
   </div> <!-- right hand side-->
 
-  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 30px;">
+  <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6" style="padding: 20px;">
   <div class="row">
   <h4>Demos</h4>
 
