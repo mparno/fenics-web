@@ -24,7 +24,7 @@
       </div>
 
       <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">  
-            <h4 align="center"><strong>Jan Blechta</strong></h4>
+            <a href="http://www.karlin.mff.cuni.cz/~blechta/"><h4 align="center"><strong>Jan Blechta</strong></h4></a>
             <div class="row" align="center">
               <div class="image-cropper">
                  <div class="mugshot2" alt='Jan Blechta' style='background: url(/_static/images/mugshots/blechta.jpg) no-repeat 50% 50%' ></div>
@@ -38,8 +38,8 @@
               <a href="http://www.mff.cuni.cz/to.en/">Charles University in Prague</a>.
               </p>
               <p>
-              He has been involved with the FEniCS project since 2013 and is a
-              developer and maintainer of DOLFIN and Instant.
+              He has been involved with the FEniCS project since 2012 and is a
+              developer and maintainer of DOLFIN.
               </p>
               <p>You can view all Jan&#8217;s contributions on <a
               href="https://bitbucket.org/blechta">his Bitbucket
