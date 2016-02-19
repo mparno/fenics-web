@@ -5,7 +5,7 @@
             <h4 align="center"><strong>Martin Sandve Alnæs</strong></h4>
             <div class="row" align="center">
               <div class="image-cropper">
-               <div class="mugshot2" alt='Martin Sandve Alnæs' style='background: url(/_static/images/mugshots/alnaes.jpg) no-repeat 50% 50%' ></div>
+               <div class="mugshot2" alt='Martin Sandve Alnæs' style='background: url(../_static/images/mugshots/alnaes.jpg) no-repeat 50% 50%' ></div>
               </div>
             <div class="center-justified">
               <p>Martin is a postdoctoral fellow at <a
@@ -27,7 +27,7 @@
             <a href="http://www.karlin.mff.cuni.cz/~blechta/"><h4 align="center"><strong>Jan Blechta</strong></h4></a>
             <div class="row" align="center">
               <div class="image-cropper">
-                 <div class="mugshot2" alt='Jan Blechta' style='background: url(/_static/images/mugshots/blechta.jpg) no-repeat 50% 50%' ></div>
+                 <div class="mugshot2" alt='Jan Blechta' style='background: url(../_static/images/mugshots/blechta.jpg) no-repeat 50% 50%' ></div>
               </div>
             </div>
             <div class="center-justified">
@@ -51,7 +51,7 @@
             <h4 align="center"><strong>Johan Hake</strong></h4>
             <div class="row" align="center">
               <div class="image-cropper">
-                <div class="mugshot2" alt='Johan Hake' style='background: url(/_static/images/mugshots/hake.jpg) no-repeat 50% 50%' ></div>
+                <div class="mugshot2" alt='Johan Hake' style='background: url(../_static/images/mugshots/hake.jpg) no-repeat 50% 50%' ></div>
               </div>
             </div>
             <div class="center-justified">  
@@ -76,7 +76,7 @@
             <h4 align="center"><strong>Johan Hoffman</strong></h4>
             <div class="row" align="center">
               <div class="image-cropper">
-                <div class="mugshot2" alt='Johan Hoffman' style='background: url(/_static/images/mugshots/hoffman.jpg) no-repeat 50% 50%' ></div>
+                <div class="mugshot2" alt='Johan Hoffman' style='background: url(../_static/images/mugshots/hoffman.jpg) no-repeat 50% 50%' ></div>
               </div>
             </div>
             <div class="center-justified">
@@ -91,7 +91,7 @@
             <h4 align="center"><strong>Johan Jansson</strong></h4>
             <div class="row" align="center">
               <div class="image-cropper">
-                <div class="mugshot2" alt='Johan Jansson' style='background: url(/_static/images/mugshots/jansson.jpg) no-repeat 50% 50%' ></div>
+                <div class="mugshot2" alt='Johan Jansson' style='background: url(../_static/images/mugshots/jansson.jpg) no-repeat 50% 50%' ></div>
               </div>
             </div>
             <div class="center-justified">
@@ -107,7 +107,7 @@
             <h4 align="center"><strong>Benjamin Kehlet</strong></h4>
             <div class="row" align="center">
               <div class="image-cropper">
-                <div class="mugshot2" alt='Benjamin Kehlet' style='background: url(/_static/images/mugshots/kehlet.jpg) no-repeat 50% 50%' ></div>
+                <div class="mugshot2" alt='Benjamin Kehlet' style='background: url(../_static/images/mugshots/kehlet.jpg) no-repeat 50% 50%' ></div>
               </div>
             </div>
             <div class="center-justified">  
@@ -133,7 +133,7 @@
           <h4 align="center"><strong>Robert C. Kirby</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Robert C. Kirby' style='background: url(/_static/images/mugshots/kirby.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Robert C. Kirby' style='background: url(../_static/images/mugshots/kirby.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -150,7 +150,7 @@
           <a href="http://www.math.chalmers.se/~logg/"><h4 align="center"><strong>Anders Logg</strong></h4></a>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Anders Logg' style='background: url(/_static/images/mugshots/logg.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Anders Logg' style='background: url(../_static/images/mugshots/logg.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -172,7 +172,7 @@
           <h4 align="center"><strong>Kent-Andre Mardal</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Kent-Andre Mardal' style='background: url(/_static/images/mugshots/mardal.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Kent-Andre Mardal' style='background: url(../_static/images/mugshots/mardal.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">  
@@ -195,7 +195,7 @@
           <h4 align="center"><strong>Andre Massing</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Andre Massing' style='background: url(/_static/images/mugshots/massing.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Andre Massing' style='background: url(../_static/images/mugshots/massing.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -216,7 +216,7 @@
           <h4 align="center"><strong>Harish Narayanan</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Harish Narayanan' style='background: url(/_static/images/mugshots/harish.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Harish Narayanan' style='background: url(../_static/images/mugshots/harish.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -240,7 +240,7 @@
           <h4 align="center"><strong>Chris Richardson</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Chris Richardson' style='background: url(/_static/images/mugshots/chris_richardson.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Chris Richardson' style='background: url(../_static/images/mugshots/chris_richardson.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">  
@@ -263,7 +263,7 @@
           <h4 align="center"><strong>Johannes Ring</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Johannes Ring' style='background: url(/_static/images/mugshots/ring.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Johannes Ring' style='background: url(../_static/images/mugshots/ring.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -283,7 +283,7 @@
           <h4 align="center"><strong>Marie Rognes</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Marie Rognes' style='background: url(/_static/images/mugshots/rognes.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Marie Rognes' style='background: url(../_static/images/mugshots/rognes.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -304,7 +304,7 @@
           <h4 align="center"><strong>Kristoffer Selim</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Kristoffer Selim' style='background: url(/_static/images/mugshots/selim.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Kristoffer Selim' style='background: url(../_static/images/mugshots/selim.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">  
@@ -325,7 +325,7 @@
           <h4 align="center"><strong>Ridgway Scott</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Ridgway Scott' style='background: url(/_static/images/mugshots/scott.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Ridgway Scott' style='background: url(../_static/images/mugshots/scott.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -340,7 +340,7 @@
           <h4 align="center"><strong>Garth N. Wells</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Garth N. Wells' style='background: url(/_static/images/mugshots/wells.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Garth N. Wells' style='background: url(../_static/images/mugshots/wells.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">
@@ -362,7 +362,7 @@
           <h4 align="center"><strong>Kristian Breum Ølgaard</strong></h4>
           <div class="row" align="center">
             <div class="image-cropper">
-              <div class="mugshot2" alt='Kristian Breum Ølgaard' style='background: url(/_static/images/mugshots/oelgaard.jpg) no-repeat 50% 50%' ></div>
+              <div class="mugshot2" alt='Kristian Breum Ølgaard' style='background: url(../_static/images/mugshots/oelgaard.jpg) no-repeat 50% 50%' ></div>
             </div>
           </div>
           <div class="center-justified">  
