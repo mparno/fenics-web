@@ -18,6 +18,23 @@ are those of the C++/Python problem solving environment :ref:`DOLFIN
 (*This page accesses the FEniCS 1.6.0 documentation. Not the
 version you are looking for? See* :doc:`all versions <all>`.)
 
+.. note::
+
+    Documentation for the FEniCS Project is being migrated to Read the
+    Docs. The documentation under development can be viewed at
+    http://fenics.readthedocs.org/.
+
+.. note::
+
+    The FEniCS Tutorial and FEniCS Book are compatible with FEniCS
+    1.0. FEniCS is constantly improving, with new functionality and
+    improved performance which means there have been changes since the
+    1.0 release in 2011.
+
+    Using with the latest FEniCS release is recommended, and the demo
+    programs that come with DOLFIN are the best place to start
+    learning to use FEniCS.
+
 .. raw:: html
 
   <div class="container-fuild">
@@ -42,8 +59,8 @@ simplest approach to exploring FEniCS for beginners.
 :ref:`The FEniCS Book <book>`, *Automated Solution of Differential
 Equations by the Finite Element Method*, is a comprehensive (700
 pages) book documenting the mathematical methodology behind the FEniCS
-Project and the software developed as part of the FEniCS Project. The
-FEniCS Tutorial is included as the opening chapter of the FEniCS Book.
+Project and the software developed as part of the FEniCS Project.
+
 
 .. raw:: html
 
@@ -115,7 +132,7 @@ than others. To learn more about these, take a look at the
   </div><!-- complete reference -->
   </div><!-- right hand side-->
   </div><!-- container fluid -->
-  </div><!-- row -->   
+  </div><!-- row -->
 
 ****************************
 The FEniCS Featured articles

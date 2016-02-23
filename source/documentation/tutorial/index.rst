@@ -8,6 +8,13 @@ FEniCS tutorial (Python)
 
 *Written by Hans Petter Langtangen*
 
+.. note::
+
+    This tutorial is for FEniCS 1.0. For the most recent release of
+    FEniCS, see the demo programs distributed with DOLFIN for the
+    latest syntax.
+
+
 This document presents a FEniCS tutorial to get new users quickly up
 and running with solving differential equations. FEniCS can be
 programmed both in C++ and Python, but this tutorial focuses
