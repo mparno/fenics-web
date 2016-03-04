@@ -32,6 +32,29 @@ everything needed to get you started with FEniCS.
 For information on user contributed binary packages, see
 :ref:`contributed_packages`.
 
+*************
+Docker images
+*************
+
+Docker_ allows us to build, ship and run FEniCS on almost any platform with just
+one command::
+
+    docker run -ti fenicsproject/stable
+
+You will be presented with an environment where you can run the latest version
+of FEniCS with all of the complex dependencies (HDF5, PETSc, SLEPc, petsc4py,
+slepc4py, MPI etc.) already compiled.
+
+To get started, install Docker_ for your platform (Windows, Mac OS X, Linux,
+cloud environment, and many others) using the instructions at
+https://docs.docker.com/engine/installation/. There are no other installation
+requirements or dependencies.
+
+We provide a range of Docker images to meet the varied needs of developers,
+advanced and first time users. For more details see the instructions at
+https://bitbucket.org/fenics-project/docker.
+
+.. _Docker: https://docker.com
 
 **********************************
 Installation from *conda* packages
