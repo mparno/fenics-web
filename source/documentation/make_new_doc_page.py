@@ -26,14 +26,14 @@ version you are looking for? See* :doc:`all versions <all>`.)
 
 .. note::
 
-    The FEniCS Tutorial and FEniCS Book are compatible with FEniCS
-    1.0. FEniCS is constantly improving, with new functionality and
-    improved performance which means there have been changes since the
-    1.0 release in 2011.
+    The FEniCS Book is compatible with FEniCS 1.0. FEniCS is
+    constantly improving, with new functionality and improved
+    performance which means there have been changes since the 1.0
+    release in 2011.
 
-    Using with the latest FEniCS release is recommended, and the demo
-    programs that come with DOLFIN are the best place to start
-    learning to use FEniCS.
+    We recommend that you use the latest FEniCS release. The demo
+    programs that come with DOLFIN and the updated FEniCS tutorial are
+    the best places to start learning to use FEniCS.
 
 .. raw:: html
 
@@ -43,11 +43,12 @@ version you are looking for? See* :doc:`all versions <all>`.)
 	  <div class="row">
       <h4>The FEniCS Tutorial</h4>
 
-A good starting point for new users is the :doc:`FEniCS Tutorial
-<tutorial/index>`. The tutorial will help you get quickly up and
-running with solving differential equations in FEniCS. The tutorial
-focuses exclusively on the FEniCS Python interface, since this is the
-simplest approach to exploring FEniCS for beginners.
+A good starting point for new users is the `FEniCS 1.6 Tutorial
+<http://hplgit.github.io/fenics-tutorial/doc/web/index.html>`__. The
+tutorial will help you get quickly up and running with solving
+differential equations in FEniCS. The tutorial focuses exclusively on
+the FEniCS Python interface, since this is the simplest approach to
+exploring FEniCS for beginners.
 
 .. raw:: html
 
