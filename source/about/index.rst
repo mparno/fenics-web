@@ -50,11 +50,6 @@ components include the problem-solving environment :ref:`DOLFIN
     </div>
   </div>
 
-
-Building on these components, software specialized to solving
-different problems are organised into separate :doc:`applications
-<../applications/index>`.
-
 ************
 Contributors
 ************

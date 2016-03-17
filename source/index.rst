@@ -10,7 +10,6 @@
     about/index
     download/index
     documentation/index
-    applications/index
     contributing/index
     citing/index
     support/index
