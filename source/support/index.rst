@@ -1,8 +1,8 @@
 .. _support:
 
-#######
-Support
-#######
+########################
+Support for FEniCS users
+########################
 
 This page describes how to get in contact to solve problems you might
 encounter when using FEniCS.

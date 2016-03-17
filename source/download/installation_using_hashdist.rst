@@ -4,6 +4,31 @@
 Installation from source using HashDist
 ***************************************
 
+Requirements
+============
+
+Requirements for Linux (Ubuntu package name in parentheses):
+
+* The Python 2.7 development files (``python-dev``)
+* The Git version control system (``git``)
+* A C compiler and a C++ compiler with C++11 support
+  (``build-essential``)
+* A Fortran compiler (``gfortran``)
+* The OpenGL development files (``freeglut3-dev``)
+
+Requirements for OS X:
+
+* The latest version of Xcode `from the Apple developer website
+  <https://developer.apple.com/downloads/index.action>`__ or get it
+  `using the Mac App Store
+  <http://itunes.apple.com/us/app/xcode/id497799835>`__
+* The Xcode Command Line Developer Tools (run ``xcode-select --install`` in
+  a terminal after installing Xcode)
+* The Git version control system
+
+Configuration
+=============
+
 The ``fenics-install.sh`` script is a nice tool to get a FEniCS
 installation up and running with little effort. However, the default
 installation given by ``fenics-install.sh`` is not always what we
