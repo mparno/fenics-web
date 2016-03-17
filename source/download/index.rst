@@ -115,8 +115,10 @@ our :ref:`FEniCS contributed packages page <contributed_packages>`.
 FEniCS versions and releases
 ****************************
 
-The latest stable release of FEniCS is version 1.6.0, which was on
-released 2015-07-28.
+The latest stable release of FEniCS is version
+1.6.0,
+which was released on
+2015-07-28.
 
 For more information about FEniCS releases and
 changes, take a look at :ref:`release_notes`. For information on
