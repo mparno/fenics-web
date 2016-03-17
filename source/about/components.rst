@@ -28,10 +28,12 @@ assembly. To provide a simple and consistent user interface, DOLFIN
 wraps the functionality of other FEniCS components and external
 software, and handles the communication between these components.
 
+
 Maintainers (in alphabetical order)
 ===================================
 
-Johan Hake, Anders Logg, Garth N. Wells
+Johan Hake, Anders Logg, Chris Richardson, Garth N. Wells
+
 
 Authors (past and present in chronological order)
 =================================================
@@ -41,10 +43,11 @@ Skavhaug, Kent-Andre Mardal, Martin Sandve Alnes, Johan Hake, Niclas
 Jansson, Johannes Ring, Kristian B. Ølgaard, Marie Rognes
 
 For a full list of contributors, refer to the file `AUTHORS
-<https://bitbucket.org/fenics-project/dolfin/raw/master/AUTHORS>`__
-in the DOLFIN source tree.
+<https://bitbucket.org/fenics-project/dolfin/raw/master/AUTHORS>`__ in
+the DOLFIN source tree.
 
 .. _about_components_ffc:
+
 
 **************************************************
 `FFC <https://bitbucket.org/fenics-project/ffc>`__
@@ -61,25 +64,29 @@ variational problem.
 
   <div class="container-fluid">
     <div class="row">
-      <img src="../_images/ufl-ffc-ufc.png" class="img-responsive" alt="UFL-FFC-UFC"> 
+      <img src="../_images/ufl-ffc-ufc.png" class="img-responsive" alt="UFL-FFC-UFC">
     </div>
   </div>
 
 Maintainers (in alphabetical order)
 ===================================
 
-Anders Logg, Kristian B. Ølgaard, Marie Rognes, Garth N. Wells
+Martin Sandve Alnes, Anders Logg, Kristian B. Ølgaard, Marie Rognes,
+Garth N. Wells
+
 
 Authors (past and present in chronological order)
 =================================================
 
-Anders Logg, Marie Rognes, Kristian Oelgaard, Garth N. Wells
+Martin Sandve Alnes, Anders Logg, Marie Rognes, Kristian Oelgaard,
+Garth N. Wells
 
 For a full list of contributors, refer to the file `AUTHORS
 <https://bitbucket.org/fenics-project/ffc/raw/master/AUTHORS>`__ in
 the FFC source tree.
 
 .. _about_components_fiat:
+
 
 ****************************************************
 `FIAT <https://bitbucket.org/fenics-project/fiat>`__
@@ -99,6 +106,7 @@ Maintainers (in alphabetical order)
 
 Robert C. Kirby
 
+
 Authors (past and present in chronological order)
 =================================================
 
@@ -107,6 +115,7 @@ Robert C. Kirby, Anders Logg, Marie Rognes
 For a full list of contributors, refer to the file `AUTHORS
 <https://bitbucket.org/fenics-project/fiat/raw/master/AUTHORS>`__ in
 the FIAT source tree.
+
 
 .. _about_components_instant:
 
@@ -122,8 +131,8 @@ and Distutils. Instant is used by FFC and DOLFIN for just-in-time
 Maintainers (in alphabetical order)
 ===================================
 
-.. note::
-   Add list of Instant maintainers.
+Martin Sandve Alnes
+
 
 Authors (past and present in chronological order)
 =================================================
@@ -192,92 +201,3 @@ For a full list of contributors, refer to the file `AUTHORS
 the UFL source tree.
 
 .. _about_components_additional:
-
-#####################
-Additional components
-#####################
-
-.. _about_components_ascot:
-
-***************************************
-`ASCoT <https://launchpad.net/ascot>`__
-***************************************
-
-Maintainers (in alphabetical order)
-===================================
-
-Marie Rognes
-
-Authors (past and present in chronological order)
-=================================================
-
-Marie Rognes
-
-For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~ascot-core-team/ascot/main/view/head:/AUTHORS>`__
-in the ASCoT source tree.
-
-.. _about_components_dorsal:
-
-********************************************************
-`Dorsal <https://bitbucket.org/fenics-project/dorsal>`__
-********************************************************
-
-Dorsal is a shell script that simplifies the installation of FEniCS on
-operating platforms that we do not support with prebuilt binaries. It
-does this by automating the process of fetching, compiling, and
-installing the various FEniCS sub-projects and their requisite
-dependencies on many different platforms.
-
-Primary author and maintainer
-=============================
-
-Harish Narayanan
-
-Major contributors (ordered by number of commits)
-=================================================
-
-Garth N. Wells, Anders Logg, Joachim B. Haga, Johannes Ring, Roman
-Putanowicz and Ilmar Wilbers.
-
-For a full list of contributors, refer to the file `AUTHORS
-<https://bitbucket.org/fenics-project/dorsal/raw/master/AUTHORS>`__ in
-the Dorsal source tree.
-
-##################
-Retired components
-##################
-
-.. _about_components_syfi:
-
-************************************************
-`SyFi/SFC <https://launchpad.net/fenics-syfi>`__
-************************************************
-
-Authors (past and present in chronological order)
-=================================================
-
-Kent-Andre Mardal, Martin Sandve Alnes
-
-For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~syfi-core/fenics-syfi/main/view/head:/AUTHORS>`__
-in the SyFi source tree.
-
-.. _about_components_viper:
-
-**********************************************
-`Viper <https://launchpad.net/fenics-viper>`__
-**********************************************
-
-Viper is a minimalistic scientific plotter and run-time visualization
-module based on VTK. If installed, Viper provides built-in plotting
-for DOLFIN.
-
-Authors (past and present in chronological order)
-=================================================
-
-Ola Skavhaug
-
-For a full list of contributors, refer to the file `AUTHORS
-<https://bazaar.launchpad.net/~viper-core/fenics-viper/main/view/head:/AUTHORS>`__
-in the Viper source tree.

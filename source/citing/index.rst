@@ -7,18 +7,18 @@ How to cite us
 If you use FEniCS in your research, the developers would be grateful
 if you would cite the relevant publications. FEniCS is organized as a
 collection of components, so to give proper credit to the developers
-of FEniCS, please cite the indicated references **for each
-relevant component**.
+of FEniCS, please cite the indicated references **for each relevant
+component**.
 
 A more :ref:`extensive bibliography <bibliography>` can be found at
-the bottom of this page. The bibliography is also available in
-`BibTeX format </_static/bibliography/fenics.bib>`_.
+the bottom of this page. The bibliography is also available in `BibTeX
+format </_static/bibliography/fenics.bib>`_.
 
 FEniCS
 ------
 
 * **M. S. Alnæs, J. Blechta, J. Hake, A. Johansson, B. Kehlet, A. Logg, C. Richardson, J. Ring, M. E. Rognes and G. N. Wells (2015)**.
-  *The FEniCS Project Version 1.5*,
+ *The FEniCS Project Version 1.5*,
   Archive of Numerical Software,
   3(100),
   [`doi:10.11588/ans.2015.100.20553 <http://dx.doi.org/10.11588/ans.2015.100.20553>`_].
@@ -120,40 +120,6 @@ UFC
   Springer,
   Chapter 16.
 
-SyFi
-----
-
-* **M. S. Alnæs and K.-A. Mardal (2010)**.
-  *On the Efficiency of Symbolic Computations Combined With Code Generation for Finite Element Methods*,
-  ACM Transactions on Mathematical Software,
-  37(1).
-  [`doi:10.1145/1644001.1644007 <http://dx.doi.org/10.1145/1644001.1644007>`_]
-
-* **M. S. Alnæs and K.-A. Mardal (2010)**.
-  *SyFi and SFC: Symbolic Finite Elements and Form Compilation*,
-  Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Springer,
-  Chapter 15.
-
-Unicorn
--------
-
-* **J. Hoffman, J. Jansson, R. V. d. Abreu, C. Degirmenci, N. Jansson, K. Müller, M. Nazarov and J. H. Spühler (2012)**.
-  *Unicorn: Parallel Adaptive Finite Element Simulation of Turbulent Flow and Fluid-Structure Interaction for Deforming Domains and Complex Geometry*,
-  Computer and Fluids,
-  in press.
-
-* **J. Hoffman, J. Jansson, C. Degirmenci, N. Jansson and M. Nazarov (2012)**.
-  *Unicorn: a Unified Continuum Mechanics Solver*,
-  Automated Solution of Differential Equations by the Finite Element Method, Volume 84 of Lecture Notes in Computational Science and Engineering,
-  Springer,
-  Chapter 18.
-
-* **N. Jansson, J. Jansson and J. Hoffman (2012)**.
-  *Framework for Massively Parallel Adaptive Finite Element Computational Fluid Dynamics on Tetrahedral Meshes*,
-  SIAM Journal on Scientific Computing,
-  34(1),
-  pp. C24-C41.
 
 Bibliography
 ------------

@@ -31,22 +31,22 @@ performance linear algebra and many more.
 Components
 **********
 
-FEniCS is organized as a collection of interoperable
-:ref:`components <about_components>` that
-together form the FEniCS Project. These components include the
-problem-solving environment :ref:`DOLFIN <about_components_dolfin>`,
-the form compiler :ref:`FFC <about_components_ffc>`, the finite
-element tabulator :ref:`FIAT <about_components_fiat>`, the
-just-in-time compiler :ref:`Instant <about_components_instant>`, the
-code generation interface :ref:`UFC <about_components_ufc>`, the form
-language :ref:`UFL <about_components_ufl>` and a range of
-:ref:`additional components <about_components_additional>`.
+FEniCS is organized as a collection of interoperable :ref:`components
+<about_components>` that together form the FEniCS Project. These
+components include the problem-solving environment :ref:`DOLFIN
+<about_components_dolfin>`, the form compiler :ref:`FFC
+<about_components_ffc>`, the finite element tabulator :ref:`FIAT
+<about_components_fiat>`, the just-in-time compiler :ref:`Instant
+<about_components_instant>`, the code generation interface :ref:`UFC
+<about_components_ufc>`, the form language :ref:`UFL
+<about_components_ufl>` and a range of :ref:`additional components
+<about_components_additional>`.
 
 .. raw:: html
 
   <div class="container-fluid">
     <div class="row">
-      <img src="../_images/fenics-map.png" class="img-responsive" alt="Fenics Map"> 
+      <img src="../_images/fenics-map.png" class="img-responsive" alt="Fenics Map">
     </div>
   </div>
 
@@ -61,8 +61,8 @@ Contributors
 
 The FEniCS Project is developed by :ref:`researchers from a number of
 research institutes <team>` from around the world. The following
-research institutes (in alphabetical order) contribute
-to the FEniCS Project:
+research institutes (in alphabetical order) contribute to the FEniCS
+Project:
 
 * `Baylor University <http://www.baylor.edu>`__
 * `Chalmers University of Technology <http://www.chalmers.se>`__
@@ -71,10 +71,9 @@ to the FEniCS Project:
 * `University of Cambridge <http://www.cam.ac.uk>`__
 * `University of Chicago <http://www.uchicago.edu/index.shtml>`__
 
-Contributions have also been made by researchers from
-`Delft University of Technology <http://www.tudelft.nl>`__,
-`Argonne National Laboratory <http://www.anl.gov>`__
-and many other research institutes.
+Contributions have also been made by researchers from `Delft
+University of Technology <http://www.tudelft.nl>`__, `Argonne National
+Laboratory <http://www.anl.gov>`__ and many other research institutes.
 A full list of contributors is maintained as part of the source code
 of each FEniCS component.
 
@@ -138,4 +137,3 @@ Bitbucket.
    components
    features
    team
-   

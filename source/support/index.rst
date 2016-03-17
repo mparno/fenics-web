@@ -26,8 +26,8 @@ Before posting your question, please consider the following points:
 * Search the forum to check that your question has not been answered
   before.
 
-* Formulate your question carefully. If we cannot understand your question,
-  we probably cannot help you.
+* Formulate your question carefully. If we cannot understand your
+  question, we probably cannot help you.
 
 * Post complete, but *minimal* code examples. No one wants to read
   through your complex application code.
@@ -60,8 +60,8 @@ announcements of workshops, releases, tutorials, papers. Everyone is
 invited to subscribe to the mailing list and take part in discussions.
 
 The `FEniCS support mailing list
-<https://groups.google.com/forum/#!forum/fenics-support>`_ is a
-place to ask specific questions related to obtaining, building, or
+<https://groups.google.com/forum/#!forum/fenics-support>`_ is a place
+to ask specific questions related to obtaining, building, or
 installing FEniCS components.
 
 

@@ -43,9 +43,9 @@ for example:
     };
 
 In the above example, the function should be named ``size`` rather
-than ``get_size``. On the other hand, a function not returning a
-value but rather taking a variable (by reference) and assigning a value
-to it, should use the ``get_foo`` naming scheme, for example:
+than ``get_size``. On the other hand, a function not returning a value
+but rather taking a variable (by reference) and assigning a value to
+it, should use the ``get_foo`` naming scheme, for example:
 
 .. code-block:: c++
 
@@ -90,9 +90,8 @@ File names
 ^^^^^^^^^^
 
 Use camel caps for file names if they contain the
-declaration/definition of a class. Header files should have the
-suffix ``.h`` and implementation files should have the
-suffix ``.cpp``:
+declaration/definition of a class. Header files should have the suffix
+``.h`` and implementation files should have the suffix ``.cpp``:
 
 .. code-block:: c++
 
@@ -142,8 +141,8 @@ sentences). Here's a good example from ``TopologyComputation.cpp``:
     ...
 
 Always use ``//`` for comments and ``///`` for documentation (see
-:ref:`styleguides_sphinx_documenting_interface`). Never use ``/* ... */``, not
-even for comments that runs over multiple lines.
+:ref:`styleguides_sphinx_documenting_interface`). Never use ``/*
+... */``, not even for comments that runs over multiple lines.
 
 Integers and reals
 ^^^^^^^^^^^^^^^^^^
@@ -203,9 +202,6 @@ Header files should follow the below template:
     // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
     //
     // Modified by Bar Foo 2008
-    //
-    // First added:  2008-01-01
-    // Last changed: 2008-02-01
 
     #ifndef __FOO_H
     #define __FOO_H
@@ -258,9 +254,6 @@ Implementation files should follow the below template:
     // along with DOLFIN. If not, see <http://www.gnu.org/licenses/>.
     //
     // Modified by Bar Foo 2008
-    //
-    // First added:  2008-01-01
-    // Last changed: 2008-02-01
 
     #include <dolfin/Foo.h>
 
@@ -278,8 +271,8 @@ Implementation files should follow the below template:
     }
     //-----------------------------------------------------------------------------
 
-The horizontal lines above (including the slashes) should be exactly 79
-characters wide.
+The horizontal lines above (including the slashes) should be exactly
+79 characters wide.
 
 Including header files and using forward declarations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -296,7 +289,8 @@ risk of cyclic dependencies.
 Explicit constructors
 ^^^^^^^^^^^^^^^^^^^^^
 
-Make all one argument constructors (except copy constructors) explicit:
+Make all one argument constructors (except copy constructors)
+explicit:
 
 .. code-block:: c++
 
@@ -308,8 +302,8 @@ Make all one argument constructors (except copy constructors) explicit:
 Virtual functions
 ^^^^^^^^^^^^^^^^^
 
-Always declare inherited virtual functions as virtual in the subclasses.
-This makes it easier to spot which functions are virtual.
+Always declare inherited virtual functions as virtual in the
+subclasses.  This makes it easier to spot which functions are virtual.
 
 .. code-block:: c++
 
@@ -342,8 +336,8 @@ arguments (``char* argv[]``).
 Prefer smart pointers over plain pointers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``boost::shared_ptr`` and ``boost::scoped_ptr`` in favour of plain
+Use ``std::shared_ptr`` and ``std::unique_ptr`` in favour of plain
 pointers. Smart pointers reduce the likelihood of memory leaks and
-make ownership clear. Use ``scoped_ptr`` for a pointer that is not
+make ownership clear. Use ``unique_ptr`` for a pointer that is not
 shared and ``shared_ptr`` when multiple pointers point to the same
 object.

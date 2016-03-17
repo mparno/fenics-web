@@ -32,11 +32,12 @@ the `FEniCS Project on Bitbucket
 Obtaining the source code
 *************************
 
-FEniCS uses `Bitbucket <http://bitbucket.org>`__ for hosting code. Each FEniCS component has a
-`Git <http://git-scm.com/>`_ repository on Bitbucket that contains all
-source code (including the entire development history). The
-repositories are readable for everyone, but write access is only
-granted to the members of the core teams.
+FEniCS uses `Bitbucket <http://bitbucket.org>`__ for hosting
+code. Each FEniCS component has a `Git <http://git-scm.com/>`_
+repository on Bitbucket that contains all source code (including the
+entire development history). The repositories are readable for
+everyone, but write access is only granted to the members of the core
+teams.
 
 ======================================
 Accessing the development repositories
@@ -47,10 +48,9 @@ revision control system Git. Visit the `Git web page
 <http://git-scm.com/>`__ for instructions on how to install Git on
 your operating system.
 
-Once Git has been installed, you can access the development
-repository of any FEniCS project by the ``git`` command. For example,
-to check out the source code for DOLFIN, simply issue the following
-command::
+Once Git has been installed, you can access the development repository
+of any FEniCS project by the ``git`` command. For example, to check
+out the source code for DOLFIN, simply issue the following command::
 
     git clone https://bitbucket.org/fenics-project/dolfin.git
 
@@ -86,9 +86,9 @@ Contributing code
 
 Unless you are a core developer, you will not be able to upload any
 code to the main code repositories directly. Instead you will have to
-create your own branch and make a merge
-request on Bitbucket. If the code is accepted, the patch or branch
-will be merged into the main branch by a core developer.
+create your own branch and make a merge request on Bitbucket. If the
+code is accepted, the patch or branch will be merged into the main
+branch by a core developer.
 
 If you are not familiar with `Git <http://git-scm.com/>`__, the
 distributed revision control system used for all FEniCS components, a
@@ -116,9 +116,10 @@ Copyright and licensing consent
 ===============================
 
 Before your contribution can be accepted into FEniCS, you must sign a
-`copyright consent form <http://fenicsproject.org/pub/copyright/forms/>`_.
-Ideally, both you and your employer should sign a form. After you have
-signed the form, send it by regular mail to
+`copyright consent form
+<http://fenicsproject.org/pub/copyright/forms/>`_.  Ideally, both you
+and your employer should sign a form. After you have signed the form,
+send it by regular mail to
 
   | Johannes Ring
   | Simula Research Laboratory
@@ -126,9 +127,9 @@ signed the form, send it by regular mail to
   | 1325 Lysaker
   | Norway
 
-Copies of signed consent forms are archived for
-`authors <http://fenicsproject.org/pub/copyright/authors>`_
-and `institutions <http://fenicsproject.org/pub/copyright/institutions>`_.
+Copies of signed consent forms are archived for `authors
+<http://fenicsproject.org/pub/copyright/authors>`_ and `institutions
+<http://fenicsproject.org/pub/copyright/institutions>`_.
 
 ============
 Git workflow
@@ -138,8 +139,8 @@ FEniCS development follows the `gitworkflows
 <https://www.kernel.org/pub/software/scm/git/docs/gitworkflows.html>`__
 model (with the exception of 'pu' branches). Developers should read up
 on the gitworkflows model and understand the role of 'master', 'next'
-and 'topic branches'. The same workflow is used by the developers
-of `PETSc <http://www.mcs.anl.gov/petsc/>`__. The `PETSc Wiki
+and 'topic branches'. The same workflow is used by the developers of
+`PETSc <http://www.mcs.anl.gov/petsc/>`__. The `PETSc Wiki
 <https://bitbucket.org/petsc/petsc/wiki/Home>`__ has some good
 information on both Git usage and the gitworkflows model.
 
@@ -154,8 +155,8 @@ Contributing FEniCS Featured articles
 The :ref:`Featured_articles` are short descriptions of FEniCS
 highlights: new FEniCS features, new applications of FEniCS or current
 FEniCS Events. At any given time, the slide show on the `FEniCS main
-page <http://www.fenicsproject.org>`__. highlights a selection of these
-articles.
+page <http://www.fenicsproject.org>`__. highlights a selection of
+these articles.
 
 All FEniCS developers and users are encouraged to contribute Featured
 articles. Detailed instructions are given here: `How to contribute a
