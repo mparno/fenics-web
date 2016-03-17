@@ -178,11 +178,3 @@ much more than 2-3 paragraphs. Contributions are very welcome --
 please send your input to Marie Rognes (meg@simula.no). Plain text
 input is perfect, we will format your text to make it web ready and
 possibly make minor edits to ensure a consistent style.
-
-.. include linked documents in toctree to avoid Sphinx warning
-.. toctree::
-    :maxdepth: 1
-    :hidden:
-
-    styleguide_cpp
-    styleguide_doc
