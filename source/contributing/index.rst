@@ -148,20 +148,27 @@ A summary of useful Git commands for some common use cases can be
 found in the `Git cookbook for FEniCS developers
 <https://bitbucket.org/fenics-project/dolfin/wiki/Git%20cookbook%20for%20FEniCS%20developers>`__.
 
-*************************************
-Contributing FEniCS Featured articles
-*************************************
+************************************
+Contributing Featured FEniCS stories
+************************************
 
-The :ref:`Featured_articles` are short descriptions of FEniCS
-highlights: new FEniCS features, new applications of FEniCS or current
-FEniCS Events. At any given time, the slide show on the `FEniCS main
-page <http://www.fenicsproject.org>`__. highlights a selection of
-these articles.
+The :ref:`Featured_articles` are short descriptions of FEniCS-related
+research highlights or new developments.  At any given time, the slide
+show on the `FEniCS main page <http://www.fenicsproject.org>`__
+highlights a selection of these stories.
 
-All FEniCS developers and users are encouraged to contribute Featured
-articles. Detailed instructions are given here: `How to contribute a
-FEniCS Featured article
-<https://bitbucket.org/snippets/fenics-project/LdRGq/how-to-create-a-new-fenics-featured>`__.
+The format for a Featured FEniCS story is:
+
+  | Graphical highlight -- 366x282 in png/jpg format preferably
+  | Short summary of research and how FEniCS was used
+  | Brief information about the author(s)
+  | Reference list, optionally with a link to repository/Docker image
+
+The text should target a relatively wide audience and should not total
+much more than 2-3 paragraphs. Contributions are very welcome --
+please send your input to Marie Rognes (meg@simula.no). Plain text
+input is perfect, we will format your text to make it web ready and
+possibly make minor edits to ensure a consistent style.
 
 .. _developers_writing_code:
 

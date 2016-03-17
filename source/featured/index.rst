@@ -1,9 +1,9 @@
 
 .. _Featured_articles:
 
-#######################################
-Featured articles of the FEniCS project
-#######################################
+#######################
+Featured FEniCS Stories
+#######################
 
 .. toctree::
     :maxdepth: 1
