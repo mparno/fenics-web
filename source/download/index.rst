@@ -65,7 +65,6 @@ To install FEniCS on Ubuntu, run the following commands::
     sudo apt-get update
     sudo apt-get install fenics
     sudo apt-get dist-upgrade
-    sudo apt-get install fenics
 
 This will add our `PPA <https://launchpad.net/ubuntu/+ppas>`_ for
 FEniCS to your package sources and install the latest stable version
