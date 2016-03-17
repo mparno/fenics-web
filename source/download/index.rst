@@ -59,10 +59,19 @@ our `FEniCS Docker page
 |ubuntuimage| |hspace| Ubuntu packages (stable release)
 *******************************************************
 
-FEniCS is part of the Ubuntu (and Debian) GNU/Linux operating systems.
-To install FEniCS, run the following command::
+To install FEniCS on Ubuntu, run the following commands::
 
+    sudo add-apt-repository ppa:fenics-packages/fenics
+    sudo apt-get update
     sudo apt-get install fenics
+    sudo apt-get dist-upgrade
+    sudo apt-get install fenics
+
+This will add our `PPA <https://launchpad.net/ubuntu/+ppas>`_ for
+FEniCS to your package sources and install the latest stable version
+of FEniCS. Note that FEniCS is also available from the official
+Ubuntu (and Debian) repositories but may outdated, depending on
+which release of Ubuntu you are running.
 
 For more details and tips on how to work with FEniCS in Ubuntu, see
 our :ref:`FEniCS Ubuntu page <ubuntu_details>`.
