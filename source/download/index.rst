@@ -39,7 +39,7 @@ the first time so just be patient.)
 
 Step 3: Run the prebuilt FEniCS image by the following simple command::
 
-    docker run -ti fenicsproject/stable
+    docker run -ti quay.io/fenicsproject/stable
 
 The first time you run this command, Docker will automatically fetch
 the image for the latest stable version of FEniCS. For the latest
@@ -49,7 +49,7 @@ To share files between your operating system and the FEniCS Docker
 image, simply add the ``-v`` flag to tell Docker where your files
 are, for example::
 
-    docker run -ti -v $(pwd):/home/fenics/shared fenicsproject/stable
+    docker run -ti -v $(pwd):/home/fenics/shared quay.io/fenicsproject/stable
 
 For more details and tips on how to work with FEniCS and Docker, see
 our `FEniCS Docker page
