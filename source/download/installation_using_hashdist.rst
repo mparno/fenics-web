@@ -4,6 +4,7 @@
 Installation from source using HashDist
 ***************************************
 
+
 Requirements
 ============
 
@@ -25,6 +26,7 @@ Requirements for OS X:
 * The Xcode Command Line Developer Tools (run ``xcode-select --install`` in
   a terminal after installing Xcode)
 * The Git version control system
+
 
 Configuration
 =============
@@ -51,17 +53,18 @@ these cases, but we have to modify the HashDist profile:
     Use one of the other profiles under ``install/profiles`` as your
     template if you are not on Linux.
 
-What the ``fenics-install.sh`` script actually does is to first download
-HashDist and HashStack, then create a HashDist profile for your platform
-and finally build the FEniCS stack using this profile. Below, we will
-see how to do these steps manually and how to modify the HashDist
-profile for our needs.
+What the ``fenics-install.sh`` script actually does is to first
+download HashDist and HashStack, then create a HashDist profile for
+your platform and finally build the FEniCS stack using this
+profile. Below, we will see how to do these steps manually and how to
+modify the HashDist profile for our needs.
+
 
 Installing HashDist
 ===================
 
-`HashDist <https://hashdist.github.io>`__ can be installed
-using ``pip``::
+`HashDist <https://hashdist.github.io>`__ can be installed using
+``pip``::
 
     pip install --upgrade https://github.com/hashdist/hashdist/archive/master.zip
 
@@ -76,6 +79,7 @@ HashDist can now be initialize by running::
 This will create the ``~/.hashdist`` directory and you might want to
 modify ``~/.hashdist/config.yaml`` before you continue.
 
+
 Creating the HashDist profile
 =============================
 
@@ -84,18 +88,22 @@ First, clone a copy of `HashStack
 
     git clone https://github.com/hashdist/hashstack.git
 
-Enter the ``hashstack`` directory and create a new profile for instance
-by copying one of the profiles from the ``examples`` directory::
+Enter the ``hashstack`` directory and create a new profile for
+instance by copying one of the profiles from the ``examples``
+directory::
 
     cd hashstack
     cp examples/fenics-1.6.0.linux.yaml fenics.yaml
 
-We will in the following assume that the profile is called ``fenics.yaml``.
+We will in the following assume that the profile is called
+``fenics.yaml``.
 
 Now you can start modifying the profile for your needs. The `HashDist
-documentation <http://hashdist.readthedocs.org/en/latest/specs.html>`__
-contains information about how to create a profile. Here we will only
-include some examples that could be useful when building FEniCS.
+documentation
+<http://hashdist.readthedocs.org/en/latest/specs.html>`__ contains
+information about how to create a profile. Here we will only include
+some examples that could be useful when building FEniCS.
+
 
 ###########################
 Adding or removing packages
@@ -118,13 +126,14 @@ adding it yourself and make a `pull request
 is added by `registering an issue
 <https://github.com/hashdist/hashstack/issues/new>`__.
 
+
 #########################
 Using alternative sources
 #########################
 
-Sometimes we might want to use an alternative source for a package. For
-example, assume that we want to use the latest development version of
-DOLFIN. One way to do this is by running::
+Sometimes we might want to use an alternative source for a
+package. For example, assume that we want to use the latest
+development version of DOLFIN. One way to do this is by running::
 
     hit fetchgit -p dolfin https://bitbucket.org/fenics-project/dolfin.git master
 
@@ -145,6 +154,7 @@ Similarly, if we want to build our own fork of DOLFIN, we can do::
 
 The output can then be used to override the source as shown above.
 
+
 #############################
 Setting environment variables
 #############################
@@ -152,9 +162,9 @@ Setting environment variables
 HashDist overrides the ``PATH`` environment variable. If you for
 instance want to use a compiler that is not available in the standard
 path, then you need to add this to the ``parameters`` section in your
-profile. Let us assume that we want to use a compiler that is installed
-in ``/opt/bin``. This can be done by adding the following to our
-profile::
+profile. Let us assume that we want to use a compiler that is
+installed in ``/opt/bin``. This can be done by adding the following to
+our profile::
 
     parameters:
       PATH: /opt/bin:/usr/bin:/bin
@@ -171,6 +181,7 @@ can find examples of this in the HashStack repository (see
     Variables defined in the ``parameters`` section should also be
     defined when you run your FEniCS programs.
 
+
 Building the profile
 ====================
 
@@ -180,8 +191,8 @@ start building::
     hit build -j4 fenics.yaml
 
 The ``-j`` option is used to build in multiple threads to speed up the
-build. Here we build with 4 threads, but this can be adjusted as
-you like.
+build. Here we build with 4 threads, but this can be adjusted as you
+like.
 
 When the build has finished, you will have a new directory ``fenics``
 (the profile name without ``.yaml``), which contains the complete

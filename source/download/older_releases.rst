@@ -6,14 +6,15 @@ Older releases
 
 .. include:: icons.rst
 
-Older FEniCS releases for Mac OS X and Windows are made available here.
+Older FEniCS releases for Mac OS X and Windows are made available
+here.
 
 ************
 FEniCS 1.5.0
 ************
 
-This release includes DOLFIN 1.5.0, FFC 1.5.0, FIAT 1.5.0, Instant 1.5.0,
-mshr 1.5.0 and UFL 1.5.0.
+This release includes DOLFIN 1.5.0, FFC 1.5.0, FIAT 1.5.0, Instant
+1.5.0, mshr 1.5.0 and UFL 1.5.0.
 
 .. tabularcolumns:: |c|c|
 
@@ -49,8 +50,8 @@ mshr 1.5.0 and UFL 1.5.0.
 FEniCS 1.4.0
 ************
 
-This release includes DOLFIN 1.4.0, FFC 1.4.0, FIAT 1.4.0, Instant 1.4.0
-and UFL 1.4.0.
+This release includes DOLFIN 1.4.0, FFC 1.4.0, FIAT 1.4.0, Instant
+1.4.0 and UFL 1.4.0.
 
 .. tabularcolumns:: |c|c|
 
@@ -85,8 +86,8 @@ and UFL 1.4.0.
 FEniCS 1.3.0
 ************
 
-This release includes DOLFIN 1.3.0, FFC 1.3.0, FIAT 1.3.0, Instant 1.3.0,
-UFC 2.3.0 and UFL 1.3.0.
+This release includes DOLFIN 1.3.0, FFC 1.3.0, FIAT 1.3.0, Instant
+1.3.0, UFC 2.3.0 and UFL 1.3.0.
 
 .. tabularcolumns:: |c|c|
 
@@ -131,8 +132,8 @@ UFC 2.3.0 and UFL 1.3.0.
 FEniCS 1.2.0
 ************
 
-This release includes DOLFIN 1.2.0, FFC 1.2.0, FIAT 1.1, Instant 1.2.0,
-UFC 2.2.0 and UFL 1.2.0.
+This release includes DOLFIN 1.2.0, FFC 1.2.0, FIAT 1.1, Instant
+1.2.0, UFC 2.2.0 and UFL 1.2.0.
 
 .. tabularcolumns:: |c|c|
 
