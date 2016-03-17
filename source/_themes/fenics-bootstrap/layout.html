@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <!-- Default Bootstrap-->
-  <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}"/>  
+  <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}"/>
   <link rel="shortcut icon" href="{{ pathto('_static/'+theme_favicon, 1) }}" />
   <!-- Template styles CSS-->
   <link rel="stylesheet" href="{{ pathto('_static/css/main.css', 1) }}"/>
@@ -26,24 +26,24 @@
   <script type="text/javascript" src="{{ pathto('_static/js/bootstrap.js', 1) }}"></script>
   <script type="text/javascript" src="{{ pathto('_static/js/bootstrap.min.js', 1) }}"></script>
   <script type="text/javascript" src="{{ pathto('_static/js/wow.min.js', 1) }}"></script>
-  <script type="text/javascript" src="{{ pathto('_static/js/main.js', 1) }}"></script> 
-  <script type="text/javascript" src="{{ pathto('_static/js/jquery.bcSwipe.js', 1) }}"></script> 
+  <script type="text/javascript" src="{{ pathto('_static/js/main.js', 1) }}"></script>
+  <script type="text/javascript" src="{{ pathto('_static/js/jquery.bcSwipe.js', 1) }}"></script>
   <script>
-    $(document).ready(function() {  
-         $("#mycarousel").swiperight(function() {  
-            $(this).carousel('prev');  
-            });  
-         $("#mycarousel").swipeleft(function() {  
-            $(this).carousel('next');  
-       });  
-    });  
+    $(document).ready(function() {
+         $("#mycarousel").swiperight(function() {
+            $(this).carousel('prev');
+            });
+         $("#mycarousel").swipeleft(function() {
+            $(this).carousel('next');
+       });
+    });
   </script>
 {% endblock %}
 
 
 {# override upper relbar to show our navigation menu #}
 {% block relbar1 %}
-<header id="header">      
+<header id="header">
       <div class="navbar navbar-inverse" role="banner">
           <div class="container">
               <div class="navbar-header">
@@ -57,7 +57,7 @@
                   <a class="navbar-brand" href="/index.html">
                       <h1><img src="{{ pathto('_static/%s.%s' % ('fenics_banner', 'png'), 1) }}" alt="FEniCS Project Logo" class="img-responsive center-block banner-image"></h1>
                   </a>
-                  
+
               </div>
               <div class="collapse navbar-collapse" id="headernavbar">
                   <ul class="nav navbar-nav navbar-right">
@@ -68,7 +68,7 @@
                     <li class="page_item"><a href="/contributing/" title="Learn how to contribute to the FEniCS project">Contributing</a></li>
                     <li class="page_item"><a href="/citing/" title="Learn how to cite the FEniCS project">Citing</a></li>
                     <li class="page_item"><a href="/support/" title="Where to go for more help">Support</a></li>
-                  </ul>                 
+                  </ul>
               </div>
           </div>
       </div>
@@ -98,7 +98,7 @@
               <h2 class="menu_head">Usage Documentation</h2>
               <div class="footer_menu">
                   <ul>
-                    <li><a href="/documentation/tutorial/">Tutorial</a></li>
+                    <li><a href="http://hplgit.github.io/fenics-tutorial/doc/web/index.html">Tutorial</a></li>
                     <li><a href="/documentation/dolfin/dev/python/">Python API</a></li>
                     <li><a href="/documentation/dolfin/dev/cpp/">C++ API</a></li>
                     <li><a href="/releases/">Release notes</a></li>
@@ -125,7 +125,7 @@
 
           <div class="col-sm-12" style="margin-top:20px;">
               <div class="copyright-text text-center">
-                  <p>&copy; Copyright 2015, The FEniCS Project. (Disclaimer)</p>
+                  <p>&copy; Copyright 2016, The FEniCS Project. (<a href="/disclaimer.html">Disclaimer</a>)</p>
               </div>
           </div>
       </div>
@@ -139,6 +139,3 @@
 {# do not display sidebars #}
 {% block sidebar1 %}{% endblock %}
 {% block sidebar2 %}{% endblock %}
-
-
-
