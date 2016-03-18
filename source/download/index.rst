@@ -17,7 +17,7 @@ FEniCS download and installation
 The easiest way to install FEniCS is to use our prebuilt,
 high-performance `Docker <https://www.docker.com>`_ images. FEniCS can
 also be installed via package managers or compiled directly from
-source. Follow the instructions on this page started with FEniCS.
+source. Follow the instructions on this page to get started with FEniCS.
 
 The latest stable release of FEniCS is version 1.6.0, which was
 released on 2015-07-28. For more information about FEniCS releases and
