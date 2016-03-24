@@ -147,7 +147,7 @@
     </div>
 
     <div class="col-sm-12 col-xs-12 col-md-6 col-lg-4">  
-          <a href="http://www.math.chalmers.se/~logg/"><h4 align="center"><strong>Anders Logg</strong></h4></a>
+          <a href="http://www.logg.org/anders/"><h4 align="center"><strong>Anders Logg</strong></h4></a>
           <div class="row" align="center">
             <div class="image-cropper">
               <div class="mugshot2" alt='Anders Logg' style='background: url(../_static/images/mugshots/logg.jpg) no-repeat 50% 50%' ></div>
