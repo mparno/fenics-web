@@ -19,11 +19,10 @@ high-performance `Docker <https://www.docker.com>`_ images. FEniCS can
 also be installed via package managers or compiled directly from
 source. Follow the instructions on this page to get started with FEniCS.
 
-The latest stable release of FEniCS is version 1.6.0, which was
+The latest stable release of FEniCS is version **1.6.0**, which was
 released on 2015-07-28. For more information about FEniCS releases and
 changes, take a look at :ref:`release_notes`. For information on
 accessing the development repositories, see :ref:`developers`.
-
 
 *****************************************************************
 Docker images (all platforms and versions) |hspace| |dockerimage|
@@ -31,33 +30,35 @@ Docker images (all platforms and versions) |hspace| |dockerimage|
 
 `Docker <https://www.docker.com>`_ allows us to build and ship
 consistent high-performance FEniCS installations for almost any
-platform. To get started, follow these 3 steps:
+platform. To get started, follow these 2 steps:
 
 #. Install Docker. Mac and Windows users should install the `Docker
    Toolbox <https://www.docker.com/products/docker-toolbox>`_ (this is
    a simple one-click install) and Linux users should `follow these
    instructions <https://docs.docker.com/linux/step_one/>`_.
-#. If running on Mac or Windows, make sure you have the Docker
-   Quickstart Terminal running. (This may take a little while the
-   first time so just be patient.)
-#. Run the prebuilt FEniCS image by the following command::
+#. Install the FEniCS Docker script::
 
-    docker run -ti quay.io/fenicsproject/stable
+    curl -s http://get.fenicsproject.org | sh
 
-The first time you run this command, Docker will automatically fetch
-the image for the latest stable version of FEniCS. For the latest
-development version of FEniCS, just change ``stable`` to ``dev``.
+Once both Docker and the FEniCS Docker script have been installed, you
+can easily start a FEniCS session by running the following command::
 
-To share files between your operating system and the FEniCS Docker
-image, simply add the ``-v`` flag to tell Docker where your files
-are, for example::
+    fenicsproject run
 
-    docker run -ti -v $(pwd):/home/fenics/shared quay.io/fenicsproject/stable
+If running on Mac or Windows, make sure you run this command
+inside the Docker Quickstart Terminal.
+
+The FEniCS Docker script can also be used to create persistent
+sessions (``fenicsproject create myproject`` followed by
+``fenicsproject run myproject``) or to run different versions of
+FEniCS (``fenicsproject run dev``). To see more options, run the
+following command::
+
+    fenicsproject help
 
 For more details and tips on how to work with FEniCS and Docker, see
 our `FEniCS Docker page
 <http://fenics-containers.readthedocs.org/en/latest/>`_.
-
 
 *******************************************************
 Ubuntu packages (stable release) |hspace| |ubuntuimage|
