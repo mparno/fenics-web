@@ -40,13 +40,13 @@ platform. To get started, follow these 2 steps:
 
     curl -s http://get.fenicsproject.org | sh
 
+If running on Mac or Windows, make sure you run this and other
+commands inside the Docker Quickstart Terminal.
+
 Once both Docker and the FEniCS Docker script have been installed, you
 can easily start a FEniCS session by running the following command::
 
     fenicsproject run
-
-If running on Mac or Windows, make sure you run this command
-inside the Docker Quickstart Terminal.
 
 The FEniCS Docker script can also be used to create persistent
 sessions (``fenicsproject create myproject`` followed by
