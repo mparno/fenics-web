@@ -86,9 +86,8 @@ Contributing a poster
 ---------------------
 
 If you would like to contribute a poster (in addition to or instead of
-a talk), please just let Martin Alnæs (martinal@simula.no) know by
-April 4 2016. Please include 'FEniCS16 poster' in the subject of your
-email.
+a talk), please just let Simon Funke (simon@simula.no) know by April
+4 2016. Please include 'FEniCS16 poster' in the subject of your email.
 
 
 Workshop program
