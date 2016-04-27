@@ -5,6 +5,8 @@ FEniCS'16 at Center for Biomedical Computing, Simula Research Laboratory, May 18
 
 *Update: 15.02.2016: Registration is now open*
 
+*Update: 27.04.2016: The detailed* `programme <http://easychair.org/smart-program/FEniCS'16/>`__ *is now available*
+
 
 We are pleased to announce the 2016 edition of the FEniCS workshop
 (FEniCS'16) which will take place **May 18--20 2016** at the `Center
@@ -95,6 +97,9 @@ Workshop program
 
 The workshop will start after lunch (at 13:00) on May 18 and end at
 noon (12:00) on May 20 2016.
+
+The detailed `programme
+<http://easychair.org/smart-program/FEniCS'16/>`__ is now available.
 
 Features:
 ---------
