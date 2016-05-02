@@ -30,13 +30,14 @@ Important dates:
 
 * Abstract submission deadline: **April 4 2016**
 * Early-bird registration deadline: **May 1 2016**
+* Registration deadline: **May 12 2016**
 * Workshop: **May 18-20 2016**
 
 Registration
 ************
 
 All participants must `register <http://tinyurl.com/zv8ep3z>`__ for
-the workshop.
+the workshop. You may register up to May 12 2016.
 
 The registration fee is now **250 EUR**. The registration fee will
 cover lunch, dinner and other social events.
