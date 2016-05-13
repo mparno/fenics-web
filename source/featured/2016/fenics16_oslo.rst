@@ -3,10 +3,11 @@ FEniCS'16 at Center for Biomedical Computing, Simula Research Laboratory, May 18
 #########################################################################################
 
 
-*Update: 15.02.2016: Registration is now open*
+*Update: 13.05.2016: Registration is now closed*
 
 *Update: 27.04.2016: The detailed* `programme <http://easychair.org/smart-program/FEniCS'16/>`__ *is now available*
 
+*Update: 15.02.2016: Registration is now open*
 
 We are pleased to announce the 2016 edition of the FEniCS workshop
 (FEniCS'16) which will take place **May 18--20 2016** at the `Center
@@ -36,20 +37,9 @@ Important dates:
 Registration
 ************
 
-All participants must `register <http://tinyurl.com/zv8ep3z>`__ for
-the workshop. You may register up to May 12 2016.
+All participants must register for the workshop. Registration is now
+closed.
 
-The registration fee is now **250 EUR**. The registration fee will
-cover lunch, dinner and other social events.
-
-.. raw:: html
-
-  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_s-xclick">
-  <input type="hidden" name="hosted_button_id" value="HKKX6LY9CCDMC">
-  <input type="image" src="https://www.paypalobjects.com/en_US/NO/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-  </form>
 
 Abstracts
 *********
