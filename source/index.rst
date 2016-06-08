@@ -17,4 +17,3 @@
     featured/index
     releases/index
     disclaimer
-    buildbot/index
