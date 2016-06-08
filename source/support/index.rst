@@ -36,7 +36,6 @@ Before posting your question, please consider the following points:
 
 * Tag your question appropriately.
 
-
 Reporting bugs
 ==============
 
@@ -53,17 +52,21 @@ Mailing lists
 
 The main `FEniCS mailing list
 <https://groups.google.com/forum/#!forum/fenics-dev>`__ is where
-discussions take place. It covers everything that does not fit into
-any of the above categories (user questions, bug reports or
-installation or compilation issues). This is also the place for
-announcements of workshops, releases, tutorials, papers. Everyone is
-invited to subscribe to the mailing list and take part in discussions.
+important announcements are made. Everyone is invited to subscribe to
+the mailing list.
 
 The `FEniCS support mailing list
-<https://groups.google.com/forum/#!forum/fenics-support>`_ is a place
+<https://groups.google.com/forum/#!forum/fenics-support>`__ is a place
 to ask specific questions related to obtaining, building, or
 installing FEniCS components.
 
+Developer forum (Slack)
+=======================
+
+Most discussions on FEniCS development take place on the
+`FEniCS Slack channels <https://fenicsproject.slack.com/>`__.
+Everyone is invited to read and take part in discussions.
+To join the team, send an email to `meg@simula.no <mailto:meg@simula.no>`__.
 
 Contributing
 ============
