@@ -33,22 +33,30 @@ consistent high-performance FEniCS installations for almost any
 platform. To get started, follow these 2 steps:
 
 #. Install Docker for your platform (Windows, Mac, Linux) by following `these
-instructions <https://docs.docker.com/engine/getstarted/step_one/>`_.  
-.. note:: Windows users must continue to use the Docker Toolbox, *not* Docker
-          for Windows, if they wish to use the FEniCS Docker script described 
-          below.
+   instructions <https://docs.docker.com/engine/getstarted/step_one/>`_. Windows
+   users must continue to use the Docker Toolbox, *not* Docker for Windows, if
+   they wish to use the FEniCS Docker script described below.
 #. Install the FEniCS Docker script::
 
     curl -s http://get.fenicsproject.org | sh
 
-If using the Docker Toolbox (macOS versions < 10.10 or Windows), make sure
-you run this and other commands inside the Docker Quickstart Terminal.
+   If using the Docker Toolbox (macOS versions < 10.10 or Windows), make sure
+   you run this and other commands inside the Docker Quickstart Terminal.
 
-``fenicsproject run myproject``) or to run different versions of
-FEniCS (``fenicsproject run dev``). To see more options, run the
-following command::
+Once both Docker and the FEniCS Docker script have been installed, you
+can easily start a FEniCS session by running the following command::
+
+    fenicsproject run
+
+The FEniCS Docker script can also be used to create persistent sessions
+(``fenicsproject create myproject`` followed by ``fenicsproject run
+myproject``) or to run different versions of FEniCS (``fenicsproject run
+dev``). To see more options, run the following command::
 
     fenicsproject help
+
+For all ``fenicsproject`` commands, the contents of the current working
+directory will be shared into the project at ``~/shared``.
 
 For more details and tips on how to work with FEniCS and Docker, see
 our `FEniCS Docker page
