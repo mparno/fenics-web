@@ -38,7 +38,7 @@ platform. To get started, follow these 2 steps:
    instructions <https://docs.docker.com/linux/step_one/>`_.
 #. Install the FEniCS Docker script::
 
-    curl -s http://get.fenicsproject.org | sh
+    curl -s http://get.fenicsproject.org | bash
 
 If running on Mac or Windows, make sure you run this and other
 commands inside the Docker Quickstart Terminal.
