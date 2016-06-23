@@ -99,5 +99,5 @@ import_doc()
 }
 
 # Import documentation for all packages
-import_doc dolfin build/doc/sphinx-cpp    cpp    $DOLFIN_VERSION
-import_doc dolfin build/doc/sphinx-python python $DOLFIN_VERSION
+import_doc dolfin build/doc-old/sphinx-cpp    cpp    $DOLFIN_VERSION
+import_doc dolfin build/doc-old/sphinx-python python $DOLFIN_VERSION
