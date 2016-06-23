@@ -126,7 +126,7 @@ than others. To learn more about these, take a look at the
 
 * `All classes and functions in DOLFIN (Python) <../documentation/dolfin/%(version_dot)s/python/genindex.html>`__
 * `All classes and functions in DOLFIN (C++) <../documentation/dolfin/%(version_dot)s/cpp/genindex.html>`__
-* `All classes and functions in UFL <../documentation/ufl/%(ufl_version)s/genindex.html>`__
+* `All classes and functions in UFL <http://fenics-ufl.readthedocs.io/en/%(ufl_version)s/api-doc/ufl.html>`__
 
 .. raw:: html
 

@@ -9,30 +9,25 @@
 # Licensed under the GNU GPL version 3 or any later version.
 #
 # First added:  2011-06-14
-# Last changed: 2013-09-11
+# Last changed: 2016-06-23
 #
 # Modified by Anders Logg, 2011.
+# Modified by Johannes Ring, 2016.
 
 # Check that import directories are set
 if [ x$DOLFIN_DIR == x ]; then
     echo "* Error: DOLFIN_DIR has not been set"
     exit 1
 fi
-if [ x$UFL_DIR == x ]; then
-    echo "* Error: UFL_DIR has not been set"
-    exit 1
-fi
 
 # Get version numbers. We do this manually rather than by calling
 # $PATH/bin/$PACKAGE-version so we don't need to require that packages
 # are installed and the $PACKAGE-version script is in $PATH to test
-# the documentation. (Only $DOLFIN_DIR and $UFL_DIR need to be set.)
-UFL_VERSION=`grep __version__ $UFL_DIR/ufl/__init__.py | cut -d'"' -f2`
+# the documentation. (Only $DOLFIN_DIR need to be set.)
 DOLFIN_VERSION_MAJOR=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MAJOR | cut -d'"' -f2`
 DOLFIN_VERSION_MINOR=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MINOR | cut -d'"' -f2`
 DOLFIN_VERSION_MICRO=`grep "set(DOLFIN_VERSION_" $DOLFIN_DIR/CMakeLists.txt | grep _MICRO | cut -d'"' -f2`
 DOLFIN_VERSION=$DOLFIN_VERSION_MAJOR.$DOLFIN_VERSION_MINOR.$DOLFIN_VERSION_MICRO
-echo "UFL version:    $UFL_VERSION"
 echo "DOLFIN version: $DOLFIN_VERSION"
 
 # Rsync command
@@ -77,11 +72,11 @@ import_doc()
     $RSYNC $DOC_FROM $DOC_TO
 
     # Copy common FEniCS template
-    mkdir -p $DOC_TO/source/_themes/fenics/
-    $RSYNC source/_themes/fenics/ $DOC_TO/source/_themes/fenics/
+    mkdir -p $DOC_TO/source/_themes/fenics-bootstrap/
+    $RSYNC source/_themes/fenics-bootstrap/ $DOC_TO/source/_themes/fenics-bootstrap/
 
-    # Set 'fenics' theme in conf.py
-    sed -i "s/^html_theme = .*/html_theme = 'fenics'/" $DOC_TO/source/conf.py
+    # Set 'fenics-bootstrap' theme in conf.py
+    sed -i "s/^html_theme = .*/html_theme = 'fenics-bootstrap'/" $DOC_TO/source/conf.py
 
     # FIXME: Commented out until Harish fixes the styling
     # Display toc
@@ -106,4 +101,3 @@ import_doc()
 # Import documentation for all packages
 import_doc dolfin build/doc/sphinx-cpp    cpp    $DOLFIN_VERSION
 import_doc dolfin build/doc/sphinx-python python $DOLFIN_VERSION
-import_doc ufl    doc/sphinx                     $UFL_VERSION
