@@ -1,0 +1,221 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling element P3
+
+Compiler stage 1: Analyzing elements(s)
+---------------------------------------
+  
+Compiler stage 1 finished in 0.00027895 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of 0 coordinate mappings
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.378708 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000176191 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 element(s)
+  Generating code for 1 dofmap(s)
+  Generating code for 0 coordinate_mapping(s)
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.195087 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000282049 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.00049305 seconds.
+
+FFC finished in 0.575471 seconds.
+Output written to ./P3.h.
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling form P1_projection
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 0
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    1
+  Coefficients:              '[w_0]'
+  Unique elements:           'CG1(?), CG3(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), CG3(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 4
+  quadrature_degree: 4
+  
+Compiler stage 1 finished in 0.382653 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 3 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 3 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 coordinate mappings
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.000642 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  30 entries computed in 0.000973 seconds
+  Shape of reference tensor: (3, 10)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [10] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [10] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.00975919 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000184059 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 3 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Generating code for 3 dofmap(s)
+  Generating code for 1 coordinate_mapping(s)
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.261142 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000678062 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000642061 seconds.
+
+FFC finished in 0.655495 seconds.
+Output written to ./P1_projection.h.

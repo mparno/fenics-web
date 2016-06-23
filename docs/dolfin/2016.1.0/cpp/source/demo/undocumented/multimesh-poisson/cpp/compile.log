@@ -1,0 +1,367 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling form MultiMeshPoisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:            2
+  Number of cell subdomains:      0
+  Number of cutcell subdomains:   0
+  Number of interface subdomains: 0
+  Number of overlap subdomains:   0
+  Rank:                           2
+  Arguments:                      '(v_0, v_1)'
+  Number of coefficients:         0
+  Coefficients:                   '[]'
+  Unique elements:                'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:            'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+  Geometric dimension:          2
+  Number of cell subdomains:    0
+  Number of cutcell subdomains: 0
+  Rank:                         1
+  Arguments:                    '(v_0)'
+  Number of coefficients:       1
+  Coefficients:                 '[w_0]'
+  Unique elements:              'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:          'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+Compiler stage 1 finished in 0.0800791 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 2 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 2 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 coordinate mappings
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.000565 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Optimization not available for custom integrals, skipping optimization.
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {None: {FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): [[]], (1, 0): [[]], (0, 0): [[]]}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  tables: {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D10', (), False, False), 'FE0_D01': ('FE0_D01', (), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming custom integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Optimization not available for custom integrals, skipping optimization.
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {None: {FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): [[]], (1, 0): [[]], (0, 0): [[]]}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  tables: {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D10', (), False, False), 'FE0_D01': ('FE0_D01', (), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming custom integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Optimization not available for custom integrals, skipping optimization.
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {None: {FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): [[]], (1, 0): [[]], (0, 0): [[]]}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  tables: {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D10': array([], shape=(0, 1), dtype=float64), 'FE0_D01': array([], shape=(0, 1), dtype=float64), 'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D10', (), False, False), 'FE0_D01': ('FE0_D01', (), False, False), 'FE0': ('FE0', (), False, False)}
+  Transforming custom integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.000511 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Optimization not available for custom integrals, skipping optimization.
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {None: {FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 0): [[]]}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  tables: {'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0': 'FE0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0': array([], shape=(0, 1), dtype=float64)}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0': ('FE0', (), False, False)}
+  Transforming custom integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.027504 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000174046 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 2 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Generating code for 2 dofmap(s)
+  Generating code for 1 coordinate_mapping(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: circumradius_1
+  Removing unused variable: v0v1_1
+  Removing unused variable: v0v2_1
+  Removing unused variable: v1v2_1
+  Removing unused variable: volume_1
+  Removing unused variable: circumradius_0
+  Removing unused variable: v0v1_0
+  Removing unused variable: v0v2_0
+  Removing unused variable: v1v2_0
+  Removing unused variable: volume_0
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.09027 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000571012 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000490904 seconds.
+
+FFC finished in 0.199435 seconds.
+Output written to ./MultiMeshPoisson.h.

@@ -1,0 +1,489 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling form NonlinearPoisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    2
+  Coefficients:              '[w_0, w_1]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 5
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    1
+  Coefficients:              '[w_1]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+Compiler stage 1 finished in 0.099508 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 2 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 2 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 coordinate mappings
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {VectorElement(FiniteElement('Lagrange', triangle, 1), dim=2): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [-1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]]]), (0, 0): array([[[ 0.66666667,  0.16666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.16666667,  0.66666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.66666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.66666667,  0.16666667,  0.16666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.16666667,  0.66666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.66666667,  0.16666667]]])}}}, FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]), (1, 0): array([[-1., -1., -1.],
+         [ 1.,  1.,  1.],
+         [ 0.,  0.,  0.]]), (0, 0): array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  tables: {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C1_D10': 'FE1_C1_D10', 'FE0': 'FE0', 'FE1_C1_D01': 'FE1_C1_D01', 'FE1_C0_D01': 'FE1_C0_D01', 'FE1_C0_D10': 'FE1_C0_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE1_C0': ('FE0', (2, [0, 1, 2]), False, False), 'FE1_C1': ('FE0', (5, [3, 4, 5]), False, False), 'FE1_C1_D10': ('FE0_D01', (7, [3, 4]), False, False), 'FE0': ('FE0', (), False, False), 'FE1_C1_D01': ('FE0_D01', (6, [3, 5]), False, False), 'FE1_C0_D01': ('FE0_D01', (3, [0, 2]), False, False), 'FE1_C0_D10': ('FE0_D01', (4, [0, 1]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {3: {VectorElement(FiniteElement('Lagrange', triangle, 1), dim=2): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.],
+          [-1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.],
+          [ 0.,  0.,  0.]]]), (0, 0): array([[[ 0.66666667,  0.16666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.16666667,  0.66666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.16666667,  0.66666667,  0.16666667],
+          [ 0.        ,  0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.66666667,  0.16666667,  0.16666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.16666667,  0.66666667]],
+  
+         [[ 0.        ,  0.        ,  0.        ],
+          [ 0.16666667,  0.66666667,  0.16666667]]])}}}, FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]), (1, 0): array([[-1., -1., -1.],
+         [ 1.,  1.,  1.],
+         [ 0.,  0.,  0.]]), (0, 0): array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  tables: {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0': array([[ 0.66666667,  0.16666667,  0.16666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.16666667,  0.66666667,  0.        ,  0.        ,
+           0.        ],
+         [ 0.16666667,  0.66666667,  0.16666667,  0.        ,  0.        ,
+           0.        ]]), 'FE1_C1': array([[ 0.        ,  0.        ,  0.        ,  0.66666667,  0.16666667,
+           0.16666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.16666667,
+           0.66666667],
+         [ 0.        ,  0.        ,  0.        ,  0.16666667,  0.66666667,
+           0.16666667]]), 'FE1_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]]), 'FE1_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C1_D10': 'FE1_C1_D10', 'FE0': 'FE0', 'FE1_C1_D01': 'FE1_C1_D01', 'FE1_C0_D01': 'FE1_C0_D01', 'FE1_C0_D10': 'FE1_C0_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]]), 'FE0': array([[ 0.66666667,  0.16666667,  0.16666667],
+         [ 0.16666667,  0.16666667,  0.66666667],
+         [ 0.16666667,  0.66666667,  0.16666667]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE1_C0': ('FE0', (2, [0, 1, 2]), False, False), 'FE1_C1': ('FE0', (5, [3, 4, 5]), False, False), 'FE1_C1_D10': ('FE0_D01', (7, [3, 4]), False, False), 'FE0': ('FE0', (), False, False), 'FE1_C1_D01': ('FE0_D01', (6, [3, 5]), False, False), 'FE1_C0_D01': ('FE0_D01', (3, [0, 2]), False, False), 'FE1_C0_D10': ('FE0_D01', (4, [0, 1]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0713391 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.0106699 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 2 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Generating code for 2 dofmap(s)
+  Generating code for 1 coordinate_mapping(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.141625 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000977993 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000804901 seconds.
+
+FFC finished in 0.325425 seconds.
+Output written to ./NonlinearPoisson.h.

@@ -1,0 +1,116 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling element P3
+
+Compiler stage 1: Analyzing elements(s)
+---------------------------------------
+  
+Compiler stage 1 finished in 0.000187874 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of 0 coordinate mappings
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.27829 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000135899 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 element(s)
+  Generating code for 1 dofmap(s)
+  Generating code for 0 coordinate_mapping(s)
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.153818 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000230074 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000413895 seconds.
+
+FFC finished in 0.433404 seconds.
+Output written to ./P3.h.
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling element P1
+
+Compiler stage 1: Analyzing elements(s)
+---------------------------------------
+  
+Compiler stage 1 finished in 0.00022006 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 1 elements
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 dofmaps
+  Reusing element from cache
+  Computing representation of 0 coordinate mappings
+  Computing representation of integrals
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.0368788 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  
+Compiler stage 3 finished in 0.000140905 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 1 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Generating code for 1 dofmap(s)
+  Generating code for 0 coordinate_mapping(s)
+  Generating code for integrals
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.0291729 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000222921 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000344992 seconds.
+
+FFC finished in 0.0673251 seconds.
+Output written to ./P1.h.
