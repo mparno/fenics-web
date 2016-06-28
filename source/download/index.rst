@@ -19,8 +19,8 @@ high-performance `Docker <https://www.docker.com>`_ images. FEniCS can
 also be installed via package managers or compiled directly from
 source. Follow the instructions on this page to get started with FEniCS.
 
-The latest stable release of FEniCS is version **1.6.0**, which was
-released on 2015-07-28. For more information about FEniCS releases and
+The latest stable release of FEniCS is version **2016.1.0**, which was
+released on 2016-06-24. For more information about FEniCS releases and
 changes, take a look at :ref:`release_notes`. For information on
 accessing the development repositories, see :ref:`developers`.
 
