@@ -32,16 +32,20 @@ Docker images (all platforms and versions) |hspace| |dockerimage|
 consistent high-performance FEniCS installations for almost any
 platform. To get started, follow these 2 steps:
 
-#. Install Docker for your platform (Windows, Mac, Linux) by following `these
-   instructions <https://docs.docker.com/engine/getstarted/step_one/>`_. Windows
-   users must continue to use the Docker Toolbox, *not* Docker for Windows, if
-   they wish to use the FEniCS Docker script described below.
+#. Install Docker for your platform:
+   `Windows <https://www.docker.com/products/docker-toolbox>`_,
+   `Mac <https://www.docker.com/products/docker#/mac>`_ or
+   `Linux <https://www.docker.com/products/docker#/linux>`_. 
 #. Install the FEniCS Docker script::
 
-    curl -s http://get.fenicsproject.org | sh
+    curl -s http://get.fenicsproject.org | bash
 
-   If using the Docker Toolbox (macOS versions < 10.10 or Windows), make sure
-   you run this and other commands inside the Docker Quickstart Terminal.
+Notes:
+
+* Windows users must (for now) continue to use the Docker Toolbox (*not* Docker
+  for Windows) if they want to use the ``fenicsproject`` script described below.
+* If using the Docker Toolbox (macOS versions < 10.10 or Windows), make sure
+  you run all commands inside the Docker Quickstart Terminal.
 
 Once both Docker and the FEniCS Docker script have been installed, you
 can easily start a FEniCS session by running the following command::
