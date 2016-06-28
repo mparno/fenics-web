@@ -18,6 +18,23 @@ are those of the C++/Python problem solving environment :ref:`DOLFIN
 (*This page accesses the FEniCS dev documentation. Not the
 version you are looking for? See* :doc:`all versions <all>`.)
 
+.. note::
+
+    Documentation for the FEniCS Project is being migrated to Read the
+    Docs. The documentation under development can be viewed at
+    http://fenics.readthedocs.org/.
+
+.. note::
+
+    The FEniCS Book is compatible with FEniCS 1.0. FEniCS is
+    constantly improving, with new functionality and improved
+    performance which means there have been changes since the 1.0
+    release in 2011.
+
+    We recommend that you use the latest FEniCS release. The demo
+    programs that come with DOLFIN and the updated FEniCS tutorial are
+    the best places to start learning to use FEniCS.
+
 .. raw:: html
 
   <div class="container-fuild">
@@ -26,11 +43,12 @@ version you are looking for? See* :doc:`all versions <all>`.)
 	  <div class="row">
       <h4>The FEniCS Tutorial</h4>
 
-A good starting point for new users is the :doc:`FEniCS Tutorial
-<tutorial/index>`. The tutorial will help you get quickly up and
-running with solving differential equations in FEniCS. The tutorial
-focuses exclusively on the FEniCS Python interface, since this is the
-simplest approach to exploring FEniCS for beginners.
+A good starting point for new users is the `FEniCS 1.6 Tutorial
+<http://hplgit.github.io/fenics-tutorial/doc/web/index.html>`__. The
+tutorial will help you get quickly up and running with solving
+differential equations in FEniCS. The tutorial focuses exclusively on
+the FEniCS Python interface, since this is the simplest approach to
+exploring FEniCS for beginners.
 
 .. raw:: html
 
@@ -42,8 +60,8 @@ simplest approach to exploring FEniCS for beginners.
 :ref:`The FEniCS Book <book>`, *Automated Solution of Differential
 Equations by the Finite Element Method*, is a comprehensive (700
 pages) book documenting the mathematical methodology behind the FEniCS
-Project and the software developed as part of the FEniCS Project. The
-FEniCS Tutorial is included as the opening chapter of the FEniCS Book.
+Project and the software developed as part of the FEniCS Project.
+
 
 .. raw:: html
 
@@ -108,14 +126,14 @@ than others. To learn more about these, take a look at the
 
 * `All classes and functions in DOLFIN (Python) <../documentation/dolfin/dev/python/genindex.html>`__
 * `All classes and functions in DOLFIN (C++) <../documentation/dolfin/dev/cpp/genindex.html>`__
-* `All classes and functions in UFL <../documentation/ufl/dev/genindex.html>`__
+* `All classes and functions in UFL <http://fenics-ufl.readthedocs.io/en/latest/api-doc/ufl.html>`__
 
 .. raw:: html
 
   </div><!-- complete reference -->
   </div><!-- right hand side-->
   </div><!-- container fluid -->
-  </div><!-- row -->   
+  </div><!-- row -->
 
 ****************************
 The FEniCS Featured articles

@@ -4,13 +4,10 @@
 Installation instructions for Ubuntu
 ####################################
 
-.. image:: images/debian.png
-    :align: left
-
 `Install FEniCS <apt://fenics>`__
 
-FEniCS is included as part of Ubuntu GNU/Linux. To install, simply click
-on the link above or run the following command in a terminal::
+FEniCS is included as part of Ubuntu GNU/Linux. To install, simply
+click on the link above or run the following command in a terminal::
 
     sudo apt-get install fenics
 
@@ -23,15 +20,16 @@ on the link above or run the following command in a terminal::
 
 .. _ubuntu_ppa:
 
+
 **********
 Ubuntu PPA
 **********
 
-To make sure you always have the latest FEniCS release, add the `FEniCS
-Personal Package Archive
+To make sure you always have the latest FEniCS release, add the
+`FEniCS Personal Package Archive
 <https://launchpad.net/~fenics-packages/+archive/fenics>`__ (PPA) to
-your Ubuntu system. You can do this by running the following commands in
-a terminal:
+your Ubuntu system. You can do this by running the following commands
+in a terminal:
 
 .. code-block:: sh
 
@@ -46,21 +44,23 @@ a terminal:
     release, so you should run these commands again after a release
     upgrade.
 
+
 ================
 Removing the PPA
 ================
 
-If you want to remove the FEniCS PPA and restore everything back to the
-default packages from the standard Ubuntu archive, run the following
-command in a terminal:
+If you want to remove the FEniCS PPA and restore everything back to
+the default packages from the standard Ubuntu archive, run the
+following command in a terminal:
 
 .. code-block:: sh
 
     sudo ppa-purge ppa:fenics-packages/fenics
 
-##############
+
+**************
 Older releases
-##############
+**************
 
 Older versions of the Ubuntu packages are also :ref:`available
 <older_releases>`.

@@ -2,116 +2,131 @@
 
 .. _download:
 
-.. include:: icons.rst
+.. |dockerimage| image:: images/docker.png
+.. |debianimage| image:: images/debian.png
+.. |ubuntuimage| image:: images/ubuntu.png
+.. |toolsimage|  image:: images/tools.png
+.. |hspace| raw:: html
 
-#################################
-FEniCS versions and release notes
-#################################
+  &nbsp;
 
-FEniCS can be installed from binary files or compiled from source
-code. Different installation methods are described on this page.
-Visit the :ref:`troubleshooting page <troubleshooting>` if you have
-problems installing FEniCS.
+################################
+FEniCS download and installation
+################################
 
-The latest stable release of FEniCS is version 1.6.0, which was on
-released 2015-07-28. For more information about FEniCS releases and
-changes, take a look at :ref:`release_notes`.  For information on
+The easiest way to install FEniCS is to use our prebuilt,
+high-performance `Docker <https://www.docker.com>`_ images. FEniCS can
+also be installed via package managers or compiled directly from
+source. Follow the instructions on this page to get started with FEniCS.
+
+The latest stable release of FEniCS is version **2016.1.0**, which was
+released on 2016-06-24. For more information about FEniCS releases and
+changes, take a look at :ref:`release_notes`. For information on
 accessing the development repositories, see :ref:`developers`.
 
+*****************************************************************
+Docker images (all platforms and versions) |hspace| |dockerimage|
+*****************************************************************
 
-***************
-Binary packages
-***************
+`Docker <https://www.docker.com>`_ allows us to build and ship
+consistent high-performance FEniCS installations for almost any
+platform. To get started, follow these 2 steps:
 
-This is the main FEniCS download, suitable for most users. It includes
-everything needed to get you started with FEniCS.
+#. Install Docker for your platform:
+   `Windows <https://www.docker.com/products/docker-toolbox>`_,
+   `Mac <https://www.docker.com/products/docker#/mac>`_ or
+   `Linux <https://www.docker.com/products/docker#/linux>`_. 
+#. Install the FEniCS Docker script::
 
-.. raw:: html
-    :file: index.inc
+    curl -s https://get.fenicsproject.org | bash
 
-For information on user contributed binary packages, see
-:ref:`contributed_packages`.
+Notes:
 
+* Windows users must (for now) continue to use the Docker Toolbox (*not* Docker
+  for Windows) if they want to use the ``fenicsproject`` script described below.
+* If using the Docker Toolbox (macOS versions < 10.10 or Windows), make sure
+  you run all commands inside the Docker Quickstart Terminal.
 
-**********************************
-Installation from *conda* packages
-**********************************
+Once both Docker and the FEniCS Docker script have been installed, you
+can easily start a FEniCS session by running the following command::
 
-Whether you are already using the Anaconda_ Python distribution from Continuum
-Analytics or just their conda_ package manager in Linux you can already install
-FEniCS precompiled binaries. They are not part of the official Anaconda
-installation but they can be downloaded from a binstar_ channel::
+    fenicsproject run
 
-    conda create --name fenics27 python=2.7
-    source activate fenics27
-    conda install fenics --channel juanlu001
+The FEniCS Docker script can also be used to create persistent sessions
+(``fenicsproject create myproject`` followed by ``fenicsproject run
+myproject``) or to run different versions of FEniCS (``fenicsproject run
+dev``). To see more options, run the following command::
 
-For troubleshooting and alternative options for older systems, see
-:ref:`installation_using_conda`.
+    fenicsproject help
 
-.. note::
+For all ``fenicsproject`` commands, the contents of the current working
+directory will be shared into the project at ``~/shared``.
 
-    These packages are provided by Juan Luis Cano and their sources
-    can be found at https://github.com/juanlu001/fenics-recipes.
+For more details and tips on how to work with FEniCS and Docker, see
+our `FEniCS Docker page
+<http://fenics-containers.readthedocs.org/en/latest/>`_.
 
-.. _Anaconda: https://store.continuum.io/cshop/anaconda/
-.. _conda: http://conda.io/
-.. _binstar: https://binstar.org/
+*******************************************************
+Ubuntu packages (stable release) |hspace| |ubuntuimage|
+*******************************************************
 
+To install FEniCS on Ubuntu, run the following commands::
 
-**********************
-Virtual machine images
-**********************
+    sudo add-apt-repository ppa:fenics-packages/fenics
+    sudo apt-get update
+    sudo apt-get install fenics
+    sudo apt-get dist-upgrade
 
-A virtual machine image that includes the most recent FEniCS release
-is available at
-http://fenicsproject.org/pub/virtual/fenics-latest.ova. The image can
-be run using a virtual machine manager, such as `VirtualBox
-<https://www.virtualbox.org/>`_. The username and password for the
-virtual machine are both ``fenics``.
+This will add our `PPA <https://launchpad.net/ubuntu/+ppas>`_ for
+FEniCS to your package sources and install the latest stable version
+of FEniCS. Note that FEniCS is also available from the official
+Ubuntu (and Debian) repositories but may outdated, depending on
+which release of Ubuntu you are running.
 
-The virtual machine image is recommended for systems for which a
-binary installer is not available. The image is particularly suitable
-when a consistent FEniCS environment across systems is required, such
-as courses using FEniCS.
-
-The image requires a 64-bit host operating system.
+For more details and tips on how to work with FEniCS in Ubuntu, see
+our :ref:`FEniCS Ubuntu page <ubuntu_details>`.
 
 
-**********************************************
-Installation from source (`fenics-install.sh`)
-**********************************************
+**********************************************************************************
+Manual installation from source (all platforms and versions) |toolsimage| |hspace|
+**********************************************************************************
 
-You may also choose to install FEniCS directly from source. This may be
-done by running the following command::
+FEniCS can be built manually from source using standard installation
+mechanisms for Python (`Setuptools
+<https://pypi.python.org/pypi/setuptools>`_) and C++ (`CMake
+<https://cmake.org/>`_).
 
-    curl -s http://fenicsproject.org/fenics-install.sh | bash
+The `FEniCS source code
+<https://bitbucket.org/account/user/fenics-project/projects/CORE>`_ is
+hosted in `Git <https://git-scm.com/>`_ repositories on `Bitbucket
+<https://bitbucket.org/>`_.
 
-Running this command will build a local installation of FEniCS, including
-essential dependencies such as PETSc. The installation relies on
-`HashDist <http://hashdist.github.io/>`__. Before running the script,
-you may wish to download and inspect its contents.
 
-Requirements for Linux (Ubuntu package name in parentheses):
+*************************************************************************************
+Automatic installation from source (all platforms and versions) |toolsimage| |hspace|
+*************************************************************************************
 
-* The Python 2.7 development files (``python-dev``)
-* The Git version control system (``git``)
-* A C compiler and a C++ compiler with C++11 support
-  (``build-essential``)
-* A Fortran compiler (``gfortran``)
-* The OpenGL development files (``freeglut3-dev``)
+FEniCS can be built automatically from source via
+`HashDist <http://hashdist.github.io/>`__. To build FEniCS, run the
+following command::
 
-Requirements for OS X:
+    curl -s https://fenicsproject.org/fenics-install.sh | bash
 
-* The latest version of Xcode `from the Apple developer website
-  <https://developer.apple.com/downloads/index.action>`__ or get it
-  `using the Mac App Store
-  <http://itunes.apple.com/us/app/xcode/id497799835>`__
-* The Xcode Command Line Developer Tools (run ``xcode-select --install`` in
-  a terminal after installing Xcode)
-* The Git version control system
-  
-See :ref:`installation_using_hashdist` if you need to tweak the build.
+Running this command will build a local installation of FEniCS.
+Before running the script, you may wish to download and inspect its
+contents.
+
+For more details and tips on how to work with FEniCS in HashDist, see
+our :ref:`FEniCS HashDist page <installation_using_hashdist>`.
+
+
+********************
+Contributed packages
+********************
+
+FEniCS is also available through a number of alternative package
+managers. For information on user contributed binary packages, see our
+:ref:`FEniCS contributed packages page <contributed_packages>`.
 
 
 ***************
@@ -120,8 +135,6 @@ Data and meshes
 
 A collection of meshes for free use with FEniCS is available
 :ref:`here <data>`.
-
-
 
 .. toctree::
    :hidden:

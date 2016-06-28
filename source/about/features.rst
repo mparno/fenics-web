@@ -16,8 +16,8 @@ Automated solution of variational problems
 ******************************************
 
 Finite element variational problems may be specified in
-near-mathematical notation **directly as part of your program**.
-For example, the variational problem for the Poisson equation,
+near-mathematical notation **directly as part of your program**.  For
+example, the variational problem for the Poisson equation,
 
 .. math::
    \underbrace{\int_{\Omega} \nabla u \cdot \nabla v \, {\rm d} x}_{a(u, v)}
@@ -35,8 +35,8 @@ can be directly translated to the following FEniCS program:
     a = dot(grad(u), grad(v))*dx
     L = f*v*dx
 
-Variational problems like the one above may be **solved automatically** in
-FEniCS by calling the ``solve()`` function:
+Variational problems like the one above may be **solved
+automatically** in FEniCS by calling the ``solve()`` function:
 
 .. code-block:: python
 
@@ -44,7 +44,8 @@ FEniCS by calling the ``solve()`` function:
     solve(a == L, u, bc)
 
 Automated solution of variational problems is not limited to linear
-problems. FEniCS also supports **general nonlinear variational problems**:
+problems. FEniCS also supports **general nonlinear variational
+problems**:
 
 .. math::
    F(u; v) = 0 \quad \forall v \in V.
@@ -84,7 +85,7 @@ element.
 
   <div class="container-fluid">
     <div class="row">
-      <img src="../_images/elements.png" class="img-responsive" alt="Elements"> 
+      <img src="../_images/elements.png" class="img-responsive" alt="Elements">
     </div>
   </div>
 
@@ -92,15 +93,13 @@ element.
 High performance linear algebra
 *******************************
 
-FEniCS provides unified access to **a range of linear algebra libraries**
-through a common wrapper layer. Currently supported linear algebra
-backends include `PETSc <http://www.mcs.anl.gov/petsc/>`_,
-`Trilinos/Epetra <http://trilinos.sandia.gov/packages/epetra/>`_,
-`uBLAS
-<http://www.boost.org/doc/libs/release/libs/numeric/ublas/doc/index.htm>`_
-and `MTL4 <http://www.simunova.com/de/node/24>`_. The backend may be
-easily switched by changing the value of a parameter. **Parallel
-computing** is supported through the PETSc and Epetra backends.
+FEniCS provides unified access to **a range of linear algebra
+libraries** through a common wrapper layer. Currently supported linear
+algebra backends include `PETSc <http://www.mcs.anl.gov/petsc/>`_,
+`Trilinos/Tpetra <https://trilinos.org/>`_ and `Eigen3
+<http://eigen.tuxfamily.org/>`_.  The backend may be easily switched
+by changing the value of a parameter. **Parallel computing** is
+supported through the PETSc and Trilinos backends.
 
 ********************
 Computational meshes
@@ -118,7 +117,7 @@ computing is supported through interfaces to `SCOTCH
 
   <div class="container-fluid">
     <div class="row">
-      <img src="../_images/meshes.png" class="img-responsive" alt="Meshes"> 
+      <img src="../_images/meshes.png" class="img-responsive" alt="Meshes">
     </div>
   </div>
 
@@ -127,8 +126,8 @@ Postprocessing
 **************
 
 FEniCS provides built-in plotting for quick and easy inspection of
-solutions and meshes. Just call the ``plot()`` command for **live plotting**
-of your data:
+solutions and meshes. Just call the ``plot()`` command for **live
+plotting** of your data:
 
 .. code-block:: python
 
@@ -141,9 +140,10 @@ You can even plot derived quantities like the gradient of a function:
 
     plot(grad(u))
 
-For more **advanced postprocessing**, FEniCS provides easy output in VTK
-format for visualization in `ParaView <http://www.paraview.org/>`_ or
-`MayaVi <http://mayavi.sourceforge.net/>`_.
+For more **advanced postprocessing**, FEniCS provides easy output in
+VTK format for visualization in `ParaView <http://www.paraview.org/>`_
+or `MayaVi <http://mayavi.sourceforge.net/>`_.
+
 
 *****************
 Language bindings
@@ -154,6 +154,7 @@ are very similar and provide the same features (with some small
 exceptions). Which interface to choose is a matter of taste, but the
 Python interface is easier to work with if you are not already a
 seasoned C++ programmer.
+
 
 ***********************
 Extensive documentation
@@ -170,24 +171,6 @@ number of applications in computational science based on FEniCS.
 
   <div class="container-fluid">
     <div class="row">
-      <img src="../_images/documentation.png" class="img-responsive" alt="Fenics Documentation"> 
-    </div>
-  </div>
-
-********************
-Ease of installation
-********************
-
-Ease of installation is a high priority for FEniCS.  We offer
-:ref:`prebuilt binaries <binary_packages>` for **GNU/Linux** (Debian
-and Ubuntu), **Mac OS X** and **Windows**, as well as an
-:ref:`automated installation script <installation_using_dorsal>` for
-other platforms.
-
-.. raw:: html
-
-  <div class="container-fluid">
-    <div class="row">
-      <img src="../_images/platforms.png" class="img-responsive" alt="Platforms"> 
+      <img src="../_images/documentation.png" class="img-responsive" alt="Fenics Documentation">
     </div>
   </div>

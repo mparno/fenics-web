@@ -1,0 +1,3177 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Compiling form AdaptivePoisson
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 0
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 1
+  quadrature_degree: 1
+  
+  Geometric dimension:                 2
+  Number of cell subdomains:           0
+  Number of exterior_facet subdomains: 0
+  Rank:                                0
+  Arguments:                           '()'
+  Number of coefficients:              4
+  Coefficients:                        '[w_0, w_1, w_2, w_3]'
+  Unique elements:                     'CG1(?), CG2(?), Vector<2 x CG1(?)>'
+  Unique sub elements:                 'CG1(?), CG2(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 3
+  quadrature_degree: 3
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 3
+  quadrature_degree: 3
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    1
+  Coefficients:              '[w_4]'
+  Unique elements:           'DG1(?), B3(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'DG1(?), B3(?), Vector<2 x CG1(?)>, CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 5
+  quadrature_degree: 5
+  
+  Geometric dimension:                 2
+  Number of cell subdomains:           0
+  Number of exterior_facet subdomains: 0
+  Rank:                                1
+  Arguments:                           '(v_0)'
+  Number of coefficients:              4
+  Coefficients:                        '[w_0, w_1, w_2, w_4]'
+  Unique elements:                     'DG1(?), CG1(?), B3(?), Vector<2 x CG1(?)>'
+  Unique sub elements:                 'DG1(?), CG1(?), B3(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 5
+  quadrature_degree: 5
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 5
+  quadrature_degree: 5
+  
+  Geometric dimension:                 2
+  Number of exterior_facet subdomains: 0
+  Number of interior_facet subdomains: 0
+  Rank:                                2
+  Arguments:                           '(v_0, v_1)'
+  Number of coefficients:              1
+  Coefficients:                        '[w_6]'
+  Unique elements:                     'DG1(?), DG2(?), Vector<2 x CG1(?)>'
+  Unique sub elements:                 'DG1(?), DG2(?), Vector<2 x CG1(?)>, CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 4
+  quadrature_degree: 4
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 4
+  quadrature_degree: 4
+  
+  Geometric dimension:                 2
+  Number of cell subdomains:           0
+  Number of exterior_facet subdomains: 0
+  Rank:                                1
+  Arguments:                           '(v_0)'
+  Number of coefficients:              5
+  Coefficients:                        '[w_0, w_1, w_2, w_5, w_6]'
+  Unique elements:                     'DG1(?), CG1(?), DG2(?), Vector<2 x CG1(?)>'
+  Unique sub elements:                 'DG1(?), CG1(?), DG2(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 4
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 4
+  quadrature_degree: 4
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 4
+  quadrature_degree: 4
+  
+  Geometric dimension:                 2
+  Number of cell subdomains:           0
+  Number of exterior_facet subdomains: 0
+  Number of interior_facet subdomains: 0
+  Rank:                                1
+  Arguments:                           '(v_0)'
+  Number of coefficients:              4
+  Coefficients:                        '[w_3, w_5, w_7, w_8]'
+  Unique elements:                     'DG0(?), CG2(?), DG1(?), CG1(?), Vector<2 x C
+                                       G1(?)>'
+  Unique sub elements:                 'DG0(?), CG2(?), DG1(?), CG1(?), Vector<2 x C
+                                       G1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 3
+  quadrature_degree: 3
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 3
+  quadrature_degree: 3
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 3
+  quadrature_degree: 3
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 2
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+  Geometric dimension:                 2
+  Number of cell subdomains:           0
+  Number of exterior_facet subdomains: 0
+  Rank:                                1
+  Arguments:                           '(v_0)'
+  Number of coefficients:              2
+  Coefficients:                        '[w_0, w_1]'
+  Unique elements:                     'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:                 'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+  Geometric dimension:       2
+  Number of cell subdomains: 0
+  Rank:                      0
+  Arguments:                 '()'
+  Number of coefficients:    1
+  Coefficients:              '[w_2]'
+  Unique elements:           'CG1(?), Vector<2 x CG1(?)>'
+  Unique sub elements:       'CG1(?), Vector<2 x CG1(?)>'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 1
+  quadrature_degree: 1
+  
+Compiler stage 1 finished in 0.878716 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 7 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 7 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 coordinate mappings
+  Reusing element from cache
+  Computing representation of integrals
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.000869 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  3 entries computed in 0.000617 seconds
+  Shape of reference tensor: (3,)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 0 dims = [] indices = [[]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {6: {VectorElement(FiniteElement('Lagrange', triangle, 1), dim=2): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1., -1., -1., -1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.,  1.,  1.,  1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [-1., -1., -1., -1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 1.,  1.,  1.,  1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]]]), (0, 0): array([[[ 0.10903901,  0.23193337,  0.10903901,  0.65902762,  0.23193337,
+            0.65902762],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.65902762,  0.65902762,  0.23193337,  0.23193337,  0.10903901,
+            0.10903901],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.23193337,  0.10903901,  0.65902762,  0.10903901,  0.65902762,
+            0.23193337],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.10903901,  0.23193337,  0.10903901,  0.65902762,  0.23193337,
+            0.65902762]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.65902762,  0.65902762,  0.23193337,  0.23193337,  0.10903901,
+            0.10903901]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.23193337,  0.10903901,  0.65902762,  0.10903901,  0.65902762,
+            0.23193337]]])}}}, FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]), (1, 0): array([[-1., -1., -1., -1., -1., -1.],
+         [ 1.,  1.,  1.,  1.,  1.,  1.],
+         [ 0.,  0.,  0.,  0.,  0.,  0.]]), (0, 0): array([[ 0.10903901,  0.23193337,  0.10903901,  0.65902762,  0.23193337,
+           0.65902762],
+         [ 0.65902762,  0.65902762,  0.23193337,  0.23193337,  0.10903901,
+           0.10903901],
+         [ 0.23193337,  0.10903901,  0.65902762,  0.10903901,  0.65902762,
+           0.23193337]])}}}, FiniteElement('Lagrange', triangle, 2): {None: {None: {(0, 1): array([[  5.63843964e-01,   7.22665258e-02,   5.63843964e-01,
+           -1.63611049e+00,   7.22665258e-02,  -1.63611049e+00],
+         [  8.16013923e-15,   7.49400542e-15,   7.88258347e-15,
+            6.10622664e-15,   7.27196081e-15,   6.21724894e-15],
+         [ -7.22665258e-02,  -5.63843964e-01,   1.63611049e+00,
+           -5.63843964e-01,   1.63611049e+00,  -7.22665258e-02],
+         [  2.63611049e+00,   2.63611049e+00,   9.27733474e-01,
+            9.27733474e-01,   4.36156036e-01,   4.36156036e-01],
+         [ -4.91577438e-01,   4.91577438e-01,  -2.19995445e+00,
+            2.19995445e+00,  -1.70837702e+00,   1.70837702e+00],
+         [ -2.63611049e+00,  -2.63611049e+00,  -9.27733474e-01,
+           -9.27733474e-01,  -4.36156036e-01,  -4.36156036e-01]]), (1, 0): array([[ 0.56384396,  0.07226653,  0.56384396, -1.63611049,  0.07226653,
+          -1.63611049],
+         [ 1.63611049,  1.63611049, -0.07226653, -0.07226653, -0.56384396,
+          -0.56384396],
+         [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+           0.        ],
+         [ 0.92773347,  0.43615604,  2.63611049,  0.43615604,  2.63611049,
+           0.92773347],
+         [-0.92773347, -0.43615604, -2.63611049, -0.43615604, -2.63611049,
+          -0.92773347],
+         [-2.19995445, -1.70837702, -0.49157744,  1.70837702,  0.49157744,
+           2.19995445]]), (0, 0): array([[-0.08526   , -0.12434719, -0.08526   ,  0.20960719, -0.12434719,
+           0.20960719],
+         [ 0.20960719,  0.20960719, -0.12434719, -0.12434719, -0.08526   ,
+          -0.08526   ],
+         [-0.12434719, -0.08526   ,  0.20960719, -0.08526   ,  0.20960719,
+          -0.12434719],
+         [ 0.61140199,  0.28743888,  0.61140199,  0.10115914,  0.28743888,
+           0.10115914],
+         [ 0.10115914,  0.10115914,  0.28743888,  0.28743888,  0.61140199,
+           0.61140199],
+         [ 0.28743888,  0.61140199,  0.10115914,  0.61140199,  0.10115914,
+           0.28743888]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE2_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE2_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE2_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE2_C1': array([[ 0.        ,  0.        ,  0.        ,  0.10903901,  0.65902762,
+           0.23193337],
+         [ 0.        ,  0.        ,  0.        ,  0.23193337,  0.65902762,
+           0.10903901],
+         [ 0.        ,  0.        ,  0.        ,  0.10903901,  0.23193337,
+           0.65902762],
+         [ 0.        ,  0.        ,  0.        ,  0.65902762,  0.23193337,
+           0.10903901],
+         [ 0.        ,  0.        ,  0.        ,  0.23193337,  0.10903901,
+           0.65902762],
+         [ 0.        ,  0.        ,  0.        ,  0.65902762,  0.10903901,
+           0.23193337]]), 'FE2_C0': array([[ 0.10903901,  0.65902762,  0.23193337,  0.        ,  0.        ,
+           0.        ],
+         [ 0.23193337,  0.65902762,  0.10903901,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10903901,  0.23193337,  0.65902762,  0.        ,  0.        ,
+           0.        ],
+         [ 0.65902762,  0.23193337,  0.10903901,  0.        ,  0.        ,
+           0.        ],
+         [ 0.23193337,  0.10903901,  0.65902762,  0.        ,  0.        ,
+           0.        ],
+         [ 0.65902762,  0.10903901,  0.23193337,  0.        ,  0.        ,
+           0.        ]]), 'FE1_D01': array([[  5.63843964e-01,   8.16013923e-15,  -7.22665258e-02,
+            2.63611049e+00,  -4.91577438e-01,  -2.63611049e+00],
+         [  7.22665258e-02,   7.49400542e-15,  -5.63843964e-01,
+            2.63611049e+00,   4.91577438e-01,  -2.63611049e+00],
+         [  5.63843964e-01,   7.88258347e-15,   1.63611049e+00,
+            9.27733474e-01,  -2.19995445e+00,  -9.27733474e-01],
+         [ -1.63611049e+00,   6.10622664e-15,  -5.63843964e-01,
+            9.27733474e-01,   2.19995445e+00,  -9.27733474e-01],
+         [  7.22665258e-02,   7.27196081e-15,   1.63611049e+00,
+            4.36156036e-01,  -1.70837702e+00,  -4.36156036e-01],
+         [ -1.63611049e+00,   6.21724894e-15,  -7.22665258e-02,
+            4.36156036e-01,   1.70837702e+00,  -4.36156036e-01]]), 'FE1_D10': array([[ 0.56384396,  1.63611049,  0.        ,  0.92773347, -0.92773347,
+          -2.19995445],
+         [ 0.07226653,  1.63611049,  0.        ,  0.43615604, -0.43615604,
+          -1.70837702],
+         [ 0.56384396, -0.07226653,  0.        ,  2.63611049, -2.63611049,
+          -0.49157744],
+         [-1.63611049, -0.07226653,  0.        ,  0.43615604, -0.43615604,
+           1.70837702],
+         [ 0.07226653, -0.56384396,  0.        ,  2.63611049, -2.63611049,
+           0.49157744],
+         [-1.63611049, -0.56384396,  0.        ,  0.92773347, -0.92773347,
+           2.19995445]]), 'FE0': array([[ 0.10903901,  0.65902762,  0.23193337],
+         [ 0.23193337,  0.65902762,  0.10903901],
+         [ 0.10903901,  0.23193337,  0.65902762],
+         [ 0.65902762,  0.23193337,  0.10903901],
+         [ 0.23193337,  0.10903901,  0.65902762],
+         [ 0.65902762,  0.10903901,  0.23193337]]), 'FE1': array([[-0.08526   ,  0.20960719, -0.12434719,  0.61140199,  0.10115914,
+           0.28743888],
+         [-0.12434719,  0.20960719, -0.08526   ,  0.28743888,  0.10115914,
+           0.61140199],
+         [-0.08526   , -0.12434719,  0.20960719,  0.61140199,  0.28743888,
+           0.10115914],
+         [ 0.20960719, -0.12434719, -0.08526   ,  0.10115914,  0.28743888,
+           0.61140199],
+         [-0.12434719, -0.08526   ,  0.20960719,  0.28743888,  0.61140199,
+           0.10115914],
+         [ 0.20960719, -0.08526   , -0.12434719,  0.10115914,  0.61140199,
+           0.28743888]])}
+  
+  tables: {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE2_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE2_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE2_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]]), 'FE2_C1': array([[ 0.        ,  0.        ,  0.        ,  0.10903901,  0.65902762,
+           0.23193337],
+         [ 0.        ,  0.        ,  0.        ,  0.23193337,  0.65902762,
+           0.10903901],
+         [ 0.        ,  0.        ,  0.        ,  0.10903901,  0.23193337,
+           0.65902762],
+         [ 0.        ,  0.        ,  0.        ,  0.65902762,  0.23193337,
+           0.10903901],
+         [ 0.        ,  0.        ,  0.        ,  0.23193337,  0.10903901,
+           0.65902762],
+         [ 0.        ,  0.        ,  0.        ,  0.65902762,  0.10903901,
+           0.23193337]]), 'FE2_C0': array([[ 0.10903901,  0.65902762,  0.23193337,  0.        ,  0.        ,
+           0.        ],
+         [ 0.23193337,  0.65902762,  0.10903901,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10903901,  0.23193337,  0.65902762,  0.        ,  0.        ,
+           0.        ],
+         [ 0.65902762,  0.23193337,  0.10903901,  0.        ,  0.        ,
+           0.        ],
+         [ 0.23193337,  0.10903901,  0.65902762,  0.        ,  0.        ,
+           0.        ],
+         [ 0.65902762,  0.10903901,  0.23193337,  0.        ,  0.        ,
+           0.        ]]), 'FE1_D01': array([[  5.63843964e-01,   8.16013923e-15,  -7.22665258e-02,
+            2.63611049e+00,  -4.91577438e-01,  -2.63611049e+00],
+         [  7.22665258e-02,   7.49400542e-15,  -5.63843964e-01,
+            2.63611049e+00,   4.91577438e-01,  -2.63611049e+00],
+         [  5.63843964e-01,   7.88258347e-15,   1.63611049e+00,
+            9.27733474e-01,  -2.19995445e+00,  -9.27733474e-01],
+         [ -1.63611049e+00,   6.10622664e-15,  -5.63843964e-01,
+            9.27733474e-01,   2.19995445e+00,  -9.27733474e-01],
+         [  7.22665258e-02,   7.27196081e-15,   1.63611049e+00,
+            4.36156036e-01,  -1.70837702e+00,  -4.36156036e-01],
+         [ -1.63611049e+00,   6.21724894e-15,  -7.22665258e-02,
+            4.36156036e-01,   1.70837702e+00,  -4.36156036e-01]]), 'FE1_D10': array([[ 0.56384396,  1.63611049,  0.        ,  0.92773347, -0.92773347,
+          -2.19995445],
+         [ 0.07226653,  1.63611049,  0.        ,  0.43615604, -0.43615604,
+          -1.70837702],
+         [ 0.56384396, -0.07226653,  0.        ,  2.63611049, -2.63611049,
+          -0.49157744],
+         [-1.63611049, -0.07226653,  0.        ,  0.43615604, -0.43615604,
+           1.70837702],
+         [ 0.07226653, -0.56384396,  0.        ,  2.63611049, -2.63611049,
+           0.49157744],
+         [-1.63611049, -0.56384396,  0.        ,  0.92773347, -0.92773347,
+           2.19995445]]), 'FE0': array([[ 0.10903901,  0.65902762,  0.23193337],
+         [ 0.23193337,  0.65902762,  0.10903901],
+         [ 0.10903901,  0.23193337,  0.65902762],
+         [ 0.65902762,  0.23193337,  0.10903901],
+         [ 0.23193337,  0.10903901,  0.65902762],
+         [ 0.65902762,  0.10903901,  0.23193337]]), 'FE1': array([[-0.08526   ,  0.20960719, -0.12434719,  0.61140199,  0.10115914,
+           0.28743888],
+         [-0.12434719,  0.20960719, -0.08526   ,  0.28743888,  0.10115914,
+           0.61140199],
+         [-0.08526   , -0.12434719,  0.20960719,  0.61140199,  0.28743888,
+           0.10115914],
+         [ 0.20960719, -0.12434719, -0.08526   ,  0.10115914,  0.28743888,
+           0.61140199],
+         [-0.12434719, -0.08526   ,  0.20960719,  0.28743888,  0.61140199,
+           0.10115914],
+         [ 0.20960719, -0.08526   , -0.12434719,  0.10115914,  0.61140199,
+           0.28743888]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE2_C1_D01': 'FE2_C1_D01', 'FE0_D01': 'FE0_D01', 'FE2_C0': 'FE2_C0', 'FE1': 'FE1', 'FE2_C1_D10': 'FE2_C1_D10', 'FE2_C1': 'FE2_C1', 'FE2_C0_D01': 'FE2_C0_D01', 'FE1_D01': 'FE1_D01', 'FE1_D10': 'FE1_D10', 'FE0': 'FE0', 'FE2_C0_D10': 'FE2_C0_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]]), 'FE1_D01': array([[ 0.56384396, -0.07226653,  2.63611049, -0.49157744, -2.63611049],
+         [ 0.07226653, -0.56384396,  2.63611049,  0.49157744, -2.63611049],
+         [ 0.56384396,  1.63611049,  0.92773347, -2.19995445, -0.92773347],
+         [-1.63611049, -0.56384396,  0.92773347,  2.19995445, -0.92773347],
+         [ 0.07226653,  1.63611049,  0.43615604, -1.70837702, -0.43615604],
+         [-1.63611049, -0.07226653,  0.43615604,  1.70837702, -0.43615604]]), 'FE1_D10': array([[ 0.56384396,  1.63611049,  0.92773347, -0.92773347, -2.19995445],
+         [ 0.07226653,  1.63611049,  0.43615604, -0.43615604, -1.70837702],
+         [ 0.56384396, -0.07226653,  2.63611049, -2.63611049, -0.49157744],
+         [-1.63611049, -0.07226653,  0.43615604, -0.43615604,  1.70837702],
+         [ 0.07226653, -0.56384396,  2.63611049, -2.63611049,  0.49157744],
+         [-1.63611049, -0.56384396,  0.92773347, -0.92773347,  2.19995445]]), 'FE0': array([[ 0.10903901,  0.65902762,  0.23193337],
+         [ 0.23193337,  0.65902762,  0.10903901],
+         [ 0.10903901,  0.23193337,  0.65902762],
+         [ 0.65902762,  0.23193337,  0.10903901],
+         [ 0.23193337,  0.10903901,  0.65902762],
+         [ 0.65902762,  0.10903901,  0.23193337]]), 'FE1': array([[-0.08526   ,  0.20960719, -0.12434719,  0.61140199,  0.10115914,
+           0.28743888],
+         [-0.12434719,  0.20960719, -0.08526   ,  0.28743888,  0.10115914,
+           0.61140199],
+         [-0.08526   , -0.12434719,  0.20960719,  0.61140199,  0.28743888,
+           0.10115914],
+         [ 0.20960719, -0.12434719, -0.08526   ,  0.10115914,  0.28743888,
+           0.61140199],
+         [-0.12434719, -0.08526   ,  0.20960719,  0.28743888,  0.61140199,
+           0.10115914],
+         [ 0.20960719, -0.08526   , -0.12434719,  0.10115914,  0.61140199,
+           0.28743888]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE2_C1_D01': ('FE0_D01', (8, [3, 5]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE2_C0': ('FE0', (4, [0, 1, 2]), False, False), 'FE1': ('FE1', (), False, False), 'FE2_C1_D10': ('FE0_D01', (9, [3, 4]), False, False), 'FE2_C1': ('FE0', (7, [3, 4, 5]), False, False), 'FE2_C0_D01': ('FE0_D01', (5, [0, 2]), False, False), 'FE1_D01': ('FE1_D01', (2, [0, 2, 3, 4, 5]), False, False), 'FE1_D10': ('FE1_D10', (3, [0, 1, 3, 4, 5]), False, False), 'FE0': ('FE0', (), False, False), 'FE2_C0_D10': ('FE0_D01', (6, [0, 1]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00173 seconds
+  Shape of reference tensor: (3, 6)
+  Primary multi index:   rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00177 seconds
+  Shape of reference tensor: (3, 6)
+  Primary multi index:   rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00222 seconds
+  Shape of reference tensor: (3, 6)
+  Primary multi index:   rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00239 seconds
+  Shape of reference tensor: (3, 3, 1)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [1] indices = [[0]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [1] indices = [[0]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {7: {VectorElement(FiniteElement('Lagrange', triangle, 1), dim=2): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1., -1., -1., -1., -1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.,  1.,  1.,  1.,  1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.],
+          [-1., -1., -1., -1., -1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.],
+          [ 1.,  1.,  1.,  1.,  1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]]]), (0, 0): array([[[ 0.33333333,  0.10128651,  0.10128651,  0.79742699,  0.47014206,
+            0.47014206,  0.05971587],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.33333333,  0.79742699,  0.10128651,  0.10128651,  0.05971587,
+            0.47014206,  0.47014206],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.33333333,  0.10128651,  0.79742699,  0.10128651,  0.47014206,
+            0.05971587,  0.47014206],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.33333333,  0.10128651,  0.10128651,  0.79742699,  0.47014206,
+            0.47014206,  0.05971587]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.33333333,  0.79742699,  0.10128651,  0.10128651,  0.05971587,
+            0.47014206,  0.47014206]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ,  0.        ],
+          [ 0.33333333,  0.10128651,  0.79742699,  0.10128651,  0.47014206,
+            0.05971587,  0.47014206]]])}}}, FiniteElement('Discontinuous Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00]]), (1, 0): array([[-1., -1., -1., -1., -1., -1., -1.],
+         [ 1.,  1.,  1.,  1.,  1.,  1.,  1.],
+         [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]]), (0, 0): array([[ 0.33333333,  0.10128651,  0.10128651,  0.79742699,  0.47014206,
+           0.47014206,  0.05971587],
+         [ 0.33333333,  0.79742699,  0.10128651,  0.10128651,  0.05971587,
+           0.47014206,  0.47014206],
+         [ 0.33333333,  0.10128651,  0.79742699,  0.10128651,  0.47014206,
+           0.05971587,  0.47014206]])}}}, FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00]]), (1, 0): array([[-1., -1., -1., -1., -1., -1., -1.],
+         [ 1.,  1.,  1.,  1.,  1.,  1.,  1.],
+         [ 0.,  0.,  0.,  0.,  0.,  0.,  0.]]), (0, 0): array([[ 0.33333333,  0.10128651,  0.10128651,  0.79742699,  0.47014206,
+           0.47014206,  0.05971587],
+         [ 0.33333333,  0.79742699,  0.10128651,  0.10128651,  0.05971587,
+           0.47014206,  0.47014206],
+         [ 0.33333333,  0.10128651,  0.79742699,  0.10128651,  0.47014206,
+           0.05971587,  0.47014206]])}}}, FiniteElement('Bubble', triangle, 3): {None: {None: {(0, 1): array([[ -6.05071548e-15,  -6.32827124e-15,  -1.90376022e+00,
+            1.90376022e+00,  -7.43849426e-15,   5.20988266e+00,
+           -5.20988266e+00]]), (1, 0): array([[ -6.77432042e-16,  -1.90376022e+00,  -3.35519822e-15,
+            1.90376022e+00,   5.20988266e+00,  -2.12974173e-15,
+           -5.20988266e+00]]), (0, 0): array([[ 1.        ,  0.22088076,  0.22088076,  0.22088076,  0.35637872,
+           0.35637872,  0.35637872]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[ -6.77432042e-16],
+         [ -1.90376022e+00],
+         [ -3.35519822e-15],
+         [  1.90376022e+00],
+         [  5.20988266e+00],
+         [ -2.12974173e-15],
+         [ -5.20988266e+00]]), 'FE0_D01': array([[ -6.05071548e-15],
+         [ -6.32827124e-15],
+         [ -1.90376022e+00],
+         [  1.90376022e+00],
+         [ -7.43849426e-15],
+         [  5.20988266e+00],
+         [ -5.20988266e+00]]), 'FE3_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE3_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0': array([[ 0.33333333,  0.33333333,  0.33333333,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10128651,  0.79742699,  0.10128651,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10128651,  0.10128651,  0.79742699,  0.        ,  0.        ,
+           0.        ],
+         [ 0.79742699,  0.10128651,  0.10128651,  0.        ,  0.        ,
+           0.        ],
+         [ 0.47014206,  0.05971587,  0.47014206,  0.        ,  0.        ,
+           0.        ],
+         [ 0.47014206,  0.47014206,  0.05971587,  0.        ,  0.        ,
+           0.        ],
+         [ 0.05971587,  0.47014206,  0.47014206,  0.        ,  0.        ,
+           0.        ]]), 'FE3_C1': array([[ 0.        ,  0.        ,  0.        ,  0.33333333,  0.33333333,
+           0.33333333],
+         [ 0.        ,  0.        ,  0.        ,  0.10128651,  0.79742699,
+           0.10128651],
+         [ 0.        ,  0.        ,  0.        ,  0.10128651,  0.10128651,
+           0.79742699],
+         [ 0.        ,  0.        ,  0.        ,  0.79742699,  0.10128651,
+           0.10128651],
+         [ 0.        ,  0.        ,  0.        ,  0.47014206,  0.05971587,
+           0.47014206],
+         [ 0.        ,  0.        ,  0.        ,  0.47014206,  0.47014206,
+           0.05971587],
+         [ 0.        ,  0.        ,  0.        ,  0.05971587,  0.47014206,
+           0.47014206]]), 'FE3_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE1_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE2': array([[ 0.33333333,  0.33333333,  0.33333333],
+         [ 0.10128651,  0.79742699,  0.10128651],
+         [ 0.10128651,  0.10128651,  0.79742699],
+         [ 0.79742699,  0.10128651,  0.10128651],
+         [ 0.47014206,  0.05971587,  0.47014206],
+         [ 0.47014206,  0.47014206,  0.05971587],
+         [ 0.05971587,  0.47014206,  0.47014206]]), 'FE1_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0': array([[ 1.        ],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.35637872],
+         [ 0.35637872],
+         [ 0.35637872]]), 'FE1': array([[ 0.33333333,  0.33333333,  0.33333333],
+         [ 0.10128651,  0.79742699,  0.10128651],
+         [ 0.10128651,  0.10128651,  0.79742699],
+         [ 0.79742699,  0.10128651,  0.10128651],
+         [ 0.47014206,  0.05971587,  0.47014206],
+         [ 0.47014206,  0.47014206,  0.05971587],
+         [ 0.05971587,  0.47014206,  0.47014206]]), 'FE2_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE2_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]])}
+  
+  tables: {'FE0_D10': array([[ -6.77432042e-16],
+         [ -1.90376022e+00],
+         [ -3.35519822e-15],
+         [  1.90376022e+00],
+         [  5.20988266e+00],
+         [ -2.12974173e-15],
+         [ -5.20988266e+00]]), 'FE0_D01': array([[ -6.05071548e-15],
+         [ -6.32827124e-15],
+         [ -1.90376022e+00],
+         [  1.90376022e+00],
+         [ -7.43849426e-15],
+         [  5.20988266e+00],
+         [ -5.20988266e+00]]), 'FE3_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE3_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0': array([[ 0.33333333,  0.33333333,  0.33333333,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10128651,  0.79742699,  0.10128651,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10128651,  0.10128651,  0.79742699,  0.        ,  0.        ,
+           0.        ],
+         [ 0.79742699,  0.10128651,  0.10128651,  0.        ,  0.        ,
+           0.        ],
+         [ 0.47014206,  0.05971587,  0.47014206,  0.        ,  0.        ,
+           0.        ],
+         [ 0.47014206,  0.47014206,  0.05971587,  0.        ,  0.        ,
+           0.        ],
+         [ 0.05971587,  0.47014206,  0.47014206,  0.        ,  0.        ,
+           0.        ]]), 'FE3_C1': array([[ 0.        ,  0.        ,  0.        ,  0.33333333,  0.33333333,
+           0.33333333],
+         [ 0.        ,  0.        ,  0.        ,  0.10128651,  0.79742699,
+           0.10128651],
+         [ 0.        ,  0.        ,  0.        ,  0.10128651,  0.10128651,
+           0.79742699],
+         [ 0.        ,  0.        ,  0.        ,  0.79742699,  0.10128651,
+           0.10128651],
+         [ 0.        ,  0.        ,  0.        ,  0.47014206,  0.05971587,
+           0.47014206],
+         [ 0.        ,  0.        ,  0.        ,  0.47014206,  0.47014206,
+           0.05971587],
+         [ 0.        ,  0.        ,  0.        ,  0.05971587,  0.47014206,
+           0.47014206]]), 'FE3_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE1_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE1_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0': array([[ 1.        ],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.35637872],
+         [ 0.35637872],
+         [ 0.35637872]]), 'FE1': array([[ 0.33333333,  0.33333333,  0.33333333],
+         [ 0.10128651,  0.79742699,  0.10128651],
+         [ 0.10128651,  0.10128651,  0.79742699],
+         [ 0.79742699,  0.10128651,  0.10128651],
+         [ 0.47014206,  0.05971587,  0.47014206],
+         [ 0.47014206,  0.47014206,  0.05971587],
+         [ 0.05971587,  0.47014206,  0.47014206]]), 'FE3_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]])}
+  
+  name_map: {'FE1_D01': ['FE2_D01'], 'FE1_D10': ['FE2_D10'], 'FE1': ['FE2']}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0', 'FE3_C1_D01': 'FE3_C1_D01', 'FE3_C0': 'FE3_C0', 'FE3_C1': 'FE3_C1', 'FE3_C0_D10': 'FE3_C0_D10', 'FE1_D01': 'FE1_D01', 'FE2': 'FE1', 'FE1_D10': 'FE1_D10', 'FE3_C0_D01': 'FE3_C0_D01', 'FE1': 'FE1', 'FE2_D10': 'FE1_D10', 'FE2_D01': 'FE1_D01', 'FE3_C1_D10': 'FE3_C1_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D10': array([[ 0.        ],
+         [-1.90376022],
+         [ 0.        ],
+         [ 1.90376022],
+         [ 5.20988266],
+         [ 0.        ],
+         [-5.20988266]]), 'FE0_D01': array([[ 0.        ],
+         [ 0.        ],
+         [-1.90376022],
+         [ 1.90376022],
+         [ 0.        ],
+         [ 5.20988266],
+         [-5.20988266]]), 'FE1_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]]), 'FE0': array([[ 1.        ],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.22088076],
+         [ 0.35637872],
+         [ 0.35637872],
+         [ 0.35637872]]), 'FE1': array([[ 0.33333333,  0.33333333,  0.33333333],
+         [ 0.10128651,  0.79742699,  0.10128651],
+         [ 0.10128651,  0.10128651,  0.79742699],
+         [ 0.79742699,  0.10128651,  0.10128651],
+         [ 0.47014206,  0.05971587,  0.47014206],
+         [ 0.47014206,  0.47014206,  0.05971587],
+         [ 0.05971587,  0.47014206,  0.47014206]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D10', (), False, False), 'FE0_D01': ('FE0_D01', (), False, False), 'FE0': ('FE0', (), False, False), 'FE3_C1_D01': ('FE1_D01', (6, [3, 5]), False, False), 'FE3_C0': ('FE1', (2, [0, 1, 2]), False, False), 'FE3_C1': ('FE1', (5, [3, 4, 5]), False, False), 'FE3_C0_D10': ('FE1_D01', (4, [0, 1]), False, False), 'FE1_D01': ('FE1_D01', (0, [0, 2]), False, False), 'FE2': ('FE1', (), False, False), 'FE1_D10': ('FE1_D01', (1, [0, 1]), False, False), 'FE3_C0_D01': ('FE1_D01', (3, [0, 2]), False, False), 'FE1': ('FE1', (), False, False), 'FE2_D10': ('FE1_D01', (1, [0, 1]), False, False), 'FE2_D01': ('FE1_D01', (0, [0, 2]), False, False), 'FE3_C1_D10': ('FE1_D01', (7, [3, 4]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00502 seconds
+  Shape of reference tensor: (3, 3, 1)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00455 seconds
+  Shape of reference tensor: (3, 3, 1)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00473 seconds
+  Shape of reference tensor: (3, 3, 1)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 1] indices = [[0, 0], [1, 0], [2, 0]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00306 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00211 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00203 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00261 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00254 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00244 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00248 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00242 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00242 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00466 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00246 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00236 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00276 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00242 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.0024 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00242 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00253 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00236 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00232 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00232 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00238 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [6] indices = [[0], [1], [2], [3], [4], [5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {6: {VectorElement(FiniteElement('Lagrange', triangle, 1), dim=2): {None: {None: {(0, 1): array([[[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00],
+          [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+            -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+             8.88178420e-16,   8.88178420e-16,   8.88178420e-16]],
+  
+         [[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+             0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+          [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+             1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]]), (1, 0): array([[[-1., -1., -1., -1., -1., -1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 1.,  1.,  1.,  1.,  1.,  1.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [-1., -1., -1., -1., -1., -1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 1.,  1.,  1.,  1.,  1.,  1.]],
+  
+         [[ 0.,  0.,  0.,  0.,  0.,  0.],
+          [ 0.,  0.,  0.,  0.,  0.,  0.]]]), (0, 0): array([[[ 0.09157621,  0.09157621,  0.81684757,  0.44594849,  0.44594849,
+            0.10810302],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.81684757,  0.09157621,  0.09157621,  0.10810302,  0.44594849,
+            0.44594849],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.09157621,  0.81684757,  0.09157621,  0.44594849,  0.10810302,
+            0.44594849],
+          [ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.09157621,  0.09157621,  0.81684757,  0.44594849,  0.44594849,
+            0.10810302]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.81684757,  0.09157621,  0.09157621,  0.10810302,  0.44594849,
+            0.44594849]],
+  
+         [[ 0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+            0.        ],
+          [ 0.09157621,  0.81684757,  0.09157621,  0.44594849,  0.10810302,
+            0.44594849]]])}}}, FiniteElement('Discontinuous Lagrange', triangle, 2): {None: {None: {(0, 1): array([[  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+           -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01],
+         [  7.99360578e-15,   7.32747196e-15,   5.44009282e-15,
+            6.93195501e-15,   6.88338275e-15,   8.11850587e-15],
+         [ -6.33695146e-01,   2.26739029e+00,  -6.33695146e-01,
+            7.83793964e-01,  -5.67587927e-01,   7.83793964e-01],
+         [  3.26739029e+00,   3.66304854e-01,   3.66304854e-01,
+            4.32412073e-01,   1.78379396e+00,   1.78379396e+00],
+         [  7.10542736e-15,  -2.90108544e+00,   2.90108544e+00,
+            8.13238366e-15,   1.35138189e+00,  -1.35138189e+00],
+         [ -3.26739029e+00,  -3.66304854e-01,  -3.66304854e-01,
+           -4.32412073e-01,  -1.78379396e+00,  -1.78379396e+00]]), (1, 0): array([[  6.33695146e-01,   6.33695146e-01,  -2.26739029e+00,
+           -7.83793964e-01,  -7.83793964e-01,   5.67587927e-01],
+         [  2.26739029e+00,  -6.33695146e-01,  -6.33695146e-01,
+           -5.67587927e-01,   7.83793964e-01,   7.83793964e-01],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [  3.66304854e-01,   3.26739029e+00,   3.66304854e-01,
+            1.78379396e+00,   4.32412073e-01,   1.78379396e+00],
+         [ -3.66304854e-01,  -3.26739029e+00,  -3.66304854e-01,
+           -1.78379396e+00,  -4.32412073e-01,  -1.78379396e+00],
+         [ -2.90108544e+00,  -3.86532069e-15,   2.90108544e+00,
+            1.35138189e+00,  -4.32612710e-16,  -1.35138189e+00]]), (0, 0): array([[-0.07480381, -0.07480381,  0.51763234, -0.04820838, -0.04820838,
+          -0.08473049],
+         [ 0.51763234, -0.07480381, -0.07480381, -0.08473049, -0.04820838,
+          -0.04820838],
+         [-0.07480381,  0.51763234, -0.07480381, -0.04820838, -0.08473049,
+          -0.04820838],
+         [ 0.29921523,  0.29921523,  0.03354481,  0.19283351,  0.19283351,
+           0.79548023],
+         [ 0.03354481,  0.29921523,  0.29921523,  0.79548023,  0.19283351,
+           0.19283351],
+         [ 0.29921523,  0.03354481,  0.29921523,  0.19283351,  0.79548023,
+           0.19283351]])}}}, FiniteElement('Discontinuous Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]), (1, 0): array([[-1., -1., -1., -1., -1., -1.],
+         [ 1.,  1.,  1.,  1.,  1.,  1.],
+         [ 0.,  0.,  0.,  0.,  0.,  0.]]), (0, 0): array([[ 0.09157621,  0.09157621,  0.81684757,  0.44594849,  0.44594849,
+           0.10810302],
+         [ 0.81684757,  0.09157621,  0.09157621,  0.10810302,  0.44594849,
+           0.44594849],
+         [ 0.09157621,  0.81684757,  0.09157621,  0.44594849,  0.10810302,
+           0.44594849]])}}}, FiniteElement('Lagrange', triangle, 1): {None: {None: {(0, 1): array([[ -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00,
+           -1.00000000e+00,  -1.00000000e+00,  -1.00000000e+00],
+         [  8.88178420e-16,   8.88178420e-16,   8.88178420e-16,
+            8.88178420e-16,   8.88178420e-16,   8.88178420e-16],
+         [  1.00000000e+00,   1.00000000e+00,   1.00000000e+00,
+            1.00000000e+00,   1.00000000e+00,   1.00000000e+00]]), (1, 0): array([[-1., -1., -1., -1., -1., -1.],
+         [ 1.,  1.,  1.,  1.,  1.,  1.],
+         [ 0.,  0.,  0.,  0.,  0.,  0.]]), (0, 0): array([[ 0.09157621,  0.09157621,  0.81684757,  0.44594849,  0.44594849,
+           0.10810302],
+         [ 0.81684757,  0.09157621,  0.09157621,  0.10810302,  0.44594849,
+           0.44594849],
+         [ 0.09157621,  0.81684757,  0.09157621,  0.44594849,  0.10810302,
+           0.44594849]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE3_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0': array([[ 0.09157621,  0.81684757,  0.09157621,  0.        ,  0.        ,
+           0.        ],
+         [ 0.09157621,  0.09157621,  0.81684757,  0.        ,  0.        ,
+           0.        ],
+         [ 0.81684757,  0.09157621,  0.09157621,  0.        ,  0.        ,
+           0.        ],
+         [ 0.44594849,  0.10810302,  0.44594849,  0.        ,  0.        ,
+           0.        ],
+         [ 0.44594849,  0.44594849,  0.10810302,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10810302,  0.44594849,  0.44594849,  0.        ,  0.        ,
+           0.        ]]), 'FE3_C1': array([[ 0.        ,  0.        ,  0.        ,  0.09157621,  0.81684757,
+           0.09157621],
+         [ 0.        ,  0.        ,  0.        ,  0.09157621,  0.09157621,
+           0.81684757],
+         [ 0.        ,  0.        ,  0.        ,  0.81684757,  0.09157621,
+           0.09157621],
+         [ 0.        ,  0.        ,  0.        ,  0.44594849,  0.10810302,
+           0.44594849],
+         [ 0.        ,  0.        ,  0.        ,  0.44594849,  0.44594849,
+           0.10810302],
+         [ 0.        ,  0.        ,  0.        ,  0.10810302,  0.44594849,
+           0.44594849]]), 'FE3_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE1_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE2': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351]]), 'FE1_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0': array([[ 0.09157621,  0.81684757,  0.09157621],
+         [ 0.09157621,  0.09157621,  0.81684757],
+         [ 0.81684757,  0.09157621,  0.09157621],
+         [ 0.44594849,  0.10810302,  0.44594849],
+         [ 0.44594849,  0.44594849,  0.10810302],
+         [ 0.10810302,  0.44594849,  0.44594849]]), 'FE1': array([[ 0.09157621,  0.81684757,  0.09157621],
+         [ 0.09157621,  0.09157621,  0.81684757],
+         [ 0.81684757,  0.09157621,  0.09157621],
+         [ 0.44594849,  0.10810302,  0.44594849],
+         [ 0.44594849,  0.44594849,  0.10810302],
+         [ 0.10810302,  0.44594849,  0.44594849]]), 'FE2_D10': array([[  6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00],
+         [  6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -3.86532069e-15],
+         [ -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00],
+         [ -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00],
+         [ -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -4.32612710e-16],
+         [  5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00]]), 'FE2_D01': array([[  6.33695146e-01,   7.99360578e-15,  -6.33695146e-01,
+            3.26739029e+00,   7.10542736e-15,  -3.26739029e+00],
+         [  6.33695146e-01,   7.32747196e-15,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01],
+         [ -2.26739029e+00,   5.44009282e-15,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01],
+         [ -7.83793964e-01,   6.93195501e-15,   7.83793964e-01,
+            4.32412073e-01,   8.13238366e-15,  -4.32412073e-01],
+         [ -7.83793964e-01,   6.88338275e-15,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00],
+         [  5.67587927e-01,   8.11850587e-15,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00]]), 'FE3_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]])}
+  
+  tables: {'FE0_D10': array([[-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.],
+         [-1.,  1.,  0.]]), 'FE0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0_D01': array([[ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00],
+         [ -1.00000000e+00,   8.88178420e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE3_C1_D01': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00],
+         [  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+           -1.00000000e+00,   8.88178420e-16,   1.00000000e+00]]), 'FE3_C0': array([[ 0.09157621,  0.81684757,  0.09157621,  0.        ,  0.        ,
+           0.        ],
+         [ 0.09157621,  0.09157621,  0.81684757,  0.        ,  0.        ,
+           0.        ],
+         [ 0.81684757,  0.09157621,  0.09157621,  0.        ,  0.        ,
+           0.        ],
+         [ 0.44594849,  0.10810302,  0.44594849,  0.        ,  0.        ,
+           0.        ],
+         [ 0.44594849,  0.44594849,  0.10810302,  0.        ,  0.        ,
+           0.        ],
+         [ 0.10810302,  0.44594849,  0.44594849,  0.        ,  0.        ,
+           0.        ]]), 'FE3_C1': array([[ 0.        ,  0.        ,  0.        ,  0.09157621,  0.81684757,
+           0.09157621],
+         [ 0.        ,  0.        ,  0.        ,  0.09157621,  0.09157621,
+           0.81684757],
+         [ 0.        ,  0.        ,  0.        ,  0.81684757,  0.09157621,
+           0.09157621],
+         [ 0.        ,  0.        ,  0.        ,  0.44594849,  0.10810302,
+           0.44594849],
+         [ 0.        ,  0.        ,  0.        ,  0.44594849,  0.44594849,
+           0.10810302],
+         [ 0.        ,  0.        ,  0.        ,  0.10810302,  0.44594849,
+           0.44594849]]), 'FE3_C0_D10': array([[-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.],
+         [-1.,  1.,  0.,  0.,  0.,  0.]]), 'FE2': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351]]), 'FE0': array([[ 0.09157621,  0.81684757,  0.09157621],
+         [ 0.09157621,  0.09157621,  0.81684757],
+         [ 0.81684757,  0.09157621,  0.09157621],
+         [ 0.44594849,  0.10810302,  0.44594849],
+         [ 0.44594849,  0.44594849,  0.10810302],
+         [ 0.10810302,  0.44594849,  0.44594849]]), 'FE2_D10': array([[  6.33695146e-01,   2.26739029e+00,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,  -2.90108544e+00],
+         [  6.33695146e-01,  -6.33695146e-01,   0.00000000e+00,
+            3.26739029e+00,  -3.26739029e+00,  -3.86532069e-15],
+         [ -2.26739029e+00,  -6.33695146e-01,   0.00000000e+00,
+            3.66304854e-01,  -3.66304854e-01,   2.90108544e+00],
+         [ -7.83793964e-01,  -5.67587927e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,   1.35138189e+00],
+         [ -7.83793964e-01,   7.83793964e-01,   0.00000000e+00,
+            4.32412073e-01,  -4.32412073e-01,  -4.32612710e-16],
+         [  5.67587927e-01,   7.83793964e-01,   0.00000000e+00,
+            1.78379396e+00,  -1.78379396e+00,  -1.35138189e+00]]), 'FE2_D01': array([[  6.33695146e-01,   7.99360578e-15,  -6.33695146e-01,
+            3.26739029e+00,   7.10542736e-15,  -3.26739029e+00],
+         [  6.33695146e-01,   7.32747196e-15,   2.26739029e+00,
+            3.66304854e-01,  -2.90108544e+00,  -3.66304854e-01],
+         [ -2.26739029e+00,   5.44009282e-15,  -6.33695146e-01,
+            3.66304854e-01,   2.90108544e+00,  -3.66304854e-01],
+         [ -7.83793964e-01,   6.93195501e-15,   7.83793964e-01,
+            4.32412073e-01,   8.13238366e-15,  -4.32412073e-01],
+         [ -7.83793964e-01,   6.88338275e-15,  -5.67587927e-01,
+            1.78379396e+00,   1.35138189e+00,  -1.78379396e+00],
+         [  5.67587927e-01,   8.11850587e-15,   7.83793964e-01,
+            1.78379396e+00,  -1.35138189e+00,  -1.78379396e+00]]), 'FE3_C1_D10': array([[ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.],
+         [ 0.,  0.,  0., -1.,  1.,  0.]])}
+  
+  name_map: {'FE0_D10': ['FE1_D10'], 'FE0_D01': ['FE1_D01'], 'FE0': ['FE1']}
+  
+  inv_name_map: {'FE0_D10': 'FE0_D10', 'FE0_D01': 'FE0_D01', 'FE0': 'FE0', 'FE3_C1_D01': 'FE3_C1_D01', 'FE3_C0': 'FE3_C0', 'FE3_C1': 'FE3_C1', 'FE3_C0_D10': 'FE3_C0_D10', 'FE1_D01': 'FE0_D01', 'FE2': 'FE2', 'FE1_D10': 'FE0_D10', 'FE3_C0_D01': 'FE3_C0_D01', 'FE1': 'FE0', 'FE2_D10': 'FE2_D10', 'FE2_D01': 'FE2_D01', 'FE3_C1_D10': 'FE3_C1_D10'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE0_D01': array([[-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.],
+         [-1.,  1.]]), 'FE2': array([[-0.07480381,  0.51763234, -0.07480381,  0.29921523,  0.03354481,
+           0.29921523],
+         [-0.07480381, -0.07480381,  0.51763234,  0.29921523,  0.29921523,
+           0.03354481],
+         [ 0.51763234, -0.07480381, -0.07480381,  0.03354481,  0.29921523,
+           0.29921523],
+         [-0.04820838, -0.08473049, -0.04820838,  0.19283351,  0.79548023,
+           0.19283351],
+         [-0.04820838, -0.04820838, -0.08473049,  0.19283351,  0.19283351,
+           0.79548023],
+         [-0.08473049, -0.04820838, -0.04820838,  0.79548023,  0.19283351,
+           0.19283351]]), 'FE0': array([[ 0.09157621,  0.81684757,  0.09157621],
+         [ 0.09157621,  0.09157621,  0.81684757],
+         [ 0.81684757,  0.09157621,  0.09157621],
+         [ 0.44594849,  0.10810302,  0.44594849],
+         [ 0.44594849,  0.44594849,  0.10810302],
+         [ 0.10810302,  0.44594849,  0.44594849]]), 'FE2_D10': array([[ 0.63369515,  2.26739029,  0.36630485, -0.36630485, -2.90108544],
+         [ 0.63369515, -0.63369515,  3.26739029, -3.26739029,  0.        ],
+         [-2.26739029, -0.63369515,  0.36630485, -0.36630485,  2.90108544],
+         [-0.78379396, -0.56758793,  1.78379396, -1.78379396,  1.35138189],
+         [-0.78379396,  0.78379396,  0.43241207, -0.43241207,  0.        ],
+         [ 0.56758793,  0.78379396,  1.78379396, -1.78379396, -1.35138189]]), 'FE2_D01': array([[ 0.63369515, -0.63369515,  3.26739029,  0.        , -3.26739029],
+         [ 0.63369515,  2.26739029,  0.36630485, -2.90108544, -0.36630485],
+         [-2.26739029, -0.63369515,  0.36630485,  2.90108544, -0.36630485],
+         [-0.78379396,  0.78379396,  0.43241207,  0.        , -0.43241207],
+         [-0.78379396, -0.56758793,  1.78379396,  1.35138189, -1.78379396],
+         [ 0.56758793,  0.78379396,  1.78379396, -1.35138189, -1.78379396]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE0_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE0_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE0': ('FE0', (), False, False), 'FE3_C1_D01': ('FE0_D01', (8, [3, 5]), False, False), 'FE3_C0': ('FE0', (4, [0, 1, 2]), False, False), 'FE3_C1': ('FE0', (7, [3, 4, 5]), False, False), 'FE3_C0_D10': ('FE0_D01', (6, [0, 1]), False, False), 'FE1_D01': ('FE0_D01', (0, [0, 2]), False, False), 'FE2': ('FE2', (), False, False), 'FE1_D10': ('FE0_D01', (1, [0, 1]), False, False), 'FE3_C0_D01': ('FE0_D01', (5, [0, 2]), False, False), 'FE1': ('FE0', (), False, False), 'FE2_D10': ('FE2_D10', (3, [0, 1, 3, 4, 5]), False, False), 'FE2_D01': ('FE2_D01', (2, [0, 2, 3, 4, 5]), False, False), 'FE3_C1_D10': ('FE0_D01', (9, [3, 4]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00261 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.00297 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  54 entries computed in 0.0025 seconds
+  Shape of reference tensor: (3, 3, 6)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00157 seconds
+  Shape of reference tensor: (1, 3, 6)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00142 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00203 seconds
+  Shape of reference tensor: (1, 3, 6)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00182 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00184 seconds
+  Shape of reference tensor: (1, 3, 6)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.0018 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00181 seconds
+  Shape of reference tensor: (1, 3, 6)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 6] indices = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00181 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00262 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00281 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00276 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00259 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00242 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.0025 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00268 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00277 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00269 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00265 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00269 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00262 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00251 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00249 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00265 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00268 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00251 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00262 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00276 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00379 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00296 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00257 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.0031 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00271 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00252 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00261 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00299 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00277 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00261 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00277 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00266 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00271 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00258 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00259 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00311 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00567 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00551 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00543 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.0042 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00477 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00454 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00597 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00659 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00597 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00573 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00509 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00476 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00467 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00336 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00247 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00268 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00263 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00237 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00252 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00282 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00312 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00255 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00258 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00262 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00269 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00262 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00261 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00279 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00272 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00261 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00274 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00303 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00293 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00275 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  9 entries computed in 0.00274 seconds
+  Shape of reference tensor: (1, 3, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00486 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  18 entries computed in 0.00345 seconds
+  Shape of reference tensor: (1, 6, 3)
+  Primary multi index:   rank = 1 dims = [1] indices = [[0]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [6, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2], [3, 0], [3, 1], [3, 2], [4, 0], [4, 1], [4, 2], [5, 0], [5, 1], [5, 2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  36 entries computed in 0.000983 seconds
+  Shape of reference tensor: (3, 3, 2, 2)
+  Primary multi index:   rank = 2 dims = [3, 3] indices = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 2 dims = [2, 2] indices = [[0, 0], [0, 1], [1, 0], [1, 1]]
+  External multi index:  rank = 1 dims = [2] indices = [[0], [1]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.000853 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00137 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00113 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Precomputing integrals on reference element
+  Reusing element from cache
+  9 entries computed in 0.00116 seconds
+  Shape of reference tensor: (3, 3)
+  Primary multi index:   rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  3 entries computed in 0.000564 seconds
+  Shape of reference tensor: (3,)
+  Primary multi index:   rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Internal multi index:  rank = 0 dims = [] indices = [[]]
+  Secondary multi index: rank = 1 dims = [3] indices = [[0], [1], [2]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.764338 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.0154691 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 7 element(s)
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Generating code for 7 dofmap(s)
+  Generating code for 1 coordinate_mapping(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: det
+  Removing unused variable: dx1
+  Removing unused variable: dx0
+  Removing unused variable: v1
+  Removing unused variable: v0
+  Removing unused variable: edge_vertices
+  Removing unused variable: circumradius
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.482668 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.00313306 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.00250483 seconds.
+
+FFC finished in 2.14745 seconds.
+Output written to ./AdaptivePoisson.h.

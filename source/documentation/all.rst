@@ -17,3 +17,4 @@ List of all versions of the documentation
 * :doc:`doc_1.4.0`
 * :doc:`doc_1.5.0`
 * :doc:`doc_1.6.0`
+* :doc:`doc_2016.1.0`

@@ -1,0 +1,1840 @@
+This is FFC, the FEniCS Form Compiler, version 2016.1.0.
+UFC backend version 2016.1.0, signature 1b14b3cad537cb974523d529928ad9bde02ef657.
+For further information, visit https://bitbucket.org/fenics-project/ffc/.
+
+Expr.geometric_dimension() is deprecated, please use find_geometric_dimension(expr) instead.
+Expr.geometric_dimension() is deprecated, please use find_geometric_dimension(expr) instead.
+Compiling form Elasticity
+
+Compiler stage 1: Analyzing form(s)
+-----------------------------------
+  
+  Geometric dimension:       3
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    2
+  Coefficients:              '[w_1, w_2]'
+  Unique elements:           'Vector<3 x CG1(?)>, R0(?)'
+  Unique sub elements:       'Vector<3 x CG1(?)>, R0(?), CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal Identity.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+  Geometric dimension:       3
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    1
+  Coefficients:              '[w_0]'
+  Unique elements:           'Vector<3 x CG1(?)>'
+  Unique sub elements:       'Vector<3 x CG1(?)>, CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Estimated cost of tensor representation: 1
+  representation:    auto --> tensor
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 2
+  quadrature_degree: 2
+  
+  Geometric dimension:       3
+  Number of cell subdomains: 0
+  Rank:                      2
+  Arguments:                 '(v_0, v_1)'
+  Number of coefficients:    0
+  Coefficients:              '[]'
+  Unique elements:           'Tensor<(3, 3) x DG0(?)>, Vector<3 x CG1(?)>'
+  Unique sub elements:       'Tensor<(3, 3) x DG0(?)>, Vector<3 x CG1(?)>, DG0(?), C
+                             G1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Monomial extraction failed: MonomialTransformation does not handle tensor-valued elements
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+  Geometric dimension:       3
+  Number of cell subdomains: 0
+  Rank:                      1
+  Arguments:                 '(v_0)'
+  Number of coefficients:    3
+  Coefficients:              '[w_1, w_2, w_3]'
+  Unique elements:           'Tensor<(3, 3) x DG0(?)>, R0(?), Vector<3 x CG1(?)>'
+  Unique sub elements:       'Tensor<(3, 3) x DG0(?)>, R0(?), Vector<3 x CG1(?)>, DG
+                             0(?), CG1(?)'
+  
+  Extracting monomial form representation from UFL form
+  Monomial extraction failed: No handler defined for terminal Identity.
+  Estimated cost of tensor representation: -1
+  representation:    auto --> quadrature
+  quadrature_rule:   auto --> default
+  quadrature_degree: auto --> 0
+  quadrature_degree: 0
+  
+Compiler stage 1 finished in 0.0986412 seconds.
+
+Compiler stage 2: Computing intermediate representation
+-------------------------------------------------------
+  Computing representation of 5 elements
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 5 dofmaps
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of 1 coordinate mappings
+  Reusing element from cache
+  Computing representation of integrals
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Real', tetrahedron, 0): {None: {None: {(0, 0, 0): array([[ 1.]])}}}, VectorElement(FiniteElement('Lagrange', tetrahedron, 1), dim=3): {None: {None: {(1, 0, 0): array([[[-1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [-1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [-1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]]]), (0, 1, 0): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -1.11022302e-16],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.11022302e-16],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.11022302e-16]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]]]), (0, 0, 0): array([[[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]]]), (0, 0, 1): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -5.55111512e-17],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -5.55111512e-17],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -5.55111512e-17]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE1_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE1_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]]), 'FE1_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE0': array([[ 1.]]), 'FE1_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]])}
+  
+  tables: {'FE1_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE1_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]]), 'FE1_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE0': array([[ 1.]]), 'FE1_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE1_C0_D001': 'FE1_C0_D001', 'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C2': 'FE1_C2', 'FE1_C0_D100': 'FE1_C0_D100', 'FE1_C2_D001': 'FE1_C2_D001', 'FE1_C0_D010': 'FE1_C0_D010', 'FE1_C1_D010': 'FE1_C1_D010', 'FE1_C1_D100': 'FE1_C1_D100', 'FE1_C2_D100': 'FE1_C2_D100', 'FE0': 'FE0', 'FE1_C2_D010': 'FE1_C2_D010', 'FE1_C1_D001': 'FE1_C1_D001'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE1_C0_D001': array([[-1.,  1.]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25]]), 'FE0': array([[ 1.]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE1_C0_D001': ('FE1_C0_D001', (1, [0, 3]), False, False), 'FE1_C0': ('FE1_C0', (0, [0, 1, 2, 3]), False, False), 'FE1_C1': ('FE1_C0', (4, [4, 5, 6, 7]), False, False), 'FE1_C2': ('FE1_C0', (8, [8, 9, 10, 11]), False, False), 'FE1_C0_D100': ('FE1_C0_D001', (3, [0, 1]), False, False), 'FE1_C2_D001': ('FE1_C0_D001', (9, [8, 11]), False, False), 'FE1_C0_D010': ('FE1_C0_D001', (2, [0, 2]), False, False), 'FE1_C1_D010': ('FE1_C0_D001', (6, [4, 6]), False, False), 'FE1_C1_D100': ('FE1_C0_D001', (7, [4, 5]), False, False), 'FE1_C2_D100': ('FE1_C0_D001', (11, [8, 9]), False, False), 'FE0': ('FE0', (), False, True), 'FE1_C2_D010': ('FE1_C0_D001', (10, [8, 10]), False, False), 'FE1_C1_D001': ('FE1_C0_D001', (5, [4, 7]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing tensor representation
+  Extracting monomial form representation from UFL form
+  Transforming monomial form to reference element
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Precomputing integrals on reference element
+  Reusing element from cache
+  144 entries computed in 0.00125 seconds
+  Shape of reference tensor: (12, 12)
+  Primary multi index:   rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  Secondary multi index: rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  Internal multi index:  rank = 1 dims = [3] indices = [[0], [1], [2]]
+  Secondary multi index: rank = 1 dims = [12] indices = [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11]]
+  External multi index:  rank = 0 dims = [] indices = [[]]
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {VectorElement(FiniteElement('Lagrange', tetrahedron, 1), dim=3): {None: {None: {(1, 0, 0): array([[[-1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [-1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [-1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]]]), (0, 1, 0): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -1.11022302e-16],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.11022302e-16],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.11022302e-16]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]]]), (0, 0, 0): array([[[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]]]), (0, 0, 1): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -5.55111512e-17],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -5.55111512e-17],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -5.55111512e-17]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]]])}}}, TensorElement(FiniteElement('Discontinuous Lagrange', tetrahedron, 0), shape=(3, 3), symmetry={}): {None: {None: {(0, 0, 0): array([[[ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE1_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE1_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE1_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]]), 'FE1_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C8': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.]]), 'FE0_C7': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.]]), 'FE0_C6': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.]]), 'FE0_C5': array([[ 0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.]]), 'FE0_C4': array([[ 0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.]]), 'FE0_C3': array([[ 0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C2': array([[ 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C1': array([[ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C0': array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])}
+  
+  tables: {'FE1_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE1_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE1_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE1_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]]), 'FE1_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE0_C8': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.]]), 'FE0_C7': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.]]), 'FE0_C6': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.]]), 'FE0_C5': array([[ 0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.]]), 'FE0_C4': array([[ 0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.]]), 'FE0_C3': array([[ 0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C2': array([[ 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C1': array([[ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE0_C0': array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE1_C0_D001': 'FE1_C0_D001', 'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C2': 'FE1_C2', 'FE1_C0_D100': 'FE1_C0_D100', 'FE1_C2_D001': 'FE1_C2_D001', 'FE1_C2_D010': 'FE1_C2_D010', 'FE1_C0_D010': 'FE1_C0_D010', 'FE1_C1_D010': 'FE1_C1_D010', 'FE1_C1_D100': 'FE1_C1_D100', 'FE1_C2_D100': 'FE1_C2_D100', 'FE0_C3': 'FE0_C3', 'FE0_C8': 'FE0_C8', 'FE0_C7': 'FE0_C7', 'FE0_C6': 'FE0_C6', 'FE0_C5': 'FE0_C5', 'FE0_C4': 'FE0_C4', 'FE1_C1_D001': 'FE1_C1_D001', 'FE0_C2': 'FE0_C2', 'FE0_C1': 'FE0_C1', 'FE0_C0': 'FE0_C0'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE1_C0_D001': array([[-1.,  1.]]), 'FE1_C0': array([[ 0.25,  0.25,  0.25,  0.25]]), 'FE0_C0': array([[ 1.]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE1_C0_D001': ('FE1_C0_D001', (10, [0, 3]), False, False), 'FE1_C0': ('FE1_C0', (9, [0, 1, 2, 3]), False, False), 'FE1_C1': ('FE1_C0', (13, [4, 5, 6, 7]), False, False), 'FE1_C2': ('FE1_C0', (17, [8, 9, 10, 11]), False, False), 'FE1_C0_D100': ('FE1_C0_D001', (12, [0, 1]), False, False), 'FE1_C2_D001': ('FE1_C0_D001', (18, [8, 11]), False, False), 'FE1_C2_D010': ('FE1_C0_D001', (19, [8, 10]), False, False), 'FE1_C0_D010': ('FE1_C0_D001', (11, [0, 2]), False, False), 'FE1_C1_D010': ('FE1_C0_D001', (15, [4, 6]), False, False), 'FE1_C1_D100': ('FE1_C0_D001', (16, [4, 5]), False, False), 'FE1_C2_D100': ('FE1_C0_D001', (20, [8, 9]), False, False), 'FE0_C3': ('FE0_C0', (3, [3]), False, True), 'FE0_C8': ('FE0_C0', (8, [8]), False, True), 'FE0_C7': ('FE0_C0', (7, [7]), False, True), 'FE0_C6': ('FE0_C0', (6, [6]), False, True), 'FE0_C5': ('FE0_C0', (5, [5]), False, True), 'FE0_C4': ('FE0_C0', (4, [4]), False, True), 'FE1_C1_D001': ('FE1_C0_D001', (14, [4, 7]), False, False), 'FE0_C2': ('FE0_C0', (2, [2]), False, True), 'FE0_C1': ('FE0_C0', (1, [1]), False, True), 'FE0_C0': ('FE0_C0', (0, [0]), False, True)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing quadrature representation
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  
+  QG-utils, psi_tables:
+  {1: {FiniteElement('Real', tetrahedron, 0): {None: {None: {(0, 0, 0): array([[ 1.]])}}}, VectorElement(FiniteElement('Lagrange', tetrahedron, 1), dim=3): {None: {None: {(1, 0, 0): array([[[-1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [-1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [-1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 1.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.]]]), (0, 1, 0): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -1.11022302e-16],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.11022302e-16],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.11022302e-16]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]]]), (0, 0, 0): array([[[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.25],
+          [ 0.  ],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.25],
+          [ 0.  ]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]],
+  
+         [[ 0.  ],
+          [ 0.  ],
+          [ 0.25]]]), (0, 0, 1): array([[[ -1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[ -5.55111512e-17],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  1.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [ -5.55111512e-17],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  1.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -1.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [ -5.55111512e-17]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  0.00000000e+00]],
+  
+         [[  0.00000000e+00],
+          [  0.00000000e+00],
+          [  1.00000000e+00]]])}}}, TensorElement(FiniteElement('Discontinuous Lagrange', tetrahedron, 0), shape=(3, 3), symmetry={}): {None: {None: {(0, 0, 0): array([[[ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.],
+          [ 0.]],
+  
+         [[ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 0.],
+          [ 1.]]])}}}}}
+  
+  QG-utils, psi_tables, flat_tables:
+  {'FE2_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C6': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.]]), 'FE2_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE2_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE2_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE2_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE0': array([[ 1.]]), 'FE2_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C8': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.]]), 'FE2_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C0': array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C1': array([[ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2': array([[ 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C3': array([[ 0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C4': array([[ 0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.]]), 'FE1_C5': array([[ 0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.]]), 'FE2_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE1_C7': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.]]), 'FE2_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]])}
+  
+  tables: {'FE2_C0_D100': array([[-1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C6': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.]]), 'FE2_C1_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -1.11022302e-16,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C0_D010': array([[ -1.00000000e+00,  -1.11022302e-16,   1.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C1': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.25,  0.25,  0.25,  0.25,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE2_C0': array([[ 0.25,  0.25,  0.25,  0.25,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,
+           0.  ,  0.  ,  0.  ]]), 'FE2_C2': array([[ 0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.  ,  0.25,
+           0.25,  0.25,  0.25]]), 'FE2_C2_D010': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -1.11022302e-16,   1.00000000e+00,   0.00000000e+00]]), 'FE0': array([[ 1.]]), 'FE2_C1_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,  -1.00000000e+00,  -5.55111512e-17,
+            0.00000000e+00,   1.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE1_C8': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.]]), 'FE2_C1_D100': array([[ 0.,  0.,  0.,  0., -1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C0': array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C1': array([[ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C2': array([[ 0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C3': array([[ 0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.,  0.]]), 'FE1_C4': array([[ 0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,  0.]]), 'FE1_C5': array([[ 0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.]]), 'FE2_C2_D100': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  0., -1.,  1.,  0.,  0.]]), 'FE1_C7': array([[ 0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.]]), 'FE2_C0_D001': array([[ -1.00000000e+00,  -5.55111512e-17,   0.00000000e+00,
+            1.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00]]), 'FE2_C2_D001': array([[  0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,   0.00000000e+00,
+            0.00000000e+00,   0.00000000e+00,  -1.00000000e+00,
+           -5.55111512e-17,   0.00000000e+00,   1.00000000e+00]])}
+  
+  name_map: {}
+  
+  inv_name_map: {'FE2_C0_D100': 'FE2_C0_D100', 'FE2_C2_D100': 'FE2_C2_D100', 'FE2_C1_D010': 'FE2_C1_D010', 'FE2_C0_D010': 'FE2_C0_D010', 'FE2_C1': 'FE2_C1', 'FE2_C0': 'FE2_C0', 'FE2_C2': 'FE2_C2', 'FE2_C2_D010': 'FE2_C2_D010', 'FE0': 'FE0', 'FE2_C1_D001': 'FE2_C1_D001', 'FE1_C8': 'FE1_C8', 'FE2_C1_D100': 'FE2_C1_D100', 'FE1_C0': 'FE1_C0', 'FE1_C1': 'FE1_C1', 'FE1_C2': 'FE1_C2', 'FE1_C3': 'FE1_C3', 'FE1_C4': 'FE1_C4', 'FE1_C5': 'FE1_C5', 'FE1_C6': 'FE1_C6', 'FE1_C7': 'FE1_C7', 'FE2_C0_D001': 'FE2_C0_D001', 'FE2_C2_D001': 'FE2_C2_D001'}
+  
+  QG-utils, psi_tables, unique_tables:
+  {'FE2_C0': array([[ 0.25,  0.25,  0.25,  0.25]]), 'FE0': array([[ 1.]]), 'FE2_C0_D001': array([[-1.,  1.]])}
+  
+  QG-utils, psi_tables, name_map:
+  {'FE2_C0_D100': ('FE2_C0_D001', (12, [0, 1]), False, False), 'FE2_C2_D100': ('FE2_C0_D001', (20, [8, 9]), False, False), 'FE2_C1_D010': ('FE2_C0_D001', (15, [4, 6]), False, False), 'FE2_C0_D010': ('FE2_C0_D001', (11, [0, 2]), False, False), 'FE2_C1': ('FE2_C0', (13, [4, 5, 6, 7]), False, False), 'FE2_C0': ('FE2_C0', (9, [0, 1, 2, 3]), False, False), 'FE2_C2': ('FE2_C0', (17, [8, 9, 10, 11]), False, False), 'FE2_C2_D010': ('FE2_C0_D001', (19, [8, 10]), False, False), 'FE0': ('FE0', (), False, True), 'FE2_C1_D001': ('FE2_C0_D001', (14, [4, 7]), False, False), 'FE1_C8': ('FE0', (8, [8]), False, True), 'FE2_C1_D100': ('FE2_C0_D001', (16, [4, 5]), False, False), 'FE1_C0': ('FE0', (0, [0]), False, True), 'FE1_C1': ('FE0', (1, [1]), False, True), 'FE1_C2': ('FE0', (2, [2]), False, True), 'FE1_C3': ('FE0', (3, [3]), False, True), 'FE1_C4': ('FE0', (4, [4]), False, True), 'FE1_C5': ('FE0', (5, [5]), False, True), 'FE1_C6': ('FE0', (6, [6]), False, True), 'FE1_C7': ('FE0', (7, [7]), False, True), 'FE2_C0_D001': ('FE2_C0_D001', (10, [0, 3]), False, False), 'FE2_C2_D001': ('FE2_C0_D001', (18, [8, 11]), False, False)}
+  Transforming cell integral
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Reusing element from cache
+  Computing representation of forms
+  
+Compiler stage 2 finished in 0.213601 seconds.
+
+Compiler stage 3: Optimizing intermediate representation
+--------------------------------------------------------
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  Optimising expressions for cell integral
+  
+Compiler stage 3 finished in 0.0405469 seconds.
+
+Compiler stage 4: Generating code
+---------------------------------
+  Generating code for 5 element(s)
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: Z
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: d_22
+  Removing unused variable: d_21
+  Removing unused variable: d_20
+  Removing unused variable: d_12
+  Removing unused variable: d_11
+  Removing unused variable: d_10
+  Removing unused variable: d_02
+  Removing unused variable: d_01
+  Removing unused variable: d_00
+  Removing unused variable: C2
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: Z
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: d_22
+  Removing unused variable: d_21
+  Removing unused variable: d_20
+  Removing unused variable: d_12
+  Removing unused variable: d_11
+  Removing unused variable: d_10
+  Removing unused variable: d_02
+  Removing unused variable: d_01
+  Removing unused variable: d_00
+  Removing unused variable: C2
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Removing unused variable: tmp4
+  Removing unused variable: tmp3
+  Removing unused variable: tmp2
+  Removing unused variable: tmp1
+  Removing unused variable: tmp0
+  Removing unused variable: Z
+  Removing unused variable: Y
+  Removing unused variable: X
+  Removing unused variable: d_22
+  Removing unused variable: d_21
+  Removing unused variable: d_20
+  Removing unused variable: d_12
+  Removing unused variable: d_11
+  Removing unused variable: d_10
+  Removing unused variable: d_02
+  Removing unused variable: d_01
+  Removing unused variable: d_00
+  Removing unused variable: C2
+  Removing unused variable: C1
+  Removing unused variable: C0
+  Generating code for 5 dofmap(s)
+  Generating code for 1 coordinate_mapping(s)
+  Generating code for integrals
+  Removing unused variable: circumradius
+  Removing unused variable: area
+  Removing unused variable: s
+  Removing unused variable: lc
+  Removing unused variable: lb
+  Removing unused variable: la
+  Removing unused variable: v2v3
+  Removing unused variable: v1v3
+  Removing unused variable: v0v3
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: circumradius
+  Removing unused variable: area
+  Removing unused variable: s
+  Removing unused variable: lc
+  Removing unused variable: lb
+  Removing unused variable: la
+  Removing unused variable: v2v3
+  Removing unused variable: v1v3
+  Removing unused variable: v0v3
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Removing unused variable: circumradius
+  Removing unused variable: area
+  Removing unused variable: s
+  Removing unused variable: lc
+  Removing unused variable: lb
+  Removing unused variable: la
+  Removing unused variable: v2v3
+  Removing unused variable: v1v3
+  Removing unused variable: v0v3
+  Removing unused variable: v0v1
+  Removing unused variable: v0v2
+  Removing unused variable: v1v2
+  Removing unused variable: volume
+  Generating code for forms
+  
+Compiler stage 4 finished in 0.243112 seconds.
+
+Compiler stage 4.1: Generating additional wrapper code
+------------------------------------------------------
+  Generating wrapper code for DOLFIN
+  
+Compiler stage 4.1 finished in 0.000923872 seconds.
+
+Compiler stage 5: Formatting code
+---------------------------------
+  
+Compiler stage 5 finished in 0.000668049 seconds.
+
+FFC finished in 0.597828 seconds.
+Output written to ./Elasticity.h.
