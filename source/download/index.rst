@@ -38,7 +38,7 @@ platform. To get started, follow these 2 steps:
    `Linux <https://www.docker.com/products/docker#/linux>`_. 
 #. Install the FEniCS Docker script::
 
-    curl -s http://get.fenicsproject.org | bash
+    curl -s https://get.fenicsproject.org | bash
 
 Notes:
 
@@ -110,7 +110,7 @@ FEniCS can be built automatically from source via
 `HashDist <http://hashdist.github.io/>`__. To build FEniCS, run the
 following command::
 
-    curl -s http://fenicsproject.org/fenics-install.sh | bash
+    curl -s https://fenicsproject.org/fenics-install.sh | bash
 
 Running this command will build a local installation of FEniCS.
 Before running the script, you may wish to download and inspect its
