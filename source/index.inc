@@ -19,7 +19,7 @@
                     from our users.</p>
                     <p>
                     <a href="download/">
-                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-new.png" alt="Download button">
+                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-1.7.0.png" alt="Download button">
                     </a>
                   </p>
                 </div>
@@ -49,7 +49,7 @@
                           <li data-target="#mycarousel" data-slide-to="3"></li>
                           <li data-target="#mycarousel" data-slide-to="3"></li>
                         </ol>
-                            
+
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                          <div class="item active">
@@ -75,14 +75,14 @@
                             <div class="carousel-caption">
                              <p>Specifying large systems of PDEs with ease</p>
                             </div>
-                          </div>        
+                          </div>
                           <div class="item">
                             <a href="featured/2015/qa_maps.html"><img src="_static/images/featured/featured_item_qa_map.png" class="img-responsive" alt="Specifying large systems of PDEs with ease"></a>
                             <div class="carousel-caption">
                              <p>FEniCS Q&A forum users around the world</p>
                             </div>
-                          </div>        
-                        </div>                    
+                          </div>
+                        </div>
                           <!-- Controls -->
                           <a class="left carousel-control" href="#mycarousel" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -90,7 +90,7 @@
                           <a class="right carousel-control" href="#mycarousel" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                           </a>
-                        </div>   
+                        </div>
                       </div><!--carousel-->
 
                         <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 text-left" style="padding-bottom: 20px;">
@@ -173,7 +173,7 @@
                         <p>The FEniCS Project is a collaborative effort between research groups from Simula Research Laboratory, University of Cambridge, University of Chicago, Baylor University and KTH Royal Institute of Technology. <a href="/about/" rel="nofollow">Find out more about our project &raquo;</a></p>
                     </div>
                 </div>
-            </div>             
+            </div>
         </div>
     </div>
 </section>
