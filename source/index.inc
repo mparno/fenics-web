@@ -19,7 +19,7 @@
                     from our users.</p>
                     <p>
                     <a href="download/">
-                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-1.7.0.png" alt="Download button">
+                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-2016.1.png" alt="Download button">
                     </a>
                   </p>
                 </div>
