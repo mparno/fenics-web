@@ -67,6 +67,10 @@ and its supporting libraries. To upgrade to the latest version, run::
 
     fenicsproject pull
 
+To upgrade to the latest version of the ``fenicsproject`` script, run::
+
+    curl -s https://get.fenicsproject.org | bash
+
 For more details and tips on how to work with FEniCS and Docker, see
 our `FEniCS Docker page
 <http://fenics-containers.readthedocs.org/en/latest/>`_.
