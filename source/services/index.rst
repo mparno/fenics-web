@@ -4,11 +4,8 @@
 FEniCS Project Services
 #######################
 
-The following services are officialy operated by the FEniCS Project.
-
-Other services may be useful but are not officially associated with the FEniCS
-Project.
-
+The following services are officially operated by the FEniCS Project.
+ 
 * `Benchbot <https://fenicsproject.org/benchbot/>`_
 * `Bitbucket <https://bitbucket.org/fenics-project/>`_
 * `Development mailing list <https://groups.google.com/forum/#!forum/fenics-dev>`_ 
