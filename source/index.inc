@@ -170,7 +170,7 @@
                               <a href="/about/team.html"><img class="rounded" src='_static/images/fenics_developers_in_lubbock_2011.png'></img></a>
                             </div>
                           </div>
-                        <p>The FEniCS Project is a collaborative effort between research groups from Simula Research Laboratory, University of Cambridge, University of Chicago, Baylor University and KTH Royal Institute of Technology. <a href="/about/" rel="nofollow">Find out more about our project &raquo;</a></p>
+                        <p>The FEniCS Project is a collaborative effort between research groups from around the world. <a href="/about/" rel="nofollow">Find out more about our project &raquo;</a></p>
                     </div>
                 </div>
             </div>

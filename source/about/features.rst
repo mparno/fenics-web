@@ -8,7 +8,7 @@ FEniCS comes packed with features for the computational scientist.
 Partial differential equations can be specified in near-**mathematical
 notation** (as finite element variational problems) and **solved
 automatically**. FEniCS also provides a large library of important
-tools for the numerial analyst who wishes to explore and develop new
+tools for the numerical analyst who wishes to explore and develop new
 methods.
 
 ******************************************
