@@ -18,8 +18,8 @@ question related to obtaining, building or installing a FEniCS
 component, please send a message to the `FEniCS support mailing list
 <https://groups.google.com/forum/#!forum/fenics-support>`_.  If you
 would like to discuss FEniCS development or propose a new feature,
-please send a message to the `FEniCS mailing list
-<https://groups.google.com/forum/#!forum/fenics-dev>`_
+please send a message to the `FEniCS developer mailing list
+<https://groups.google.com/forum/#!forum/fenics-dev>`_.
 
 Before posting your question, please consider the following points:
 
@@ -29,8 +29,10 @@ Before posting your question, please consider the following points:
 * Formulate your question carefully. If we cannot understand your
   question, we probably cannot help you.
 
-* Post complete, but *minimal* code examples. No one wants to read
-  through your complex application code.
+* Prepare `complete, but minimal code example
+  <https://en.wikipedia.org/wiki/Minimal_Working_Example>`_
+  demonstrating the problem. No one wants to read through your complex
+  application code.
 
 * Please help out in answering questions from other users.
 
