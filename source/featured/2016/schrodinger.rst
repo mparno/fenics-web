@@ -56,38 +56,27 @@ length of the time interval, a concordant simulation can be obtained.
 Simulations of the Hydrogen Atom
 ********************************
 
-.. raw:: html
-
-   <div class="container-fluid">
-    <div class="row">
-      <img src="../../_images/eig.png" class="img-responsive" alt="eig">
-    </div>
-  </div>
+.. image:: images/eig.png
+   :scale: 50%
+   :align: center
 
 **Figure 1**: Numerically calculated eigenvalues of
 :math:`\psi_{1,0,0}` in relation to mesh size. What differs the
 calculations apart is the hole radiuses of the geometries. The red
 line shows the analytically calculated eigenvalue.
 
-.. raw:: html
+.. image:: images/eig2.png
+   :scale: 70%
+   :align: center
 
-   <div class="container-fluid">
-    <div class="row">
-      <img src="../../_images/eig2.png" class="img-responsive" alt="eig2">
-    </div>
-  </div>
 
 **Figure 2**: To the left, an analytically calculated iso surfaces of
 :math:`|\psi_{3,1}^w|^2` is found. The right picture shows its
 numerically calculated equivalence.
 
-.. raw:: html
-
-   <div class="container-fluid">
-    <div class="row">
-      <img src="../../_images/eig3.png" class="img-responsive" alt="eig3">
-    </div>
-  </div>
+.. image:: images/eig3.png
+   :scale: 50%
+   :align: center
 
 **Figure 3**: Time developement of :math:`\psi_{1,0,0}`, numerically
 calculated with different time step sizes.
