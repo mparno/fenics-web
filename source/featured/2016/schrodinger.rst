@@ -22,8 +22,8 @@ whilst in the time dependent case, it is expressed as [2]
 
    i \hbar \frac{\partial}{\partial t} \psi(x, t) = \mathcal{\hat H} \psi(x, t)
 
-In the equations above, the eigenvalue $E$ is the systems energy,
-:math:`\hbar` is Planck's reduced constant and the Hamiltonian
+In the equations above, the eigenvalue :math:`E` is the systems
+energy, :math:`\hbar` is Planck's reduced constant and the Hamiltonian
 :math:`\mathcal{\hat H}` is defined as the sum of the systems kinetic,
 as well as its potential energy. A normalization of :math:`|\psi|^2`
 is a probability density function describing the location of a certain

@@ -53,6 +53,12 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                          <div class="item active">
+                            <a href="featured/2016/schrodinger.html"><img src="_static/images/featured/featured_item_schrodinger_15.jpg" class="img-responsive" alt="Solving the Schrödinger equation in FEniCS"></a>
+                            <div class="carousel-caption">
+                             <p>Solving the Schrödinger equation in FEniCS</p>
+                            </div>
+                          </div>
+                         <div class="item">
                             <a href="featured/2015/wilkinson_prize.html"><img src="_static/images/featured/featured_item_wilkinson_15.jpg" class="img-responsive" alt="Dolfin-adjoint wins 2015 Wilkinson Prize"></a>
                             <div class="carousel-caption">
                              <p>Dolfin-adjoint wins 2015 Wilkinson Prize</p>
