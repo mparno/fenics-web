@@ -35,7 +35,7 @@
               Jan is a PhD. student of
               <a href="http://mod.karlin.mff.cuni.cz/en/">Mathematical Modelling</a>
               at the
-              <a href="http://www.mff.cuni.cz/to.en/">Charles University in Prague</a>.
+              <a href="http://www.mff.cuni.cz/to.en/">Charles University</a>.
               </p>
               <p>
               He has been involved with the FEniCS project since 2012 and is a
