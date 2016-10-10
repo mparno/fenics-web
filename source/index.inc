@@ -19,7 +19,7 @@
                     from our users.</p>
                     <p>
                     <a href="download/">
-                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-1.7.0.png" alt="Download button">
+                    <img style="margin-left: auto; margin-right: auto; margin-top: 30px; max-width: 100%;" src="_static/download-button-2016.1.png" alt="Download button">
                     </a>
                   </p>
                 </div>
@@ -53,6 +53,12 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                          <div class="item active">
+                            <a href="featured/2016/schrodinger.html"><img src="_static/images/featured/featured_item_schrodinger_15.jpg" class="img-responsive" alt="Solving the Schrödinger equation in FEniCS"></a>
+                            <div class="carousel-caption">
+                             <p>Solving the Schrödinger equation in FEniCS</p>
+                            </div>
+                          </div>
+                         <div class="item">
                             <a href="featured/2015/wilkinson_prize.html"><img src="_static/images/featured/featured_item_wilkinson_15.jpg" class="img-responsive" alt="Dolfin-adjoint wins 2015 Wilkinson Prize"></a>
                             <div class="carousel-caption">
                              <p>Dolfin-adjoint wins 2015 Wilkinson Prize</p>
@@ -98,7 +104,7 @@
                                 <h1>News</h1>
                             </div>
                             <div class="well" style="max-height: 282px;">
-                              <a class="twitter-timeline" href="https://twitter.com/search?q=%28from%3Afenicsnews+OR+from%3Aanderslogg+OR+from%3Agarth_wells+OR+from%3Awisdemy+OR+from%3Aaterrel+OR+from%3Ajohannesring%29+AND+%23fenicsnews" data-widget-id="375237425598959616" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "(from:fenicsnews OR from:anderslogg OR from:garth_wells OR from:wisdemy OR from:aterrel OR from:johannesring) AND #fenicsnews"</a>
+                              <a class="twitter-timeline" href="https://twitter.com/search?q=%28from%3Afenicsnews+OR+from%3Aanderslogg+OR+from%3Agarth_wells+OR+from%3Awisdemy+OR+from%3Aaterrel+OR+from%3Ajohannesring%29+AND+%23fenicsnews" data-widget-id="375237425598959616" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "(from:fenicsnews OR from:anderslogg OR from:garth_wells OR from:johannesring OR from:utropstegn OR from:jack_s_hale OR from:martinalnes OR from:cnr12_cam) AND #fenicsnews"</a>
                               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                               <br/>
                               <br/>
@@ -170,7 +176,7 @@
                               <a href="/about/team.html"><img class="rounded" src='_static/images/fenics_developers_in_lubbock_2011.png'></img></a>
                             </div>
                           </div>
-                        <p>The FEniCS Project is a collaborative effort between research groups from Simula Research Laboratory, University of Cambridge, University of Chicago, Baylor University and KTH Royal Institute of Technology. <a href="/about/" rel="nofollow">Find out more about our project &raquo;</a></p>
+                        <p>The FEniCS Project is a collaborative effort between research groups from around the world. <a href="/about/" rel="nofollow">Find out more about our project &raquo;</a></p>
                     </div>
                 </div>
             </div>

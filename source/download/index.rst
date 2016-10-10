@@ -62,6 +62,15 @@ dev``). To see more options, run the following command::
 For all ``fenicsproject`` commands, the contents of the current working
 directory will be shared into the project at ``~/shared``.
 
+We regularly release new Docker images with updated versions of FEniCS
+and its supporting libraries. To upgrade to the latest version, run::
+
+    fenicsproject pull
+
+To upgrade to the latest version of the ``fenicsproject`` script, run::
+
+    curl -s https://get.fenicsproject.org | bash
+
 For more details and tips on how to work with FEniCS and Docker, see
 our `FEniCS Docker page
 <http://fenics-containers.readthedocs.org/en/latest/>`_.
