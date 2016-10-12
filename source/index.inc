@@ -127,7 +127,7 @@
             <div class="col-sm-3 text-center align-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="single-service">
                     <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h3>Hans Petter Langtangen (1982-2016) </h3>
+                        <h3>Hans Petter Langtangen (1962-2016) </h3>
                           <div class="row" align="center">
                             <div class="image-cropper">
                               <a href="http://hpl-memorial.simula.no"><img class="rounded" src='_static/images/hpl.jpg' align="center"></img></a>
