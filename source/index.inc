@@ -104,7 +104,7 @@
                                 <h1>News</h1>
                             </div>
                             <div class="well" style="max-height: 282px;">
-                              <a class="twitter-timeline" href="https://twitter.com/search?q=%28from%3Afenicsnews+OR+from%3Aanderslogg+OR+from%3Agarth_wells+OR+from%3Awisdemy+OR+from%3Aaterrel+OR+from%3Ajohannesring%29+AND+%23fenicsnews" data-widget-id="375237425598959616" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "(from:fenicsnews OR from:anderslogg OR from:garth_wells OR from:johannesring OR from:utropstegn OR from:jack_s_hale OR from:martinalnes OR from:cnr12_cam) AND #fenicsnews"</a>
+                              <a class="twitter-timeline" href="https://twitter.com/search?q=%28from%3Afenicsproject" data-widget-id="375237425598959616" data-chrome="noheader nofooter transparent noborder" data-link-color="#d81e28">Tweets about "from:fenicsproject"</a>
                               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                               <br/>
                               <br/>
