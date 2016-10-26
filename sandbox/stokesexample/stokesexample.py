@@ -14,7 +14,6 @@ domain = box - s0 - s1 - s2
 
 # Generate mesh
 mesh = generate_mesh(domain, 32)
-sphere_mesh = generate_mesh(s0 + s1 + s2, 32)
 
 # Define source term
 f = Constant((0, 0, 0))
@@ -61,4 +60,3 @@ solve(a == L, w, [bc1, bc0])
 File('u.pvd') << u
 File('p.pvd') << p
 File('mesh.pvd') << mesh
-File('spheres.pvd') << sphere_mesh
