@@ -141,6 +141,19 @@
             <div class="col-sm-3 text-center align-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="single-service">
                     <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h3 style="padding-bottom: 22px;">FEniCS 2017 in Luxembourg</h3>
+                          <div class="row" align="center">
+                            <div class="image-cropper">
+                              <img class="rounded" src='_static/images/featured/featured_item_fenics_17.jpg'></img>
+                            </div>
+                          </div>
+                        <p>The FEniCS Conference 2017 will take place on 12-14 June 2017 at the University of Luxembourg. More details soon.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 text-center align-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <div class="single-service">
+                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
                         <h3 style="padding-bottom: 22px;">Periodic Table of the Finite Elements</h3>
                           <div class="row" align="center">
                             <div class="image-cropper">
@@ -148,19 +161,6 @@
                             </div>
                           </div>
                         <p>Find your favorite FEniCS elements in the <a href="http://femtable.org/">Periodic Table of Finite Elements</a>. The periodic table displays and explains the properties of many of the most widely used elements, including the Lagrange, RT, BDM, Nedelec and DG elements.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 text-center align-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h3 style="padding-bottom: 22px;">FEniCS 2017, Luxembourg.</h3>
-                          <div class="row" align="center">
-                            <div class="image-cropper">
-                              <img class="rounded" src='_static/images/featured/featured_item_fenics_17.jpg'></img>
-                            </div>
-                          </div>
-                        <p>The FEniCS Conference 2017 will take place on 12-14 June 2017 at the University of Luxembourg. More details soon.</p>
                     </div>
                 </div>
             </div>
