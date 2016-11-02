@@ -154,13 +154,13 @@
             <div class="col-sm-3 text-center align-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="single-service">
                     <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h3 style="padding-bottom: 22px;">FEniCS book released!</h3>
+                        <h3 style="padding-bottom: 22px;">FEniCS 2017, Luxembourg.</h3>
                           <div class="row" align="center">
                             <div class="image-cropper">
-                              <a href="/book/"><img class="rounded" src='_static/images/fenics_book_cover.png'></img></a>
+                              <img class="rounded" src='_static/images/featured/featured_item_fenics_17.jpg'></img>
                             </div>
                           </div>
-                        <p>The FEniCS book, titled <i>Automated Solution of Differential Equations by the Finite Element Method</i>, has been published in 2012 as Volume 84 of the Springer Lecture Notes in Computational Science series. The book can be found <a href="http://dx.doi.org/10.1007/978-3-642-23099-8">here</a>. <a href="/book/" rel="nofollow">Find out more about the book project &raquo;</a></p>
+                        <p>The FEniCS Conference 2017 will take place on 12-14 June 2017 at the University of Luxembourg. More details soon.</p>
                     </div>
                 </div>
             </div>
