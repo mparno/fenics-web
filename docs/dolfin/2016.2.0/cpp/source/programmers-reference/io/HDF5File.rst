@@ -1,0 +1,195 @@
+
+.. Documentation for the header file dolfin/io/HDF5File.h
+
+.. _programmers_reference_cpp_io_hdf5file:
+
+HDF5File.h
+==========
+
+.. note::
+    
+    The documentation on this page was automatically extracted from the
+    DOLFIN C++ code and may need to be edited or expanded.
+    
+
+.. cpp:class:: HDF5File
+
+    *Parent class(es)*
+    
+        * :cpp:class:`Variable`
+        
+    .. cpp:function:: HDF5File(MPI_Comm comm, const std::string filename, const std::string file_mode)
+    
+        Constructor. file_mode should be "a" (append),
+        "w" (write) or "r" (read).
+
+
+    .. cpp:function:: void close()
+    
+        Close file
+
+
+    .. cpp:function:: void flush()
+    
+        Flush buffered I/O to disk
+
+
+    .. cpp:function:: void write(const std::vector<Point>& points, const std::string name)
+    
+        Write points to file
+
+
+    .. cpp:function:: void write(const std::vector<double>& values, const std::string name)
+    
+        Write simple vector of double to file
+
+
+    .. cpp:function:: void write(const GenericVector& x, const std::string name)
+    
+        Write Vector to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void read(GenericVector& x, const std::string dataset_name, const bool use_partition_from_file) const
+    
+        Read vector from file and optionally re-use any partitioning
+        that is available in the file
+
+
+    .. cpp:function:: void write(const Mesh& mesh, const std::string name)
+    
+        Write Mesh to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void write(const Mesh& mesh, const std::size_t cell_dim, const std::string name)
+    
+        Write Mesh of given cell dimension to file in a format
+        suitable for re-reading
+
+
+    .. cpp:function:: void write(const Function& u, const std::string name)
+    
+        Write Function to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void write(const Function& u, const std::string name, double timestamp)
+    
+        Write Function to file with a timestamp
+
+
+    .. cpp:function:: void read(Function& u, const std::string name)
+    
+        Read Function from file and distribute data according to the
+        Mesh and dofmap associated with the Function.  If the 'name'
+        refers to a HDF5 group, then it is assumed that the Function
+        data is stored in the datasets within that group.  If the
+        'name' refers to a HDF5 dataset within a group, then it is
+        assumed that it is a Vector, and the Function will be filled
+        from that Vector
+
+
+    .. cpp:function:: void read(Mesh& mesh, const std::string data_path, bool use_partition_from_file) const
+    
+        Read Mesh from file, using attribute data (e.g., cell type) stored
+        in the HDF5 file. Optionally re-use any partition data
+        in the file. This function requires all necessary data for
+        constructing a Mesh to be present in the HDF5 file.
+
+
+    .. cpp:function:: void read(Mesh& input_mesh, const std::string topology_path, const std::string geometry_path, const int gdim , const CellType& cell_type, const std::int64_t expected_num_global_cells, const std::int64_t expected_num_global_points, bool use_partition_from_file) const
+    
+        Construct Mesh with paths to topology and geometry datasets, and
+        providing essential meta-data, e.g. geometric dimension and
+        cell type. If this data is available in the HDF5 file, it will
+        be checked for consistency. Set expected_num_global_cells to a
+        negative value if not known.
+        
+        This function is typically called when using the XDMF format,
+        in which case the meta data has alreayd been read from an XML
+        file
+
+
+    .. cpp:function:: void write(const MeshFunction<std::size_t>& meshfunction, const std::string name)
+    
+        Write MeshFunction to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void write(const MeshFunction<int>& meshfunction, const std::string name)
+    
+        Write MeshFunction to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void write(const MeshFunction<double>& meshfunction, const std::string name)
+    
+        Write MeshFunction to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void write(const MeshFunction<bool>& meshfunction, const std::string name)
+    
+        Write MeshFunction to file in a format suitable for re-reading
+
+
+    .. cpp:function:: void read(MeshFunction<std::size_t>& meshfunction, const std::string name) const
+    
+        Read MeshFunction from file
+
+
+    .. cpp:function:: void read(MeshFunction<int>& meshfunction, const std::string name) const
+    
+        Read MeshFunction from file
+
+
+    .. cpp:function:: void read(MeshFunction<double>& meshfunction, const std::string name) const
+    
+        Read MeshFunction from file
+
+
+    .. cpp:function:: void read(MeshFunction<bool>& meshfunction, const std::string name) const
+    
+        Read MeshFunction from file
+
+
+    .. cpp:function:: void write(const MeshValueCollection<std::size_t>& mesh_values, const std::string name)
+    
+        Write MeshValueCollection to file
+
+
+    .. cpp:function:: void write(const MeshValueCollection<double>& mesh_values, const std::string name)
+    
+        Write MeshValueCollection to file
+
+
+    .. cpp:function:: void write(const MeshValueCollection<bool>& mesh_values, const std::string name)
+    
+        Write MeshValueCollection to file
+
+
+    .. cpp:function:: void read(MeshValueCollection<std::size_t>& mesh_values, const std::string name) const
+    
+        Read MeshValueCollection from file
+
+
+    .. cpp:function:: void read(MeshValueCollection<double>& mesh_values, const std::string name) const
+    
+        Read MeshValueCollection from file
+
+
+    .. cpp:function:: void read(MeshValueCollection<bool>& mesh_values, const std::string name) const
+    
+        Read MeshValueCollection from file
+
+
+    .. cpp:function:: bool has_dataset(const std::string dataset_name) const
+    
+        Check if dataset exists in HDF5 file
+
+
+    .. cpp:function:: void set_mpi_atomicity(bool atomic)
+    
+        Set the MPI atomicity
+
+
+    .. cpp:function:: bool get_mpi_atomicity() const
+    
+        Get the MPI atomicity
+
+
