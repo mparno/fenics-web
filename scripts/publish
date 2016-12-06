@@ -1,4 +1,6 @@
 #!/bin/sh
 
-chmod +x build/html/index.html
-rsync -avz build/html/ fenics-web@fenicsproject.org:/home/fenics-web/fenicsproject.org/
+echo "Publish script disabled after switch to new Wordpress pages."
+
+#chmod +x build/html/index.html
+#rsync -avz build/html/ fenics-web@fenicsproject.org:/home/fenics-web/fenicsproject.org/
